@@ -1,0 +1,10 @@
+$large-width: 1024px;
+$medium-width: 680px;
+$small-width: 320px;
+
+$tablet: 'only screen and (max-width: #{$medium-width})';
+$smartphone: 'only screen and (max-width: #{$small-width})';
+
+$default-margin: 10px;
+$default-padding: 20px;
+$default-line-height: 35px;

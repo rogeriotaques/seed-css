@@ -1,0 +1,102 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+html {
+  font-size: 62.5%;
+  font-family: sans-serif; }
+
+.center-align {
+  text-align: center; }
+
+.left-align {
+  text-align: left; }
+
+.right-align {
+  text-align: right; }
+
+.justify-align {
+  text-align: justify; }
+
+.grid,
+.container {
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto 10px;
+  display: block; }
+  @media only screen and (max-width: 680px) {
+    .grid,
+    .container {
+      max-width: 680px; } }
+  @media only screen and (max-width: 320px) {
+    .grid,
+    .container {
+      max-width: 320px; } }
+
+.grid > .row {
+  margin-bottom: 10px;
+  position: relative;
+  display: block;
+  height: 35px;
+  line-height: 35px; }
+  .grid > .row > .col {
+    position: relative;
+    display: inline-block;
+    background-color: #f5f5f5; }
+    .grid > .row > .col.s12, .grid > .row > .col.m12, .grid > .row > .col.l12 {
+      width: 100%; }
+    .grid > .row > .col.s11, .grid > .row > .col.m11, .grid > .row > .col.l11 {
+      width: 91.66667%; }
+      .grid > .row > .col.s11:not(:first-child), .grid > .row > .col.m11:not(:first-child), .grid > .row > .col.l11:not(:first-child) {
+        width: calc((100% / 12 * 11) - 10px);
+        margin-left: 10px; }
+    .grid > .row > .col.s10, .grid > .row > .col.m10, .grid > .row > .col.l10 {
+      width: 83.33333%; }
+      .grid > .row > .col.s10:not(:first-child), .grid > .row > .col.m10:not(:first-child), .grid > .row > .col.l10:not(:first-child) {
+        width: calc((100% / 12 * 10) - 10px);
+        margin-left: 10px; }
+    .grid > .row > .col.s9, .grid > .row > .col.m9, .grid > .row > .col.l9 {
+      width: 75%; }
+      .grid > .row > .col.s9:not(:first-child), .grid > .row > .col.m9:not(:first-child), .grid > .row > .col.l9:not(:first-child) {
+        width: calc((100% / 12 * 9) - 10px);
+        margin-left: 10px; }
+    .grid > .row > .col.s8, .grid > .row > .col.m8, .grid > .row > .col.l8 {
+      width: 66.66667%; }
+      .grid > .row > .col.s8:not(:first-child), .grid > .row > .col.m8:not(:first-child), .grid > .row > .col.l8:not(:first-child) {
+        width: calc((100% / 12 * 8) - 10px);
+        margin-left: 10px; }
+    .grid > .row > .col.s7, .grid > .row > .col.m7, .grid > .row > .col.l7 {
+      width: 58.33333%; }
+      .grid > .row > .col.s7:not(:first-child), .grid > .row > .col.m7:not(:first-child), .grid > .row > .col.l7:not(:first-child) {
+        width: calc((100% / 12 * 7) - 10px);
+        margin-left: 10px; }
+    .grid > .row > .col.s6, .grid > .row > .col.m6, .grid > .row > .col.l6 {
+      width: 50%; }
+      .grid > .row > .col.s6:not(:first-child), .grid > .row > .col.m6:not(:first-child), .grid > .row > .col.l6:not(:first-child) {
+        width: calc((100% / 12 * 6) - 10px);
+        margin-left: 10px; }
+    .grid > .row > .col.s5, .grid > .row > .col.m5, .grid > .row > .col.l5 {
+      width: 41.66667%; }
+      .grid > .row > .col.s5:not(:first-child), .grid > .row > .col.m5:not(:first-child), .grid > .row > .col.l5:not(:first-child) {
+        width: calc((100% / 12 * 5) - 10px);
+        margin-left: 10px; }
+    .grid > .row > .col.s4, .grid > .row > .col.m4, .grid > .row > .col.l4 {
+      width: 33.33333%; }
+      .grid > .row > .col.s4:not(:first-child), .grid > .row > .col.m4:not(:first-child), .grid > .row > .col.l4:not(:first-child) {
+        width: calc((100% / 12 * 4) - 10px);
+        margin-left: 10px; }
+    .grid > .row > .col.s3, .grid > .row > .col.m3, .grid > .row > .col.l3 {
+      width: 25%; }
+      .grid > .row > .col.s3:not(:first-child), .grid > .row > .col.m3:not(:first-child), .grid > .row > .col.l3:not(:first-child) {
+        width: calc((100% / 12 * 3) - 10px);
+        margin-left: 10px; }
+    .grid > .row > .col.s2, .grid > .row > .col.m2, .grid > .row > .col.l2 {
+      width: 16.66667%; }
+      .grid > .row > .col.s2:not(:first-child), .grid > .row > .col.m2:not(:first-child), .grid > .row > .col.l2:not(:first-child) {
+        width: calc((100% / 12 * 2) - 10px);
+        margin-left: 10px; }
+    .grid > .row > .col.s1, .grid > .row > .col.m1, .grid > .row > .col.l1 {
+      width: 8.33333%; }
+      .grid > .row > .col.s1:not(:first-child), .grid > .row > .col.m1:not(:first-child), .grid > .row > .col.l1:not(:first-child) {
+        width: calc((100% / 12) - 10px);
+        margin-left: 10px; }

@@ -1,0 +1,27 @@
+doctype html
+
+html(lang="en")
+  head
+    title Skecth CSS Framework
+    link(rel="stylesheet", href="assets/css/bundle.css")
+  body
+    .container
+      h1 Skecth CSS Framework
+
+    .grid
+      - var k = 12
+      - for (var i = 1; i <= k; i++)
+        - var j = k - i
+        - var colOne = 's' + i
+        - var colTwo = 's' + j
+        .row
+          .col(class=colOne)
+            p.center-align= colOne
+          if j !== 0
+            .col(class=colTwo)
+              p.center-align= colTwo
+              
+      .row
+        - for (var i=1; i <= 12; i++)
+          .col.s1
+            p.center-align s1
