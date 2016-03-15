@@ -1,139 +1,40 @@
-.grid,
-.container {
-  width: 90%;
-  max-width: $large-width;
-  margin: 0 auto $default-margin;
-  display: block;
-
-  @media #{$tablet} {
-    max-width: $medium-width;
-  }
-
-  @media #{$smartphone} {
-    max-width: $small-width;
-  }
-}
-
 .grid {
+  width: 100%;
+  margin: $margin auto;
+  display: block;
+  position: relative;
 
   & > .row {
-    margin-bottom: $default-margin;
-    position: relative;
     display: block;
-    height: $default-line-height;
-    line-height: $default-line-height;
+    min-height: $height;
+    margin: $margin 0;
 
     & > .col {
-      // padding: $default-padding / 2;
-      position: relative;
+      box-sizing: border-box;
       display: inline-block;
+      @include rem(height, $height);
+      @include rem(line-height, $height);
+      margin-bottom: $margin;
       background-color: #f5f5f5;
+      padding: {
+        left: $padding;
+        right: $padding;
+      }
+      overflow: hidden;
 
+      &.sm {
+        @include grid-col();
+      }
 
-      &.s,
-      &.m,
-      &.l {
-        &12 {
-          width: 100%;
+      @media #{$medium-and-up} {
+        &.md {
+          @include grid-col();
         }
+      }
 
-        &11 {
-          width: (100% / 12 * 11);
-
-          &:not(:first-child) {
-            width: calc((100% / 12 * 11) - #{$default-margin});
-            margin-left: $default-margin;
-          }
-        }
-
-        &10 {
-          width: (100% / 12 * 10);
-
-          &:not(:first-child) {
-            width: calc((100% / 12 * 10) - #{$default-margin});
-            margin-left: $default-margin;
-          }
-        }
-
-        &9 {
-          width: (100% / 12 * 9);
-
-          &:not(:first-child) {
-            width: calc((100% / 12 * 9) - #{$default-margin});
-            margin-left: $default-margin;
-          }
-        }
-
-        &8 {
-          width: (100% / 12 * 8);
-
-          &:not(:first-child) {
-            width: calc((100% / 12 * 8) - #{$default-margin});
-            margin-left: $default-margin;
-          }
-        }
-
-        &7 {
-          width: (100% / 12 * 7);
-
-          &:not(:first-child) {
-            width: calc((100% / 12 * 7) - #{$default-margin});
-            margin-left: $default-margin;
-          }
-        }
-
-        &6 {
-          width: (100% / 12 * 6);
-
-          &:not(:first-child) {
-            width: calc((100% / 12 * 6) - #{$default-margin});
-            margin-left: $default-margin;
-          }
-        }
-
-        &5 {
-          width: (100% / 12 * 5);
-
-          &:not(:first-child) {
-            width: calc((100% / 12 * 5) - #{$default-margin});
-            margin-left: $default-margin;
-          }
-        }
-
-        &4 {
-          width: (100% / 12 * 4);
-
-          &:not(:first-child) {
-            width: calc((100% / 12 * 4) - #{$default-margin});
-            margin-left: $default-margin;
-          }
-        }
-
-        &3 {
-          width: (100% / 12 * 3);
-
-          &:not(:first-child) {
-            width: calc((100% / 12 * 3) - #{$default-margin});
-            margin-left: $default-margin;
-          }
-        }
-
-        &2 {
-          width: (100% / 12 * 2);
-
-          &:not(:first-child) {
-            width: calc((100% / 12 * 2) - #{$default-margin});
-            margin-left: $default-margin;
-          }
-        }
-
-        &1 {
-          width: (100% / 12);
-
-          &:not(:first-child) {
-            width: calc((100% / 12) - #{$default-margin});
-            margin-left: $default-margin;
-          }
+      @media #{$large-and-up} {
+        &.lg {
+          @include grid-col();
         }
       }
     }

@@ -2,26 +2,69 @@ doctype html
 
 html(lang="en")
   head
+    meta(charset="utf-8")
     title Skecth CSS Framework
+    meta(name="viewport", content="width=device-width, initial-scale=1")
     link(rel="stylesheet", href="assets/css/bundle.css")
   body
     .container
       h1 Skecth CSS Framework
 
-    .grid
-      - var k = 12
-      - for (var i = 1; i <= k; i++)
-        - var j = k - i
-        - var colOne = 's' + i
-        - var colTwo = 's' + j
-        .row
-          .col(class=colOne)
-            p.center-align= colOne
-          if j !== 0
-            .col(class=colTwo)
-              p.center-align= colTwo
+    section
+      .container
+        h2 Container
+      
+        p Containers are used to define an enclosed area.
+      
+        .sample-container.align-center .container
+    
+    section
+      .container 
+        h2 Grid 
+        
+        p. 
+          Grids are used to define columns. 
+          The grid system is responsive, which means you can define the number 
+          of columns according to the screen size.
+        
+        .grid.sample
+          .row
+            .col.sm-12.md-6.lg-3.align-center .sm-12.md-6.lg-3
+            .col.sm-12.md-6.lg-3.align-center .sm-12.md-6.lg-3
+            .col.sm-12.md-6.lg-3.align-center .sm-12.md-6.lg-3
+            .col.sm-12.md-6.lg-3.align-center .sm-12.md-6.lg-3
+        
+        p There are up to twelve columns.
+        
+        .grid.sample
+        
+          - for (var i=1; i<12; i++)
+            - var j = 12 - i
+            - var colA = 'sm-' + i
+            - var colB = 'sm-' + j
+            .row
+              .col.align-center(class=colA)= '.' + colA
+              .col.align-center(class=colB)= '.' + colB
               
-      .row
-        - for (var i=1; i <= 12; i++)
-          .col.s1
-            p.center-align s1
+          .row
+            .col.sm-12.align-center .sm-12
+            
+        p. 
+          Offsets are also available.
+          To apply offsets, just add the sufix <code >-offset</code> to your classname.
+        
+        .grid.sample
+        
+          .row
+            .col.sm-1.align-center 1
+        
+          - for (var i=1; i<12; i++)
+            - var j = 12 - i
+            - var colA = 'sm-1 sm-' + i + '-offset'
+            .row
+              .col.align-center(class=colA)= '.' + 1
+
+    section
+      .container
+        h2 Typography
+        

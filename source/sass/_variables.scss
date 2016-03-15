@@ -1,10 +1,15 @@
-$large-width: 1024px;
-$medium-width: 680px;
-$small-width: 320px;
+// screen sizes
+$small: 320px;
+$medium: 550px;
+$large: 960px;
 
-$tablet: 'only screen and (max-width: #{$medium-width})';
-$smartphone: 'only screen and (max-width: #{$small-width})';
+// media queries
+$small-and-up: 'only screen and (min-width: #{$small + 5})';
+$medium-and-up: 'only screen and (min-width: #{$medium + 5})';
+$large-and-up: 'only screen and (min-width: #{$large + 5})';
 
-$default-margin: 10px;
-$default-padding: 20px;
-$default-line-height: 35px;
+// default variables
+$height: 45px;
+$margin: 10px;
+$padding: 10px;
+$radius: 5px;

@@ -1,15 +1,57 @@
-.center-align {
-  text-align: center;
+.align {
+  &-center {
+    text-align: center;
+  }
+  &-left {
+    text-align: left;
+  }
+  &-right {
+    text-align: right;
+  }
+  &-justify {
+    text-align: justify;
+  }
 }
 
-.left-align {
-  text-align: left;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+  margin: {
+    top: ($margin * 2);
+    bottom: ($margin * 2);
+  }
 }
 
-.right-align {
-  text-align: right;
+h1 {
+  @include rem(font-size, 50px);
+  @include rem(line-height, 50px);
 }
 
-.justify-align {
-  text-align: justify;
+h2 {
+  @include rem(font-size, 42px);
+  @include rem(line-height, 42px);
+}
+
+h3 {
+  @include rem(font-size, 36px);
+  @include rem(line-height, 36px);
+}
+
+h4 {
+  @include rem(font-size, 30px);
+  @include rem(line-height, 30px);
+}
+
+h5 {
+  @include rem(font-size, 24px);
+  @include rem(line-height, 24px);
+}
+
+h6 {
+  @include rem(font-size, 15px);
+  @include rem(line-height, 15px);
 }

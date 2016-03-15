@@ -1,6 +1,9 @@
 @import "variables";
-@import "reset";
+@import "functions";
+@import "base";
 
 // components
 @import "components/typography";
 @import "components/grid";
+
+@import "sample";
