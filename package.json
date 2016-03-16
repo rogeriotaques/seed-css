@@ -1,7 +1,7 @@
 {
-  "name": "sketch-css",
+  "name": "seed-css",
   "version": "1.0.0",
-  "description": "A simple but powerfull css framework inspired by material design.",
+  "description": "A simple but powerfull css framework.",
   "main": "index.html",
   "author": "Rogerio Taques",
   "license": "MIT",
