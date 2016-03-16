@@ -7,20 +7,19 @@
   & > .row {
     display: block;
     min-height: $height;
-    margin: $margin 0;
+    margin-bottom: $margin / 2;
 
     & > .col {
       box-sizing: border-box;
       display: inline-block;
-      @include rem(height, $height);
-      @include rem(line-height, $height);
-      margin-bottom: $margin;
+      @include rem(min-height, $height);
       background-color: #f5f5f5;
       padding: {
         left: $padding;
         right: $padding;
       }
-      overflow: hidden;
+      vertical-align: top;
+      margin-bottom: $margin / 2;
 
       &.sm {
         @include grid-col();

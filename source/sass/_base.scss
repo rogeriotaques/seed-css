@@ -28,7 +28,7 @@ body {
 p {
   margin: {
     top: $margin;
-    bottom: $margin;
+    bottom: $margin * 2;
   }
 }
 

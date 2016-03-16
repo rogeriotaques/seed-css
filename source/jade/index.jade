@@ -9,7 +9,8 @@ html(lang="en")
   body
     .container
       h1 Seed CSS Framework
-
+      br
+      
     section
       .container
         h2 Container
@@ -17,22 +18,39 @@ html(lang="en")
         p Containers are used to define an enclosed area.
       
         .sample-container.align-center .container
+        
+        .code-sample
+          pre= '<div class="container" ></div>'
+          
+        hr
     
     section
       .container 
         h2 Grid 
         
         p. 
-          Grids are used to define columns. 
+          Grids are used to define columns. <br >
           The grid system is responsive, which means you can define the number 
           of columns according to the screen size.
         
         .grid.sample
           .row
-            .col.sm-12.md-6.lg-3.align-center .sm-12.md-6.lg-3
-            .col.sm-12.md-6.lg-3.align-center .sm-12.md-6.lg-3
-            .col.sm-12.md-6.lg-3.align-center .sm-12.md-6.lg-3
-            .col.sm-12.md-6.lg-3.align-center .sm-12.md-6.lg-3
+            .col.sm-12.md-6.lg-3.align-center 
+              span .sm-12.md-6.lg-3
+            .col.sm-12.md-6.lg-3.align-center 
+              span .sm-12.md-6.lg-3
+            .col.sm-12.md-6.lg-3.align-center 
+              span .sm-12.md-6.lg-3
+            .col.sm-12.md-6.lg-3.align-center 
+              span .sm-12.md-6.lg-3
+        
+        .code-sample
+          pre= '<div class="grid" >'
+          pre= '  <div class="row" >'
+          pre= '    <div class="col sm-12 md-6" ></div>'
+          pre= '    <div class="col sm-12 md-6" ></div>'
+          pre= '  </div>'
+          pre= '</div>'
         
         p There are up to twelve columns.
         
@@ -43,28 +61,140 @@ html(lang="en")
             - var colA = 'sm-' + i
             - var colB = 'sm-' + j
             .row
-              .col.align-center(class=colA)= '.' + colA
-              .col.align-center(class=colB)= '.' + colB
+              .col.align-center(class=colA)
+                span= '.' + colA
+              .col.align-center(class=colB)
+                span= '.' + colB
               
+              
+          .code-sample
+            pre= '<div class="grid" >'
+            pre= '  <div class="row" >'
+            pre= '    <div class="col sm-1" ></div>'
+            pre= '    <div class="col sm-11" ></div>'
+            pre= '  </div>'
+            pre= '</div>'
+          
           .row
-            .col.sm-12.align-center .sm-12
+            .col.sm-12.align-center 
+              span .sm-12
+            
+          .code-sample
+            pre= '<div class="grid" >'
+            pre= '  <div class="row" >'
+            pre= '    <div class="col sm-12" ></div>'
+            pre= '  </div>'
+            pre= '</div>'
             
         p. 
-          Offsets are also available.
+          Offsets are also available. <br >
           To apply offsets, just add the sufix <code >-offset</code> to your classname.
         
         .grid.sample
         
           .row
-            .col.sm-1.align-center 1
+            .col.sm-12.md-6.align-center 
+              span .col.sm-12.md-6
+          .row
+            .col.sm-12.md-6.md-6-offset.align-center 
+              span .col.sm-12.md-6.md-6-offset
         
-          - for (var i=1; i<12; i++)
-            - var j = 12 - i
-            - var colA = 'sm-1 sm-' + i + '-offset'
-            .row
-              .col.align-center(class=colA)= '.' + 1
+          .code-sample
+            pre= '<div class="grid" >'
+            pre= '  <div class="row" >'
+            pre= '    <div class="col sm-6" ></div>'
+            pre= '    <div class="col sm-6 sm-6-offset" ></div>'
+            pre= '  </div>'
+            pre= '</div>'
+        
+        hr
 
     section
       .container
         h2 Typography
         
+        .grid
+          .row
+            .col.sm-12.md-6
+              p.
+                All default HTML tags are supported, including but not limited 
+                to the below few examples.
+              
+              p. 
+                This is an paragrapher. <br >
+                This is a <b >bold</b> text. <br >
+                This is an <i >italic</i> text. <br >
+                This is an <u >underlined</u> text. <br >
+                This is an <a href="#!">anchor</a> text.
+                
+            .col.sm-12.md-6
+              each i in [1,2,3,4,5,6]
+                #{'h'+i}= 'Header ' + i
+        
+        hr
+        
+    section
+      .container
+        h2 Buttons
+        
+        p.
+          Buttons are a really basic elements on any web page or app, and it 
+          comes in two different flavors in Seeds. The standard is plain and 
+          the colored has a vibrant primary color.
+          
+        .buttons.align-center 
+          
+          a.btn(href="#!") Anchor 
+          button(type="button") Button element 
+          input(type="button", value="Input button")
+          
+          br 
+          
+          a.btn.btn-primary(href="#!") Anchor 
+          button.btn-primary(type="button") Button element 
+          input.btn-primary(type="button", value="Input button")
+          br 
+        
+        hr
+        
+    section
+      .container
+        h2 Forms
+        
+        hr
+        
+    section
+      .container
+        h2 Lists
+        
+        hr
+        
+    section
+      .container
+        h2 Tables
+        
+        hr
+        
+    section
+      .container
+        h2 Media queries
+        
+        hr
+        
+    section
+      .container
+        h2 Utilities
+        
+        hr
+        
+    section
+      .container
+        h2 Icons
+        
+        hr
+        
+    section
+      .container
+        h2 Showcase
+        
+        hr

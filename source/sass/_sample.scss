@@ -10,8 +10,15 @@
 .grid.sample {
   & > .row {
     & > .col {
+      white-space: nowrap;
+      overflow: hidden;
+
       &:not(:first-child) {
         border-left: 4px solid white;
+      }
+
+      & > span {
+        @include rem(line-height, 45px);
       }
     }
   }
@@ -21,4 +28,42 @@ code {
   color: darkblue;
   border: thin solid #888;
   padding: 2px;
+}
+
+hr {
+  margin: 40px;
+  border: {
+    width: 0;
+    collapse: collapse;
+    bottom: thin dashed #bbb;
+  }
+}
+
+.code-sample {
+  margin: 20px 0;
+
+  & > pre {
+    background-color: #222;
+    color: whitesmoke;
+    padding: {
+      left: 20px;
+      right: 20px;
+    }
+
+    &:only-child {
+      padding: 20px;
+    }
+
+    &:not(:only-child) {
+
+      &:first-child {
+        padding-top: 20px;
+      }
+
+      &:last-child {
+        padding-bottom: 20px;
+      }
+
+    }
+  }
 }

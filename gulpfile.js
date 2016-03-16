@@ -6,6 +6,7 @@ var
   jade = require('gulp-jade'),
   concat = require('gulp-concat'),
   uglify = require('gulp-uglify'),
+  beautify = require('gulp-cssbeautify'),
   minify = require('gulp-minify-css'),
   gulpif = require('gulp-if'),
   config;
@@ -22,6 +23,7 @@ gulp.task('build:sass', function () {
   return gulp
     .src(config.path.source + 'sass/**/*.scss')
     .pipe(sass())
+    .pipe(beautify({indent: '  ', autosemicolon: true}))
     .pipe(concat('bundle.css'))
     .pipe(gulp.dest(config.path.build + 'assets/css'));
 });

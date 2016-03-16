@@ -1,39 +1,39 @@
-@function parseInt($n) { /* 2 */
+@function parseInt($n) {
   @return $n / ($n * 0 + 1);
 }
 
 @mixin rem($property, $values) {
-  $px : (); /* 3 */
-  $rem: (); /* 3 */
+  $px : ();
+  $rem: ();
 
-  @each $value in $values { /* 4 */
+  @each $value in $values {
 
-    @if $value == 0 or $value == auto { /* 5 */
+    @if $value == 0 or $value == auto {
       $px : append($px , $value);
       $rem: append($rem, $value);
     }
 
     @else {
-      $unit: unit($value);    /* 6 */
-      $val: parseInt($value); /* 6 */
+      $unit: unit($value);
+      $val: parseInt($value);
 
-      @if $unit == "px" {  /* 7 */
+      @if $unit == "px" {
         $px : append($px,  $value);
         $rem: append($rem, ($val / 10 + rem));
       }
 
-      @if $unit == "rem" { /* 7 */
+      @if $unit == "rem" {
         $px : append($px,  ($val * 10 + px));
         $rem: append($rem, $value);
       }
     }
   }
 
-  @if $px == $rem {     /* 8 */
-    #{$property}: $px;  /* 9 */
+  @if $px == $rem {
+    #{$property}: $px;
   } @else {
-    #{$property}: $px;  /* 9 */
-    #{$property}: $rem; /* 9 */
+    #{$property}: $px;
+    #{$property}: $rem;
   }
 }
 
@@ -59,4 +59,12 @@
       }
     }
   }
+}
+
+@mixin trans($prop, $time, $animation) {
+  -webkit-transition: $prop $time $animation;
+  -moz-transition: $prop $time $animation;
+  -ms-transition: $prop $time $animation;
+  -o-transition: $prop $time $animation;
+  transition: $prop $time $animation;
 }
