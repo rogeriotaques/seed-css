@@ -1,0 +1,56 @@
+table {
+  width: 100%;
+  border: {
+    collapse: collapse;
+  }
+
+  th,
+  td {
+    text-align: left;
+    @include rem(font-size, 14px);
+    @include rem(line-height, 24px);
+    @include rem(padding, $padding);
+    @include rem(min-height, 30px);
+    vertical-align: middle;
+    border-bottom: thin solid $grey;
+  }
+
+  thead {
+    th,
+    td {
+      font-weight: 400;
+      border-bottom-width: 2px;
+      border-bottom-color: $darken-grey;
+    }
+  }
+
+  tfoot {
+    td {
+      border: 0;
+    }
+  }
+
+  &.hovered {
+    tbody {
+      tr:hover {
+        background-color: lighten($grey, 5%);
+      }
+    }
+  }
+
+  &.stripped {
+    tbody {
+      tr:nth-child(odd) {
+        background-color: lighten($grey, 5%);
+      }
+    }
+  }
+
+  &.bordered {
+    tbody {
+      td:not(:first-child) {
+        border-left: thin solid $grey;
+      }
+    }
+  }
+}

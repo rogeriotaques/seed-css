@@ -1,0 +1,38 @@
+.align {
+  &-center {
+    text-align: center;
+  }
+  &-left {
+    text-align: left;
+  }
+  &-right {
+    text-align: right;
+  }
+  &-justify {
+    text-align: justify;
+  }
+}
+
+img {
+  vertical-align: middle;
+
+  &:not(.no-responsive) {
+    position: relative;
+    max-width: 100%;
+  }
+
+  &.circle {
+    border-radius: 50%;
+  }
+
+  &.thumb {
+    border: {
+      width: 5px;
+      color: white;
+      style: solid;
+      radius: 3px;
+    }
+    max-width: 100px;
+    height: auto;
+  }
+}

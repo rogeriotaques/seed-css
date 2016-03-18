@@ -12,9 +12,11 @@
     & > .col {
       white-space: nowrap;
       overflow: hidden;
+      background-color: #f5f5f5;
 
       &:not(:first-child) {
-        border-left: 4px solid white;
+        // border-left: 4px solid white;
+        outline: 4px solid white;
       }
 
       & > span {

@@ -12,6 +12,7 @@ var
   config;
 
 config = {
+  fileName: 'seed',
   path: {
     source: 'source/',
     build: 'build/',
@@ -24,8 +25,9 @@ gulp.task('build:sass', function () {
     .src(config.path.source + 'sass/**/*.scss')
     .pipe(sass())
     .pipe(beautify({indent: '  ', autosemicolon: true}))
-    .pipe(concat('bundle.css'))
-    .pipe(gulp.dest(config.path.build + 'assets/css'));
+    .pipe(concat(config.fileName + '.css'))
+    .pipe(gulp.dest(config.path.build + 'assets/css'))
+    .pipe(sync.stream());
 });
 
 gulp.task('build:jade', function () {
@@ -43,13 +45,9 @@ gulp.task('watch', ['build:sass', 'build:jade'], function () {
     }
   });
 
-  gulp
-    .watch(config.path.source + 'sass/**/*.scss', ['build:sass'])
-    .on('change', function () { sync.reload(); });
-
-  gulp
-    .watch(config.path.source + 'jade/**/*.jade', ['build:jade'])
-    .on('change', function () { sync.reload(); });
+  gulp.watch(config.path.source + 'sass/**/*.scss', ['build:sass']);
+  gulp.watch(config.path.source + 'jade/**/*.jade', ['build:jade']);
+  gulp.watch(config.path.build + '**/*.html' ).on('change', sync.reload);
 
 });
 

@@ -5,10 +5,16 @@ html(lang="en")
     meta(charset="utf-8")
     title Skecth CSS Framework
     meta(name="viewport", content="width=device-width, initial-scale=1")
-    link(rel="stylesheet", href="assets/css/bundle.css")
+    link(rel="stylesheet", href="assets/css/seed.css")
   body
     .container
-      h1 Seed CSS Framework
+      h1.sample-title Seed CSS Framework
+      
+      p.
+        A simple and light-weight mobile first and responsive CSS 
+        framework which will help you to start any web site, web app or 
+        mobile site.
+      
       br
       
     section
@@ -135,6 +141,18 @@ html(lang="en")
         
     section
       .container
+        h2 Navbar
+        
+        hr
+        
+    section
+      .container
+        h2 Side-navbar
+        
+        hr
+        
+    section
+      .container
         h2 Buttons
         
         p.
@@ -167,11 +185,65 @@ html(lang="en")
       .container
         h2 Lists
         
+        .grid
+          .row
+            .col.sm-12.md-6
+              p Ordered
+            
+              ol
+                li First item
+                li Second item 
+                  ol
+                    li Nested first 
+                    li Nested second ...
+                li Third item
+            
+            .col.sm-12.md-6
+              p Unordered
+            
+              ul
+                li First item
+                li Second item 
+                  ul
+                    li Nested first 
+                    li Nested second ...
+                li Third item
         hr
         
     section
       .container
         h2 Tables
+        
+        p Default
+        
+        - each i in ['', 'stripped', 'hovered', 'bordered']
+          if i !== ''
+            p.fcupper= i
+           
+          table(class=i) 
+            thead
+              tr
+                th Name 
+                th Email
+                th Phone
+            tbody
+              tr 
+                td John Wayne
+                td john@wayne.com 
+                td 123-4567-8900
+              tr 
+                td John Wayne
+                td john@wayne.com 
+                td 123-4567-8900
+              tr 
+                td John Wayne
+                td john@wayne.com 
+                td 123-4567-8900
+            tfoot
+              tr
+                td
+                td
+                td
         
         hr
         
@@ -184,6 +256,64 @@ html(lang="en")
     section
       .container
         h2 Utilities
+
+        .grid
+          .row
+            .col.sm-12
+              h4 Text alignment
+              
+              p.align-left This is left aligned
+              
+              .code-sample
+                pre= '<p class="align-left" >Something</p>'
+              
+              p.align-center This is center aligned 
+              
+              .code-sample
+                pre= '<p class="align-center" >Something</p>'
+              
+              p.align-right This is right aligned 
+              
+              .code-sample
+                pre= '<p class="align-right" >Something</p>'
+
+              p.align-justify.
+                This is justified. This is justified. This is justified. This is justified. 
+                This is justified. This is justified. This is justified. This is justified. 
+              
+              .code-sample
+                pre= '<p class="align-justify" >Something</p>'
+                
+            .row
+              .col.sm-12
+                h4 Responsive image
+                
+                p. 
+                  By default, all images are considered responsive and will adjust 
+                  accordingly to the window size. In case you, for any sake, need a 
+                  non responsive image, just add the class <code >.no-responsive</code>
+                  on it.
+                
+                p.align-center 
+                  img(src="http://placehold.it/800x600", alt="Sample of a responsive image")
+                
+                .code-sample
+                  pre= '<img src="..." alt="..." >'
+                  
+                .grid
+                  .row
+                    .col.sm-12.md-6
+                      h5.align-center Circle image 
+                      
+                      p.align-center
+                        img.circle(src="http://placehold.it/100x100", alt="Circle image sample")
+                    
+                    .col.sm-12.md-6
+                      h5.align-center Thumbnail
+                      
+                      p.align-center
+                        img.thumb(src="http://placehold.it/100x100", alt="Thumbnail image sample")
+                
         
         hr
         
