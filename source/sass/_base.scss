@@ -1,3 +1,10 @@
+/**
+ * Seed CSS
+ * @author Rogerio Taques (rogerio.taques@gmail.com)
+ * @license MIT
+ * @see https://github.com/rogeriotaques/seed-css
+ */
+
 * {
   padding: 0;
   margin: 0;
@@ -29,6 +36,23 @@ p {
   margin: {
     top: $margin;
     bottom: $margin * 2;
+  }
+}
+
+hr {
+  margin: ($margin * 4) ($margin * 2);
+  border: {
+    width: 0;
+    collapse: collapse;
+    bottom: $border dashed $shadow;
+  }
+
+  &.solid {
+    border-bottom: $border solid $shadow;
+  }
+
+  &.dotted {
+    border-bottom: $border dotted $shadow;
   }
 }
 

@@ -39,6 +39,54 @@ html(lang="en")
           The grid system is responsive, which means you can define the number 
           of columns according to the screen size.
         
+        h5 Available Classes
+        
+        table 
+          thead
+            tr 
+              th Class 
+              th Detail
+              th Remarks
+          tbody 
+            tr
+              td .grid
+              td &nbsp;
+              td Defines the grid container
+            tr
+              td .row
+              td &nbsp;
+              td Defines each row of a grid container
+            tr
+              td .col
+              td &nbsp;
+              td Defines each column of a grid container
+            tr
+              td .sm-*
+              td (1 ~ 12)
+              td Defines a column size for small screens. It's used concatenated to <code >.col</code>
+            tr
+              td .sm-*-offset
+              td (1 ~ 12)
+              td Creates an offset of columns for small screens. It's used concatenated to <code >.col</code>
+            tr
+              td .md-*
+              td (1 ~ 12)
+              td Defines a column size for medium screens. It's used concatenated to <code >.col</code
+            tr
+              td .md-*-offset
+              td (1 ~ 12)
+              td Creates an offset of columns for medium screens. It's used concatenated to <code >.col</code
+            tr
+              td .lg-*
+              td (1 ~ 12)
+              td Defines a column size for large screens. It's used concatenated to <code >.col</code
+            tr
+              td .lg-*-offset
+              td (1 ~ 12)
+              td Creates an offset of columns for large screens. It's used concatenated to <code >.col</code
+              
+        h5 Examples
+        
         .grid.sample
           .row
             .col.sm-12.md-6.lg-3.align-center 
@@ -62,6 +110,11 @@ html(lang="en")
         
         .grid.sample
         
+          .row
+            - each i in [1,2,3,4,5,6,7,8,9,10,11,12]
+              .col.sm-1.align-center 
+                span .sm-1
+        
           - for (var i=1; i<12; i++)
             - var j = 12 - i
             - var colA = 'sm-' + i
@@ -80,7 +133,7 @@ html(lang="en")
             pre= '    <div class="col sm-11" ></div>'
             pre= '  </div>'
             pre= '</div>'
-          
+              
           .row
             .col.sm-12.align-center 
               span .sm-12
@@ -100,10 +153,10 @@ html(lang="en")
         
           .row
             .col.sm-12.md-6.align-center 
-              span .col.sm-12.md-6
+              span .sm-12.md-6
           .row
             .col.sm-12.md-6.md-6-offset.align-center 
-              span .col.sm-12.md-6.md-6-offset
+              span .sm-12.md-6.md-6-offset
         
           .code-sample
             pre= '<div class="grid" >'

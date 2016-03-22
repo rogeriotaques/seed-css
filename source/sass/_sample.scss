@@ -1,3 +1,10 @@
+/**
+ * Seed CSS
+ * @author Rogerio Taques (rogerio.taques@gmail.com)
+ * @license MIT
+ * @see https://github.com/rogeriotaques/seed-css
+ */
+
 .container {
   .sample-container {
     width: 100%;
@@ -30,15 +37,6 @@ code {
   color: darkblue;
   border: thin solid #888;
   padding: 2px;
-}
-
-hr {
-  margin: 40px;
-  border: {
-    width: 0;
-    collapse: collapse;
-    bottom: thin dashed #bbb;
-  }
 }
 
 .code-sample {

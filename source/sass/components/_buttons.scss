@@ -1,32 +1,9 @@
-// .btn,
-// button,
-// input[type="button"],
-// input[type="submit"],
-// input[type="reset"] {
-//   border: 1px solid #bbb;
-//   border-radius: 2px;
-//   padding: ($padding / 2) $padding;
-//   margin: ($margin / 2);
-//   text-decoration: none;
-//   background-color: transparent;
-//   @include rem(min-height, $height / 2);
-//   @include rem(line-height, $height / 2);
-//   @include rem(font-size, 12px);
-//   display: inline-block;
-//   cursor: pointer;
-//   color: #333;
-//   @include trans(all, .25s, ease);
-//
-//   &:hover {
-//     box-shadow: #bbb 0 0 5px;
-//   }
-//
-//   &.btn-primary {
-//     border-color: $primary;
-//     background-color: $primary;
-//     color: white;
-//   }
-// }
+/**
+ * Seed CSS
+ * @author Rogerio Taques (rogerio.taques@gmail.com)
+ * @license MIT
+ * @see https://github.com/rogeriotaques/seed-css
+ */
 
 .btn,
 button,

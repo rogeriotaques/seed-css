@@ -1,8 +1,16 @@
+/**
+ * Seed CSS
+ * @author Rogerio Taques (rogerio.taques@gmail.com)
+ * @license MIT
+ * @see https://github.com/rogeriotaques/seed-css
+ */
+
 table {
   width: 100%;
   border: {
     collapse: collapse;
   }
+  margin: ($margin * 2) 0;
 
   th,
   td {
