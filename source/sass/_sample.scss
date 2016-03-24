@@ -42,10 +42,19 @@ code {
 
 .code-sample {
   margin: 20px 0;
+  overflow: {
+    y: hidden;
+    x: auto;
+  };
+  background-color: $grey;
+
+  &.bg-white {
+    background-color: white;
+  }
 
   & > .prettyprint {
     border: 0;
-    background-color: $grey;
     padding: 20px 10px;
+    width: 100%;
   }
 }

@@ -302,6 +302,42 @@ html(lang="en")
       .container
         h2 Forms
         
+        h5 Basic
+        
+        .grid
+          .row
+            .col.sm-12
+            
+              .field
+                label(for="") This is a simple input text 
+                input(type="text")
+            
+              .field
+                label(for="") This is a simple input password 
+                input(type="password")
+            
+              .field
+                label(for="") This is a select/ dropdown 
+                select
+                  option(value="A") Option A
+                  option(value="B") Option B
+                  option(value="C") Option C
+                  
+              .field
+                label(for="") 
+                  input(type="radio")
+                  | This is a radio button
+                  
+              .field
+                label(for="") 
+                  input(type="checkbox")
+                  | This is a checkbox
+                  
+              .field
+                label(for="") This is a simple textarea 
+                textarea
+                
+        
         hr
         
     section
@@ -491,9 +527,10 @@ html(lang="en")
               
               br
               
-              p.nowrap.
-                This text should not break when the screen width is smaller then 
-                the text length. 
+              .code-sample.bg-white
+                p.nowrap.
+                  This text should not break when the screen width is smaller then 
+                  the text length. 
               
               .code-sample
                 pre.prettyprint.lang-html.
