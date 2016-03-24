@@ -43,3 +43,15 @@ img {
     height: auto;
   }
 }
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.camel-case {
+  text-transform: capitalize;
+}
+
+.uc-first::first-letter {
+  text-transform: capitalize;
+}
