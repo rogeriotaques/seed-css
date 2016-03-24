@@ -3,9 +3,11 @@ doctype html
 html(lang="en")
   head
     meta(charset="utf-8")
-    title Skecth CSS Framework
+    title Seed CSS Framework
     meta(name="viewport", content="width=device-width, initial-scale=1")
-    link(rel="stylesheet", href="assets/css/seed.css")
+    link(rel="stylesheet", type="text/css", href="//fonts.googleapis.com/css?family=Raleway:400,300,600")
+    //- link(rel="stylesheet", type="text/css", href="https://google-code-prettify.googlecode.com/svn/loader/prettify.css")
+    link(rel="stylesheet", type="text/css", href="assets/css/seed.css")
   body
     .container
       h1.sample-title Seed CSS Framework
@@ -26,7 +28,8 @@ html(lang="en")
         .sample-container.align-center .container
         
         .code-sample
-          pre= '<div class="container" ></div>'
+          pre.prettyprint.lang-html. 
+            &lt;div class="container" &gt;&lt;/div&gt;
           
         hr
     
@@ -99,12 +102,13 @@ html(lang="en")
               span .sm-12.md-6.lg-3
         
         .code-sample
-          pre= '<div class="grid" >'
-          pre= '  <div class="row" >'
-          pre= '    <div class="col sm-12 md-6" ></div>'
-          pre= '    <div class="col sm-12 md-6" ></div>'
-          pre= '  </div>'
-          pre= '</div>'
+          pre.prettyprint.lang-html.
+            &lt;div class="grid" &gt;
+              &lt;div class="row" &gt;
+                &lt;div class="col sm-12 md-6" &gt; ... &lt;/div&gt;
+                &lt;div class="col sm-12 md-6" &gt; ... &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
         
         p There are up to twelve columns.
         
@@ -127,23 +131,25 @@ html(lang="en")
               
               
           .code-sample
-            pre= '<div class="grid" >'
-            pre= '  <div class="row" >'
-            pre= '    <div class="col sm-1" ></div>'
-            pre= '    <div class="col sm-11" ></div>'
-            pre= '  </div>'
-            pre= '</div>'
-              
+            pre.prettyprint.lang-html. 
+              &lt;div class="grid" &gt;
+                &lt;div class="row" &gt;
+                  &lt;div class="col sm-1" &gt; ... &lt;/div&gt;
+                  &lt;div class="col sm-11" &gt; ... &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+          
           .row
             .col.sm-12.align-center 
               span .sm-12
             
           .code-sample
-            pre= '<div class="grid" >'
-            pre= '  <div class="row" >'
-            pre= '    <div class="col sm-12" ></div>'
-            pre= '  </div>'
-            pre= '</div>'
+            pre.prettyprint.lang-html.
+              &lt;div class="grid" &gt;
+                &lt;div class="row" &gt;
+                  &lt;div class="col sm-12" &gt; ... &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
             
         p. 
           Offsets are also available. <br >
@@ -159,12 +165,13 @@ html(lang="en")
               span .sm-12.md-6.md-6-offset
         
           .code-sample
-            pre= '<div class="grid" >'
-            pre= '  <div class="row" >'
-            pre= '    <div class="col sm-6" ></div>'
-            pre= '    <div class="col sm-6 sm-6-offset" ></div>'
-            pre= '  </div>'
-            pre= '</div>'
+            pre.prettyprint.lang-html.
+              &lt;div class="grid" &gt;
+                &lt;div class="row" &gt;
+                  &lt;div class="col sm-6" &gt; ... &lt;/div&gt;
+                  &lt;div class="col sm-6 sm-6-offset" &gt; ... &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
         
         hr
 
@@ -190,6 +197,21 @@ html(lang="en")
               each i in [1,2,3,4,5,6]
                 #{'h'+i}= 'Header ' + i
         
+        .code-sample
+          pre.prettyprint.lang-html.
+            &lt;p &gt; ... &lt;/p&gt; 
+            &lt;b &gt; ... &lt;/b&gt; 
+            &lt;i &gt; ... &lt;/i&gt; 
+            &lt;u &gt; ... &lt;/u&gt; 
+            &lt;a href="." &gt; ... &lt;/a&gt; 
+            
+            &lt;h1 &gt; ... &lt;/h1&gt; 
+            &lt;h2 &gt; ... &lt;/h2&gt; 
+            &lt;h3 &gt; ... &lt;/h3&gt; 
+            &lt;h4 &gt; ... &lt;/h4&gt; 
+            &lt;h5 &gt; ... &lt;/h5&gt; 
+            &lt;h6 &gt; ... &lt;/h6&gt; 
+        
         hr
         
     section
@@ -211,7 +233,10 @@ html(lang="en")
         p.
           Buttons are a really basic elements on any web page or app, and it 
           comes in two different flavors in Seeds. The standard is plain and 
-          the colored has a vibrant primary color.
+          the colored has a vibrant primary color. In order to use the primary 
+          just add the class name <code >.btn-primary</code>. If you need use 
+          anchor (&lt;a /&gt;) as button, include the <code >.btn</code> class 
+          name on it.
           
         .buttons.align-center 
           
@@ -225,7 +250,13 @@ html(lang="en")
           button.btn-primary(type="button") Button element 
           input.btn-primary(type="button", value="Input button")
           br 
-        
+          
+        .code-sample
+          pre.prettyprint.lang-html.
+            &lt;a class="btn" href="..." &gt; ... &lt;/a&gt; 
+            &lt;button type="button" href="..." &gt; ... &lt;/button&gt; 
+            &lt;input type="button" href="..." &gt; ... &lt;/input&gt; 
+
         hr
         
     section
@@ -318,24 +349,24 @@ html(lang="en")
               p.align-left This is left aligned
               
               .code-sample
-                pre= '<p class="align-left" >Something</p>'
+                &lt;p class="align-left" &gt;Something&lt;/p&gt;
               
               p.align-center This is center aligned 
               
               .code-sample
-                pre= '<p class="align-center" >Something</p>'
+                &lt;p class="align-center" &gt;Something&lt;/p&gt;
               
               p.align-right This is right aligned 
               
               .code-sample
-                pre= '<p class="align-right" >Something</p>'
+                &lt;p class="align-right" &gt;Something&lt;/p&gt;
 
               p.align-justify.
                 This is justified. This is justified. This is justified. This is justified. 
                 This is justified. This is justified. This is justified. This is justified. 
               
               .code-sample
-                pre= '<p class="align-justify" >Something</p>'
+                &lt;p class="align-justify" &gt;Something&lt;/p&gt;
                 
             .row
               .col.sm-12
@@ -351,7 +382,7 @@ html(lang="en")
                   img(src="http://placehold.it/800x600", alt="Sample of a responsive image")
                 
                 .code-sample
-                  pre= '<img src="..." alt="..." >'
+                  &lt;img src="..." alt="..." &gt;
                   
                 .grid
                   .row
@@ -381,3 +412,5 @@ html(lang="en")
         h2 Showcase
         
         hr
+        
+    script(src="//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js")
