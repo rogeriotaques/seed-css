@@ -22,7 +22,7 @@ config = {
 
 gulp.task('build:sass', function () {
   return gulp
-    .src(config.path.source + 'sass/**/*.scss')
+    .src(config.path.source + 'sass/main.scss')
     .pipe(sass())
     .pipe(beautify({indent: '  ', autosemicolon: true}))
     .pipe(concat(config.fileName + '.css'))

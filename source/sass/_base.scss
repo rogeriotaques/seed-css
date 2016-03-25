@@ -1,9 +1,4 @@
-/**
- * Seed CSS
- * @author Rogerio Taques (rogerio.taques@gmail.com)
- * @license MIT
- * @see https://github.com/rogeriotaques/seed-css
- */
+/** Base **/
 
 * {
   padding: 0;
@@ -55,6 +50,12 @@ hr {
   &.dotted {
     border-bottom: $border dotted $shadow;
   }
+}
+
+a,
+a:active,
+a:visited {
+  color: $primary;
 }
 
 .container {

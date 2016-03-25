@@ -1,3 +1,22 @@
+// Copyright (c) 2016, Rogerio Taques
+// 
+// Permission is hereby granted, free of charge, to any person obtaining a 
+// copy of this software and associated documentation files (the "Software"), 
+// to deal in the Software without restriction, including without limitation the 
+// rights to use, copy, modify, merge, publish, distribute, sublicense, and/or 
+// sell copies of the Software, and to permit persons to whom the Software is 
+// furnished to do so, subject to the following conditions:
+// 
+// The above copyright notice and this permission notice shall be included in all 
+// copies or substantial portions of the Software.
+// 
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, 
+// WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR 
+// IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
 doctype html
 
 html(lang="en")
@@ -6,19 +25,19 @@ html(lang="en")
     title Seed CSS Framework
     meta(name="viewport", content="width=device-width, initial-scale=1")
     link(rel="stylesheet", type="text/css", href="//fonts.googleapis.com/css?family=Raleway:400,300,600")
-    //- link(rel="stylesheet", type="text/css", href="https://google-code-prettify.googlecode.com/svn/loader/prettify.css")
+    link(rel="stylesheet", type="text/css", href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css")
     link(rel="stylesheet", type="text/css", href="assets/css/seed.css")
   body
-    .container
-      h1.sample-title Seed CSS Framework
-      
-      p.
-        A simple and light-weight mobile first and responsive CSS 
-        framework which will help you to start any web site, web app or 
-        mobile site.
-      
-      br
-      
+  
+    header
+      .container
+        h1 Seed CSS Framework
+        
+        p.
+          A simple and light-weight mobile first and responsive CSS 
+          framework which will help you to start any web site, web app or 
+          mobile site.
+        
     section
       .container
         h2 Container
@@ -219,18 +238,6 @@ html(lang="en")
             &lt;h4 &gt; ... &lt;/h4&gt; 
             &lt;h5 &gt; ... &lt;/h5&gt; 
             &lt;h6 &gt; ... &lt;/h6&gt; 
-        
-        hr
-        
-    section
-      .container
-        h2 Navbar
-        
-        hr
-        
-    section
-      .container
-        h2 Side-navbar
         
         hr
         
@@ -449,6 +456,25 @@ html(lang="en")
       .container
         h2 Media queries
         
+        table 
+          thead
+            tr
+              th Query 
+              th Remarks
+          tbody
+            tr 
+              td @media only screen and (min-width: 0px) {}
+              td Mobile first queries
+            tr 
+              td @media only screen and (min-width: 320px) {}
+              td Larger than mobile
+            tr 
+              td @media only screen and (min-width: 550px) {}
+              td Larger than tablet
+            tr 
+              td @media only screen and (min-width: 960px) {}
+              td Larger than desktop/laptop pc
+        
         hr
         
     section
@@ -630,15 +656,50 @@ html(lang="en")
       .container
         h2 Icons
         
+        p.
+          We're using <b>Ionic Icon Fonts</b> as our set of icons. It's free and 
+          can be redistributed as well as Seed CSS.
+          
+        p. 
+          Just to keep the flexibility, the icon set is not included on the 
+          Seed CSS stylesheet files. You should import it from an external source. 
+          We strongly recommend you to do it from Ionic CDN.
+          
+        br
+        
+        .grid
+          .row
+            .col.sm-4.align-center
+              i.icon.ion-ionic(title=".ion-ionic")
+            .col.sm-4.align-center
+              i.icon.ion-chevron-right(title=".ion-chevron-right")
+            .col.sm-4.align-center
+              i.icon.ion-paper-airplane(title=".ion-paper-airplane")
+          .row
+            .col.sm-4.align-center
+              i.icon.ion-connection-bars(title=".ion-connection-bars")
+            .col.sm-4.align-center
+              i.icon.ion-card(title=".ion-card")
+            .col.sm-4.align-center
+              i.icon.ion-erlenmeyer-flask(title=".ion-erlenmeyer-flask")
+        
+        br
+        
+        p 
+          | To check all icons available, please refer to: 
+          br
+          a(href="http://ionicons.com/", target="_blank") http://ionicons.com/
+        
         hr
         
     section
       .container
         h2 Showcase
         
-        p.
-          Have you build a website or app using Seed CSS? Don't be shy and let 
-          me know. Your creation can be included here, in the showcase. :)
+        p 
+          | Have you build a website or app using Seed CSS? Don't be shy and let me know. 
+          br
+          | Your creation can be included here, in the showcase. :)
         
         hr
         
@@ -647,8 +708,40 @@ html(lang="en")
         h2 License
         
         p.
-          This small and humble css framework is licensed under MIT.
+          This small and humble css framework is licensed under MIT. 
+          Find the license itself below:
         
-        hr
+        .copyright-block
+        
+          p Copyright (&copy;) 2016, Rogerio Taques
+
+          p. 
+            Permission is hereby granted, free of charge, to any person obtaining 
+            a copy of this software and associated documentation files 
+            (the "Software"), to deal in the Software without restriction, 
+            including without limitation the rights to use, copy, modify, merge, 
+            publish, distribute, sublicense, and/or sell copies of the Software, 
+            and to permit persons to whom the Software is furnished to do so, 
+            subject to the following conditions:
+
+          p. 
+            The above copyright notice and this permission notice shall be included 
+            in all copies or substantial portions of the Software.
+
+          p. 
+            THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
+            EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF 
+            MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+            IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY 
+            CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, 
+            TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
+            SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+        
+    footer 
+      p.copyright &copy; 2016, Rogerio Taques
+      p 
+        | Need support, have suggestions or just would like to drop me a line?
+        br
+        a(href="https://github.com/rogeriotaques/seed-css/issues") Open an issue at Github
         
     script(src="//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js")

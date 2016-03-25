@@ -1,9 +1,25 @@
-/**
- * Seed CSS
- * @author Rogerio Taques (rogerio.taques@gmail.com)
- * @license MIT
- * @see https://github.com/rogeriotaques/seed-css
- */
+/**  THIS BLOCK IS SPECIFC FOR SEED WEBSITE **/
+
+header {
+  padding: ($padding * 2) 0;
+  border-bottom: $border solid $primary;
+  background-color: $primary;
+  color: white;
+}
+
+footer {
+  padding: ($padding * 2) 0;
+  text-align: center;
+  margin-top: $margin * 5;
+  background-color: $darken-grey;
+  color: white;
+
+  a,
+  a:visited,
+  a:active {
+    color: whitesmoke;
+  }
+}
 
 .container {
   .sample-container {
@@ -58,3 +74,21 @@ code {
     width: 100%;
   }
 }
+
+.copyright-block {
+  background-color: #e5e5e5;
+  padding: $padding ($padding * 2) ;
+  text-align: justify;
+}
+
+.icon {
+  color: lighten($primary, 10%);
+  @include rem(font-size, 60px);
+
+  & + span {
+    @include rem(font-size, 12px);
+    display: block;
+  }
+}
+
+/**  THIS BLOCK IS SPECIFC FOR SEED WEBSITE **/
