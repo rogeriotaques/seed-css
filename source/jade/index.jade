@@ -317,6 +317,10 @@ html(lang="en")
                 input(type="password")
             
               .field
+                label(for="") This is a simple input email 
+                input(type="email", placeholder="name@domain.tld")
+            
+              .field
                 label(for="") This is a select/ dropdown 
                 select
                   option(value="A") Option A
@@ -324,13 +328,13 @@ html(lang="en")
                   option(value="C") Option C
                   
               .field
-                label(for="") 
-                  input(type="radio")
+                label(for="radio-sample") 
+                  input(type="radio", id="radio-sample")
                   | This is a radio button
                   
               .field
-                label(for="") 
-                  input(type="checkbox")
+                label(for="check-sample") 
+                  input(type="checkbox", id="check-sample")
                   | This is a checkbox
                   
               .field
