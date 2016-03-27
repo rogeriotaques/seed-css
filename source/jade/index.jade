@@ -34,9 +34,33 @@ html(lang="en")
         h1 Seed CSS Framework
         
         p.
-          A simple and light-weight mobile first and responsive CSS 
-          framework which will help you to start any web site, web app or 
-          mobile site.
+          A light-weight mobile first responsive CSS framework.
+
+    section.main 
+      .container
+        
+        .grid
+          .row
+            .col.sm-12.md-4
+              p Here there's the first argument
+            .col.sm-12.md-4
+              p Here there's the second argument
+            .col.sm-12.md-4
+              p Here there's the third argument
+          .row
+            .col.sm-12.align-center
+              a.btn.btn-primary(href="#!") DOWNLOAD 
+      
+    section.page-navbar
+      .container
+        nav 
+          ul
+            li 
+              a(href="#!") A 
+            li 
+              a(href="#!") B
+            li 
+              a(href="#!") C
         
     section
       .container
@@ -463,16 +487,20 @@ html(lang="en")
               th Remarks
           tbody
             tr 
-              td @media only screen and (min-width: 0px) {}
+              td
+                pre.prettyprint.lang-css @media only screen and (min-width: 0px) {}
               td Mobile first queries
             tr 
-              td @media only screen and (min-width: 320px) {}
+              td
+                pre.prettyprint.lang-css @media only screen and (min-width: 320px) {}
               td Larger than mobile
             tr 
-              td @media only screen and (min-width: 550px) {}
+              td
+                pre.prettyprint.lang-css @media only screen and (min-width: 550px) {}
               td Larger than tablet
             tr 
-              td @media only screen and (min-width: 960px) {}
+              td
+                pre.prettyprint.lang-css @media only screen and (min-width: 960px) {}
               td Larger than desktop/laptop pc
         
         hr
@@ -664,24 +692,34 @@ html(lang="en")
           Just to keep the flexibility, the icon set is not included on the 
           Seed CSS stylesheet files. You should import it from an external source. 
           We strongly recommend you to do it from Ionic CDN.
+        
+        p.
+          In order to use those icons, add the following line to the HEAD tag of 
+          any page you're using Seed CSS:
           
+        .code-sample
+          pre.prettyprint.lang-html.
+            &lt;link rel="stylesheet" type="text/css" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"&gt;
+        
         br
         
         .grid
           .row
-            .col.sm-4.align-center
+            .col.sm-6.md-4.align-center
               i.icon.ion-ionic(title=".ion-ionic")
-            .col.sm-4.align-center
+            .col.sm-6.md-4.align-center
               i.icon.ion-chevron-right(title=".ion-chevron-right")
-            .col.sm-4.align-center
+            .col.sm-6.md-4.align-center
               i.icon.ion-paper-airplane(title=".ion-paper-airplane")
-          .row
-            .col.sm-4.align-center
+            .col.sm-6.md-4.align-center
               i.icon.ion-connection-bars(title=".ion-connection-bars")
-            .col.sm-4.align-center
+            .col.sm-6.md-4.align-center
               i.icon.ion-card(title=".ion-card")
-            .col.sm-4.align-center
+            .col.sm-6.md-4.align-center
               i.icon.ion-erlenmeyer-flask(title=".ion-erlenmeyer-flask")
+          .row
+            .col.sm-12.align-center
+              span &hellip; and many other.
         
         br
         

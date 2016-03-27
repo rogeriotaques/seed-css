@@ -7,6 +7,46 @@ header {
   color: white;
 }
 
+section {
+  &.main {
+    & > .container {
+      min-height: calc(100% - 270px);
+      min-height: calc(100vh - 270px);
+      position: relative;
+    }
+  }
+
+  &.page-navbar {
+    border: {
+      top: $border solid $grey;
+      bottom: $border solid $grey;
+    };
+    @include rem(line-height, 46px);
+
+    & > .container {
+      margin: {
+        top: 0;
+        bottom: 0;
+      };
+      @include rem(line-height, 46px);
+    }
+
+    nav {
+      ul {
+        padding: 0;
+      }
+
+      li {
+        list-style: none;
+        display: inline-block;
+        margin-right: $margin;
+        @include rem(font-size, 16px);
+        @include rem(line-height, 20px);
+      }
+    }
+  }
+}
+
 footer {
   padding: ($padding * 2) 0;
   text-align: center;
@@ -14,10 +54,12 @@ footer {
   background-color: $darken-grey;
   color: white;
 
-  a,
-  a:visited,
-  a:active {
-    color: whitesmoke;
+  & > p {
+    & > a,
+    & > a:visited,
+    & > a:active {
+      color: whitesmoke !important;
+    }
   }
 }
 
@@ -91,4 +133,11 @@ code {
   }
 }
 
+td {
+  & > pre {
+    &.prettyprint {
+      border: 0;
+    }
+  }
+}
 /**  THIS BLOCK IS SPECIFC FOR SEED WEBSITE **/

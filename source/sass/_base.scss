@@ -52,9 +52,9 @@ hr {
   }
 }
 
-a,
-a:active,
-a:visited {
+a:not(.btn),
+a:not(.btn):active,
+a:not(.btn):visited {
   color: $primary;
 }
 
