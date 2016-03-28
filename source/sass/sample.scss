@@ -1,5 +1,8 @@
 /**  THIS BLOCK IS SPECIFC FOR SEED WEBSITE **/
 
+@import "variables";
+@import "functions";
+
 header {
   padding: ($padding * 2) 0;
   border-bottom: $border solid $primary;
@@ -140,4 +143,5 @@ td {
     }
   }
 }
+
 /**  THIS BLOCK IS SPECIFC FOR SEED WEBSITE **/

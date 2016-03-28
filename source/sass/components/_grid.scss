@@ -3,7 +3,7 @@
 .grid {
   width: 100%;
   margin: $margin auto;
-  display: block;
+  display: block;;
   position: relative;
 
   & > .row {
@@ -13,6 +13,7 @@
 
     & > .col {
       box-sizing: border-box;
+      // display: inline-block;
       display: inline-block;
       @include rem(min-height, $height);
       padding: {

@@ -50,3 +50,19 @@ img {
 .uc-first::first-letter {
   text-transform: capitalize;
 }
+
+.hide {
+  display: none !important;
+
+  &-only-small {
+    @media only screen and (max-width: $small) {
+      display: none !important;
+    }
+  }
+
+  &-on-medium-and-down {
+    @media only screen and (max-width: $medium) {
+      display: none !important;
+    }
+  }
+}

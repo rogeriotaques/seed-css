@@ -27,40 +27,75 @@ html(lang="en")
     link(rel="stylesheet", type="text/css", href="//fonts.googleapis.com/css?family=Raleway:400,300,600")
     link(rel="stylesheet", type="text/css", href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css")
     link(rel="stylesheet", type="text/css", href="assets/css/seed.css")
+    link(rel="stylesheet", type="text/css", href="assets/css/style.css")
   body
   
     header
       .container
-        h1 Seed CSS Framework
+        h1 Seed CSS
         
         p.
-          A light-weight mobile first responsive CSS framework.
+          A light-weight mobile first responsive CSS boilerplate.
 
-    section.main 
-      .container
-        
-        .grid
-          .row
-            .col.sm-12.md-4
-              p Here there's the first argument
-            .col.sm-12.md-4
-              p Here there's the second argument
-            .col.sm-12.md-4
-              p Here there's the third argument
-          .row
-            .col.sm-12.align-center
-              a.btn.btn-primary(href="#!") DOWNLOAD 
-      
     section.page-navbar
       .container
         nav 
           ul
             li 
-              a(href="#!") A 
+              a(href="#!") About 
             li 
-              a(href="#!") B
+              a(href="#!") Get started
             li 
-              a(href="#!") C
+              a(href="#!") Examples
+            li 
+              a(href="#!") License
+            li.hide-only-small
+              a(href="#!") Fork me on Github
+            li.hide
+              a(href="#!") Download
+
+    section.main 
+      .container
+      
+        br
+        
+        .grid
+          .row
+            .col.sm-12.md-4.align-center
+              h3
+                i.ion-speedometer
+                br
+                | Quick start
+              
+              p. 
+                Get started to your projects with a very small footprint 
+                CSS boilerplate like this.
+                
+            .col.sm-12.md-4.align-center
+                    
+              h3 
+                i.ion-leaf
+                br
+                | Light-weight
+              
+              p. 
+                Just <b>11kb</b> of CSS your app needs to load for a 
+                mobile first and responsive design.
+              
+            .col.sm-12.md-4.align-center
+              h3 
+                i.ion-settings
+                br
+                | Full customizable
+                
+              p. 
+                All written on Sass, what means you can easily customize it
+                as much as you need.
+          br
+          
+          .row
+            .col.sm-12.align-center
+              a.btn.btn-primary(href="#!") DOWNLOAD 
         
     section
       .container
@@ -164,18 +199,16 @@ html(lang="en")
             - each i in [1,2,3,4,5,6,7,8,9,10,11,12]
               .col.sm-1.align-center 
                 span .sm-1
+          .row
+            .col.sm-12.align-center 
+              span .sm-12
         
-          - for (var i=1; i<12; i++)
-            - var j = 12 - i
-            - var colA = 'sm-' + i
-            - var colB = 'sm-' + j
-            .row
-              .col.align-center(class=colA)
-                span= '.' + colA
-              .col.align-center(class=colB)
-                span= '.' + colB
-              
-              
+          .row
+            .col.sm-1.align-center 
+              span .sm-1
+            .col.sm-11.align-center 
+              span .sm-11
+        
           .code-sample
             pre.prettyprint.lang-html. 
               &lt;div class="grid" &gt;
@@ -185,20 +218,6 @@ html(lang="en")
                 &lt;/div&gt;
               &lt;/div&gt;
           
-          br 
-          
-          .row
-            .col.sm-12.align-center 
-              span .sm-12
-            
-          .code-sample
-            pre.prettyprint.lang-html.
-              &lt;div class="grid" &gt;
-                &lt;div class="row" &gt;
-                  &lt;div class="col sm-12" &gt; ... &lt;/div&gt;
-                &lt;/div&gt;
-              &lt;/div&gt;
-        
         br
         
         p. 
@@ -208,9 +227,6 @@ html(lang="en")
         .grid.sample
         
           .row
-            .col.sm-12.md-6.align-center 
-              span .sm-12.md-6
-          .row
             .col.sm-12.md-6.md-6-offset.align-center 
               span .sm-12.md-6.md-6-offset
         
@@ -218,7 +234,6 @@ html(lang="en")
             pre.prettyprint.lang-html.
               &lt;div class="grid" &gt;
                 &lt;div class="row" &gt;
-                  &lt;div class="col sm-6" &gt; ... &lt;/div&gt;
                   &lt;div class="col sm-6 sm-6-offset" &gt; ... &lt;/div&gt;
                 &lt;/div&gt;
               &lt;/div&gt;
@@ -379,7 +394,7 @@ html(lang="en")
       .container
         h2 Lists
         
-        p &nbsp;
+        p You can make your lists using <code >DL</code>, <code >UL</code> or <code >OL</code>.
         
         h5 Examples
         
@@ -487,20 +502,16 @@ html(lang="en")
               th Remarks
           tbody
             tr 
-              td
-                pre.prettyprint.lang-css @media only screen and (min-width: 0px) {}
+              td @media only screen and (min-width: 0px) {}
               td Mobile first queries
             tr 
-              td
-                pre.prettyprint.lang-css @media only screen and (min-width: 320px) {}
+              td @media only screen and (min-width: 320px) {}
               td Larger than mobile
             tr 
-              td
-                pre.prettyprint.lang-css @media only screen and (min-width: 550px) {}
+              td @media only screen and (min-width: 550px) {}
               td Larger than tablet
             tr 
-              td
-                pre.prettyprint.lang-css @media only screen and (min-width: 960px) {}
+              td @media only screen and (min-width: 960px) {}
               td Larger than desktop/laptop pc
         
         hr
@@ -539,16 +550,6 @@ html(lang="en")
                   tr
                     td.nowrap .align-justify
                     td Aligns justified
-                  tr
-                    td.nowrap .nowrap
-                    td Forces the HTML to ignore white spaces when wrapping lines.
-                  tr
-                    td.nowrap .camel-case
-                    td Capitalize the first character of any word
-                  tr
-                    td.nowrap .uc-first
-                    td Capitalize the first character only from the first word
-              
               br
               
               p.align-left This is left aligned
@@ -584,6 +585,28 @@ html(lang="en")
                   &lt;p class="align-justify" &gt; ... &lt;/p&gt;
               
               br
+          
+          .row
+            .col.sm-12    
+              h5 Text transform 
+              
+              table 
+                thead
+                  tr 
+                    th Class 
+                    th Remarks
+                tbody 
+                  tr
+                    td.nowrap .nowrap
+                    td Forces the HTML to ignore white spaces when wrapping lines.
+                  tr
+                    td.nowrap .camel-case
+                    td Capitalize the first character of any word
+                  tr
+                    td.nowrap .uc-first
+                    td Capitalize the first character only from the first word
+              
+              br
               
               .code-sample.bg-white
                 p.nowrap.
@@ -613,7 +636,40 @@ html(lang="en")
                   &lt;p class="uc-first" &gt; ... &lt;/p&gt;
             
             br
-              
+            
+            .row
+              .col.sm-12    
+                h5 Hiding 
+                
+                table 
+                  thead
+                    tr 
+                      th Class 
+                      th Remarks
+                  tbody 
+                    tr
+                      td.nowrap .hide
+                      td Hide an element in any device.
+                    tr
+                      td.nowrap .hide-only-small
+                      td Hide an element only on small devices only.
+                    tr
+                      td.nowrap .hide-on-medium-and-down
+                      td Hide an element on all devices, except for large ones
+            
+                .code-sample
+                  pre.prettyprint.lang-html.
+                    &lt;!-- Hide on all devices --&gt; 
+                    &lt;div class="hide" &gt; ... &lt;/div&gt;
+                    
+                    &lt;!-- Hide on small devices --&gt; 
+                    &lt;div class="hide-only-small" &gt; ... &lt;/div&gt;
+                    
+                    &lt;!-- Hide on medium and small devices --&gt; 
+                    &lt;div class="hide-on-medium-and-down" &gt; ... &lt;/div&gt;
+            
+            br
+            
             .row
               .col.sm-12
                 h5 Responsive image
@@ -751,7 +807,7 @@ html(lang="en")
         
         .copyright-block
         
-          p Copyright (&copy;) 2016, Rogerio Taques
+          p Copyright &copy; 2016, Rogerio Taques
 
           p. 
             Permission is hereby granted, free of charge, to any person obtaining 

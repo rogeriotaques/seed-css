@@ -9,6 +9,7 @@ var
   beautify = require('gulp-cssbeautify'),
   minify = require('gulp-minify-css'),
   gulpif = require('gulp-if'),
+  del = require('del'),
   config;
 
 config = {
@@ -19,6 +20,20 @@ config = {
     dist: 'dist/'
   },
 }
+
+gulp.task('clean', function () {
+  return del([config.path.build, config.path.dist]);
+});
+
+gulp.task('build:style', function () {
+  return gulp
+    .src(config.path.source + 'sass/sample.scss')
+    .pipe(sass())
+    .pipe(beautify({indent: '  ', autosemicolon: true}))
+    .pipe(concat('style.css'))
+    .pipe(gulp.dest(config.path.build + 'assets/css'))
+    .pipe(sync.stream());
+});
 
 gulp.task('build:sass', function () {
   return gulp
@@ -33,11 +48,17 @@ gulp.task('build:sass', function () {
 gulp.task('build:jade', function () {
   return gulp
     .src(config.path.source + 'jade/**/*.jade')
-    .pipe(jade())
+    .pipe(jade({pretty: true}))
     .pipe(gulp.dest(config.path.build));
 });
 
-gulp.task('watch', ['build:sass', 'build:jade'], function () {
+gulp.task('watch', function (cb) {
+
+  runSequence(
+    'clean',
+    ['build:style', 'build:sass', 'build:jade'],
+    cb
+  );
 
   sync.init({
     server: {
@@ -45,13 +66,14 @@ gulp.task('watch', ['build:sass', 'build:jade'], function () {
     }
   });
 
+  gulp.watch(config.path.source + 'sass/sample.scss', ['build:style']);
   gulp.watch(config.path.source + 'sass/**/*.scss', ['build:sass']);
   gulp.watch(config.path.source + 'jade/**/*.jade', ['build:jade']);
   gulp.watch(config.path.build + '**/*.html' ).on('change', sync.reload);
 
 });
 
-gulp.task('build', ['build:sass', 'build:jade'], function () {
+gulp.task('dist', ['build:sass', 'build:jade'], function () {
   return gulp
     .src(config.path.build + '**/*')
     .pipe(gulpif(/\.css$/, minify()))

@@ -40,6 +40,8 @@
 @mixin grid-col() {
   @for $i from 1 through 12 {
     &-#{$i} {
+      margin-left: -.35rem;
+
       @if $i == 12 {
         width: 100%;
       } @elseif $i == 1 {
