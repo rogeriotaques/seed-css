@@ -2,42 +2,43 @@
 
 .grid {
   width: 100%;
+  display: block;
+  box-sizing: border-box;
   margin: $margin auto;
-  display: block;;
   position: relative;
 
-  & > .row {
+  .row {
+    width: 100%;
     display: block;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .col {
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
     min-height: $height;
+    padding: $padding / 2;
+    vertical-align: top;
     margin-bottom: $margin / 2;
 
-    & > .col {
-      box-sizing: border-box;
-      // display: inline-block;
-      display: inline-block;
-      @include rem(min-height, $height);
-      padding: {
-        left: $padding;
-        right: $padding;
-      }
-      vertical-align: top;
-      margin-bottom: $margin / 2;
+    @include grid-make-cols('sm');
+  }
+}
 
-      &.sm {
-        @include grid-col();
-      }
+@media #{$medium-and-up} {
+  .grid {
+    .col {
+      @include grid-make-cols('md');
+    }
+  }
+}
 
-      @media #{$medium-and-up} {
-        &.md {
-          @include grid-col();
-        }
-      }
-
-      @media #{$large-and-up} {
-        &.lg {
-          @include grid-col();
-        }
-      }
+@media #{$large-and-up} {
+  .grid {
+    .col {
+      @include grid-make-cols('lg');
     }
   }
 }

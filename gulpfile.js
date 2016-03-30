@@ -28,7 +28,7 @@ gulp.task('clean', function () {
 gulp.task('build:style', function () {
   return gulp
     .src(config.path.source + 'sass/sample.scss')
-    .pipe(sass())
+    .pipe(sass().on('error', sass.logError))
     .pipe(beautify({indent: '  ', autosemicolon: true}))
     .pipe(concat('style.css'))
     .pipe(gulp.dest(config.path.build + 'assets/css'))
@@ -38,7 +38,7 @@ gulp.task('build:style', function () {
 gulp.task('build:sass', function () {
   return gulp
     .src(config.path.source + 'sass/main.scss')
-    .pipe(sass())
+    .pipe(sass().on('error', sass.logError))
     .pipe(beautify({indent: '  ', autosemicolon: true}))
     .pipe(concat(config.fileName + '.css'))
     .pipe(gulp.dest(config.path.build + 'assets/css'))
@@ -48,7 +48,10 @@ gulp.task('build:sass', function () {
 gulp.task('build:jade', function () {
   return gulp
     .src(config.path.source + 'jade/**/*.jade')
-    .pipe(jade({pretty: true}))
+    .pipe(jade({pretty: true}).on('error', function (err) {
+      console.log(err);
+      this.emit('end');
+    }))
     .pipe(gulp.dest(config.path.build));
 });
 

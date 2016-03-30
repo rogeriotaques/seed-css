@@ -37,9 +37,9 @@
   }
 }
 
-@mixin grid-col() {
+@mixin grid-make-cols( $size ) {
   @for $i from 1 through 12 {
-    &-#{$i} {
+    &.#{$size}-#{$i} {
       margin-left: -.35rem;
 
       @if $i == 12 {
@@ -49,15 +49,16 @@
       } @else {
         width: calc(100% / 12 * #{$i});
       }
+    }
+    &.#{$size}-#{$i}-offset {
+      // margin-left: -.35rem;
 
-      &-offset {
-        @if $i == 12 {
-          margin-left: 100%;
-        } @elseif $i == 1 {
-          margin-left: calc(100% / 12);
-        } @else {
-          margin-left: calc(100% / 12 * #{$i});
-        }
+      @if $i == 12 {
+        margin-left: 100%;
+      } @elseif $i == 1 {
+        margin-left: calc(100% / 12);
+      } @else {
+        margin-left: calc(100% / 12 * #{$i});
       }
     }
   }

@@ -171,14 +171,10 @@ html(lang="en")
         
         .grid.sample
           .row
-            .col.sm-12.md-6.lg-3.align-center 
-              span .sm-12.md-6.lg-3
-            .col.sm-12.md-6.lg-3.align-center 
-              span .sm-12.md-6.lg-3
-            .col.sm-12.md-6.lg-3.align-center 
-              span .sm-12.md-6.lg-3
-            .col.sm-12.md-6.lg-3.align-center 
-              span .sm-12.md-6.lg-3
+            .col.md-6.lg-3.align-center .md-6 .lg-3
+            .col.md-6.lg-3.align-center .md-6 .lg-3
+            .col.md-6.lg-3.align-center .md-6 .lg-3
+            .col.md-6.lg-3.align-center .md-6 .lg-3
         
         .code-sample
           pre.prettyprint.lang-html.
@@ -194,20 +190,17 @@ html(lang="en")
         p There are up to twelve columns.
         
         .grid.sample
-        
+          - each i in [1,2,3,4,5,6,7,8,9,10,11,12]
+            - var cn = 'sm-' + i
+            - var nc = 'sm-' + (12-i)
+            .row
+              .col.align-center(class=cn)= '.col .' + cn
+              
+              if (12 - i > 0)
+                .col.align-center(class=nc)= '.col .' + nc
           .row
             - each i in [1,2,3,4,5,6,7,8,9,10,11,12]
-              .col.sm-1.align-center 
-                span .sm-1
-          .row
-            .col.sm-12.align-center 
-              span .sm-12
-        
-          .row
-            .col.sm-1.align-center 
-              span .sm-1
-            .col.sm-11.align-center 
-              span .sm-11
+              .col.sm-1.align-center= i
         
           .code-sample
             pre.prettyprint.lang-html. 
@@ -227,8 +220,7 @@ html(lang="en")
         .grid.sample
         
           .row
-            .col.sm-12.md-6.md-6-offset.align-center 
-              span .sm-12.md-6.md-6-offset
+            .col.md-6.md-6-offset.align-center .md-6 .md-6-offset
         
           .code-sample
             pre.prettyprint.lang-html.

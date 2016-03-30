@@ -1,7 +1,7 @@
 /**  THIS BLOCK IS SPECIFC FOR SEED WEBSITE **/
 
 @import "variables";
-@import "functions";
+@import "mixins";
 
 header {
   padding: ($padding * 2) 0;
