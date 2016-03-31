@@ -2,17 +2,6 @@
  * Seed CSS - Base
  * ----------------------- */
 
-// * {
-//   padding: 0;
-//   margin: 0;
-//   outline: none;
-//
-//   &:before,
-//   &:after {
-//     box-sizing: inherit;
-//   }
-// }
-
 html {
   font-size: 62.5%;
   -ms-text-size-adjust: 100%;
@@ -61,7 +50,7 @@ a:not(.btn):visited {
 }
 
 .container {
-  width: 100%;
+  width: 95%;
   margin: $margin auto;
   max-width: $small;
 

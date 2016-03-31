@@ -4,7 +4,7 @@
 @import "includes/mixins";
 
 header {
-  padding: ($padding * 2) 0;
+  padding: ($padding * 2) $padding;
   border-bottom: $border solid $primary;
   background-color: $primary;
   color: white;
@@ -35,6 +35,8 @@ section {
     }
 
     nav {
+      padding: 0 $padding / 2;
+
       ul {
         padding: 0;
       }
@@ -42,9 +44,14 @@ section {
       li {
         list-style: none;
         display: inline-block;
-        margin-right: $margin;
-        @include rem(font-size, 16px);
-        @include rem(line-height, 20px);
+        margin-right: $margin / 2;
+        @include rem(font-size, 14px);
+        @include rem(line-height, 16px);
+
+        @media #{$medium-and-up} {
+          @include rem(font-size, 16px);
+          @include rem(line-height, 20px);
+        }
       }
     }
   }
