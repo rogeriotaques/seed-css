@@ -60,26 +60,6 @@ a:not(.btn):visited {
   color: $primary;
 }
 
-/* Hack to remove the autofill color from chrome */
-input {
-  -webkit-box-shadow: 0 0 0px 1000px white inset;
-
-  &:active,
-  &:hover,
-  &:focus {
-    -webkit-box-shadow: 0 0 0px 1000px white inset;
-  }
-}
-
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  -o-appearance: none;
-  appearance: none;
-
-}
-
 .container {
   width: 100%;
   margin: $margin auto;

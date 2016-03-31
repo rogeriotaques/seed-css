@@ -2,9 +2,51 @@
  * Seed CSS - Forms
  * ----------------------- */
 
+ /* Hack to remove the autofill color from chrome */
+ input {
+   -webkit-box-shadow: 0 0 0px 1000px white inset;
+   -moz-box-shadow: 0 0 0px 1000px white inset;
+   -ms-box-shadow: 0 0 0px 1000px white inset;
+   -o-box-shadow: 0 0 0px 1000px white inset;
+   box-shadow: 0 0 0px 1000px white inset;
+
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   -ms-appearance: none;
+   -o-appearance: none;
+
+   outline: 0;
+
+   &:active,
+   &:hover,
+   &:focus {
+     -webkit-box-shadow: 0 0 0px 1000px white inset;
+   }
+ }
+
 .field {
   margin-bottom: $margin * 2;
   position: relative;
+
+  &.seed-select {
+    &::after {
+      font-family: "Ionicons";
+      speak: none;
+      content: "\f123";
+      display: block;
+      position: absolute;
+      bottom: $margin / 2;
+      right: $margin;
+      color: $darken-grey;
+    }
+
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -ms-appearance: none;
+      -o-appearance: none;
+    }
+  }
 
   & > label {
     display: block;
@@ -80,22 +122,24 @@
 
     &:checked {
     	border-color: $primary;
-      background-color: $primary;
+      background-color: white;
     	color: white;
 
       &::after {
         content: ' ';
       	position: absolute;
-      	top: -3px;
-      	left: 3px;
-        width: 70%;
+      	top: ($margin / 2 + 3) * -1;
+      	left: $margin / 2;
+        width: 40%;
         height: 90%;
       	border: {
           style: solid;
           width: ($border * 3);
           color: transparent;
-          bottom-color: white;
-          right-color: white;
+          // bottom-color: white;
+          // right-color: white;
+          bottom-color: $primary;
+          right-color: $primary;
         };
         -webkit-transform: rotate(45deg);
         -moz-transform: rotate(45deg);
@@ -111,23 +155,7 @@
 
     &:checked {
       border-color: $primary;
-      background-color: $primary;
-
-      &::after {
-        content: ' ';
-      	position: absolute;
-      	top: 4px;
-      	left: 4px;
-        width: 50%;
-        height: 50%;
-        background-color: white;
-      	border: {
-          style: solid;
-          width: ($border * 3);
-          color: white;
-          radius: $radius * 2;
-        };
-      }
+      box-shadow: $primary 4px 0 1px inset, $primary -4px 0 1px inset, $primary 0 -4px 1px inset, $primary 0 4px 1px inset;
     }
   }
 }  // .field
