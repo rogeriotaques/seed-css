@@ -1,4 +1,6 @@
-/** Buttons **/
+/* -----------------------
+ * Seed CSS - Buttons
+ * ----------------------- */
 
 .btn,
 button,
@@ -18,7 +20,7 @@ input[type="reset"] {
     style: solid;
     radius: $radius/2;
   };
-  background-color: transparent;
+  background-color: white;
   @include trans(all, .25s, ease);
   @include rem(font-size, 16px);
   @include rem(line-height, 35px);
@@ -26,6 +28,7 @@ input[type="reset"] {
 
   &:hover {
     box-shadow: $shadow 0 0 5px;
+    background-color: $grey;
   }
 
   &.btn-primary {

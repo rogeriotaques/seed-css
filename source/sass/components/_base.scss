@@ -1,15 +1,17 @@
-/** Base **/
+/* -----------------------
+ * Seed CSS - Base
+ * ----------------------- */
 
-* {
-  padding: 0;
-  margin: 0;
-  outline: none;
-
-  &:before,
-  &:after {
-    box-sizing: inherit;
-  }
-}
+// * {
+//   padding: 0;
+//   margin: 0;
+//   outline: none;
+//
+//   &:before,
+//   &:after {
+//     box-sizing: inherit;
+//   }
+// }
 
 html {
   font-size: 62.5%;
@@ -67,6 +69,15 @@ input {
   &:focus {
     -webkit-box-shadow: 0 0 0px 1000px white inset;
   }
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+
 }
 
 .container {

@@ -37,7 +37,10 @@ gulp.task('build:style', function () {
 
 gulp.task('build:sass', function () {
   return gulp
-    .src(config.path.source + 'sass/main.scss')
+    .src([
+      config.path.source + 'sass/normalize.scss',
+      config.path.source + 'sass/main.scss'
+    ])
     .pipe(sass().on('error', sass.logError))
     .pipe(beautify({indent: '  ', autosemicolon: true}))
     .pipe(concat(config.fileName + '.css'))
