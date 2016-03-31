@@ -35,5 +35,9 @@ input[type="reset"] {
     border-color: $primary;
     background-color: $primary;
     color: whitesmoke;
+
+    &:hover {
+      background-color: darken($primary, 10%);
+    }
   }
 }
