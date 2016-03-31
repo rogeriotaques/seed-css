@@ -1,3 +1,5 @@
-# Seed CSS Framework 0.1
+# Seed CSS 0.1 Beta
 
-A simple and lightweight mobile-first responsive css framework to boost mobile and web applications.
+A light-weight mobile first responsive CSS boilerplate.
+
+For a better and simpler way to start web sites and apps.
