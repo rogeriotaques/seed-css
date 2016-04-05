@@ -25,6 +25,13 @@ gulp.task('clean', function () {
   return del([config.path.build, config.path.dist]);
 });
 
+gulp.task('build:images', function () {
+  return gulp
+    .src(config.path.source + 'images/**/*')
+    .pipe(gulp.dest(config.path.build + 'assets/images'))
+    .pipe(sync.stream());
+});
+
 gulp.task('build:style', function () {
   return gulp
     .src(config.path.source + 'sass/sample.scss')
@@ -63,6 +70,7 @@ gulp.task('watch', function (cb) {
   runSequence(
     'clean',
     ['build:style', 'build:sass', 'build:jade'],
+    'build:images',
     cb
   );
 
@@ -75,6 +83,9 @@ gulp.task('watch', function (cb) {
   gulp.watch(config.path.source + 'sass/sample.scss', ['build:style']);
   gulp.watch(config.path.source + 'sass/**/*.scss', ['build:sass']);
   gulp.watch(config.path.source + 'jade/**/*.jade', ['build:jade']);
+  gulp.watch(config.path.source + 'images/**/*', ['build:images']);
+
+  gulp.watch(config.path.build + 'assets/images/**/*' ).on('change', sync.reload);
   gulp.watch(config.path.build + '**/*.html' ).on('change', sync.reload);
 
 });

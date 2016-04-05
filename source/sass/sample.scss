@@ -4,10 +4,21 @@
 @import "includes/mixins";
 
 header {
-  padding: ($padding * 2) $padding;
+  padding: $padding * 2 ;
   border-bottom: $border solid $primary;
-  background-color: $primary;
+  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5) ), url('../images/css-code.jpeg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-attachment: fixed;
+  backface-visibility: visible;
   color: white;
+
+  h1,
+  p {
+    margin: 0;
+  }
 }
 
 section {
@@ -39,6 +50,7 @@ section {
 
       ul {
         padding: 0;
+        margin: 0;
       }
 
       li {
@@ -47,10 +59,23 @@ section {
         margin-right: $margin / 2;
         @include rem(font-size, 14px);
         @include rem(line-height, 16px);
+        height: 100%;
 
         @media #{$medium-and-up} {
           @include rem(font-size, 16px);
-          @include rem(line-height, 20px);
+          @include rem(line-height, 46px);
+        }
+
+        a {
+          display: block;
+          text-decoration: none;
+          color: #333 !important;
+          @include rem(padding, 0 5px);
+
+          &:hover {
+            background-color: $primary;
+            color: #fff !important;
+          }
         }
       }
     }
