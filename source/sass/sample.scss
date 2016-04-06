@@ -31,11 +31,20 @@ section {
   }
 
   &.page-navbar {
+    position: relative;
+    background-color: rgba(255,255,255,.95);
+    width: 100%;
+    z-index: 10;
     border: {
       top: $border solid $grey;
       bottom: $border solid $grey;
     };
     @include rem(line-height, 46px);
+
+    &.stacked {
+      position: fixed;
+      top: 0;
+    }
 
     & > .container {
       margin: {

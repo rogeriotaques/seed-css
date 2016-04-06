@@ -23,16 +23,16 @@ html(lang="en")
   head
     meta(charset="utf-8")
     title Seed CSS Framework
-    meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
     link(rel="stylesheet", type="text/css", href="//fonts.googleapis.com/css?family=Raleway:400,300,600")
     link(rel="stylesheet", type="text/css", href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css")
-    link(rel="stylesheet", type="text/css", href="assets/css/seed.css")
-    link(rel="stylesheet", type="text/css", href="assets/css/style.css")
+    link(rel="stylesheet", type="text/css", href="assets/css/seed.css?v={%version%}")
+    link(rel="stylesheet", type="text/css", href="assets/css/style.css?v={%version%}")
   body
   
     header
     
-      a(name="about")
+      #about
     
       .container
         h1 Seed CSS
@@ -45,13 +45,13 @@ html(lang="en")
         nav 
           ul
             li 
-              a(href="#about") About 
+              a.spy(href="#about") About 
             li 
-              a(href="#get-started") Get started
+              a.spy(href="#get-started") Get started
             li 
-              a(href="#examples") Examples
+              a.spy(href="#examples") Examples
             li 
-              a(href="#license") License
+              a.spy(href="#license") License
             li.hide-only-small
               a(href="https://github.com/rogeriotaques/seed-css") Fork me on Github
             li.hide
@@ -104,7 +104,7 @@ html(lang="en")
         hr
         
     section
-      a(name="get-started")
+      #get-started
     
       .container
         h2 Container
@@ -839,7 +839,7 @@ html(lang="en")
         hr
         
     section
-      a(name="examples")
+      #examples
     
       .container
         h2 Showcase
@@ -852,7 +852,7 @@ html(lang="en")
         hr
         
     section
-      a(name="license")
+      #license
     
       .container
         h2 License
@@ -895,3 +895,5 @@ html(lang="en")
         a(href="https://github.com/rogeriotaques/seed-css/issues") Open an issue at Github
         
     script(src="//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js")
+    script(src="//code.jquery.com/jquery-2.2.3.min.js", integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=", crossorigin="anonymous")
+    script(src="assets/js/bundle.js?v={%version%}")
