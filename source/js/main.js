@@ -19,7 +19,7 @@
       // when page is reloaded and it doesn't start on very top
       // just attach the 'stacked' class to navbar to assure it will be
       // available even on the middle of page.
-      if (iniPos > 0) {
+      if ($(this).scrollTop() > iniPos) {
         navbar.addClass('stacked');
       }
 
