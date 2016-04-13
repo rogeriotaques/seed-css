@@ -105,6 +105,18 @@ footer {
       color: whitesmoke !important;
     }
   }
+
+  .btn {
+    margin-top: 30px;
+    border-color: white;
+    color: white;
+
+    &:hover {
+      color: $darken-grey;
+      border-color: white;
+      background-color: white;
+    }
+  }
 }
 
 .container {

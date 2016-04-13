@@ -14,11 +14,13 @@
     display: block;
     box-sizing: border-box;
     position: relative;
+    text-align: initial;
   }
 
   .col {
     width: 100%;
     display: inline-block;
+    position: relative;
     box-sizing: border-box;
     min-height: $height;
     padding: $padding / 2;

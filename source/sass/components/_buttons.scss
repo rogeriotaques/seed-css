@@ -16,19 +16,19 @@ input[type="reset"] {
   cursor: pointer;
   border: {
     color: $darken-grey;
-    width: $border ;
+    width: $border * 2;
     style: solid;
     radius: $radius/2;
   };
-  background-color: white;
+  background-color: transparent;
   @include trans(all, .25s, ease);
   @include rem(font-size, 16px);
   @include rem(line-height, 35px);
   @include rem(min-width, 170px);
 
   &:hover {
-    box-shadow: $shadow 0 0 5px;
-    background-color: $grey;
+    color: darken($darken-grey, 10%);
+    border-color: darken($darken-grey, 10%);
   }
 
   &.btn-primary {
@@ -38,6 +38,7 @@ input[type="reset"] {
 
     &:hover {
       background-color: darken($primary, 10%);
+      border-color: darken($primary, 10%);
     }
   }
 }
