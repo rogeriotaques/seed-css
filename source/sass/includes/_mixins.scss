@@ -40,7 +40,9 @@
 @mixin grid-make-cols( $size ) {
   @for $i from 1 through 12 {
     &.#{$size}-#{$i} {
-      margin-left: -.35rem;
+      &:not([class*="-offset"]) {
+        margin-left: -.35rem;
+      }
 
       @if $i == 12 {
         width: 100%;
@@ -50,6 +52,7 @@
         width: calc(100% / 12 * #{$i});
       }
     }
+
     &.#{$size}-#{$i}-offset {
       // margin-left: -.35rem;
 

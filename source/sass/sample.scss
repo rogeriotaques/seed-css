@@ -36,7 +36,7 @@ section {
     width: 100%;
     z-index: 10;
     border: {
-      top: $border solid $grey;
+      // top: $border solid $grey;
       bottom: $border solid $grey;
     };
     @include rem(line-height, 46px);

@@ -2,6 +2,7 @@
  * Seed CSS - Utilities
  * ----------------------- */
 
+// alignment
 .align {
   &-center {
     text-align: center;
@@ -17,6 +18,7 @@
   }
 }
 
+// media
 img {
   vertical-align: middle;
 
@@ -41,6 +43,7 @@ img {
   }
 }
 
+// text transform
 .nowrap {
   white-space: nowrap;
 }
@@ -53,6 +56,7 @@ img {
   text-transform: capitalize;
 }
 
+// show and hide
 .hide {
   display: none !important;
 
@@ -67,4 +71,9 @@ img {
       display: none !important;
     }
   }
+}
+
+// colors
+.primary {
+  color: $primary;
 }

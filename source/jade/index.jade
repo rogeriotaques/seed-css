@@ -22,8 +22,13 @@ doctype html
 html(lang="en")
   head
     meta(charset="utf-8")
-    title Seed CSS Framework
+    title Seed CSS
     meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+    meta(name="description", content="A light-weight, mobile first and responsive CSS boilerplate.")
+    meta(name="keywords", content="css,boilerplate,javascript,html5,website,site,app,webapp,build,development")
+    meta(name="author", content="Rogerio Taques (http://github.com/rogeriotaques)")
+    meta(name="copyright", content="Rogerio Taques")
+    meta(name="license", content="MIT")
     link(rel="stylesheet", type="text/css", href="//fonts.googleapis.com/css?family=Raleway:400,300,600")
     link(rel="stylesheet", type="text/css", href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css")
     link(rel="stylesheet", type="text/css", href="assets/css/seed.css?v={%version%}")
@@ -38,7 +43,7 @@ html(lang="en")
         h1 Seed CSS
         
         p.
-          A light-weight mobile first responsive CSS boilerplate.
+          A light-weight, mobile first and responsive CSS boilerplate.
 
     section.page-navbar
       .container
@@ -51,6 +56,8 @@ html(lang="en")
             li 
               a.spy(href="#examples") Examples
             li 
+              a.spy(href="#showcase") Show Case
+            li 
               a.spy(href="#license") License
             li.hide-only-small
               a(href="https://github.com/rogeriotaques/seed-css") Fork me on Github
@@ -61,6 +68,8 @@ html(lang="en")
       .container
       
         br
+        
+        h2.align-center Why you're gonna love use <b class="primary">Seed CSS</b>?
         
         .grid
           .row
@@ -107,11 +116,49 @@ html(lang="en")
       #get-started
     
       .container
-        h2 Container
+        h2 Get started
       
-        p Containers are used to define an enclosed area.
+        p. 
+          The most first thing you need to do to start using <span class="primary" >Seed CSS</span> 
+          is import its CSS file into your pages. In order to get the right files, you can either 
+          <a href="https://github.com/rogeriotaques/seed-css" >fork</a> this project on Github, or 
+          just <a href="https://github.com/rogeriotaques/seed-css/archive/develop.zip" >download</a> 
+          the compressed project files to your computer.
       
-        .sample-container.align-center .container
+        p.
+          After get the latest version of files, import it to your pages as the example below:
+        
+        .code-sample
+          pre.prettyprint.lang-html. 
+            &lt;head &gt;
+              ...
+              &lt;link href="seed.css" rel="stylesheet" type="text/css" &gt;
+            &lt;/head&gt;
+            
+            
+        p.
+          Once you have the Seed CSS stylesheet embeded to your site or application, have a look on 
+          all code examples below to get inspired about what you can do with it. :)
+          
+        hr
+        
+    section
+      #examples
+      
+      .container
+        h2 Examples of code
+        
+        br
+        
+    section
+      .container
+        h3 Container
+      
+        p.
+         Containers are used to define an enclosed area with a <code >max-width</code> 
+         set to 960px on wide screens.
+      
+        .sample-container.align-center This's a container.
         
         .code-sample
           pre.prettyprint.lang-html. 
@@ -121,13 +168,12 @@ html(lang="en")
     
     section
       .container 
-        h2 Grid 
+        h3 Grid 
         
         p. 
-          Grids are used to define columns. The grid system is responsive, 
-          which means you can define the number of columns according to the screen size.
-        
-        br
+          Grids are commonly used to define "grid" based designs. The grid system is responsive, 
+          which means you can define the number of columns according to the screen size and it will 
+          adapts its width to best fit your content.
         
         table 
           thead
@@ -186,55 +232,51 @@ html(lang="en")
         
         .code-sample
           pre.prettyprint.lang-html.
+            &lt;!-- This's a grid --&gt;
             &lt;div class="grid" &gt;
+              &lt;!-- This's a row. You can have as many rows as you need. --&gt;
               &lt;div class="row" &gt;
-                &lt;div class="col sm-12 md-6" &gt; ... &lt;/div&gt;
-                &lt;div class="col sm-12 md-6" &gt; ... &lt;/div&gt;
+                &lt;!-- This's a column. You can have up to 12 columns in a row. --&gt;
+                &lt;div class="col sm-12 md-6 lg-3" &gt; ... &lt;/div&gt;
+                &lt;div class="col sm-12 md-6 lg-9" &gt; ... &lt;/div&gt;
               &lt;/div&gt;
             &lt;/div&gt;
         
         br
         
-        p There are up to twelve columns.
+        p Check this examples out.
         
         .grid.sample
           - each i in [1,2,3,4,5,6,7,8,9,10,11,12]
             - var cn = 'sm-' + i
             - var nc = 'sm-' + (12-i)
             .row
-              .col.align-center(class=cn)= '.col .' + cn
+              .col.align-center(class=cn)= i
               
               if (12 - i > 0)
-                .col.align-center(class=nc)= '.col .' + nc
+                .col.align-center(class=nc)= (12 - i)
           .row
             - each i in [1,2,3,4,5,6,7,8,9,10,11,12]
               .col.sm-1.align-center= i
         
-          .code-sample
-            pre.prettyprint.lang-html. 
-              &lt;div class="grid" &gt;
-                &lt;div class="row" &gt;
-                  &lt;div class="col sm-1" &gt; ... &lt;/div&gt;
-                  &lt;div class="col sm-11" &gt; ... &lt;/div&gt;
-                &lt;/div&gt;
-              &lt;/div&gt;
-          
         br
         
         p. 
-          Offsets are also available. <br >
-          To apply offsets, just add the sufix <code >-offset</code> to your classname.
+          Offsets are also available. To apply offsets, just add the sufix <code >-offset</code> to your classname.
+          
+        p. 
+          Check it out how to make a colum spanding 6 with a offset of 3.
         
         .grid.sample
         
           .row
-            .col.md-6.md-6-offset.align-center .md-6 .md-6-offset
+            .col.md-6.md-3-offset.align-center This' a column of 6 with offset of 3.
         
           .code-sample
             pre.prettyprint.lang-html.
               &lt;div class="grid" &gt;
                 &lt;div class="row" &gt;
-                  &lt;div class="col sm-6 sm-6-offset" &gt; ... &lt;/div&gt;
+                  &lt;div class="col sm-6 sm-3-offset" &gt; ... &lt;/div&gt;
                 &lt;/div&gt;
               &lt;/div&gt;
         
@@ -242,25 +284,27 @@ html(lang="en")
 
     section
       .container
-        h2 Typography
+        h3 Typography
+        
+        p.
+          All default HTML tags are supported, including but not limited 
+          to the below few examples.
+        
+        h5 Examples 
         
         .grid
           .row
             .col.sm-12.md-6
-              p.
-                All default HTML tags are supported, including but not limited 
-                to the below few examples.
-              
+              each i in [1,2,3,4,5,6]
+                #{'h'+i}= 'Header ' + i
+                
+            .col.sm-12.md-6
               p. 
                 This is an paragraph. <br >
                 This is a <b >bold</b> text. <br >
                 This is an <i >italic</i> text. <br >
                 This is an <u >underlined</u> text. <br >
                 This is an <a href="#!">anchor</a> text.
-                
-            .col.sm-12.md-6
-              each i in [1,2,3,4,5,6]
-                #{'h'+i}= 'Header ' + i
         
         .code-sample
           pre.prettyprint.lang-html.
@@ -282,7 +326,7 @@ html(lang="en")
         
     section
       .container
-        h2 Buttons
+        h3 Buttons
         
         p.
           Buttons are a really basic elements on any web page or app, and it 
@@ -291,8 +335,6 @@ html(lang="en")
           just add the class name <code >.btn-primary</code>. If you need use 
           anchor (&lt;a /&gt;) as button, include the <code >.btn</code> class 
           name on it.
-        
-        br
         
         table 
           thead
@@ -346,9 +388,16 @@ html(lang="en")
         
     section
       .container
-        h2 Forms
+        h3 Forms
         
-        h5 Basic
+        p.
+          Probably all websites and apps will contain (at least) one form, so, 
+          that's why Seed CSS has a really simple, easy to use and customizable 
+          form field stylesheet. Have a look on the examples below:
+        
+        br 
+        
+        h5 Examples
         
         .grid
           .row
@@ -444,9 +493,11 @@ html(lang="en")
         
     section
       .container
-        h2 Lists
+        h3 Lists
         
-        p You can make your lists using <code >DL</code>, <code >UL</code> or <code >OL</code>.
+        p. 
+          You can make your lists using <code >DL</code>, <code >UL</code> or <code >OL</code>.
+          No special classes are necessary. The style will be applied to the natural element.
         
         h5 Examples
         
@@ -488,9 +539,18 @@ html(lang="en")
         
     section
       .container
-        h2 Tables
+        h3 Tables
         
-        p &nbsp;
+        p.
+          Tables are supposed to be used for display data. 
+          
+        p. 
+          In that matter, Seed CSS has very special classes to allow you show 
+          your data in a very clean and readable way. Basically, just using a 
+          default markup for data you'll get a styled table, but, you also can 
+          make use of special classes to make your tables even more readable.
+        
+        br
         
         h5 Examples
         
@@ -545,7 +605,10 @@ html(lang="en")
         
     section
       .container
-        h2 Media queries
+        h3 Media queries
+        
+        p. 
+          Media queries allows you to make an even more accurated design.
         
         table 
           thead
@@ -565,12 +628,34 @@ html(lang="en")
             tr 
               td @media only screen and (min-width: 960px) {}
               td Larger than desktop/laptop pc
+              
+        .code-sample
+          pre.prettyprint.lang-css.
+            &lt;!-- Mobile first queries --&gt;
+            @media only screen and (min-width: 0px) {
+              ...
+            }
+            
+            &lt;!-- Larger than mobile --&gt;
+            @media only screen and (min-width: 320px) {
+              ...
+            }
+            
+            &lt;!-- Larger than tablet --&gt;
+            @media only screen and (min-width: 550px) {
+              ...
+            }
+            
+            &lt;!-- Larger than desktop/laptop pc --&gt;
+            @media only screen and (min-width: 960px) {
+              ...
+            }
         
         hr
         
     section
       .container
-        h2 Utilities
+        h3 Utilities
         
         p. 
           Utilities are classes that can help you to easily show up your data 
@@ -790,7 +875,7 @@ html(lang="en")
         
     section
       .container
-        h2 Icons
+        h3 Icons
         
         p.
           We're using <b>Ionic Icon Fonts</b> as our set of icons. It's free and 
@@ -807,7 +892,8 @@ html(lang="en")
           
         .code-sample
           pre.prettyprint.lang-html.
-            &lt;link rel="stylesheet" type="text/css" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"&gt;
+            &lt;link rel="stylesheet" type="text/css" 
+                href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"&gt;
         
         br
         
@@ -839,10 +925,10 @@ html(lang="en")
         hr
         
     section
-      #examples
+      #showcase
     
       .container
-        h2 Showcase
+        h3 Showcase
         
         p 
           | Have you build a website or app using Seed CSS? Don't be shy and let me know. 
@@ -855,10 +941,10 @@ html(lang="en")
       #license
     
       .container
-        h2 License
+        h3 License
         
         p.
-          This small and humble css framework is licensed under MIT. 
+          This small and humble css boilerplate is licensed under MIT. 
           Find the license itself below:
         
         .copyright-block
