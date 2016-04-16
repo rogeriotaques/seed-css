@@ -76,6 +76,7 @@ section {
         }
 
         a {
+          position: relative;
           display: block;
           text-decoration: none;
           color: #333 !important;
@@ -84,6 +85,63 @@ section {
           &:hover {
             background-color: $primary;
             color: #fff !important;
+          }
+        }
+
+        & > ul {
+          position: absolute;
+          border: $border solid $grey;
+          background-color: #fff;
+          box-shadow: 0px 0px 4px #888;
+          box-sizing: border-box;
+          margin-left: -10px;
+          margin-top: -5px;
+          display: none;
+
+          &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 0px;
+            height: 0px;
+            border: 14px solid transparent;
+            border-bottom-color: $grey;
+            transform: translate(150%, -100%);
+            top: 0;
+            left: 0;
+            z-index: 1;
+          }
+
+          &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 0px;
+            height: 0px;
+            border: 14px solid transparent;
+            border-bottom-color: #fff;
+            transform: translate(150%, -100%);
+            top: 2px;
+            left: 0;
+            z-index: 2;
+          }
+
+          & > li {
+            position: relative;
+            display: block;
+            margin: 0;
+            z-index: 4;
+          }
+        }
+
+        &:hover {
+          & > a {
+            background-color: $primary;
+            color: #fff !important;
+          }
+
+          & > ul {
+            display: block;
           }
         }
       }
