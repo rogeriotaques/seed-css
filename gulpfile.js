@@ -117,12 +117,22 @@ gulp.task('watch', function (cb) {
 
 });
 
-gulp.task('dist', ['build:sass', 'build:jade'], function () {
+gulp.task('dist:run', ['build:sass', 'build:jade'], function () {
   return gulp
     .src(config.path.build + '**/*')
     .pipe(gulpif(/\.js$/, uglify()))
     .pipe(gulpif(/\.css$/, minify()))
     .pipe(gulp.dest(config.path.dist));
+});
+
+gulp.task('dist', function (cb) {
+  runSequence(
+    'clean',
+    'dist:run',
+    cb
+  );
+
+  return true;
 });
 
 gulp.task('default', ['watch']);
