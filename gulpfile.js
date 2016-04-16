@@ -120,6 +120,7 @@ gulp.task('watch', function (cb) {
 gulp.task('dist', ['build:sass', 'build:jade'], function () {
   return gulp
     .src(config.path.build + '**/*')
+    .pipe(gulpif(/\.js$/, uglify()))
     .pipe(gulpif(/\.css$/, minify()))
     .pipe(gulp.dest(config.path.dist));
 });
