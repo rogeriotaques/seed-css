@@ -436,14 +436,12 @@ html(lang="en")
                   option(value="C") Option C
                   
               .field
-                label(for="radio-sample") 
-                  input(type="radio", id="radio-sample")
-                  | This is a radio button
+                input(type="radio", id="radio-sample")
+                label(for="radio-sample") This is a radio button
                   
               .field
-                label(for="check-sample") 
-                  input(type="checkbox", id="check-sample")
-                  | This is a checkbox
+                input(type="checkbox", id="check-sample")
+                label(for="check-sample") This is a checkbox
                   
               .field
                 label(for="") This is a simple textarea 
@@ -482,16 +480,16 @@ html(lang="en")
             
             &lt;!-- Example of an input radio --&gt; 
             &lt;div class="field" &gt; 
+              &lt;input type="radio" name="..." &gt;
               &lt;label for="..." &gt;
-                &lt;input type="radio" name="..." &gt;
                 ...
               &lt;/label&gt;
             &lt;/div&gt;     
             
             &lt;!-- Example of an input radio --&gt; 
             &lt;div class="field" &gt; 
+              &lt;input type="checkbox" name="..." &gt;
               &lt;label for="..." &gt; 
-                &lt;input type="checkbox" name="..." &gt;
                 ... 
               &lt;/label&gt;
             &lt;/div&gt;           
