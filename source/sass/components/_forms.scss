@@ -7,6 +7,17 @@
   position: relative;
 
   &.seed-select {
+    &::before {
+      content: '';
+      position: absolute;
+      top: 25px;
+      right: 1px;
+      bottom: 1px;
+      width: 30px;
+      background-color: #fff;
+      z-index: 1;
+    }
+    
     &::after {
       font-family: "Ionicons";
       -webkit-speak: none;
@@ -20,10 +31,16 @@
       bottom: $margin / 2;
       right: $margin;
       color: $darken-grey;
+      z-index: 2;
     }
 
     select {
        @include appearance(none);
+       z-index: 3;
+       
+       &::-ms-expand {
+          display: none;
+       }
     }
   }
 
@@ -50,7 +67,8 @@
     box-sizing: border-box;
     @include rem(padding, 0 $padding);
     @include rem(font-size, 16px);
-    @include rem(line-height, 35px);
+    @include rem(height, 40px);
+    @include rem(line-height, 40px);
     border: $border solid $grey;
     border-radius: 0;
 
@@ -75,6 +93,7 @@
 
   textarea {
     resize: none;
+    @include rem(height, 85px);
     @include rem(max-height, 85px);
   }
 
