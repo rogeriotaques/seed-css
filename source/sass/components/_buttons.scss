@@ -16,7 +16,7 @@ input[type="reset"] {
   cursor: pointer;
   border: {
     color: $darken-grey;
-    width: $border * 2;
+    width: $border;
     style: solid;
     radius: $radius/2;
   };
@@ -27,8 +27,8 @@ input[type="reset"] {
   @include rem(min-width, 170px);
 
   &:hover {
-    color: darken($darken-grey, 10%);
-    border-color: darken($darken-grey, 10%);
+    color: $primary;
+    border-color: $primary;
   }
 
   &.btn-primary {

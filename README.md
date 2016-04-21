@@ -1,4 +1,4 @@
-# Seed CSS 0.1 Beta
+# Seed CSS 0.2 Beta
 
 A light-weight, mobile first and responsive CSS boilerplate.
 

@@ -14,12 +14,20 @@
     display: block;
     box-sizing: border-box;
     position: relative;
+    text-align: inherit;  // Fallback for IE-Edge
     text-align: initial;
+    
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
   }
 
   .col {
     width: 100%;
-    display: inline-block;
+    // display: inline-block;
+    float: left;
     position: relative;
     box-sizing: border-box;
     min-height: $height;
