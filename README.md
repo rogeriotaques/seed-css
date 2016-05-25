@@ -1,4 +1,5 @@
-# Seed CSS 0.3 Beta
+# Seed CSS [![Latest Version](https://img.shields.io/github/release/rogeriotaques/seed-css.svg)](https://github.com/rogeriotaques/seed-css/releases)
+
 
 A light-weight, mobile first and responsive CSS boilerplate.
 
