@@ -38,7 +38,7 @@ table {
   &.hovered {
     tbody {
       tr:hover {
-        background-color: lighten($grey, 5%);
+        background-color: $grey-light;
       }
     }
   }
@@ -46,7 +46,7 @@ table {
   &.stripped {
     tbody {
       tr:nth-child(odd) {
-        background-color: lighten($grey, 5%);
+        background-color: $grey-light;
       }
     }
   }

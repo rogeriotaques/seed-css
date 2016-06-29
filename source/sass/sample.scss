@@ -218,7 +218,11 @@ code {
     y: hidden;
     x: auto;
   };
-  background-color: $grey;
+  background-color: $grey-lighten;
+
+  &:not(.bg-white) {
+    border: 1px solid $grey;
+  }
 
   &.bg-white {
     background-color: white;
