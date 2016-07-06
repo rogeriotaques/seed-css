@@ -6,6 +6,7 @@
 header {
   padding: $padding * 2 ;
   border-bottom: $border solid $primary;
+  background-image: url('../images/css-code.jpeg');
   background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5) ), url('../images/css-code.jpeg');
   background-position: center center;
   background-size: cover;
