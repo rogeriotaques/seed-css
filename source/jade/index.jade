@@ -770,6 +770,12 @@ html(lang="en")
                   tr
                     td.nowrap .uc-first
                     td Capitalize the first character only from the first word
+                  tr
+                    td.nowrap .upper-case
+                    td Capitalize all character
+                  tr
+                    td.nowrap .lower-case
+                    td Make all letters in lower case
               
               br
               
@@ -799,6 +805,25 @@ html(lang="en")
               .code-sample
                 pre.prettyprint.lang-html.
                   &lt;p class="uc-first" &gt; ... &lt;/p&gt;
+              
+              br
+              
+              p.upper-case.
+                All letters of this text should be capitalized. 
+              
+              .code-sample
+                pre.prettyprint.lang-html.
+                  &lt;p class="upper-case" &gt; ... &lt;/p&gt;
+            
+              
+              br
+              
+              p.lower-case.
+                All letters of this text should be lower case. 
+              
+              .code-sample
+                pre.prettyprint.lang-html.
+                  &lt;p class="lower-case" &gt; ... &lt;/p&gt;
             
             br
             
@@ -821,6 +846,9 @@ html(lang="en")
                     tr
                       td.nowrap .hide-on-medium-and-down
                       td Hide an element on all devices, except for large ones
+                    tr
+                      td.nowrap .hide-on-medium-and-up
+                      td Hide an element on all devices, except for small ones
             
                 .code-sample
                   pre.prettyprint.lang-html.
@@ -832,6 +860,9 @@ html(lang="en")
                     
                     &lt;!-- Hide on medium and small devices --&gt; 
                     &lt;div class="hide-on-medium-and-down" &gt; ... &lt;/div&gt;
+                    
+                    &lt;!-- Hide on medium and large devices --&gt; 
+                    &lt;div class="hide-on-medium-and-up" &gt; ... &lt;/div&gt;
             
             br
             
