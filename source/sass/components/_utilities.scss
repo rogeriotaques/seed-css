@@ -48,6 +48,14 @@ img {
   white-space: nowrap;
 }
 
+.upper-case {
+  text-transform: uppercase;
+}
+
+.lower-case {
+  text-transform: lowercase;
+}
+
 .camel-case {
   text-transform: capitalize;
 }
@@ -61,13 +69,19 @@ img {
   display: none !important;
 
   &-only-small {
-    @media only screen and (max-width: $small) {
+    @media only screen and (max-width: $medium) {
       display: none !important;
     }
   }
 
   &-on-medium-and-down {
-    @media only screen and (max-width: $medium) {
+    @media only screen and (max-width: $large) {
+      display: none !important;
+    }
+  }
+
+  &-on-medium-and-up {
+    @media only screen and (min-width: $medium) {
       display: none !important;
     }
   }
