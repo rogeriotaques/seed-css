@@ -14,10 +14,11 @@
       right: 1px;
       bottom: 1px;
       width: 30px;
+      margin: $margin/2 0;
       background-color: #fff;
       z-index: 1;
     }
-    
+
     &::after {
       font-family: "Ionicons";
       -webkit-speak: none;
@@ -28,19 +29,20 @@
       content: "\f123";
       display: block;
       position: absolute;
-      bottom: $margin / 2;
+      bottom: $margin;
       right: $margin;
       color: $darken-grey;
       z-index: 2;
     }
 
     select {
-       @include appearance(none);
-       z-index: 3;
-       
-       &::-ms-expand {
-          display: none;
-       }
+      @include appearance(none);
+      background-color: transparent;
+      z-index: 5;
+
+      &::-ms-expand {
+        display: none;
+      }
     }
   }
 
@@ -71,6 +73,7 @@
     @include rem(line-height, 40px);
     border: $border solid $grey;
     border-radius: 0;
+    margin: 5px 0;
 
     @include box-shadow(0 0 0 1000px white inset);
     @include appearance(none);
@@ -83,7 +86,7 @@
       border-color: $primary;
       outline: none;
     }
-    
+
     & > option {
       border: 0;
       outline: none;
@@ -107,10 +110,10 @@
     position: absolute;
     margin-left: -99999px;
     display: none;
-    
+
     & + label {
        cursor: pointer;
-      
+
       &::before {
         content: '';
         display: inline-block;
@@ -122,7 +125,7 @@
         @include rem(margin-right, 10px);
       }
     }
-    
+
     &:checked {
       & + label {
         &::before {
@@ -153,19 +156,19 @@
   }
 
   input[type="radio"] {
-    
+
     & + label {
       &::before {
         border-radius: 20px;
       }
     }
-    
+
     &:checked {
       & + label {
         &::before {
           background-color: $primary;
         }
-        
+
         &::after {
           content: '';
           display: block;

@@ -98,3 +98,11 @@
   -o-appearance: $value;
   appearance: $value;
 }
+
+@mixin animation ($name, $duration) {
+  -webkit-animation: $name $duration linear;
+  -moz-animation: $name $duration linear;
+  -ms-animation: $name $duration linear;
+  -o-animation: $name $duration linear;
+  animation: $name $duration linear;
+}
