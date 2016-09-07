@@ -96,7 +96,7 @@ html(lang="en")
         h2.align-center Why you're gonna love use <b class="primary">Seed CSS</b>?
         p.align-center 
           b It's for modern browsers. <br>
-          small (IE9+, Chrome30+, Firefox46+, Safari9.1+, Opera38+, iOS Safari 9.2+, Android Browser 50+ and Android Chrome 50+)
+          //- small (IE9+, Chrome30+, Firefox46+, Safari9.1+, Opera38+, iOS Safari 9.2+, Android Browser 50+ and Android Chrome 50+)
         
         .grid
           .row
@@ -150,7 +150,7 @@ html(lang="en")
         h2 Get started
         
         p. 
-          Just before get started, please notice that Seed CSS was written with modern browsers in mind. 
+          Just before get started, please notice that <span class="primary">Seed CSS</span> was written with modern browsers in mind. 
           That means it just has support for <b>IE9+</b> (which actually isn't a real modern browser ... but), 
           <b>Chrome</b>, <b>Firefox</b> and <b>Safari</b>, besides mobile browsers. If you need support older browsers, this boilerplate
           may not help you, but, just in case, you're free to customize it and create your own CSS rules to 
@@ -175,8 +175,9 @@ html(lang="en")
             
             
         p.
-          Once you have the Seed CSS stylesheet embeded to your site or application, have a look on 
-          all code examples below to get inspired about what you can do with it. :)
+          Once you have the <span class="primary" >Seed CSS</span> stylesheet embeded to your 
+          site or application, have a look on all code examples below to get inspired about 
+          what features it offers you and what you can do with it. :)
           
         hr
         
@@ -360,8 +361,7 @@ html(lang="en")
         
         p.
           Buttons are a really basic elements on any web page or app, and it 
-          comes in two different flavors in Seeds. The standard is plain and 
-          the colored has a vibrant primary color. In order to use the primary 
+          comes in a couple of different flavors in <span class="primary">Seed CSS</span>. In order to use the primary 
           just add the class name <code >.btn-primary</code>. If you need use 
           anchor (&lt;a /&gt;) as button, include the <code >.btn</code> class 
           name on it.
@@ -380,13 +380,31 @@ html(lang="en")
             tr
               td.nowrap .btn-primary
               td.nowrap &nbsp;
-              td Defines a colored button
+              td Defines a 'primary' (blue) colored button
+            tr
+              td.nowrap .btn-(*color*)
+              td.nowrap &nbsp;
+              td Defines a colored button. Colors can be: <code>red</code>, <code>orange</code>, <code>green</code> or <code>purple</code>
+            tr
+              td.nowrap .btn-(*size*)
+              td.nowrap &nbsp;
+              td Defines a sized button. Sizes can be: <code>small</code> or <code>medium</code>. Default is <code>big</code>
+            tr
+              td.nowrap .disabled
+              td.nowrap &nbsp;
+              td Defines disabled buttons. Simply setting the <code>disabled</code> property will also make button looks like disabled
+            tr
+              td.nowrap .flat-btn
+              td.nowrap &nbsp;
+              td Defines <b>flat</b> buttons, which means no borders or background colors. You are still able to use <code>.btn-(*color*)</code> and or <code>.btn(*size*)</code> on this button type
         
         br
         
         h5 Examples
-          
+        
         .buttons.align-center 
+        
+          h6.align-center Default
           
           a.btn(href="#!") Anchor 
           button(type="button") Button element 
@@ -394,9 +412,73 @@ html(lang="en")
           
           br 
           
+          h6.align-center Primary (.btn-primary)
+          
           a.btn.btn-primary(href="#!") Anchor 
           button.btn-primary(type="button") Button element 
           input.btn-primary(type="button", value="Input button")
+          
+          br 
+          
+          h6.align-center Colored (.btn-*color*)
+          
+          a.btn.btn-red(href="#!") Anchor 
+          button.btn-red(type="button") Button element 
+          input.btn-red(type="button", value="Input button")
+          
+          br 
+          
+          a.btn.btn-orange(href="#!") Anchor 
+          button.btn-orange(type="button") Button element 
+          input.btn-orange(type="button", value="Input button")
+          
+          br 
+          
+          a.btn.btn-green(href="#!") Anchor 
+          button.btn-green(type="button") Button element 
+          input.btn-green(type="button", value="Input button")
+          
+          br 
+          
+          a.btn.btn-purple(href="#!") Anchor 
+          button.btn-purple(type="button") Button element 
+          input.btn-purple(type="button", value="Input button")
+          
+          br 
+          
+          h6.align-center Disabled (.disabled)
+          
+          a.btn(href="#!", disabled) Anchor 
+          button(type="button", disabled) Button element 
+          input(type="button", value="Input button", disabled)
+          
+          br 
+          
+          h6.align-center Flat (.flat-btn)
+          
+          a.flat-btn(href="#!") Anchor 
+          button.flat-btn(type="button") Button element 
+          input.flat-btn(type="button", value="Input button")
+          
+          br 
+          
+        h6.align-center Medium (.btn-medium)
+          
+        .buttons.align-center 
+          
+          a.btn.btn-medium(href="#!") Anchor 
+          button.btn-medium(type="button") Button element 
+          input.btn-medium(type="button", value="Input button")
+          
+          br 
+          
+        h6.align-center Small (.btn-small)
+          
+        .buttons.align-center 
+          
+          a.btn.btn-small(href="#!") Anchor 
+          button.btn-small(type="button") Button element 
+          input.btn-small(type="button", value="Input button")
           
           br 
           
@@ -411,8 +493,16 @@ html(lang="en")
             
             &lt;!-- .btn-primary makes buttons colored --&gt;
             &lt;a class="btn btn-primary" href="..." &gt; ... &lt;/a&gt; 
-            &lt;button class="btn-primary" type="button" &gt; ... &lt;/button&gt; 
-            &lt;input class="btn-primary" type="button" value="..." /&gt;
+            &lt;a class="btn btn-red" href="..." &gt; ... &lt;/a&gt; 
+            &lt;a class="btn btn-green" href="..." &gt; ... &lt;/a&gt; 
+            
+            &lt;!-- .btn-primary makes buttons on different sizes --&gt;
+            &lt;a class="btn btn-medium" href="..." &gt; ... &lt;/a&gt; 
+            &lt;a class="btn btn-small" href="..." &gt; ... &lt;/a&gt; 
+            
+            &lt;!-- .btn-primary makes disabled buttons --&gt;
+            &lt;a class="btn disabled" href="..." &gt; ... &lt;/a&gt; 
+            &lt;button disabled &gt; ... &lt;/button&gt; 
 
         hr
         
@@ -422,7 +512,7 @@ html(lang="en")
         
         p.
           Probably all websites and apps will contain (at least) one form, so, 
-          that's why Seed CSS has a really simple, easy to use and customizable 
+          that's why <span class="primary">Seed CSS</span> has a really simple, easy to use and customizable 
           form field stylesheet. Have a look on the examples below:
         
         br 
@@ -431,35 +521,52 @@ html(lang="en")
         
         .grid
           .row
-            .col.sm-12
-            
+            .col.md-6
               .field
                 label(for="") This is a simple input text 
                 input(type="text")
-            
+
+            .col.md-6
               .field
                 label(for="") This is a simple input password 
                 input(type="password")
-            
+          .row
+            .col.md-6
               .field
                 label(for="") This is a simple input email 
                 input(type="email", placeholder="name@domain.tld")
             
+            .col.md-6
               .field.seed-select
                 label(for="") This is a select/ dropdown 
                 select
                   option(value="A") Option A
                   option(value="B") Option B
                   option(value="C") Option C
-                  
+          .row
+            .col.md-6
               .field
-                input(type="radio", id="radio-sample")
-                label(for="radio-sample") This is a radio button
-                  
+                input(type="radio", id="radio-sample-1", name="radio-sample[]")
+                label(for="radio-sample-1") This is a radio button
               .field
-                input(type="checkbox", id="check-sample")
-                label(for="check-sample") This is a checkbox
-                  
+                input(type="radio", id="radio-sample-2", name="radio-sample[]")
+                label(for="radio-sample-2") This is a radio button
+              .field
+                input(type="radio", id="radio-sample-3", name="radio-sample[]")
+                label(for="radio-sample-3") This is a radio button
+
+            .col.md-6
+              .field
+                input(type="checkbox", id="check-sample-1", name="check-sample[]")
+                label(for="check-sample-1") This is a checkbox
+              .field
+                input(type="checkbox", id="check-sample-2", name="check-sample[]")
+                label(for="check-sample-2") This is a checkbox
+              .field
+                input(type="checkbox", id="check-sample-3", name="check-sample[]")
+                label(for="check-sample-3") This is a checkbox
+          .row
+            .col.sm-12
               .field
                 label(for="") This is a simple textarea 
                 textarea
@@ -503,7 +610,7 @@ html(lang="en")
               &lt;/label&gt;
             &lt;/div&gt;     
             
-            &lt;!-- Example of an input radio --&gt; 
+            &lt;!-- Example of a checkbox --&gt; 
             &lt;div class="field" &gt; 
               &lt;input type="checkbox" name="..." &gt;
               &lt;label for="..." &gt; 
@@ -573,7 +680,7 @@ html(lang="en")
           Tables are supposed to be used for display data. 
           
         p. 
-          In that matter, Seed CSS has very special classes to allow you show 
+          In that matter, <span class="primary">Seed CSS</span> has very special classes to allow you show 
           your data in a very clean and readable way. Basically, just using a 
           default markup for data you'll get a styled table, but, you also can 
           make use of special classes to make your tables even more readable.
@@ -659,22 +766,22 @@ html(lang="en")
               
         .code-sample
           pre.prettyprint.lang-css.
-            &lt;!-- Mobile first queries --&gt;
+            // Mobile first queries 
             @media only screen and (min-width: 0px) {
               ...
             }
             
-            &lt;!-- Larger than mobile --&gt;
+            // Larger than mobile
             @media only screen and (min-width: 320px) {
               ...
             }
             
-            &lt;!-- Larger than tablet --&gt;
+            // Larger than tablet 
             @media only screen and (min-width: 550px) {
               ...
             }
             
-            &lt;!-- Larger than desktop/laptop pc --&gt;
+            // Larger than desktop/laptop pc
             @media only screen and (min-width: 960px) {
               ...
             }
@@ -716,7 +823,9 @@ html(lang="en")
                     td.nowrap .align-justify
                     td Aligns justified
               br
-              
+          
+          .row
+            .col.md-6
               p.align-left This is left aligned
               
               .code-sample
@@ -732,6 +841,8 @@ html(lang="en")
                   &lt;p class="align-center" &gt; ... &lt;/p&gt;
               
               br
+          
+            .col.md-6
               
               p.align-right This is right aligned 
               
@@ -778,6 +889,9 @@ html(lang="en")
                     td Make all letters in lower case
               
               br
+          
+          .row
+            .col.sm-12   
               
               .code-sample.bg-white
                 p.nowrap.
@@ -789,7 +903,9 @@ html(lang="en")
                   &lt;p class="nowrap" &gt; ... &lt;/p&gt;
               
               br
-              
+          
+          .row
+            .col.md-6   
               p.camel-case.
                 this text should be camel case. 
               
@@ -797,8 +913,7 @@ html(lang="en")
                 pre.prettyprint.lang-html.
                   &lt;p class="camel-case" &gt; ... &lt;/p&gt;
               
-              br
-              
+            .col.md-6
               p.uc-first.
                 only the first character of this text should be capitalized. 
               
@@ -806,8 +921,8 @@ html(lang="en")
                 pre.prettyprint.lang-html.
                   &lt;p class="uc-first" &gt; ... &lt;/p&gt;
               
-              br
-              
+          .row
+            .col.md-6 
               p.upper-case.
                 All letters of this text should be capitalized. 
               
@@ -815,9 +930,7 @@ html(lang="en")
                 pre.prettyprint.lang-html.
                   &lt;p class="upper-case" &gt; ... &lt;/p&gt;
             
-              
-              br
-              
+            .col.md-6 
               p.lower-case.
                 All letters of this text should be lower case. 
               
@@ -895,40 +1008,42 @@ html(lang="en")
                       td.nowrap .thumb
                       td.nowrap &nbsp;
                       td Makes a small square image
-                
-                br
-                
+                br 
+
+            .row 
+              .col.md-6
                 p.align-center 
                   img(src="http://placehold.it/800x600", alt="Sample of a responsive image")
                 
                 .code-sample
                   pre.prettyprint.lang-html.
                     &lt;img src="..." alt="..." &gt;
-                
-          br 
+
+              .col.md-6
+
+                .grid 
+                  .row      
+                    .col.sm-12.md-6
+                      h5.align-center Circle image 
+                      
+                      p.align-center
+                        img.circle(src="http://placehold.it/100x100", alt="Circle image sample")
+                    
+                    .col.sm-12.md-6
+                      h5.align-center Thumbnail
+                      
+                      p.align-center
+                        img.thumb(src="http://placehold.it/100x100", alt="Thumbnail image sample")
           
-          .row
-            .col.sm-12.md-6
-              h5.align-center Circle image 
-              
-              p.align-center
-                img.circle(src="http://placehold.it/100x100", alt="Circle image sample")
-            
-            .col.sm-12.md-6
-              h5.align-center Thumbnail
-              
-              p.align-center
-                img.thumb(src="http://placehold.it/100x100", alt="Thumbnail image sample")
-          
-          .row 
-            .col.sm-12
-              .code-sample
-                pre.prettyprint.lang-html.
-                  &lt;!-- makes a circle image --&gt; 
-                  &lt;img class="circle" src="..." alt="..." &gt;
-                  
-                  &lt;!-- makes a square small image --&gt; 
-                  &lt;img class="thumb" src="..." alt="..." &gt;
+                  .row 
+                    .col.sm-12
+                      .code-sample
+                        pre.prettyprint.lang-html.
+                          &lt;!-- makes a circle image --&gt; 
+                          &lt;img class="circle" src="..." alt="..." &gt;
+                          
+                          &lt;!-- makes a square small image --&gt; 
+                          &lt;img class="thumb" src="..." alt="..." &gt;
         
         hr
         
@@ -938,19 +1053,22 @@ html(lang="en")
         
         p.
           We're using <b>Ionic Icon Fonts</b> as our set of icons. It's free and 
-          can be redistributed as well as Seed CSS.
+          can be redistributed as well as <span class="primary">Seed CSS</span>.
           
         p. 
           Just to keep the flexibility, the icon set is not included on the 
-          Seed CSS stylesheet files. You should import it from an external source. 
-          We strongly recommend you to do it from Ionic CDN.
+          <span class="primary">Seed CSS</span> stylesheet files. You should 
+          import it from an external source. If you would like to keep up to date 
+          to the latest versions from Ion icons, we strongly recommend you to get   
+          it from Ionic CDN.
         
         p.
           In order to use those icons, add the following line to the HEAD tag of 
-          any page you're using Seed CSS:
+          any page you're using <span class="primary">Seed CSS</span>:
           
         .code-sample
           pre.prettyprint.lang-html.
+            &lt;!-- Without the protocol (http|https) means it will take in the same protocol as your page is --&gt;
             &lt;link rel="stylesheet" type="text/css" 
                 href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"&gt;
         
@@ -969,16 +1087,13 @@ html(lang="en")
             .col.sm-6.md-4.align-center
               i.icon.ion-card(title=".ion-card")
             .col.sm-6.md-4.align-center
-              i.icon.ion-erlenmeyer-flask(title=".ion-erlenmeyer-flask")
+              br
+              span &hellip; and many other. 
+              a(href="http://ionicons.com/", target="_blank") Check all &gt;
           .row
             .col.sm-12.align-center
-              span &hellip; and many other.
-        
-        br
-        
-        p 
-          | To check all icons available, please refer to: 
-          a(href="http://ionicons.com/", target="_blank") http://ionicons.com/
+              span or just go to: 
+              a(href="http://ionicons.com/", target="_blank") http://ionicons.com/
         
         hr
         
@@ -989,7 +1104,8 @@ html(lang="en")
         h3 Showcase
         
         p 
-          | Have you build a website or app using Seed CSS? Don't be shy and let me know. 
+          | Have you build a website or app using <span class="primary">Seed CSS</span>? 
+          | Don't be shy and let me know. 
           br
           | Your creation can be included here, in the showcase. :)
         
@@ -1042,11 +1158,24 @@ html(lang="en")
               <a href="https://github.com/rogeriotaques/seed-css/issues" class="btn" >Open an issue at Github</a>
               
           .col.sm-12.md-3
-            p.align-center.
-              Is this project been useful for you? Why don't you make a 
-              donation to supports it? <br >
-              <a href="#!" class="btn" >Make a donation</a>
-            
+            p.align-center
+              | Is this project been useful for you? Why don't you make a 
+              | donation to supports it?
+              br
+              
+            form(action="https://www.paypal.com/cgi-bin/webscr", method="post", target="_top")
+              input(type="hidden", name="cmd", value="_s-xclick")
+              input(type="hidden", name="hosted_button_id", value="DD2FN2RTGURA2")
+              input(type="hidden", name="currency_code", value="JPY")
+              
+              div(class="field seed-select")
+                select(name="os0")
+                  option(value="Small") Modest ¥399 JPY
+                  option(value="Medium") Prefered ¥1,000 JPY
+                  option(value="Big") Generous ¥1,999 JPY
+              
+              button(type="submit", class="btn") Make a donation
+              img(alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1")
         
     script(src="//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js")
     script(src="//code.jquery.com/jquery-2.2.3.min.js", integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=", crossorigin="anonymous")
