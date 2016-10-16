@@ -1,7 +1,7 @@
 {
   "name": "seed-css",
-  "version": "1.0.0",
-  "description": "A simple but powerfull css framework.",
+  "version": "0.8.1",
+  "description": "A light-weight, mobile first and responsive CSS boilerplate.",
   "main": "index.html",
   "author": "Rogerio Taques",
   "license": "MIT",

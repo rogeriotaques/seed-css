@@ -7,22 +7,42 @@
   position: relative;
 
   &.seed-select {
+    &::before {
+      content: '';
+      position: absolute;
+      top: 25px;
+      right: 1px;
+      bottom: 1px;
+      width: 30px;
+      margin: $margin/2 0;
+      background-color: #fff;
+      z-index: 1;
+    }
+
     &::after {
       font-family: "Ionicons";
+      -webkit-speak: none;
+      -moz-speak: none;
+      -ms-speak: none;
+      -o-speak: none;
       speak: none;
       content: "\f123";
       display: block;
       position: absolute;
-      bottom: $margin / 2;
+      bottom: $margin;
       right: $margin;
       color: $darken-grey;
+      z-index: 2;
     }
 
     select {
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      -ms-appearance: none;
-      -o-appearance: none;
+      @include appearance(none);
+      background-color: transparent;
+      z-index: 5;
+
+      &::-ms-expand {
+        display: none;
+      }
     }
   }
 
@@ -49,8 +69,11 @@
     box-sizing: border-box;
     @include rem(padding, 0 $padding);
     @include rem(font-size, 16px);
-    @include rem(line-height, 35px);
+    @include rem(height, 40px);
+    @include rem(line-height, 40px);
     border: $border solid $grey;
+    border-radius: 0;
+    margin: 5px 0;
 
     @include box-shadow(0 0 0 1000px white inset);
     @include appearance(none);
@@ -59,12 +82,21 @@
     &:active {
       // this removes the yellow background from autofil features
       @include box-shadow(0 0 0 1000px white inset);
-      outline: $border solid $primary;
+      // outline: $border solid $primary;
+      border-color: $primary;
+      outline: none;
+    }
+
+    & > option {
+      border: 0;
+      outline: none;
+      @include appearance(none);
     }
   } // input[...]
 
   textarea {
     resize: none;
+    @include rem(height, 85px);
     @include rem(max-height, 85px);
   }
 
@@ -75,64 +107,80 @@
 
   input[type="radio"],
   input[type="checkbox"] {
-    width: auto;
+    position: absolute;
+    margin-left: -99999px;
+    display: none;
 
-    @include appearance(none);
+    & + label {
+       cursor: pointer;
 
-  	display: inline-block;
-  	position: relative;
-  	padding: ($padding / 2) + 2;
-    cursor: pointer;
+      &::before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        border: 1px solid grey;
+        background-color: #fff;
+        @include rem(width, 16px);
+        @include rem(height, 16px);
+        @include rem(margin-right, 10px);
+      }
+    }
 
-    box-sizing: border-box;
-    @include box-shadow(none);
-    @include rem(font-size, 16px);
-    @include rem(line-height, 24px);
-    @include rem(margin, 2px 0 -2px);
-    border: $border solid $darken-grey;
-
-    &:checked:active,
-    &:active,
-    &:focus {
-      outline: none;
+    &:checked {
+      & + label {
+        &::before {
+          border-color: $primary;
+        }
+      }
     }
   }
 
   input[type="checkbox"] {
     &:checked {
-    	border-color: $primary;
-      background-color: white;
-    	color: white;
-
-      &::after {
-        content: ' ';
-      	position: absolute;
-      	top: ($margin / 2 + 3) * -1;
-      	left: $margin / 2;
-        width: 40%;
-        height: 90%;
-      	border: {
-          style: solid;
-          width: ($border * 3);
-          color: transparent;
-          bottom-color: $primary;
-          right-color: $primary;
-        };
-        -webkit-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        -o-transform: rotate(45deg);
-        transform: rotate(45deg);
+      & + label {
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 2px;
+          border: 3px solid $primary;
+          border-top-color: transparent;
+          border-right-color: transparent;
+          @include rem(width, 16px);
+          @include rem(height, 8px);
+          @include transf(rotate(-45deg));
+        }
       }
     }
   }
 
   input[type="radio"] {
-    border-radius: $radius * 2;
+
+    & + label {
+      &::before {
+        border-radius: 20px;
+      }
+    }
 
     &:checked {
-      border-color: $primary;
-      box-shadow: $primary 4px 0 1px inset, $primary -4px 0 1px inset, $primary 0 -4px 1px inset, $primary 0 4px 1px inset;
+      & + label {
+        &::before {
+          background-color: $primary;
+        }
+
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 8px;
+          left: 4px;
+          border: 5px solid #fff;
+          border-radius: 20px;
+          @include rem(width, 0);
+          @include rem(height, 0);
+        }
+      }
     }
   }
 }  // .field

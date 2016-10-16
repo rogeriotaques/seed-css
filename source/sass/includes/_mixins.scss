@@ -40,13 +40,13 @@
 @mixin grid-make-cols( $size ) {
   @for $i from 1 through 12 {
     &.#{$size}-#{$i} {
-      &:not([class^="offset-"]):not([class*=" offset-"]) {
-        margin-left: -.35rem;
-      }
+      // &:not([class^="offset-"]):not([class*=" offset-"]) {
+      //   margin-left: -.35rem;
+      // }
 
       @if $i == 12 {
         width: 100%;
-      } @elseif $i == 1 {
+      } @else if $i == 1 {
         width: calc(100% / 12);
       } @else {
         width: calc(100% / 12 * #{$i});
@@ -58,7 +58,7 @@
     &.offset-#{$i} {
       @if $i == 12 {
         margin-left: 100%;
-      } @elseif $i == 1 {
+      } @else if $i == 1 {
         margin-left: calc(100% / 12);
       } @else {
         margin-left: calc(100% / 12 * #{$i});
@@ -75,6 +75,14 @@
   transition: $prop $time $animation;
 }
 
+@mixin transf($prop) {
+  -webkit-transform: $prop;
+  -moz-transform: $prop;
+  -ms-transformn: $prop;
+  -o-transform: $prop;
+  transform: $prop;
+}
+
 @mixin box-shadow ($value) {
   -webkit-box-shadow: $value;
   -moz-box-shadow: $value;
@@ -88,4 +96,13 @@
   -moz-appearance: $value;
   -ms-appearance: $value;
   -o-appearance: $value;
+  appearance: $value;
+}
+
+@mixin animation ($name, $duration) {
+  -webkit-animation: $name $duration linear;
+  -moz-animation: $name $duration linear;
+  -ms-animation: $name $duration linear;
+  -o-animation: $name $duration linear;
+  animation: $name $duration linear;
 }
