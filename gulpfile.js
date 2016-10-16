@@ -11,7 +11,9 @@ var
   gulpif = require('gulp-if'),
   replace = require('gulp-replace'),
   del = require('del'),
-  config, getVersion;
+  header = require('gulp-header'),
+  fs = require('fs'),
+  config, getVersion, updateVersion;
 
 config = {
   fileName: 'seed',
@@ -20,6 +22,20 @@ config = {
     build: 'build/',
     dist: 'dist/'
   },
+};
+
+updateVersion = function ( pkg ) {
+  var v = pkg.version.split('.');
+
+  // increase minor version
+  v[2] = parseInt(v[2]) + 1;  
+  pkg.version = v.join('.');
+
+  // write down the new version into package.json file.
+  fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2));
+
+  // return new package 
+  return pkg; 
 };
 
 getVersion = function () {
@@ -101,6 +117,7 @@ gulp.task('watch', function (cb) {
   );
 
   sync.init({
+    open: false,
     server: {
       baseDir: "./build"
     }
@@ -118,14 +135,33 @@ gulp.task('watch', function (cb) {
 });
 
 gulp.task('dist:run', ['build:sass', 'build:jade'], function () {
+
+  // get package json 
+  var pkg = require('./package.json');
+
+  // get latest minor version 
+  pkg = updateVersion(pkg);
+
+  // preparing the file header 
+  var comment = '/** \n '
+    + '* <%= pkg.name %> \n '
+    + '* <%= pkg.description %> \n '
+    + '* @author <%= pkg.author %> \n '
+    + '* @copyright 2015-2016, <%= pkg.author %> \n '
+    + '* @license <%= pkg.license %> \n '
+    + '* @version <%= pkg.version %> \n '
+    + '*/ \n\n ';
+
   return gulp
     .src(config.path.build + '**/*')
     .pipe(gulpif(/\.js$/, uglify()))
     .pipe(gulpif(/\.css$/, minify()))
+    .pipe(gulpif(/\.(js|css)$/, header(comment, {pkg: pkg})))
     .pipe(gulp.dest(config.path.dist));
 });
 
 gulp.task('dist', function (cb) {
+
   runSequence(
     'clean',
     'dist:run',

@@ -4,9 +4,9 @@
 
 .btn,
 button,
-input[type="button"],
-input[type="submit"],
-input[type="reset"] {
+input[type="button"]:not(.flat-btn),
+input[type="submit"]:not(.flat-btn),
+input[type="reset"]:not(.flat-btn) {
   // general
   display: inline-block;
   box-sizing: border-box;
