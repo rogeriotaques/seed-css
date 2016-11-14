@@ -523,6 +523,31 @@ html(lang="en")
           .row
             .col.md-6
               .field
+                label(for="") This is an input text 
+                input(type="text")
+
+            .col.md-6
+              .field
+                label(for="") This is an input text with additional info 
+                input(type="text")
+                span.info This is an additional piece of information.
+
+          .row
+            .col.md-6
+              .field.has-feedback
+                label(for="") This is an input text with error message 
+                input(type="text").error
+                span.error This is an error message!
+
+            .col.md-6
+              .field.has-feedback
+                label(for="") This is an input text with success message 
+                input(type="text").success
+                span.success This is a success message!
+
+          .row
+            .col.md-6
+              .field
                 label(for="") This is a simple input text 
                 input(type="text")
 
@@ -530,12 +555,19 @@ html(lang="en")
               .field
                 label(for="") This is a simple input password 
                 input(type="password")
+
           .row
             .col.md-6
               .field
                 label(for="") This is a simple input email 
                 input(type="email", placeholder="name@domain.tld")
+
+            .col.md-6
+              .field
+                label(for="") This is a simple input URL 
+                input(type="url", placeholder="http://domain.tld")
             
+          .row
             .col.md-6
               .field.seed-select
                 label(for="") This is a select/ dropdown 
@@ -543,6 +575,16 @@ html(lang="en")
                   option(value="A") Option A
                   option(value="B") Option B
                   option(value="C") Option C
+
+            .col.md-6
+              .field.seed-select.has-feedback
+                label(for="") This is a select/ dropdown with error message 
+                select.error
+                  option(value="A") Option A
+                  option(value="B") Option B
+                  option(value="C") Option C
+                span.error This is an error message!
+
           .row
             .col.md-6
               .field
@@ -554,6 +596,9 @@ html(lang="en")
               .field
                 input(type="radio", id="radio-sample-3", name="radio-sample[]")
                 label(for="radio-sample-3") This is a radio button
+              .field.has-feedback
+                input(type="radio", id="radio-sample-4", name="radio-sample[]").error
+                label(for="radio-sample-4") This is a radio button with error
 
             .col.md-6
               .field
@@ -565,6 +610,9 @@ html(lang="en")
               .field
                 input(type="checkbox", id="check-sample-3", name="check-sample[]")
                 label(for="check-sample-3") This is a checkbox
+              .field.has-feedback 
+                input(type="checkbox", id="check-sample-4", name="check-sample[]").error
+                label(for="check-sample-4") This is a checkbox with error
           .row
             .col.sm-12
               .field
