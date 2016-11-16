@@ -1,6 +1,0 @@
-build/
-source/
-node_modules/
-
-gulpfile.js
-.gitignore
