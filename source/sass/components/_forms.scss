@@ -17,6 +17,7 @@
       margin: $margin/2 0;
       background-color: #fff;
       z-index: 1;
+      max-height: 36px;
     }
 
     &::after {
@@ -57,6 +58,12 @@
     }
   }
 
+  & > span {
+    &.info {
+      color: $grey;
+    }
+  } // span
+
   input[type="text"],
   input[type="password"],
   input[type="search"],
@@ -92,6 +99,7 @@
       outline: none;
       @include appearance(none);
     }
+
   } // input[...]
 
   textarea {
@@ -133,7 +141,8 @@
         }
       }
     }
-  }
+
+  } // radio, checkbox
 
   input[type="checkbox"] {
     &:checked {
@@ -183,4 +192,56 @@
       }
     }
   }
+
+  &.has-feedback {
+    & > span {
+      &.error {
+        color: $red;
+      }
+
+      &.success {
+        color: $green;
+      }
+
+      &.info {
+        color: $grey;
+      }
+    } // span 
+
+    input[type="text"],
+    input[type="password"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="url"],
+    textarea,
+    select {
+      &.error {
+        border-color: $red;
+      }
+
+      &.success {
+        border-color: $green;
+      }
+    } // input[type="*"], textarea, select
+
+    input[type="radio"],
+    input[type="checkbox"] {
+
+      &.error:not(:checked) + label {
+        color: $red;
+
+        &::before {
+          border-color: $red;
+        }
+      }
+      
+    } // input[type="radio"], input[type="checkbox"]
+
+    &.seed-select {
+      &::after {
+        transform: translateY(-100%);
+      } 
+    } // .seed-select
+  } // .has-feedback
 }  // .field

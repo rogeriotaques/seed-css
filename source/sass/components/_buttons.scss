@@ -11,6 +11,7 @@ input[type="reset"]:not(.flat-btn) {
   display: inline-block;
   box-sizing: border-box;
   margin: $margin/2;
+  text-align: center;
   text-decoration: none;
   color: $darken-grey;
   cursor: pointer;
@@ -125,6 +126,7 @@ input[type="reset"]:not(.flat-btn) {
   box-sizing: border-box;
   margin: $margin/2;
   text-decoration: none;
+  text-align: center;
   color: $darken-grey;
   cursor: pointer;
   background-color: transparent;

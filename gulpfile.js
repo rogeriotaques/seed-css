@@ -1,7 +1,7 @@
 var
   gulp = require('gulp'),
   runSequence = require('run-sequence'),
-  sync = require('browser-sync').create(),
+  sync = require('browser-sync'),
   sass = require('gulp-sass'),
   jade = require('gulp-jade'),
   concat = require('gulp-concat'),
@@ -62,8 +62,7 @@ gulp.task('clean', function () {
 gulp.task('build:images', function () {
   return gulp
     .src(config.path.source + 'images/**/*')
-    .pipe(gulp.dest(config.path.build + 'assets/images'))
-    .pipe(sync.stream());
+    .pipe(gulp.dest(config.path.build + 'assets/images'));
 });
 
 gulp.task('build:style', function () {
@@ -73,7 +72,7 @@ gulp.task('build:style', function () {
     .pipe(beautify({indent: '  ', autosemicolon: true}))
     .pipe(concat('style.css'))
     .pipe(gulp.dest(config.path.build + 'assets/css'))
-    .pipe(sync.stream());
+    .pipe(sync.reload({stream: true}));
 });
 
 gulp.task('build:sass', function () {
@@ -86,7 +85,7 @@ gulp.task('build:sass', function () {
     .pipe(beautify({indent: '  ', autosemicolon: true}))
     .pipe(concat(config.fileName + '.css'))
     .pipe(gulp.dest(config.path.build + 'assets/css'))
-    .pipe(sync.stream());
+    .pipe(sync.reload({stream: true}));
 });
 
 gulp.task('build:jade', function () {
@@ -100,11 +99,14 @@ gulp.task('build:jade', function () {
     .pipe(gulp.dest(config.path.build));
 });
 
+gulp.task('build:jade-watch', ['build:jade'], sync.reload);
+
 gulp.task('build:javascript', function () {
   return gulp
     .src(config.path.source + 'js/**/*.js')
     .pipe(concat('bundle.js'))
-    .pipe(gulp.dest(config.path.build + 'assets/js'));
+    .pipe(gulp.dest(config.path.build + 'assets/js'))
+    .pipe(sync.reload({stream: true}));
 });
 
 gulp.task('watch', function (cb) {
@@ -125,13 +127,11 @@ gulp.task('watch', function (cb) {
 
   gulp.watch(config.path.source + 'sass/sample.scss', ['build:style']);
   gulp.watch(config.path.source + 'sass/**/*.scss', ['build:sass']);
-  gulp.watch(config.path.source + 'jade/**/*.jade', ['build:jade']);
   gulp.watch(config.path.source + 'js/**/*.js', ['build:javascript']);
+  gulp.watch(config.path.source + 'jade/**/*.jade', ['build:jade-watch']);
   gulp.watch(config.path.source + 'images/**/*', ['build:images']);
 
   gulp.watch(config.path.build + 'assets/images/**/*' ).on('change', sync.reload);
-  gulp.watch(config.path.build + '**/*.html' ).on('change', sync.reload);
-
 });
 
 gulp.task('dist:run', ['build:sass', 'build:jade'], function () {
