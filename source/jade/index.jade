@@ -23,94 +23,57 @@ html(lang="en")
   head
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
+
     title Seed CSS
+
     meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
     meta(name="description", content="A light-weight, mobile first and responsive CSS boilerplate.")
     meta(name="keywords", content="css,boilerplate,javascript,html5,website,site,app,webapp,build,development")
     meta(name="author", content="Rogerio Taques (http://github.com/rogeriotaques)")
     meta(name="copyright", content="Rogerio Taques")
     meta(name="license", content="MIT")
+
     link(rel="stylesheet", type="text/css", href="//fonts.googleapis.com/css?family=Raleway:400,300,600")
     link(rel="stylesheet", type="text/css", href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css")
     link(rel="stylesheet", type="text/css", href="assets/css/seed.css?v={%version%}")
     link(rel="stylesheet", type="text/css", href="assets/css/style.css?v={%version%}")
   body
-  
+
     header
-    
-      span#about
-    
-      .container
-        h1 
-          | Seed CSS 
-          img(src="https://img.shields.io/github/release/rogeriotaques/seed-css.svg", style="max-width:100%;")
-        
-        p.
-          A light-weight, mobile first and responsive CSS boilerplate.
+      .container.align-center 
+        h1 Seed CSS
+        p A light-weight, mobile first and responsive CSS boilerplate.
 
-    section.page-navbar
-      .container
-        nav 
-          ul
-            li 
-              a.spy(href="#about") About 
-            li 
-              a.spy(href="#get-started") Get started
-            li 
-              a.spy(href="#examples") Examples
-              ul
-                li
-                  a.spy.uc-first(href="#sample-container") container
-                li
-                  a.spy.uc-first(href="#sample-grid") grid
-                li
-                  a.spy.uc-first(href="#sample-typography") typography
-                li
-                  a.spy.uc-first(href="#sample-buttons") buttons
-                li
-                  a.spy.uc-first(href="#sample-forms") forms
-                li
-                  a.spy.uc-first(href="#sample-lists") lists
-                li
-                  a.spy.uc-first(href="#sample-tables") tables
-                li
-                  a.spy.uc-first(href="#sample-media-queries") media-queries
-                li
-                  a.spy.uc-first(href="#sample-utilities") utilities
-                li
-                  a.spy.uc-first(href="#sample-icons") icons
-            li 
-              a.spy(href="#showcase") Show Case
-            li 
-              a.spy(href="#license") License
-            li.hide-only-small
-              a(href="https://github.com/rogeriotaques/seed-css") Fork me on Github
-            li.hide
-              a(href="https://github.com/rogeriotaques/seed-css/archive/develop.zip") Download
+        .cta
+          a.btn.btn-primary(href="https://github.com/rogeriotaques/seed-css/archive/develop.zip") 
+            span DOWNLOAD 
+            span#release v.0.0.0
 
-    section.main 
-      .container
-      
-        br
-        
-        h2.align-center Why you're gonna love use <b class="primary">Seed CSS</b>?
-        p.align-center 
-          b It's for modern browsers. <br>
-          //- small (IE9+, Chrome30+, Firefox46+, Safari9.1+, Opera38+, iOS Safari 9.2+, Android Browser 50+ and Android Chrome 50+)
-        
-        .grid
-          .row
-            .col.sm-12.md-4.align-center
+        p (This page design is proudly based on <code class="primary">seed-css</code>)
+
+        div
+          span(title="Scroll down for more ...").ion-chevron-down.scroll-down-for-more
+
+    main
+      br 
+
+      .container.align-center
+        h2 Why you're gonna love it?
+        p  It's made for modern browsers, not intrusive and lightweight. 
+
+        .grid.highlight 
+          .row 
+            .col.md-4.align-center
               h3
                 i.ion-speedometer
                 br
-                | Quick start
+                | Easy to start
               
               p. 
                 Get started to your projects with a very small footprint 
                 CSS boilerplate like this.
                 
-            .col.sm-12.md-4.align-center
+            .col.md-4.align-center
                     
               h3 
                 i.ion-leaf
@@ -121,49 +84,37 @@ html(lang="en")
                 Just <b>11kb</b> of CSS your app needs to load for a 
                 mobile first and responsive design.
               
-            .col.sm-12.md-4.align-center
+            .col.md-4.align-center
               h3 
                 i.ion-settings
                 br
-                | Full customizable
+                | Based on Sass
                 
               p. 
                 All written on Sass, what means you can easily customize it
                 as much as you need.
-          br
-          
-          .row
-            .col.sm-12.align-center
-              a.btn.btn-primary(href="https://github.com/rogeriotaques/seed-css/archive/develop.zip") DOWNLOAD 
-          
-          .row
-            .col.sm-12.align-center
-              p (This page design is proudly written with <span class="primary">Seed CSS</span>)
-              
-        br    
-        hr
-        
-    section
-      span#get-started
+
     
-      .container
+    section#get-started
+
+     .container
         h2 Get started
         
-        p. 
-          Just before get started, please notice that <span class="primary">Seed CSS</span> was written with modern browsers in mind. 
+        p.align-justify. 
+          Just before get started, please notice that <code class="primary">seed-css</code> was written with modern browsers in mind. 
           That means it just has support for <b>IE9+</b> (which actually isn't a real modern browser ... but), 
           <b>Chrome</b>, <b>Firefox</b> and <b>Safari</b>, besides mobile browsers. If you need support older browsers, this boilerplate
           may not help you, but, just in case, you're free to customize it and create your own CSS rules to 
           make it supports those older browser versions.
       
-        p. 
-          The most first thing you need to do to start using <span class="primary" >Seed CSS</span> 
+        p.align-justify. 
+          The most first thing you need to do to start using <code class="primary" >seed-css</code> 
           is import its CSS file into your pages. In order to get the right files, you can either 
           <a href="https://github.com/rogeriotaques/seed-css" >fork</a> this project on Github, or 
           just <a href="https://github.com/rogeriotaques/seed-css/archive/develop.zip" >download</a> 
           the compressed project files to your computer.
       
-        p.
+        p.align-justify.
           After get the latest version of files, import it to your pages as the example below:
         
         .code-sample
@@ -175,867 +126,272 @@ html(lang="en")
             
             
         p.
-          Once you have the <span class="primary" >Seed CSS</span> stylesheet embeded to your 
+          Once you have the <code class="primary" >seed-css</code> stylesheet embeded to your 
           site or application, have a look on all code examples below to get inspired about 
           what features it offers you and what you can do with it. :)
           
-        hr
-        
-    section
-      span#examples
-      
+    section#examples
       .container
-        h2 Examples of code
-        
-        br
-        
-    section#sample-container
-      .container
-        h3 Container
-      
-        p.
-         Containers are used to define an enclosed area with a <code >max-width</code> 
-         set to 960px on wide screens.
-      
-        .sample-container.align-center This's a container.
-        
-        .code-sample
-          pre.prettyprint.lang-html. 
-            &lt;div class="container" &gt;&lt;/div&gt;
-          
-        hr
-    
-    section#sample-grid
-      .container 
-        h3 Grid 
-        
-        p. 
-          Grids are commonly used to define "grid" based designs. The grid system is responsive, 
-          which means you can define the number of columns according to the screen size and it will 
-          adapts its width to best fit your content.
-        
-        table 
-          thead
-            tr 
-              th Class 
-              th Detail
-              th Remarks
-          tbody 
-            tr
-              td.nowrap .grid
-              td.nowrap &nbsp;
-              td Defines the grid container
-            tr
-              td.nowrap .row
-              td.nowrap &nbsp;
-              td Defines each row of a grid container
-            tr
-              td.nowrap .col
-              td.nowrap &nbsp;
-              td Defines each column of a grid container
-            tr
-              td.nowrap .sm-*
-              td.nowrap (1 ~ 12)
-              td Defines a column size for small screens. It's used concatenated to <code >.col</code>
-            tr
-              td.nowrap .md-*
-              td.nowrap (1 ~ 12)
-              td Defines a column size for medium screens. It's used concatenated to <code >.col</code
-            tr
-              td.nowrap .lg-*
-              td.nowrap (1 ~ 12)
-              td Defines a column size for large screens. It's used concatenated to <code >.col</code
-            tr
-              td.nowrap .offset-*
-              td.nowrap (1 ~ 12)
-              td Creates an offset of columns. It's used concatenated to <code >.col</code>
-              
-        br
-        
-        h5 Examples
-        
-        .grid.sample
-          .row
-            .col.md-6.lg-3.align-center .md-6 .lg-3
-            .col.md-6.lg-3.align-center .md-6 .lg-3
-            .col.md-6.lg-3.align-center .md-6 .lg-3
-            .col.md-6.lg-3.align-center .md-6 .lg-3
-        
-        .code-sample
-          pre.prettyprint.lang-html.
-            &lt;!-- This's a grid --&gt;
-            &lt;div class="grid" &gt;
-              &lt;!-- This's a row. You can have as many rows as you need. --&gt;
-              &lt;div class="row" &gt;
-                &lt;!-- This's a column. You can have up to 12 columns in a row. --&gt;
-                &lt;div class="col sm-12 md-6 lg-3" &gt; ... &lt;/div&gt;
-                &lt;div class="col sm-12 md-6 lg-9" &gt; ... &lt;/div&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
-        
-        br
-        
-        p Check this examples out.
-        
-        .grid.sample
-          - each i in [1,2,3,4,5,6,7,8,9,10,11,12]
-            - var cn = 'sm-' + i
-            - var nc = 'sm-' + (12-i)
-            .row
-              .col.align-center(class=cn)= i
-              
-              if (12 - i > 0)
-                .col.align-center(class=nc)= (12 - i)
-          .row
-            - each i in [1,2,3,4,5,6,7,8,9,10,11,12]
-              .col.sm-1.align-center= i
-        
-        br
-        
-        p. 
-          Offsets are also available. To apply offsets, just add the sufix <code >-offset</code> to your classname.
-          
-        p. 
-          Check it out how to make a colum spanding 6 with a offset of 3.
-        
-        .grid.sample
-        
-          .row
-            .col.md-6.offset-3.align-center This' a column of 6 with offset of 3.
-        
-          .code-sample
-            pre.prettyprint.lang-html.
-              &lt;div class="grid" &gt;
-                &lt;div class="row" &gt;
-                  &lt;div class="col sm-6 offset-3" &gt; ... &lt;/div&gt;
-                &lt;/div&gt;
-              &lt;/div&gt;
-        
-        hr
 
-    section#sample-typography
-      .container
-        h3 Typography
+        .grid 
+          .row 
+            .col.md-12.lg-9
+              //- content 
+
+              h2 Examples
+
+              #sample-container
+
+                h4 Container
+
+                p. 
+                  Containers are used to define an enclosed area with a 
+                  <code >max-width</code> set to <code >960px</code> on wide screens.
+
+                .sample-container.align-center This's a container.
+          
+                .code-sample
+                  pre.prettyprint.lang-html. 
+                    &lt;div class="container" &gt;&lt;/div&gt;
+
+              hr 
+
+              #sample-grid 
+
+                h4 Grid 
+
+                p.align-justify. 
+                  Grids are commonly used to define "grid" based designs. The grid system is responsive, 
+                  which means you can define the number of columns according to the screen size and it will 
+                  adapts its width to best fit your content.
+
+                p.align-justify. 
+                  Offsets are also available. To apply offsets, just add the sufix 
+                  <code >-offset</code> to your classname.
         
-        p.
-          All default HTML tags are supported, including but not limited 
-          to the below few examples.
-        
-        h5 Examples 
-        
-        .grid
-          .row
-            .col.sm-12.md-6
-              each i in [1,2,3,4,5,6]
-                #{'h'+i}= 'Header ' + i
+
+                .grid.sample
+                  .row
+                    .col.md-6.lg-3.align-center .md-6 .lg-3
+                    .col.md-6.lg-3.align-center .md-6 .lg-3
+                    .col.md-6.lg-3.align-center .md-6 .lg-3
+                    .col.md-6.lg-3.align-center .md-6 .lg-3
                 
-            .col.sm-12.md-6
-              p. 
-                This is an paragraph. <br >
-                This is a <b >bold</b> text. <br >
-                This is an <i >italic</i> text. <br >
-                This is an <u >underlined</u> text. <br >
-                This is an <a href="#!">anchor</a> text.
-        
-        .code-sample
-          pre.prettyprint.lang-html.
-            &lt;p &gt; ... &lt;/p&gt; 
-            &lt;b &gt; ... &lt;/b&gt; 
-            &lt;i &gt; ... &lt;/i&gt; 
-            &lt;u &gt; ... &lt;/u&gt; 
-            &lt;a href="." &gt; ... &lt;/a&gt; 
-            
-            &lt;!-- Head lines --&gt; 
-            &lt;h1 &gt; ... &lt;/h1&gt; 
-            &lt;h2 &gt; ... &lt;/h2&gt; 
-            &lt;h3 &gt; ... &lt;/h3&gt; 
-            &lt;h4 &gt; ... &lt;/h4&gt; 
-            &lt;h5 &gt; ... &lt;/h5&gt; 
-            &lt;h6 &gt; ... &lt;/h6&gt; 
-        
-        hr
-        
-    section#sample-buttons
-      .container
-        h3 Buttons
-        
-        p.
-          Buttons are a really basic elements on any web page or app, and it 
-          comes in a couple of different flavors in <span class="primary">Seed CSS</span>. In order to use the primary 
-          just add the class name <code >.btn-primary</code>. If you need use 
-          anchor (&lt;a /&gt;) as button, include the <code >.btn</code> class 
-          name on it.
-        
-        table 
-          thead
-            tr 
-              th Class 
-              th Detail
-              th Remarks
-          tbody 
-            tr
-              td.nowrap .btn
-              td.nowrap &nbsp;
-              td Makes anchors looks like buttons
-            tr
-              td.nowrap .btn-primary
-              td.nowrap &nbsp;
-              td Defines a 'primary' (blue) colored button
-            tr
-              td.nowrap .btn-(*color*)
-              td.nowrap &nbsp;
-              td Defines a colored button. Colors can be: <code>red</code>, <code>orange</code>, <code>green</code> or <code>purple</code>
-            tr
-              td.nowrap .btn-(*size*)
-              td.nowrap &nbsp;
-              td Defines a sized button. Sizes can be: <code>small</code> or <code>medium</code>. Default is <code>big</code>
-            tr
-              td.nowrap .disabled
-              td.nowrap &nbsp;
-              td Defines disabled buttons. Simply setting the <code>disabled</code> property will also make button looks like disabled
-            tr
-              td.nowrap .flat-btn
-              td.nowrap &nbsp;
-              td Defines <b>flat</b> buttons, which means no borders or background colors. You are still able to use <code>.btn-(*color*)</code> and or <code>.btn(*size*)</code> on this button type
-        
-        br
-        
-        h5 Examples
-        
-        .buttons.align-center 
-        
-          h6.align-center Default
-          
-          a.btn(href="#!") Anchor 
-          button(type="button") Button element 
-          input(type="button", value="Input button")
-          
-          br 
-          
-          h6.align-center Primary (.btn-primary)
-          
-          a.btn.btn-primary(href="#!") Anchor 
-          button.btn-primary(type="button") Button element 
-          input.btn-primary(type="button", value="Input button")
-          
-          br 
-          
-          h6.align-center Colored (.btn-*color*)
-          
-          a.btn.btn-red(href="#!") Anchor 
-          button.btn-red(type="button") Button element 
-          input.btn-red(type="button", value="Input button")
-          
-          br 
-          
-          a.btn.btn-orange(href="#!") Anchor 
-          button.btn-orange(type="button") Button element 
-          input.btn-orange(type="button", value="Input button")
-          
-          br 
-          
-          a.btn.btn-green(href="#!") Anchor 
-          button.btn-green(type="button") Button element 
-          input.btn-green(type="button", value="Input button")
-          
-          br 
-          
-          a.btn.btn-purple(href="#!") Anchor 
-          button.btn-purple(type="button") Button element 
-          input.btn-purple(type="button", value="Input button")
-          
-          br 
-          
-          h6.align-center Disabled (.disabled)
-          
-          a.btn(href="#!", disabled) Anchor 
-          button(type="button", disabled) Button element 
-          input(type="button", value="Input button", disabled)
-          
-          br 
-          
-          h6.align-center Flat (.flat-btn)
-          
-          a.flat-btn(href="#!") Anchor 
-          button.flat-btn(type="button") Button element 
-          input.flat-btn(type="button", value="Input button")
-          
-          br 
-          
-        h6.align-center Medium (.btn-medium)
-          
-        .buttons.align-center 
-          
-          a.btn.btn-medium(href="#!") Anchor 
-          button.btn-medium(type="button") Button element 
-          input.btn-medium(type="button", value="Input button")
-          
-          br 
-          
-        h6.align-center Small (.btn-small)
-          
-        .buttons.align-center 
-          
-          a.btn.btn-small(href="#!") Anchor 
-          button.btn-small(type="button") Button element 
-          input.btn-small(type="button", value="Input button")
-          
-          br 
-          
-        .code-sample
-          pre.prettyprint.lang-html.
-            &lt;!-- .btn class makes an anchor looks like a button --&gt; 
-            &lt;a class="btn" href="..." &gt; ... &lt;/a&gt; 
-            
-            &lt;!-- default buttons and input[type="button"] --&gt;
-            &lt;button type="button" &gt; ... &lt;/button&gt; 
-            &lt;input type="button" value="..." /&gt;
-            
-            &lt;!-- .btn-primary makes buttons colored --&gt;
-            &lt;a class="btn btn-primary" href="..." &gt; ... &lt;/a&gt; 
-            &lt;a class="btn btn-red" href="..." &gt; ... &lt;/a&gt; 
-            &lt;a class="btn btn-green" href="..." &gt; ... &lt;/a&gt; 
-            
-            &lt;!-- .btn-primary makes buttons on different sizes --&gt;
-            &lt;a class="btn btn-medium" href="..." &gt; ... &lt;/a&gt; 
-            &lt;a class="btn btn-small" href="..." &gt; ... &lt;/a&gt; 
-            
-            &lt;!-- .btn-primary makes disabled buttons --&gt;
-            &lt;a class="btn disabled" href="..." &gt; ... &lt;/a&gt; 
-            &lt;button disabled &gt; ... &lt;/button&gt; 
+                .code-sample
+                  pre.prettyprint.lang-html.
+                    &lt;!-- This's a grid --&gt;
+                    &lt;div class="grid" &gt;
+                      &lt;!-- This's a row. You can have as many rows as you need. --&gt;
+                      &lt;div class="row" &gt;
+                        &lt;!-- This's a column. You can have up to 12 columns in a row. --&gt;
+                        &lt;div class="col sm-12 md-6 lg-3" &gt; ... &lt;/div&gt;
+                        &lt;div class="col sm-12 md-6 lg-9" &gt; ... &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
 
-        hr
-        
-    section#sample-forms
-      .container
-        h3 Forms
-        
-        p.
-          Probably all websites and apps will contain (at least) one form, so, 
-          that's why <span class="primary">Seed CSS</span> has a really simple, easy to use and customizable 
-          form field stylesheet. Have a look on the examples below:
-        
-        br 
-        
-        h5 Examples
-        
-        .grid
-          .row
-            .col.md-6
-              .field
-                label(for="") This is an input text 
-                input(type="text")
-
-            .col.md-6
-              .field
-                label(for="") This is an input text with additional info 
-                input(type="text")
-                span.info This is an additional piece of information.
-
-          .row
-            .col.md-6
-              .field.has-feedback
-                label(for="") This is an input text with error message 
-                input(type="text").error
-                span.error This is an error message!
-
-            .col.md-6
-              .field.has-feedback
-                label(for="") This is an input text with success message 
-                input(type="text").success
-                span.success This is a success message!
-
-          .row
-            .col.md-6
-              .field
-                label(for="") This is a simple input text 
-                input(type="text")
-
-            .col.md-6
-              .field
-                label(for="") This is a simple input password 
-                input(type="password")
-
-          .row
-            .col.md-6
-              .field
-                label(for="") This is a simple input email 
-                input(type="email", placeholder="name@domain.tld")
-
-            .col.md-6
-              .field
-                label(for="") This is a simple input URL 
-                input(type="url", placeholder="http://domain.tld")
-            
-          .row
-            .col.md-6
-              .field.seed-select
-                label(for="") This is a select/ dropdown 
-                select
-                  option(value="A") Option A
-                  option(value="B") Option B
-                  option(value="C") Option C
-
-            .col.md-6
-              .field.seed-select.has-feedback
-                label(for="") This is a select/ dropdown with error message 
-                select.error
-                  option(value="A") Option A
-                  option(value="B") Option B
-                  option(value="C") Option C
-                span.error This is an error message!
-
-          .row
-            .col.md-6
-              .field
-                input(type="radio", id="radio-sample-1", name="radio-sample[]")
-                label(for="radio-sample-1") This is a radio button
-              .field
-                input(type="radio", id="radio-sample-2", name="radio-sample[]")
-                label(for="radio-sample-2") This is a radio button
-              .field
-                input(type="radio", id="radio-sample-3", name="radio-sample[]")
-                label(for="radio-sample-3") This is a radio button
-              .field.has-feedback
-                input(type="radio", id="radio-sample-4", name="radio-sample[]").error
-                label(for="radio-sample-4") This is a radio button with error
-
-            .col.md-6
-              .field
-                input(type="checkbox", id="check-sample-1", name="check-sample[]")
-                label(for="check-sample-1") This is a checkbox
-              .field
-                input(type="checkbox", id="check-sample-2", name="check-sample[]")
-                label(for="check-sample-2") This is a checkbox
-              .field
-                input(type="checkbox", id="check-sample-3", name="check-sample[]")
-                label(for="check-sample-3") This is a checkbox
-              .field.has-feedback 
-                input(type="checkbox", id="check-sample-4", name="check-sample[]").error
-                label(for="check-sample-4") This is a checkbox with error
-          .row
-            .col.sm-12
-              .field
-                label(for="") This is a simple textarea 
-                textarea
-                
-                
-        .code-sample
-          pre.prettyprint.lang-html.
-            &lt;!-- Example of an input text --&gt; 
-            &lt;div class="field" &gt; 
-              &lt;label for="..." &gt; ... &lt;/label&gt;
-              &lt;input type="text" name="..." &gt;
-            &lt;/div&gt;    
-                 
-            &lt;!-- Example of an input password --&gt; 
-            &lt;div class="field" &gt; 
-              &lt;label for="..." &gt; ... &lt;/label&gt;
-              &lt;input type="password" name="..." &gt;
-            &lt;/div&gt;         
-                 
-            &lt;!-- Example of an input email --&gt; 
-            &lt;div class="field" &gt; 
-              &lt;label for="..." &gt; ... &lt;/label&gt;
-              &lt;input type="email" name="..." placehoder="..." &gt;
-            &lt;/div&gt;         
-                 
-            &lt;!-- Example of a dropdown --&gt; 
-            &lt;div class="field seed-select" &gt; 
-              &lt;label for="..." &gt; ... &lt;/label&gt;
-              &lt;select name="..." &gt;
-                &lt;option value="..." &gt; ... &lt;/option&gt;
-                &lt;option value="..." &gt; ... &lt;/option&gt;
-                &lt;option value="..." &gt; ... &lt;/option&gt;
-              &lt;/select&gt;
-            &lt;/div&gt;       
-            
-            &lt;!-- Example of an input radio --&gt; 
-            &lt;div class="field" &gt; 
-              &lt;input type="radio" name="..." &gt;
-              &lt;label for="..." &gt;
-                ...
-              &lt;/label&gt;
-            &lt;/div&gt;     
-            
-            &lt;!-- Example of a checkbox --&gt; 
-            &lt;div class="field" &gt; 
-              &lt;input type="checkbox" name="..." &gt;
-              &lt;label for="..." &gt; 
-                ... 
-              &lt;/label&gt;
-            &lt;/div&gt;           
-                 
-            &lt;!-- Example of a textarea --&gt; 
-            &lt;div class="field" &gt; 
-              &lt;label for="..." &gt; ... &lt;/label&gt;
-              &lt;textarea name="..." &gt; ... &lt;/textarea&gt;
-            &lt;/div&gt;  
-        
-        hr
-        
-    section#sample-lists
-      .container
-        h3 Lists
-        
-        p. 
-          You can make your lists using <code >DL</code>, <code >UL</code> or <code >OL</code>.
-          No special classes are necessary. The style will be applied to the natural element.
-        
-        h5 Examples
-        
-        .grid
-          .row
-            .col.sm-12.md-6
-              p Ordered
-            
-              ol
-                li First item
-                li Second item 
-                  ol
-                    li Nested first 
-                    li Nested second ...
-                li Third item
-            
-            .col.sm-12.md-6
-              p Unordered
-            
-              ul
-                li First item
-                li Second item 
-                  ul
-                    li Nested first 
-                    li Nested second ...
-                li Third item
-        
-                
-        .code-sample
-          pre.prettyprint.lang-html.
-            &lt;!-- replace OL by UL or DL for different list types --&gt; 
-            &lt;ol &gt; 
-              &lt;li &gt; ... &lt;/li&gt;
-              &lt;li &gt; ... &lt;/li&gt;
-              &lt;li &gt; ... &lt;/li&gt;
-            &lt;/ol&gt; 
-        
-        hr
-        
-    section#sample-tables
-      .container
-        h3 Tables
-        
-        p.
-          Tables are supposed to be used for display data. 
-          
-        p. 
-          In that matter, <span class="primary">Seed CSS</span> has very special classes to allow you show 
-          your data in a very clean and readable way. Basically, just using a 
-          default markup for data you'll get a styled table, but, you also can 
-          make use of special classes to make your tables even more readable.
-        
-        br
-        
-        h5 Examples
-        
-        p.camel-case
-          b default
-        
-        - each className in ['', 'stripped', 'hovered', 'bordered']
-          if className !== ''
-            p.camel-case
-              b= className
-           
-          table(class=className) 
-            thead
-              tr
-                th Name 
-                th Email
-                th Phone
-            tbody
-              tr 
-                td John Wayne
-                td john@wayne.com 
-                td 123-4567-8900
-              tr 
-                td John Wayne
-                td john@wayne.com 
-                td 123-4567-8900
-              tr 
-                td John Wayne
-                td john@wayne.com 
-                td 123-4567-8900
-            tfoot
-              tr
-                td
-                td
-                td
-                
-          .code-sample
-            pre.prettyprint.lang-html.
-              &lt;table class="#{className}" &gt; 
-                &lt;tbody &gt;
-                  &lt;tr &gt;
-                    &lt;td &gt; ... &lt;/td&gt;
-                    &lt;td &gt; ... &lt;/td&gt;
-                    &lt;td &gt; ... &lt;/td&gt;
-                  &lt;/tr&gt;
-                &lt;/tbody&gt;
-              &lt;/table&gt; 
-          
-          br
-        
-        hr
-        
-    section#sample-media-queries
-      .container
-        h3 Media queries
-        
-        p. 
-          Media queries allows you to make an even more accurated design.
-        
-        table 
-          thead
-            tr
-              th Query 
-              th Remarks
-          tbody
-            tr 
-              td @media only screen and (min-width: 0px) {}
-              td Mobile first queries
-            tr 
-              td @media only screen and (min-width: 320px) {}
-              td Larger than mobile
-            tr 
-              td @media only screen and (min-width: 550px) {}
-              td Larger than tablet
-            tr 
-              td @media only screen and (min-width: 960px) {}
-              td Larger than desktop/laptop pc
-              
-        .code-sample
-          pre.prettyprint.lang-css.
-            // Mobile first queries 
-            @media only screen and (min-width: 0px) {
-              ...
-            }
-            
-            // Larger than mobile
-            @media only screen and (min-width: 320px) {
-              ...
-            }
-            
-            // Larger than tablet 
-            @media only screen and (min-width: 550px) {
-              ...
-            }
-            
-            // Larger than desktop/laptop pc
-            @media only screen and (min-width: 960px) {
-              ...
-            }
-        
-        hr
-        
-    section#sample-utilities
-      .container
-        h3 Utilities
-        
-        p. 
-          Utilities are classes that can help you to easily show up your data 
-          or content in a beatiful way.<br >It can be used combined with other 
-          available classes.
-
-        br
-        
-        .grid
-          .row
-            .col.sm-12
-              h5 Text alignment
-              
-              table 
-                thead
-                  tr 
-                    th Class 
-                    th Remarks
-                tbody 
-                  tr
-                    td.nowrap .align-left
-                    td Aligns on left
-                  tr
-                    td.nowrap .align-right
-                    td Aligns on right
-                  tr
-                    td.nowrap .align-center
-                    td Aligns on center
-                  tr
-                    td.nowrap .align-justify
-                    td Aligns justified
-              br
-          
-          .row
-            .col.md-6
-              p.align-left This is left aligned
-              
-              .code-sample
-                pre.prettyprint.lang-html.
-                  &lt;p class="align-left" &gt; ... &lt;/p&gt;
-              
-              br
-              
-              p.align-center This is center aligned 
-              
-              .code-sample
-                pre.prettyprint.lang-html.
-                  &lt;p class="align-center" &gt; ... &lt;/p&gt;
-              
-              br
-          
-            .col.md-6
-              
-              p.align-right This is right aligned 
-              
-              .code-sample
-                pre.prettyprint.lang-html.
-                  &lt;p class="align-right" &gt; ... &lt;/p&gt;
-              
-              br
-              
-              p.align-justify.
-                This is justified. This is justified. This is justified. This is justified. 
-                This is justified. This is justified. This is justified. This is justified. 
-              
-              .code-sample
-                pre.prettyprint.lang-html.
-                  &lt;p class="align-justify" &gt; ... &lt;/p&gt;
-              
-              br
-          
-          .row
-            .col.sm-12    
-              h5 Text transform 
-              
-              table 
-                thead
-                  tr 
-                    th Class 
-                    th Remarks
-                tbody 
-                  tr
-                    td.nowrap .nowrap
-                    td Forces the HTML to ignore white spaces when wrapping lines.
-                  tr
-                    td.nowrap .camel-case
-                    td Capitalize the first character of any word
-                  tr
-                    td.nowrap .uc-first
-                    td Capitalize the first character only from the first word
-                  tr
-                    td.nowrap .upper-case
-                    td Capitalize all character
-                  tr
-                    td.nowrap .lower-case
-                    td Make all letters in lower case
-              
-              br
-          
-          .row
-            .col.sm-12   
-              
-              .code-sample.bg-white
-                p.nowrap.
-                  This text should not break when the screen width is smaller then 
-                  the text length. 
-              
-              .code-sample
-                pre.prettyprint.lang-html.
-                  &lt;p class="nowrap" &gt; ... &lt;/p&gt;
-              
-              br
-          
-          .row
-            .col.md-6   
-              p.camel-case.
-                this text should be camel case. 
-              
-              .code-sample
-                pre.prettyprint.lang-html.
-                  &lt;p class="camel-case" &gt; ... &lt;/p&gt;
-              
-            .col.md-6
-              p.uc-first.
-                only the first character of this text should be capitalized. 
-              
-              .code-sample
-                pre.prettyprint.lang-html.
-                  &lt;p class="uc-first" &gt; ... &lt;/p&gt;
-              
-          .row
-            .col.md-6 
-              p.upper-case.
-                All letters of this text should be capitalized. 
-              
-              .code-sample
-                pre.prettyprint.lang-html.
-                  &lt;p class="upper-case" &gt; ... &lt;/p&gt;
-            
-            .col.md-6 
-              p.lower-case.
-                All letters of this text should be lower case. 
-              
-              .code-sample
-                pre.prettyprint.lang-html.
-                  &lt;p class="lower-case" &gt; ... &lt;/p&gt;
-            
-            br
-            
-            .row
-              .col.sm-12    
-                h5 Hiding 
-                
                 table 
                   thead
                     tr 
                       th Class 
+                      th Detail
                       th Remarks
                   tbody 
                     tr
-                      td.nowrap .hide
-                      td Hide an element in any device.
+                      td.nowrap .grid
+                      td.nowrap &nbsp;
+                      td Defines the grid container
                     tr
-                      td.nowrap .hide-only-small
-                      td Hide an element only on small devices only.
+                      td.nowrap .row
+                      td.nowrap &nbsp;
+                      td Defines each row of a grid container
                     tr
-                      td.nowrap .hide-on-medium-and-down
-                      td Hide an element on all devices, except for large ones
+                      td.nowrap .col
+                      td.nowrap &nbsp;
+                      td Defines each column of a grid container
                     tr
-                      td.nowrap .hide-on-medium-and-up
-                      td Hide an element on all devices, except for small ones
-            
+                      td.nowrap .sm-*
+                      td.nowrap (1 ~ 12)
+                      td Defines a column size for small screens. It's used concatenated to <code >.col</code>
+                    tr
+                      td.nowrap .md-*
+                      td.nowrap (1 ~ 12)
+                      td Defines a column size for medium screens. It's used concatenated to <code >.col</code
+                    tr
+                      td.nowrap .lg-*
+                      td.nowrap (1 ~ 12)
+                      td Defines a column size for large screens. It's used concatenated to <code >.col</code
+                    tr
+                      td.nowrap .offset-*
+                      td.nowrap (1 ~ 12)
+                      td Creates an offset of columns. It's used concatenated to <code >.col</code>
+              
+                .grid.sample
+                  - each i in [1,2,3,4,5,6,7,8,9,10,11,12]
+                    - var cn = 'sm-' + i
+                    - var nc = 'sm-' + (12-i)
+                    .row
+                      .col.align-center(class=cn)= i
+                      
+                      if (12 - i > 0)
+                        .col.align-center(class=nc)= (12 - i)
+                  .row
+                    - each i in [1,2,3,4,5,6,7,8,9,10,11,12]
+                      .col.sm-1.align-center= i
+
+              hr 
+
+              #sample-typography
+                h4 Typography
+                        
+                p.align-justify.
+                  All default HTML tags are supported, including but not limited 
+                  to the below few examples.
+
+                .grid
+                  .row
+                    .col.sm-12.md-6
+                      each i in [1,2,3,4,5,6]
+                        #{'h'+i}= 'Header ' + i
+                        
+                    .col.sm-12.md-6
+                      p. 
+                        This is an paragraph. <br >
+                        This is a <b >bold</b> text. <br >
+                        This is an <i >italic</i> text. <br >
+                        This is an <u >underlined</u> text. <br >
+                        This is an <a href="#!">anchor</a> text.
+
                 .code-sample
                   pre.prettyprint.lang-html.
-                    &lt;!-- Hide on all devices --&gt; 
-                    &lt;div class="hide" &gt; ... &lt;/div&gt;
+                    &lt;!-- Head lines --&gt; 
+                    &lt;h1 &gt; ... &lt;/h1&gt; 
+                    &lt;h2 &gt; ... &lt;/h2&gt; 
+                    &lt;h3 &gt; ... &lt;/h3&gt; 
+                    &lt;h4 &gt; ... &lt;/h4&gt; 
+                    &lt;h5 &gt; ... &lt;/h5&gt; 
+                    &lt;h6 &gt; ... &lt;/h6&gt;
+
+                    &lt;!-- Other --&gt;
+                    &lt;p &gt; ... &lt;/p&gt; 
+                    &lt;b &gt; ... &lt;/b&gt; 
+                    &lt;i &gt; ... &lt;/i&gt; 
+                    &lt;u &gt; ... &lt;/u&gt; 
+                    &lt;a href="." &gt; ... &lt;/a&gt; 
+              hr 
+
+              #sample-buttons 
+                h4 Buttons
+
+                p.align-justify.
+                  Buttons are a really basic elements on any web page or app, and it 
+                  comes in a couple of different flavors in <code class="primary">seed-css</code>. In order to use the primary 
+                  just add the class name <code >.btn-primary</code>. If you need use 
+                  anchor (&lt;a /&gt;) as button, include the <code >.btn</code> class 
+                  name on it.
+
+                .buttons.align-center 
+                  
+                    h6.align-center Default
                     
-                    &lt;!-- Hide on small devices --&gt; 
-                    &lt;div class="hide-only-small" &gt; ... &lt;/div&gt;
+                    a.btn(href="#!") Anchor 
+                    button(type="button") Button element 
+                    input(type="button", value="Input button")
                     
-                    &lt;!-- Hide on medium and small devices --&gt; 
-                    &lt;div class="hide-on-medium-and-down" &gt; ... &lt;/div&gt;
+                    br 
                     
-                    &lt;!-- Hide on medium and large devices --&gt; 
-                    &lt;div class="hide-on-medium-and-up" &gt; ... &lt;/div&gt;
-            
-            br
-            
-            .row
-              .col.sm-12
-                h5 Responsive image
-                
-                p. 
-                  By default, all images are considered responsive and will adjust 
-                  accordingly to the window size. In case you, for any sake, need a 
-                  non responsive image, just add the class <code >.no-responsive</code>
-                  on it.
+                    h6.align-center Primary (.btn-primary)
+                    
+                    a.btn.btn-primary(href="#!") Anchor 
+                    button.btn-primary(type="button") Button element 
+                    input.btn-primary(type="button", value="Input button")
+                    
+                    br 
+                    
+                    h6.align-center Colored (.btn-*color*)
+                    
+                    a.btn.btn-red(href="#!") Anchor 
+                    button.btn-red(type="button") Button element 
+                    input.btn-red(type="button", value="Input button")
+                    
+                    br 
+                    
+                    a.btn.btn-orange(href="#!") Anchor 
+                    button.btn-orange(type="button") Button element 
+                    input.btn-orange(type="button", value="Input button")
+                    
+                    br 
+                    
+                    a.btn.btn-green(href="#!") Anchor 
+                    button.btn-green(type="button") Button element 
+                    input.btn-green(type="button", value="Input button")
+                    
+                    br 
+                    
+                    a.btn.btn-purple(href="#!") Anchor 
+                    button.btn-purple(type="button") Button element 
+                    input.btn-purple(type="button", value="Input button")
+                    
+                    br 
+                    
+                    h6.align-center Disabled (.disabled)
+                    
+                    a.btn(href="#!", disabled) Anchor 
+                    button(type="button", disabled) Button element 
+                    input(type="button", value="Input button", disabled)
+                    
+                    br 
+                    
+                    h6.align-center Flat (.flat-btn)
+                    
+                    a.flat-btn(href="#!") Anchor 
+                    button.flat-btn(type="button") Button element 
+                    input.flat-btn(type="button", value="Input button")
+                    
+                    br 
+                    
+                  h6.align-center Medium (.btn-medium)
+                    
+                  .buttons.align-center 
+                    
+                    a.btn.btn-medium(href="#!") Anchor 
+                    button.btn-medium(type="button") Button element 
+                    input.btn-medium(type="button", value="Input button")
+                    
+                    br 
+                    
+                  h6.align-center Small (.btn-small)
+                    
+                  .buttons.align-center 
+                    
+                    a.btn.btn-small(href="#!") Anchor 
+                    button.btn-small(type="button") Button element 
+                    input.btn-small(type="button", value="Input button")
+
+                br
+
+                .code-sample
+                  pre.prettyprint.lang-html.
+                    &lt;!-- .btn class makes an anchor looks like a button --&gt; 
+                    &lt;a class="btn" href="..." &gt; ... &lt;/a&gt; 
+                    
+                    &lt;!-- default buttons and input[type="button"] --&gt;
+                    &lt;button type="button" &gt; ... &lt;/button&gt; 
+                    &lt;input type="button" value="..." /&gt;
+                    
+                    &lt;!-- .btn-primary makes buttons colored --&gt;
+                    &lt;a class="btn btn-primary" href="..." &gt; ... &lt;/a&gt; 
+                    &lt;a class="btn btn-red" href="..." &gt; ... &lt;/a&gt; 
+                    &lt;a class="btn btn-green" href="..." &gt; ... &lt;/a&gt; 
+                    
+                    &lt;!-- .btn-primary makes buttons on different sizes --&gt;
+                    &lt;a class="btn btn-medium" href="..." &gt; ... &lt;/a&gt; 
+                    &lt;a class="btn btn-small" href="..." &gt; ... &lt;/a&gt; 
+                    
+                    &lt;!-- .btn-primary makes disabled buttons --&gt;
+                    &lt;a class="btn disabled" href="..." &gt; ... &lt;/a&gt; 
+                    &lt;button disabled &gt; ... &lt;/button&gt; 
+                        
+                br 
                 
                 table 
                   thead
@@ -1045,135 +401,665 @@ html(lang="en")
                       th Remarks
                   tbody 
                     tr
-                      td.nowrap .no-responsive
+                      td.nowrap .btn
                       td.nowrap &nbsp;
-                      td Makes images non responsive
+                      td Makes anchors looks like buttons
                     tr
-                      td.nowrap .circle
+                      td.nowrap .btn-primary
                       td.nowrap &nbsp;
-                      td Makes a small circle image
+                      td Defines a 'primary' (blue) colored button
                     tr
-                      td.nowrap .thumb
+                      td.nowrap .btn-(*color*)
                       td.nowrap &nbsp;
-                      td Makes a small square image
+                      td Defines a colored button. Colors can be: <code>red</code>, <code>orange</code>, <code>green</code> or <code>purple</code>
+                    tr
+                      td.nowrap .btn-(*size*)
+                      td.nowrap &nbsp;
+                      td Defines a sized button. Sizes can be: <code>small</code> or <code>medium</code>. Default is <code>big</code>
+                    tr
+                      td.nowrap .disabled
+                      td.nowrap &nbsp;
+                      td Defines disabled buttons. Simply setting the <code>disabled</code> property will also make button looks like disabled
+                    tr
+                      td.nowrap .flat-btn
+                      td.nowrap &nbsp;
+                      td Defines <b>flat</b> buttons, which means no borders or background colors. You are still able to use <code>.btn-(*color*)</code> and or <code>.btn(*size*)</code> on this button type
+                
+
+              hr
+
+              #sample-form 
+                h4 Forms
+
+                p.align-justify.
+                  Probably all websites and apps will contain (at least) one form, so, 
+                  that's why <code class="primary">seed-css</code> has a really simple, easy to use and customizable 
+                  form field stylesheet. Have a look on the examples below:
+                
                 br 
 
-            .row 
-              .col.md-6
-                p.align-center 
-                  img(src="http://placehold.it/800x600", alt="Sample of a responsive image")
-                
+                .grid
+                  .row
+                    .col.md-6
+                      .field
+                        label(for="") This is an input text 
+                        input(type="text")
+
+                    .col.md-6
+                      .field
+                        label(for="") This is an input text with additional info 
+                        input(type="text")
+                        span.info This is an additional piece of information.
+
+                  .row
+                    .col.md-6
+                      .field.has-feedback
+                        label(for="") This is an input text with error message 
+                        input(type="text").error
+                        span.error This is an error message!
+
+                    .col.md-6
+                      .field.has-feedback
+                        label(for="") This is an input text with success message 
+                        input(type="text").success
+                        span.success This is a success message!
+
+                  .row
+                    .col.md-6
+                      .field
+                        label(for="") This is a simple input password 
+                        input(type="password")
+
+                  .row
+                    .col.md-6
+                      .field
+                        label(for="") This is a simple input email 
+                        input(type="email", placeholder="name@domain.tld")
+
+                    .col.md-6
+                      .field
+                        label(for="") This is a simple input URL 
+                        input(type="url", placeholder="http://domain.tld")
+                    
+                  .row
+                    .col.md-6
+                      .field.seed-select
+                        label(for="") This is a select/ dropdown 
+                        select
+                          option(value="A") Option A
+                          option(value="B") Option B
+                          option(value="C") Option C
+
+                    .col.md-6
+                      .field.seed-select.has-feedback
+                        label(for="") This is a select/ dropdown with error message 
+                        select.error
+                          option(value="A") Option A
+                          option(value="B") Option B
+                          option(value="C") Option C
+                        span.error This is an error message!
+
+                  .row
+                    .col.md-6
+                      .field
+                        input(type="radio", id="radio-sample-1", name="radio-sample[]")
+                        label(for="radio-sample-1") This is a radio button
+                      .field
+                        input(type="radio", id="radio-sample-2", name="radio-sample[]")
+                        label(for="radio-sample-2") This is a radio button
+                      .field
+                        input(type="radio", id="radio-sample-3", name="radio-sample[]")
+                        label(for="radio-sample-3") This is a radio button
+                      .field.has-feedback
+                        input(type="radio", id="radio-sample-4", name="radio-sample[]").error
+                        label(for="radio-sample-4") This is a radio button with error
+
+                    .col.md-6
+                      .field
+                        input(type="checkbox", id="check-sample-1", name="check-sample[]")
+                        label(for="check-sample-1") This is a checkbox
+                      .field
+                        input(type="checkbox", id="check-sample-2", name="check-sample[]")
+                        label(for="check-sample-2") This is a checkbox
+                      .field
+                        input(type="checkbox", id="check-sample-3", name="check-sample[]")
+                        label(for="check-sample-3") This is a checkbox
+                      .field.has-feedback 
+                        input(type="checkbox", id="check-sample-4", name="check-sample[]").error
+                        label(for="check-sample-4") This is a checkbox with error
+                  .row
+                    .col.sm-12
+                      .field
+                        label(for="") This is a simple textarea 
+                        textarea
+                        
+    
                 .code-sample
                   pre.prettyprint.lang-html.
-                    &lt;img src="..." alt="..." &gt;
+                    &lt;!-- Example of an input text --&gt; 
+                    &lt;div class="field" &gt; 
+                      &lt;label for="..." &gt; ... &lt;/label&gt;
+                      &lt;input type="text" name="..." &gt;
+                    &lt;/div&gt; 
 
-              .col.md-6
+                    &lt;!-- Example of an input text with feedback (success or error) --&gt; 
+                    &lt;div class="field has-feedback" &gt; 
+                      &lt;label for="..." &gt; ... &lt;/label&gt;
+                      &lt;input type="text" name="..." class="error" &gt;
+                      &lt;span class="error" &gt; ... &lt;/span&gt;
+                    &lt;/div&gt;    
+                        
+                    &lt;!-- Example of an input password --&gt; 
+                    &lt;div class="field" &gt; 
+                      &lt;label for="..." &gt; ... &lt;/label&gt;
+                      &lt;input type="password" name="..." &gt;
+                    &lt;/div&gt;         
+                        
+                    &lt;!-- Example of an input email --&gt; 
+                    &lt;div class="field" &gt; 
+                      &lt;label for="..." &gt; ... &lt;/label&gt;
+                      &lt;input type="email" name="..." placehoder="..." &gt;
+                    &lt;/div&gt;         
+                        
+                    &lt;!-- Example of a dropdown --&gt; 
+                    &lt;div class="field seed-select" &gt; 
+                      &lt;label for="..." &gt; ... &lt;/label&gt;
+                      &lt;select name="..." &gt;
+                        &lt;option value="..." &gt; ... &lt;/option&gt;
+                        &lt;option value="..." &gt; ... &lt;/option&gt;
+                        &lt;option value="..." &gt; ... &lt;/option&gt;
+                      &lt;/select&gt;
+                    &lt;/div&gt;       
+                    
+                    &lt;!-- Example of an input radio --&gt; 
+                    &lt;div class="field" &gt; 
+                      &lt;input type="radio" name="..." &gt;
+                      &lt;label for="..." &gt;
+                        ...
+                      &lt;/label&gt;
+                    &lt;/div&gt;     
+                    
+                    &lt;!-- Example of a checkbox --&gt; 
+                    &lt;div class="field" &gt; 
+                      &lt;input type="checkbox" name="..." &gt;
+                      &lt;label for="..." &gt; 
+                        ... 
+                      &lt;/label&gt;
+                    &lt;/div&gt;           
+                        
+                    &lt;!-- Example of a textarea --&gt; 
+                    &lt;div class="field" &gt; 
+                      &lt;label for="..." &gt; ... &lt;/label&gt;
+                      &lt;textarea name="..." &gt; ... &lt;/textarea&gt;
+                    &lt;/div&gt;  
+                
+              hr 
 
-                .grid 
-                  .row      
+              #sample-lists 
+                h4 Lists
+
+                p.align-justify. 
+                  You can make your lists using <code >DL</code>, <code >UL</code> or <code >OL</code>.
+                  No special classes are necessary. The style will be applied to the natural element.
+                
+                .grid
+                  .row
                     .col.sm-12.md-6
-                      h5.align-center Circle image 
-                      
-                      p.align-center
-                        img.circle(src="http://placehold.it/100x100", alt="Circle image sample")
+                      p Ordered
+                    
+                      ol
+                        li First item
+                        li Second item 
+                          ol
+                            li Nested first 
+                            li Nested second ...
+                        li Third item
                     
                     .col.sm-12.md-6
-                      h5.align-center Thumbnail
+                      p Unordered
+                    
+                      ul
+                        li First item
+                        li Second item 
+                          ul
+                            li Nested first 
+                            li Nested second ...
+                        li Third item
+                
+                        
+                .code-sample
+                  pre.prettyprint.lang-html.
+                    &lt;!-- replace OL by UL or DL for different list types --&gt; 
+                    &lt;ol &gt; 
+                      &lt;li &gt; ... &lt;/li&gt;
+                      &lt;li &gt; ... &lt;/li&gt;
+                      &lt;li &gt; ... &lt;/li&gt;
+                    &lt;/ol&gt;
+
+              hr 
+
+              #sample-tables  
+                h4 Tables 
+
+                p.align-justify.
+                  Tables are supposed to be used for display data. 
+                  
+                p.align-justify. 
+                  In that matter, <code class="primary">seed-css</code> has very special classes to allow you show 
+                  your data in a very clean and readable way. Basically, just using a 
+                  default markup for data you'll get a styled table, but, you also can 
+                  make use of special classes to make your tables even more readable.
+
+                p.camel-case
+                  b default
+
+                - each className in ['', 'stripped', 'hovered', 'bordered']
+                  if className !== ''
+                    p.camel-case
+                      b= className
+                    
+                  table(class=className) 
+                    thead
+                      tr
+                        th Name 
+                        th Email
+                        th Phone
+                    tbody
+                      tr 
+                        td John Wayne
+                        td john@wayne.com 
+                        td 123-4567-8900
+                      tr 
+                        td John Wayne
+                        td john@wayne.com 
+                        td 123-4567-8900
+                      tr 
+                        td John Wayne
+                        td john@wayne.com 
+                        td 123-4567-8900
+                    tfoot
+                      tr
+                        td
+                        td
+                        td
+                        
+                  .code-sample
+                    pre.prettyprint.lang-html.
+                      &lt;table class="#{className}" &gt; 
+                        &lt;tbody &gt;
+                          &lt;tr &gt;
+                            &lt;td &gt; ... &lt;/td&gt;
+                            &lt;td &gt; ... &lt;/td&gt;
+                            &lt;td &gt; ... &lt;/td&gt;
+                          &lt;/tr&gt;
+                        &lt;/tbody&gt;
+                      &lt;/table&gt; 
+                  
+                  br
+
+
+              hr 
+
+              #sample-media-queries
+                h4 Media queries
+
+                p.align-justify. 
+                  Media queries allows you to make an even more accurated design.
+
+                table
+                  thead
+                    tr
+                      th Query 
+                      th Remarks
+                  tbody
+                    tr 
+                      td @media only screen and (min-width: 0px) {}
+                      td Mobile first queries
+                    tr 
+                      td @media only screen and (min-width: 320px) {}
+                      td Larger than mobile
+                    tr 
+                      td @media only screen and (min-width: 550px) {}
+                      td Larger than tablet
+                    tr 
+                      td @media only screen and (min-width: 960px) {}
+                      td Larger than desktop/laptop pc
                       
-                      p.align-center
-                        img.thumb(src="http://placehold.it/100x100", alt="Thumbnail image sample")
-          
-                  .row 
+                .code-sample
+                  pre.prettyprint.lang-css.
+                    // Mobile first queries 
+                    @media only screen and (min-width: 0px) {
+                      ...
+                    }
+                    
+                    // Larger than mobile
+                    @media only screen and (min-width: 320px) {
+                      ...
+                    }
+                    
+                    // Larger than tablet 
+                    @media only screen and (min-width: 550px) {
+                      ...
+                    }
+                    
+                    // Larger than desktop/laptop pc
+                    @media only screen and (min-width: 960px) {
+                      ...
+                    }
+
+              hr 
+
+              #sample-utilities
+                h4 Utilities
+
+                p. 
+                  Utilities are classes that can help you to easily show up your data 
+                  or content in a beatiful way.<br >It can be used combined with other 
+                  available classes.
+
+                .grid
+                  .row
                     .col.sm-12
+                      h5 Text alignment
+                  
+                  .row
+                    .col.md-6
+                      p.align-left This is left aligned
+                      
                       .code-sample
                         pre.prettyprint.lang-html.
-                          &lt;!-- makes a circle image --&gt; 
-                          &lt;img class="circle" src="..." alt="..." &gt;
+                          &lt;p class="align-left" &gt; ... &lt;/p&gt;
+                      
+                      br
+                      
+                      p.align-center This is center aligned 
+                      
+                      .code-sample
+                        pre.prettyprint.lang-html.
+                          &lt;p class="align-center" &gt; ... &lt;/p&gt;
+                      
+                      br
+                  
+                    .col.md-6
+                      
+                      p.align-right This is right aligned 
+                      
+                      .code-sample
+                        pre.prettyprint.lang-html.
+                          &lt;p class="align-right" &gt; ... &lt;/p&gt;
+                      
+                      br
+                      
+                      p.align-justify.
+                        This is justified. This is justified. This is justified. This is justified. 
+                        This is justified. This is justified. This is justified. This is justified. 
+                      
+                      .code-sample
+                        pre.prettyprint.lang-html.
+                          &lt;p class="align-justify" &gt; ... &lt;/p&gt;
+                      
+                  .row 
+                    .col 
+
+                      table 
+                        thead
+                          tr 
+                            th Class 
+                            th Remarks
+                        tbody 
+                          tr
+                            td.nowrap .align-left
+                            td Aligns on left
+                          tr
+                            td.nowrap .align-right
+                            td Aligns on right
+                          tr
+                            td.nowrap .align-center
+                            td Aligns on center
+                          tr
+                            td.nowrap .align-justify
+                            td Aligns justified
+                  
+                  .row
+                    .col.sm-12    
+                      h5 Text transform 
+                  
+                  .row
+                    .col.sm-12   
+                      
+                      .code-sample.bg-white
+                        p.nowrap.
+                          This text should not break when the screen width is smaller then 
+                          the text length. 
+                      
+                      .code-sample
+                        pre.prettyprint.lang-html.
+                          &lt;p class="nowrap" &gt; ... &lt;/p&gt;
+                      
+                      br
+                  
+                  .row
+                    .col.md-6   
+                      p.camel-case.
+                        this text should be camel case. 
+                      
+                      .code-sample
+                        pre.prettyprint.lang-html.
+                          &lt;p class="camel-case" &gt; ... &lt;/p&gt;
+                      
+                    .col.md-6
+                      p.uc-first.
+                        only the first character of this text should be capitalized. 
+                      
+                      .code-sample
+                        pre.prettyprint.lang-html.
+                          &lt;p class="uc-first" &gt; ... &lt;/p&gt;
+                      
+                  .row
+                    .col.md-6 
+                      p.upper-case.
+                        All letters of this text should be capitalized. 
+                      
+                      .code-sample
+                        pre.prettyprint.lang-html.
+                          &lt;p class="upper-case" &gt; ... &lt;/p&gt;
+                    
+                    .col.md-6 
+                      p.lower-case.
+                        All letters of this text should be lower case. 
+                      
+                      .code-sample
+                        pre.prettyprint.lang-html.
+                          &lt;p class="lower-case" &gt; ... &lt;/p&gt;
+                    
+                    .row
+                      .col 
+                                            
+                        table 
+                          thead
+                            tr 
+                              th Class 
+                              th Remarks
+                          tbody 
+                            tr
+                              td.nowrap .nowrap
+                              td Forces the HTML to ignore white spaces when wrapping lines.
+                            tr
+                              td.nowrap .camel-case
+                              td Capitalize the first character of any word
+                            tr
+                              td.nowrap .uc-first
+                              td Capitalize the first character only from the first word
+                            tr
+                              td.nowrap .upper-case
+                              td Capitalize all character
+                            tr
+                              td.nowrap .lower-case
+                              td Make all letters in lower case
+
+                    br
+                    
+                    .row
+                      .col.sm-12    
+                        h5 Hiding 
+
+                        p.align-justify. 
+                          Show and hide elements from your pages can be an usefull ability 
+                          to improve the user experience of your apps or websites.
+                    
+                        .code-sample
+                          pre.prettyprint.lang-html.
+                            &lt;!-- Hide on all devices --&gt; 
+                            &lt;div class="hide" &gt; ... &lt;/div&gt;
+                            
+                            &lt;!-- Hide on small devices --&gt; 
+                            &lt;div class="hide-only-small" &gt; ... &lt;/div&gt;
+                            
+                            &lt;!-- Hide on medium and small devices --&gt; 
+                            &lt;div class="hide-on-medium-and-down" &gt; ... &lt;/div&gt;
+                            
+                            &lt;!-- Hide on medium and large devices --&gt; 
+                            &lt;div class="hide-on-medium-and-up" &gt; ... &lt;/div&gt;
+
+                      .row 
+                        .col 
+
+                          table 
+                            thead
+                              tr 
+                                th Class 
+                                th Remarks
+                            tbody 
+                              tr
+                                td.nowrap .hide
+                                td Hide an element in any device.
+                              tr
+                                td.nowrap .hide-only-small
+                                td Hide an element only on small devices only.
+                              tr
+                                td.nowrap .hide-on-medium-and-down
+                                td Hide an element on all devices, except for large ones
+                              tr
+                                td.nowrap .hide-on-medium-and-up
+                                td Hide an element on all devices, except for small ones
+              
+              hr
+
+              #sample-responsive-images
+                h4 Responsive images
+
+                p.align-justify. 
+                  By default, all images are considered responsive and will adjust 
+                  accordingly to the window size. In case you, for any sake, need a 
+                  non responsive image, just add the class <code >.no-responsive</code>
+                  on it.
+                
+                .grid 
+                  .row 
+                    .col.md-6
+                      h5.align-center Responsive 
+
+                      p.align-center 
+                        img(src="http://placehold.it/800x600", alt="Sample of a responsive image")
+                      
+                      .code-sample
+                        pre.prettyprint.lang-html.
+                          &lt;img src="..." alt="..." &gt;
+
+
+                    .col.md-6
+                      h5.align-center Circle and Thumbnail 
+
+                      .grid 
+                        .row      
+                          .col.sm-12.md-6
+                            p.align-center
+                              img.circle(src="http://placehold.it/100x100", alt="Circle image sample")
                           
-                          &lt;!-- makes a square small image --&gt; 
-                          &lt;img class="thumb" src="..." alt="..." &gt;
-        
-        hr
-        
-    section#sample-icons
-      .container
-        h3 Icons
-        
-        p.
-          We're using <b>Ionic Icon Fonts</b> as our set of icons. It's free and 
-          can be redistributed as well as <span class="primary">Seed CSS</span>.
-          
-        p. 
-          Just to keep the flexibility, the icon set is not included on the 
-          <span class="primary">Seed CSS</span> stylesheet files. You should 
-          import it from an external source. If you would like to keep up to date 
-          to the latest versions from Ion icons, we strongly recommend you to get   
-          it from Ionic CDN.
-        
-        p.
-          In order to use those icons, add the following line to the HEAD tag of 
-          any page you're using <span class="primary">Seed CSS</span>:
-          
-        .code-sample
-          pre.prettyprint.lang-html.
-            &lt;!-- Without the protocol (http|https) means it will take in the same protocol as your page is --&gt;
-            &lt;link rel="stylesheet" type="text/css" 
-                href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"&gt;
-        
-        br
-        
-        .grid
-          .row
-            .col.sm-6.md-4.align-center
-              i.icon.ion-ionic(title=".ion-ionic")
-            .col.sm-6.md-4.align-center
-              i.icon.ion-chevron-right(title=".ion-chevron-right")
-            .col.sm-6.md-4.align-center
-              i.icon.ion-paper-airplane(title=".ion-paper-airplane")
-            .col.sm-6.md-4.align-center
-              i.icon.ion-connection-bars(title=".ion-connection-bars")
-            .col.sm-6.md-4.align-center
-              i.icon.ion-card(title=".ion-card")
-            .col.sm-6.md-4.align-center
-              br
-              span &hellip; and many other. 
-              a(href="http://ionicons.com/", target="_blank") Check all &gt;
-          .row
-            .col.sm-12.align-center
-              span or just go to: 
-              a(href="http://ionicons.com/", target="_blank") http://ionicons.com/
-        
-        hr
-        
-    section
-      span#showcase
-    
-      .container
-        h3 Showcase
-        
-        p 
-          | Have you build a website or app using <span class="primary">Seed CSS</span>? 
-          | Don't be shy and let me know. 
-          br
-          | Your creation can be included here, in the showcase. :)
-        
-        hr
-        
-    section
-      span#license
-    
-      .container
-        h3 License
-        
-        p.
-          This small and humble css boilerplate is licensed under MIT. 
-          Find the license itself below:
-        
-        .copyright-block
-        
+                          .col.sm-12.md-6
+                            p.align-center
+                              img.thumb(src="http://placehold.it/100x100", alt="Thumbnail image sample")
+                
+                      .row 
+                        .col.sm-12
+                          .code-sample
+                            pre.prettyprint.lang-html.
+                              &lt;!-- makes a circle image --&gt; 
+                              &lt;img class="circle" ... &gt;
+                              
+                              &lt;!-- makes a square small image --&gt; 
+                              &lt;img class="thumb" ... &gt;
+              hr
+
+              #sample-icons 
+                h4 Icons 
+
+                p.align-justify.
+                  We're using <b>Ionic Icon Fonts</b> as our set of icons. It's free and 
+                  can be redistributed as well as <code class="primary">seed-css</code>.
+                  
+                p.align-justify. 
+                  Just to keep the flexibility, the icon set is not included on the 
+                  <code class="primary">seed-css</code> stylesheet files. You should 
+                  import it from an external source. If you would like to keep up to date 
+                  to the latest versions from Ion icons, we strongly recommend you to get   
+                  it from Ionic CDN.
+                
+                p.align-justify.
+                  In order to use those icons, add the following line to the HEAD tag of 
+                  any page you're using <code class="primary">seed-css</code>:
+
+                p.align-center
+                  a(href="http://ionicons.com/", target="_blank").btn.btn-primary Go to IonIcons
+
+
+            .col.lg-3.hide-on-medium-and-down.relpos
+              //- menu
+
+              nav#samples-nav 
+                ul.list
+                  li.item 
+                    a(href="#sample-container").spy Container
+                  li.item 
+                    a(href="#sample-grid").spy Grid
+                  li.item 
+                    a(href="#sample-typography").spy Typography
+                  li.item 
+                    a(href="#sample-buttons").spy Buttons
+                  li.item 
+                    a(href="#sample-form").spy Form
+                  li.item 
+                    a(href="#sample-lists").spy Lists
+                  li.item 
+                    a(href="#sample-tables").spy Tables
+                  li.item 
+                    a(href="#sample-media-queries").spy Media queries
+                  li.item 
+                    a(href="#sample-utilities").spy Utilities
+                  li.item 
+                    a(href="#sample-responsive-images").spy Responsive images
+                  li.item 
+                    a(href="#sample-icons").spy Icons
+
+    //- section#show-case
+    //-   .container
+    //-     h2 Showcase
+
+    //-     p.align-justify. 
+    //-       Have you build a website or app using <code class="primary">seed-css</code>? 
+    //-       Don't be shy and let me know.
+
+    //-     p Your creation can be included here, in the showcase. :)
+      
+    section#license
+      .container 
+        h2 License 
+
+        code
+
           p Copyright &copy; 2016, Rogerio Taques
 
-          p. 
+          p.align-justify. 
             Permission is hereby granted, free of charge, to any person obtaining 
             a copy of this software and associated documentation files 
             (the "Software"), to deal in the Software without restriction, 
@@ -1182,11 +1068,11 @@ html(lang="en")
             and to permit persons to whom the Software is furnished to do so, 
             subject to the following conditions:
 
-          p. 
+          p.align-justify. 
             The above copyright notice and this permission notice shall be included 
             in all copies or substantial portions of the Software.
 
-          p. 
+          p.align-justify. 
             THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
             EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF 
             MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
@@ -1194,8 +1080,9 @@ html(lang="en")
             CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, 
             TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
             SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-        
-    footer 
+
+
+    footer
       p.copyright &copy; 2016, Rogerio Taques
       
       .grid
@@ -1222,8 +1109,9 @@ html(lang="en")
                   option(value="Medium") Prefered ¥1,000 JPY
                   option(value="Big") Generous ¥1,999 JPY
               
-              button(type="submit", class="btn") Make a donation
+              button(type="submit", class="btn") Donate
               img(alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1")
+        
         
     script(src="//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js")
     script(src="//code.jquery.com/jquery-2.2.3.min.js", integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=", crossorigin="anonymous")
