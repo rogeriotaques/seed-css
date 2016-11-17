@@ -28,7 +28,6 @@
       // available even on the middle of page.
       if (curPos >= iniPos && $('#samples-nav.stacked').length === 0) {
         if ( curPos + navbar.height() >= limitPos ) {
-          console.log('bigger', curPos + navbar.height(), limitPos);
           curPos -= (curPos + navbar.height() - limitPos );
         }
 
