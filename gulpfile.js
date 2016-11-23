@@ -89,13 +89,15 @@ gulp.task('build:sass', function () {
 });
 
 gulp.task('build:jade', function () {
+  var pkg = require('./package.json');
+
   return gulp
     .src(config.path.source + 'jade/**/*.jade')
     .pipe(jade({pretty: true}).on('error', function (err) {
       console.log(err);
       this.emit('end');
     }))
-    .pipe(replace(/\{\%version\%\}/g, getVersion()))
+    .pipe(replace(/\{\%version\%\}/g, 'v' + pkg.version))
     .pipe(gulp.dest(config.path.build));
 });
 

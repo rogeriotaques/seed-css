@@ -1,6 +1,6 @@
 ;(function ($) {
 
-  var navbar, iniPos, limitPos, curPos, navWidth, edge = 20;
+  var navbar, iniPos, limitPos, curPos, navWidth, gutter = 20;
 
   $(document)
 
@@ -8,8 +8,8 @@
 
       navbar = $('#samples-nav');
       iniPos = navbar.offset().top;
-      limitPos = $('#license').offset().top - edge;
-      curPos = $(this).scrollTop() + edge;
+      limitPos = $('#license').offset().top;
+      curPos = $(this).scrollTop();
       navWidth = navbar.width();
 
       // handler for smooth scrolling
@@ -28,7 +28,6 @@
       // available even on the middle of page.
       if (curPos >= iniPos && $('#samples-nav.stacked').length === 0) {
         if ( curPos + navbar.height() >= limitPos ) {
-          console.log('bigger', curPos + navbar.height(), limitPos);
           curPos -= (curPos + navbar.height() - limitPos );
         }
 
@@ -43,7 +42,7 @@
     })
 
     .on('scroll resize', function () {
-      curPos = $(this).scrollTop() + edge;
+      curPos = $(this).scrollTop() + gutter;
 
       // handler for navbar stacked
       if (curPos >= iniPos && (curPos + navbar.height()) <= limitPos) {
@@ -67,9 +66,9 @@
         });
 
       // get version shield from github/shilds.io
-      $.get('https://img.shields.io/github/release/rogeriotaques/seed-css.json', function (data) {
-        $('#release').html( data.value );
-      });
+      // $.get('https://img.shields.io/github/release/rogeriotaques/seed-css.json', function (data) {
+      //   $('#release').html( data.value );
+      // });
 
     });
 

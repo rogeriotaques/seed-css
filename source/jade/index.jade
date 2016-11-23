@@ -1,3 +1,5 @@
+doctype html
+
 // Copyright (c) 2016, Rogerio Taques
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a 
@@ -17,14 +19,13 @@
 // WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR 
 // IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-doctype html
 
 html(lang="en")
   head
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
 
-    title Seed CSS
+    title Seed CSS {%version%}
 
     meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
     meta(name="description", content="A light-weight, mobile first and responsive CSS boilerplate.")
@@ -35,8 +36,8 @@ html(lang="en")
 
     link(rel="stylesheet", type="text/css", href="//fonts.googleapis.com/css?family=Raleway:400,300,600")
     link(rel="stylesheet", type="text/css", href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css")
-    link(rel="stylesheet", type="text/css", href="assets/css/seed.css?v={%version%}")
-    link(rel="stylesheet", type="text/css", href="assets/css/style.css?v={%version%}")
+    link(rel="stylesheet", type="text/css", href="assets/css/seed.css")
+    link(rel="stylesheet", type="text/css", href="assets/css/style.css")
   body
 
     header
@@ -47,7 +48,7 @@ html(lang="en")
         .cta
           a.btn.btn-primary(href="https://github.com/rogeriotaques/seed-css/archive/develop.zip") 
             span DOWNLOAD 
-            span#release v.0.0.0
+            span#release {%version%}
 
         p (This page design is proudly based on <code class="primary">seed-css</code>)
 
@@ -960,7 +961,7 @@ html(lang="en")
                       h5.align-center Responsive 
 
                       p.align-center 
-                        img(src="http://placehold.it/800x600", alt="Sample of a responsive image")
+                        img(src="//placehold.it/800x600", alt="Sample of a responsive image")
                       
                       .code-sample
                         pre.prettyprint.lang-html.
@@ -974,11 +975,11 @@ html(lang="en")
                         .row      
                           .col.sm-12.md-6
                             p.align-center
-                              img.circle(src="http://placehold.it/100x100", alt="Circle image sample")
+                              img.circle(src="//placehold.it/100x100", alt="Circle image sample")
                           
                           .col.sm-12.md-6
                             p.align-center
-                              img.thumb(src="http://placehold.it/100x100", alt="Thumbnail image sample")
+                              img.thumb(src="//placehold.it/100x100", alt="Thumbnail image sample")
                 
                       .row 
                         .col.sm-12
@@ -1115,4 +1116,4 @@ html(lang="en")
         
     script(src="//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js")
     script(src="//code.jquery.com/jquery-2.2.3.min.js", integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=", crossorigin="anonymous")
-    script(src="assets/js/bundle.js?v={%version%}")
+    script(src="assets/js/bundle.js")
