@@ -164,7 +164,7 @@ footer form [type="submit"] {
 
 #samples-nav {
   border: thin solid #ccc;
-  margin-left: 20px;
+  margin: 20px 0 20px 20px;
   background: #fff;
 }
 
