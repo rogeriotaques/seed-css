@@ -182,7 +182,7 @@ footer {
 
 #samples-nav {
   border: thin solid $grey;
-  margin-left: $margin * 2; 
+  margin: ($margin * 2) 0 ($margin * 2) ($margin * 2); 
   background: #fff;
 
   &.stacked {
