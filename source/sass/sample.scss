@@ -77,7 +77,9 @@ header {
 
 main {
   position: relative;
+  background-color: white;
   z-index: 3;
+  margin-bottom: -10px;
 
   .highlight {
     i {
@@ -88,7 +90,10 @@ main {
 }
 
 section {
+  position: relative;
   padding: 20px 0;
+  z-index: 3;
+  background-color: white;
 
   &:nth-child(odd) {
     background-color: #f9f9f9;
@@ -96,10 +101,12 @@ section {
 }
 
 footer {
+  position: relative;
   padding: ($padding * 2) 0;
   text-align: center;
   background-color: $darken-grey;
   color: white;
+  z-index: 3;
 
   & > p {
     & > a,
