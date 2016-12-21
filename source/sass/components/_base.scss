@@ -11,19 +11,14 @@ html {
 body {
   @include rem(font-size, 15px);
   @include rem(line-height, 24px);
+
   font: {
-    weight: 400;
-    family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    weight: 300; // light
+    family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
+
   color: #222;
 
-}
-
-p {
-  margin: {
-    top: $margin;
-    bottom: $margin * 2;
-  }
 }
 
 hr {
