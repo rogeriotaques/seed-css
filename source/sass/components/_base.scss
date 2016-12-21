@@ -50,15 +50,16 @@ a:not(.btn):not(.flat-btn):visited {
 }
 
 .container {
-  width: 95%;
+  width: $small-container;
   margin: $margin auto;
-  max-width: $small;
 
   @media #{$medium-and-up} {
+    width: $medium-container;
     max-width: $medium;
   }
 
   @media #{$large-and-up} {
+    width: $large-container;
     max-width: $large;
   }
 }
