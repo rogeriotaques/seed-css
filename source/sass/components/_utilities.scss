@@ -46,6 +46,9 @@ img {
 // text transform
 .nowrap {
   white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .upper-case {
