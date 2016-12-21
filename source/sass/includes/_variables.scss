@@ -1,12 +1,15 @@
 // screen sizes
 $small: 320px;
-$medium: 550px;
-$large: 960px;
+$small-container: 95%;
+$medium: 600px;
+$medium-container: 85%;
+$large: 990px;
+$large-container: 75%;
 
 // media queries
-$small-and-up: 'only screen and (min-width: #{$small + 5})';
-$medium-and-up: 'only screen and (min-width: #{$medium + 5})';
-$large-and-up: 'only screen and (min-width: #{$large + 5})';
+$small-and-up: 'only screen and (min-width: 0)';
+$medium-and-up: 'only screen and (min-width: #{$medium})';
+$large-and-up: 'only screen and (min-width: #{$large})';
 
 // default variables
 $height: 45px;
