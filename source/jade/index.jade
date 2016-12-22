@@ -136,7 +136,7 @@ html(lang="en")
 
         .grid 
           .row 
-            .col.md-12.lg-9
+            .col.md-8.lg-9
               //- content 
 
               h2 Examples
@@ -166,17 +166,19 @@ html(lang="en")
                   which means you can define the number of columns according to the screen size and it will 
                   adapts its width to best fit your content.
 
+                .grid.sample
+                  .row
+                    - each i in [1,2,3,4,5,6,7,8,9,10,11,12]
+                      .col.sm-1.align-center= i
+
                 p.align-justify. 
-                  Offsets are also available. To apply offsets, just add the sufix 
-                  <code >-offset</code> to your classname.
+                  Offsets are also available. To apply offsets, just use the class  
+                  <code >*-offset-*</code> to your classname.
         
 
                 .grid.sample
                   .row
-                    .col.md-6.lg-3.align-center .md-6 .lg-3
-                    .col.md-6.lg-3.align-center .md-6 .lg-3
-                    .col.md-6.lg-3.align-center .md-6 .lg-3
-                    .col.md-6.lg-3.align-center .md-6 .lg-3
+                    .col.sm-6.sm-offset-6.md-6.md-offset-6.lg-6.lg-offset-6.align-center 1
                 
                 .code-sample
                   pre.prettyprint.lang-html.
@@ -216,28 +218,16 @@ html(lang="en")
                     tr
                       td.nowrap .md-*
                       td.nowrap (1 ~ 12)
-                      td Defines a column size for medium screens. It's used concatenated to <code >.col</code
+                      td Defines a column size for medium screens. It's used concatenated to <code >.col</code>
                     tr
                       td.nowrap .lg-*
                       td.nowrap (1 ~ 12)
-                      td Defines a column size for large screens. It's used concatenated to <code >.col</code
+                      td Defines a column size for large screens. It's used concatenated to <code >.col</code>
                     tr
-                      td.nowrap .offset-*
-                      td.nowrap (1 ~ 12)
-                      td Creates an offset of columns. It's used concatenated to <code >.col</code>
+                      td.nowrap *-offset-*
+                      td.nowrap (sm, md and lg) and (1 ~ 12)
+                      td Creates an offset of columns. It's used concatenated to <code >.col</code> and its screen size. E.g: <code>.md-offset-2</code>.
               
-                .grid.sample
-                  - each i in [1,2,3,4,5,6,7,8,9,10,11,12]
-                    - var cn = 'sm-' + i
-                    - var nc = 'sm-' + (12-i)
-                    .row
-                      .col.align-center(class=cn)= i
-                      
-                      if (12 - i > 0)
-                        .col.align-center(class=nc)= (12 - i)
-                  .row
-                    - each i in [1,2,3,4,5,6,7,8,9,10,11,12]
-                      .col.sm-1.align-center= i
 
               hr 
 
@@ -287,6 +277,7 @@ html(lang="en")
                     &lt;i &gt; ... &lt;/i&gt; 
                     &lt;u &gt; ... &lt;/u&gt; 
                     &lt;a href="." &gt; ... &lt;/a&gt; 
+
               hr 
 
               #sample-buttons 
@@ -714,7 +705,53 @@ html(lang="en")
                 h4 Media queries
 
                 p.align-justify. 
-                  Media queries allows you to make an even more accurated design.
+                  Media queries allows us to make an even more accurated design. In <code class="primary">seed-css</code> 
+                  they are made to represent the following screen sizes:
+
+                table 
+                  thead
+                    tr 
+                      th &nbsp; 
+                      th Screen width
+                      th Prefix
+                      th Columns
+                      th Container
+                  tbody 
+                    tr
+                      td.nowrap Mobiles
+                      td.nowrap 
+                        strong &lt; 600px
+                      td.nowrap 
+                        strong .sm
+                      td 
+                        strong 12
+                      td 
+                        strong 90%
+                    tr
+                      td.nowrap Tablets
+                      td.nowrap 
+                        strong &lt;= 990px
+                      td.nowrap 
+                        strong .md
+                      td 
+                        strong 12
+                      td 
+                        strong 80%
+                    tr
+                      td.nowrap Desktops/ laptops
+                      td.nowrap 
+                        strong &gt; 990px
+                      td.nowrap 
+                        strong .lg
+                      td 
+                        strong 12
+                      td 
+                        strong 70%
+
+                p.align-justify. 
+                  You can safely write your own styling rules using the following queries and keep covered by 
+                  <code class="primary">seed-css</code> grid system. Using a different set of media queries may 
+                  overwrite this boilerplate grid system.
 
                 table
                   thead
@@ -723,37 +760,29 @@ html(lang="en")
                       th Remarks
                   tbody
                     tr 
-                      td @media only screen and (min-width: 0px) {}
-                      td Mobile first queries
+                      td @media only screen and (min-width: 0px)
+                      td For mobile devices. (Mobile first)
                     tr 
-                      td @media only screen and (min-width: 320px) {}
-                      td Larger than mobile
+                      td @media only screen and (min-width: 600px)
+                      td For tablets devices.  
                     tr 
-                      td @media only screen and (min-width: 550px) {}
-                      td Larger than tablet
-                    tr 
-                      td @media only screen and (min-width: 960px) {}
-                      td Larger than desktop/laptop pc
+                      td @media only screen and (min-width: 990px)
+                      td For desktop/ laptop devices.
                       
                 .code-sample
                   pre.prettyprint.lang-css.
-                    // Mobile first queries 
+                    // Mobile first 
                     @media only screen and (min-width: 0px) {
                       ...
                     }
                     
-                    // Larger than mobile
-                    @media only screen and (min-width: 320px) {
+                    // Tablets
+                    @media only screen and (min-width: 600px) {
                       ...
                     }
                     
-                    // Larger than tablet 
-                    @media only screen and (min-width: 550px) {
-                      ...
-                    }
-                    
-                    // Larger than desktop/laptop pc
-                    @media only screen and (min-width: 960px) {
+                    // Desktops/ Laptops 
+                    @media only screen and (min-width: 990px) {
                       ...
                     }
 
@@ -1023,7 +1052,7 @@ html(lang="en")
                   a(href="http://ionicons.com/", target="_blank").btn.btn-primary Go to IonIcons
 
 
-            .col.lg-3.hide-only-small.relpos
+            .col.md-4.lg-3.hide-only-small.relpos
               //- menu
 
               nav#samples-nav 
@@ -1067,7 +1096,9 @@ html(lang="en")
 
         code
 
-          p Copyright &copy; 2016, Rogerio Taques
+          p The MIT license.
+
+          p Copyright &copy; 2016, Rogerio Taques.
 
           p.align-justify. 
             Permission is hereby granted, free of charge, to any person obtaining 
@@ -1093,7 +1124,7 @@ html(lang="en")
 
 
     footer
-      p.copyright &copy; 2016, Rogerio Taques
+      p.copyright &copy; 2016, Rogerio Taques.
       
       .grid
         .row 
