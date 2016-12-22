@@ -2,6 +2,12 @@
  * Seed CSS - Typography
  * ----------------------- */
 
+a:not(.btn):not(.flat-btn),
+a:not(.btn):not(.flat-btn):active,
+a:not(.btn):not(.flat-btn):visited {
+  color: $primary;
+}
+
 h1,
 h2,
 h3,
@@ -49,10 +55,14 @@ h6 {
 
 p {
   line-height: 150%;
-  // letter-spacing: 1px;
 
   margin: {
     top: $margin;
     bottom: $margin * 2;
   }
+}
+
+b,
+strong {
+  font-weight: 700;
 }

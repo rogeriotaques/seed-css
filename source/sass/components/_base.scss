@@ -38,12 +38,6 @@ hr {
   }
 }
 
-a:not(.btn):not(.flat-btn),
-a:not(.btn):not(.flat-btn):active,
-a:not(.btn):not(.flat-btn):visited {
-  color: $primary;
-}
-
 .container {
   width: $small-container;
   margin: $margin auto;

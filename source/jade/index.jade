@@ -34,7 +34,7 @@ html(lang="en")
     meta(name="copyright", content="Rogerio Taques")
     meta(name="license", content="MIT")
 
-    link(rel="stylesheet", type="text/css", href="//fonts.googleapis.com/css?family=Lato:300|Open+Sans:400")
+    link(rel="stylesheet", type="text/css", href="//fonts.googleapis.com/css?family=Lato:300,700|Open+Sans:400")
     link(rel="stylesheet", type="text/css", href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css")
     link(rel="stylesheet", type="text/css", href="assets/css/seed.css")
     link(rel="stylesheet", type="text/css", href="assets/css/style.css")
@@ -248,6 +248,15 @@ html(lang="en")
                   All default HTML tags are supported, including but not limited 
                   to the below few examples.
 
+                p.align-justify. 
+                  We are using <b>Lato (300)</b> as general font-family and <b>Open Sans (400)</b> as 
+                  title's font-family. The easiest way to make these fonts available to your page is 
+                  loading them from Google Fonts, such as:
+
+                .code-sample 
+                  pre.prettyprint.lang-html 
+                    &lt;link href="//fonts.googleapis.com/css?family=Lato:300,700|Open+Sans:400" rel="stylesheet"&gt;
+
                 .grid
                   .row
                     .col.sm-12.md-6
@@ -257,7 +266,7 @@ html(lang="en")
                     .col.sm-12.md-6
                       p. 
                         This is an paragraph. <br >
-                        This is a <b >bold</b> text. <br >
+                        This is a <strong >bold</strong> text. <br >
                         This is an <i >italic</i> text. <br >
                         This is an <u >underlined</u> text. <br >
                         This is an <a href="#!">anchor</a> text.
@@ -1088,7 +1097,7 @@ html(lang="en")
       
       .grid
         .row 
-          .col.sm-12.md-3.offset-3
+          .col.sm-12.md-3.md-offset-3
             p.align-center. 
               Need support, have suggestions or just would like to drop me a line? <br>
               <a href="https://github.com/rogeriotaques/seed-css/issues" class="btn" >Open an issue at Github</a>

@@ -55,7 +55,7 @@
   }
 
   @for $i from 1 through 12 {
-    &.offset-#{$i} {
+    &.#{$size}-offset-#{$i} {
       @if $i == 12 {
         margin-left: 100%;
       } @else if $i == 1 {
