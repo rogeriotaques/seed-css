@@ -22,14 +22,14 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Seed CSS v0.8.6</title>
+    <title>Seed CSS v0.8.7</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="A light-weight, mobile first and responsive CSS boilerplate.">
     <meta name="keywords" content="css,boilerplate,javascript,html5,website,site,app,webapp,build,development">
     <meta name="author" content="Rogerio Taques (http://github.com/rogeriotaques)">
     <meta name="copyright" content="Rogerio Taques">
     <meta name="license" content="MIT">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway:400,300,600">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:300,700|Open+Sans:400">
     <link rel="stylesheet" type="text/css" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/seed.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -39,7 +39,7 @@
       <div class="container align-center"> 
         <h1>Seed CSS</h1>
         <p>A light-weight, mobile first and responsive CSS boilerplate.</p>
-        <div class="cta"><a href="https://github.com/rogeriotaques/seed-css/archive/develop.zip" class="btn btn-primary"> <span>DOWNLOAD </span><span id="release">v0.8.6</span></a></div>
+        <div class="cta"><a href="https://github.com/rogeriotaques/seed-css/archive/develop.zip" class="btn btn-primary"> <span>DOWNLOAD </span><span id="release">v0.8.7</span></a></div>
         <p>(This page design is proudly based on <code class="primary">seed-css</code>)</p>
         <div><span title="Scroll down for more ..." class="ion-chevron-down scroll-down-for-more"></span></div>
       </div>
@@ -122,7 +122,7 @@
       <div class="container">
         <div class="grid"> 
           <div class="row"> 
-            <div class="col md-12 lg-9">
+            <div class="col md-8 lg-9">
               <h2>Examples</h2>
               <div id="sample-container">
                 <h4>Container</h4>
@@ -146,18 +146,31 @@
                   adapts its width to best fit your content.
                   
                 </p>
+                <div class="grid sample">
+                  <div class="row">
+                    <div class="col sm-1 align-center">1</div>
+                    <div class="col sm-1 align-center">2</div>
+                    <div class="col sm-1 align-center">3</div>
+                    <div class="col sm-1 align-center">4</div>
+                    <div class="col sm-1 align-center">5</div>
+                    <div class="col sm-1 align-center">6</div>
+                    <div class="col sm-1 align-center">7</div>
+                    <div class="col sm-1 align-center">8</div>
+                    <div class="col sm-1 align-center">9</div>
+                    <div class="col sm-1 align-center">10</div>
+                    <div class="col sm-1 align-center">11</div>
+                    <div class="col sm-1 align-center">12</div>
+                  </div>
+                </div>
                 <p class="align-justify">
-                  Offsets are also available. To apply offsets, just add the sufix 
-                  <code >-offset</code> to your classname.
+                  Offsets are also available. To apply offsets, just use the class  
+                  <code >*-offset-*</code> to your classname.
                   
                   
                 </p>
                 <div class="grid sample">
                   <div class="row">
-                    <div class="col md-6 lg-3 align-center">.md-6 .lg-3</div>
-                    <div class="col md-6 lg-3 align-center">.md-6 .lg-3</div>
-                    <div class="col md-6 lg-3 align-center">.md-6 .lg-3</div>
-                    <div class="col md-6 lg-3 align-center">.md-6 .lg-3</div>
+                    <div class="col sm-6 sm-offset-6 md-6 md-offset-6 lg-6 lg-offset-6 align-center">1</div>
                   </div>
                 </div>
                 <div class="code-sample">
@@ -204,83 +217,20 @@
                     <tr>
                       <td class="nowrap">.md-*</td>
                       <td class="nowrap">(1 ~ 12)</td>
-                      <td>Defines a column size for medium screens. It's used concatenated to <code >.col</code</td>
+                      <td>Defines a column size for medium screens. It's used concatenated to <code >.col</code></td>
                     </tr>
                     <tr>
                       <td class="nowrap">.lg-*</td>
                       <td class="nowrap">(1 ~ 12)</td>
-                      <td>Defines a column size for large screens. It's used concatenated to <code >.col</code</td>
+                      <td>Defines a column size for large screens. It's used concatenated to <code >.col</code></td>
                     </tr>
                     <tr>
-                      <td class="nowrap">.offset-*</td>
-                      <td class="nowrap">(1 ~ 12)</td>
-                      <td>Creates an offset of columns. It's used concatenated to <code >.col</code></td>
+                      <td class="nowrap">*-offset-*</td>
+                      <td class="nowrap">(sm, md and lg) and (1 ~ 12)</td>
+                      <td>Creates an offset of columns. It's used concatenated to <code >.col</code> and its screen size. E.g: <code>.md-offset-2</code>.</td>
                     </tr>
                   </tbody>
                 </table>
-                <div class="grid sample">
-                  <div class="row">
-                    <div class="col align-center sm-1">1</div>
-                    <div class="col align-center sm-11">11</div>
-                  </div>
-                  <div class="row">
-                    <div class="col align-center sm-2">2</div>
-                    <div class="col align-center sm-10">10</div>
-                  </div>
-                  <div class="row">
-                    <div class="col align-center sm-3">3</div>
-                    <div class="col align-center sm-9">9</div>
-                  </div>
-                  <div class="row">
-                    <div class="col align-center sm-4">4</div>
-                    <div class="col align-center sm-8">8</div>
-                  </div>
-                  <div class="row">
-                    <div class="col align-center sm-5">5</div>
-                    <div class="col align-center sm-7">7</div>
-                  </div>
-                  <div class="row">
-                    <div class="col align-center sm-6">6</div>
-                    <div class="col align-center sm-6">6</div>
-                  </div>
-                  <div class="row">
-                    <div class="col align-center sm-7">7</div>
-                    <div class="col align-center sm-5">5</div>
-                  </div>
-                  <div class="row">
-                    <div class="col align-center sm-8">8</div>
-                    <div class="col align-center sm-4">4</div>
-                  </div>
-                  <div class="row">
-                    <div class="col align-center sm-9">9</div>
-                    <div class="col align-center sm-3">3</div>
-                  </div>
-                  <div class="row">
-                    <div class="col align-center sm-10">10</div>
-                    <div class="col align-center sm-2">2</div>
-                  </div>
-                  <div class="row">
-                    <div class="col align-center sm-11">11</div>
-                    <div class="col align-center sm-1">1</div>
-                  </div>
-                  <div class="row">
-                    <div class="col align-center sm-12">12</div>
-                  </div>
-                  <div class="row">
-                    <div class="col sm-1 align-center">1</div>
-                    <div class="col sm-1 align-center">2</div>
-                    <div class="col sm-1 align-center">3</div>
-                    <div class="col sm-1 align-center">4</div>
-                    <div class="col sm-1 align-center">5</div>
-                    <div class="col sm-1 align-center">6</div>
-                    <div class="col sm-1 align-center">7</div>
-                    <div class="col sm-1 align-center">8</div>
-                    <div class="col sm-1 align-center">9</div>
-                    <div class="col sm-1 align-center">10</div>
-                    <div class="col sm-1 align-center">11</div>
-                    <div class="col sm-1 align-center">12</div>
-                  </div>
-                </div>
               </div>
               <hr>
               <div id="sample-typography">
@@ -290,6 +240,16 @@
                   to the below few examples.
                   
                 </p>
+                <p class="align-justify">
+                  We are using <b>Lato (300)</b> as general font-family and <b>Open Sans (400)</b> as 
+                  title's font-family. The easiest way to make these fonts available to your page is 
+                  loading them from Google Fonts, such as:
+                  
+                </p>
+                <div class="code-sample"> 
+                  <pre class="prettyprint lang-html"> 
+&lt;link href="//fonts.googleapis.com/css?family=Lato:300,700|Open+Sans:400" rel="stylesheet"&gt;</pre>
+                </div>
                 <div class="grid">
                   <div class="row">
                     <div class="col sm-12 md-6">
@@ -303,7 +263,7 @@
                     <div class="col sm-12 md-6">
                       <p>
                         This is an paragraph. <br >
-                        This is a <b >bold</b> text. <br >
+                        This is a <strong >bold</strong> text. <br >
                         This is an <i >italic</i> text. <br >
                         This is an <u >underlined</u> text. <br >
                         This is an <a href="#!">anchor</a> text.
@@ -326,7 +286,8 @@
 &lt;b &gt; ... &lt;/b&gt; 
 &lt;i &gt; ... &lt;/i&gt; 
 &lt;u &gt; ... &lt;/u&gt; 
-&lt;a href="." &gt; ... &lt;/a&gt; </pre>
+&lt;a href="." &gt; ... &lt;/a&gt; 
+</pre>
                 </div>
               </div>
               <hr>
@@ -878,7 +839,48 @@
               <div id="sample-media-queries">
                 <h4>Media queries</h4>
                 <p class="align-justify">
-                  Media queries allows you to make an even more accurated design.
+                  Media queries allows us to make an even more accurated design. In <code class="primary">seed-css</code> 
+                  they are made to represent the following screen sizes:
+                  
+                </p>
+                <table> 
+                  <thead>
+                    <tr> 
+                      <th>&nbsp; </th>
+                      <th>Screen width</th>
+                      <th>Prefix</th>
+                      <th>Columns</th>
+                      <th>Container</th>
+                    </tr>
+                  </thead>
+                  <tbody> 
+                    <tr>
+                      <td class="nowrap">Mobiles</td>
+                      <td class="nowrap"> <strong>&lt; 600px</strong></td>
+                      <td class="nowrap"> <strong>.sm</strong></td>
+                      <td> <strong>12</strong></td>
+                      <td> <strong>90%</strong></td>
+                    </tr>
+                    <tr>
+                      <td class="nowrap">Tablets</td>
+                      <td class="nowrap"> <strong>&lt;= 990px</strong></td>
+                      <td class="nowrap"> <strong>.md</strong></td>
+                      <td> <strong>12</strong></td>
+                      <td> <strong>80%</strong></td>
+                    </tr>
+                    <tr>
+                      <td class="nowrap">Desktops/ laptops</td>
+                      <td class="nowrap"> <strong>&gt; 990px</strong></td>
+                      <td class="nowrap"> <strong>.lg</strong></td>
+                      <td> <strong>12</strong></td>
+                      <td> <strong>70%</strong></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p class="align-justify">
+                  You can safely write your own styling rules using the following queries and keep covered by 
+                  <code class="primary">seed-css</code> grid system. Using a different set of media queries may 
+                  overwrite this boilerplate grid system.
                   
                 </p>
                 <table>
@@ -890,41 +892,32 @@
                   </thead>
                   <tbody>
                     <tr> 
-                      <td>@media only screen and (min-width: 0px) {}</td>
-                      <td>Mobile first queries</td>
+                      <td>@media only screen and (min-width: 0px)</td>
+                      <td>For mobile devices. (Mobile first)</td>
                     </tr>
                     <tr> 
-                      <td>@media only screen and (min-width: 320px) {}</td>
-                      <td>Larger than mobile</td>
+                      <td>@media only screen and (min-width: 600px)</td>
+                      <td>For tablets devices.  </td>
                     </tr>
                     <tr> 
-                      <td>@media only screen and (min-width: 550px) {}</td>
-                      <td>Larger than tablet</td>
-                    </tr>
-                    <tr> 
-                      <td>@media only screen and (min-width: 960px) {}</td>
-                      <td>Larger than desktop/laptop pc</td>
+                      <td>@media only screen and (min-width: 990px)</td>
+                      <td>For desktop/ laptop devices.</td>
                     </tr>
                   </tbody>
                 </table>
                 <div class="code-sample">
-                  <pre class="prettyprint lang-css">// Mobile first queries 
+                  <pre class="prettyprint lang-css">// Mobile first 
 @media only screen and (min-width: 0px) {
   ...
 }
 
-// Larger than mobile
-@media only screen and (min-width: 320px) {
+// Tablets
+@media only screen and (min-width: 600px) {
   ...
 }
 
-// Larger than tablet 
-@media only screen and (min-width: 550px) {
-  ...
-}
-
-// Larger than desktop/laptop pc
-@media only screen and (min-width: 960px) {
+// Desktops/ Laptops 
+@media only screen and (min-width: 990px) {
   ...
 }
 </pre>
@@ -1231,7 +1224,7 @@
                 <p class="align-center"><a href="http://ionicons.com/" target="_blank" class="btn btn-primary">Go to IonIcons</a></p>
               </div>
             </div>
-            <div class="col lg-3 hide-on-medium-and-down relpos">
+            <div class="col md-4 lg-3 hide-only-small relpos">
               <nav id="samples-nav"> 
                 <ul class="list">
                   <li class="item"> <a href="#sample-container" class="spy">Container</a></li>
@@ -1255,7 +1248,8 @@
     <section id="license">
       <div class="container"> 
         <h2>License </h2><code>
-          <p>Copyright &copy; 2016, Rogerio Taques</p>
+          <p>The MIT license.</p>
+          <p>Copyright &copy; 2016, Rogerio Taques.</p>
           <p class="align-justify">
             Permission is hereby granted, free of charge, to any person obtaining 
             a copy of this software and associated documentation files 
@@ -1285,10 +1279,10 @@
       </div>
     </section>
     <footer>
-      <p class="copyright">&copy; 2016, Rogerio Taques</p>
+      <p class="copyright">&copy; 2016, Rogerio Taques.</p>
       <div class="grid">
         <div class="row"> 
-          <div class="col sm-12 md-3 offset-3">
+          <div class="col sm-12 md-3 md-offset-3">
             <p class="align-center">
               Need support, have suggestions or just would like to drop me a line? <br>
               <a href="https://github.com/rogeriotaques/seed-css/issues" class="btn" >Open an issue at Github</a>
