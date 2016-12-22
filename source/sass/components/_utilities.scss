@@ -72,13 +72,13 @@ img {
   display: none !important;
 
   &-only-small {
-    @media only screen and (max-width: $medium) {
+    @media only screen and (max-width: #{$medium - 1}) {
       display: none !important;
     }
   }
 
   &-on-medium-and-down {
-    @media only screen and (max-width: $large) {
+    @media only screen and (max-width: #{$large - 1}) {
       display: none !important;
     }
   }
