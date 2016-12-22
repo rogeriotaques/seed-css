@@ -11,19 +11,14 @@ html {
 body {
   @include rem(font-size, 15px);
   @include rem(line-height, 24px);
+
   font: {
-    weight: 400;
-    family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    weight: 300; // light
+    family: "Lato", "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
+
   color: #222;
 
-}
-
-p {
-  margin: {
-    top: $margin;
-    bottom: $margin * 2;
-  }
 }
 
 hr {
@@ -43,22 +38,17 @@ hr {
   }
 }
 
-a:not(.btn):not(.flat-btn),
-a:not(.btn):not(.flat-btn):active,
-a:not(.btn):not(.flat-btn):visited {
-  color: $primary;
-}
-
 .container {
-  width: 95%;
+  width: $small-container;
   margin: $margin auto;
-  max-width: $small;
 
   @media #{$medium-and-up} {
+    width: $medium-container;
     max-width: $medium;
   }
 
   @media #{$large-and-up} {
+    width: $large-container;
     max-width: $large;
   }
 }

@@ -155,8 +155,8 @@ gulp.task('dist:run', ['build:sass', 'build:jade'], function () {
     + '*/ \n\n ';
 
   return gulp
-    .src(config.path.build + '**/*')
-    .pipe(gulpif(/\.js$/, uglify()))
+    .src(config.path.build + 'assets/css/*.css')
+    // .pipe(gulpif(/\.js$/, uglify()))
     .pipe(gulpif(/\.css$/, minify()))
     .pipe(gulpif(/\.(js|css)$/, header(comment, {pkg: pkg})))
     .pipe(gulp.dest(config.path.dist));

@@ -2,13 +2,21 @@
  * Seed CSS - Typography
  * ----------------------- */
 
+a:not(.btn):not(.flat-btn),
+a:not(.btn):not(.flat-btn):active,
+a:not(.btn):not(.flat-btn):visited {
+  color: $primary;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-weight: 300;
+  font-family: "Open Sans";
+  font-weight: 400;
+
   margin: {
     top: ($margin * 2);
     bottom: ($margin * 2);
@@ -17,30 +25,44 @@ h6 {
 
 h1 {
   @include rem(font-size, 50px);
-  @include rem(line-height, 54px);
+  @include rem(line-height, 64px);
 }
 
 h2 {
   @include rem(font-size, 42px);
-  @include rem(line-height, 46px);
+  @include rem(line-height, 56px);
 }
 
 h3 {
   @include rem(font-size, 36px);
-  @include rem(line-height, 40px);
+  @include rem(line-height, 50px);
 }
 
 h4 {
   @include rem(font-size, 30px);
-  @include rem(line-height, 36px);
+  @include rem(line-height, 42px);
 }
 
 h5 {
   @include rem(font-size, 24px);
-  @include rem(line-height, 30px);
+  @include rem(line-height, 34px);
 }
 
 h6 {
   @include rem(font-size, 15px);
-  @include rem(line-height, 21px);
+  @include rem(line-height, 23px);
+}
+
+p {
+  line-height: 150%;
+
+  margin: {
+    top: $margin;
+    bottom: $margin * 2;
+  }
+}
+
+b,
+strong {
+  font-weight: 700;
 }
