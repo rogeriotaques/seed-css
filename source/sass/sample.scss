@@ -108,6 +108,14 @@ footer {
   color: white;
   z-index: 3;
 
+  @media #{$medium-and-up} {
+    font-size: .75em;
+  } 
+
+  @media #{$large-and-up} {
+    font-size: 1em;
+  } 
+
   & > p {
     & > a,
     & > a:visited,
@@ -128,12 +136,32 @@ footer {
       border-color: white;
       background-color: white;
     }
+
+    @media #{$medium-and-up} {
+      font-size: .75em;
+    } 
+
+    @media #{$large-and-up} {
+      font-size: 1em;
+    } 
   }
 
   .seed-select {
     margin: 0;
     max-width: 60%;
     display: inline-block;
+
+    @media #{$medium-and-up} {
+      & > select {
+        font-size: .65em;
+      }
+    } 
+
+    @media #{$large-and-up} {
+      & > select {
+        font-size: 1em;
+      }
+    } 
   }
 
   form {
