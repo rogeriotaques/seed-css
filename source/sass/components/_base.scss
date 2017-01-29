@@ -38,6 +38,12 @@ hr {
   }
 }
 
+pre {
+  // Fixes a bug where PRE tags are breaking the page design
+  // when long contents are showed in smartphones. 
+  overflow: auto;
+}
+
 .container {
   width: $small-container;
   margin: $margin auto;
