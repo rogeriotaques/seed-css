@@ -71,7 +71,9 @@ header .scroll-down-for-more {
 
 main {
   position: relative;
+  background-color: white;
   z-index: 3;
+  margin-bottom: -10px;
 }
 
 main .highlight i {
@@ -80,7 +82,10 @@ main .highlight i {
 }
 
 section {
+  position: relative;
   padding: 20px 0;
+  z-index: 3;
+  background-color: white;
 }
 
 section:nth-child(odd) {
@@ -88,10 +93,24 @@ section:nth-child(odd) {
 }
 
 footer {
+  position: relative;
   padding: 20px 0;
   text-align: center;
   background-color: #666;
   color: white;
+  z-index: 3;
+}
+
+@media only screen and (min-width: 600px) {
+  footer {
+    font-size: .75em;
+  }
+}
+
+@media only screen and (min-width: 990px) {
+  footer {
+    font-size: 1em;
+  }
 }
 
 footer > p > a,
@@ -114,10 +133,34 @@ footer .btn:hover {
   background-color: white;
 }
 
+@media only screen and (min-width: 600px) {
+  footer .btn {
+    font-size: .75em;
+  }
+}
+
+@media only screen and (min-width: 990px) {
+  footer .btn {
+    font-size: 1em;
+  }
+}
+
 footer .seed-select {
   margin: 0;
   max-width: 60%;
   display: inline-block;
+}
+
+@media only screen and (min-width: 600px) {
+  footer .seed-select > select {
+    font-size: .65em;
+  }
+}
+
+@media only screen and (min-width: 990px) {
+  footer .seed-select > select {
+    font-size: 1em;
+  }
 }
 
 footer form [type="submit"] {
