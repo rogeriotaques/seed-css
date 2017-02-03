@@ -22,7 +22,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Seed CSS v0.9.0</title>
+    <title>Seed CSS v0.9.3</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="A light-weight, mobile first and responsive CSS boilerplate.">
     <meta name="keywords" content="css,boilerplate,javascript,html5,website,site,app,webapp,build,development">
@@ -39,7 +39,7 @@
       <div class="container align-center"> 
         <h1>Seed CSS</h1>
         <p>A light-weight, mobile first and responsive CSS boilerplate.</p>
-        <div class="cta"><a href="https://github.com/rogeriotaques/seed-css/archive/develop.zip" class="btn btn-primary"> <span>DOWNLOAD </span><span id="release">v0.9.0</span></a></div>
+        <div class="cta"><a href="https://github.com/rogeriotaques/seed-css/archive/develop.zip" class="btn btn-primary"> <span>DOWNLOAD </span><span id="release">v0.9.3</span></a></div>
         <p>(This page design is proudly based on <code class="primary">seed-css</code>)</p>
         <div><span title="Scroll down for more ..." class="ion-chevron-down scroll-down-for-more"></span></div>
       </div>
@@ -147,7 +147,7 @@
                   
                 </p>
                 <div class="grid sample">
-                  <div class="row">
+                  <div id="flexible-cols" class="row">
                     <div class="col sm-1 align-center">1</div>
                     <div class="col sm-1 align-center">2</div>
                     <div class="col sm-1 align-center">3</div>
@@ -162,6 +162,12 @@
                     <div class="col sm-1 align-center">12</div>
                   </div>
                 </div>
+                <div class="align-center"><strong>Have fun playing with columns!</strong>
+                  <div> 
+                    <button type="button" disabled="true" id="add-col" class="btn-small">Add column</button>
+                    <button type="button" id="rem-col" class="btn-small">Remove column</button>
+                  </div>
+                </div><br>
                 <p class="align-justify">
                   Offsets are also available. To apply offsets, just use the class  
                   <code >*-offset-*</code> to your classname.
@@ -172,18 +178,6 @@
                   <div class="row">
                     <div class="col sm-6 sm-offset-6 md-6 md-offset-6 lg-6 lg-offset-6 align-center">1</div>
                   </div>
-                </div>
-                <div class="code-sample">
-                  <pre class="prettyprint lang-html">&lt;!-- This's a grid --&gt;
-&lt;div class="grid" &gt;
-  &lt;!-- This's a row. You can have as many rows as you need. --&gt;
-  &lt;div class="row" &gt;
-    &lt;!-- This's a column. You can have up to 12 columns in a row. --&gt;
-    &lt;div class="col sm-12 md-6 lg-3" &gt; ... &lt;/div&gt;
-    &lt;div class="col sm-12 md-6 lg-9" &gt; ... &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
                 </div>
                 <table> 
                   <thead>
@@ -225,12 +219,30 @@
                       <td>Defines a column size for large screens. It's used concatenated to <code >.col</code></td>
                     </tr>
                     <tr>
+                      <td class="nowrap">.xl-*</td>
+                      <td class="nowrap">(1 ~ 12)</td>
+                      <td>Defines a column size for extra-large screens. It's used concatenated to <code >.col</code></td>
+                    </tr>
+                    <tr>
                       <td class="nowrap">*-offset-*</td>
                       <td class="nowrap">(sm, md and lg) and (1 ~ 12)</td>
                       <td>Creates an offset of columns. It's used concatenated to <code >.col</code> and its screen size. E.g: <code>.md-offset-2</code>.</td>
                     </tr>
                   </tbody>
                 </table>
+                <div class="code-sample">
+                  <pre class="prettyprint lang-html">&lt;!-- This's a grid --&gt;
+&lt;div class="grid" &gt;
+  &lt;!-- This's a row. You can have as many rows as you need. --&gt;
+  &lt;div class="row" &gt;
+    &lt;!-- This's a column. You can have up to 12 columns in a row. --&gt;
+    &lt;div class="col sm-12 md-6 lg-3" &gt; ... &lt;/div&gt;
+    &lt;div class="col sm-12 md-6 lg-9" &gt; ... &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+</pre>
+                </div>
               </div>
               <hr>
               <div id="sample-typography">
@@ -866,14 +878,21 @@
                       <td class="nowrap"> <strong>&lt;= 990px</strong></td>
                       <td class="nowrap"> <strong>.md</strong></td>
                       <td> <strong>12</strong></td>
-                      <td> <strong>80%</strong></td>
+                      <td> <strong>85%</strong></td>
                     </tr>
                     <tr>
                       <td class="nowrap">Desktops/ laptops</td>
-                      <td class="nowrap"> <strong>&gt; 990px</strong></td>
+                      <td class="nowrap"> <strong>&lt;= 1200px</strong></td>
                       <td class="nowrap"> <strong>.lg</strong></td>
                       <td> <strong>12</strong></td>
-                      <td> <strong>70%</strong></td>
+                      <td> <strong>80%</strong></td>
+                    </tr>
+                    <tr>
+                      <td class="nowrap">Extra large desktops/TVs</td>
+                      <td class="nowrap"> <strong>&gt; 1200px</strong></td>
+                      <td class="nowrap"> <strong>.xl</strong></td>
+                      <td> <strong>12</strong></td>
+                      <td> <strong>75%</strong></td>
                     </tr>
                   </tbody>
                 </table>
@@ -903,6 +922,10 @@
                       <td>@media only screen and (min-width: 990px)</td>
                       <td>For desktop/ laptop devices.</td>
                     </tr>
+                    <tr> 
+                      <td>@media only screen and (min-width: 1200px)</td>
+                      <td>For extra large desktop/ TV devices.</td>
+                    </tr>
                   </tbody>
                 </table>
                 <div class="code-sample">
@@ -918,6 +941,11 @@
 
 // Desktops/ Laptops 
 @media only screen and (min-width: 990px) {
+  ...
+}
+
+// Extra large desktops/ TVs 
+@media only screen and (min-width: 1200px) {
   ...
 }
 </pre>
@@ -1103,20 +1131,6 @@
                           to improve the user experience of your apps or websites.
                           
                         </p>
-                        <div class="code-sample">
-                          <pre class="prettyprint lang-html">&lt;!-- Hide on all devices --&gt; 
-&lt;div class="hide" &gt; ... &lt;/div&gt;
-
-&lt;!-- Hide on small devices --&gt; 
-&lt;div class="hide-only-small" &gt; ... &lt;/div&gt;
-
-&lt;!-- Hide on medium and small devices --&gt; 
-&lt;div class="hide-on-medium-and-down" &gt; ... &lt;/div&gt;
-
-&lt;!-- Hide on medium and large devices --&gt; 
-&lt;div class="hide-on-medium-and-up" &gt; ... &lt;/div&gt;
-</pre>
-                        </div>
                       </div>
                       <div class="row"> 
                         <div class="col"> 
@@ -1134,18 +1148,67 @@
                               </tr>
                               <tr>
                                 <td class="nowrap">.hide-only-small</td>
-                                <td>Hide an element only on small devices only.</td>
+                                <td>Hide an element on small devices only.</td>
+                              </tr>
+                              <tr>
+                                <td class="nowrap">.hide-only-medium</td>
+                                <td>Hide an element on medium devices only.</td>
+                              </tr>
+                              <tr>
+                                <td class="nowrap">.hide-only-large</td>
+                                <td>Hide an element on large devices only.</td>
+                              </tr>
+                              <tr>
+                                <td class="nowrap">.hide-only-extra-large</td>
+                                <td>Hide an element on extra-large devices only.</td>
                               </tr>
                               <tr>
                                 <td class="nowrap">.hide-on-medium-and-down</td>
-                                <td>Hide an element on all devices, except for large ones</td>
+                                <td>Hide an element on all small and medium devices</td>
                               </tr>
                               <tr>
                                 <td class="nowrap">.hide-on-medium-and-up</td>
                                 <td>Hide an element on all devices, except for small ones</td>
                               </tr>
+                              <tr>
+                                <td class="nowrap">.hide-on-large-and-down</td>
+                                <td>Hide an element on all devices, except for extra-large ones</td>
+                              </tr>
+                              <tr>
+                                <td class="nowrap">.hide-on-large-and-up</td>
+                                <td>Hide an element on all large and extra-large devices</td>
+                              </tr>
                             </tbody>
                           </table>
+                        </div>
+                        <div class="code-sample">
+                          <pre class="prettyprint lang-html">&lt;!-- Hide on all devices --&gt; 
+&lt;div class="hide" &gt; ... &lt;/div&gt;
+
+&lt;!-- Hide on small devices --&gt; 
+&lt;div class="hide-only-small" &gt; ... &lt;/div&gt;
+
+&lt;!-- Hide on medium and small devices --&gt; 
+&lt;div class="hide-on-medium-and-down" &gt; ... &lt;/div&gt;
+
+&lt;!-- Hide on medium devices --&gt; 
+&lt;div class="hide-only-medium" &gt; ... &lt;/div&gt;
+
+&lt;!-- Hide on medium and large devices --&gt; 
+&lt;div class="hide-on-medium-and-up" &gt; ... &lt;/div&gt;
+
+&lt;!-- Hide on large devices --&gt; 
+&lt;div class="hide-only-large" &gt; ... &lt;/div&gt;
+
+&lt;!-- Hide on large and extra-large devices --&gt; 
+&lt;div class="hide-on-large-and-up" &gt; ... &lt;/div&gt;
+
+&lt;!-- Hide on small, medium and large devices --&gt; 
+&lt;div class="hide-on-large-and-down" &gt; ... &lt;/div&gt;
+
+&lt;!-- Hide on extra-large devices --&gt; 
+&lt;div class="hide-only-extra-large" &gt; ... &lt;/div&gt;
+</pre>
                         </div>
                       </div>
                     </div>

@@ -418,6 +418,10 @@ hr.dotted {
   border-bottom: 1px dotted #888;
 }
 
+pre {
+  overflow: auto;
+}
+
 .container {
   width: 90%;
   margin: 10px auto;
@@ -425,14 +429,14 @@ hr.dotted {
 
 @media only screen and (min-width: 600px) {
   .container {
-    width: 80%;
+    width: 85%;
     max-width: 600px;
   }
 }
 
 @media only screen and (min-width: 990px) {
   .container {
-    width: 70%;
+    width: 80%;
     max-width: 990px;
   }
 }
@@ -840,6 +844,104 @@ strong {
   }
 }
 
+@media extra-large-only {
+  .grid .col.xl-1 {
+    width: calc(100% / 12);
+  }
+
+  .grid .col.xl-2 {
+    width: calc(100% / 12 * 2);
+  }
+
+  .grid .col.xl-3 {
+    width: calc(100% / 12 * 3);
+  }
+
+  .grid .col.xl-4 {
+    width: calc(100% / 12 * 4);
+  }
+
+  .grid .col.xl-5 {
+    width: calc(100% / 12 * 5);
+  }
+
+  .grid .col.xl-6 {
+    width: calc(100% / 12 * 6);
+  }
+
+  .grid .col.xl-7 {
+    width: calc(100% / 12 * 7);
+  }
+
+  .grid .col.xl-8 {
+    width: calc(100% / 12 * 8);
+  }
+
+  .grid .col.xl-9 {
+    width: calc(100% / 12 * 9);
+  }
+
+  .grid .col.xl-10 {
+    width: calc(100% / 12 * 10);
+  }
+
+  .grid .col.xl-11 {
+    width: calc(100% / 12 * 11);
+  }
+
+  .grid .col.xl-12 {
+    width: 100%;
+  }
+
+  .grid .col.xl-offset-1 {
+    margin-left: calc(100% / 12);
+  }
+
+  .grid .col.xl-offset-2 {
+    margin-left: calc(100% / 12 * 2);
+  }
+
+  .grid .col.xl-offset-3 {
+    margin-left: calc(100% / 12 * 3);
+  }
+
+  .grid .col.xl-offset-4 {
+    margin-left: calc(100% / 12 * 4);
+  }
+
+  .grid .col.xl-offset-5 {
+    margin-left: calc(100% / 12 * 5);
+  }
+
+  .grid .col.xl-offset-6 {
+    margin-left: calc(100% / 12 * 6);
+  }
+
+  .grid .col.xl-offset-7 {
+    margin-left: calc(100% / 12 * 7);
+  }
+
+  .grid .col.xl-offset-8 {
+    margin-left: calc(100% / 12 * 8);
+  }
+
+  .grid .col.xl-offset-9 {
+    margin-left: calc(100% / 12 * 9);
+  }
+
+  .grid .col.xl-offset-10 {
+    margin-left: calc(100% / 12 * 10);
+  }
+
+  .grid .col.xl-offset-11 {
+    margin-left: calc(100% / 12 * 11);
+  }
+
+  .grid .col.xl-offset-12 {
+    margin-left: 100%;
+  }
+}
+
 /* -----------------------
  * Seed CSS - Buttons
  * ----------------------- */
@@ -1212,6 +1314,24 @@ img.thumb {
   }
 }
 
+@media only screen and (min-width: 600px) and (max-width: 989px) {
+  .hide-only-medium {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 990px) and (max-width: 1199px) {
+  .hide-only-large {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .hide-only-extra-large {
+    display: none !important;
+  }
+}
+
 @media only screen and (max-width: 989px) {
   .hide-on-medium-and-down {
     display: none !important;
@@ -1220,6 +1340,18 @@ img.thumb {
 
 @media only screen and (min-width: 600px) {
   .hide-on-medium-and-up {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .hide-on-large-and-down {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 990px) {
+  .hide-on-large-and-up {
     display: none !important;
   }
 }
@@ -1374,6 +1506,10 @@ img.thumb {
   height: 8.5rem;
   max-height: 85px;
   max-height: 8.5rem;
+  line-height: 25px;
+  line-height: 2.5rem;
+  padding: 10px;
+  padding: 1rem;
 }
 
 .field select {
