@@ -71,22 +71,57 @@ img {
 .hide {
   display: none !important;
 
-  &-only-small {
-    @media only screen and (max-width: #{$medium - 1}) {
-      display: none !important;
+  &-only {
+    &-small {
+      @media #{$small-only} {
+        display: none !important;
+      }
+    }
+
+    &-medium {
+      @media #{$medium-only} {
+        display: none !important;
+      }
+    }
+
+    &-large {
+      @media #{$large-only} {
+        display: none !important;
+      }
+    }
+    
+    &-extra-large {
+      @media #{$extra-large-only} {
+        display: none !important;
+      }
     }
   }
 
-  &-on-medium-and-down {
-    @media only screen and (max-width: #{$large - 1}) {
-      display: none !important;
+  &-on-medium-and {
+    &-down {
+      @media #{$medium-and-down} {
+        display: none !important;
+      }
+    }
+
+    &-up {
+      @media #{$medium-and-up} {
+        display: none !important;
+      }
     }
   }
 
-  &-on-medium-and-up {
-    @media only screen and (min-width: $medium) {
-      display: none !important;
+  &-on-large-and {
+    &-down {
+      @media #{$large-and-down} {
+        display: none !important;
+      }
     }
+
+    &-up {
+      @media #{$large-and-up} {
+        display: none !important;
+      }}
   }
 }
 
