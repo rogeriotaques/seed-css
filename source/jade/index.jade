@@ -167,9 +167,17 @@ html(lang="en")
                   adapts its width to best fit your content.
 
                 .grid.sample
-                  .row
+                  #flexible-cols.row
                     - each i in [1,2,3,4,5,6,7,8,9,10,11,12]
                       .col.sm-1.align-center= i
+
+                .align-center
+                  strong Have fun playing with columns!
+                  div 
+                    button(type="button", disabled="true")#add-col.btn-small Add column
+                    button(type="button")#rem-col.btn-small Remove column
+
+                br
 
                 p.align-justify. 
                   Offsets are also available. To apply offsets, just use the class  
@@ -179,19 +187,7 @@ html(lang="en")
                 .grid.sample
                   .row
                     .col.sm-6.sm-offset-6.md-6.md-offset-6.lg-6.lg-offset-6.align-center 1
-                
-                .code-sample
-                  pre.prettyprint.lang-html.
-                    &lt;!-- This's a grid --&gt;
-                    &lt;div class="grid" &gt;
-                      &lt;!-- This's a row. You can have as many rows as you need. --&gt;
-                      &lt;div class="row" &gt;
-                        &lt;!-- This's a column. You can have up to 12 columns in a row. --&gt;
-                        &lt;div class="col sm-12 md-6 lg-3" &gt; ... &lt;/div&gt;
-                        &lt;div class="col sm-12 md-6 lg-9" &gt; ... &lt;/div&gt;
-                      &lt;/div&gt;
-                    &lt;/div&gt;
-
+             
                 table 
                   thead
                     tr 
@@ -224,9 +220,25 @@ html(lang="en")
                       td.nowrap (1 ~ 12)
                       td Defines a column size for large screens. It's used concatenated to <code >.col</code>
                     tr
+                      td.nowrap .xl-*
+                      td.nowrap (1 ~ 12)
+                      td Defines a column size for extra-large screens. It's used concatenated to <code >.col</code>
+                    tr
                       td.nowrap *-offset-*
                       td.nowrap (sm, md and lg) and (1 ~ 12)
                       td Creates an offset of columns. It's used concatenated to <code >.col</code> and its screen size. E.g: <code>.md-offset-2</code>.
+   
+                .code-sample
+                  pre.prettyprint.lang-html.
+                    &lt;!-- This's a grid --&gt;
+                    &lt;div class="grid" &gt;
+                      &lt;!-- This's a row. You can have as many rows as you need. --&gt;
+                      &lt;div class="row" &gt;
+                        &lt;!-- This's a column. You can have up to 12 columns in a row. --&gt;
+                        &lt;div class="col sm-12 md-6 lg-3" &gt; ... &lt;/div&gt;
+                        &lt;div class="col sm-12 md-6 lg-9" &gt; ... &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
               
 
               hr 
@@ -736,17 +748,27 @@ html(lang="en")
                       td 
                         strong 12
                       td 
-                        strong 80%
+                        strong 85%
                     tr
                       td.nowrap Desktops/ laptops
                       td.nowrap 
-                        strong &gt; 990px
+                        strong &lt;= 1200px
                       td.nowrap 
                         strong .lg
                       td 
                         strong 12
                       td 
-                        strong 70%
+                        strong 80%
+                    tr
+                      td.nowrap Extra large desktops/TVs
+                      td.nowrap 
+                        strong &gt; 1200px
+                      td.nowrap 
+                        strong .xl
+                      td 
+                        strong 12
+                      td 
+                        strong 75%
 
                 p.align-justify. 
                   You can safely write your own styling rules using the following queries and keep covered by 
@@ -768,6 +790,9 @@ html(lang="en")
                     tr 
                       td @media only screen and (min-width: 990px)
                       td For desktop/ laptop devices.
+                    tr 
+                      td @media only screen and (min-width: 1200px)
+                      td For extra large desktop/ TV devices.
                       
                 .code-sample
                   pre.prettyprint.lang-css.
@@ -783,6 +808,11 @@ html(lang="en")
                     
                     // Desktops/ Laptops 
                     @media only screen and (min-width: 990px) {
+                      ...
+                    }
+                    
+                    // Extra large desktops/ TVs 
+                    @media only screen and (min-width: 1200px) {
                       ...
                     }
 
@@ -945,20 +975,6 @@ html(lang="en")
                         p.align-justify. 
                           Show and hide elements from your pages can be an usefull ability 
                           to improve the user experience of your apps or websites.
-                    
-                        .code-sample
-                          pre.prettyprint.lang-html.
-                            &lt;!-- Hide on all devices --&gt; 
-                            &lt;div class="hide" &gt; ... &lt;/div&gt;
-                            
-                            &lt;!-- Hide on small devices --&gt; 
-                            &lt;div class="hide-only-small" &gt; ... &lt;/div&gt;
-                            
-                            &lt;!-- Hide on medium and small devices --&gt; 
-                            &lt;div class="hide-on-medium-and-down" &gt; ... &lt;/div&gt;
-                            
-                            &lt;!-- Hide on medium and large devices --&gt; 
-                            &lt;div class="hide-on-medium-and-up" &gt; ... &lt;/div&gt;
 
                       .row 
                         .col 
@@ -974,14 +990,58 @@ html(lang="en")
                                 td Hide an element in any device.
                               tr
                                 td.nowrap .hide-only-small
-                                td Hide an element only on small devices only.
+                                td Hide an element on small devices only.
+                              tr
+                                td.nowrap .hide-only-medium
+                                td Hide an element on medium devices only.
+                              tr
+                                td.nowrap .hide-only-large
+                                td Hide an element on large devices only.
+                              tr
+                                td.nowrap .hide-only-extra-large
+                                td Hide an element on extra-large devices only.
                               tr
                                 td.nowrap .hide-on-medium-and-down
-                                td Hide an element on all devices, except for large ones
+                                td Hide an element on all small and medium devices
                               tr
                                 td.nowrap .hide-on-medium-and-up
                                 td Hide an element on all devices, except for small ones
-              
+                              tr
+                                td.nowrap .hide-on-large-and-down
+                                td Hide an element on all devices, except for extra-large ones
+                              tr
+                                td.nowrap .hide-on-large-and-up
+                                td Hide an element on all large and extra-large devices
+                    
+                        .code-sample
+                          pre.prettyprint.lang-html.
+                            &lt;!-- Hide on all devices --&gt; 
+                            &lt;div class="hide" &gt; ... &lt;/div&gt;
+                            
+                            &lt;!-- Hide on small devices --&gt; 
+                            &lt;div class="hide-only-small" &gt; ... &lt;/div&gt;
+                            
+                            &lt;!-- Hide on medium and small devices --&gt; 
+                            &lt;div class="hide-on-medium-and-down" &gt; ... &lt;/div&gt;
+                            
+                            &lt;!-- Hide on medium devices --&gt; 
+                            &lt;div class="hide-only-medium" &gt; ... &lt;/div&gt;
+                            
+                            &lt;!-- Hide on medium and large devices --&gt; 
+                            &lt;div class="hide-on-medium-and-up" &gt; ... &lt;/div&gt;
+                            
+                            &lt;!-- Hide on large devices --&gt; 
+                            &lt;div class="hide-only-large" &gt; ... &lt;/div&gt;
+
+                            &lt;!-- Hide on large and extra-large devices --&gt; 
+                            &lt;div class="hide-on-large-and-up" &gt; ... &lt;/div&gt;
+
+                            &lt;!-- Hide on small, medium and large devices --&gt; 
+                            &lt;div class="hide-on-large-and-down" &gt; ... &lt;/div&gt;
+                            
+                            &lt;!-- Hide on extra-large devices --&gt; 
+                            &lt;div class="hide-only-extra-large" &gt; ... &lt;/div&gt;
+
               hr
 
               #sample-responsive-images

@@ -106,6 +106,8 @@
     resize: none;
     @include rem(height, 85px);
     @include rem(max-height, 85px);
+    @include rem(line-height, 25px);
+    @include rem(padding, 10px);
   }
 
   select {
