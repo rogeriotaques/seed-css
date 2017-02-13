@@ -5,6 +5,10 @@
   "main": "dist/seed.css",
   "author": "Rogerio Taques (rogerio.taques@gmail.com)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rogeriotaques/seed-css"
+  },
   "devDependencies": {
     "browser-sync": "^2.11.1",
     "del": "^2.2.0",
