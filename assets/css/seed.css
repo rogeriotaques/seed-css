@@ -1368,19 +1368,6 @@ img.thumb {
   position: relative;
 }
 
-.field.seed-select::before {
-  content: '';
-  position: absolute;
-  top: 25px;
-  right: 1px;
-  bottom: 1px;
-  width: 30px;
-  margin: 5px 0;
-  background-color: #fff;
-  z-index: 1;
-  max-height: 36px;
-}
-
 .field.seed-select::after {
   font-family: "Ionicons";
   -webkit-speak: none;
@@ -1404,6 +1391,7 @@ img.thumb {
   -o-appearance: none;
   appearance: none;
   background-color: transparent;
+  padding-right: 30px;
   z-index: 5;
 }
 
