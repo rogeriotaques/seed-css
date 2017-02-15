@@ -7,19 +7,6 @@
   position: relative;
 
   &.seed-select {
-    &::before {
-      content: '';
-      position: absolute;
-      top: 25px;
-      right: 1px;
-      bottom: 1px;
-      width: 30px;
-      margin: $margin/2 0;
-      background-color: #fff;
-      z-index: 1;
-      max-height: 36px;
-    }
-
     &::after {
       font-family: "Ionicons";
       -webkit-speak: none;
@@ -34,18 +21,19 @@
       right: $margin;
       color: $darken-grey;
       z-index: 2;
-    }
+    } // .seed-select::after
 
     select {
       @include appearance(none);
       background-color: transparent;
+      padding-right: 30px; 
       z-index: 5;
 
       &::-ms-expand {
         display: none;
-      }
-    }
-  }
+      } // select::-ms-expand
+    } // select
+  } // .seed-select
 
   & > label {
     display: block;
