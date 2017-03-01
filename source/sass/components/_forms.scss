@@ -20,14 +20,13 @@
       bottom: $margin;
       right: $margin;
       color: $darken-grey;
-      z-index: 2;
+      pointer-events: none;
     } // .seed-select::after
 
     select {
       @include appearance(none);
       background-color: transparent;
-      padding-right: 30px; 
-      z-index: 5;
+      padding-right: 30px;
 
       &::-ms-expand {
         display: none;
@@ -196,7 +195,7 @@
       &.info {
         color: $grey;
       }
-    } // span 
+    } // span
 
     input[type="text"],
     input[type="password"],
@@ -225,13 +224,13 @@
           border-color: $red;
         }
       }
-      
+
     } // input[type="radio"], input[type="checkbox"]
 
     &.seed-select {
       &::after {
         transform: translateY(-100%);
-      } 
+      }
     } // .seed-select
   } // .has-feedback
 }  // .field
