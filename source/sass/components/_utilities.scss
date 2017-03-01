@@ -89,7 +89,7 @@ img {
         display: none !important;
       }
     }
-    
+
     &-extra-large {
       @media #{$extra-large-only} {
         display: none !important;
@@ -125,7 +125,3 @@ img {
   }
 }
 
-// colors
-.primary {
-  color: $primary;
-}

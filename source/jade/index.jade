@@ -1111,6 +1111,32 @@ html(lang="en")
                 p.align-center
                   a(href="http://ionicons.com/", target="_blank").btn.btn-primary Go to IonIcons
 
+              hr
+
+              #sample-colors
+                h4 Colors
+
+                p.align-justify.
+                  There are a few basic colors ready for use. The same colors can be applied on foreground (texts)
+                  or background of your elements. Check it out:
+
+                table.hovered
+                  thead
+                    tr
+                      th Tag
+                      th Foreground class
+                      th Background class
+                  tbody
+                    -var colorList = ['primary', 'red', 'orange', 'green', 'purple', 'grey', 'darkgrey', 'softgrey'];
+                    -for (var colorIndex in colorList)
+                      tr
+                        td
+                          span(class=colorList[colorIndex]+'-background').color-tag
+                        td
+                          code= '.' + colorList[colorIndex]
+                        td
+                          code= '.' + colorList[colorIndex] + '-background'
+
 
             .col.md-4.lg-3.hide-only-small.relpos
               //- menu
@@ -1139,6 +1165,8 @@ html(lang="en")
                     a(href="#sample-responsive-images").spy Responsive images
                   li.item
                     a(href="#sample-icons").spy Icons
+                  li.item
+                    a(href="#sample-colors").spy Colors
 
     //- section#show-case
     //-   .container

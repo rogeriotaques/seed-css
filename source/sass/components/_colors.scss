@@ -1,0 +1,71 @@
+@import "../includes/_variables";
+
+/* -----------------------
+ * Seed CSS - Colors
+ * ----------------------- */
+
+.primary {
+  color: $primary;
+
+  &-background {
+    background-color: $primary;
+  } // .primary-background
+} // .primary
+
+.red {
+    color: $red;
+
+    &-background {
+        background-color: $red;
+    } // .red-background
+} // .red
+
+.orange {
+    color: $orange;
+
+    &-background {
+        background-color: $orange;
+    } // .orange-background
+} // .orange
+
+.green {
+    color: $green;
+
+    &-background {
+        background-color: $green;
+    } // .green-background
+} // .green
+
+.purple {
+    color: $purple;
+
+    &-background {
+        background-color: $purple;
+    } // .purple-background
+} // .purple
+
+.grey {
+    color: $grey;
+
+    &-background {
+        background-color: $grey;
+    } // .grey-background
+} // .grey
+
+.darkgrey {
+    color: $darken-grey;
+
+    &-background {
+        background-color: $darken-grey;
+    } // .darkgrey-background
+} // .darkgrey
+
+.softgrey {
+    color: $grey-light;
+
+    &-background {
+        background-color: $grey-light;
+    } // .softgrey-background
+} // .softgrey
+
+

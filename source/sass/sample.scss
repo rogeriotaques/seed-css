@@ -110,11 +110,11 @@ footer {
 
   @media #{$medium-and-up} {
     font-size: .75em;
-  } 
+  }
 
   @media #{$large-and-up} {
     font-size: 1em;
-  } 
+  }
 
   & > p {
     & > a,
@@ -139,11 +139,11 @@ footer {
 
     @media #{$medium-and-up} {
       font-size: .75em;
-    } 
+    }
 
     @media #{$large-and-up} {
       font-size: 1em;
-    } 
+    }
   }
 
   .seed-select {
@@ -155,13 +155,13 @@ footer {
       & > select {
         font-size: .65em;
       }
-    } 
+    }
 
     @media #{$large-and-up} {
       & > select {
         font-size: 1em;
       }
-    } 
+    }
   }
 
   form {
@@ -217,7 +217,7 @@ footer {
 
 #samples-nav {
   border: thin solid $grey;
-  margin: ($margin * 2) 0 ($margin * 2) ($margin * 2); 
+  margin: ($margin * 2) 0 ($margin * 2) ($margin * 2);
   background: #fff;
 
   &.stacked {
@@ -238,7 +238,7 @@ footer {
     &:not(:last-child) {
       border-bottom: thin solid $grey;
     }
-    
+
     line-height: 35px;
     white-space: nowrap;
     overflow: hidden;
@@ -256,3 +256,12 @@ footer {
   }
 
 } // #samples-nav
+
+.color-tag {
+    border: thin solid #ccc;
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 30px;
+    margin: 0 auto;
+} // .color-tag
