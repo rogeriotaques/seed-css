@@ -245,3 +245,12 @@ footer form [type="submit"] {
   background-color: #387cfd;
   color: #fff;
 }
+
+.color-tag {
+  border: thin solid #ccc;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 30px;
+  margin: 0 auto;
+}
