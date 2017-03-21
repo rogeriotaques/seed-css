@@ -1,0 +1,44 @@
+.alert {
+  $shadow-data: 10px 0 0 inset !default;
+
+  background-color: $grey-lighten;
+  color: #333;
+  // padding: 20px;
+  padding: 0;
+  margin: 10px;
+  box-sizing: border-box;
+  box-shadow: #8c8c8c $shadow-data;
+
+  p {
+    margin: 0;
+    padding: 20px;
+
+    &:not(:first-child) {
+      padding-top: 0;
+    }
+
+    &:not(:last-child) {
+      padding-bottom: 5px;
+    }
+  } // p
+
+  &.info {
+    box-shadow: $primary $shadow-data;
+    background-color: #e8f0ff;
+  } // .info
+
+  &.success {
+    box-shadow: $green $shadow-data;
+    background-color: #e5ffe6;
+  } // .success
+
+  &.warning {
+    box-shadow: $orange $shadow-data;
+    background-color: #fff0dc;
+  } // .warning
+
+  &.danger {
+    box-shadow: $red $shadow-data;
+    background-color: #ffe0e0;
+  } // .danger
+} // .alert

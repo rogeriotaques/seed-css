@@ -1,0 +1,224 @@
+
+#sample-utilities
+  h4 Utilities
+
+  p.
+    Utilities are classes that can help you to easily show up your data
+    or content in a beatiful way.<br >It can be used combined with other
+    available classes.
+
+  .grid
+    .row
+      .col.sm-12
+        h5 Text alignment
+
+    .row
+      .col.md-6
+        p.align-left This is left aligned
+
+        .code-sample
+          pre.prettyprint.lang-html.
+            &lt;p class="align-left" &gt; ... &lt;/p&gt;
+
+        br
+
+        p.align-center This is center aligned
+
+        .code-sample
+          pre.prettyprint.lang-html.
+            &lt;p class="align-center" &gt; ... &lt;/p&gt;
+
+        br
+
+      .col.md-6
+
+        p.align-right This is right aligned
+
+        .code-sample
+          pre.prettyprint.lang-html.
+            &lt;p class="align-right" &gt; ... &lt;/p&gt;
+
+        br
+
+        p.align-justify.
+          This is justified. This is justified. This is justified. This is justified.
+          This is justified. This is justified. This is justified. This is justified.
+
+        .code-sample
+          pre.prettyprint.lang-html.
+            &lt;p class="align-justify" &gt; ... &lt;/p&gt;
+
+    .row
+      .col
+
+        table
+          thead
+            tr
+              th Class
+              th Remarks
+          tbody
+            tr
+              td.nowrap .align-left
+              td Aligns on left
+            tr
+              td.nowrap .align-right
+              td Aligns on right
+            tr
+              td.nowrap .align-center
+              td Aligns on center
+            tr
+              td.nowrap .align-justify
+              td Aligns justified
+
+    .row
+      .col.sm-12
+        h5 Text transform
+
+    .row
+      .col.sm-12
+
+        .code-sample.bg-white
+          p.nowrap.
+            This text should not break when the screen width is smaller then
+            the text length.
+
+        .code-sample
+          pre.prettyprint.lang-html.
+            &lt;p class="nowrap" &gt; ... &lt;/p&gt;
+
+        br
+
+    .row
+      .col.md-6
+        p.camel-case.
+          this text should be camel case.
+
+        .code-sample
+          pre.prettyprint.lang-html.
+            &lt;p class="camel-case" &gt; ... &lt;/p&gt;
+
+      .col.md-6
+        p.uc-first.
+          only the first character of this text should be capitalized.
+
+        .code-sample
+          pre.prettyprint.lang-html.
+            &lt;p class="uc-first" &gt; ... &lt;/p&gt;
+
+    .row
+      .col.md-6
+        p.upper-case.
+          All letters of this text should be capitalized.
+
+        .code-sample
+          pre.prettyprint.lang-html.
+            &lt;p class="upper-case" &gt; ... &lt;/p&gt;
+
+      .col.md-6
+        p.lower-case.
+          All letters of this text should be lower case.
+
+        .code-sample
+          pre.prettyprint.lang-html.
+            &lt;p class="lower-case" &gt; ... &lt;/p&gt;
+
+      .row
+        .col
+
+          table
+            thead
+              tr
+                th Class
+                th Remarks
+            tbody
+              tr
+                td.nowrap .nowrap
+                td Forces the HTML to ignore white spaces when wrapping lines.
+              tr
+                td.nowrap .camel-case
+                td Capitalize the first character of any word
+              tr
+                td.nowrap .uc-first
+                td Capitalize the first character only from the first word
+              tr
+                td.nowrap .upper-case
+                td Capitalize all character
+              tr
+                td.nowrap .lower-case
+                td Make all letters in lower case
+
+      br
+
+      .row
+        .col.sm-12
+          h5 Hiding
+
+          p.align-justify.
+            Show and hide elements from your pages can be an usefull ability
+            to improve the user experience of your apps or websites.
+
+        .row
+          .col
+
+            table
+              thead
+                tr
+                  th Class
+                  th Remarks
+              tbody
+                tr
+                  td.nowrap .hide
+                  td Hide an element in any device.
+                tr
+                  td.nowrap .hide-only-small
+                  td Hide an element on small devices only.
+                tr
+                  td.nowrap .hide-only-medium
+                  td Hide an element on medium devices only.
+                tr
+                  td.nowrap .hide-only-large
+                  td Hide an element on large devices only.
+                tr
+                  td.nowrap .hide-only-extra-large
+                  td Hide an element on extra-large devices only.
+                tr
+                  td.nowrap .hide-on-medium-and-down
+                  td Hide an element on all small and medium devices
+                tr
+                  td.nowrap .hide-on-medium-and-up
+                  td Hide an element on all devices, except for small ones
+                tr
+                  td.nowrap .hide-on-large-and-down
+                  td Hide an element on all devices, except for extra-large ones
+                tr
+                  td.nowrap .hide-on-large-and-up
+                  td Hide an element on all large and extra-large devices
+
+          .code-sample
+            pre.prettyprint.lang-html.
+              &lt;!-- Hide on all devices --&gt;
+              &lt;div class="hide" &gt; ... &lt;/div&gt;
+
+              &lt;!-- Hide on small devices --&gt;
+              &lt;div class="hide-only-small" &gt; ... &lt;/div&gt;
+
+              &lt;!-- Hide on medium and small devices --&gt;
+              &lt;div class="hide-on-medium-and-down" &gt; ... &lt;/div&gt;
+
+              &lt;!-- Hide on medium devices --&gt;
+              &lt;div class="hide-only-medium" &gt; ... &lt;/div&gt;
+
+              &lt;!-- Hide on medium and large devices --&gt;
+              &lt;div class="hide-on-medium-and-up" &gt; ... &lt;/div&gt;
+
+              &lt;!-- Hide on large devices --&gt;
+              &lt;div class="hide-only-large" &gt; ... &lt;/div&gt;
+
+              &lt;!-- Hide on large and extra-large devices --&gt;
+              &lt;div class="hide-on-large-and-up" &gt; ... &lt;/div&gt;
+
+              &lt;!-- Hide on small, medium and large devices --&gt;
+              &lt;div class="hide-on-large-and-down" &gt; ... &lt;/div&gt;
+
+              &lt;!-- Hide on extra-large devices --&gt;
+              &lt;div class="hide-only-extra-large" &gt; ... &lt;/div&gt;

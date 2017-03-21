@@ -215,7 +215,7 @@ footer {
   position: relative;
 }
 
-#samples-nav {
+.samples-nav {
   border: thin solid $grey;
   margin: ($margin * 2) 0 ($margin * 2) ($margin * 2);
   background: #fff;
@@ -265,3 +265,34 @@ footer {
     border-radius: 30px;
     margin: 0 auto;
 } // .color-tag
+
+div[id^="sample-"] {
+  &:not(:last-child) {
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    border-bottom: thin dashed #666;
+  }
+}
+
+.with-tooltip {
+  &.show {
+    .tooltip {
+      opacity: 1;
+      top: -10%;
+
+      &.top {
+        top: 50%;
+      }
+
+      &.right {
+        top: 50%;
+        left: 30%;
+      }
+
+      &.left {
+        top: 50%;
+        left: 65%;
+      }
+    }
+  } // .show
+} // .with-tooltip

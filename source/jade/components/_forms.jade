@@ -1,0 +1,165 @@
+
+#sample-form
+  h4 Forms
+
+  p.align-justify.
+    Probably all websites and apps will contain (at least) one form, so,
+    that's why <code class="primary">seed-css</code> has a really simple, easy to use and customizable
+    form field stylesheet. Have a look on the examples below:
+
+  br
+
+  .grid
+    .row
+      .col.md-6
+        .field
+          label(for="") This is an input text
+          input(type="text")
+
+      .col.md-6
+        .field
+          label(for="") This is an input text with additional info
+          input(type="text")
+          span.info This is an additional piece of information.
+
+    .row
+      .col.md-6
+        .field.has-feedback
+          label(for="") This is an input text with error message
+          input(type="text").error
+          span.error This is an error message!
+
+      .col.md-6
+        .field.has-feedback
+          label(for="") This is an input text with success message
+          input(type="text").success
+          span.success This is a success message!
+
+    .row
+      .col.md-6
+        .field
+          label(for="") This is a simple input password
+          input(type="password")
+
+    .row
+      .col.md-6
+        .field
+          label(for="") This is a simple input email
+          input(type="email", placeholder="name@domain.tld")
+
+      .col.md-6
+        .field
+          label(for="") This is a simple input URL
+          input(type="url", placeholder="http://domain.tld")
+
+    .row
+      .col.md-6
+        .field.seed-select
+          label(for="") This is a select/ dropdown
+          select
+            option(value="A") Option A
+            option(value="B") Option B
+            option(value="C") Option C
+
+      .col.md-6
+        .field.seed-select.has-feedback
+          label(for="") This is a select/ dropdown with error message
+          select.error
+            option(value="A") Option A
+            option(value="B") Option B
+            option(value="C") Option C
+          span.error This is an error message!
+
+    .row
+      .col.md-6
+        .field
+          input(type="radio", id="radio-sample-1", name="radio-sample[]")
+          label(for="radio-sample-1") This is a radio button
+        .field
+          input(type="radio", id="radio-sample-2", name="radio-sample[]")
+          label(for="radio-sample-2") This is a radio button
+        .field
+          input(type="radio", id="radio-sample-3", name="radio-sample[]")
+          label(for="radio-sample-3") This is a radio button
+        .field.has-feedback
+          input(type="radio", id="radio-sample-4", name="radio-sample[]").error
+          label(for="radio-sample-4") This is a radio button with error
+
+      .col.md-6
+        .field
+          input(type="checkbox", id="check-sample-1", name="check-sample[]")
+          label(for="check-sample-1") This is a checkbox
+        .field
+          input(type="checkbox", id="check-sample-2", name="check-sample[]")
+          label(for="check-sample-2") This is a checkbox
+        .field
+          input(type="checkbox", id="check-sample-3", name="check-sample[]")
+          label(for="check-sample-3") This is a checkbox
+        .field.has-feedback
+          input(type="checkbox", id="check-sample-4", name="check-sample[]").error
+          label(for="check-sample-4") This is a checkbox with error
+    .row
+      .col.sm-12
+        .field
+          label(for="") This is a simple textarea
+          textarea
+
+
+  .code-sample
+    pre.prettyprint.lang-html.
+      &lt;!-- Example of an input text --&gt;
+      &lt;div class="field" &gt;
+        &lt;label for="..." &gt; ... &lt;/label&gt;
+        &lt;input type="text" name="..." &gt;
+      &lt;/div&gt;
+
+      &lt;!-- Example of an input text with feedback (success or error) --&gt;
+      &lt;div class="field has-feedback" &gt;
+        &lt;label for="..." &gt; ... &lt;/label&gt;
+        &lt;input type="text" name="..." class="error" &gt;
+        &lt;span class="error" &gt; ... &lt;/span&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Example of an input password --&gt;
+      &lt;div class="field" &gt;
+        &lt;label for="..." &gt; ... &lt;/label&gt;
+        &lt;input type="password" name="..." &gt;
+      &lt;/div&gt;
+
+      &lt;!-- Example of an input email --&gt;
+      &lt;div class="field" &gt;
+        &lt;label for="..." &gt; ... &lt;/label&gt;
+        &lt;input type="email" name="..." placehoder="..." &gt;
+      &lt;/div&gt;
+
+      &lt;!-- Example of a dropdown --&gt;
+      &lt;div class="field seed-select" &gt;
+        &lt;label for="..." &gt; ... &lt;/label&gt;
+        &lt;select name="..." &gt;
+          &lt;option value="..." &gt; ... &lt;/option&gt;
+          &lt;option value="..." &gt; ... &lt;/option&gt;
+          &lt;option value="..." &gt; ... &lt;/option&gt;
+        &lt;/select&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Example of an input radio --&gt;
+      &lt;div class="field" &gt;
+        &lt;input type="radio" name="..." &gt;
+        &lt;label for="..." &gt;
+          ...
+        &lt;/label&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Example of a checkbox --&gt;
+      &lt;div class="field" &gt;
+        &lt;input type="checkbox" name="..." &gt;
+        &lt;label for="..." &gt;
+          ...
+        &lt;/label&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Example of a textarea --&gt;
+      &lt;div class="field" &gt;
+        &lt;label for="..." &gt; ... &lt;/label&gt;
+        &lt;textarea name="..." &gt; ... &lt;/textarea&gt;
+      &lt;/div&gt;

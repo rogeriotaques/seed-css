@@ -1,0 +1,146 @@
+
+#sample-buttons
+  h4 Buttons
+
+  p.align-justify.
+    Buttons are a really basic elements on any web page or app, and it
+    comes in a couple of different flavors in <code class="primary">seed-css</code>. In order to use the primary
+    just add the class name <code >.btn-primary</code>. If you need use
+    anchor (&lt;a /&gt;) as button, include the <code >.btn</code> class
+    name on it.
+
+  .buttons.align-center
+
+      h6.align-center Default
+
+      a.btn(href="#!") Anchor
+      button(type="button") Button element
+      input(type="button", value="Input button")
+
+      br
+
+      h6.align-center Primary (.btn-primary)
+
+      a.btn.btn-primary(href="#!") Anchor
+      button.btn-primary(type="button") Button element
+      input.btn-primary(type="button", value="Input button")
+
+      br
+
+      h6.align-center Colored (.btn-*color*)
+
+      a.btn.btn-red(href="#!") Anchor
+      button.btn-red(type="button") Button element
+      input.btn-red(type="button", value="Input button")
+
+      br
+
+      a.btn.btn-orange(href="#!") Anchor
+      button.btn-orange(type="button") Button element
+      input.btn-orange(type="button", value="Input button")
+
+      br
+
+      a.btn.btn-green(href="#!") Anchor
+      button.btn-green(type="button") Button element
+      input.btn-green(type="button", value="Input button")
+
+      br
+
+      a.btn.btn-purple(href="#!") Anchor
+      button.btn-purple(type="button") Button element
+      input.btn-purple(type="button", value="Input button")
+
+      br
+
+      h6.align-center Disabled (.disabled)
+
+      a.btn(href="#!", disabled) Anchor
+      button(type="button", disabled) Button element
+      input(type="button", value="Input button", disabled)
+
+      br
+
+      h6.align-center Flat (.flat-btn)
+
+      a.flat-btn(href="#!") Anchor
+      button.flat-btn(type="button") Button element
+      input.flat-btn(type="button", value="Input button")
+
+      br
+
+    h6.align-center Medium (.btn-medium)
+
+    .buttons.align-center
+
+      a.btn.btn-medium(href="#!") Anchor
+      button.btn-medium(type="button") Button element
+      input.btn-medium(type="button", value="Input button")
+
+      br
+
+    h6.align-center Small (.btn-small)
+
+    .buttons.align-center
+
+      a.btn.btn-small(href="#!") Anchor
+      button.btn-small(type="button") Button element
+      input.btn-small(type="button", value="Input button")
+
+  br
+
+  .code-sample
+    pre.prettyprint.lang-html.
+      &lt;!-- .btn class makes an anchor looks like a button --&gt;
+      &lt;a class="btn" href="..." &gt; ... &lt;/a&gt;
+
+      &lt;!-- default buttons and input[type="button"] --&gt;
+      &lt;button type="button" &gt; ... &lt;/button&gt;
+      &lt;input type="button" value="..." /&gt;
+
+      &lt;!-- .btn-primary makes buttons colored --&gt;
+      &lt;a class="btn btn-primary" href="..." &gt; ... &lt;/a&gt;
+      &lt;a class="btn btn-red" href="..." &gt; ... &lt;/a&gt;
+      &lt;a class="btn btn-green" href="..." &gt; ... &lt;/a&gt;
+
+      &lt;!-- .btn-primary makes buttons on different sizes --&gt;
+      &lt;a class="btn btn-medium" href="..." &gt; ... &lt;/a&gt;
+      &lt;a class="btn btn-small" href="..." &gt; ... &lt;/a&gt;
+
+      &lt;!-- .btn-primary makes disabled buttons --&gt;
+      &lt;a class="btn disabled" href="..." &gt; ... &lt;/a&gt;
+      &lt;button disabled &gt; ... &lt;/button&gt;
+
+  br
+
+  table
+    thead
+      tr
+        th Class
+        th Detail
+        th Remarks
+    tbody
+      tr
+        td.nowrap .btn
+        td.nowrap &nbsp;
+        td Makes anchors looks like buttons
+      tr
+        td.nowrap .btn-primary
+        td.nowrap &nbsp;
+        td Defines a 'primary' (blue) colored button
+      tr
+        td.nowrap .btn-(*color*)
+        td.nowrap &nbsp;
+        td Defines a colored button. Colors can be: <code>red</code>, <code>orange</code>, <code>green</code> or <code>purple</code>
+      tr
+        td.nowrap .btn-(*size*)
+        td.nowrap &nbsp;
+        td Defines a sized button. Sizes can be: <code>small</code> or <code>medium</code>. Default is <code>big</code>
+      tr
+        td.nowrap .disabled
+        td.nowrap &nbsp;
+        td Defines disabled buttons. Simply setting the <code>disabled</code> property will also make button looks like disabled
+      tr
+        td.nowrap .flat-btn
+        td.nowrap &nbsp;
+        td Defines <b>flat</b> buttons, which means no borders or background colors. You are still able to use <code>.btn-(*color*)</code> and or <code>.btn(*size*)</code> on this button type

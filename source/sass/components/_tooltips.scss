@@ -1,0 +1,119 @@
+.tooltip {
+  $bcolor: #333 !default;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: 15px;
+  border: thin solid $bcolor;
+  border-radius: 2px;
+  background-color: $bcolor;
+  padding: 10px;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  white-space: nowrap;
+  opacity: 0;
+  z-index: 20;
+
+  -webkit-transform: translateX(-54%);
+  -moz-transform: translateX(-54%);
+  -ms-transform: translateX(-54%);
+  transform: translateX(-54%);
+
+  -webkit-transition: all .25s linear;
+  -moz-transition: all .25s linear;
+  -ms-transition: all .25s linear;
+  transition: all .25s linear;
+
+  &::before {
+    content: ' ';
+    display: block;
+    border: 5px solid $bcolor;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    -webkit-transform: -webkit-rotate(45deg) translate(-50%, -2px);
+    -moz-transform: rotate(45deg) translate(-50%, -2px);
+    -ms-transform: rotate(45deg) translate(-50%, -2px);
+    transform: rotate(45deg) translate(-50%, -2px);
+  } // .tooltip::before
+
+  &.top {
+    top: 0;
+    left: 48.5%;
+    -webkit-transform: translateX(-50%) translateY(-110%);
+    -moz-transform: translateX(-50%) translateY(-110%);
+    -ms-transform: translateX(-50%) translateY(-110%);
+    transform: translateX(-50%) translateY(-110%);
+
+    &::before {
+      top: 100%;
+      left: 50%;
+      border: 5px solid $bcolor;
+      border-left-color: transparent;
+      border-top-color: transparent;
+
+      -webkit-transform: -webkit-rotate(45deg) translate(-50%, -2px);
+      -moz-transform: rotate(45deg) translate(-50%, -2px);
+      -ms-transform: rotate(45deg) translate(-50%, -2px);
+      transform: rotate(45deg) translate(-50%, -2px);
+    }
+  } // .top
+
+  &.right {
+    top: 50%;
+    left: 100%;
+    -webkit-transform: translateX(0%) translateY(-110%);
+    -moz-transform: translateX(0%) translateY(-110%);
+    -ms-transform: translateX(0%) translateY(-110%);
+    transform: translateX(0%) translateY(-110%);
+
+    &::before {
+      top: 50%;
+      left: 0;
+      border: 5px solid $bcolor;
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+
+      -webkit-transform: -webkit-rotate(-45deg) translate(-10%, -55%);
+      -moz-transform: rotate(-45deg) translate(-10%, -55%);
+      -ms-transform: rotate(-45deg) translate(-10%, -55%);
+      transform: rotate(-45deg) translate(-10%, -55%);
+    }
+  } // .right
+
+  &.left {
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateX(-100%) translateY(-110%);
+    -moz-transform: translateX(-100%) translateY(-110%);
+    -ms-transform: translateX(-100%) translateY(-110%);
+    transform: translateX(-100%) translateY(-110%);
+
+    &::before {
+      top: 50%;
+      left: 100%;
+      border: 5px solid $bcolor;
+      border-left-color: transparent;
+      border-top-color: transparent;
+
+      -webkit-transform: -webkit-rotate(-45deg) translate(-10%, -55%);
+      -moz-transform: rotate(-45deg) translate(-10%, -55%);
+      -ms-transform: rotate(-45deg) translate(-10%, -55%);
+      transform: rotate(-45deg) translate(-10%, -55%);
+    }
+  } // .left
+} // .tooltip
+
+.with-tooltip {
+  &:hover {
+    & > .tooltip {
+      display: block;
+      opacity: 1;
+    }
+  } // :hover
+} // .with-tooltip

@@ -1,0 +1,47 @@
+
+#sample-typography
+  h4 Typography
+
+  p.align-justify.
+    All default HTML tags are supported, including but not limited
+    to the below few examples.
+
+  p.align-justify.
+    We are using <b>Lato (300)</b> as general font-family and <b>Open Sans (400)</b> as
+    title's font-family. The easiest way to make these fonts available to your page is
+    loading them from Google Fonts, such as:
+
+  .code-sample
+    pre.prettyprint.lang-html.
+      &lt; link href="//fonts.googleapis.com/css?family=Lato:300,700|Open+Sans:400" rel="stylesheet" &gt;
+
+  .grid
+    .row
+      .col.sm-12.md-6
+        each i in [1,2,3,4,5,6]
+          #{'h'+i}= 'Header ' + i
+
+      .col.sm-12.md-6
+        p.
+          This is an paragraph. <br >
+          This is a <strong >bold</strong> text. <br >
+          This is an <i >italic</i> text. <br >
+          This is an <u >underlined</u> text. <br >
+          This is an <a href="#!">anchor</a> text.
+
+  .code-sample
+    pre.prettyprint.lang-html.
+      &lt;!-- Head lines --&gt;
+      &lt;h1 &gt; ... &lt;/h1&gt;
+      &lt;h2 &gt; ... &lt;/h2&gt;
+      &lt;h3 &gt; ... &lt;/h3&gt;
+      &lt;h4 &gt; ... &lt;/h4&gt;
+      &lt;h5 &gt; ... &lt;/h5&gt;
+      &lt;h6 &gt; ... &lt;/h6&gt;
+
+      &lt;!-- Other --&gt;
+      &lt;p &gt; ... &lt;/p&gt;
+      &lt;b &gt; ... &lt;/b&gt;
+      &lt;i &gt; ... &lt;/i&gt;
+      &lt;u &gt; ... &lt;/u&gt;
+      &lt;a href="." &gt; ... &lt;/a&gt;
