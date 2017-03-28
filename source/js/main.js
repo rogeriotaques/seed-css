@@ -75,6 +75,17 @@
       }
     });
 
+  $('.spy').each(function (i, el) {
+    var _el = $(el);
+    _el.on('click', function (evt) {
+      var ref = $(_el.attr('href'));
+
+      $('html, body').animate({
+        scrollTop: ref.offset().top
+      }, 400);
+    });
+  });
+
   // Makes possible the blur on heaader while scrolling.
   $(window)
     .on('scroll', function () {
