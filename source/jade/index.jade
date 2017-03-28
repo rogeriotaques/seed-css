@@ -152,6 +152,7 @@ html(lang="en")
               //- menu
 
               nav.samples-nav(data-attach="#sample-container", data-limit="#examples-components")
+                h5 The basic
                 ul.list
                   li.item
                     a(href="#sample-container").spy Container
@@ -182,9 +183,12 @@ html(lang="en")
 
               include components/_alerts
               include components/_buttons
+              include components/_cards
               include components/_forms
               include components/_lists
               include components/_modals
+              include components/_progress
+              include components/_side-panel
               include components/_tables
               include components/_tooltips
               include components/_utilities
@@ -193,17 +197,25 @@ html(lang="en")
               //- menu
 
               nav.samples-nav(data-attach="#sample-alerts", data-limit="#license")
+                h5 Components
+
                 ul.list
                   li.item
                     a(href="#sample-alerts").spy Alerts
                   li.item
                     a(href="#sample-buttons").spy Buttons
                   li.item
+                    a(href="#sample-cards").spy Cards
+                  li.item
                     a(href="#sample-form").spy Form
                   li.item
                     a(href="#sample-lists").spy Lists
                   li.item
                     a(href="#sample-modals").spy Modals
+                  li.item
+                    a(href="#sample-progress").spy Progress bar
+                  li.item
+                    a(href="#sample-side-panel").spy Side panel
                   li.item
                     a(href="#sample-tables").spy Tables
                   li.item

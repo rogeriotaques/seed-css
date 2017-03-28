@@ -216,9 +216,12 @@ footer {
 }
 
 .samples-nav {
-  border: thin solid $grey;
   margin: ($margin * 2) 0 ($margin * 2) ($margin * 2);
   background: #fff;
+
+  & > h5 {
+    text-align: right;
+  }
 
   &.stacked {
     position: absolute;
@@ -230,6 +233,7 @@ footer {
   }
 
   .list {
+    border: thin solid $grey;
     margin: 0;
     padding: 0;
   }

@@ -7,7 +7,7 @@
     that's why <code class="primary">seed-css</code> has a really simple, easy to use and customizable
     form field stylesheet. Have a look on the examples below:
 
-  br
+  h6 Simple elements
 
   .grid
     .row
@@ -163,3 +163,87 @@
         &lt;label for="..." &gt; ... &lt;/label&gt;
         &lt;textarea name="..." &gt; ... &lt;/textarea&gt;
       &lt;/div&gt;
+
+  h6 Grouped elements
+
+  .grid
+    .row 
+      .col.sm12
+        .field.group 
+          .field 
+            label(for="") First name 
+            input(type="text", id="first_name")
+
+          .field 
+            label(for="") Last name 
+            input(type="text", id="last_name")
+
+  .code-sample
+    pre.prettyprint.lang-html.
+      &lt;!-- Example of grouped fields --&gt;
+      &lt;div class="field group" &gt;
+        &lt;div class="field" &gt;
+          &lt;label for="..." &gt; ... &lt;/label&gt;
+          &lt;input type="text" name="..." &gt;
+        &lt;/div&gt;
+
+        &lt;div class="field" &gt;
+          &lt;label for="..." &gt; ... &lt;/label&gt;
+          &lt;input type="text" name="..." &gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+  h6 File upload
+
+  .grid           
+    .row 
+      .col.sm12
+        .field.seed-file
+          input(type="file", id="file")
+          label(for="file") 
+            span.input No file chosen
+            span.label 
+              i.icon.ion-paperclip
+              span Attachment
+
+  .code-sample
+    pre.prettyprint.lang-html.
+      &lt;!-- Example of file upload field --&gt;
+      &lt;div class="field seed-file" &gt;
+        &lt;input type="file" name="..." &gt;
+        &lt;label for="..." &gt;
+          &lt;span class="input" &gt; No file chosen &lt;/span&gt;
+          &lt;span class="label" &gt; Attachment &lt;/span&gt;
+        &lt;/label&gt;
+      &lt;/div&gt;
+
+  p.
+    Exceptionally the file upload component works better with a javascript support. Using javascript 
+    will create a much better user experience. The followin tiny javascript code will cover everything.
+
+  .code-sample
+    pre.prettyprint.lang-javascript.
+      // Get all input file elements 
+      var inputs = $('.seed-file > [type="file"]');
+
+      inputs.each((i, el) => {
+        var _el = $(el);
+        var label = _el.next('label');
+
+        // For each element, make sure that whenever its content change 
+        // file name will be displayed to the user.
+        _el.on('change', ev => {
+          var _this = $(ev.currentTarget);
+          var fileName = '';
+
+          if (_this[0].files && _this[0].files.length > 1) {
+            fileName + (_this.attr('data-multiple-caption') || '').replace('{count}', _this[0].files.length);
+          } else {
+            fileName = _this.val().split('\\').pop();
+          }
+
+          if (fileName) {
+            label.find('span:not(.label)').html(fileName);
+          }
+        });
+      });
