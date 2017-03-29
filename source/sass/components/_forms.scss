@@ -295,7 +295,7 @@
           height: 100%;
           padding: 0 5px;
           text-align: center;
-        }
+        } // span
 
         & > span.input {
           width: calc(70% - 10px);
@@ -303,16 +303,20 @@
           white-space: nowrap;
           overflow: hidden;
           vertical-align: top;
-        }
+        } // span.input
 
-        & > span.label {
+        & > span.button,
+        & > span.cancel {
           position: relative;
-          width: calc(30% - 10px);
           color: #fff;
           background-color: $primary;
           overflow: hidden;
           white-space: nowrap;
           text-overflow: ellipsis;
+        } // span.button, span.cancel
+
+        & > span.button {
+          width: calc(30% - 10px);
 
           & > .icon {
             position: absolute;
@@ -320,7 +324,15 @@
             margin-left: 20px;
             left: 0;
           }
-        }
+        } // span.button
+
+        // & > span.cancel {
+        //   position: relative;
+        //   width: calc(5% - 10px);
+        //   background-color: #bf0000;
+        //   visibility: hidden;
+        //   z-index: -1;
+        // } // span.cancel
 
         & * {
           pointer-events: none;
@@ -341,5 +353,14 @@
 	      outline: -webkit-focus-ring-color auto 5px;
       } // input:focus + label
     } // [type="file"]
+
+    // &.chosen {
+    //   [type="file"] + label {
+    //     & > span.cancel {
+    //       visibility: visible;
+    //       z-index: 20;
+    //     }
+    //   }
+    // }
   } // .seed-file
 }  // .field
