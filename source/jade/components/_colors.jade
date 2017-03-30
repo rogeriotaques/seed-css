@@ -12,13 +12,17 @@
         th Tag
         th Foreground class
         th Background class
+        th Color
     tbody
-      -var colorList = ['primary', 'red', 'orange', 'green', 'purple', 'grey', 'darkgrey', 'softgrey'];
-      -for (var colorIndex in colorList)
+      -var colorNameList = ['primary', 'red', 'orange', 'green', 'purple', 'grey', 'darkgrey', 'softgrey'];
+      -var colorList = ['#387cfd', '#d32f2f', '#fb8c00', '#43a047', '#8e24aa', '#ccc', '#666', '#f5f5f5'];
+      -for (var colorIndex in colorNameList)
         tr
           td
-            span(class=colorList[colorIndex]+'-background').color-tag
+            span(class=colorNameList[colorIndex]+'-background').color-tag
           td
-            code= '.' + colorList[colorIndex]
+            code= '.' + colorNameList[colorIndex]
           td
-            code= '.' + colorList[colorIndex] + '-background'
+            code= '.' + colorNameList[colorIndex] + '-background'
+          td
+            code= colorList[colorIndex]
