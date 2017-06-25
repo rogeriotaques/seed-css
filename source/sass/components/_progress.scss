@@ -1,0 +1,65 @@
+@-webkit-keyframes progressRunning{
+  0%   { margin-left: -100%; }
+  50%  { margin-left: 25%; }
+  100% { margin-left: 100%; }
+} // progressRunning
+
+@-moz-keyframes progressRunning{
+  0%   { margin-left: -100%; }
+  50%  { margin-left: 25%; }
+  100% { margin-left: 100%; }
+} // progressRunning
+
+@-ms-keyframes progressRunning{
+  0%   { margin-left: -100%; }
+  50%  { margin-left: 25%; }
+  100% { margin-left: 100%; }
+} // progressRunning
+
+@-o-keyframes progressRunning{
+  0%   { margin-left: -100%; }
+  50%  { margin-left: 25%; }
+  100% { margin-left: 100%; }
+} // progressRunning
+
+@keyframes progressRunning{
+  0%   { margin-left: -100%; }
+  50%  { margin-left: 25%; }
+  100% { margin-left: 100%; }
+} // progressRunning
+
+.progress-bar {
+  border: thin solid #888;
+  background-color: #f5f5f5;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+
+  & > .bar {
+    position: absolute;
+    height: 100%;
+    display: block;
+    z-index: 2;
+    background-color: $primary;
+    max-width: 100%;
+  } // > .bar
+
+  & > .label {
+    color: $grey;
+    position: relative;
+    z-index: 3;
+    width: 100%;
+  } // .label
+
+  &.undefined {
+    & > .bar {
+      width: 50% !important;
+      @include animation(progressRunning, 1.5s);
+      -webkit-animation-iteration-count: infinite;
+      -moz-animation-iteration-count: infinite;
+      -ms-animation-iteration-count: infinite;
+      -o-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+    }
+  } // .progress-bar.undefined
+} // .progress-bar
