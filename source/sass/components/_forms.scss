@@ -147,7 +147,7 @@
           border-right-color: transparent;
           @include rem(width, 16px);
           @include rem(height, 8px);
-          @include transf(rotate(-45deg));
+          @include transform(rotate(-45deg));
         }
       }
     }

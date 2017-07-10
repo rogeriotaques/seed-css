@@ -144,44 +144,109 @@
       // });
     });
 
+
+    // -------------------------------------------------------------------------
+    // Seed-CSS Required Javascript
+    // -------------------------------------------------------------------------
+
   
     // Makes the sample custom input file works
     var inputs = document.querySelectorAll('.seed-file > [type="file"]');
     
-    inputs.forEach(function (input, i) {
-      var label = input.nextElementSibling;
+    if (inputs !== null) {
+      inputs.forEach(function (input, i) {
+        var label = input.nextElementSibling;
 
-      input.addEventListener('change', function (evt) {
-        if (evt) {
-          evt.preventDefault();
-        }
+        input.addEventListener('change', function (evt) {
+          if (evt) {
+            evt.preventDefault();
+          }
 
-        var fileName = false;
+          var fileName = false;
 
-        if (this.files && this.files.length > 1) {
-          fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
-        } else if (this.value.trim().length > 0) {
-          fileName = this.value.split('\\').pop();
-        }
+          if (this.files && this.files.length > 1) {
+            fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
+          } else if (this.value.trim().length > 0) {
+            fileName = this.value.split('\\').pop();
+          }
 
-        if (fileName) {
-          label.querySelector('.input').innerHTML = fileName;
-        }
+          if (fileName) {
+            label.querySelector('.input').innerHTML = fileName;
+          }
 
-        if (input.value !== '') {
-          input.parentNode.classList.add('chosen');
+          if (input.value !== '') {
+            input.parentNode.classList.add('chosen');
+          }
+        });
+
+        // label.querySelector('.cancel').addEventListener('click', function (evt) {
+        //   if (evt) {
+        //     evt.preventDefault();
+        //   }
+
+        //   input.value = '';
+        //   input.parent.classList.remove('chosen');
+        //   label.querySelector('.input').innerHTML = '';
+        // });
+      });
+    }
+
+    // Makes the overlay modal window works
+    var html = document.querySelector('html');
+    var modals = document.querySelectorAll('.modal');
+    var modalTriggers = document.querySelectorAll('[role="modal"]');
+
+    if (modals !== null) {
+      modals.forEach(function (modal, i) {
+        // Handle the dismiss buttons
+        var dismissals = modal.querySelectorAll('[role="modal-dismiss"]');
+
+        if (dismissals !== null) {
+          dismissals.forEach(function (dismiss, j) {
+            dismiss.addEventListener('click', function (evt) {
+              if (evt) {
+                evt.preventDefault();
+              }
+
+              // Add the class that animates
+              modal.classList.add('hidden');
+
+              // After .65 seconds forces to 'hide' the component from DOM.
+              setTimeout(function () {
+                modal.style.display = 'none';
+                html.style.overflow = '';
+              }, 650);
+            });
+          });
         }
       });
+    }
 
-      // label.querySelector('.cancel').addEventListener('click', function (evt) {
-      //   if (evt) {
-      //     evt.preventDefault();
-      //   }
+    if (modalTriggers !== null) {
+      modalTriggers.forEach(function (trigger, i) {
+        trigger.addEventListener('click', function (evt) {
+          if (evt) {
+            evt.preventDefault();
+          }
 
-      //   input.value = '';
-      //   input.parent.classList.remove('chosen');
-      //   label.querySelector('.input').innerHTML = '';
-      // });
-    });
+          var ref = trigger.getAttribute('data-modal-id');
+
+          if (ref !== null) {
+            var modal = document.querySelector('#' + ref);
+            
+            if (modal !== null) {
+              modal.style.display = '';
+
+              // Need to use this timeout to make the animation possible.
+              setTimeout(function () {
+                modal.classList.remove('hidden');
+                html.style.overflow = 'hidden';
+              }, 150);
+            }
+          }
+        });
+      });
+    }
+
 
 }(jQuery));
