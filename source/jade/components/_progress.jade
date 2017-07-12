@@ -19,6 +19,23 @@
       .bar
       .label &nbsp;
 
+  br
+
+  .code-sample
+    pre.prettyprint.lang-html.
+      &lt;!-- Fixed progress --&gt;
+      &lt;div class="progress-bar" &gt;
+        &lt;div class="bar" &gt;&lt;/div&gt;
+        &lt;label &gt;60%&lt;/label&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Undefined progress --&gt;
+      &lt;div class="progress-bar undefined" &gt;
+        &lt;div class="bar" &gt;&lt;/div&gt;
+        &lt;label &gt;60%&lt;/label&gt;
+      &lt;/div&gt;
+
   h6 Spinner 
 
-  p Coming soon ...
+  div
+    include _spinner

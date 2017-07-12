@@ -1,28 +1,4 @@
-@-webkit-keyframes progressRunning{
-  0%   { margin-left: -100%; }
-  50%  { margin-left: 25%; }
-  100% { margin-left: 100%; }
-} // progressRunning
-
-@-moz-keyframes progressRunning{
-  0%   { margin-left: -100%; }
-  50%  { margin-left: 25%; }
-  100% { margin-left: 100%; }
-} // progressRunning
-
-@-ms-keyframes progressRunning{
-  0%   { margin-left: -100%; }
-  50%  { margin-left: 25%; }
-  100% { margin-left: 100%; }
-} // progressRunning
-
-@-o-keyframes progressRunning{
-  0%   { margin-left: -100%; }
-  50%  { margin-left: 25%; }
-  100% { margin-left: 100%; }
-} // progressRunning
-
-@keyframes progressRunning{
+@include keyframes(progressRunning) {
   0%   { margin-left: -100%; }
   50%  { margin-left: 25%; }
   100% { margin-left: 100%; }
