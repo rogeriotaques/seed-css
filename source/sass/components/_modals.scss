@@ -1,3 +1,5 @@
+$modal-initial-left: -100% !default;
+
 .modal {
   @include transition(all, .5s, linear);
   position: fixed;
@@ -14,22 +16,21 @@
 
     & > .modal-window {
       @include transition-delay(0s);
-      margin-left: -100%;
+      left: $modal-initial-left;
     } // > .modal-window   
   } // .modal.hidden
 
   & > &-window {
     @include box-shadow(rgba(0,0,0,.3) 0 3px 6px);
-    @include transform(translate(100%, 100%));
-    @include transition(margin, .25s, ease-in);
+    @include transform(translate(-50%, -50%));
+    @include transition(left, .5s, ease-in-out);
     @include transition-delay(.5s);
     background-color: #fff;
-    position: relative;
-    display: flex;
+    position: absolute;
     width: 500px;
     max-width: 90%;
-    justify-content: center;
-    flex-direction: column;
+    top: 50%;
+    left: 50%;
   } // > .modal-window
 
   & &-header {
