@@ -1,0 +1,80 @@
+@include keyframes (spinner) {
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+$default-dimension: 30px !default;
+$medium-dimension: 60px !default;
+$big-dimension: 90px !default;
+
+$gutter: 5px !default;
+$thickness: 3px;
+
+.spinner {
+  position: relative;
+  min-width: $default-dimension;
+  min-height: $default-dimension;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+
+  &:before {
+    content: 'Loading…';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: ($default-dimension - $gutter);
+    height: ($default-dimension - $gutter);
+    margin-top: -50%;
+    margin-left: -50%;
+  }
+
+  &:not(:required) {
+    &:before {
+      content: '';
+      border-radius: 50%;
+      border: 3px solid $grey;
+      border-top-color: $primary;
+      @include animation(spinner, 1s, linear, infinite);
+    }
+  }
+
+  &.medium {
+    min-width: $medium-dimension;
+    min-height: $medium-dimension;
+
+    &:before {
+      width: ($medium-dimension - $gutter - ($thickness * 2));
+      height: ($medium-dimension - $gutter - ($thickness * 2));
+      margin-top: -50%;
+      margin-left: -50%;
+    }
+
+    &:not(:required) {
+      &:before {
+        border: ($thickness * 2) solid $grey;
+        border-top-color: $primary;
+      }
+    }
+  }
+
+  &.big {
+    min-width: $big-dimension;
+    min-height: $big-dimension;
+
+    &:before {
+      width: ($big-dimension - $gutter - ($thickness * 3));
+      height: ($big-dimension - $gutter - ($thickness * 3));
+      margin-top: -50%;
+      margin-left: -50%;
+    }
+
+    &:not(:required) {
+      &:before {
+        border: ($thickness * 3) solid $grey;
+        border-top-color: $primary;
+      }
+    }
+  }
+}
