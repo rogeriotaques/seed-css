@@ -2,7 +2,8 @@
 @import "includes/mixins";
 
 @keyframes scroll-down {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(-10px);
   }
   50% {
@@ -12,7 +13,8 @@
 
 header {
   background-image: url('../images/css-code.jpeg');
-  background: linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7) ), url('../images/css-code.jpeg');
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)),
+    url('../images/css-code.jpeg');
   background-position: 0 0;
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -233,7 +235,8 @@ footer {
     position: absolute;
   } // .stacked
 
-  .list, .item {
+  .list,
+  .item {
     list-style: none;
     text-align: right;
   }
@@ -254,6 +257,7 @@ footer {
     overflow: hidden;
 
     a {
+      transition: all .3s ease;
       text-decoration: none;
       display: block;
       padding: 0 10px;
@@ -264,16 +268,15 @@ footer {
       }
     }
   }
-
 } // #samples-nav
 
 .color-tag {
-    border: thin solid #ccc;
-    display: block;
-    width: 24px;
-    height: 24px;
-    border-radius: 30px;
-    margin: 0 auto;
+  border: thin solid #ccc;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 30px;
+  margin: 0 auto;
 } // .color-tag
 
 div[id^="sample-"] {

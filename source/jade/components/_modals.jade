@@ -43,63 +43,30 @@
 
   p.
     Exceptionally the overlay modal component works better with javascript support, which will create a much 
-    better user experience. The followin tiny javascript code will cover everything.
+    better user experience. To make it easier <span class="primary">seed-css</span> 
+    has a plug-and-play javascript library that you can use, as follows:
+
+  h6 When using Node JS:
 
   .code-sample
-    pre.prettyprint.lang-js.
-      // Makes the overlay modal window works
-      var html = document.querySelector('html');
-      var modals = document.querySelectorAll('.modal');
-      var modalTriggers = document.querySelectorAll('[role="modal"]');
+    pre.prettyprint.lang-javascript.
+      // Import 
+      var modal = require('seed-css/seed-css.js');
 
-      if (modals !== null) {
-        modals.forEach(function (modal, i) {
-          // Handle the dismiss buttons
-          var dismissals = modal.querySelectorAll('[role="modal-dismiss"]');
+      // Initialize 
+      modal();
 
-          if (dismissals !== null) {
-            dismissals.forEach(function (dismiss, j) {
-              dismiss.addEventListener('click', function (evt) {
-                if (evt) {
-                  evt.preventDefault();
-                }
+  h6 When using Vanilla JS:
 
-                // Add the class that animates
-                modal.classList.add('hidden');
+  p First download the javascript library <a href="#library-download" class="spy ignore" >here</a>. 
+  p Then, include the following code to your HTML page, right before close the <code >BODY</code> tag.
 
-                // After .65 seconds forces to 'hide' the component from DOM.
-                setTimeout(function () {
-                  modal.style.display = 'none';
-                  html.style.overflow = '';
-                }, 650);
-              });
-            });
-          }
-        });
-      }
+  .code-sample 
+    pre.prettyprint.lang-html.
+      &lt;script src="seed-css.js" &gt;&lt;/script&gt;
 
-      if (modalTriggers !== null) {
-        modalTriggers.forEach(function (trigger, i) {
-          trigger.addEventListener('click', function (evt) {
-            if (evt) {
-              evt.preventDefault();
-            }
-
-            var ref = trigger.getAttribute('data-modal-id');
-
-            if (ref !== null) {
-              var modal = document.querySelector('#' + ref);
-              
-              if (modal !== null) {
-                modal.style.display = '';
-
-                // Need to use this timeout to make the animation possible.
-                setTimeout(function () {
-                  modal.classList.remove('hidden');
-                  html.style.overflow = 'hidden';
-                }, 150);
-              }
-            }
-          });
-        });
+  .code-sample
+    pre.prettyprint.lang-javascript.
+      if (typeof modal !== 'undefined') {
+        modal();
       }

@@ -169,7 +169,7 @@ html(lang="en")
                   li.item
                     a(href="#sample-colors").spy Colors
                   li.item
-                    a(href="#examples-components")
+                    a(href="#sample-alerts").spy.ignore
                       span Check the components &nbsp;
                       span.ion-arrow-down-c
 
@@ -195,10 +195,14 @@ html(lang="en")
             .col.md-4.lg-3.hide-only-small.relpos
               //- menu
 
-              nav.samples-nav(data-attach="#sample-alerts", data-limit="#license")
+              nav.samples-nav(data-attach="#sample-alerts", data-limit="#library-download")
                 h5 Components
 
                 ul.list
+                  li.item
+                    a(href="#sample-colors").spy.ignore
+                      span Check the basic &nbsp;
+                      span.ion-arrow-up-c
                   li.item
                     a(href="#sample-alerts").spy Alerts
                   li.item
@@ -221,6 +225,24 @@ html(lang="en")
                     a(href="#sample-tooltips").spy Tooltip
                   li.item
                     a(href="#sample-utilities").spy Utilities
+
+    section#library-download
+      .container
+        h2 JavaScript Library Download
+
+        p.align-justify.
+          Basically, <code class="primary">seed-css</code> doesn't have any javascript dependency 
+          to be applied to your website or application, since all its features are implemented using 
+          pure CSS. But, there're two exceptions that I've decided to create in order to create a 
+          better user experience.
+
+        p.align-justify.
+          Anyway, even though for these two special cases, the <code class="primary">seed-css</code> 
+          javascript library doesn't have any special dependency (e.g: jQuery or similar). It's written 
+          in <i>Vanilla JS</i> and is also exported to NodeJS.
+
+        .align-center
+          a(href="https://github.com/rogeriotaques/seed-css/releases/latest").btn.btn-primary DOWNLOAD NOW
 
     //- section#show-case
     //-   .container

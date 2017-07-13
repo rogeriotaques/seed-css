@@ -221,35 +221,30 @@
 
   p.
     Exceptionally the file upload component works better with a javascript support. Using javascript 
-    will create a much better user experience. The followin tiny javascript code will cover everything.
+    will create a much better user experience. To make it easier <span class="primary">seed-css</span> 
+    has a plug-and-play javascript library that you can use, as follows:
+
+  h6 When using Node JS:
 
   .code-sample
     pre.prettyprint.lang-javascript.
-      // Get all input file elements 
-      var inputs = document.querySelectorAll('.seed-file > [type="file"]');
-      
-      inputs.forEach(function (input, i) {
-        var label = input.nextElementSibling;
+      // Import 
+      var fileUpload = require('seed-css/seed-css.js');
 
-        input.addEventListener('change', function (evt) {
-          if (evt) {
-            evt.preventDefault();
-          }
+      // Initialize 
+      fileUpload();
 
-          var fileName = false;
+  h6 When using Vanilla JS:
 
-          if (this.files && this.files.length > 1) {
-            fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
-          } else if (this.value.trim().length > 0) {
-            fileName = this.value.split('\\').pop();
-          }
+  p First download the javascript library <a href="#library-download" class="spy ignore" >here</a>. 
+  p Then, include the following code to your HTML page, right before close the <code >BODY</code> tag.
 
-          if (fileName) {
-            label.querySelector('.input').innerHTML = fileName;
-          }
+  .code-sample 
+    pre.prettyprint.lang-html.
+      &lt;script src="seed-css.js" &gt;&lt;/script&gt;
 
-          if (input.value !== '') {
-            input.parentNode.classList.add('chosen');
-          }
-        });
-      });
+  .code-sample
+    pre.prettyprint.lang-javascript.
+      if (typeof fileUpload !== 'undefined') {
+        fileUpload();
+      }
