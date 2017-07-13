@@ -13,8 +13,8 @@
   var gutter = 20;
 
   /**
-   * Enables the hero effect.
-   */
+     * Enables the hero effect.
+     */
   var enableHero = function() {
     $(window).on('scroll', function() {
       var scroll = $(window).scrollTop();
@@ -26,9 +26,9 @@
   };
 
   /**
-   * Enables the scroll spy which highlights the menu item 
-   * as soon as the user scrolls on its content position.
-   */
+     * Enables the scroll spy which highlights the menu item
+     * as soon as the user scrolls on its content position.
+     */
   var enableScrollSpy = function() {
     // Define the initial position for all navs.
     $('.samples-nav').each(function(i, el) {
@@ -108,9 +108,9 @@
   };
 
   /**
-   * Enables the grid playground where user can add and remove 
-   * collumns in the sample page.
-   */
+     * Enables the grid playground where user can add and remove
+     * collumns in the sample page.
+     */
   var enableGridPlayground = function() {
     // add columns
     $('#add-col').off('click').on('click', function(evt) {
@@ -138,13 +138,10 @@
         $('#rem-col').attr('disabled', false);
       }
 
-      // when page is reloaded and it doesn't start on very top
-      // just attach the 'stacked' class to navbar to assure it will be
-      // available even on the middle of page.
-      if (curPos >= iniPos && $('#samples-nav.stacked').length === 0) {
-        if ( curPos + navbar.height() >= limitPos - 20 ) {
-          curPos -= (curPos + navbar.height() - limitPos + 20 );
-        }
+      if (cols.length >= 11) {
+        $(this).attr('disabled', true);
+      }
+    });
 
     // remove columns
     $('#rem-col').off('click').on('click', function(evt) {
@@ -165,12 +162,9 @@
           .removeClass('sm-1 sm-2 sm-3 sm-4 sm-5 sm-6 sm-7 sm-8 sm-9 sm-10 sm-11 sm-12')
           .addClass(lastClass);
 
-            row.find('.col').removeClass('sm-1 sm-2 sm-3 sm-4 sm-5 sm-6 sm-7 sm-8 sm-9 sm-10 sm-11 sm-12');
-            row.find('.col:last').after( $('<div />', {'class': 'col align-center'}).html( count + 1 ) );
-            row.find('.col').each(function () {
-              $(this).addClass('sm-1');
-            });
-            row.find('.col:last').toggleClass('sm-1 ' + lastClass);
+        $('#add-col').attr('disabled', false);
+      }
+
       if (cols.length <= 2) {
         $(this).attr('disabled', true);
       }
@@ -198,4 +192,3 @@
   // });
   // });
 })(jQuery);
-
