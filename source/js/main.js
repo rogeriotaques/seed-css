@@ -13,8 +13,8 @@
   var gutter = 20;
 
   /**
-   * Enables the hero effect.
-   */
+     * Enables the hero effect.
+     */
   var enableHero = function() {
     $(window).on('scroll', function() {
       var scroll = $(window).scrollTop();
@@ -26,9 +26,9 @@
   };
 
   /**
-   * Enables the scroll spy which highlights the menu item 
-   * as soon as the user scrolls on its content position.
-   */
+     * Enables the scroll spy which highlights the menu item
+     * as soon as the user scrolls on its content position.
+     */
   var enableScrollSpy = function() {
     // Define the initial position for all navs.
     $('.samples-nav').each(function(i, el) {
@@ -108,9 +108,9 @@
   };
 
   /**
-   * Enables the grid playground where user can add and remove 
-   * collumns in the sample page.
-   */
+     * Enables the grid playground where user can add and remove
+     * collumns in the sample page.
+     */
   var enableGridPlayground = function() {
     // add columns
     $('#add-col').off('click').on('click', function(evt) {
