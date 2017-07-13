@@ -1,5 +1,6 @@
 @keyframes scroll-down {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(-10px);
   }
 
@@ -184,6 +185,12 @@ footer form [type="submit"] {
   line-height: 45px;
   background: #f5f5f5;
   margin-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.sample-container.auto-height {
+  height: auto;
 }
 
 .grid.sample > .row > .col {
@@ -205,43 +212,49 @@ footer form [type="submit"] {
   position: relative;
 }
 
-#samples-nav {
-  border: thin solid #ccc;
+.samples-nav {
   margin: 20px 0 20px 20px;
   background: #fff;
 }
 
-#samples-nav.stacked {
+.samples-nav > h5 {
+  text-align: right;
+}
+
+.samples-nav.stacked {
   position: absolute;
 }
 
-#samples-nav .list, #samples-nav .item {
+.samples-nav .list,
+  .samples-nav .item {
   list-style: none;
   text-align: right;
 }
 
-#samples-nav .list {
+.samples-nav .list {
+  border: thin solid #ccc;
   margin: 0;
   padding: 0;
 }
 
-#samples-nav .item {
+.samples-nav .item {
   line-height: 35px;
   white-space: nowrap;
   overflow: hidden;
 }
 
-#samples-nav .item:not(:last-child) {
+.samples-nav .item:not(:last-child) {
   border-bottom: thin solid #ccc;
 }
 
-#samples-nav .item a {
+.samples-nav .item a {
+  transition: all .3s ease;
   text-decoration: none;
   display: block;
   padding: 0 10px;
 }
 
-#samples-nav .item a.active {
+.samples-nav .item a.active {
   background-color: #387cfd;
   color: #fff;
 }
@@ -253,4 +266,29 @@ footer form [type="submit"] {
   height: 24px;
   border-radius: 30px;
   margin: 0 auto;
+}
+
+div[id^="sample-"]:not(:last-child) {
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: thin dashed #666;
+}
+
+.with-tooltip.show .tooltip {
+  opacity: 1;
+  top: -10%;
+}
+
+.with-tooltip.show .tooltip.top {
+  top: 50%;
+}
+
+.with-tooltip.show .tooltip.right {
+  top: 50%;
+  left: 30%;
+}
+
+.with-tooltip.show .tooltip.left {
+  top: 50%;
+  left: 65%;
 }
