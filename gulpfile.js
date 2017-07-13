@@ -1,5 +1,4 @@
-var
-  gulp = require('gulp'),
+var gulp = require('gulp'),
   runSequence = require('run-sequence'),
   sync = require('browser-sync'),
   sass = require('gulp-sass'),
@@ -12,8 +11,13 @@ var
   replace = require('gulp-replace'),
   del = require('del'),
   header = require('gulp-header'),
+  util = require('gulp-util'),
   fs = require('fs'),
-  config, getVersion, updateVersion;
+  config,
+  getBuildVersion,
+  updatePackVersion,
+  runFlag =
+    util.env.major !== undefined ? 'major' : util.env.minor !== undefined ? 'minor' : 'patch';
 
 config = {
   fileName: 'seed',
@@ -21,15 +25,35 @@ config = {
     source: 'source/',
     build: 'build/',
     dist: 'dist/'
-  },
+  }
 };
 
-updateVersion = function ( pkg ) {
+updatePackVersion = function(pkg) {
   var v = pkg.version.split('.');
 
-  // increase minor version
-  v[2] = parseInt(v[2]) + 1;
-  pkg.version = v.join('.');
+  switch (runFlag) {
+    case 'major':
+      // increase major version
+      v[0] = parseInt(v[0]) + 1;
+      v[1] = 0;
+      v[2] = 0;
+      pkg.version = v.join('.');
+      break;
+
+    case 'minor':
+      // increase minor version
+      v[1] = parseInt(v[1]) + 1;
+      v[2] = 0;
+      pkg.version = v.join('.');
+      break;
+
+    default:
+      // patch
+      // increase patch version
+      v[2] = parseInt(v[2]) + 1;
+      pkg.version = v.join('.');
+      break;
+  }
 
   // write down the new version into package.json file.
   fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2));
@@ -38,14 +62,13 @@ updateVersion = function ( pkg ) {
   return pkg;
 };
 
-getVersion = function () {
-  var
-  date  = new Date(),
-  day   = date.getDate(),
-  month = date.getMonth() + 1,
-  year  = date.getFullYear(),
-  hour  = date.getHours(),
-  minute = date.getMinutes();
+getBuildVersion = function() {
+  var date = new Date(),
+    day = date.getDate(),
+    month = date.getMonth() + 1,
+    year = date.getFullYear(),
+    hour = date.getHours(),
+    minute = date.getMinutes();
 
   day = ('00' + day).substr(-2);
   month = ('00' + month).substr(-2);
@@ -55,65 +78,73 @@ getVersion = function () {
   return '' + year + month + day + hour + minute;
 };
 
-gulp.task('clean', function () {
+gulp.task('clean', function() {
   return del([config.path.build, config.path.dist]);
 });
 
-gulp.task('build:images', function () {
+gulp.task('build:images', function() {
   return gulp
     .src(config.path.source + 'images/**/*')
     .pipe(gulp.dest(config.path.build + 'assets/images'));
 });
 
-gulp.task('build:style', function () {
+gulp.task('build:style', function() {
   return gulp
     .src(config.path.source + 'sass/sample.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(beautify({indent: '  ', autosemicolon: true}))
+    .pipe(beautify({ indent: '  ', autosemicolon: true }))
     .pipe(concat('style.css'))
     .pipe(gulp.dest(config.path.build + 'assets/css'))
-    .pipe(sync.reload({stream: true}));
+    .pipe(sync.reload({ stream: true }));
 });
 
-gulp.task('build:sass', function () {
+gulp.task('build:sass', function() {
   return gulp
-    .src([
-      config.path.source + 'sass/normalize.scss',
-      config.path.source + 'sass/main.scss'
-    ])
+    .src([config.path.source + 'sass/normalize.scss', config.path.source + 'sass/main.scss'])
     .pipe(sass().on('error', sass.logError))
-    .pipe(beautify({indent: '  ', autosemicolon: true}))
+    .pipe(beautify({ indent: '  ', autosemicolon: true }))
     .pipe(concat(config.fileName + '.css'))
     .pipe(gulp.dest(config.path.build + 'assets/css'))
-    .pipe(sync.reload({stream: true}));
+    .pipe(sync.reload({ stream: true }));
 });
 
-gulp.task('build:jade', function () {
+gulp.task('build:jade', function() {
   var pkg = require('./package.json');
 
   return gulp
-    .src(config.path.source + 'jade/**/*.jade')
-    .pipe(jade({pretty: true}).on('error', function (err) {
-      console.log(err);
-      this.emit('end');
-    }))
+    .src(config.path.source + 'jade/*.jade')
+    .pipe(
+      jade({ pretty: true }).on('error', function(err) {
+        console.log(err);
+        this.emit('end');
+      })
+    )
     .pipe(replace(/\{\%version\%\}/g, 'v' + pkg.version))
-    .pipe(replace(/\{\%year\%\}/g, (new Date()).getFullYear()))
+    .pipe(replace(/\{\%year\%\}/g, new Date().getFullYear()))
     .pipe(gulp.dest(config.path.build));
 });
 
 gulp.task('build:jade-watch', ['build:jade'], sync.reload);
 
-gulp.task('build:javascript', function () {
-  return gulp
-    .src(config.path.source + 'js/**/*.js')
+gulp.task('build:javascript', function() {
+  // website bundle
+  gulp
+    .src([config.path.source + 'js/components/*.js', config.path.source + 'js/*.js'])
     .pipe(concat('bundle.js'))
     .pipe(gulp.dest(config.path.build + 'assets/js'))
-    .pipe(sync.reload({stream: true}));
+    .pipe(sync.reload({ stream: true }));
+
+  // dist seed-css.js
+  gulp
+    .src([config.path.source + 'js/components/*.js'])
+    .pipe(concat('seed-css.js'))
+    .pipe(gulp.dest(config.path.build + 'assets/js'))
+    .pipe(sync.reload({ stream: true }));
+
+  return true;
 });
 
-gulp.task('watch', function (cb) {
-
+gulp.task('watch', function(cb) {
   runSequence(
     'clean',
     ['build:style', 'build:sass', 'build:jade', 'build:javascript'],
@@ -125,7 +156,7 @@ gulp.task('watch', function (cb) {
     open: false,
     notify: false,
     server: {
-      baseDir: "./build"
+      baseDir: './build'
     }
   });
 
@@ -135,43 +166,39 @@ gulp.task('watch', function (cb) {
   gulp.watch(config.path.source + 'jade/**/*.jade', ['build:jade-watch']);
   gulp.watch(config.path.source + 'images/**/*', ['build:images']);
 
-  gulp.watch(config.path.build + 'assets/images/**/*' ).on('change', sync.reload);
+  gulp.watch(config.path.build + 'assets/images/**/*').on('change', sync.reload);
 });
 
-gulp.task('dist:run', ['build:sass', 'build:jade'], function () {
-
+gulp.task('dist:run', ['build:sass', 'build:jade', 'build:javascript'], function() {
   // get package json
   var pkg = require('./package.json');
 
-  // get latest minor version
-  pkg = updateVersion(pkg);
+  // updates the version
+  pkg = updatePackVersion(pkg);
 
-  // preparing the file header
-  var comment = '/** \n '
-    + '* <%= pkg.name %> \n '
-    + '* <%= pkg.description %> \n '
-    + '* @author <%= pkg.author %> \n '
-    + '* @copyright 2015-' + (new Date()).getFullYear() + ', <%= pkg.author %> \n '
-    + '* @license <%= pkg.license %> \n '
-    + '* @version <%= pkg.version %> \n '
-    + '*/ \n\n ';
+  // prepare files header
+  var comment =
+    '/** \n ' +
+    '* <%= pkg.name %> \n ' +
+    '* <%= pkg.description %> \n ' +
+    '* @author <%= pkg.author %> \n ' +
+    '* @copyright 2015-' +
+    new Date().getFullYear() +
+    ', <%= pkg.author %> \n ' +
+    '* @license <%= pkg.license %> \n ' +
+    '* @version <%= pkg.version %> \n ' +
+    '*/ \n\n ';
 
   return gulp
-    .src(config.path.build + 'assets/css/*.css')
-    // .pipe(gulpif(/\.js$/, uglify()))
+    .src([config.path.build + 'assets/css/seed.css', config.path.build + 'assets/js/seed-css.js'])
+    .pipe(gulpif(/\.js$/, uglify()))
     .pipe(gulpif(/\.css$/, minify()))
-    .pipe(gulpif(/\.(js|css)$/, header(comment, {pkg: pkg})))
+    .pipe(gulpif(/\.(js|css)$/, header(comment, { pkg: pkg })))
     .pipe(gulp.dest(config.path.dist));
 });
 
-gulp.task('dist', function (cb) {
-
-  runSequence(
-    'clean',
-    'dist:run',
-    cb
-  );
-
+gulp.task('dist', function(cb) {
+  runSequence('clean', 'dist:run', cb);
   return true;
 });
 

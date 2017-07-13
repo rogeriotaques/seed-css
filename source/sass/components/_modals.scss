@@ -1,0 +1,59 @@
+$modal-initial-left: -100% !default;
+
+.modal {
+  @include transition(all, .5s, linear);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0,0,0,.7);
+  z-index: 1000;
+
+  &.hidden {
+    @include transition-delay(.5s);
+    opacity: 0;
+
+    & > .modal-window {
+      @include transition-delay(0s);
+      left: $modal-initial-left;
+    } // > .modal-window   
+  } // .modal.hidden
+
+  & > &-window {
+    @include box-shadow(rgba(0,0,0,.3) 0 3px 6px);
+    @include transform(translate(-50%, -50%));
+    @include transition(left, .5s, ease-in-out);
+    @include transition-delay(.5s);
+    background-color: #fff;
+    position: absolute;
+    width: 500px;
+    max-width: 90%;
+    top: 50%;
+    left: 50%;
+  } // > .modal-window
+
+  & &-header {
+    padding: 20px 20px 0;
+    position: relative;
+
+    .modal-title {
+      margin: 0;
+      font-size: 3rem;
+      font-weight: 700;
+    } // .modal-title
+
+    .dismiss {
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      right: 20px;
+      color: $darken-grey !important;
+      font-size: 2rem;
+    } // .dismiss
+  } // .modal-header
+
+  & &-body {
+    padding: 0 20px 20px;
+  } // .modal-body
+} // .modal

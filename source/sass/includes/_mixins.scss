@@ -67,7 +67,22 @@
   }
 }
 
-@mixin trans($prop, $time, $animation) {
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+@mixin transition($prop, $time, $animation) {
   -webkit-transition: $prop $time $animation;
   -moz-transition: $prop $time $animation;
   -ms-transition: $prop $time $animation;
@@ -75,7 +90,15 @@
   transition: $prop $time $animation;
 }
 
-@mixin transf($prop) {
+@mixin transition-delay($timing) {
+  -webkit-transition-delay: $timing;
+  -moz-transition-delay: $timing;
+  -ms-transition-delay: $timing;
+  -o-transition-delay: $timing;
+  transition-delay: $timing;
+}
+
+@mixin transform($prop) {
   -webkit-transform: $prop;
   -moz-transform: $prop;
   -ms-transformn: $prop;
@@ -99,10 +122,26 @@
   appearance: $value;
 }
 
-@mixin animation ($name, $duration) {
-  -webkit-animation: $name $duration linear;
-  -moz-animation: $name $duration linear;
-  -ms-animation: $name $duration linear;
-  -o-animation: $name $duration linear;
-  animation: $name $duration linear;
+@mixin animation ($name, $duration: .5s, $easing: linear, $delay: "") {
+  -webkit-animation: $name $duration #{$delay} $easing;
+  -moz-animation: $name $duration #{$delay} $easing;
+  -ms-animation: $name $duration #{$delay} $easing;
+  -o-animation: $name $duration #{$delay} $easing;
+  animation: $name $duration #{$delay} $easing;
+}
+
+@mixin animation-delay ($delay) {
+  -webkit-animation-delay: $delay;
+  -moz-animation-delay: $delay;
+  -ms-animation-delay: $delay;
+  -o-animation-delay: $delay;
+  animation-delay: $delay;
+}
+
+@mixin animation-iteration-count ($count) {
+  -webkit-animation-iteration-count: $count;
+  -moz-animation-iteration-count: $count;
+  -ms-animation-iteration-count: $count;
+  -o-animation-iteration-count: $count;
+  animation-iteration-count: $count;
 }

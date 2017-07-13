@@ -147,7 +147,7 @@
           border-right-color: transparent;
           @include rem(width, 16px);
           @include rem(height, 8px);
-          @include transf(rotate(-45deg));
+          @include transform(rotate(-45deg));
         }
       }
     }
@@ -233,4 +233,134 @@
       }
     } // .seed-select
   } // .has-feedback
+
+  &.group {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+
+    & > .field {
+      margin: 0;
+      width: 100%;
+
+      & > input[type="text"],
+      & > input[type="password"],
+      & > input[type="search"],
+      & > input[type="tel"],
+      & > input[type="email"],
+      & > input[type="url"] {
+        position: relative;
+
+        &:focus,
+        &:active {
+          z-index: 5;
+        }
+      } // input[...]
+
+      & > button {
+        margin: 5px 0;
+        max-height: 4rem;
+        line-height: 3rem;
+      } // button 
+
+      &:last-child {
+        margin-left: -1px;
+      } // :last-child 
+    } // > .field
+  } // .group
+
+  &.seed-file {
+    & > [type="file"] {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+
+      & + label {
+        font-size: 1.5rem;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        padding: 0;
+        cursor: pointer;
+        box-sizing: content-box;
+        height: 4rem;
+
+        & > span {
+          display: inline-block;
+          line-height: 4rem;
+          height: 100%;
+          padding: 0 5px;
+          text-align: center;
+        } // span
+
+        & > span.input {
+          width: calc(70% - 10px);
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          vertical-align: top;
+        } // span.input
+
+        & > span.button,
+        & > span.cancel {
+          position: relative;
+          color: #fff;
+          background-color: $primary;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        } // span.button, span.cancel
+
+        & > span.button {
+          width: calc(30% - 10px);
+
+          & > .icon {
+            position: absolute;
+            font-size: 3rem;
+            margin-left: 20px;
+            left: 0;
+          }
+        } // span.button
+
+        // & > span.cancel {
+        //   position: relative;
+        //   width: calc(5% - 10px);
+        //   background-color: #bf0000;
+        //   visibility: hidden;
+        //   z-index: -1;
+        // } // span.cancel
+
+        & * {
+          pointer-events: none;
+        }
+      } // input + label
+
+      &:focus + label,
+      & + label:hover {
+        // background-color: #e2e2e2;
+
+        & > .label {
+          background-color: darken($primary, 10%);
+        }
+      } // input:focus + label, input + label
+
+      &:focus + label {
+        outline: 1px dotted #000;
+	      outline: -webkit-focus-ring-color auto 5px;
+      } // input:focus + label
+    } // [type="file"]
+
+    // &.chosen {
+    //   [type="file"] + label {
+    //     & > span.cancel {
+    //       visibility: visible;
+    //       z-index: 20;
+    //     }
+    //   }
+    // }
+  } // .seed-file
 }  // .field

@@ -1,4 +1,75 @@
 #sample-cards
   h4 Cards
 
-  p Coming soon ...
+  p.
+    Cards are important for applications and websites riches in content.
+
+  h6 Simple cards
+
+  .sample-container.auto-height 
+    
+    .grid
+      .row
+        .col.md-3 &nbsp;
+        .col.md-6 
+          
+          .card
+            .card-header
+              h5.card-title Card header
+            .card-body
+              p Card body
+            .card-footer
+              p Card footer
+
+        .col.md-3 &nbsp;
+
+  .code-sample
+      pre.prettyprint.lang-html.
+         &lt;div class="card" &gt;
+            &lt;div class="card-header" &gt;
+              &lt;h5 class="card-title" &gt;Card header&lt;/h5&gt;
+            &lt;/div&gt;
+            &lt;div class="card-body" &gt;
+              &lt;p &gt; Card body&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="card-footer" &gt;
+              &lt;p &gt; Card footer&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+
+  h6 Image cards
+
+  .sample-container.auto-height 
+    
+    .grid
+      .row
+        .col.md-3 &nbsp;
+        .col.md-6 
+          
+          .card.card-media
+            .card-header 
+              img(src="https://unsplash.it/350/200", alt="Sample image card")
+              h5.card-title Card header with image
+            .card-body
+              p Card body
+            .card-footer
+              p Card footer
+
+        .col.md-3 &nbsp;
+
+  .code-sample
+      pre.prettyprint.lang-html.
+         &lt;div class="card card-image" &gt;
+            &lt;div class="card-header" &gt;
+              &lt;img src="https://unsplash.it/350/200" alt="Sample image card" /&gt;
+              &lt;h5 class="card-title" &gt;Card header&lt;/h5&gt;
+            &lt;/div&gt;
+            &lt;div class="card-body" &gt;
+              &lt;p &gt; Card body&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="card-footer" &gt;
+              &lt;p &gt; Card footer&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+

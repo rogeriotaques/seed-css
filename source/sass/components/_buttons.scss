@@ -16,7 +16,7 @@ input[type="reset"]:not(.flat-btn) {
   color: $darken-grey;
   cursor: pointer;
   background-color: transparent;
-  @include trans(all, .25s, ease);
+  @include transition(all, .25s, ease);
   @include rem(font-size, 16px);
   @include rem(line-height, 35px);
   @include rem(min-width, 170px);
@@ -130,7 +130,7 @@ input[type="reset"]:not(.flat-btn) {
   color: $darken-grey;
   cursor: pointer;
   background-color: transparent;
-  @include trans(all, .25s, ease);
+  @include transition(all, .25s, ease);
   @include rem(font-size, 16px);
   @include rem(line-height, 35px);
   @include rem(min-width, 100px);

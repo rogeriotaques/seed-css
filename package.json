@@ -1,6 +1,6 @@
 {
   "name": "seed-css",
-  "version": "0.10.0",
+  "version": "1.0.3",
   "description": "A light-weight, mobile first and responsive CSS boilerplate.",
   "main": "dist/seed.css",
   "author": "Rogerio Taques (rogerio.taques@gmail.com)",
@@ -23,6 +23,7 @@
     "gulp-replace": "^0.5.4",
     "gulp-sass": "^2.2.0",
     "gulp-uglify": "^1.5.3",
+    "gulp-util": "^3.0.8",
     "run-sequence": "^1.1.5"
   }
 }

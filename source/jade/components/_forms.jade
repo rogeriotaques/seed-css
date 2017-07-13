@@ -202,7 +202,9 @@
           input(type="file", id="file")
           label(for="file") 
             span.input No file chosen
-            span.label 
+            //- span.cancel
+            //-   i.icon.ion-close
+            span.button 
               i.icon.ion-paperclip
               span Attachment
 
@@ -219,31 +221,30 @@
 
   p.
     Exceptionally the file upload component works better with a javascript support. Using javascript 
-    will create a much better user experience. The followin tiny javascript code will cover everything.
+    will create a much better user experience. To make it easier <span class="primary">seed-css</span> 
+    has a plug-and-play javascript library that you can use, as follows:
+
+  h6 When using Node JS:
 
   .code-sample
     pre.prettyprint.lang-javascript.
-      // Get all input file elements 
-      var inputs = $('.seed-file > [type="file"]');
+      // Import 
+      var fileUpload = require('seed-css/seed-css.js');
 
-      inputs.each((i, el) => {
-        var _el = $(el);
-        var label = _el.next('label');
+      // Initialize 
+      fileUpload();
 
-        // For each element, make sure that whenever its content change 
-        // file name will be displayed to the user.
-        _el.on('change', ev => {
-          var _this = $(ev.currentTarget);
-          var fileName = '';
+  h6 When using Vanilla JS:
 
-          if (_this[0].files && _this[0].files.length > 1) {
-            fileName + (_this.attr('data-multiple-caption') || '').replace('{count}', _this[0].files.length);
-          } else {
-            fileName = _this.val().split('\\').pop();
-          }
+  p First download the javascript library <a href="#library-download" class="spy ignore" >here</a>. 
+  p Then, include the following code to your HTML page, right before close the <code >BODY</code> tag.
 
-          if (fileName) {
-            label.find('span:not(.label)').html(fileName);
-          }
-        });
-      });
+  .code-sample 
+    pre.prettyprint.lang-html.
+      &lt;script src="seed-css.js" &gt;&lt;/script&gt;
+
+  .code-sample
+    pre.prettyprint.lang-javascript.
+      if (typeof fileUpload !== 'undefined') {
+        fileUpload();
+      }
