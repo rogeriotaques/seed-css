@@ -22,7 +22,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Seed CSS v1.1.0</title>
+    <title>Seed CSS v1.2.0</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="A light-weight, mobile first and responsive CSS boilerplate.">
     <meta name="keywords" content="css,boilerplate,javascript,html5,website,site,app,webapp,build,development">
@@ -31,16 +31,16 @@
     <meta name="license" content="MIT">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:300,700|Open+Sans:400">
     <link rel="stylesheet" type="text/css" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/seed.css?v=v1.1.0">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css?v=v1.1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/seed.css?v=v1.2.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css?v=v1.2.0">
   </head>
   <body>
     <header>
       <div class="container align-center">
         <h1>Seed CSS</h1>
         <p>A light-weight, mobile first and responsive CSS boilerplate.</p>
-        <div class="cta"><a href="https://github.com/rogeriotaques/seed-css/archive/develop.zip" class="btn btn-primary"><span>DOWNLOAD</span><span id="release">v1.1.0</span></a></div>
-        <p>(This page design is proudly based on <code class="primary">seed-css</code>)</p>
+        <div class="cta"><a href="https://github.com/rogeriotaques/seed-css/archive/develop.zip" class="btn btn-primary"><span>DOWNLOAD</span><span id="release">v1.2.0</span></a></div>
+        <p>(This page design is proudly based on <span class="primary">Seed CSS</span>)</p>
         <div><span title="Scroll down for more ..." class="ion-chevron-down scroll-down-for-more"></span></div>
       </div>
     </header>
@@ -618,44 +618,47 @@
                 <h4>Buttons</h4>
                 <p class="align-justify">
                   Buttons are a really basic elements on any web page or app, and it
-                  comes in a couple of different flavors in <code class="primary">seed-css</code>. In order to use the primary
-                  just add the class name <code >.btn-primary</code>. If you need use
-                  anchor (&lt;a /&gt;) as button, include the <code >.btn</code> class
-                  name on it.
+                  comes in a couple of different flavors in <code class="primary">seed-css</code>. 
+                  By simply adding the class <code >.btn</code> to any <code >&lt;a/&gt;</code> or 
+                  <code >&lt;button/&gt;</code> you will make it looks like a button. Adding the 
+                  class <code >.btn-primary</code> it will become a primary button. 
                   
                 </p>
+                <div class="alert warning">
+                  <p>NOTE: From version <code>1.2.0</code> buttons are required to use the <code >.btn</code> class.</p>
+                </div>
                 <div class="buttons align-center">
                   <h6 class="align-center">Default</h6><a href="#!" class="btn">Anchor</a>
-                  <button type="button">Button element</button>
-                  <input type="button" value="Input button"><br>
+                  <button type="button" class="btn">Button element</button>
+                  <input type="button" value="Input button" class="btn"><br>
                   <h6 class="align-center">Primary (.btn-primary)</h6><a href="#!" class="btn btn-primary">Anchor</a>
-                  <button type="button" class="btn-primary">Button element</button>
-                  <input type="button" value="Input button" class="btn-primary"><br>
+                  <button type="button" class="btn btn-primary">Button element</button>
+                  <input type="button" value="Input button" class="btn btn-primary"><br>
                   <h6 class="align-center">Colored (.btn-*color*)</h6><a href="#!" class="btn btn-red">Anchor</a>
-                  <button type="button" class="btn-red">Button element</button>
-                  <input type="button" value="Input button" class="btn-red"><br><a href="#!" class="btn btn-orange">Anchor</a>
-                  <button type="button" class="btn-orange">Button element</button>
-                  <input type="button" value="Input button" class="btn-orange"><br><a href="#!" class="btn btn-green">Anchor</a>
-                  <button type="button" class="btn-green">Button element</button>
-                  <input type="button" value="Input button" class="btn-green"><br><a href="#!" class="btn btn-purple">Anchor</a>
-                  <button type="button" class="btn-purple">Button element</button>
-                  <input type="button" value="Input button" class="btn-purple"><br>
+                  <button type="button" class="btn btn-red">Button element</button>
+                  <input type="button" value="Input button" class="btn btn-red"><br><a href="#!" class="btn btn-orange">Anchor</a>
+                  <button type="button" class="btn btn-orange">Button element</button>
+                  <input type="button" value="Input button" class="btn btn-orange"><br><a href="#!" class="btn btn-green">Anchor</a>
+                  <button type="button" class="btn btn-green">Button element</button>
+                  <input type="button" value="Input button" class="btn btn-green"><br><a href="#!" class="btn btn-purple">Anchor</a>
+                  <button type="button" class="btn btn-purple">Button element</button>
+                  <input type="button" value="Input button" class="btn btn-purple"><br>
                   <h6 class="align-center">Disabled (.disabled)</h6><a href="#!" disabled class="btn">Anchor</a>
-                  <button type="button" disabled>Button element</button>
-                  <input type="button" value="Input button" disabled><br>
+                  <button type="button" disabled class="btn">Button element</button>
+                  <input type="button" value="Input button" disabled class="btn"><br>
                   <h6 class="align-center">Flat (.flat-btn)</h6><a href="#!" class="flat-btn">Anchor</a>
                   <button type="button" class="flat-btn">Button element</button>
                   <input type="button" value="Input button" class="flat-btn"><br>
                 </div>
                 <h6 class="align-center">Medium (.btn-medium)
                   <div class="buttons align-center"><a href="#!" class="btn btn-medium">Anchor</a>
-                    <button type="button" class="btn-medium">Button element</button>
-                    <input type="button" value="Input button" class="btn-medium"><br>
+                    <button type="button" class="btn btn-medium">Button element</button>
+                    <input type="button" value="Input button" class="btn btn-medium"><br>
                   </div>
                   <h6 class="align-center">Small (.btn-small)</h6>
                   <div class="buttons align-center"><a href="#!" class="btn btn-small">Anchor</a>
-                    <button type="button" class="btn-small">Button element</button>
-                    <input type="button" value="Input button" class="btn-small">
+                    <button type="button" class="btn btn-small">Button element</button>
+                    <input type="button" value="Input button" class="btn btn-small">
                   </div>
                 </h6><br>
                 <div class="code-sample">
@@ -663,8 +666,8 @@
 &lt;a class="btn" href="..." &gt; ... &lt;/a&gt;
 
 &lt;!-- default buttons and input[type="button"] --&gt;
-&lt;button type="button" &gt; ... &lt;/button&gt;
-&lt;input type="button" value="..." /&gt;
+&lt;button type="button" class="btn" &gt; ... &lt;/button&gt;
+&lt;input type="button" class="btn" value="..." /&gt;
 
 &lt;!-- .btn-primary makes buttons colored --&gt;
 &lt;a class="btn btn-primary" href="..." &gt; ... &lt;/a&gt;
@@ -677,7 +680,7 @@
 
 &lt;!-- .btn-primary makes disabled buttons --&gt;
 &lt;a class="btn disabled" href="..." &gt; ... &lt;/a&gt;
-&lt;button disabled &gt; ... &lt;/button&gt;
+&lt;button class="btn" disabled &gt; ... &lt;/button&gt;
 </pre>
                 </div><br>
                 <table>
@@ -1128,7 +1131,7 @@ fileUpload();
                 </p>
                 <div class="sample-container auto-height"> 
                   <div class="align-center">
-                    <button type="button" role="modal" data-modal-id="modal" class="btn-primary">Modal Me</button>
+                    <button type="button" role="modal" data-modal-id="modal" class="btn btn-primary">Modal Me</button>
                   </div>
                   <div id="modal" style="display: none;" class="modal hidden">
                     <div class="modal-window"> 
@@ -1904,6 +1907,6 @@ myModal.hide('#modal');
     </footer>
     <script src="//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
     <script src="//code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
-    <script src="assets/js/bundle.js?v=v1.1.0"></script>
+    <script src="assets/js/bundle.js?v=v1.2.0"></script>
   </body>
 </html>

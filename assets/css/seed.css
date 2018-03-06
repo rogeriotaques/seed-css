@@ -441,6 +441,12 @@ pre {
   overflow: auto;
 }
 
+code {
+  padding: 2px;
+  border: thin solid #ddd;
+  background-color: #eee;
+}
+
 .container {
   width: 90%;
   margin: 10px auto;
@@ -1054,11 +1060,7 @@ strong {
  * @see https://github.com/AbtzLabs/seed-css
  * @license MIT (https://opensource.org/licenses/MIT)
  * ----------------------- */
-.btn,
-button,
-input[type='button']:not(.flat-btn),
-input[type='submit']:not(.flat-btn),
-input[type='reset']:not(.flat-btn) {
+.btn {
   display: inline-block;
   box-sizing: border-box;
   margin: 5px;
@@ -1085,119 +1087,67 @@ input[type='reset']:not(.flat-btn) {
   border-radius: 2.5px;
 }
 
-.btn:hover,
-  button:hover,
-  input[type='button']:not(.flat-btn):hover,
-  input[type='submit']:not(.flat-btn):hover,
-  input[type='reset']:not(.flat-btn):hover {
+.btn:hover {
   color: #387cfd;
   border-color: #387cfd;
 }
 
-.btn.btn-primary,
-  button.btn-primary,
-  input[type='button']:not(.flat-btn).btn-primary,
-  input[type='submit']:not(.flat-btn).btn-primary,
-  input[type='reset']:not(.flat-btn).btn-primary {
+.btn.btn-primary {
   border-color: #387cfd;
   background-color: #387cfd;
   color: whitesmoke;
 }
 
-.btn.btn-primary:hover,
-    button.btn-primary:hover,
-    input[type='button']:not(.flat-btn).btn-primary:hover,
-    input[type='submit']:not(.flat-btn).btn-primary:hover,
-    input[type='reset']:not(.flat-btn).btn-primary:hover {
+.btn.btn-primary:hover {
   background-color: #065bfc;
   border-color: #065bfc;
 }
 
-.btn.btn-red,
-  button.btn-red,
-  input[type='button']:not(.flat-btn).btn-red,
-  input[type='submit']:not(.flat-btn).btn-red,
-  input[type='reset']:not(.flat-btn).btn-red {
+.btn.btn-red {
   border-color: #d32f2f;
   background-color: #d32f2f;
   color: whitesmoke;
 }
 
-.btn.btn-red:hover,
-    button.btn-red:hover,
-    input[type='button']:not(.flat-btn).btn-red:hover,
-    input[type='submit']:not(.flat-btn).btn-red:hover,
-    input[type='reset']:not(.flat-btn).btn-red:hover {
+.btn.btn-red:hover {
   background-color: #ab2424;
   border-color: #ab2424;
 }
 
-.btn.btn-orange,
-  button.btn-orange,
-  input[type='button']:not(.flat-btn).btn-orange,
-  input[type='submit']:not(.flat-btn).btn-orange,
-  input[type='reset']:not(.flat-btn).btn-orange {
+.btn.btn-orange {
   border-color: #fb8c00;
   background-color: #fb8c00;
   color: whitesmoke;
 }
 
-.btn.btn-orange:hover,
-    button.btn-orange:hover,
-    input[type='button']:not(.flat-btn).btn-orange:hover,
-    input[type='submit']:not(.flat-btn).btn-orange:hover,
-    input[type='reset']:not(.flat-btn).btn-orange:hover {
+.btn.btn-orange:hover {
   background-color: #c87000;
   border-color: #c87000;
 }
 
-.btn.btn-green,
-  button.btn-green,
-  input[type='button']:not(.flat-btn).btn-green,
-  input[type='submit']:not(.flat-btn).btn-green,
-  input[type='reset']:not(.flat-btn).btn-green {
+.btn.btn-green {
   border-color: #43a047;
   background-color: #43a047;
   color: whitesmoke;
 }
 
-.btn.btn-green:hover,
-    button.btn-green:hover,
-    input[type='button']:not(.flat-btn).btn-green:hover,
-    input[type='submit']:not(.flat-btn).btn-green:hover,
-    input[type='reset']:not(.flat-btn).btn-green:hover {
+.btn.btn-green:hover {
   background-color: #347c37;
   border-color: #347c37;
 }
 
-.btn.btn-purple,
-  button.btn-purple,
-  input[type='button']:not(.flat-btn).btn-purple,
-  input[type='submit']:not(.flat-btn).btn-purple,
-  input[type='reset']:not(.flat-btn).btn-purple {
+.btn.btn-purple {
   border-color: #8e24aa;
   background-color: #8e24aa;
   color: whitesmoke;
 }
 
-.btn.btn-purple:hover,
-    button.btn-purple:hover,
-    input[type='button']:not(.flat-btn).btn-purple:hover,
-    input[type='submit']:not(.flat-btn).btn-purple:hover,
-    input[type='reset']:not(.flat-btn).btn-purple:hover {
+.btn.btn-purple:hover {
   background-color: #6b1b80;
   border-color: #6b1b80;
 }
 
-.btn .disabled, .btn[disabled],
-  button .disabled,
-  button[disabled],
-  input[type='button']:not(.flat-btn) .disabled,
-  input[type='button']:not(.flat-btn)[disabled],
-  input[type='submit']:not(.flat-btn) .disabled,
-  input[type='submit']:not(.flat-btn)[disabled],
-  input[type='reset']:not(.flat-btn) .disabled,
-  input[type='reset']:not(.flat-btn)[disabled] {
+.btn .disabled, .btn[disabled] {
   border-color: #ccc;
   background-color: #ccc;
   color: #888;
@@ -1205,25 +1155,13 @@ input[type='reset']:not(.flat-btn) {
   text-shadow: 1px 1px 1px #fff;
 }
 
-.btn .disabled:hover, .btn[disabled]:hover,
-    button .disabled:hover,
-    button[disabled]:hover,
-    input[type='button']:not(.flat-btn) .disabled:hover,
-    input[type='button']:not(.flat-btn)[disabled]:hover,
-    input[type='submit']:not(.flat-btn) .disabled:hover,
-    input[type='submit']:not(.flat-btn)[disabled]:hover,
-    input[type='reset']:not(.flat-btn) .disabled:hover,
-    input[type='reset']:not(.flat-btn)[disabled]:hover {
+.btn .disabled:hover, .btn[disabled]:hover {
   color: #888;
   border-color: #ccc;
   background-color: #ccc;
 }
 
-.btn.btn-medium,
-  button.btn-medium,
-  input[type='button']:not(.flat-btn).btn-medium,
-  input[type='submit']:not(.flat-btn).btn-medium,
-  input[type='reset']:not(.flat-btn).btn-medium {
+.btn.btn-medium {
   min-width: 120px;
   min-width: 12rem;
   font-size: 14px;
@@ -1232,11 +1170,7 @@ input[type='reset']:not(.flat-btn) {
   line-height: 3rem;
 }
 
-.btn.btn-small,
-  button.btn-small,
-  input[type='button']:not(.flat-btn).btn-small,
-  input[type='submit']:not(.flat-btn).btn-small,
-  input[type='reset']:not(.flat-btn).btn-small {
+.btn.btn-small {
   min-width: 80px;
   min-width: 8rem;
   font-size: 12px;
