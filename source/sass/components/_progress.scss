@@ -1,7 +1,21 @@
+/* -----------------------
+ * Seed CSS - Progress Bar
+ * @version 1.1.0
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @license MIT (https://opensource.org/licenses/MIT)
+ * ----------------------- */
+
 @include keyframes(progressRunning) {
-  0%   { margin-left: -100%; }
-  50%  { margin-left: 25%; }
-  100% { margin-left: 100%; }
+  0% {
+    margin-left: -100%;
+  }
+  50% {
+    margin-left: 25%;
+  }
+  100% {
+    margin-left: 100%;
+  }
 } // progressRunning
 
 .progress-bar {
@@ -10,6 +24,7 @@
   overflow: hidden;
   position: relative;
   z-index: 1;
+  min-height: 20px;
 
   & > .bar {
     position: absolute;

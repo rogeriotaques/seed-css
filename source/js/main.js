@@ -1,9 +1,8 @@
 /**
  * Seed-CSS Landing Page.
- * @author Rogerio Taques (rogerio.taques@gmail.com)
- * @see http://rogeriotaques.github.io/seed-css/
- * @version 1.0.0
- * @since 2017-07-13
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @version 1.1.0
  * @license private
  */
 
@@ -13,8 +12,8 @@
   var gutter = 20;
 
   /**
-     * Enables the hero effect.
-     */
+   * Enables the hero effect.
+   */
   var enableHero = function() {
     $(window).on('scroll', function() {
       var scroll = $(window).scrollTop();
@@ -26,9 +25,9 @@
   };
 
   /**
-     * Enables the scroll spy which highlights the menu item
-     * as soon as the user scrolls on its content position.
-     */
+   * Enables the scroll spy which highlights the menu item
+   * as soon as the user scrolls on its content position.
+   */
   var enableScrollSpy = function() {
     // Define the initial position for all navs.
     $('.samples-nav').each(function(i, el) {
@@ -60,7 +59,10 @@
                 width: _this.data('width'),
                 top: Math.fround(scroll - _this.data('start') + gutter)
               });
-            } else if (scroll < _this.data('start') && _this.hasClass('stacked')) {
+            } else if (
+              scroll < _this.data('start') &&
+              _this.hasClass('stacked')
+            ) {
               _this.removeClass('stacked');
               _this.css({
                 top: '',
@@ -74,20 +76,22 @@
       .on('scroll resize', function() {
         var scroll = $(window).scrollTop();
 
-        $('.spy').not('.ignore').each(function(i, el) {
-          var _el = $(el);
-          var ref = $(_el.attr('href'));
+        $('.spy')
+          .not('.ignore')
+          .each(function(i, el) {
+            var _el = $(el);
+            var ref = $(_el.attr('href'));
 
-          if (
-            ref.offset() !== undefined &&
-            scroll >= ref.offset().top - gutter &&
-            scroll < ref.offset().top + ref.height() - gutter
-          ) {
-            $('.spy.active').removeClass('active');
-            _el.addClass('active');
-            return false;
-          }
-        });
+            if (
+              ref.offset() !== undefined &&
+              scroll >= ref.offset().top - gutter &&
+              scroll < ref.offset().top + ref.height() - gutter
+            ) {
+              $('.spy.active').removeClass('active');
+              _el.addClass('active');
+              return false;
+            }
+          });
       });
 
     // Smooth the scrolling when user clicks on any item from side nav.
@@ -108,67 +112,77 @@
   };
 
   /**
-     * Enables the grid playground where user can add and remove
-     * collumns in the sample page.
-     */
+   * Enables the grid playground where user can add and remove
+   * collumns in the sample page.
+   */
   var enableGridPlayground = function() {
     // add columns
-    $('#add-col').off('click').on('click', function(evt) {
-      if (evt) {
-        evt.preventDefault();
-      }
+    $('#add-col')
+      .off('click')
+      .on('click', function(evt) {
+        if (evt) {
+          evt.preventDefault();
+        }
 
-      var row = $('#flexible-cols');
-      var cols = row.find('.col');
+        var row = $('#flexible-cols');
+        var cols = row.find('.col');
 
-      if (cols.length < 12) {
-        var count = cols.length;
-        var remain = 12 - count;
-        var lastClass = 'sm-' + remain;
+        if (cols.length < 12) {
+          var count = cols.length;
+          var remain = 12 - count;
+          var lastClass = 'sm-' + remain;
 
-        row
-          .find('.col')
-          .removeClass('sm-1 sm-2 sm-3 sm-4 sm-5 sm-6 sm-7 sm-8 sm-9 sm-10 sm-11 sm-12');
-        row.find('.col:last').after($('<div />', { class: 'col align-center' }).html(count + 1));
-        row.find('.col').each(function() {
-          $(this).addClass('sm-1');
-        });
-        row.find('.col:last').toggleClass('sm-1 ' + lastClass);
+          row
+            .find('.col')
+            .removeClass(
+              'sm-1 sm-2 sm-3 sm-4 sm-5 sm-6 sm-7 sm-8 sm-9 sm-10 sm-11 sm-12'
+            );
+          row
+            .find('.col:last')
+            .after($('<div />', { class: 'col align-center' }).html(count + 1));
+          row.find('.col').each(function() {
+            $(this).addClass('sm-1');
+          });
+          row.find('.col:last').toggleClass('sm-1 ' + lastClass);
 
-        $('#rem-col').attr('disabled', false);
-      }
+          $('#rem-col').attr('disabled', false);
+        }
 
-      if (cols.length >= 11) {
-        $(this).attr('disabled', true);
-      }
-    });
+        if (cols.length >= 11) {
+          $(this).attr('disabled', true);
+        }
+      });
 
     // remove columns
-    $('#rem-col').off('click').on('click', function(evt) {
-      if (evt) {
-        evt.preventDefault();
-      }
+    $('#rem-col')
+      .off('click')
+      .on('click', function(evt) {
+        if (evt) {
+          evt.preventDefault();
+        }
 
-      var row = $('#flexible-cols');
-      var cols = row.find('.col');
+        var row = $('#flexible-cols');
+        var cols = row.find('.col');
 
-      if (cols.length > 1) {
-        var remain = cols.length - 1;
-        var lastClass = 'sm-' + (12 - remain + 1);
+        if (cols.length > 1) {
+          var remain = cols.length - 1;
+          var lastClass = 'sm-' + (12 - remain + 1);
 
-        row.find('.col:last').remove();
-        row
-          .find('.col:last')
-          .removeClass('sm-1 sm-2 sm-3 sm-4 sm-5 sm-6 sm-7 sm-8 sm-9 sm-10 sm-11 sm-12')
-          .addClass(lastClass);
+          row.find('.col:last').remove();
+          row
+            .find('.col:last')
+            .removeClass(
+              'sm-1 sm-2 sm-3 sm-4 sm-5 sm-6 sm-7 sm-8 sm-9 sm-10 sm-11 sm-12'
+            )
+            .addClass(lastClass);
 
-        $('#add-col').attr('disabled', false);
-      }
+          $('#add-col').attr('disabled', false);
+        }
 
-      if (cols.length <= 2) {
-        $(this).attr('disabled', true);
-      }
-    });
+        if (cols.length <= 2) {
+          $(this).attr('disabled', true);
+        }
+      });
   };
 
   enableHero();

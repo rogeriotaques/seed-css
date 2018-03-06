@@ -1,8 +1,12 @@
-@import "../includes/_variables";
-
 /* -----------------------
  * Seed CSS - Colors
+ * @version 1.1.0
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @license MIT (https://opensource.org/licenses/MIT)
  * ----------------------- */
+
+@import '../includes/_variables';
 
 .primary {
   color: $primary;
@@ -13,59 +17,57 @@
 } // .primary
 
 .red {
-    color: $red;
+  color: $red;
 
-    &-background {
-        background-color: $red;
-    } // .red-background
+  &-background {
+    background-color: $red;
+  } // .red-background
 } // .red
 
 .orange {
-    color: $orange;
+  color: $orange;
 
-    &-background {
-        background-color: $orange;
-    } // .orange-background
+  &-background {
+    background-color: $orange;
+  } // .orange-background
 } // .orange
 
 .green {
-    color: $green;
+  color: $green;
 
-    &-background {
-        background-color: $green;
-    } // .green-background
+  &-background {
+    background-color: $green;
+  } // .green-background
 } // .green
 
 .purple {
-    color: $purple;
+  color: $purple;
 
-    &-background {
-        background-color: $purple;
-    } // .purple-background
+  &-background {
+    background-color: $purple;
+  } // .purple-background
 } // .purple
 
 .grey {
-    color: $grey;
+  color: $grey;
 
-    &-background {
-        background-color: $grey;
-    } // .grey-background
+  &-background {
+    background-color: $grey;
+  } // .grey-background
 } // .grey
 
 .darkgrey {
-    color: $darken-grey;
+  color: $darken-grey;
 
-    &-background {
-        background-color: $darken-grey;
-    } // .darkgrey-background
+  &-background {
+    background-color: $darken-grey;
+  } // .darkgrey-background
 } // .darkgrey
 
 .softgrey {
-    color: $grey-light;
+  color: $grey-light;
 
-    &-background {
-        background-color: $grey-light;
-    } // .softgrey-background
+  &-background {
+    background-color: $grey-light;
+  } // .softgrey-background
 } // .softgrey
-
-

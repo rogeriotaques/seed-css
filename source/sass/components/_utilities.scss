@@ -1,5 +1,9 @@
 /* -----------------------
  * Seed CSS - Utilities
+ * @version 1.1.0
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @license MIT (https://opensource.org/licenses/MIT)
  * ----------------------- */
 
 // alignment
@@ -52,19 +56,37 @@ img {
 }
 
 .upper-case {
+  -webkit-text-transform: uppercase;
+  -moz-text-transform: uppercase;
+  -ms-text-transform: uppercase;
+  -o-text-transform: uppercase;
   text-transform: uppercase;
 }
 
 .lower-case {
+  -webkit-text-transform: lowercase;
+  -moz-text-transform: lowercase;
+  -ms-text-transform: lowercase;
+  -o-text-transform: lowercase;
   text-transform: lowercase;
 }
 
 .camel-case {
+  -webkit-text-transform: capitalize;
+  -moz-text-transform: capitalize;
+  -ms-text-transform: capitalize;
+  -o-text-transform: capitalize;
   text-transform: capitalize;
 }
 
-.uc-first::first-letter {
-  text-transform: capitalize;
+.uc-first {
+  &::first-letter {
+    -webkit-text-transform: capitalize;
+    -moz-text-transform: capitalize;
+    -ms-text-transform: capitalize;
+    -o-text-transform: capitalize;
+    text-transform: capitalize;
+  }
 }
 
 // show and hide
@@ -121,7 +143,7 @@ img {
     &-up {
       @media #{$large-and-up} {
         display: none !important;
-      }}
+      }
+    }
   }
 }
-

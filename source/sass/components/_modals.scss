@@ -1,30 +1,38 @@
+/* -----------------------
+ * Seed CSS - Modals
+ * @version 1.1.0
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @license MIT (https://opensource.org/licenses/MIT)
+ * ----------------------- */
+
 $modal-initial-left: -100% !default;
 
 .modal {
-  @include transition(all, .5s, linear);
+  @include transition(all, 0.2s, linear);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(0,0,0,.7);
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 1000;
 
   &.hidden {
-    @include transition-delay(.5s);
+    @include transition-delay(0.2s);
     opacity: 0;
 
     & > .modal-window {
       @include transition-delay(0s);
       left: $modal-initial-left;
-    } // > .modal-window   
+    } // > .modal-window
   } // .modal.hidden
 
   & > &-window {
-    @include box-shadow(rgba(0,0,0,.3) 0 3px 6px);
+    @include box-shadow(rgba(0, 0, 0, 0.3) 0 3px 6px);
     @include transform(translate(-50%, -50%));
-    @include transition(left, .5s, ease-in-out);
-    @include transition-delay(.5s);
+    @include transition(left, 0.15s, ease-in-out);
+    @include transition-delay(0.15s);
     background-color: #fff;
     position: absolute;
     width: 500px;

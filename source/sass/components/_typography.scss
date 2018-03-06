@@ -1,5 +1,9 @@
 /* -----------------------
  * Seed CSS - Typography
+ * @version 1.1.0
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @license MIT (https://opensource.org/licenses/MIT)
  * ----------------------- */
 
 a:not(.btn):not(.flat-btn),
@@ -14,7 +18,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Open Sans";
+  font-family: 'Open Sans';
   font-weight: 400;
 
   margin: {

@@ -1,31 +1,29 @@
-
 /** --------------------------------------------------- **/
 
-/**
+/*!
  * Seed CSS
- * @version 0.1
- * @author Rogerio Taques (rogerio.taques@gmail.com)
- * @see https://github.com/rogeriotaques/seed-css
+ * @version 1.1.0
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
  * @license MIT (https://opensource.org/licenses/MIT)
  */
 
-
-@import "includes/variables";
-@import "includes/mixins";
+@import 'includes/variables';
+@import 'includes/mixins';
 
 // components
-@import "components/base";
-@import "components/colors";
-@import "components/typography";
-@import "components/grid";
-@import "components/buttons";
-@import "components/lists";
-@import "components/tables";
-@import "components/utilities";
-@import "components/forms";
-@import "components/alerts";
-@import "components/tooltips";
-@import "components/cards";
-@import "components/progress";
-@import "components/spinner";
-@import "components/modals";
+@import 'components/base';
+@import 'components/colors';
+@import 'components/typography';
+@import 'components/grid';
+@import 'components/buttons';
+@import 'components/lists';
+@import 'components/tables';
+@import 'components/utilities';
+@import 'components/forms';
+@import 'components/alerts';
+@import 'components/tooltips';
+@import 'components/cards';
+@import 'components/progress';
+@import 'components/spinner';
+@import 'components/modals';

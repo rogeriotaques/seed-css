@@ -1,9 +1,8 @@
 /**
  * Seed-CSS HTML Custom Input File.
- * @author Rogerio Taques (rogerio.taques@gmail.com)
- * @see http://rogeriotaques.github.io/seed-css/
- * @version 1.0.0
- * @since 2017-07-13
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @version 1.1.0
  * @license MIT
  */
 
@@ -25,8 +24,10 @@ var fileUpload = function() {
         var fileName = false;
 
         if (this.files && this.files.length > 1) {
-          fileName = (this.getAttribute('data-multiple-caption') || '')
-            .replace('{count}', this.files.length);
+          fileName = (this.getAttribute('data-multiple-caption') || '').replace(
+            '{count}',
+            this.files.length
+          );
         } else if (this.value.trim().length > 0) {
           fileName = this.value.split('\\').pop();
         }
