@@ -1,29 +1,34 @@
+/**
+ * Seed CSS
+ * @version 1.1.0
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @license MIT (https://opensource.org/licenses/MIT)
+ */
+
 @function parseInt($n) {
   @return $n / ($n * 0 + 1);
 }
 
 @mixin rem($property, $values) {
-  $px : ();
+  $px: ();
   $rem: ();
 
   @each $value in $values {
-
     @if $value == 0 or $value == auto {
-      $px : append($px , $value);
+      $px: append($px, $value);
       $rem: append($rem, $value);
-    }
-
-    @else {
+    } @else {
       $unit: unit($value);
       $val: parseInt($value);
 
-      @if $unit == "px" {
-        $px : append($px,  $value);
+      @if $unit == 'px' {
+        $px: append($px, $value);
         $rem: append($rem, ($val / 10 + rem));
       }
 
-      @if $unit == "rem" {
-        $px : append($px,  ($val * 10 + px));
+      @if $unit == 'rem' {
+        $px: append($px, ($val * 10 + px));
         $rem: append($rem, $value);
       }
     }
@@ -37,7 +42,7 @@
   }
 }
 
-@mixin grid-make-cols( $size ) {
+@mixin grid-make-cols($size) {
   @for $i from 1 through 12 {
     &.#{$size}-#{$i} {
       // &:not([class^="offset-"]):not([class*=" offset-"]) {
@@ -106,7 +111,7 @@
   transform: $prop;
 }
 
-@mixin box-shadow ($value) {
+@mixin box-shadow($value) {
   -webkit-box-shadow: $value;
   -moz-box-shadow: $value;
   -ms-box-shadow: $value;
@@ -122,7 +127,7 @@
   appearance: $value;
 }
 
-@mixin animation ($name, $duration: .5s, $easing: linear, $delay: "") {
+@mixin animation($name, $duration: 0.5s, $easing: linear, $delay: '') {
   -webkit-animation: $name $duration #{$delay} $easing;
   -moz-animation: $name $duration #{$delay} $easing;
   -ms-animation: $name $duration #{$delay} $easing;
@@ -130,7 +135,7 @@
   animation: $name $duration #{$delay} $easing;
 }
 
-@mixin animation-delay ($delay) {
+@mixin animation-delay($delay) {
   -webkit-animation-delay: $delay;
   -moz-animation-delay: $delay;
   -ms-animation-delay: $delay;
@@ -138,7 +143,7 @@
   animation-delay: $delay;
 }
 
-@mixin animation-iteration-count ($count) {
+@mixin animation-iteration-count($count) {
   -webkit-animation-iteration-count: $count;
   -moz-animation-iteration-count: $count;
   -ms-animation-iteration-count: $count;

@@ -1,5 +1,9 @@
 /* -----------------------
  * Seed CSS - Forms
+ * @version 1.1.0
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @license MIT (https://opensource.org/licenses/MIT)
  * ----------------------- */
 
 .field {
@@ -8,13 +12,13 @@
 
   &.seed-select {
     &::after {
-      font-family: "Ionicons";
+      font-family: 'Ionicons';
       -webkit-speak: none;
       -moz-speak: none;
       -ms-speak: none;
       -o-speak: none;
       speak: none;
-      content: "\f123";
+      content: '\f123';
       display: block;
       position: absolute;
       bottom: $margin;
@@ -39,8 +43,8 @@
     width: 100%;
     color: $darken-grey;
 
-    & > input[type="radio"],
-    & > input[type="checkbox"] {
+    & > input[type='radio'],
+    & > input[type='checkbox'] {
       margin-right: $margin;
     }
   } // label
@@ -51,12 +55,12 @@
     }
   } // span
 
-  input[type="text"],
-  input[type="password"],
-  input[type="search"],
-  input[type="tel"],
-  input[type="email"],
-  input[type="url"],
+  input[type='text'],
+  input[type='password'],
+  input[type='search'],
+  input[type='tel'],
+  input[type='email'],
+  input[type='url'],
   textarea,
   select {
     width: 100%;
@@ -86,7 +90,6 @@
       outline: none;
       @include appearance(none);
     }
-
   } // input[...]
 
   textarea {
@@ -98,18 +101,18 @@
   } // textarea
 
   select {
-    background-color: rgba(255,255,255,0.9);
+    background-color: rgba(255, 255, 255, 0.9);
     @include rem(height, 40px);
   } // select
 
-  input[type="radio"],
-  input[type="checkbox"] {
+  input[type='radio'],
+  input[type='checkbox'] {
     position: absolute;
     margin-left: -99999px;
     display: none;
 
     & + label {
-       cursor: pointer;
+      cursor: pointer;
 
       &::before {
         content: '';
@@ -130,10 +133,9 @@
         }
       }
     }
-
   } // radio, checkbox
 
-  input[type="checkbox"] {
+  input[type='checkbox'] {
     &:checked {
       & + label {
         &::after {
@@ -153,8 +155,7 @@
     }
   } // checkbox
 
-  input[type="radio"] {
-
+  input[type='radio'] {
     & + label {
       &::before {
         border-radius: 20px;
@@ -197,12 +198,12 @@
       }
     } // span
 
-    input[type="text"],
-    input[type="password"],
-    input[type="search"],
-    input[type="tel"],
-    input[type="email"],
-    input[type="url"],
+    input[type='text'],
+    input[type='password'],
+    input[type='search'],
+    input[type='tel'],
+    input[type='email'],
+    input[type='url'],
     textarea,
     select {
       &.error {
@@ -214,9 +215,8 @@
       }
     } // input[type="*"], textarea, select
 
-    input[type="radio"],
-    input[type="checkbox"] {
-
+    input[type='radio'],
+    input[type='checkbox'] {
       &.error:not(:checked) + label {
         color: $red;
 
@@ -224,7 +224,6 @@
           border-color: $red;
         }
       }
-
     } // input[type="radio"], input[type="checkbox"]
 
     &.seed-select {
@@ -245,12 +244,12 @@
       margin: 0;
       width: 100%;
 
-      & > input[type="text"],
-      & > input[type="password"],
-      & > input[type="search"],
-      & > input[type="tel"],
-      & > input[type="email"],
-      & > input[type="url"] {
+      & > input[type='text'],
+      & > input[type='password'],
+      & > input[type='search'],
+      & > input[type='tel'],
+      & > input[type='email'],
+      & > input[type='url'] {
         position: relative;
 
         &:focus,
@@ -263,16 +262,16 @@
         margin: 5px 0;
         max-height: 4rem;
         line-height: 3rem;
-      } // button 
+      } // button
 
       &:last-child {
         margin-left: -1px;
-      } // :last-child 
+      } // :last-child
     } // > .field
   } // .group
 
   &.seed-file {
-    & > [type="file"] {
+    & > [type='file'] {
       width: 0.1px;
       height: 0.1px;
       opacity: 0;
@@ -350,7 +349,7 @@
 
       &:focus + label {
         outline: 1px dotted #000;
-	      outline: -webkit-focus-ring-color auto 5px;
+        outline: -webkit-focus-ring-color auto 5px;
       } // input:focus + label
     } // [type="file"]
 
@@ -363,4 +362,4 @@
     //   }
     // }
   } // .seed-file
-}  // .field
+} // .field

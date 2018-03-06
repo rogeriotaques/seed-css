@@ -1,0 +1,10 @@
+/** 
+ * seed-css 
+ * A light-weight, mobile first and responsive CSS boilerplate. 
+ * @author Rogerio Taques (rogerio.taques@gmail.com) 
+ * @copyright 2015-2018, Rogerio Taques (rogerio.taques@gmail.com) 
+ * @license MIT 
+ * @version 1.1.0 
+ */ 
+
+ var fileUpload=function(){"use strict";var e=document.querySelectorAll('.seed-file > [type="file"]');null!==e&&e.forEach(function(e,t){var l=e.nextElementSibling;e.addEventListener("change",function(t){t&&t.preventDefault();var n=!1;this.files&&this.files.length>1?n=(this.getAttribute("data-multiple-caption")||"").replace("{count}",this.files.length):this.value.trim().length>0&&(n=this.value.split("\\").pop()),n&&(l.querySelector(".input").innerHTML=n),""!==e.value&&e.parentNode.classList.add("chosen")})})};"undefined"!=typeof module&&(module.exports=fileUpload);var modal=function(e){"use strict";var t={trigger:'[role="modal"]',delay:200};e=Object.assign({},t,e);var l=document.querySelectorAll(".modal"),n=document.querySelectorAll(e.trigger),o=function(t){if(t){var l=document.querySelector("html");t.classList.add("hidden"),setTimeout(function(){t.style.display="none",l.style.overflow=""},2*e.delay)}},i=function(t){if(t){var l=document.querySelector("html");t.style.display="",setTimeout(function(){t.classList.remove("hidden"),l.style.overflow="hidden"},e.delay)}};return null!==l&&l.forEach(function(e,t){var l=e.querySelectorAll('[role="modal-dismiss"]');null!==l&&l.forEach(function(t,l){t.addEventListener("click",function(t){t&&t.preventDefault(),o(e)})})}),null!==n&&n.forEach(function(e,t){e.addEventListener("click",function(t){t&&t.preventDefault();var l=e.getAttribute("data-modal-id");if(null!==l){var n=document.querySelector("#"+l);i(n)}})}),{show:function(e){e="undefined"!=typeof e?e:"#modal",i(document.querySelector(e))},hide:function(e){e="undefined"!=typeof e?e:"#modal",o(document.querySelector(e))}}};"undefined"!=typeof module&&(module.exports=modal);

@@ -56,6 +56,13 @@
       // Initialize 
       modal();
 
+      // Optionally assigning it to a variable
+      // you can programatically show and hide the modal
+      var myModal = modal(); 
+
+      myModal.show('#modal');
+      myModal.hide('#modal');
+
   h6 When using Vanilla JS:
 
   p First download the javascript library <a href="#library-download" class="spy ignore" >here</a>. 
@@ -69,4 +76,11 @@
     pre.prettyprint.lang-javascript.
       if (typeof modal !== 'undefined') {
         modal();
+        
+        // Optionally assigning it to a variable
+        // you can programatically show and hide the modal
+        var myModal = modal(); 
+
+        myModal.show('#modal');
+        myModal.hide('#modal');
       }

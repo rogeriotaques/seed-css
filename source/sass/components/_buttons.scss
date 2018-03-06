@@ -1,12 +1,16 @@
 /* -----------------------
  * Seed CSS - Buttons
+ * @version 1.1.0
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @license MIT (https://opensource.org/licenses/MIT)
  * ----------------------- */
 
 .btn,
 button,
-input[type="button"]:not(.flat-btn),
-input[type="submit"]:not(.flat-btn),
-input[type="reset"]:not(.flat-btn) {
+input[type='button']:not(.flat-btn),
+input[type='submit']:not(.flat-btn),
+input[type='reset']:not(.flat-btn) {
   // general
   display: inline-block;
   box-sizing: border-box;
@@ -16,7 +20,7 @@ input[type="reset"]:not(.flat-btn) {
   color: $darken-grey;
   cursor: pointer;
   background-color: transparent;
-  @include transition(all, .25s, ease);
+  @include transition(all, 0.25s, ease);
   @include rem(font-size, 16px);
   @include rem(line-height, 35px);
   @include rem(min-width, 170px);
@@ -26,7 +30,7 @@ input[type="reset"]:not(.flat-btn) {
     width: $border;
     style: solid;
     radius: $radius/2;
-  };
+  }
 
   &:hover {
     color: $primary;
@@ -117,8 +121,7 @@ input[type="reset"]:not(.flat-btn) {
     @include rem(font-size, 12px);
     @include rem(line-height, 22px);
   }
-
-}  // .btn, button, input, input[type="submit"], input[type="reset"]
+} // .btn, button, input, input[type="submit"], input[type="reset"]
 
 // flat buttons
 &.flat-btn {
@@ -130,7 +133,7 @@ input[type="reset"]:not(.flat-btn) {
   color: $darken-grey;
   cursor: pointer;
   background-color: transparent;
-  @include transition(all, .25s, ease);
+  @include transition(all, 0.25s, ease);
   @include rem(font-size, 16px);
   @include rem(line-height, 35px);
   @include rem(min-width, 100px);

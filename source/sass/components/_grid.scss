@@ -1,5 +1,9 @@
 /* -----------------------
  * Seed CSS - Grid
+ * @version 1.1.0
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @license MIT (https://opensource.org/licenses/MIT)
  * ----------------------- */
 
 .grid {
@@ -14,9 +18,9 @@
     display: block;
     box-sizing: border-box;
     position: relative;
-    text-align: inherit;  // Fallback for IE-Edge
+    text-align: inherit; // Fallback for IE-Edge
     text-align: initial;
-    
+
     &:after {
       content: '';
       display: block;

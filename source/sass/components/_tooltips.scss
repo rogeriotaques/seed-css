@@ -1,3 +1,11 @@
+/* -----------------------
+ * Seed CSS - Tooltips
+ * @version 1.1.0
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @license MIT (https://opensource.org/licenses/MIT)
+ * ----------------------- */
+
 .tooltip {
   $bcolor: #333 !default;
 
@@ -15,16 +23,17 @@
   white-space: nowrap;
   opacity: 0;
   z-index: 20;
+  pointer-events: none;
 
   -webkit-transform: translateX(-54%);
   -moz-transform: translateX(-54%);
   -ms-transform: translateX(-54%);
   transform: translateX(-54%);
 
-  -webkit-transition: all .25s linear;
-  -moz-transition: all .25s linear;
-  -ms-transition: all .25s linear;
-  transition: all .25s linear;
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  -ms-transition: all 0.25s linear;
+  transition: all 0.25s linear;
 
   &::before {
     content: ' ';

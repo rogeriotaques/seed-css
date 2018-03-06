@@ -1,5 +1,9 @@
 /* -----------------------
  * Seed CSS - Base
+ * @version 1.1.0
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @license MIT (https://opensource.org/licenses/MIT)
  * ----------------------- */
 
 html {
@@ -14,11 +18,11 @@ body {
 
   font: {
     weight: 300; // light
-    family: "Lato", "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    family: 'Lato', 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica,
+      Arial, sans-serif;
   }
 
   color: #222;
-
 }
 
 hr {
@@ -40,7 +44,7 @@ hr {
 
 pre {
   // Fixes a bug where PRE tags are breaking the page design
-  // when long contents are showed in smartphones. 
+  // when long contents are showed in smartphones.
   overflow: auto;
 }
 
