@@ -4,60 +4,63 @@
 
   p.align-justify.
     Buttons are a really basic elements on any web page or app, and it
-    comes in a couple of different flavors in <code class="primary">seed-css</code>. In order to use the primary
-    just add the class name <code >.btn-primary</code>. If you need use
-    anchor (&lt;a /&gt;) as button, include the <code >.btn</code> class
-    name on it.
+    comes in a couple of different flavors in <code class="primary">seed-css</code>. 
+    By simply adding the class <code >.btn</code> to any <code >&lt;a/&gt;</code> or 
+    <code >&lt;button/&gt;</code> you will make it looks like a button. Adding the 
+    class <code >.btn-primary</code> it will become a primary button. 
+
+  .alert.warning
+    p NOTE: From version <code>1.2.0</code> buttons are required to use the <code >.btn</code> class.
 
   .buttons.align-center
 
       h6.align-center Default
 
       a.btn(href="#!") Anchor
-      button(type="button") Button element
-      input(type="button", value="Input button")
+      button.btn(type="button") Button element
+      input.btn(type="button", value="Input button")
 
       br
 
       h6.align-center Primary (.btn-primary)
 
       a.btn.btn-primary(href="#!") Anchor
-      button.btn-primary(type="button") Button element
-      input.btn-primary(type="button", value="Input button")
+      button.btn.btn-primary(type="button") Button element
+      input.btn.btn-primary(type="button", value="Input button")
 
       br
 
       h6.align-center Colored (.btn-*color*)
 
       a.btn.btn-red(href="#!") Anchor
-      button.btn-red(type="button") Button element
-      input.btn-red(type="button", value="Input button")
+      button.btn.btn-red(type="button") Button element
+      input.btn.btn-red(type="button", value="Input button")
 
       br
 
       a.btn.btn-orange(href="#!") Anchor
-      button.btn-orange(type="button") Button element
-      input.btn-orange(type="button", value="Input button")
+      button.btn.btn-orange(type="button") Button element
+      input.btn.btn-orange(type="button", value="Input button")
 
       br
 
       a.btn.btn-green(href="#!") Anchor
-      button.btn-green(type="button") Button element
-      input.btn-green(type="button", value="Input button")
+      button.btn.btn-green(type="button") Button element
+      input.btn.btn-green(type="button", value="Input button")
 
       br
 
       a.btn.btn-purple(href="#!") Anchor
-      button.btn-purple(type="button") Button element
-      input.btn-purple(type="button", value="Input button")
+      button.btn.btn-purple(type="button") Button element
+      input.btn.btn-purple(type="button", value="Input button")
 
       br
 
       h6.align-center Disabled (.disabled)
 
       a.btn(href="#!", disabled) Anchor
-      button(type="button", disabled) Button element
-      input(type="button", value="Input button", disabled)
+      button.btn(type="button", disabled) Button element
+      input.btn(type="button", value="Input button", disabled)
 
       br
 
@@ -74,8 +77,8 @@
     .buttons.align-center
 
       a.btn.btn-medium(href="#!") Anchor
-      button.btn-medium(type="button") Button element
-      input.btn-medium(type="button", value="Input button")
+      button.btn.btn-medium(type="button") Button element
+      input.btn.btn-medium(type="button", value="Input button")
 
       br
 
@@ -84,8 +87,8 @@
     .buttons.align-center
 
       a.btn.btn-small(href="#!") Anchor
-      button.btn-small(type="button") Button element
-      input.btn-small(type="button", value="Input button")
+      button.btn.btn-small(type="button") Button element
+      input.btn.btn-small(type="button", value="Input button")
 
   br
 
@@ -95,8 +98,8 @@
       &lt;a class="btn" href="..." &gt; ... &lt;/a&gt;
 
       &lt;!-- default buttons and input[type="button"] --&gt;
-      &lt;button type="button" &gt; ... &lt;/button&gt;
-      &lt;input type="button" value="..." /&gt;
+      &lt;button type="button" class="btn" &gt; ... &lt;/button&gt;
+      &lt;input type="button" class="btn" value="..." /&gt;
 
       &lt;!-- .btn-primary makes buttons colored --&gt;
       &lt;a class="btn btn-primary" href="..." &gt; ... &lt;/a&gt;
@@ -109,7 +112,7 @@
 
       &lt;!-- .btn-primary makes disabled buttons --&gt;
       &lt;a class="btn disabled" href="..." &gt; ... &lt;/a&gt;
-      &lt;button disabled &gt; ... &lt;/button&gt;
+      &lt;button class="btn" disabled &gt; ... &lt;/button&gt;
 
   br
 

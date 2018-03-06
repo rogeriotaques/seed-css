@@ -48,6 +48,12 @@ pre {
   overflow: auto;
 }
 
+code {
+  padding: 2px;
+  border: thin solid #ddd;
+  background-color: #eee;
+}
+
 .container {
   width: $small-container;
   margin: $margin auto;
