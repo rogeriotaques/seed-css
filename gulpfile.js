@@ -165,6 +165,7 @@ gulp.task('watch', function(cb) {
   sync.init({
     open: false,
     notify: false,
+    port: 9000,
     server: {
       baseDir: './build'
     }
