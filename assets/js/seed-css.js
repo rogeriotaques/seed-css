@@ -1,9 +1,8 @@
 /**
  * Seed-CSS HTML Custom Input File.
- * @author Rogerio Taques (rogerio.taques@gmail.com)
- * @see http://rogeriotaques.github.io/seed-css/
- * @version 1.0.0
- * @since 2017-07-13
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @version 1.1.0
  * @license MIT
  */
 
@@ -25,8 +24,10 @@ var fileUpload = function() {
         var fileName = false;
 
         if (this.files && this.files.length > 1) {
-          fileName = (this.getAttribute('data-multiple-caption') || '')
-            .replace('{count}', this.files.length);
+          fileName = (this.getAttribute('data-multiple-caption') || '').replace(
+            '{count}',
+            this.files.length
+          );
         } else if (this.value.trim().length > 0) {
           fileName = this.value.split('\\').pop();
         }
@@ -59,20 +60,61 @@ if (typeof module !== 'undefined') {
 
 /**
  * Seed-CSS Overlay Modal Window.
- * @author Rogerio Taques (rogerio.taques@gmail.com)
- * @see http://rogeriotaques.github.io/seed-css/
- * @version 1.0.0
- * @since 2017-07-13
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @version 1.1.0
  * @license MIT
  */
 
-var modal = function() {
+var modal = function(options) {
   'use strict';
 
-  // Makes the overlay modal window works
-  var html = document.querySelector('html');
+  // Default settings
+  var defaultOptions = {
+    trigger: '[role="modal"]', // the element that triggers the modal
+    delay: 200 // delaying time to open/close the modal (milliseconds)
+  };
+
+  options = Object.assign({}, defaultOptions, options);
+
+  // Get elements
   var modals = document.querySelectorAll('.modal');
-  var modalTriggers = document.querySelectorAll('[role="modal"]');
+  var modalTriggers = document.querySelectorAll(options.trigger);
+
+  var fnClose = function(modalObject) {
+    if (!modalObject) {
+      return;
+    }
+
+    // Get html object
+    var html = document.querySelector('html');
+
+    // Add the class that animates
+    modalObject.classList.add('hidden');
+
+    // After X seconds, forces to 'hide' the component from DOM.
+    setTimeout(function() {
+      modalObject.style.display = 'none';
+      html.style.overflow = '';
+    }, options.delay * 2);
+  }; // fnClose
+
+  var fnOpen = function(modalObject) {
+    if (!modalObject) {
+      return;
+    }
+
+    // Get html object
+    var html = document.querySelector('html');
+
+    modalObject.style.display = '';
+
+    // Need to use this timeout to make the animation possible.
+    setTimeout(function() {
+      modalObject.classList.remove('hidden');
+      html.style.overflow = 'hidden';
+    }, options.delay);
+  }; // fnOpen
 
   if (modals !== null) {
     modals.forEach(function(modal, i) {
@@ -86,14 +128,7 @@ var modal = function() {
               evt.preventDefault();
             }
 
-            // Add the class that animates
-            modal.classList.add('hidden');
-
-            // After .65 seconds forces to 'hide' the component from DOM.
-            setTimeout(function() {
-              modal.style.display = 'none';
-              html.style.overflow = '';
-            }, 650);
+            fnClose(modal);
           });
         });
       }
@@ -111,20 +146,22 @@ var modal = function() {
 
         if (ref !== null) {
           var modal = document.querySelector('#' + ref);
-
-          if (modal !== null) {
-            modal.style.display = '';
-
-            // Need to use this timeout to make the animation possible.
-            setTimeout(function() {
-              modal.classList.remove('hidden');
-              html.style.overflow = 'hidden';
-            }, 150);
-          }
+          fnOpen(modal);
         }
       });
     });
   }
+
+  return {
+    show: function(selector) {
+      selector = typeof selector !== 'undefined' ? selector : '#modal';
+      fnOpen(document.querySelector(selector));
+    },
+    hide: function(selector) {
+      selector = typeof selector !== 'undefined' ? selector : '#modal';
+      fnClose(document.querySelector(selector));
+    }
+  };
 };
 
 if (typeof module !== 'undefined') {

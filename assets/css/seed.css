@@ -378,15 +378,33 @@ textarea {
 
 @charset "UTF-8";
 /** --------------------------------------------------- **/
+/*!
+ * Seed CSS
+ * @version 1.1.0
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @license MIT (https://opensource.org/licenses/MIT)
+ */
 /**
  * Seed CSS
- * @version 0.1
- * @author Rogerio Taques (rogerio.taques@gmail.com)
- * @see https://github.com/rogeriotaques/seed-css
+ * @version 1.1.0
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @license MIT (https://opensource.org/licenses/MIT)
+ */
+/**
+ * Seed CSS
+ * @version 1.1.0
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
  * @license MIT (https://opensource.org/licenses/MIT)
  */
 /* -----------------------
  * Seed CSS - Base
+ * @version 1.1.0
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @license MIT (https://opensource.org/licenses/MIT)
  * ----------------------- */
 html {
   font-size: 62.5%;
@@ -400,7 +418,7 @@ body {
   line-height: 24px;
   line-height: 2.4rem;
   font-weight: 300;
-  font-family: "Lato", "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Lato', 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #222;
 }
 
@@ -444,7 +462,18 @@ pre {
 
 /* -----------------------
  * Seed CSS - Colors
+ * @version 1.1.0
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @license MIT (https://opensource.org/licenses/MIT)
  * ----------------------- */
+/**
+ * Seed CSS
+ * @version 1.1.0
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @license MIT (https://opensource.org/licenses/MIT)
+ */
 .primary {
   color: #387cfd;
 }
@@ -511,6 +540,10 @@ pre {
 
 /* -----------------------
  * Seed CSS - Typography
+ * @version 1.1.0
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @license MIT (https://opensource.org/licenses/MIT)
  * ----------------------- */
 a:not(.btn):not(.flat-btn),
 a:not(.btn):not(.flat-btn):active,
@@ -524,7 +557,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Open Sans";
+  font-family: 'Open Sans';
   font-weight: 400;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -585,6 +618,10 @@ strong {
 
 /* -----------------------
  * Seed CSS - Grid
+ * @version 1.1.0
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @license MIT (https://opensource.org/licenses/MIT)
  * ----------------------- */
 .grid {
   width: 100%;
@@ -1012,12 +1049,16 @@ strong {
 
 /* -----------------------
  * Seed CSS - Buttons
+ * @version 1.1.0
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @license MIT (https://opensource.org/licenses/MIT)
  * ----------------------- */
 .btn,
 button,
-input[type="button"]:not(.flat-btn),
-input[type="submit"]:not(.flat-btn),
-input[type="reset"]:not(.flat-btn) {
+input[type='button']:not(.flat-btn),
+input[type='submit']:not(.flat-btn),
+input[type='reset']:not(.flat-btn) {
   display: inline-block;
   box-sizing: border-box;
   margin: 5px;
@@ -1046,18 +1087,18 @@ input[type="reset"]:not(.flat-btn) {
 
 .btn:hover,
   button:hover,
-  input[type="button"]:not(.flat-btn):hover,
-  input[type="submit"]:not(.flat-btn):hover,
-  input[type="reset"]:not(.flat-btn):hover {
+  input[type='button']:not(.flat-btn):hover,
+  input[type='submit']:not(.flat-btn):hover,
+  input[type='reset']:not(.flat-btn):hover {
   color: #387cfd;
   border-color: #387cfd;
 }
 
 .btn.btn-primary,
   button.btn-primary,
-  input[type="button"]:not(.flat-btn).btn-primary,
-  input[type="submit"]:not(.flat-btn).btn-primary,
-  input[type="reset"]:not(.flat-btn).btn-primary {
+  input[type='button']:not(.flat-btn).btn-primary,
+  input[type='submit']:not(.flat-btn).btn-primary,
+  input[type='reset']:not(.flat-btn).btn-primary {
   border-color: #387cfd;
   background-color: #387cfd;
   color: whitesmoke;
@@ -1065,18 +1106,18 @@ input[type="reset"]:not(.flat-btn) {
 
 .btn.btn-primary:hover,
     button.btn-primary:hover,
-    input[type="button"]:not(.flat-btn).btn-primary:hover,
-    input[type="submit"]:not(.flat-btn).btn-primary:hover,
-    input[type="reset"]:not(.flat-btn).btn-primary:hover {
+    input[type='button']:not(.flat-btn).btn-primary:hover,
+    input[type='submit']:not(.flat-btn).btn-primary:hover,
+    input[type='reset']:not(.flat-btn).btn-primary:hover {
   background-color: #065bfc;
   border-color: #065bfc;
 }
 
 .btn.btn-red,
   button.btn-red,
-  input[type="button"]:not(.flat-btn).btn-red,
-  input[type="submit"]:not(.flat-btn).btn-red,
-  input[type="reset"]:not(.flat-btn).btn-red {
+  input[type='button']:not(.flat-btn).btn-red,
+  input[type='submit']:not(.flat-btn).btn-red,
+  input[type='reset']:not(.flat-btn).btn-red {
   border-color: #d32f2f;
   background-color: #d32f2f;
   color: whitesmoke;
@@ -1084,18 +1125,18 @@ input[type="reset"]:not(.flat-btn) {
 
 .btn.btn-red:hover,
     button.btn-red:hover,
-    input[type="button"]:not(.flat-btn).btn-red:hover,
-    input[type="submit"]:not(.flat-btn).btn-red:hover,
-    input[type="reset"]:not(.flat-btn).btn-red:hover {
+    input[type='button']:not(.flat-btn).btn-red:hover,
+    input[type='submit']:not(.flat-btn).btn-red:hover,
+    input[type='reset']:not(.flat-btn).btn-red:hover {
   background-color: #ab2424;
   border-color: #ab2424;
 }
 
 .btn.btn-orange,
   button.btn-orange,
-  input[type="button"]:not(.flat-btn).btn-orange,
-  input[type="submit"]:not(.flat-btn).btn-orange,
-  input[type="reset"]:not(.flat-btn).btn-orange {
+  input[type='button']:not(.flat-btn).btn-orange,
+  input[type='submit']:not(.flat-btn).btn-orange,
+  input[type='reset']:not(.flat-btn).btn-orange {
   border-color: #fb8c00;
   background-color: #fb8c00;
   color: whitesmoke;
@@ -1103,18 +1144,18 @@ input[type="reset"]:not(.flat-btn) {
 
 .btn.btn-orange:hover,
     button.btn-orange:hover,
-    input[type="button"]:not(.flat-btn).btn-orange:hover,
-    input[type="submit"]:not(.flat-btn).btn-orange:hover,
-    input[type="reset"]:not(.flat-btn).btn-orange:hover {
+    input[type='button']:not(.flat-btn).btn-orange:hover,
+    input[type='submit']:not(.flat-btn).btn-orange:hover,
+    input[type='reset']:not(.flat-btn).btn-orange:hover {
   background-color: #c87000;
   border-color: #c87000;
 }
 
 .btn.btn-green,
   button.btn-green,
-  input[type="button"]:not(.flat-btn).btn-green,
-  input[type="submit"]:not(.flat-btn).btn-green,
-  input[type="reset"]:not(.flat-btn).btn-green {
+  input[type='button']:not(.flat-btn).btn-green,
+  input[type='submit']:not(.flat-btn).btn-green,
+  input[type='reset']:not(.flat-btn).btn-green {
   border-color: #43a047;
   background-color: #43a047;
   color: whitesmoke;
@@ -1122,18 +1163,18 @@ input[type="reset"]:not(.flat-btn) {
 
 .btn.btn-green:hover,
     button.btn-green:hover,
-    input[type="button"]:not(.flat-btn).btn-green:hover,
-    input[type="submit"]:not(.flat-btn).btn-green:hover,
-    input[type="reset"]:not(.flat-btn).btn-green:hover {
+    input[type='button']:not(.flat-btn).btn-green:hover,
+    input[type='submit']:not(.flat-btn).btn-green:hover,
+    input[type='reset']:not(.flat-btn).btn-green:hover {
   background-color: #347c37;
   border-color: #347c37;
 }
 
 .btn.btn-purple,
   button.btn-purple,
-  input[type="button"]:not(.flat-btn).btn-purple,
-  input[type="submit"]:not(.flat-btn).btn-purple,
-  input[type="reset"]:not(.flat-btn).btn-purple {
+  input[type='button']:not(.flat-btn).btn-purple,
+  input[type='submit']:not(.flat-btn).btn-purple,
+  input[type='reset']:not(.flat-btn).btn-purple {
   border-color: #8e24aa;
   background-color: #8e24aa;
   color: whitesmoke;
@@ -1141,9 +1182,9 @@ input[type="reset"]:not(.flat-btn) {
 
 .btn.btn-purple:hover,
     button.btn-purple:hover,
-    input[type="button"]:not(.flat-btn).btn-purple:hover,
-    input[type="submit"]:not(.flat-btn).btn-purple:hover,
-    input[type="reset"]:not(.flat-btn).btn-purple:hover {
+    input[type='button']:not(.flat-btn).btn-purple:hover,
+    input[type='submit']:not(.flat-btn).btn-purple:hover,
+    input[type='reset']:not(.flat-btn).btn-purple:hover {
   background-color: #6b1b80;
   border-color: #6b1b80;
 }
@@ -1151,12 +1192,12 @@ input[type="reset"]:not(.flat-btn) {
 .btn .disabled, .btn[disabled],
   button .disabled,
   button[disabled],
-  input[type="button"]:not(.flat-btn) .disabled,
-  input[type="button"]:not(.flat-btn)[disabled],
-  input[type="submit"]:not(.flat-btn) .disabled,
-  input[type="submit"]:not(.flat-btn)[disabled],
-  input[type="reset"]:not(.flat-btn) .disabled,
-  input[type="reset"]:not(.flat-btn)[disabled] {
+  input[type='button']:not(.flat-btn) .disabled,
+  input[type='button']:not(.flat-btn)[disabled],
+  input[type='submit']:not(.flat-btn) .disabled,
+  input[type='submit']:not(.flat-btn)[disabled],
+  input[type='reset']:not(.flat-btn) .disabled,
+  input[type='reset']:not(.flat-btn)[disabled] {
   border-color: #ccc;
   background-color: #ccc;
   color: #888;
@@ -1167,12 +1208,12 @@ input[type="reset"]:not(.flat-btn) {
 .btn .disabled:hover, .btn[disabled]:hover,
     button .disabled:hover,
     button[disabled]:hover,
-    input[type="button"]:not(.flat-btn) .disabled:hover,
-    input[type="button"]:not(.flat-btn)[disabled]:hover,
-    input[type="submit"]:not(.flat-btn) .disabled:hover,
-    input[type="submit"]:not(.flat-btn)[disabled]:hover,
-    input[type="reset"]:not(.flat-btn) .disabled:hover,
-    input[type="reset"]:not(.flat-btn)[disabled]:hover {
+    input[type='button']:not(.flat-btn) .disabled:hover,
+    input[type='button']:not(.flat-btn)[disabled]:hover,
+    input[type='submit']:not(.flat-btn) .disabled:hover,
+    input[type='submit']:not(.flat-btn)[disabled]:hover,
+    input[type='reset']:not(.flat-btn) .disabled:hover,
+    input[type='reset']:not(.flat-btn)[disabled]:hover {
   color: #888;
   border-color: #ccc;
   background-color: #ccc;
@@ -1180,9 +1221,9 @@ input[type="reset"]:not(.flat-btn) {
 
 .btn.btn-medium,
   button.btn-medium,
-  input[type="button"]:not(.flat-btn).btn-medium,
-  input[type="submit"]:not(.flat-btn).btn-medium,
-  input[type="reset"]:not(.flat-btn).btn-medium {
+  input[type='button']:not(.flat-btn).btn-medium,
+  input[type='submit']:not(.flat-btn).btn-medium,
+  input[type='reset']:not(.flat-btn).btn-medium {
   min-width: 120px;
   min-width: 12rem;
   font-size: 14px;
@@ -1193,9 +1234,9 @@ input[type="reset"]:not(.flat-btn) {
 
 .btn.btn-small,
   button.btn-small,
-  input[type="button"]:not(.flat-btn).btn-small,
-  input[type="submit"]:not(.flat-btn).btn-small,
-  input[type="reset"]:not(.flat-btn).btn-small {
+  input[type='button']:not(.flat-btn).btn-small,
+  input[type='submit']:not(.flat-btn).btn-small,
+  input[type='reset']:not(.flat-btn).btn-small {
   min-width: 80px;
   min-width: 8rem;
   font-size: 12px;
@@ -1253,6 +1294,10 @@ input[type="reset"]:not(.flat-btn) {
 
 /* -----------------------
  * Seed CSS - Lists
+ * @version 1.1.0
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @license MIT (https://opensource.org/licenses/MIT)
  * ----------------------- */
 ul,
 ol,
@@ -1263,6 +1308,10 @@ dl {
 
 /* -----------------------
  * Seed CSS - Tables
+ * @version 1.1.0
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @license MIT (https://opensource.org/licenses/MIT)
  * ----------------------- */
 table {
   width: 100%;
@@ -1310,6 +1359,10 @@ table.bordered tbody td:not(:first-child) {
 
 /* -----------------------
  * Seed CSS - Utilities
+ * @version 1.1.0
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @license MIT (https://opensource.org/licenses/MIT)
  * ----------------------- */
 .align-center {
   text-align: center;
@@ -1357,18 +1410,34 @@ img.thumb {
 }
 
 .upper-case {
+  -webkit-text-transform: uppercase;
+  -moz-text-transform: uppercase;
+  -ms-text-transform: uppercase;
+  -o-text-transform: uppercase;
   text-transform: uppercase;
 }
 
 .lower-case {
+  -webkit-text-transform: lowercase;
+  -moz-text-transform: lowercase;
+  -ms-text-transform: lowercase;
+  -o-text-transform: lowercase;
   text-transform: lowercase;
 }
 
 .camel-case {
+  -webkit-text-transform: capitalize;
+  -moz-text-transform: capitalize;
+  -ms-text-transform: capitalize;
+  -o-text-transform: capitalize;
   text-transform: capitalize;
 }
 
 .uc-first::first-letter {
+  -webkit-text-transform: capitalize;
+  -moz-text-transform: capitalize;
+  -ms-text-transform: capitalize;
+  -o-text-transform: capitalize;
   text-transform: capitalize;
 }
 
@@ -1426,6 +1495,10 @@ img.thumb {
 
 /* -----------------------
  * Seed CSS - Forms
+ * @version 1.1.0
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @license MIT (https://opensource.org/licenses/MIT)
  * ----------------------- */
 .field {
   margin-bottom: 20px;
@@ -1433,13 +1506,13 @@ img.thumb {
 }
 
 .field.seed-select::after {
-  font-family: "Ionicons";
+  font-family: 'Ionicons';
   -webkit-speak: none;
   -moz-speak: none;
   -ms-speak: none;
   -o-speak: none;
   speak: none;
-  content: "\f123";
+  content: '\f123';
   display: block;
   position: absolute;
   bottom: 10px;
@@ -1468,8 +1541,8 @@ img.thumb {
   color: #666;
 }
 
-.field > label > input[type="radio"],
-    .field > label > input[type="checkbox"] {
+.field > label > input[type='radio'],
+    .field > label > input[type='checkbox'] {
   margin-right: 10px;
 }
 
@@ -1477,12 +1550,12 @@ img.thumb {
   color: #ccc;
 }
 
-.field input[type="text"],
-  .field input[type="password"],
-  .field input[type="search"],
-  .field input[type="tel"],
-  .field input[type="email"],
-  .field input[type="url"],
+.field input[type='text'],
+  .field input[type='password'],
+  .field input[type='search'],
+  .field input[type='tel'],
+  .field input[type='email'],
+  .field input[type='url'],
   .field textarea,
   .field select {
   width: 100%;
@@ -1510,17 +1583,17 @@ img.thumb {
   appearance: none;
 }
 
-.field input[type="text"]:focus, .field input[type="text"]:active,
-    .field input[type="password"]:focus,
-    .field input[type="password"]:active,
-    .field input[type="search"]:focus,
-    .field input[type="search"]:active,
-    .field input[type="tel"]:focus,
-    .field input[type="tel"]:active,
-    .field input[type="email"]:focus,
-    .field input[type="email"]:active,
-    .field input[type="url"]:focus,
-    .field input[type="url"]:active,
+.field input[type='text']:focus, .field input[type='text']:active,
+    .field input[type='password']:focus,
+    .field input[type='password']:active,
+    .field input[type='search']:focus,
+    .field input[type='search']:active,
+    .field input[type='tel']:focus,
+    .field input[type='tel']:active,
+    .field input[type='email']:focus,
+    .field input[type='email']:active,
+    .field input[type='url']:focus,
+    .field input[type='url']:active,
     .field textarea:focus,
     .field textarea:active,
     .field select:focus,
@@ -1534,12 +1607,12 @@ img.thumb {
   outline: none;
 }
 
-.field input[type="text"] > option,
-    .field input[type="password"] > option,
-    .field input[type="search"] > option,
-    .field input[type="tel"] > option,
-    .field input[type="email"] > option,
-    .field input[type="url"] > option,
+.field input[type='text'] > option,
+    .field input[type='password'] > option,
+    .field input[type='search'] > option,
+    .field input[type='tel'] > option,
+    .field input[type='email'] > option,
+    .field input[type='url'] > option,
     .field textarea > option,
     .field select > option {
   border: 0;
@@ -1569,20 +1642,20 @@ img.thumb {
   height: 4rem;
 }
 
-.field input[type="radio"],
-  .field input[type="checkbox"] {
+.field input[type='radio'],
+  .field input[type='checkbox'] {
   position: absolute;
   margin-left: -99999px;
   display: none;
 }
 
-.field input[type="radio"] + label,
-    .field input[type="checkbox"] + label {
+.field input[type='radio'] + label,
+    .field input[type='checkbox'] + label {
   cursor: pointer;
 }
 
-.field input[type="radio"] + label::before,
-      .field input[type="checkbox"] + label::before {
+.field input[type='radio'] + label::before,
+      .field input[type='checkbox'] + label::before {
   content: '';
   display: inline-block;
   vertical-align: middle;
@@ -1596,12 +1669,12 @@ img.thumb {
   margin-right: 1rem;
 }
 
-.field input[type="radio"]:checked + label::before,
-    .field input[type="checkbox"]:checked + label::before {
+.field input[type='radio']:checked + label::before,
+    .field input[type='checkbox']:checked + label::before {
   border-color: #387cfd;
 }
 
-.field input[type="checkbox"]:checked + label::after {
+.field input[type='checkbox']:checked + label::after {
   content: '';
   display: block;
   position: absolute;
@@ -1621,15 +1694,15 @@ img.thumb {
   transform: rotate(-45deg);
 }
 
-.field input[type="radio"] + label::before {
+.field input[type='radio'] + label::before {
   border-radius: 20px;
 }
 
-.field input[type="radio"]:checked + label::before {
+.field input[type='radio']:checked + label::before {
   background-color: #387cfd;
 }
 
-.field input[type="radio"]:checked + label::after {
+.field input[type='radio']:checked + label::after {
   content: '';
   display: block;
   position: absolute;
@@ -1653,35 +1726,35 @@ img.thumb {
   color: #ccc;
 }
 
-.field.has-feedback input[type="text"].error,
-  .field.has-feedback input[type="password"].error,
-  .field.has-feedback input[type="search"].error,
-  .field.has-feedback input[type="tel"].error,
-  .field.has-feedback input[type="email"].error,
-  .field.has-feedback input[type="url"].error,
+.field.has-feedback input[type='text'].error,
+  .field.has-feedback input[type='password'].error,
+  .field.has-feedback input[type='search'].error,
+  .field.has-feedback input[type='tel'].error,
+  .field.has-feedback input[type='email'].error,
+  .field.has-feedback input[type='url'].error,
   .field.has-feedback textarea.error,
   .field.has-feedback select.error {
   border-color: #d32f2f;
 }
 
-.field.has-feedback input[type="text"].success,
-  .field.has-feedback input[type="password"].success,
-  .field.has-feedback input[type="search"].success,
-  .field.has-feedback input[type="tel"].success,
-  .field.has-feedback input[type="email"].success,
-  .field.has-feedback input[type="url"].success,
+.field.has-feedback input[type='text'].success,
+  .field.has-feedback input[type='password'].success,
+  .field.has-feedback input[type='search'].success,
+  .field.has-feedback input[type='tel'].success,
+  .field.has-feedback input[type='email'].success,
+  .field.has-feedback input[type='url'].success,
   .field.has-feedback textarea.success,
   .field.has-feedback select.success {
   border-color: #43a047;
 }
 
-.field.has-feedback input[type="radio"].error:not(:checked) + label,
-  .field.has-feedback input[type="checkbox"].error:not(:checked) + label {
+.field.has-feedback input[type='radio'].error:not(:checked) + label,
+  .field.has-feedback input[type='checkbox'].error:not(:checked) + label {
   color: #d32f2f;
 }
 
-.field.has-feedback input[type="radio"].error:not(:checked) + label::before,
-    .field.has-feedback input[type="checkbox"].error:not(:checked) + label::before {
+.field.has-feedback input[type='radio'].error:not(:checked) + label::before,
+    .field.has-feedback input[type='checkbox'].error:not(:checked) + label::before {
   border-color: #d32f2f;
 }
 
@@ -1702,26 +1775,26 @@ img.thumb {
   width: 100%;
 }
 
-.field.group > .field > input[type="text"],
-      .field.group > .field > input[type="password"],
-      .field.group > .field > input[type="search"],
-      .field.group > .field > input[type="tel"],
-      .field.group > .field > input[type="email"],
-      .field.group > .field > input[type="url"] {
+.field.group > .field > input[type='text'],
+      .field.group > .field > input[type='password'],
+      .field.group > .field > input[type='search'],
+      .field.group > .field > input[type='tel'],
+      .field.group > .field > input[type='email'],
+      .field.group > .field > input[type='url'] {
   position: relative;
 }
 
-.field.group > .field > input[type="text"]:focus, .field.group > .field > input[type="text"]:active,
-        .field.group > .field > input[type="password"]:focus,
-        .field.group > .field > input[type="password"]:active,
-        .field.group > .field > input[type="search"]:focus,
-        .field.group > .field > input[type="search"]:active,
-        .field.group > .field > input[type="tel"]:focus,
-        .field.group > .field > input[type="tel"]:active,
-        .field.group > .field > input[type="email"]:focus,
-        .field.group > .field > input[type="email"]:active,
-        .field.group > .field > input[type="url"]:focus,
-        .field.group > .field > input[type="url"]:active {
+.field.group > .field > input[type='text']:focus, .field.group > .field > input[type='text']:active,
+        .field.group > .field > input[type='password']:focus,
+        .field.group > .field > input[type='password']:active,
+        .field.group > .field > input[type='search']:focus,
+        .field.group > .field > input[type='search']:active,
+        .field.group > .field > input[type='tel']:focus,
+        .field.group > .field > input[type='tel']:active,
+        .field.group > .field > input[type='email']:focus,
+        .field.group > .field > input[type='email']:active,
+        .field.group > .field > input[type='url']:focus,
+        .field.group > .field > input[type='url']:active {
   z-index: 5;
 }
 
@@ -1735,7 +1808,7 @@ img.thumb {
   margin-left: -1px;
 }
 
-.field.seed-file > [type="file"] {
+.field.seed-file > [type='file'] {
   width: 0.1px;
   height: 0.1px;
   opacity: 0;
@@ -1744,7 +1817,7 @@ img.thumb {
   z-index: -1;
 }
 
-.field.seed-file > [type="file"] + label {
+.field.seed-file > [type='file'] + label {
   font-size: 1.5rem;
   border: 1px solid #ccc;
   background-color: #fff;
@@ -1754,7 +1827,7 @@ img.thumb {
   height: 4rem;
 }
 
-.field.seed-file > [type="file"] + label > span {
+.field.seed-file > [type='file'] + label > span {
   display: inline-block;
   line-height: 4rem;
   height: 100%;
@@ -1762,7 +1835,7 @@ img.thumb {
   text-align: center;
 }
 
-.field.seed-file > [type="file"] + label > span.input {
+.field.seed-file > [type='file'] + label > span.input {
   width: calc(70% - 10px);
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -1770,8 +1843,8 @@ img.thumb {
   vertical-align: top;
 }
 
-.field.seed-file > [type="file"] + label > span.button,
-      .field.seed-file > [type="file"] + label > span.cancel {
+.field.seed-file > [type='file'] + label > span.button,
+      .field.seed-file > [type='file'] + label > span.cancel {
   position: relative;
   color: #fff;
   background-color: #387cfd;
@@ -1780,31 +1853,38 @@ img.thumb {
   text-overflow: ellipsis;
 }
 
-.field.seed-file > [type="file"] + label > span.button {
+.field.seed-file > [type='file'] + label > span.button {
   width: calc(30% - 10px);
 }
 
-.field.seed-file > [type="file"] + label > span.button > .icon {
+.field.seed-file > [type='file'] + label > span.button > .icon {
   position: absolute;
   font-size: 3rem;
   margin-left: 20px;
   left: 0;
 }
 
-.field.seed-file > [type="file"] + label * {
+.field.seed-file > [type='file'] + label * {
   pointer-events: none;
 }
 
-.field.seed-file > [type="file"]:focus + label > .label,
-    .field.seed-file > [type="file"] + label:hover > .label {
+.field.seed-file > [type='file']:focus + label > .label,
+    .field.seed-file > [type='file'] + label:hover > .label {
   background-color: #065bfc;
 }
 
-.field.seed-file > [type="file"]:focus + label {
+.field.seed-file > [type='file']:focus + label {
   outline: 1px dotted #000;
   outline: -webkit-focus-ring-color auto 5px;
 }
 
+/* -----------------------
+ * Seed CSS - Alerts
+ * @version 1.1.0
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @license MIT (https://opensource.org/licenses/MIT)
+ * ----------------------- */
 .alert {
   background-color: #e2e2e2;
   color: #333;
@@ -1847,6 +1927,13 @@ img.thumb {
   background-color: #ffe0e0;
 }
 
+/* -----------------------
+ * Seed CSS - Tooltips
+ * @version 1.1.0
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @license MIT (https://opensource.org/licenses/MIT)
+ * ----------------------- */
 .tooltip {
   position: absolute;
   top: 50%;
@@ -1862,14 +1949,15 @@ img.thumb {
   white-space: nowrap;
   opacity: 0;
   z-index: 20;
+  pointer-events: none;
   -webkit-transform: translateX(-54%);
   -moz-transform: translateX(-54%);
   -ms-transform: translateX(-54%);
   transform: translateX(-54%);
-  -webkit-transition: all .25s linear;
-  -moz-transition: all .25s linear;
-  -ms-transition: all .25s linear;
-  transition: all .25s linear;
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  -ms-transition: all 0.25s linear;
+  transition: all 0.25s linear;
 }
 
 .tooltip::before {
@@ -1955,6 +2043,13 @@ img.thumb {
   opacity: 1;
 }
 
+/* -----------------------
+ * Seed CSS - Cards
+ * @version 1.1.0
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @license MIT (https://opensource.org/licenses/MIT)
+ * ----------------------- */
 .card {
   border: thin solid #ddd;
   border-radius: 2px;
@@ -2009,6 +2104,13 @@ img.thumb {
   color: #fff;
 }
 
+/* -----------------------
+ * Seed CSS - Progress Bar
+ * @version 1.1.0
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @license MIT (https://opensource.org/licenses/MIT)
+ * ----------------------- */
 @-webkit-keyframes progressRunning {
   0% {
     margin-left: -100%;
@@ -2071,6 +2173,7 @@ img.thumb {
   overflow: hidden;
   position: relative;
   z-index: 1;
+  min-height: 20px;
 }
 
 .progress-bar > .bar {
@@ -2103,6 +2206,13 @@ img.thumb {
   animation-iteration-count: infinite;
 }
 
+/* -----------------------
+ * Seed CSS - Spinner
+ * @version 1.1.0
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @license MIT (https://opensource.org/licenses/MIT)
+ * ----------------------- */
 @-webkit-keyframes spinner {
   to {
     transform: rotate(360deg);
@@ -2193,12 +2303,19 @@ img.thumb {
   border-top-color: #387cfd;
 }
 
+/* -----------------------
+ * Seed CSS - Modals
+ * @version 1.1.0
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @license MIT (https://opensource.org/licenses/MIT)
+ * ----------------------- */
 .modal {
-  -webkit-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  -ms-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
-  transition: all 0.5s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
   position: fixed;
   top: 0;
   left: 0;
@@ -2209,11 +2326,11 @@ img.thumb {
 }
 
 .modal.hidden {
-  -webkit-transition-delay: 0.5s;
-  -moz-transition-delay: 0.5s;
-  -ms-transition-delay: 0.5s;
-  -o-transition-delay: 0.5s;
-  transition-delay: 0.5s;
+  -webkit-transition-delay: 0.2s;
+  -moz-transition-delay: 0.2s;
+  -ms-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  transition-delay: 0.2s;
   opacity: 0;
 }
 
@@ -2237,16 +2354,16 @@ img.thumb {
   -ms-transformn: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  -webkit-transition: left 0.5s ease-in-out;
-  -moz-transition: left 0.5s ease-in-out;
-  -ms-transition: left 0.5s ease-in-out;
-  -o-transition: left 0.5s ease-in-out;
-  transition: left 0.5s ease-in-out;
-  -webkit-transition-delay: 0.5s;
-  -moz-transition-delay: 0.5s;
-  -ms-transition-delay: 0.5s;
-  -o-transition-delay: 0.5s;
-  transition-delay: 0.5s;
+  -webkit-transition: left 0.15s ease-in-out;
+  -moz-transition: left 0.15s ease-in-out;
+  -ms-transition: left 0.15s ease-in-out;
+  -o-transition: left 0.15s ease-in-out;
+  transition: left 0.15s ease-in-out;
+  -webkit-transition-delay: 0.15s;
+  -moz-transition-delay: 0.15s;
+  -ms-transition-delay: 0.15s;
+  -o-transition-delay: 0.15s;
+  transition-delay: 0.15s;
   background-color: #fff;
   position: absolute;
   width: 500px;

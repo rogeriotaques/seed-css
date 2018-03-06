@@ -1,3 +1,24 @@
+/**
+ * Seed CSS
+ * @version 1.1.0
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @license MIT (https://opensource.org/licenses/MIT)
+ */
+/**
+ * Seed CSS
+ * @version 1.1.0
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @license MIT (https://opensource.org/licenses/MIT)
+ */
+/**
+ * Seed CSS
+ * @version 1.1.0
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @license MIT (https://opensource.org/licenses/MIT)
+ */
 @keyframes scroll-down {
   0%,
   100% {
@@ -104,7 +125,7 @@ footer {
 
 @media only screen and (min-width: 600px) {
   footer {
-    font-size: .75em;
+    font-size: 0.75em;
   }
 }
 
@@ -136,7 +157,7 @@ footer .btn:hover {
 
 @media only screen and (min-width: 600px) {
   footer .btn {
-    font-size: .75em;
+    font-size: 0.75em;
   }
 }
 
@@ -154,7 +175,7 @@ footer .seed-select {
 
 @media only screen and (min-width: 600px) {
   footer .seed-select > select {
-    font-size: .65em;
+    font-size: 0.65em;
   }
 }
 
@@ -164,7 +185,7 @@ footer .seed-select {
   }
 }
 
-footer form [type="submit"] {
+footer form [type='submit'] {
   margin: 0;
   margin-top: 5px;
   width: 100%;
@@ -248,7 +269,7 @@ footer form [type="submit"] {
 }
 
 .samples-nav .item a {
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   text-decoration: none;
   display: block;
   padding: 0 10px;
@@ -268,7 +289,7 @@ footer form [type="submit"] {
   margin: 0 auto;
 }
 
-div[id^="sample-"]:not(:last-child) {
+div[id^='sample-']:not(:last-child) {
   padding-bottom: 40px;
   margin-bottom: 40px;
   border-bottom: thin dashed #666;
