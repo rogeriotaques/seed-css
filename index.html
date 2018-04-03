@@ -22,7 +22,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Seed CSS v1.2.1</title>
+    <title>Seed CSS v1.2.2</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="A light-weight, mobile first and responsive CSS boilerplate.">
     <meta name="keywords" content="css,boilerplate,javascript,html5,website,site,app,webapp,build,development">
@@ -31,15 +31,15 @@
     <meta name="license" content="MIT">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:300,700|Open+Sans:400">
     <link rel="stylesheet" type="text/css" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/seed.css?v=v1.2.1">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css?v=v1.2.1">
+    <link rel="stylesheet" type="text/css" href="assets/css/seed.css?v=v1.2.2">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css?v=v1.2.2">
   </head>
   <body>
     <header>
       <div class="container align-center">
         <h1>Seed CSS</h1>
         <p>A light-weight, mobile first and responsive CSS boilerplate.</p>
-        <div class="cta"><a href="https://github.com/rogeriotaques/seed-css/archive/develop.zip" class="btn btn-primary"><span>DOWNLOAD</span><span id="release">v1.2.1</span></a></div>
+        <div class="cta"><a href="https://github.com/rogeriotaques/seed-css/archive/develop.zip" class="btn btn-primary"><span>DOWNLOAD</span><span id="release">v1.2.2</span></a></div>
         <p>(This page design is proudly based on <span class="primary">Seed CSS</span>)</p>
         <div><span title="Scroll down for more ..." class="ion-chevron-down scroll-down-for-more"></span></div>
       </div>
@@ -1040,13 +1040,20 @@
                 <div class="code-sample">
                   <pre class="prettyprint lang-html">&lt;!-- Example of file upload field --&gt;
 &lt;div class="field seed-file" &gt;
-  &lt;input type="file" name="..." &gt;
+  &lt;input type="file" name="..." id="..." &gt;
   &lt;label for="..." &gt;
     &lt;span class="input" &gt; No file chosen &lt;/span&gt;
-    &lt;span class="label" &gt; Attachment &lt;/span&gt;
+    &lt;span class="button" &gt; Attachment &lt;/span&gt;
   &lt;/label&gt;
 &lt;/div&gt;
 </pre>
+                </div>
+                <div class="alert info"> 
+                  <p>
+                    <b >PRO:</b> Make sure that <code >id</code> attribute is set for the <code >file</code> input field and 
+                    that it matches the <code>for</code> attribute from its label. Otherwise, it may not work properly.
+                    
+                  </p>
                 </div>
                 <p>
                   Exceptionally the file upload component works better with a javascript support. Using javascript 
@@ -1907,6 +1914,6 @@ myModal.hide('#modal');
     </footer>
     <script src="//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
     <script src="//code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
-    <script src="assets/js/bundle.js?v=v1.2.1"></script>
+    <script src="assets/js/bundle.js?v=v1.2.2"></script>
   </body>
 </html>

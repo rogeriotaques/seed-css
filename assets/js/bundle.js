@@ -2,7 +2,7 @@
  * Seed-CSS HTML Custom Input File.
  * @author Rogerio Taques (hello@abtz.co)
  * @see https://github.com/AbtzLabs/seed-css
- * @version 1.1.0
+ * @version 1.2.2
  * @license MIT
  */
 
@@ -15,6 +15,19 @@ var fileUpload = function() {
   if (inputs !== null) {
     inputs.forEach(function(input, i) {
       var label = input.nextElementSibling;
+
+      // Make sure input and label matches and works.
+      if (
+        input.getAttribute('id') &&
+        input.getAttribute('id') !== label.getAttribute('for')
+      ) {
+        label.setAttribute('for', input.getAttribute('id'));
+      } else if (label.getAttribute('for') && !input.getAttribute('id')) {
+        input.setAttribute('id', label.getAttribute('for'));
+      } else {
+        input.setAttribute('id', 'file-input-' + i);
+        label.setAttribute('for', 'file-input-' + i);
+      }
 
       input.addEventListener('change', function(evt) {
         if (evt) {
@@ -62,7 +75,7 @@ if (typeof module !== 'undefined') {
  * Seed-CSS Overlay Modal Window.
  * @author Rogerio Taques (hello@abtz.co)
  * @see https://github.com/AbtzLabs/seed-css
- * @version 1.1.0
+ * @version 1.2.2
  * @license MIT
  */
 
@@ -172,7 +185,7 @@ if (typeof module !== 'undefined') {
  * Seed-CSS Landing Page.
  * @author Rogerio Taques (hello@abtz.co)
  * @see https://github.com/AbtzLabs/seed-css
- * @version 1.1.0
+ * @version 1.2.2
  * @license private
  */
 
