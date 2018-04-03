@@ -55,5 +55,5 @@ var fileUpload = function() {
 };
 
 if (typeof module !== 'undefined') {
-  module.exports = fileUpload;
+  module.exports.fileUpload = fileUpload;
 }

@@ -105,5 +105,5 @@ var modal = function(options) {
 };
 
 if (typeof module !== 'undefined') {
-  module.exports = modal;
+  module.exports.modal = modal;
 }
