@@ -83,6 +83,10 @@ getBuildVersion = function() {
 };
 
 gulp.task('clean', function() {
+  return del([config.path.build]);
+});
+
+gulp.task('clean:dist', function() {
   return del([config.path.build, config.path.dist]);
 });
 
@@ -225,7 +229,7 @@ gulp.task(
 );
 
 gulp.task('dist', function(cb) {
-  runSequence('clean', 'dist:run', cb);
+  runSequence('clean:dist', 'dist:run', cb);
   return true;
 });
 
