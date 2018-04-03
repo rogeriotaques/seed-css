@@ -287,6 +287,9 @@
         cursor: pointer;
         box-sizing: content-box;
         height: 4rem;
+        display: -moz-flex;
+        display: -webkit-flex;
+        display: flex;
 
         & > span {
           display: inline-block;
@@ -297,11 +300,11 @@
         } // span
 
         & > span.input {
-          width: calc(70% - 10px);
           text-overflow: ellipsis;
           white-space: nowrap;
           overflow: hidden;
           vertical-align: top;
+          flex: 2;
         } // span.input
 
         & > span.button,
@@ -312,11 +315,10 @@
           overflow: hidden;
           white-space: nowrap;
           text-overflow: ellipsis;
+          flex: 1;
         } // span.button, span.cancel
 
         & > span.button {
-          width: calc(30% - 10px);
-
           & > .icon {
             position: absolute;
             font-size: 3rem;
@@ -342,8 +344,8 @@
       & + label:hover {
         // background-color: #e2e2e2;
 
-        & > .label {
-          background-color: darken($primary, 10%);
+        & > .button {
+          background-color: darken($primary, 20%);
         }
       } // input:focus + label, input + label
 

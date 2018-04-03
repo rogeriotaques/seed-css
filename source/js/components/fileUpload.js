@@ -16,6 +16,19 @@ var fileUpload = function() {
     inputs.forEach(function(input, i) {
       var label = input.nextElementSibling;
 
+      // Make sure input and label matches and works.
+      if (
+        input.getAttribute('id') &&
+        input.getAttribute('id') !== label.getAttribute('for')
+      ) {
+        label.setAttribute('for', input.getAttribute('id'));
+      } else if (label.getAttribute('for') && !input.getAttribute('id')) {
+        input.setAttribute('id', label.getAttribute('for'));
+      } else {
+        input.setAttribute('id', 'file-input-' + i);
+        label.setAttribute('for', 'file-input-' + i);
+      }
+
       input.addEventListener('change', function(evt) {
         if (evt) {
           evt.preventDefault();

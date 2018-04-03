@@ -212,12 +212,17 @@
     pre.prettyprint.lang-html.
       &lt;!-- Example of file upload field --&gt;
       &lt;div class="field seed-file" &gt;
-        &lt;input type="file" name="..." &gt;
+        &lt;input type="file" name="..." id="..." &gt;
         &lt;label for="..." &gt;
           &lt;span class="input" &gt; No file chosen &lt;/span&gt;
-          &lt;span class="label" &gt; Attachment &lt;/span&gt;
+          &lt;span class="button" &gt; Attachment &lt;/span&gt;
         &lt;/label&gt;
       &lt;/div&gt;
+
+  .alert.info 
+    p.
+      <b >PRO:</b> Make sure that <code >id</code> attribute is set for the <code >file</code> input field and 
+      that it matches the <code>for</code> attribute from its label. Otherwise, it may not work properly.
 
   p.
     Exceptionally the file upload component works better with a javascript support. Using javascript 
