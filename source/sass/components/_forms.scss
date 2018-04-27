@@ -61,6 +61,13 @@
   input[type='tel'],
   input[type='email'],
   input[type='url'],
+  input[type='date'],
+  input[type='time'],
+  input[type='datetime-local'],
+  input[type='color'],
+  input[type='month'],
+  input[type='week'],
+  input[type='number'],
   textarea,
   select {
     width: 100%;
