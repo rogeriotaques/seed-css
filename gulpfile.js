@@ -204,7 +204,7 @@ gulp.task(
       '* <%= pkg.name %> \n ' +
       '* <%= pkg.description %> \n ' +
       '* @author <%= pkg.author %> \n ' +
-      '* @copyright 2015-' +
+      '* @copyright 2016-' +
       new Date().getFullYear() +
       ', <%= pkg.author %> \n ' +
       '* @license <%= pkg.license %> \n ' +

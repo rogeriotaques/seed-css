@@ -42,15 +42,21 @@ html(lang="en")
 
     header
       .container.align-center
-        h1 Seed CSS
+        h1 
+          span Seed CSS
+          span#release {%version%}
+
         p A light-weight, mobile first and responsive CSS boilerplate.
+          
 
         .cta
           a.btn.btn-primary(href="https://github.com/rogeriotaques/seed-css/archive/develop.zip")
             span DOWNLOAD
-            span#release {%version%}
 
-        p (This page design is proudly based on <span class="primary">Seed CSS</span>)
+          a.btn.btn-purple(href="#donate")
+            span DONATE
+
+        p <span class="highlight">This page design is proudly based on Seed CSS</span><br>Scroll down for more.
 
         div
           span(title="Scroll down for more ...").ion-chevron-down.scroll-down-for-more
@@ -242,7 +248,7 @@ html(lang="en")
           in <i>Vanilla JS</i> and is also exported to NodeJS.
 
         .align-center
-          a(href="https://github.com/rogeriotaques/seed-css/releases/latest").btn.btn-primary DOWNLOAD NOW
+          a(href="https://github.com/rogeriotaques/seed-css/releases/latest").btn.btn-primary DOWNLOAD
 
     //- section#show-case
     //-   .container
@@ -258,65 +264,63 @@ html(lang="en")
       .container
         h2 License
 
-        code
+        p The MIT license.
 
-          p The MIT license.
+        p Copyright &copy; 2016-{%year%}, Rogerio Taques.
 
-          p Copyright &copy; 2016-{%year%}, Abtz Labs.
+        p.align-justify.
+          Permission is hereby granted, free of charge, to any person obtaining
+          a copy of this software and associated documentation files
+          (the "Software"), to deal in the Software without restriction,
+          including without limitation the rights to use, copy, modify, merge,
+          publish, distribute, sublicense, and/or sell copies of the Software,
+          and to permit persons to whom the Software is furnished to do so,
+          subject to the following conditions:
 
-          p.align-justify.
-            Permission is hereby granted, free of charge, to any person obtaining
-            a copy of this software and associated documentation files
-            (the "Software"), to deal in the Software without restriction,
-            including without limitation the rights to use, copy, modify, merge,
-            publish, distribute, sublicense, and/or sell copies of the Software,
-            and to permit persons to whom the Software is furnished to do so,
-            subject to the following conditions:
+        p.align-justify.
+          The above copyright notice and this permission notice shall be included
+          in all copies or substantial portions of the Software.
 
-          p.align-justify.
-            The above copyright notice and this permission notice shall be included
-            in all copies or substantial portions of the Software.
+        p.align-justify.
+          THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+          EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+          MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+          IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+          CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+          TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+          SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-          p.align-justify.
-            THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-            EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-            MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-            IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-            CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-            TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-            SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+    section#donate 
+      .container 
+        h2 Donate
 
+        p Make a donation and help this project growth.
+
+        .grid 
+          .row 
+            .col.md-6 
+              h5 Donating money
+
+              p
+                a(href="https://www.paypal.me/abtzlabs", target="_blank") Donate whatever you want via <b >Paypal</b>
+
+            .col.md-6 
+              h5 Donating time
+
+              ul 
+                li Help improving this page 
+                li Help testing and reporting bugs 
+                li Help fixing bug or implementing missing features 
+
+              p
+                a(href="https://github.com/abtzlabs/seed-css", target="_blank") Check the project Github page.
 
     footer
-      p.copyright &copy; 2016-{%year%}, Abtz Labs.
+      p.copyright.align-center &copy; 2016-{%year%}, Rogerio Taques.
 
-      .grid
-        .row
-          .col.sm-12.md-3.md-offset-3
-            p.align-center.
-              Need support, have suggestions or just would like to drop me a line? <br>
-              <a href="https://github.com/abtzlabs/seed-css/issues" class="btn" >Open an issue at Github</a>
-
-          .col.sm-12.md-3
-            p.align-center
-              | Is this project been useful for you? Why don't you make a
-              | donation to supports it?
-              br
-
-            form(action="https://www.paypal.com/cgi-bin/webscr", method="post", target="_top")
-              input(type="hidden", name="cmd", value="_s-xclick")
-              input(type="hidden", name="hosted_button_id", value="DD2FN2RTGURA2")
-              input(type="hidden", name="currency_code", value="JPY")
-
-              div(class="field seed-select")
-                select(name="os0")
-                  option(value="Small") Modest ¥399 JPY
-                  option(value="Medium") Prefered ¥1,000 JPY
-                  option(value="Big") Generous ¥1,999 JPY
-
-              button(type="submit", class="btn") Donate
-              img(alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1")
-
+      p.align-center
+        span Found a bug or would like to help or give suggestions? 
+        a(href="https://github.com/abtzlabs/seed-css/issues", style="color: white;") Open an issue
 
     script(src="//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js")
     script(src="//code.jquery.com/jquery-2.2.3.min.js", integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=", crossorigin="anonymous")
