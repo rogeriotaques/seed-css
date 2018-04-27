@@ -11,25 +11,11 @@
   position: relative;
 
   &.seed-select {
-    &::after {
-      font-family: 'Ionicons';
-      -webkit-speak: none;
-      -moz-speak: none;
-      -ms-speak: none;
-      -o-speak: none;
-      speak: none;
-      content: '\f123';
-      display: block;
-      position: absolute;
-      bottom: $margin;
-      right: $margin;
-      color: $darken-grey;
-      pointer-events: none;
-    } // .seed-select::after
-
     select {
       @include appearance(none);
-      background-color: transparent;
+      background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAXCAAAAABLm8IAAAABfGlDQ1BJQ0MgUHJvZmlsZQAAKJFjYGAqSSwoyGFhYGDIzSspCnJ3UoiIjFJgv8PAzcDDIMRgxSCemFxc4BgQ4MOAE3y7xsAIoi/rgsxK8/x506a1fP4WNq+ZclYlOrj1gQF3SmpxMgMDIweQnZxSnJwLZOcA2TrJBUUlQPYMIFu3vKQAxD4BZIsUAR0IZN8BsdMh7A8gdhKYzcQCVhMS5AxkSwDZAkkQtgaInQ5hW4DYyRmJKUC2B8guiBvAgNPDRcHcwFLXkYC7SQa5OaUwO0ChxZOaFxoMcgcQyzB4MLgwKDCYMxgwWDLoMjiWpFaUgBQ65xdUFmWmZ5QoOAJDNlXBOT+3oLQktUhHwTMvWU9HwcjA0ACkDhRnEKM/B4FNZxQ7jxDLX8jAYKnMwMDcgxBLmsbAsH0PA4PEKYSYyjwGBn5rBoZt5woSixLhDmf8xkKIX5xmbARh8zgxMLDe+///sxoDA/skBoa/E////73o//+/i4H2A+PsQA4AJHdp4IxrEg8AAAGbaVRYdFhNTDpjb20uYWRvYmUueG1wAAAAAAA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJYTVAgQ29yZSA1LjQuMCI+CiAgIDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+CiAgICAgIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiCiAgICAgICAgICAgIHhtbG5zOmV4aWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vZXhpZi8xLjAvIj4KICAgICAgICAgPGV4aWY6UGl4ZWxYRGltZW5zaW9uPjM0PC9leGlmOlBpeGVsWERpbWVuc2lvbj4KICAgICAgICAgPGV4aWY6UGl4ZWxZRGltZW5zaW9uPjIzPC9leGlmOlBpeGVsWURpbWVuc2lvbj4KICAgICAgPC9yZGY6RGVzY3JpcHRpb24+CiAgIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CkUjGlcAAADnSURBVCjPY/hPEDBQU8lfrJJ/EUp+l4e8xKLiZUj5b6iSn3kGBj5PMVQ89TEwyPsJUbLUAAg8HqCpeOAOEl4KUfIxBsRxvoOi4rYzSDDmI9QtX5JAXIdrSCqu2YOEkr7AffQ9AyRgexGu4qINSCDzO5Knf+aDhKxOQ1WctgJx83+iBN3vcpCg+VEw56g5iAP2MXLo/q0DCZvuBzL3mYKYdX8xIuBfG0jCeMf/HcYgRts/bHHUB5IyajACUX04onGaAQxMxxnT86Eq5uNJDCsMgQoMV+BNL+uNDIw2EEhSO5x30DJh4gMAiWyVgq40lokAAAAASUVORK5CYII=')
+        no-repeat calc(100% - 10px) center white;
+      background-size: 18px;
       padding-right: 30px;
 
       &::-ms-expand {
@@ -109,7 +95,13 @@
 
   select {
     background-color: rgba(255, 255, 255, 0.9);
+    @include box-shadow(none);
     @include rem(height, 40px);
+
+    &:focus,
+    &:active {
+      @include box-shadow(none);
+    }
   } // select
 
   input[type='radio'],
@@ -211,6 +203,13 @@
     input[type='tel'],
     input[type='email'],
     input[type='url'],
+    input[type='date'],
+    input[type='time'],
+    input[type='datetime-local'],
+    input[type='color'],
+    input[type='month'],
+    input[type='week'],
+    input[type='number'],
     textarea,
     select {
       &.error {
@@ -256,7 +255,14 @@
       & > input[type='search'],
       & > input[type='tel'],
       & > input[type='email'],
-      & > input[type='url'] {
+      & > input[type='url'],
+      & > input[type='date'],
+      & > input[type='time'],
+      & > input[type='datetime-local'],
+      & > input[type='color'],
+      & > input[type='month'],
+      & > input[type='week'],
+      & > input[type='number'] {
         position: relative;
 
         &:focus,
