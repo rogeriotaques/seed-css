@@ -79,6 +79,10 @@ header #release {
   padding: 5px 10px;
   border: thin dotted #fff;
   border-radius: 3px;
+  font-size: 16px;
+  display: inline-block;
+  line-height: 20px;
+  vertical-align: middle;
 }
 
 header .cta {
@@ -89,6 +93,13 @@ header .scroll-down-for-more {
   display: block;
   font-size: 4rem;
   animation: scroll-down 1.5s ease-in-out infinite;
+}
+
+header .highlight {
+  color: #444;
+  display: inline-block;
+  background: #ccc;
+  padding: 2px 5px;
 }
 
 main {
@@ -112,6 +123,15 @@ section {
 
 section:nth-child(odd) {
   background-color: #f9f9f9;
+}
+
+section#license {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+section#donate p {
+  font-size: 18px;
+  line-height: 25px;
 }
 
 footer {

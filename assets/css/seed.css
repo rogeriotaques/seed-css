@@ -1439,29 +1439,14 @@ img.thumb {
   position: relative;
 }
 
-.field.seed-select::after {
-  font-family: 'Ionicons';
-  -webkit-speak: none;
-  -moz-speak: none;
-  -ms-speak: none;
-  -o-speak: none;
-  speak: none;
-  content: '\f123';
-  display: block;
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  color: #666;
-  pointer-events: none;
-}
-
 .field.seed-select select {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   -o-appearance: none;
   appearance: none;
-  background-color: transparent;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAXCAAAAABLm8IAAAABfGlDQ1BJQ0MgUHJvZmlsZQAAKJFjYGAqSSwoyGFhYGDIzSspCnJ3UoiIjFJgv8PAzcDDIMRgxSCemFxc4BgQ4MOAE3y7xsAIoi/rgsxK8/x506a1fP4WNq+ZclYlOrj1gQF3SmpxMgMDIweQnZxSnJwLZOcA2TrJBUUlQPYMIFu3vKQAxD4BZIsUAR0IZN8BsdMh7A8gdhKYzcQCVhMS5AxkSwDZAkkQtgaInQ5hW4DYyRmJKUC2B8guiBvAgNPDRcHcwFLXkYC7SQa5OaUwO0ChxZOaFxoMcgcQyzB4MLgwKDCYMxgwWDLoMjiWpFaUgBQ65xdUFmWmZ5QoOAJDNlXBOT+3oLQktUhHwTMvWU9HwcjA0ACkDhRnEKM/B4FNZxQ7jxDLX8jAYKnMwMDcgxBLmsbAsH0PA4PEKYSYyjwGBn5rBoZt5woSixLhDmf8xkKIX5xmbARh8zgxMLDe+///sxoDA/skBoa/E////73o//+/i4H2A+PsQA4AJHdp4IxrEg8AAAGbaVRYdFhNTDpjb20uYWRvYmUueG1wAAAAAAA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJYTVAgQ29yZSA1LjQuMCI+CiAgIDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+CiAgICAgIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiCiAgICAgICAgICAgIHhtbG5zOmV4aWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vZXhpZi8xLjAvIj4KICAgICAgICAgPGV4aWY6UGl4ZWxYRGltZW5zaW9uPjM0PC9leGlmOlBpeGVsWERpbWVuc2lvbj4KICAgICAgICAgPGV4aWY6UGl4ZWxZRGltZW5zaW9uPjIzPC9leGlmOlBpeGVsWURpbWVuc2lvbj4KICAgICAgPC9yZGY6RGVzY3JpcHRpb24+CiAgIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CkUjGlcAAADnSURBVCjPY/hPEDBQU8lfrJJ/EUp+l4e8xKLiZUj5b6iSn3kGBj5PMVQ89TEwyPsJUbLUAAg8HqCpeOAOEl4KUfIxBsRxvoOi4rYzSDDmI9QtX5JAXIdrSCqu2YOEkr7AffQ9AyRgexGu4qINSCDzO5Knf+aDhKxOQ1WctgJx83+iBN3vcpCg+VEw56g5iAP2MXLo/q0DCZvuBzL3mYKYdX8xIuBfG0jCeMf/HcYgRts/bHHUB5IyajACUX04onGaAQxMxxnT86Eq5uNJDCsMgQoMV+BNL+uNDIw2EEhSO5x30DJh4gMAiWyVgq40lokAAAAASUVORK5CYII=") no-repeat calc(100% - 10px) center white;
+  background-size: 18px;
   padding-right: 30px;
 }
 
@@ -1490,6 +1475,13 @@ img.thumb {
   .field input[type='tel'],
   .field input[type='email'],
   .field input[type='url'],
+  .field input[type='date'],
+  .field input[type='time'],
+  .field input[type='datetime-local'],
+  .field input[type='color'],
+  .field input[type='month'],
+  .field input[type='week'],
+  .field input[type='number'],
   .field textarea,
   .field select {
   width: 100%;
@@ -1528,6 +1520,20 @@ img.thumb {
     .field input[type='email']:active,
     .field input[type='url']:focus,
     .field input[type='url']:active,
+    .field input[type='date']:focus,
+    .field input[type='date']:active,
+    .field input[type='time']:focus,
+    .field input[type='time']:active,
+    .field input[type='datetime-local']:focus,
+    .field input[type='datetime-local']:active,
+    .field input[type='color']:focus,
+    .field input[type='color']:active,
+    .field input[type='month']:focus,
+    .field input[type='month']:active,
+    .field input[type='week']:focus,
+    .field input[type='week']:active,
+    .field input[type='number']:focus,
+    .field input[type='number']:active,
     .field textarea:focus,
     .field textarea:active,
     .field select:focus,
@@ -1547,6 +1553,13 @@ img.thumb {
     .field input[type='tel'] > option,
     .field input[type='email'] > option,
     .field input[type='url'] > option,
+    .field input[type='date'] > option,
+    .field input[type='time'] > option,
+    .field input[type='datetime-local'] > option,
+    .field input[type='color'] > option,
+    .field input[type='month'] > option,
+    .field input[type='week'] > option,
+    .field input[type='number'] > option,
     .field textarea > option,
     .field select > option {
   border: 0;
@@ -1572,8 +1585,21 @@ img.thumb {
 
 .field select {
   background-color: rgba(255, 255, 255, 0.9);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
   height: 40px;
   height: 4rem;
+}
+
+.field select:focus, .field select:active {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
 }
 
 .field input[type='radio'],
@@ -1666,6 +1692,13 @@ img.thumb {
   .field.has-feedback input[type='tel'].error,
   .field.has-feedback input[type='email'].error,
   .field.has-feedback input[type='url'].error,
+  .field.has-feedback input[type='date'].error,
+  .field.has-feedback input[type='time'].error,
+  .field.has-feedback input[type='datetime-local'].error,
+  .field.has-feedback input[type='color'].error,
+  .field.has-feedback input[type='month'].error,
+  .field.has-feedback input[type='week'].error,
+  .field.has-feedback input[type='number'].error,
   .field.has-feedback textarea.error,
   .field.has-feedback select.error {
   border-color: #d32f2f;
@@ -1677,6 +1710,13 @@ img.thumb {
   .field.has-feedback input[type='tel'].success,
   .field.has-feedback input[type='email'].success,
   .field.has-feedback input[type='url'].success,
+  .field.has-feedback input[type='date'].success,
+  .field.has-feedback input[type='time'].success,
+  .field.has-feedback input[type='datetime-local'].success,
+  .field.has-feedback input[type='color'].success,
+  .field.has-feedback input[type='month'].success,
+  .field.has-feedback input[type='week'].success,
+  .field.has-feedback input[type='number'].success,
   .field.has-feedback textarea.success,
   .field.has-feedback select.success {
   border-color: #43a047;
@@ -1714,7 +1754,14 @@ img.thumb {
       .field.group > .field > input[type='search'],
       .field.group > .field > input[type='tel'],
       .field.group > .field > input[type='email'],
-      .field.group > .field > input[type='url'] {
+      .field.group > .field > input[type='url'],
+      .field.group > .field > input[type='date'],
+      .field.group > .field > input[type='time'],
+      .field.group > .field > input[type='datetime-local'],
+      .field.group > .field > input[type='color'],
+      .field.group > .field > input[type='month'],
+      .field.group > .field > input[type='week'],
+      .field.group > .field > input[type='number'] {
   position: relative;
 }
 
@@ -1728,7 +1775,21 @@ img.thumb {
         .field.group > .field > input[type='email']:focus,
         .field.group > .field > input[type='email']:active,
         .field.group > .field > input[type='url']:focus,
-        .field.group > .field > input[type='url']:active {
+        .field.group > .field > input[type='url']:active,
+        .field.group > .field > input[type='date']:focus,
+        .field.group > .field > input[type='date']:active,
+        .field.group > .field > input[type='time']:focus,
+        .field.group > .field > input[type='time']:active,
+        .field.group > .field > input[type='datetime-local']:focus,
+        .field.group > .field > input[type='datetime-local']:active,
+        .field.group > .field > input[type='color']:focus,
+        .field.group > .field > input[type='color']:active,
+        .field.group > .field > input[type='month']:focus,
+        .field.group > .field > input[type='month']:active,
+        .field.group > .field > input[type='week']:focus,
+        .field.group > .field > input[type='week']:active,
+        .field.group > .field > input[type='number']:focus,
+        .field.group > .field > input[type='number']:active {
   z-index: 5;
 }
 
