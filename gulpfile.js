@@ -1,27 +1,29 @@
-var gulp = require('gulp'),
-  runSequence = require('run-sequence'),
-  sync = require('browser-sync'),
-  sass = require('gulp-sass'),
-  jade = require('gulp-jade'),
-  concat = require('gulp-concat'),
-  uglify = require('gulp-uglify'),
-  beautify = require('gulp-cssbeautify'),
-  minify = require('gulp-minify-css'),
-  gulpif = require('gulp-if'),
-  replace = require('gulp-replace'),
-  del = require('del'),
-  header = require('gulp-header'),
-  util = require('gulp-util'),
-  fs = require('fs'),
-  config,
-  getBuildVersion,
-  updatePackVersion;
+var gulp = require('gulp');
+var runSequence = require('run-sequence');
+var sync = require('browser-sync');
+var sass = require('gulp-sass');
+var jade = require('gulp-jade');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
+var beautify = require('gulp-cssbeautify');
+var minify = require('gulp-clean-css');
+var gulpif = require('gulp-if');
+var replace = require('gulp-replace');
+var del = require('del');
+var header = require('gulp-header');
+var util = require('minimist')(process.argv);
+var fs = require('fs');
+var config;
+var getBuildVersion;
+var updatePackVersion;
 
 // @use npm run dist -- --[major|minor]
 var runFlag =
-  util.env.major !== undefined
+  util.major !== undefined
     ? 'major'
-    : util.env.minor !== undefined ? 'minor' : 'patch';
+    : util.minor !== undefined
+      ? 'minor'
+      : 'patch';
 
 config = {
   fileName: 'seed',
@@ -202,7 +204,7 @@ gulp.task(
       '* <%= pkg.name %> \n ' +
       '* <%= pkg.description %> \n ' +
       '* @author <%= pkg.author %> \n ' +
-      '* @copyright 2015-' +
+      '* @copyright 2016-' +
       new Date().getFullYear() +
       ', <%= pkg.author %> \n ' +
       '* @license <%= pkg.license %> \n ' +
