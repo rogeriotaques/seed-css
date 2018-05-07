@@ -2,9 +2,9 @@
  * seed-css 
  * A light-weight, mobile first and responsive CSS boilerplate. 
  * @author Rogerio Taques (rogerio.taques@gmail.com) 
- * @copyright 2015-2018, Rogerio Taques (rogerio.taques@gmail.com) 
+ * @copyright 2016-2018, Rogerio Taques (rogerio.taques@gmail.com) 
  * @license MIT 
- * @version 1.2.2 
+ * @version 1.2.3 
  */ 
 
  var fileUpload=function(){"use strict";var e=document.querySelectorAll('.seed-file > [type="file"]');null!==e&&e.forEach(function(e,t){var i=e.nextElementSibling;e.getAttribute("id")&&e.getAttribute("id")!==i.getAttribute("for")?i.setAttribute("for",e.getAttribute("id")):i.getAttribute("for")&&!e.getAttribute("id")?e.setAttribute("id",i.getAttribute("for")):(e.setAttribute("id","file-input-"+t),i.setAttribute("for","file-input-"+t)),e.addEventListener("change",function(t){t&&t.preventDefault();var l=!1;this.files&&this.files.length>1?l=(this.getAttribute("data-multiple-caption")||"").replace("{count}",this.files.length):this.value.trim().length>0&&(l=this.value.split("\\").pop()),l&&(i.querySelector(".input").innerHTML=l),""!==e.value&&e.parentNode.classList.add("chosen")})})};"undefined"!=typeof module&&(module.exports.fileUpload=fileUpload);var modal=function(e){"use strict";var t={trigger:'[role="modal"]',delay:200};e=Object.assign({},t,e);var i=document.querySelectorAll(".modal"),l=document.querySelectorAll(e.trigger),n=function(t){if(t){var i=document.querySelector("html");t.classList.add("hidden"),setTimeout(function(){t.style.display="none",i.style.overflow=""},2*e.delay)}},o=function(t){if(t){var i=document.querySelector("html");t.style.display="",setTimeout(function(){t.classList.remove("hidden"),i.style.overflow="hidden"},e.delay)}};return null!==i&&i.forEach(function(e,t){var i=e.querySelectorAll('[role="modal-dismiss"]');null!==i&&i.forEach(function(t,i){t.addEventListener("click",function(t){t&&t.preventDefault(),n(e)})})}),null!==l&&l.forEach(function(e,t){e.addEventListener("click",function(t){t&&t.preventDefault();var i=e.getAttribute("data-modal-id");if(null!==i){var l=document.querySelector("#"+i);o(l)}})}),{show:function(e){e="undefined"!=typeof e?e:"#modal",o(document.querySelector(e))},hide:function(e){e="undefined"!=typeof e?e:"#modal",n(document.querySelector(e))}}};"undefined"!=typeof module&&(module.exports.modal=modal);
