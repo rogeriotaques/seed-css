@@ -58,7 +58,7 @@
   }
 }
 
-@media #{extra-large-only} {
+@media #{$extra-large-only} {
   .grid {
     .col {
       @include grid-make-cols('xl');
