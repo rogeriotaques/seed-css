@@ -2,7 +2,7 @@
  * Seed-CSS HTML Custom Input File.
  * @author Rogerio Taques (hello@abtz.co)
  * @see https://github.com/AbtzLabs/seed-css
- * @version 1.2.2
+ * @version 1.2.4
  * @license MIT
  */
 
@@ -75,7 +75,7 @@ if (typeof module !== 'undefined') {
  * Seed-CSS Overlay Modal Window.
  * @author Rogerio Taques (hello@abtz.co)
  * @see https://github.com/AbtzLabs/seed-css
- * @version 1.2.2
+ * @version 1.2.4
  * @license MIT
  */
 
@@ -185,14 +185,14 @@ if (typeof module !== 'undefined') {
  * Seed-CSS Landing Page.
  * @author Rogerio Taques (hello@abtz.co)
  * @see https://github.com/AbtzLabs/seed-css
- * @version 1.2.2
+ * @version 1.2.4
  * @license private
  */
 
 (function($) {
   'use strict';
 
-  var gutter = 20;
+  var gutter = 50;
 
   /**
    * Enables the hero effect.
@@ -286,7 +286,7 @@ if (typeof module !== 'undefined') {
 
         $('html, body').animate(
           {
-            scrollTop: ref.offset().top - gutter
+            scrollTop: ref.offset().top - gutter + 20
           },
           400
         );
