@@ -2,14 +2,14 @@
  * Seed-CSS Landing Page.
  * @author Rogerio Taques (hello@abtz.co)
  * @see https://github.com/AbtzLabs/seed-css
- * @version 1.2.2
+ * @version 1.2.4
  * @license private
  */
 
 (function($) {
   'use strict';
 
-  var gutter = 20;
+  var gutter = 50;
 
   /**
    * Enables the hero effect.
@@ -103,7 +103,7 @@
 
         $('html, body').animate(
           {
-            scrollTop: ref.offset().top - gutter
+            scrollTop: ref.offset().top - gutter + 20
           },
           400
         );

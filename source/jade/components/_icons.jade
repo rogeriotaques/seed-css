@@ -3,19 +3,33 @@
   h4 Icons
 
   p.align-justify.
-    We're using <b>Ionic Icon Fonts</b> as our set of icons. It's free and
-    can be redistributed as well as <code class="primary">seed-css</code>.
+    <code class="primary">Seed-css</code> does not implement its own set of icons, so you are free 
+    to implement any iconset you rather with this CSS boilerplate. However, we really like and therefore 
+    recommend you to use the <b><a href="http://ionicons.com/?ref=seed-css" target="_blank" >Ionicons</a></b>.
 
   p.align-justify.
-    Just to keep the flexibility, the icon set is not included on the
-    <code class="primary">seed-css</code> stylesheet files. You should
-    import it from an external source. If you would like to keep up to date
-    to the latest versions from Ion icons, we strongly recommend you to get
-    it from Ionic CDN.
+    It is a <i >beautifully crafted premium open source icons</i> designed to be used in web, iOS, Android, and desktop apps, 
+    and supports SVG and web font. Completely open source, MIT licensed. 
+
+
+  h5 Using it as webfonts
 
   p.align-justify.
-    In order to use those icons, add the following line to the HEAD tag of
-    any page you're using <code class="primary">seed-css</code>:
+    To embed the Ionicons webfont into your webpage, copy this code into the <head> of the HTML document.
+
+  .code-sample
+    pre.prettyprint.lang-html.
+      &lt;link href="https://unpkg.com/ionicons@4.0.0/dist/css/ionicons.min.css"rel="stylesheet"/&gt;
+
+  p.align-justify.
+    Use the <code class="primary" >icon index</code> to look up the name of the icon you want to use. 
+    The icon's CSS class name will be prefixed with <code class="primary" >ion-</code>, followed by the 
+    platform attribute <code class="primary" >md-</code>, <code class="primary" >ios-</code> or 
+    <code class="primary" >logo-</code> and completed wth the icon name.
+
+  .code-sample
+    pre.prettyprint.lang-html.
+      &lt;i class="icon ion-md-heart"&gt;&lt;/i&gt;
 
   p.align-center
-    a(href="http://ionicons.com/", target="_blank").btn.btn-primary Go to IonIcons
+    a(href="http://ionicons.com/", target="_blank").btn.btn-primary Check the entire library here
