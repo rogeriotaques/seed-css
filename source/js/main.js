@@ -9,7 +9,7 @@
 (function($) {
   'use strict';
 
-  var gutter = 20;
+  var gutter = 50;
 
   /**
    * Enables the hero effect.
@@ -103,7 +103,7 @@
 
         $('html, body').animate(
           {
-            scrollTop: ref.offset().top - gutter
+            scrollTop: ref.offset().top - gutter + 20
           },
           400
         );
