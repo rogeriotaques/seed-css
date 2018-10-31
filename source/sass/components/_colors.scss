@@ -1,73 +1,85 @@
-/* -----------------------
+/* 
  * Seed CSS - Colors
- * @version 1.2.4
- * @author Rogerio Taques (hello@abtz.co)
- * @see https://github.com/AbtzLabs/seed-css
- * @license MIT (https://opensource.org/licenses/MIT)
- * ----------------------- */
-
-@import '../includes/_variables';
+ * @version 2.0.0
+ */
 
 .primary {
-  color: $primary;
+  color: $primary !important;
 
   &-background {
-    background-color: $primary;
+    background-color: $primary !important;
+    color: white !important;
   } // .primary-background
 } // .primary
 
-.red {
-  color: $red;
+.secondary {
+  color: $secondary !important;
 
   &-background {
-    background-color: $red;
+    background-color: $secondary !important;
+    color: white !important;
+  } // .secondary-background
+} // .secondary
+
+.red {
+  color: $red !important;
+
+  &-background {
+    background-color: $red !important;
+    color: white !important;
   } // .red-background
 } // .red
 
 .orange {
-  color: $orange;
+  color: $orange !important;
 
   &-background {
-    background-color: $orange;
+    background-color: $orange !important;
+    color: white !important;
   } // .orange-background
 } // .orange
 
 .green {
-  color: $green;
+  color: $green !important;
 
   &-background {
-    background-color: $green;
+    background-color: $green !important;
+    color: white !important;
   } // .green-background
 } // .green
 
 .purple {
-  color: $purple;
+  color: $purple !important;
 
   &-background {
-    background-color: $purple;
+    background-color: $purple !important;
+    color: white !important;
   } // .purple-background
 } // .purple
 
 .grey {
-  color: $grey;
+  color: $grey !important;
 
   &-background {
-    background-color: $grey;
+    background-color: $grey !important;
+    color: $grey-dark !important;
   } // .grey-background
 } // .grey
 
 .darkgrey {
-  color: $darken-grey;
+  color: $grey-dark !important;
 
   &-background {
-    background-color: $darken-grey;
+    background-color: $grey-dark !important;
+    color: white !important;
   } // .darkgrey-background
 } // .darkgrey
 
 .softgrey {
-  color: $grey-light;
+  color: $grey-light !important;
 
   &-background {
-    background-color: $grey-light;
+    background-color: $grey-light !important;
+    color: $grey-dark !important;
   } // .softgrey-background
 } // .softgrey

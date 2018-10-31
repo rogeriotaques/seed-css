@@ -1,10 +1,7 @@
-/* -----------------------
+/*
  * Seed CSS - Utilities
- * @version 1.2.4
- * @author Rogerio Taques (hello@abtz.co)
- * @see https://github.com/AbtzLabs/seed-css
- * @license MIT (https://opensource.org/licenses/MIT)
- * ----------------------- */
+ * @version 2.0.0
+ */
 
 // alignment
 .align {
@@ -19,6 +16,25 @@
   }
   &-justify {
     text-align: justify;
+  }
+}
+
+// floating
+.place {
+  &-left {
+    float: left;
+  }
+
+  &-right {
+    float: right;
+  }
+
+  &-center {
+    display: block;
+    margin {
+      left: auto;
+      right: auto;
+    }
   }
 }
 
@@ -80,6 +96,8 @@ img {
 }
 
 .uc-first {
+  text-transform: lowercase;
+
   &::first-letter {
     -webkit-text-transform: capitalize;
     -moz-text-transform: capitalize;

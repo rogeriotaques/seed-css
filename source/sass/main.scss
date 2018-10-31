@@ -1,29 +1,28 @@
-/** --------------------------------------------------- **/
-
 /*!
  * Seed CSS
- * @version 1.2.4
+ * @version 2.0.0
  * @author Rogerio Taques (hello@abtz.co)
  * @see https://github.com/AbtzLabs/seed-css
  * @license MIT (https://opensource.org/licenses/MIT)
  */
 
-@import 'includes/variables';
 @import 'includes/mixins';
+@import 'includes/variables';
 
 // components
+@import 'normalize';
 @import 'components/base';
+@import 'components/container';
 @import 'components/colors';
 @import 'components/typography';
 @import 'components/grid';
 @import 'components/buttons';
-@import 'components/lists';
 @import 'components/tables';
 @import 'components/utilities';
-@import 'components/forms';
+// @import 'components/forms';
 @import 'components/alerts';
-@import 'components/tooltips';
-@import 'components/cards';
-@import 'components/progress';
-@import 'components/spinner';
-@import 'components/modals';
+// @import 'components/tooltips';
+// @import 'components/cards';
+// @import 'components/progress';
+// @import 'components/spinner';
+// @import 'components/modals';

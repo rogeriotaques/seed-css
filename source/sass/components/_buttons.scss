@@ -1,156 +1,104 @@
-/* -----------------------
+/* 
  * Seed CSS - Buttons
- * @version 1.2.4
- * @author Rogerio Taques (hello@abtz.co)
- * @see https://github.com/AbtzLabs/seed-css
- * @license MIT (https://opensource.org/licenses/MIT)
- * ----------------------- */
+ * @version 2.0.0
+ */
 
 .btn {
-  // general
+  @include transition(all, 0.25s, ease);
+  @include rem(min-width, 170px);
+
+  cursor: pointer;
   display: inline-block;
   box-sizing: border-box;
-  margin: $margin/2;
-  text-align: center;
-  text-decoration: none;
-  color: $darken-grey;
-  cursor: pointer;
-  background-color: transparent;
-  @include transition(all, 0.25s, ease);
-  @include rem(font-size, 16px);
-  @include rem(line-height, 35px);
-  @include rem(min-width, 170px);
-  padding: ($padding/2) $padding;
+  margin: $margin / 2;
+  padding: $padding ($padding * 3);
+  line-height: $height / 2;
+  font-weight: 600;
+  color: $grey-dark;
   border: {
-    color: $darken-grey;
-    width: $border;
+    radius: $border * 5;
+    width: $border * 2;
+    color: $grey-dark;
     style: solid;
-    radius: $radius/2;
+  }
+  text: {
+    align: center;
+    decoration: none;
+    rendering: optimizeLegibility;
   }
 
-  &:hover {
-    color: $primary;
-    border-color: $primary;
-  }
-
-  // colors
-  &.btn-primary {
-    border-color: $primary;
-    background-color: $primary;
-    color: whitesmoke;
-
-    &:hover {
-      background-color: darken($primary, 10%);
-      border-color: darken($primary, 10%);
-    }
-  }
-
-  &.btn-red {
-    border-color: $red;
-    background-color: $red;
-    color: whitesmoke;
-
-    &:hover {
-      background-color: darken($red, 10%);
-      border-color: darken($red, 10%);
-    }
-  }
-
-  &.btn-orange {
-    border-color: $orange;
-    background-color: $orange;
-    color: whitesmoke;
-
-    &:hover {
-      background-color: darken($orange, 10%);
-      border-color: darken($orange, 10%);
-    }
-  }
-
-  &.btn-green {
-    border-color: $green;
-    background-color: $green;
-    color: whitesmoke;
-
-    &:hover {
-      background-color: darken($green, 10%);
-      border-color: darken($green, 10%);
-    }
-  }
-
-  &.btn-purple {
-    border-color: $purple;
-    background-color: $purple;
-    color: whitesmoke;
-
-    &:hover {
-      background-color: darken($purple, 10%);
-      border-color: darken($purple, 10%);
-    }
-  }
-
-  // status
-  .disabled,
-  &[disabled] {
+  // disabled
+  &[disabled],
+  &.disabled {
+    cursor: not-allowed;
+    color: $grey-dark;
     border-color: $grey;
     background-color: $grey;
-    color: #888;
-    cursor: not-allowed;
-    text-shadow: 1px 1px 1px #fff;
-
-    &:hover {
-      color: #888;
-      border-color: $grey;
-      background-color: $grey;
-    }
+    text-shadow: white 1px 1px 1px;
   } // .disabled, [disabled]
 
+  // enabled
+  &:enabled {
+    &.link {
+      border: 0;
+    }
+
+    &.primary {
+      border-color: $primary;
+      @extend .primary-background;
+    }
+
+    &.secondary {
+      border-color: $secondary;
+      @extend .secondary-background;
+    }
+
+    &.red {
+      border-color: $red;
+      @extend .red-background;
+    }
+
+    &.orange {
+      border-color: $orange;
+      @extend .orange-background;
+    }
+
+    &.green {
+      border-color: $green;
+      @extend .green-background;
+    }
+
+    &.purple {
+      border-color: $purple;
+      @extend .purple-background;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      outline: none;
+
+      &:not(.link) {
+        box-shadow: $shadow-default;
+        background-color: white;
+      }
+
+      &.link {
+        color: $primary;
+      }
+    } // .btn:enabled:hover
+  } // .btn:enabled
+
   // sizes
-  &.btn-medium {
+  &.medium {
     @include rem(min-width, 120px);
     @include rem(font-size, 14px);
-    @include rem(line-height, 30px);
+    padding: ($padding / 2) ($padding * 2);
   }
 
-  &.btn-small {
+  &.small {
     @include rem(min-width, 80px);
     @include rem(font-size, 12px);
-    @include rem(line-height, 22px);
+    padding: ($padding / 3) ($padding);
   }
-} // .btn, button, input, input[type="submit"], input[type="reset"]
-
-// flat buttons
-&.flat-btn {
-  display: inline-block;
-  box-sizing: border-box;
-  margin: $margin/2;
-  text-decoration: none;
-  text-align: center;
-  color: $darken-grey;
-  cursor: pointer;
-  background-color: transparent;
-  @include transition(all, 0.25s, ease);
-  @include rem(font-size, 16px);
-  @include rem(line-height, 35px);
-  @include rem(min-width, 100px);
-  font-weight: 600;
-  padding: 2px 4px;
-  border: none;
-
-  &:hover {
-    color: $primary;
-  }
-
-  // sizes
-  &.btn-medium {
-    @include rem(min-width, 80px);
-    @include rem(font-size, 14px);
-    @include rem(line-height, 30px);
-  }
-
-  &.btn-small {
-    @include rem(min-width, 60px);
-    @include rem(font-size, 12px);
-    @include rem(line-height, 22px);
-  }
-}
+} // .btn

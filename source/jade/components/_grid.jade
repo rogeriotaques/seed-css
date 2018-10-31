@@ -8,10 +8,10 @@
         which means you can define the number of columns according to the screen size and it will
         adapts its width to best fit your content.
 
-    .grid.sample
-        #flexible-cols.row
-            - each i in [1,2,3,4,5,6,7,8,9,10,11,12]
-                .col.sm-1.align-center= i
+    .sample
+      #flexible-cols.row
+        - each i in [1,2,3,4,5,6,7,8,9,10,11,12]
+          .col.sm-1.align-center= i
 
     .align-center
         strong Have fun playing with columns!
@@ -26,7 +26,7 @@
         <code >*-offset-*</code> to your classname.
 
 
-    .grid.sample
+    .sample
         .row
             .col.sm-6.sm-offset-6.md-6.md-offset-6.lg-6.lg-offset-6.align-center 1
 
@@ -37,10 +37,6 @@
                 th Detail
                 th Remarks
         tbody
-            tr
-                td.nowrap .grid
-                td.nowrap &nbsp;
-                td Defines the grid container
             tr
                 td.nowrap .row
                 td.nowrap &nbsp;
@@ -71,13 +67,10 @@
                 td Creates an offset of columns. <br >It's used concatenated to <code >.col</code> and its screen size. <br >E.g: <code>.md-offset-2</code>.
 
     .code-sample
-        pre.prettyprint.lang-html.
-            &lt;!-- This's a grid --&gt;
-            &lt;div class="grid" &gt;
-                &lt;!-- This's a row. You can have as many rows as you need. --&gt;
-                &lt;div class="row" &gt;
-                &lt;!-- This's a column. You can have up to 12 columns in a row. --&gt;
-                &lt;div class="col sm-12 md-6 lg-3" &gt; ... &lt;/div&gt;
-                &lt;div class="col sm-12 md-6 lg-9" &gt; ... &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
+      pre.prettyprint.lang-html.
+        &lt;!-- This's a row. You can have as many rows as you need. --&gt;
+        &lt;div class="row" &gt;
+          &lt;!-- This's a column. You can have up to 12 columns in a row. --&gt;
+          &lt;div class="col sm-12 md-6 lg-3" &gt; ... &lt;/div&gt;
+          &lt;div class="col sm-12 md-6 lg-9" &gt; ... &lt;/div&gt;
+        &lt;/div&gt;

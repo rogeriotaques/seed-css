@@ -1,20 +1,19 @@
 /**
- * Seed CSS
- * @version 1.2.4
- * @author Rogerio Taques (hello@abtz.co)
- * @see https://github.com/AbtzLabs/seed-css
- * @license MIT (https://opensource.org/licenses/MIT)
+ * Seed CSS - Global variables
+ * @version 2.0.0
  */
+
+// container sizes
+$small-container: 90%;
+$medium-container: 85%;
+$large-container: 80%;
+$extra-large-container: 75%;
 
 // screen sizes
 $small: 320px;
-$small-container: 90%;
 $medium: 600px;
-$medium-container: 85%;
 $large: 990px;
-$large-container: 80%;
 $extra-large: 1200px;
-$extra-large-container: 75%;
 
 // media queries
 $small-only: 'only screen and (max-width: #{$medium - 1})';
@@ -27,21 +26,26 @@ $large-and-up: 'only screen and (min-width: #{$large})';
 $large-and-down: 'only screen and (max-width: #{$extra-large - 1})';
 $extra-large-only: 'only screen and (min-width: #{$extra-large})';
 
-// default variables
-$height: 45px;
+// default dimensions
+$height: 50px;
 $margin: 10px;
-$padding: 10px;
-$radius: 5px;
+$padding: $margin;
+$radius: $margin / 2;
 $border: 1px;
 
 // colors
-$primary: #387cfd;
-$darken-grey: #666;
+$primary: #1466ff;
+$secondary: #4b70b4;
 $grey: #ccc;
 $grey-light: #f5f5f5;
-$grey-lighten: #e2e2e2;
-$shadow: #888;
+$grey-medium: #e2e2e2;
+$grey-dark: #666;
 $red: #d32f2f;
 $orange: #fb8c00;
 $green: #43a047;
 $purple: #8e24aa;
+
+// shadows
+$shadow: rgba(0, 0, 0, 0.5);
+$shadow-default: $shadow 0 3px 12px;
+$shadow-inset: lighten($shadow, 20) 0 3px 6px inset;

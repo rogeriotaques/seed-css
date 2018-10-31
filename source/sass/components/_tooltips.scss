@@ -1,6 +1,6 @@
 /* -----------------------
  * Seed CSS - Tooltips
- * @version 1.2.4
+ * @version 2.0.0
  * @author Rogerio Taques (hello@abtz.co)
  * @see https://github.com/AbtzLabs/seed-css
  * @license MIT (https://opensource.org/licenses/MIT)
@@ -18,12 +18,12 @@
   background-color: $bcolor;
   padding: 10px;
   color: #fff;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.4rem;
-  white-space: nowrap;
   opacity: 0;
   z-index: 20;
   pointer-events: none;
+  min-width: 80px;
 
   -webkit-transform: translateX(-54%);
   -moz-transform: translateX(-54%);

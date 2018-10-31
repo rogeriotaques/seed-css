@@ -3,94 +3,53 @@
   h4 Buttons
 
   p.align-justify.
-    Buttons are a really basic elements on any web page or app, and it
-    comes in a couple of different flavors in <code class="primary">seed-css</code>. 
-    By simply adding the class <code >.btn</code> to any <code >&lt;a/&gt;</code> or 
-    <code >&lt;button/&gt;</code> you will make it looks like a button. Adding the 
-    class <code >.btn-primary</code> it will become a primary button. 
+    Buttons are essential to any web page or web app, and they come in a couple of different 
+    flavors in <code class="primary">seed-css</code>.  By simply adding the class <code >.btn</code> 
+    to any <code >&lt;a/&gt;</code> or  <code >&lt;button/&gt;</code> you will make it looks like 
+    a button. Adding the class <code >.btn-primary</code> it will become a primary button. 
 
-  .alert.warning
-    p NOTE: From version <code>1.2.0</code> buttons are required to use the <code >.btn</code> class.
+  .alert.warning. 
+    <b>NOTE:</b> From version <code>1.2.0</code> buttons are required to use the <code >.btn</code> class.
 
   .buttons.align-center
 
-      h6.align-center Default
+      h6.align-center Default (.btn)
 
-      a.btn(href="#!") Anchor
-      button.btn(type="button") Button element
-      input.btn(type="button", value="Input button")
-
-      br
-
-      h6.align-center Primary (.btn-primary)
-
-      a.btn.btn-primary(href="#!") Anchor
-      button.btn.btn-primary(type="button") Button element
-      input.btn.btn-primary(type="button", value="Input button")
+      a.btn(href="#!") a.btn
+      button.btn(type="button") button.btn
+      input.btn(type="button", value="input.btn")
 
       br
 
-      h6.align-center Colored (.btn-*color*)
+      h6.align-center Colored (.btn.*color*)
 
-      a.btn.btn-red(href="#!") Anchor
-      button.btn.btn-red(type="button") Button element
-      input.btn.btn-red(type="button", value="Input button")
+      a.btn.primary(href="#!") .btn.primary
+      a.btn.secondary(href="#!") .btn.secondary
+      br 
+      
+      a.btn.red(href="#!") .btn.red 
+      a.btn.orange(href="#!") .btn.orange
+      br 
 
+      a.btn.green(href="#!") .btn.green
+      a.btn.purple(href="#!") .btn.purple
       br
 
-      a.btn.btn-orange(href="#!") Anchor
-      button.btn.btn-orange(type="button") Button element
-      input.btn.btn-orange(type="button", value="Input button")
+      h6.align-center Link style (.btn.link)
+      
+      a.btn.link(href="#!") .btn.link
 
+      h6.align-center Disabled (.disabled) or <code>disabled</code> property
+
+      button.btn(type="button", disabled) .btn.disabled
       br
 
-      a.btn.btn-green(href="#!") Anchor
-      button.btn.btn-green(type="button") Button element
-      input.btn.btn-green(type="button", value="Input button")
+      h6.align-center Sizes
 
+      a.btn.small(href="#!") .btn.small
+      a.btn.medium(href="#!") .btn.medium
       br
-
-      a.btn.btn-purple(href="#!") Anchor
-      button.btn.btn-purple(type="button") Button element
-      input.btn.btn-purple(type="button", value="Input button")
-
-      br
-
-      h6.align-center Disabled (.disabled)
-
-      a.btn(href="#!", disabled) Anchor
-      button.btn(type="button", disabled) Button element
-      input.btn(type="button", value="Input button", disabled)
-
-      br
-
-      h6.align-center Flat (.flat-btn)
-
-      a.flat-btn(href="#!") Anchor
-      button.flat-btn(type="button") Button element
-      input.flat-btn(type="button", value="Input button")
-
-      br
-
-    h6.align-center Medium (.btn-medium)
-
-    .buttons.align-center
-
-      a.btn.btn-medium(href="#!") Anchor
-      button.btn.btn-medium(type="button") Button element
-      input.btn.btn-medium(type="button", value="Input button")
-
-      br
-
-    h6.align-center Small (.btn-small)
-
-    .buttons.align-center
-
-      a.btn.btn-small(href="#!") Anchor
-      button.btn.btn-small(type="button") Button element
-      input.btn.btn-small(type="button", value="Input button")
-
-  br
+      br 
 
   .code-sample
     pre.prettyprint.lang-html.
@@ -128,15 +87,19 @@
         td.nowrap &nbsp;
         td Makes anchors looks like buttons
       tr
-        td.nowrap .btn-primary
+        td.nowrap .primary
         td.nowrap &nbsp;
         td Defines a 'primary' (blue) colored button
       tr
-        td.nowrap .btn-(*color*)
+        td.nowrap .secondary
+        td.nowrap &nbsp;
+        td Defines a 'secondary' (soft blue) colored button
+      tr
+        td.nowrap .(*color*)
         td.nowrap &nbsp;
         td Defines a colored button. Colors can be: <code>red</code>, <code>orange</code>, <code>green</code> or <code>purple</code>
       tr
-        td.nowrap .btn-(*size*)
+        td.nowrap .(*size*)
         td.nowrap &nbsp;
         td Defines a sized button. Sizes can be: <code>small</code> or <code>medium</code>. Default is <code>big</code>
       tr
@@ -144,6 +107,6 @@
         td.nowrap &nbsp;
         td Defines disabled buttons. Simply setting the <code>disabled</code> property will also make button looks like disabled
       tr
-        td.nowrap .flat-btn
+        td.nowrap .link
         td.nowrap &nbsp;
-        td Defines <b>flat</b> buttons, which means no borders or background colors. You are still able to use <code>.btn-(*color*)</code> and or <code>.btn(*size*)</code> on this button type
+        td Defines link styled buttons, which means no borders or background colors.

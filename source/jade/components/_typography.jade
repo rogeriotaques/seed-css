@@ -9,11 +9,11 @@
   p.align-justify.
     We are using <b>Lato (300)</b> as general font-family and <b>Open Sans (400)</b> as
     title's font-family. The easiest way to make these fonts available to your page is
-    loading them from Google Fonts, such as:
+    loading them from <a href="https://fonts.google.com/" target="_blank" >Google Fonts</a>, such as:
 
   .code-sample
     pre.prettyprint.lang-html.
-      &lt; link href="//fonts.googleapis.com/css?family=Lato:300,700|Open+Sans:400" rel="stylesheet" &gt;
+      &lt;link href="//fonts.googleapis.com/css?family=Lato:300,700|Open+Sans:400" rel="stylesheet"&gt;
 
   .grid
     .row
@@ -28,6 +28,28 @@
           This is an <i >italic</i> text. <br >
           This is an <u >underlined</u> text. <br >
           This is an <a href="#!">anchor</a> text.
+
+        p 
+          b Ordered lists:
+
+        ol
+          li First item
+          li Second item
+            ol
+              li Nested first
+              li Nested second ...
+          li Third item
+
+        p 
+          b Unordered lists:
+
+        ul
+          li First item
+          li Second item
+            ul
+              li Nested first
+              li Nested second ...
+          li Third item
 
   .code-sample
     pre.prettyprint.lang-html.
@@ -45,3 +67,11 @@
       &lt;i &gt; ... &lt;/i&gt;
       &lt;u &gt; ... &lt;/u&gt;
       &lt;a href="." &gt; ... &lt;/a&gt;
+
+      &lt;!-- Lists --&gt;
+      &lt;!-- replace OL by UL or DL for different list types --&gt;
+      &lt;ol &gt;
+        &lt;li &gt; ... &lt;/li&gt;
+        &lt;li &gt; ... &lt;/li&gt;
+        &lt;li &gt; ... &lt;/li&gt;
+      &lt;/ol&gt;

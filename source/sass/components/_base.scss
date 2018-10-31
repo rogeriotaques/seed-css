@@ -1,28 +1,12 @@
-/* -----------------------
+/* 
  * Seed CSS - Base
- * @version 1.2.4
- * @author Rogerio Taques (hello@abtz.co)
- * @see https://github.com/AbtzLabs/seed-css
- * @license MIT (https://opensource.org/licenses/MIT)
- * ----------------------- */
+ * @version 2.0.0
+ */
 
-html {
-  font-size: 62.5%;
+:root {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-}
-
-body {
-  @include rem(font-size, 15px);
-  @include rem(line-height, 24px);
-
-  font: {
-    weight: 300; // light
-    family: 'Lato', 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica,
-      Arial, sans-serif;
-  }
-
-  color: #222;
+  font-size: 62.5%;
 }
 
 hr {
@@ -49,22 +33,9 @@ pre {
 }
 
 code {
-  padding: 2px;
-  border: thin solid #ddd;
-  background-color: #eee;
-}
-
-.container {
-  width: $small-container;
-  margin: $margin auto;
-
-  @media #{$medium-and-up} {
-    width: $medium-container;
-    max-width: $medium;
-  }
-
-  @media #{$large-and-up} {
-    width: $large-container;
-    max-width: $large;
-  }
+  padding: $padding / 5;
+  border: $border solid $grey;
+  background-color: $grey-light;
+  color: $red;
+  white-space: nowrap;
 }

@@ -1,52 +1,87 @@
-/* -----------------------
+/* 
  * Seed CSS - Alerts
- * @version 1.2.4
- * @author Rogerio Taques (hello@abtz.co)
- * @see https://github.com/AbtzLabs/seed-css
- * @license MIT (https://opensource.org/licenses/MIT)
- * ----------------------- */
+ * @version 2.0.0
+ */
 
 .alert {
-  $shadow-data: 10px 0 0 inset !default;
+  $shadow-data: 5px 0 0 inset !default;
 
-  background-color: $grey-lighten;
-  color: #333;
-  // padding: 20px;
+  position: relative;
+  background-color: $grey-light;
+  color: $grey-dark;
   padding: 0;
   margin: 10px;
   box-sizing: border-box;
-  box-shadow: #8c8c8c $shadow-data;
+  box-shadow: $grey $shadow-data;
+  padding: 20px;
 
-  p {
-    margin: 0;
-    padding: 20px;
+  &::before {
+    $dimension: 20px;
 
-    &:not(:first-child) {
-      padding-top: 0;
-    }
+    @include rem(font-size, 10px);
+    @include rem(border-radius, 30px);
+    content: '\f101';
+    font-family: 'Ionicons';
+    color: white;
+    display: block;
+    position: absolute;
+    width: $dimension;
+    height: $dimension;
+    margin-top: $dimension;
+    line-height: $dimension;
+    background-color: $grey;
+    border: $border solid $grey;
+    text-align: center;
+    top: 0;
+    left: 0;
 
-    &:not(:last-child) {
-      padding-bottom: 5px;
-    }
-  } // p
+    -webkit-transform: translateX(-9px);
+    -moz-transform: translateX(-9px);
+    -ms-transform: translateX(-9px);
+    transform: translateX(-9px);
+  }
 
   &.info {
     box-shadow: $primary $shadow-data;
     background-color: #e8f0ff;
+
+    &::before {
+      content: '\f14a';
+      background-color: $primary;
+      border-color: $primary;
+    }
   } // .info
 
   &.success {
     box-shadow: $green $shadow-data;
     background-color: #e5ffe6;
+
+    &::before {
+      content: '\f122';
+      background-color: $green;
+      border-color: $primary;
+    }
   } // .success
 
   &.warning {
     box-shadow: $orange $shadow-data;
     background-color: #fff0dc;
+
+    &::before {
+      content: '\f101';
+      background-color: $orange;
+      border-color: $orange;
+    }
   } // .warning
 
   &.danger {
     box-shadow: $red $shadow-data;
     background-color: #ffe0e0;
+
+    &::before {
+      content: '\f12a';
+      background-color: $red;
+      border-color: $red;
+    }
   } // .danger
 } // .alert

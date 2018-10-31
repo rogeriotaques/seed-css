@@ -13,7 +13,7 @@
         h5 Text alignment
 
     .row
-      .col.md-6
+      .col.lg-6
         p.align-left This is left aligned
 
         .code-sample
@@ -30,7 +30,7 @@
 
         br
 
-      .col.md-6
+      .col.lg-6
 
         p.align-right This is right aligned
 
@@ -70,12 +70,51 @@
               td.nowrap .align-justify
               td Aligns justified
 
+  .grid
+    .row
+      .col.sm-12
+        h5 Floating
+
+    .row
+      .col
+        p
+          span.place-left This is floating left 
+          span.place-right This is floating right 
+
+        p
+          span.place-center This is floating center
+
+        .code-sample
+          pre.prettyprint.lang-html.
+            &lt;span class="place-left" &gt; ... &lt;/span&gt;
+            &lt;span class="place-right" &gt; ... &lt;/span&gt;
+            &lt;span class="place-center" &gt; ... &lt;/span&gt;
+
+    .row
+      .col
+
+        table
+          thead
+            tr
+              th Class
+              th Remarks
+          tbody
+            tr
+              td.nowrap .place-left
+              td Places an element on left
+            tr
+              td.nowrap .place-right
+              td Places an element on right
+            tr
+              td.nowrap .place-center
+              td Places an element on center
+
     .row
       .col.sm-12
         h5 Text transform
 
     .row
-      .col.sm-12
+      .col
 
         .code-sample.bg-white
           p.nowrap.
@@ -89,7 +128,7 @@
         br
 
     .row
-      .col.md-6
+      .col.lg-6
         p.camel-case.
           this text should be camel case.
 
@@ -97,7 +136,7 @@
           pre.prettyprint.lang-html.
             &lt;p class="camel-case" &gt; ... &lt;/p&gt;
 
-      .col.md-6
+      .col.lg-6
         p.uc-first.
           only the first character of this text should be capitalized.
 
@@ -106,7 +145,7 @@
             &lt;p class="uc-first" &gt; ... &lt;/p&gt;
 
     .row
-      .col.md-6
+      .col.lg-6
         p.upper-case.
           All letters of this text should be capitalized.
 
@@ -114,7 +153,7 @@
           pre.prettyprint.lang-html.
             &lt;p class="upper-case" &gt; ... &lt;/p&gt;
 
-      .col.md-6
+      .col.lg-6
         p.lower-case.
           All letters of this text should be lower case.
 

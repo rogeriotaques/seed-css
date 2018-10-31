@@ -1,66 +1,60 @@
-/* -----------------------
+/* 
  * Seed CSS - Grid
- * @version 1.2.4
- * @author Rogerio Taques (hello@abtz.co)
- * @see https://github.com/AbtzLabs/seed-css
- * @license MIT (https://opensource.org/licenses/MIT)
- * ----------------------- */
+ * @version 2.0.0
+ */
 
-.grid {
+.row {
   width: 100%;
   display: block;
   box-sizing: border-box;
-  margin: $margin auto;
   position: relative;
+  text-align: inherit; // Fallback for IE-Edge
+  text-align: initial;
 
-  .row {
-    width: 100%;
+  &:after {
+    content: '';
     display: block;
-    box-sizing: border-box;
-    position: relative;
-    text-align: inherit; // Fallback for IE-Edge
-    text-align: initial;
-
-    &:after {
-      content: '';
-      display: block;
-      clear: both;
-    }
+    clear: both;
   }
 
-  .col {
+  > .col {
     width: 100%;
     float: left;
     position: relative;
     box-sizing: border-box;
     min-height: $height;
-    padding: $padding / 2;
     vertical-align: top;
     margin-bottom: $margin / 2;
+  }
+}
 
-    @include grid-make-cols('sm');
+@media #{$small-and-up} {
+  .row {
+    > .col {
+      @include grid-make-cols('sm');
+    }
   }
 }
 
 @media #{$medium-and-up} {
-  .grid {
-    .col {
+  .row {
+    > .col {
       @include grid-make-cols('md');
     }
   }
 }
 
 @media #{$large-and-up} {
-  .grid {
-    .col {
+  .row {
+    > .col {
       @include grid-make-cols('lg');
     }
   }
 }
 
 @media #{$extra-large-only} {
-  .grid {
-    .col {
+  .row {
+    > .col {
       @include grid-make-cols('xl');
     }
   }
