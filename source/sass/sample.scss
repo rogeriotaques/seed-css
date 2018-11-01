@@ -314,25 +314,35 @@ div[id^='sample-'] {
   }
 }
 
-// .with-tooltip {
-//   &.show {
-//     .tooltip {
-//       opacity: 1;
-//       top: -10%;
+.with-tooltip {
+  &.show {
+    .tooltip {
+      opacity: 1;
 
-//       &.top {
-//         top: 50%;
-//       }
+      &.top {
+        top: 150%;
 
-//       &.right {
-//         top: 50%;
-//         left: 30%;
-//       }
+        &:hover {
+          > .tooltip {
+            margin-top: 0;
+          }
+        }
+      }
 
-//       &.left {
-//         top: 50%;
-//         left: 65%;
-//       }
-//     }
-//   } // .show
-// } // .with-tooltip
+      &.right {
+        left: calc(30%);
+
+        &:hover {
+          > .tooltip {
+            margin-left: 0;
+          }
+        }
+      }
+
+      //       &.left {
+      //         top: 50%;
+      //         left: 65%;
+      //       }
+    }
+  } // .show
+} // .with-tooltip

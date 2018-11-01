@@ -4,16 +4,15 @@
 
   p.
     Utilities are classes that can help you to easily show up your data
-    or content in a beatiful way.<br >It can be used combined with other
+    or content in a beatiful way. It can be used combined with other
     available classes.
 
+  h5 Text alignment
+
   .grid
-    .row
-      .col.sm-12
-        h5 Text alignment
 
     .row
-      .col.lg-6
+      .col.md-5.sm-12
         p.align-left This is left aligned
 
         .code-sample
@@ -30,7 +29,7 @@
 
         br
 
-      .col.lg-6
+      .col.sm-12.md-5.md-offset-1
 
         p.align-right This is right aligned
 
@@ -70,20 +69,28 @@
               td.nowrap .align-justify
               td Aligns justified
 
+  br 
+
+  h5 Floating
+
+  p Floating elements are very hepful for quick element alignments.
+
+  br
+
   .grid
     .row
-      .col.sm-12
-        h5 Floating
+      .col.md-5
+        span.place-center This is floating center
 
-    .row
-      .col
+        br
+        br 
+
         p
           span.place-left This is floating left 
           span.place-right This is floating right 
+          span(style="clear: both;")
 
-        p
-          span.place-center This is floating center
-
+      .col.md-5.md-offset-1
         .code-sample
           pre.prettyprint.lang-html.
             &lt;span class="place-left" &gt; ... &lt;/span&gt;
@@ -109,9 +116,7 @@
               td.nowrap .place-center
               td Places an element on center
 
-    .row
-      .col.sm-12
-        h5 Text transform
+    h5 Text transform
 
     .row
       .col
@@ -128,7 +133,7 @@
         br
 
     .row
-      .col.lg-6
+      .col.md-5
         p.camel-case.
           this text should be camel case.
 
@@ -136,7 +141,7 @@
           pre.prettyprint.lang-html.
             &lt;p class="camel-case" &gt; ... &lt;/p&gt;
 
-      .col.lg-6
+      .col.md-5.md-offset-1
         p.uc-first.
           only the first character of this text should be capitalized.
 
@@ -145,7 +150,7 @@
             &lt;p class="uc-first" &gt; ... &lt;/p&gt;
 
     .row
-      .col.lg-6
+      .col.md-5
         p.upper-case.
           All letters of this text should be capitalized.
 
@@ -153,7 +158,7 @@
           pre.prettyprint.lang-html.
             &lt;p class="upper-case" &gt; ... &lt;/p&gt;
 
-      .col.lg-6
+      .col.md-5.md-offset-1
         p.lower-case.
           All letters of this text should be lower case.
 

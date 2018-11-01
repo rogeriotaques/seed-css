@@ -31,7 +31,9 @@
 
   &-center {
     display: block;
-    margin {
+    width: fit-content;
+
+    margin: {
       left: auto;
       right: auto;
     }

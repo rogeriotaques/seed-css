@@ -11,69 +11,72 @@
   .alert.warning. 
     <b>NOTE:</b> From version <code>1.2.0</code> buttons are required to use the <code >.btn</code> class.
 
-  .buttons.align-center
+  .row  
+    .col.md-6.sm-12 
+      .buttons.align-center
 
-      h6.align-center Default (.btn)
+        h6.align-center Default (.btn)
 
-      a.btn(href="#!") a.btn
-      button.btn(type="button") button.btn
-      input.btn(type="button", value="input.btn")
+        a.btn(href="#!") a.btn
+        button.btn(type="button") button.btn
+        input.btn(type="button", value="input.btn")
 
+        br
+
+        h6.align-center Colored (.btn.*color*)
+
+        a.btn.primary(href="#!") .btn.primary
+        a.btn.secondary(href="#!") .btn.secondary
+        br 
+        
+        a.btn.red(href="#!") .btn.red 
+        a.btn.orange(href="#!") .btn.orange
+        br 
+
+        a.btn.green(href="#!") .btn.green
+        a.btn.purple(href="#!") .btn.purple
+        br
+
+        h6.align-center Link style (.btn.link)
+        
+        a.btn.link(href="#!") .btn.link
+
+        h6.align-center Disabled (.disabled) or <code>disabled</code> property
+
+        button.btn(type="button", disabled) .btn.disabled
+        br
+
+        h6.align-center Sizes
+
+        a.btn.small(href="#!") .btn.small
+        a.btn.medium(href="#!") .btn.medium
+
+    .col.md-6.sm-12 
       br
 
-      h6.align-center Colored (.btn.*color*)
+      .code-sample
+        pre.prettyprint.lang-html.
+          &lt;!-- .btn class makes an anchor looks like a button --&gt;
+          &lt;a class="btn" href="..." &gt; ... &lt;/a&gt;
 
-      a.btn.primary(href="#!") .btn.primary
-      a.btn.secondary(href="#!") .btn.secondary
-      br 
-      
-      a.btn.red(href="#!") .btn.red 
-      a.btn.orange(href="#!") .btn.orange
-      br 
+          &lt;!-- default buttons and input[type="button"] --&gt;
+          &lt;button type="button" class="btn" &gt; ... &lt;/button&gt;
+          &lt;input type="button" class="btn" value="..." /&gt;
 
-      a.btn.green(href="#!") .btn.green
-      a.btn.purple(href="#!") .btn.purple
+          &lt;!-- .btn-primary makes buttons colored --&gt;
+          &lt;a class="btn btn-primary" href="..." &gt; ... &lt;/a&gt;
+          &lt;a class="btn btn-red" href="..." &gt; ... &lt;/a&gt;
+          &lt;a class="btn btn-green" href="..." &gt; ... &lt;/a&gt;
+
+          &lt;!-- .btn-primary makes buttons on different sizes --&gt;
+          &lt;a class="btn btn-medium" href="..." &gt; ... &lt;/a&gt;
+          &lt;a class="btn btn-small" href="..." &gt; ... &lt;/a&gt;
+
+          &lt;!-- .btn-primary makes disabled buttons --&gt;
+          &lt;a class="btn disabled" href="..." &gt; ... &lt;/a&gt;
+          &lt;button class="btn" disabled &gt; ... &lt;/button&gt;
+
       br
-
-      h6.align-center Link style (.btn.link)
-      
-      a.btn.link(href="#!") .btn.link
-
-      h6.align-center Disabled (.disabled) or <code>disabled</code> property
-
-      button.btn(type="button", disabled) .btn.disabled
-      br
-
-      h6.align-center Sizes
-
-      a.btn.small(href="#!") .btn.small
-      a.btn.medium(href="#!") .btn.medium
-      br
-      br 
-
-  .code-sample
-    pre.prettyprint.lang-html.
-      &lt;!-- .btn class makes an anchor looks like a button --&gt;
-      &lt;a class="btn" href="..." &gt; ... &lt;/a&gt;
-
-      &lt;!-- default buttons and input[type="button"] --&gt;
-      &lt;button type="button" class="btn" &gt; ... &lt;/button&gt;
-      &lt;input type="button" class="btn" value="..." /&gt;
-
-      &lt;!-- .btn-primary makes buttons colored --&gt;
-      &lt;a class="btn btn-primary" href="..." &gt; ... &lt;/a&gt;
-      &lt;a class="btn btn-red" href="..." &gt; ... &lt;/a&gt;
-      &lt;a class="btn btn-green" href="..." &gt; ... &lt;/a&gt;
-
-      &lt;!-- .btn-primary makes buttons on different sizes --&gt;
-      &lt;a class="btn btn-medium" href="..." &gt; ... &lt;/a&gt;
-      &lt;a class="btn btn-small" href="..." &gt; ... &lt;/a&gt;
-
-      &lt;!-- .btn-primary makes disabled buttons --&gt;
-      &lt;a class="btn disabled" href="..." &gt; ... &lt;/a&gt;
-      &lt;button class="btn" disabled &gt; ... &lt;/button&gt;
-
-  br
 
   table
     thead

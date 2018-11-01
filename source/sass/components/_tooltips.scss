@@ -1,44 +1,51 @@
-/* -----------------------
+/* 
  * Seed CSS - Tooltips
  * @version 2.0.0
- * @author Rogerio Taques (hello@abtz.co)
- * @see https://github.com/AbtzLabs/seed-css
- * @license MIT (https://opensource.org/licenses/MIT)
- * ----------------------- */
+ */
 
 .tooltip {
-  $bcolor: #333 !default;
+  $bcolor: darken($grey-dark, 20) !default;
+
+  @include rem(font-size, 14px);
+  @include rem(line-height, 16px);
 
   position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: 15px;
-  border: thin solid $bcolor;
-  border-radius: 2px;
-  background-color: $bcolor;
-  padding: 10px;
+  // top: 50%;
+  // left: calc(50%);
+  // margin-top: 15px;
   color: #fff;
-  font-size: 1.2rem;
-  line-height: 1.4rem;
-  opacity: 0;
-  z-index: 20;
+  box-shadow: $shadow-default;
+  border: $border solid $bcolor;
+  border-radius: $border * 3;
+  background-color: $bcolor;
+  padding: $padding;
   pointer-events: none;
   min-width: 80px;
-
-  -webkit-transform: translateX(-54%);
-  -moz-transform: translateX(-54%);
-  -ms-transform: translateX(-54%);
-  transform: translateX(-54%);
+  max-width: 300px;
+  opacity: 0;
+  z-index: 20;
 
   -webkit-transition: all 0.25s linear;
   -moz-transition: all 0.25s linear;
   -ms-transition: all 0.25s linear;
   transition: all 0.25s linear;
 
+  &:not(.top) {
+    margin-top: $margin / 2;
+  }
+
+  &.bottom,
+  &:not(.top):not(.right):not(.left) {
+    -webkit-transform: translateY(100%) translateX(-55%);
+    -moz-transform: translateY(100%) translateX(-55%);
+    -ms-transform: translateY(100%) translateX(-55%);
+    transform: translateY(100%) translateX(-55%);
+  }
+
   &::before {
     content: ' ';
     display: block;
-    border: 5px solid $bcolor;
+    border: ($border * 5) solid $bcolor;
     border-right-color: transparent;
     border-bottom-color: transparent;
     position: absolute;
@@ -52,8 +59,8 @@
   } // .tooltip::before
 
   &.top {
-    top: 0;
-    left: 48.5%;
+    top: $border * -1;
+    left: calc(50%);
     -webkit-transform: translateX(-50%) translateY(-110%);
     -moz-transform: translateX(-50%) translateY(-110%);
     -ms-transform: translateX(-50%) translateY(-110%);
@@ -61,8 +68,8 @@
 
     &::before {
       top: 100%;
-      left: 50%;
-      border: 5px solid $bcolor;
+      left: calc(50%);
+      border: ($border * 5) solid $bcolor;
       border-left-color: transparent;
       border-top-color: transparent;
 
@@ -74,17 +81,17 @@
   } // .top
 
   &.right {
-    top: 50%;
+    top: calc(50%);
     left: 100%;
-    -webkit-transform: translateX(0%) translateY(-110%);
-    -moz-transform: translateX(0%) translateY(-110%);
-    -ms-transform: translateX(0%) translateY(-110%);
-    transform: translateX(0%) translateY(-110%);
+    -webkit-transform: translateX(0%) translateY(-50%);
+    -moz-transform: translateX(0%) translateY(-50%);
+    -ms-transform: translateX(0%) translateY(-50%);
+    transform: translateX(0%) translateY(-50%);
 
     &::before {
-      top: 50%;
+      top: calc(50%);
       left: 0;
-      border: 5px solid $bcolor;
+      border: ($border * 5) solid $bcolor;
       border-right-color: transparent;
       border-bottom-color: transparent;
 
@@ -96,12 +103,12 @@
   } // .right
 
   &.left {
-    top: 50%;
+    top: calc(50%);
     left: 0;
-    -webkit-transform: translateX(-100%) translateY(-110%);
-    -moz-transform: translateX(-100%) translateY(-110%);
-    -ms-transform: translateX(-100%) translateY(-110%);
-    transform: translateX(-100%) translateY(-110%);
+    -webkit-transform: translateX(-100%) translateY(-50%);
+    -moz-transform: translateX(-100%) translateY(-50%);
+    -ms-transform: translateX(-100%) translateY(-50%);
+    transform: translateX(-100%) translateY(-50%);
 
     &::before {
       top: 50%;
@@ -119,10 +126,29 @@
 } // .tooltip
 
 .with-tooltip {
+  position: relative;
+
   &:hover {
-    & > .tooltip {
+    > .tooltip {
       display: block;
       opacity: 1;
+
+      &.top {
+        margin-top: $margin;
+      }
+
+      &.right {
+        margin-left: $margin * -1;
+      }
+
+      &.left {
+        margin-left: $margin;
+      }
+
+      &.bottom,
+      &:not(.top):not(.right):not(.left) {
+        margin-top: $margin * -1;
+      }
     }
   } // :hover
 } // .with-tooltip
