@@ -4,8 +4,9 @@
  */
 
 :root {
-  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased; /* webkit text rendering fix */
   -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
   font-size: 62.5%;
 }
 

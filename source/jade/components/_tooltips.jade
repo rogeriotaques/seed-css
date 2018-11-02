@@ -6,25 +6,39 @@
     a component  placed on his/her screen. <code class="primary">Seed-css</code> gives you a
     simple but very efficient tooltip, which doesn't even need javascript.
 
+  br 
+  br 
+
   .tooltips
-    .grid
-      .row
-        .col.md-3.sm-6
-          p.with-tooltip.show.align-center
-           span ...
-           span.tooltip.top Top tooltip
-        .col.md-3.sm-6
-          p.with-tooltip.show.align-center
-           span ...
-           span.tooltip.right Right tooltip
-        .col.md-3.sm-6
-          p.with-tooltip.show.align-center
-           span ...
-           span.tooltip Bottom tooltip
-        .col.md-3.sm-6
-          p.with-tooltip.show.align-center
-           span ...
-           span.tooltip.left Left tooltip
+    .grid 
+      .row 
+        .col.md-3.sm-6.align-center
+          span(tooltip="Right tooltip").with-tooltip.right Hover here!
+        .col.md-3.sm-6.align-center
+          span(tooltip="Top tooltip").with-tooltip.top Hover here!
+        .col.md-3.sm-6.align-center
+          span(tooltip="Bottom tooltip").with-tooltip.bottom Hover here!
+        .col.md-3.sm-6.align-center
+          span(tooltip="Left tooltip. <a href=\"#\" >AAA</a>").with-tooltip.left Hover here!
+
+    //- .grid
+    //-   .row
+    //-     .col.md-3.sm-6
+    //-       p.with-tooltip.show.align-center
+    //-        span ...
+    //-        span.tooltip.top Top tooltip
+    //-     .col.md-3.sm-6
+    //-       p.with-tooltip.show.align-center
+    //-        span ...
+    //-        span.tooltip.right Right tooltip
+    //-     .col.md-3.sm-6
+    //-       p.with-tooltip.show.align-center
+    //-        span ...
+    //-        span.tooltip Bottom tooltip
+    //-     .col.md-3.sm-6
+    //-       p.with-tooltip.show.align-center
+    //-        span ...
+    //-        span.tooltip.left Left tooltip
 
   br
 

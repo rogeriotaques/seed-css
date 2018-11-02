@@ -314,35 +314,39 @@ div[id^='sample-'] {
   }
 }
 
-.with-tooltip {
-  &.show {
-    .tooltip {
+.tooltips {
+  .with-tooltip {
+    &::before,
+    &::after {
       opacity: 1;
-
-      &.top {
-        top: 150%;
-
-        &:hover {
-          > .tooltip {
-            margin-top: 0;
-          }
-        }
-      }
-
-      &.right {
-        left: calc(30%);
-
-        &:hover {
-          > .tooltip {
-            margin-left: 0;
-          }
-        }
-      }
-
-      //       &.left {
-      //         top: 50%;
-      //         left: 65%;
-      //       }
     }
-  } // .show
+
+    &.right {
+      &::before,
+      &::after {
+        left: -10%;
+      }
+    }
+
+    &.top {
+      &::before,
+      &::after {
+        top: 150%;
+      }
+    }
+
+    &.bottom {
+      &::before,
+      &::after {
+        top: -90%;
+      }
+    }
+
+    &.left {
+      &::before,
+      &::after {
+        left: 150%;
+      }
+    }
+  }
 } // .with-tooltip
