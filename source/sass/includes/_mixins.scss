@@ -45,10 +45,6 @@
 @mixin grid-make-cols($size) {
   @for $i from 1 through 12 {
     &.#{$size}-#{$i} {
-      // &:not([class^="offset-"]):not([class*=" offset-"]) {
-      //   margin-left: -.35rem;
-      // }
-
       @if $i == 12 {
         width: 100%;
       } @else if $i == 1 {
@@ -68,6 +64,76 @@
       } @else {
         margin-left: calc(100% / 12 * #{$i});
       }
+    }
+  }
+}
+
+@mixin elem-make-spacing() {
+  $cases: 'm', 'p';
+  $max: 50;
+  $step: 5;
+
+  @each $case in $cases {
+    @for $i from 0 through $max {
+      &.#{$case}-#{$i} {
+        margin: #{$i + px} !important;
+      }
+
+      $i: $i + $step;
+    }
+
+    @for $i from 0 through $max {
+      &.#{$case}x-#{$i} {
+        margin: {
+          left: #{$i + px} !important;
+          right: #{$i + px} !important;
+        }
+      }
+
+      $i: $i + $step;
+    }
+
+    @for $i from 0 through $max {
+      &.#{$case}y-#{$i} {
+        margin: {
+          top: #{$i + px} !important;
+          bottom: #{$i + px} !important;
+        }
+      }
+
+      $i: $i + $step;
+    }
+
+    @for $i from 0 through $max {
+      &.#{$case}l-#{$i} {
+        margin-left: #{$i + px} !important;
+      }
+
+      $i: $i + $step;
+    }
+
+    @for $i from 0 through $max {
+      &.#{$case}t-#{$i} {
+        margin-top: #{$i + px} !important;
+      }
+
+      $i: $i + $step;
+    }
+
+    @for $i from 0 through $max {
+      &.#{$case}r-#{$i} {
+        margin-right: #{$i + px} !important;
+      }
+
+      $i: $i + $step;
+    }
+
+    @for $i from 0 through $max {
+      &.#{$case}b-#{$i} {
+        margin-bottom: #{$i + px} !important;
+      }
+
+      $i: $i + $step;
     }
   }
 }

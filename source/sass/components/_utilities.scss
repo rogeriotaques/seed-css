@@ -3,6 +3,8 @@
  * @version 2.0.0
  */
 
+@import '../includes/mixins';
+
 // alignment
 .align {
   &-center {
@@ -167,3 +169,6 @@ img {
     }
   }
 }
+
+// spacing (margin and paddings)
+@include elem-make-spacing();

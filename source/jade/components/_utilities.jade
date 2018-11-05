@@ -9,48 +9,46 @@
 
   h5 Text alignment
 
-  .grid
+  .row
+    .col.md-5.sm-12
+      p.align-left This is left aligned
 
-    .row
-      .col.md-5.sm-12
-        p.align-left This is left aligned
+      .code-sample
+        pre.prettyprint.lang-html.
+          &lt;p class="align-left" &gt; ... &lt;/p&gt;
 
-        .code-sample
-          pre.prettyprint.lang-html.
-            &lt;p class="align-left" &gt; ... &lt;/p&gt;
+      br
 
-        br
+      p.align-center This is center aligned
 
-        p.align-center This is center aligned
+      .code-sample
+        pre.prettyprint.lang-html.
+          &lt;p class="align-center" &gt; ... &lt;/p&gt;
 
-        .code-sample
-          pre.prettyprint.lang-html.
-            &lt;p class="align-center" &gt; ... &lt;/p&gt;
+      br
 
-        br
+    .col.sm-12.md-5.md-offset-1
 
-      .col.sm-12.md-5.md-offset-1
+      p.align-right This is right aligned
 
-        p.align-right This is right aligned
+      .code-sample
+        pre.prettyprint.lang-html.
+          &lt;p class="align-right" &gt; ... &lt;/p&gt;
 
-        .code-sample
-          pre.prettyprint.lang-html.
-            &lt;p class="align-right" &gt; ... &lt;/p&gt;
+      br
 
-        br
+      p.align-justify.
+        This is justified. This is justified. This is justified. This is justified.
+        This is justified. This is justified. This is justified. This is justified.
 
-        p.align-justify.
-          This is justified. This is justified. This is justified. This is justified.
-          This is justified. This is justified. This is justified. This is justified.
+      .code-sample
+        pre.prettyprint.lang-html.
+          &lt;p class="align-justify" &gt; ... &lt;/p&gt;
 
-        .code-sample
-          pre.prettyprint.lang-html.
-            &lt;p class="align-justify" &gt; ... &lt;/p&gt;
+  .row
+    .col
 
-    .row
-      .col
-
-        table
+      table
           thead
             tr
               th Class
@@ -71,105 +69,62 @@
 
   br 
 
-  h5 Floating
+  h5 Text transform
 
-  p Floating elements are very hepful for quick element alignments.
+  .row
+    .col
+      .code-sample.bg-white
+        p.nowrap.
+          This text should not break when the screen width is smaller then
+          the text length.
+
+      .code-sample
+        pre.prettyprint.lang-html.
+          &lt;p class="nowrap" &gt; ... &lt;/p&gt;
 
   br
 
-  .grid
-    .row
-      .col.md-5
-        span.place-center This is floating center
+  .row
+    .col.md-5
+      p.camel-case.
+        this text should be camel case.
 
-        br
-        br 
+      .code-sample
+        pre.prettyprint.lang-html.
+          &lt;p class="camel-case" &gt; ... &lt;/p&gt;
 
-        p
-          span.place-left This is floating left 
-          span.place-right This is floating right 
-          span(style="clear: both;")
+    .col.md-5.md-offset-1
+      p.uc-first.
+        only the first character of this text should be capitalized.
 
-      .col.md-5.md-offset-1
-        .code-sample
-          pre.prettyprint.lang-html.
-            &lt;span class="place-left" &gt; ... &lt;/span&gt;
-            &lt;span class="place-right" &gt; ... &lt;/span&gt;
-            &lt;span class="place-center" &gt; ... &lt;/span&gt;
+      .code-sample
+        pre.prettyprint.lang-html.
+          &lt;p class="uc-first" &gt; ... &lt;/p&gt;
 
-    .row
-      .col
+  br
 
-        table
-          thead
-            tr
-              th Class
-              th Remarks
-          tbody
-            tr
-              td.nowrap .place-left
-              td Places an element on left
-            tr
-              td.nowrap .place-right
-              td Places an element on right
-            tr
-              td.nowrap .place-center
-              td Places an element on center
+  .row
+    .col.md-5
+      p.upper-case.
+        All letters of this text should be capitalized.
 
-    h5 Text transform
+      .code-sample
+        pre.prettyprint.lang-html.
+          &lt;p class="upper-case" &gt; ... &lt;/p&gt;
 
-    .row
-      .col
+    .col.md-5.md-offset-1
+      p.lower-case.
+        All letters of this text should be lower case.
 
-        .code-sample.bg-white
-          p.nowrap.
-            This text should not break when the screen width is smaller then
-            the text length.
+      .code-sample
+        pre.prettyprint.lang-html.
+          &lt;p class="lower-case" &gt; ... &lt;/p&gt;
 
-        .code-sample
-          pre.prettyprint.lang-html.
-            &lt;p class="nowrap" &gt; ... &lt;/p&gt;
+  br
 
-        br
-
-    .row
-      .col.md-5
-        p.camel-case.
-          this text should be camel case.
-
-        .code-sample
-          pre.prettyprint.lang-html.
-            &lt;p class="camel-case" &gt; ... &lt;/p&gt;
-
-      .col.md-5.md-offset-1
-        p.uc-first.
-          only the first character of this text should be capitalized.
-
-        .code-sample
-          pre.prettyprint.lang-html.
-            &lt;p class="uc-first" &gt; ... &lt;/p&gt;
-
-    .row
-      .col.md-5
-        p.upper-case.
-          All letters of this text should be capitalized.
-
-        .code-sample
-          pre.prettyprint.lang-html.
-            &lt;p class="upper-case" &gt; ... &lt;/p&gt;
-
-      .col.md-5.md-offset-1
-        p.lower-case.
-          All letters of this text should be lower case.
-
-        .code-sample
-          pre.prettyprint.lang-html.
-            &lt;p class="lower-case" &gt; ... &lt;/p&gt;
-
-      .row
-        .col
-
-          table
+  .row
+    .col
+      table
             thead
               tr
                 th Class
@@ -191,78 +146,261 @@
                 td.nowrap .lower-case
                 td Make all letters in lower case
 
+  br
+
+  h5 Element Floating
+
+  p Floating elements are very hepful for quick element alignments.
+
+  br
+
+  .row
+    .col.md-5
+      span.place-center This is floating center
       br
+      br 
+      p
+        span.place-left This is floating left 
+        span.place-right This is floating right 
+        span(style="clear: both;")
 
-      .row
-        .col.sm-12
-          h5 Hiding
+    .col.md-5.md-offset-1
+      .code-sample
+        pre.prettyprint.lang-html.
+          &lt;span class="place-left" &gt; ... &lt;/span&gt;
+          &lt;span class="place-right" &gt; ... &lt;/span&gt;
+          &lt;span class="place-center" &gt; ... &lt;/span&gt;
 
-          p.align-justify.
-            Show and hide elements from your pages can be an usefull ability
-            to improve the user experience of your apps or websites.
+  br
 
+  .row
+    .col
+
+      table
+        thead
+          tr
+            th Class
+            th Remarks
+        tbody
+          tr
+            td.nowrap .place-left
+            td Places an element on left
+          tr
+            td.nowrap .place-right
+            td Places an element on right
+          tr
+            td.nowrap .place-center
+            td Places an element on center
+
+  br
+
+  h5 Margins & Paddings
+
+  p.
+    Every CSS boilerplate has its own set of standard styling defined, and on that matter, <code >seed-css</code> 
+    is not too different! It comes with pre-defined element styles that helps speed-up the development process. 
+    However, it also brings you a simple way for quickly customize any <code >margin</code> and/or <code >padding</code> 
+    definition for any element.
+
+  h6 Margins
+
+  .row 
+    .col.md-5
+      .margins
         .row
-          .col
+          .col.sm-6.align-center
+            .block.m-10.ml-0 .ml-0
+          .col.sm-6.align-center
+            .block.m-10.mt-0 .mt-0
+          .col.sm-6.align-center
+            .block.m-10.mr-0 .mr-0
+          .col.sm-6.align-center
+            .block.m-10.mb-0 .mb-0
 
-            table
-              thead
-                tr
-                  th Class
-                  th Remarks
-              tbody
-                tr
-                  td.nowrap .hide
-                  td Hide an element in any device.
-                tr
-                  td.nowrap .hide-only-small
-                  td Hide an element on small devices only.
-                tr
-                  td.nowrap .hide-only-medium
-                  td Hide an element on medium devices only.
-                tr
-                  td.nowrap .hide-only-large
-                  td Hide an element on large devices only.
-                tr
-                  td.nowrap .hide-only-extra-large
-                  td Hide an element on extra-large devices only.
-                tr
-                  td.nowrap .hide-on-medium-and-down
-                  td Hide an element on all small and medium devices
-                tr
-                  td.nowrap .hide-on-medium-and-up
-                  td Hide an element on all devices, except for small ones
-                tr
-                  td.nowrap .hide-on-large-and-down
-                  td Hide an element on all devices, except for extra-large ones
-                tr
-                  td.nowrap .hide-on-large-and-up
-                  td Hide an element on all large and extra-large devices
+    .col.md-5.md-offset-1
+      .code-sample
+        pre.prettyprint.lang-html.
+          &lt;!-- Removes margin left --&gt;
+          &lt;div class="ml-0" &gt; ... &lt;/div&gt;
+          &lt;!-- Removes margin top --&gt;
+          &lt;div class="mt-0" &gt; ... &lt;/div&gt;
+          &lt;!-- Removes margin right --&gt;
+          &lt;div class="mr-0" &gt; ... &lt;/div&gt;
+          &lt;!-- Removes margin bottom --&gt;
+          &lt;div class="mb-0" &gt; ... &lt;/div&gt;
 
-          .code-sample
-            pre.prettyprint.lang-html.
-              &lt;!-- Hide on all devices --&gt;
-              &lt;div class="hide" &gt; ... &lt;/div&gt;
+  br
 
-              &lt;!-- Hide on small devices --&gt;
-              &lt;div class="hide-only-small" &gt; ... &lt;/div&gt;
+  p Possible value range goes from <code >0</code> to <code >50</code>, in steps of <code >5</code>.
 
-              &lt;!-- Hide on medium and small devices --&gt;
-              &lt;div class="hide-on-medium-and-down" &gt; ... &lt;/div&gt;
+  table
+    thead
+      tr
+        th Class
+        th Remarks
+    tbody
+      tr
+        td.nowrap .m-(*number*)
+        td.
+          Defines what margin size should be applied to an element, all sides at same time. 
+      tr
+        td.nowrap .mx-(*number*)
+        td.
+          Defines what margin size should be applied to both the <code >left</code> and <code >right</code> 
+          side from the element at same time. 
+      tr
+        td.nowrap .my-(*number*)
+        td.
+          Defines what margin size should be applied to both the <code >top</code> and <code >bottom</code> 
+          side from the element at same time.
+      tr
+        td.nowrap .ml-(*number*)
+        td Defines what margin size should be applied to the <code >left</code> side of an element.
+      tr
+        td.nowrap .mt-(*number*)
+        td Defines what margin size should be applied to the <code >top</code> side of an element.
+      tr
+        td.nowrap .mr-(*number*)
+        td Defines what margin size should be applied to the <code >right</code> side of an element.
+      tr
+        td.nowrap .mb-(*number*)
+        td Defines what margin size should be applied to the <code >bottom</code> side of an element.
 
-              &lt;!-- Hide on medium devices --&gt;
-              &lt;div class="hide-only-medium" &gt; ... &lt;/div&gt;
+  br 
+  
+  h6 Paddings
 
-              &lt;!-- Hide on medium and large devices --&gt;
-              &lt;div class="hide-on-medium-and-up" &gt; ... &lt;/div&gt;
+  .row 
+    .col.md-5
+      .paddings
+        .row
+          .col.sm-6.align-center
+            .block.p-10.pl-0 .pl-0
+          .col.sm-6.align-center
+            .block.p-10.pt-0 .pt-0
+          .col.sm-6.align-center
+            .block.p-10.pr-0 .pr-0
+          .col.sm-6.align-center
+            .block.p-10.pb-0 .pb-0
 
-              &lt;!-- Hide on large devices --&gt;
-              &lt;div class="hide-only-large" &gt; ... &lt;/div&gt;
+    .col.md-5.md-offset-1
+      .code-sample
+        pre.prettyprint.lang-html.
+          &lt;!-- Removes padding left --&gt;
+          &lt;div class="pl-0" &gt; ... &lt;/div&gt;
+          &lt;!-- Removes padding top --&gt;
+          &lt;div class="pt-0" &gt; ... &lt;/div&gt;
+          &lt;!-- Removes padding right --&gt;
+          &lt;div class="pr-0" &gt; ... &lt;/div&gt;
+          &lt;!-- Removes padding bottom --&gt;
+          &lt;div class="pb-0" &gt; ... &lt;/div&gt;
 
-              &lt;!-- Hide on large and extra-large devices --&gt;
-              &lt;div class="hide-on-large-and-up" &gt; ... &lt;/div&gt;
+  br
 
-              &lt;!-- Hide on small, medium and large devices --&gt;
-              &lt;div class="hide-on-large-and-down" &gt; ... &lt;/div&gt;
+  p Possible value range goes from <code >0</code> to <code >50</code>, in steps of <code >5</code>.
 
-              &lt;!-- Hide on extra-large devices --&gt;
-              &lt;div class="hide-only-extra-large" &gt; ... &lt;/div&gt;
+  table
+    thead
+      tr
+        th Class
+        th Remarks
+    tbody
+      tr
+        td.nowrap .p-(*number*)
+        td.
+          Defines what margin size should be applied to an element, all sides at same time. 
+      tr
+        td.nowrap .px-(*number*)
+        td.
+          Defines what margin size should be applied to both the <code >left</code> and <code >right</code> 
+          side from the element at same time. 
+      tr
+        td.nowrap .py-(*number*)
+        td.
+          Defines what margin size should be applied to both the <code >top</code> and <code >bottom</code> 
+          side from the element at same time.
+      tr
+        td.nowrap .pl-(*number*)
+        td Defines what margin size should be applied to the <code >left</code> side of an element.
+      tr
+        td.nowrap .pt-(*number*)
+        td Defines what margin size should be applied to the <code >top</code> side of an element.
+      tr
+        td.nowrap .pr-(*number*)
+        td Defines what margin size should be applied to the <code >right</code> side of an element.
+      tr
+        td.nowrap .pb-(*number*)
+        td Defines what margin size should be applied to the <code >bottom</code> side of an element.
+
+  br 
+
+  h5 Hiding
+     
+  p.align-justify.
+      Show and hide elements from your pages can be an usefull ability
+      to improve the user experience of your apps or websites.
+
+  .row
+    .col
+      table
+        thead
+          tr
+            th Class
+            th Remarks
+        tbody
+          tr
+            td.nowrap .hide
+            td Hide an element in any device.
+          tr
+            td.nowrap .hide-only-small
+            td Hide an element on small devices only.
+          tr
+            td.nowrap .hide-only-medium
+            td Hide an element on medium devices only.
+          tr
+            td.nowrap .hide-only-large
+            td Hide an element on large devices only.
+          tr
+            td.nowrap .hide-only-extra-large
+            td Hide an element on extra-large devices only.
+          tr
+            td.nowrap .hide-on-medium-and-down
+            td Hide an element on all small and medium devices
+          tr
+            td.nowrap .hide-on-medium-and-up
+            td Hide an element on all devices, except for small ones
+          tr
+            td.nowrap .hide-on-large-and-down
+            td Hide an element on all devices, except for extra-large ones
+          tr
+            td.nowrap .hide-on-large-and-up
+            td Hide an element on all large and extra-large devices
+
+      .code-sample
+        pre.prettyprint.lang-html.
+          &lt;!-- Hide on all devices --&gt;
+          &lt;div class="hide" &gt; ... &lt;/div&gt;
+
+          &lt;!-- Hide on small devices --&gt;
+          &lt;div class="hide-only-small" &gt; ... &lt;/div&gt;
+
+          &lt;!-- Hide on medium and small devices --&gt;
+          &lt;div class="hide-on-medium-and-down" &gt; ... &lt;/div&gt;
+
+          &lt;!-- Hide on medium devices --&gt;
+          &lt;div class="hide-only-medium" &gt; ... &lt;/div&gt;
+
+          &lt;!-- Hide on medium and large devices --&gt;
+          &lt;div class="hide-on-medium-and-up" &gt; ... &lt;/div&gt;
+
+          &lt;!-- Hide on large devices --&gt;
+          &lt;div class="hide-only-large" &gt; ... &lt;/div&gt;
+
+          &lt;!-- Hide on large and extra-large devices --&gt;
+          &lt;div class="hide-on-large-and-up" &gt; ... &lt;/div&gt;
+
+          &lt;!-- Hide on small, medium and large devices --&gt;
+          &lt;div class="hide-on-large-and-down" &gt; ... &lt;/div&gt;
+
+          &lt;!-- Hide on extra-large devices --&gt;
+          &lt;div class="hide-only-extra-large" &gt; ... &lt;/div&gt;
