@@ -4,7 +4,7 @@
  */
 
 .btn {
-  @include transition(all, 0.25s, ease);
+  @include transition(all, 0.25s, ease-in-out);
   @include rem(min-width, 170px);
 
   cursor: pointer;

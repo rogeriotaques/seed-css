@@ -9,246 +9,220 @@
 
   h6 Simple elements
 
-  .grid
-    .row
-      .col.md-6
-        .field
-          label(for="") This is an input text
-          input(type="text")
+  .row 
+    .col.md-5
+      .field
+        label(for="") This is an input text
+        input(type="text")
 
-      .col.md-6
-        .field
-          label(for="") This is an input text with additional info
-          input(type="text")
-          span.info This is an additional piece of information.
+      .field
+        label(for="") This is an input text with additional info
+        input(type="text")
+        span.info This is an additional piece of information.
 
-    .row
-      .col.md-6
-        .field.has-feedback
-          label(for="") This is an input text with error message
-          input(type="text").error
-          span.error This is an error message!
+      .field.has-feedback
+        label(for="") This is an input text with error message
+        input(type="text").error
+        span.error This is an error message!
 
-      .col.md-6
-        .field.has-feedback
-          label(for="") This is an input text with success message
-          input(type="text").success
-          span.success This is a success message!
+      .field.has-feedback
+        label(for="") This is an input text with success message
+        input(type="text").success
+        span.success This is a success message!
 
-    .row
-      .col.md-6
-        .field
-          label(for="") This is a simple input password
-          input(type="password")
+    .col.md-5.md-offset-1
+      br 
 
-    .row
-      .col.md-6
-        .field
-          label(for="") This is a simple input email
-          input(type="email", placeholder="name@domain.tld")
+      .code-sample
+        pre.prettyprint.lang-html.
+          &lt;!-- Example of an input text --&gt;
+          &lt;div class="field" &gt;
+            &lt;label for="..." &gt; ... &lt;/label&gt;
+            &lt;input type="text" name="..." &gt;
+          &lt;/div&gt;
 
-      .col.md-6
-        .field
-          label(for="") This is a simple input URL
-          input(type="url", placeholder="http://domain.tld")
-
-    .row
-      .col.md-6
-        .field.seed-select
-          label(for="") This is a select/ dropdown
-          select
-            option(value="A") Option A
-            option(value="B") Option B
-            option(value="C") Option C
-
-      .col.md-6
-        .field.seed-select.has-feedback
-          label(for="") This is a select/ dropdown with error message
-          select.error
-            option(value="A") Option A
-            option(value="B") Option B
-            option(value="C") Option C
-          span.error This is an error message!
-
-    .row
-      .col.md-6
-        .field
-          input(type="radio", id="radio-sample-1", name="radio-sample[]")
-          label(for="radio-sample-1") This is a radio button
-        .field
-          input(type="radio", id="radio-sample-2", name="radio-sample[]")
-          label(for="radio-sample-2") This is a radio button
-        .field
-          input(type="radio", id="radio-sample-3", name="radio-sample[]")
-          label(for="radio-sample-3") This is a radio button
-        .field.has-feedback
-          input(type="radio", id="radio-sample-4", name="radio-sample[]").error
-          label(for="radio-sample-4") This is a radio button with error
-
-      .col.md-6
-        .field
-          input(type="checkbox", id="check-sample-1", name="check-sample[]")
-          label(for="check-sample-1") This is a checkbox
-        .field
-          input(type="checkbox", id="check-sample-2", name="check-sample[]")
-          label(for="check-sample-2") This is a checkbox
-        .field
-          input(type="checkbox", id="check-sample-3", name="check-sample[]")
-          label(for="check-sample-3") This is a checkbox
-        .field.has-feedback
-          input(type="checkbox", id="check-sample-4", name="check-sample[]").error
-          label(for="check-sample-4") This is a checkbox with error
-    .row
-      .col.sm-12
-        .field
-          label(for="") This is a simple textarea
-          textarea
-
-
-  .code-sample
-    pre.prettyprint.lang-html.
-      &lt;!-- Example of an input text --&gt;
-      &lt;div class="field" &gt;
-        &lt;label for="..." &gt; ... &lt;/label&gt;
-        &lt;input type="text" name="..." &gt;
-      &lt;/div&gt;
-
-      &lt;!-- Example of an input text with feedback (success or error) --&gt;
-      &lt;div class="field has-feedback" &gt;
-        &lt;label for="..." &gt; ... &lt;/label&gt;
-        &lt;input type="text" name="..." class="error" &gt;
-        &lt;span class="error" &gt; ... &lt;/span&gt;
-      &lt;/div&gt;
-
-      &lt;!-- Example of an input password --&gt;
-      &lt;div class="field" &gt;
-        &lt;label for="..." &gt; ... &lt;/label&gt;
-        &lt;input type="password" name="..." &gt;
-      &lt;/div&gt;
-
-      &lt;!-- Example of an input email --&gt;
-      &lt;div class="field" &gt;
-        &lt;label for="..." &gt; ... &lt;/label&gt;
-        &lt;input type="email" name="..." placehoder="..." &gt;
-      &lt;/div&gt;
-
-      &lt;!-- Example of a dropdown --&gt;
-      &lt;div class="field seed-select" &gt;
-        &lt;label for="..." &gt; ... &lt;/label&gt;
-        &lt;select name="..." &gt;
-          &lt;option value="..." &gt; ... &lt;/option&gt;
-          &lt;option value="..." &gt; ... &lt;/option&gt;
-          &lt;option value="..." &gt; ... &lt;/option&gt;
-        &lt;/select&gt;
-      &lt;/div&gt;
-
-      &lt;!-- Example of an input radio --&gt;
-      &lt;div class="field" &gt;
-        &lt;input type="radio" name="..." &gt;
-        &lt;label for="..." &gt;
-          ...
-        &lt;/label&gt;
-      &lt;/div&gt;
-
-      &lt;!-- Example of a checkbox --&gt;
-      &lt;div class="field" &gt;
-        &lt;input type="checkbox" name="..." &gt;
-        &lt;label for="..." &gt;
-          ...
-        &lt;/label&gt;
-      &lt;/div&gt;
-
-      &lt;!-- Example of a textarea --&gt;
-      &lt;div class="field" &gt;
-        &lt;label for="..." &gt; ... &lt;/label&gt;
-        &lt;textarea name="..." &gt; ... &lt;/textarea&gt;
-      &lt;/div&gt;
+          &lt;!-- Example of an input text with feedback (success or error) --&gt;
+          &lt;div class="field has-feedback" &gt;
+            &lt;label for="..." &gt; ... &lt;/label&gt;
+            &lt;input type="text" name="..." class="error" &gt;
+            &lt;span class="error" &gt; ... &lt;/span&gt;
+          &lt;/div&gt;
 
   h6 Grouped elements
 
-  .grid
-    .row 
-      .col.sm12
-        .field.group 
-          .field 
-            label(for="") First name 
-            input(type="text", id="first_name")
+  .row 
+    .col.md-5
+      .field.group 
+        .field 
+          label(for="") First name 
+          input(type="text", id="first_name")
 
-          .field 
-            label(for="") Last name 
-            input(type="text", id="last_name")
+        .field 
+          label(for="") Last name 
+          input(type="text", id="last_name")
 
-  .code-sample
-    pre.prettyprint.lang-html.
-      &lt;!-- Example of grouped fields --&gt;
-      &lt;div class="field group" &gt;
-        &lt;div class="field" &gt;
-          &lt;label for="..." &gt; ... &lt;/label&gt;
-          &lt;input type="text" name="..." &gt;
-        &lt;/div&gt;
+    .col.md-5.md-offset-1 
+      .code-sample
+        pre.prettyprint.lang-html.
+          &lt;!-- Example of grouped fields --&gt;
+          &lt;div class="field group" &gt;
+            &lt;div class="field" &gt;
+              &lt;label for="..." &gt; ... &lt;/label&gt;
+              &lt;input type="text" name="..." &gt;
+            &lt;/div&gt;
 
-        &lt;div class="field" &gt;
-          &lt;label for="..." &gt; ... &lt;/label&gt;
-          &lt;input type="text" name="..." &gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
+            &lt;div class="field" &gt;
+              &lt;label for="..." &gt; ... &lt;/label&gt;
+              &lt;input type="text" name="..." &gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
 
   h6 File upload
 
-  .grid           
-    .row 
-      .col.sm12
-        .field.seed-file
-          input(type="file", id="file")
-          label(for="file") 
-            span.input No file chosen
-            //- span.cancel
-            //-   i.icon.ion-close
-            span.button 
-              i.icon.ion-paperclip
-              span Attachment
+  .row 
+    .col.md-5
+      .field.seed-file
+        input(type="file", id="file")
+        label(for="file") 
+          span.input No file chosen
+          //- span.cancel
+          //-   i.icon.ion-close
+          span.button 
+            i.icon.ion-paperclip
+            span Attachment
 
-  .code-sample
-    pre.prettyprint.lang-html.
-      &lt;!-- Example of file upload field --&gt;
-      &lt;div class="field seed-file" &gt;
-        &lt;input type="file" name="..." id="..." &gt;
-        &lt;label for="..." &gt;
-          &lt;span class="input" &gt; No file chosen &lt;/span&gt;
-          &lt;span class="button" &gt; Attachment &lt;/span&gt;
-        &lt;/label&gt;
-      &lt;/div&gt;
+      .alert.info.
+        <b >PRO:</b> Make sure that <code >id</code> attribute is set for the <code >file</code> input field and 
+        that it matches the <code>for</code> attribute from its label. Otherwise, it may not work properly.
 
-  .alert.info.
-    <b >PRO:</b> Make sure that <code >id</code> attribute is set for the <code >file</code> input field and 
-    that it matches the <code>for</code> attribute from its label. Otherwise, it may not work properly.
+      .code-sample
+        pre.prettyprint.lang-html.
+          &lt;!-- Example of file upload field --&gt;
+          &lt;div class="field seed-file" &gt;
+            &lt;input type="file" name="..." id="..." &gt;
+            &lt;label for="..." &gt;
+              &lt;span class="input" &gt; No file chosen &lt;/span&gt;
+              &lt;span class="button" &gt; Attachment &lt;/span&gt;
+            &lt;/label&gt;
+          &lt;/div&gt;
 
-  p.
-    Exceptionally the file upload component works better with a javascript support. Using javascript 
-    will create a much better user experience. To make it easier <span class="primary">seed-css</span> 
-    has a plug-and-play javascript library that you can use, as follows:
+    .col.md-5.md-offset-1
+      p.
+        Exceptionally the <b >file upload</b> component works better with a javascript support. Using javascript 
+        will create a much better user experience. <code >Seed-css</code> 
+        has a plug-and-play javascript library written in VanillaJS:
+    
+      h6 When using Node JS:
 
-  h6 When using Node JS:
+      .code-sample
+        pre.prettyprint.lang-javascript.
+          import SeedCSS from 'seed-css'; // Import 
+          SeedCSS.fileUpload(); // Initialize 
 
-  .code-sample
-    pre.prettyprint.lang-javascript.
-      // Import 
-      var fileUpload = require('seed-css/dist/seed-css.js');
+      h6 When using Vanilla JS:
 
-      // Initialize 
-      fileUpload();
+      p.
+        First download the javascript library <a href="#library-download" class="spy ignore" >here</a>. 
+        Then, include the following code to your HTML page, right before close the <code >BODY</code> tag.
 
-  h6 When using Vanilla JS:
+      .code-sample 
+        pre.prettyprint.lang-html.
+          &lt;script src="/path/to/seed-css.js" &gt;&lt;/script&gt;
 
-  p First download the javascript library <a href="#library-download" class="spy ignore" >here</a>. 
-  p Then, include the following code to your HTML page, right before close the <code >BODY</code> tag.
+      .code-sample
+        pre.prettyprint.lang-javascript.
+          if (typeof SeedCSS !== 'undefined') {
+            SeedCSS.fileUpload();
+          }
 
-  .code-sample 
-    pre.prettyprint.lang-html.
-      &lt;script src="seed-css.js" &gt;&lt;/script&gt;
+  h6 Textareas
 
-  .code-sample
-    pre.prettyprint.lang-javascript.
-      if (typeof fileUpload !== 'undefined') {
-        fileUpload();
-      }
+  .row 
+    .col.md-5
+      .field
+        label(for="") This is a textarea
+        textarea
+        span(role="counter", data-template="Typed %t out of %a. Remaining %r.", maxlength="255").info Typed 0 out of 255. Remaining 255.
+
+    .col.md-5.md-offset-1 
+      .code-sample
+        pre.prettyprint.lang-html.
+          &lt;!-- Example of a textarea --&gt;
+          &lt;div class="field" &gt;
+            &lt;label for="..." &gt; ... &lt;/label&gt;
+            &lt;textarea name="..." &gt; ... &lt;/textarea&gt;
+            &lt;span role="counter" data-template="... %t ... %a ... %r" maxlength="..." &gt; Calculating ... &lt;/span&gt;
+          &lt;/div&gt;
+
+  h6 Dropdowns (Selects)
+
+  .row 
+    .col.md-5
+      .field.seed-select
+        label(for="") This is a select/ dropdown
+        select
+          option(value="A") Option A
+          option(value="B") Option B
+          option(value="C") Option C
+
+      .field.seed-select.has-feedback
+        label(for="") This is a select/ dropdown with error message
+        select.error
+          option(value="A") Option A
+          option(value="B") Option B
+          option(value="C") Option C
+        span.error This is an error message!
+
+    .col.md-5.md-offset-1 
+      br 
+
+      .code-sample
+        pre.prettyprint.lang-html.
+          &lt;!-- Example of a dropdown --&gt;
+          &lt;div class="field seed-select" &gt;
+            &lt;label for="..." &gt; ... &lt;/label&gt;
+            &lt;select name="..." &gt;
+              &lt;option value="..." &gt; ... &lt;/option&gt;
+              &lt;option value="..." &gt; ... &lt;/option&gt;
+              &lt;option value="..." &gt; ... &lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/div&gt;
+
+  h6 Radio buttons & Checkboxes
+
+  .row
+    .col.md-5
+      .field
+        input(type="radio", id="radio-sample-1", name="radio-sample[]")
+        label(for="radio-sample-1") This is a radio button
+      .field.has-feedback
+        input(type="radio", id="radio-sample-2", name="radio-sample[]").error
+        label(for="radio-sample-2") This is a radio button with error
+
+      hr
+
+      .field
+        input(type="checkbox", id="check-sample-1", name="check-sample[]")
+        label(for="check-sample-1") This is a checkbox
+      .field.has-feedback
+        input(type="checkbox", id="check-sample-2", name="check-sample[]").error
+        label(for="check-sample-2") This is a checkbox with error
+
+    .col.md-5.md-offset-1
+      .code-sample
+        pre.prettyprint.lang-html.
+          &lt;!-- Example of an input radio --&gt;
+          &lt;div class="field" &gt;
+            &lt;input type="radio" name="..." &gt;
+            &lt;label for="..." &gt;
+              ...
+            &lt;/label&gt;
+          &lt;/div&gt;
+
+          &lt;!-- Example of a checkbox --&gt;
+          &lt;div class="field" &gt;
+            &lt;input type="checkbox" name="..." &gt;
+            &lt;label for="..." &gt;
+              ...
+            &lt;/label&gt;
+          &lt;/div&gt;
