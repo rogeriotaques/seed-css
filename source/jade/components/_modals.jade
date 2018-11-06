@@ -1,23 +1,16 @@
 #sample-modals
   h4 Modals
 
-  p.
-    Modals are an essential visual component for a best user experience, allowing the website either to 
-    make interactions to its visitor or request imediate feedback.
+  .row  
+    .col.md-5
+      p.
+        A modal window is an essential component for providing the best user experience, it's the easiest
+        way for requesting imediate feedback from your visitors.
 
-  .sample-container.auto-height 
-
-    .align-center
-      button.btn.btn-primary(type="button", role="modal", data-modal-id="modal") Modal Me
-
-    #modal(style="display: none;").modal.hidden
-      .modal-window 
-        .modal-header
-          h3.modal-title Hello world 
-          a(href="#", role="modal-dismiss").dismiss
-            i.ion-close
-        .modal-body    
-          p This' the body of my overlay modal window.
+    .col.md-6.md-offset-1
+      .sample-container.auto-height 
+        .align-center
+          button.btn.btn-primary(type="button", role="modal", data-modal-id="modal") Click Me
 
   .code-sample
     pre.prettyprint.lang-html.
@@ -26,8 +19,10 @@
         Open modal
       &lt;/button&gt;
 
+  .code-sample
+    pre.prettyprint.lang-html.
       &lt;!-- The modal --&gt;
-      &lt;div style="display: none;" class="modal hidden" &gt;
+      &lt;div class="modal hide" &gt;
         &lt;div class="modal-window" &gt;
           &lt;div class="modal-header" &gt;
             &lt;h3 class="modal-title" &gt;Hello world&lt;/h3&gt;
@@ -41,46 +36,60 @@
         &lt;/div&gt;
       &lt;/div&gt;
 
-  p.
-    Exceptionally the overlay modal component works better with javascript support, which will create a much 
-    better user experience. To make it easier <span class="primary">seed-css</span> 
-    has a plug-and-play javascript library that you can use, as follows:
+  // Remove .hide to show the modal window
+  #modal.modal.hide
+    // Use .bounceInDown to enter and .bounceOutUp to leave
+    .modal-window
+      .modal-header
+        h3.modal-title Hello world 
+        a(href="#", role="modal-dismiss").dismiss
+          i.ion-close
+      .modal-body    
+        p This' the body of my overlay modal window.
 
-  h6 When using Node JS:
-
-  .code-sample
-    pre.prettyprint.lang-javascript.
-      // Import 
-      var modal = require('seed-css/dist/seed-css.js');
-
-      // Initialize 
-      modal();
-
-      // Optionally assigning it to a variable
-      // you can programatically show and hide the modal
-      var myModal = modal(); 
-
-      myModal.show('#modal');
-      myModal.hide('#modal');
-
-  h6 When using Vanilla JS:
-
-  p First download the javascript library <a href="#library-download" class="spy ignore" >here</a>. 
-  p Then, include the following code to your HTML page, right before close the <code >BODY</code> tag.
-
-  .code-sample 
-    pre.prettyprint.lang-html.
-      &lt;script src="seed-css.js" &gt;&lt;/script&gt;
-
-  .code-sample
-    pre.prettyprint.lang-javascript.
-      if (typeof modal !== 'undefined') {
-        modal();
+  .row 
+    .col.md-5 
+      p.
+        Using animation when showing/ hiddng the modal creates an even better experience to 
+        your users/ visitors. 
         
-        // Optionally assigning it to a variable
-        // you can programatically show and hide the modal
-        var myModal = modal(); 
+    .col.md-6.md-offset-1 
+      p.
+        To make it simple, <code > seed-css</code> is using 
+        <a href="https://github.com/daneden/animate.css" target="_blank" >Animate.CSS</a> to apply animation 
+        to the modal window and, if you use the Javascript given, it's basically plug-an-play.
 
-        myModal.show('#modal');
-        myModal.hide('#modal');
-      }
+  .row 
+    .col.md-5 
+      h6 When using Node JS:
+
+      p Install it using NPM: <code>$ npm install seed-css --save</code> 
+
+      .code-sample
+        pre.prettyprint.lang-javascript.
+          import SeedCSS from 'seed-css'; // Import 
+          SeedCSS.modal(); // Initialize
+
+
+    .col.md-6.md-offset-1
+      h6 When using Vanilla JS:
+
+      p First download the javascript library <a href="#library-download" class="spy ignore" >here</a>. 
+
+      .code-sample 
+        pre.prettyprint.lang-html.
+          &lt;script src="seed-css.js" &gt;&lt;/script&gt;
+
+      .code-sample
+        pre.prettyprint.lang-javascript.
+          if (typeof SeedCSS !== 'undefined') {
+            SeedCSS.modal();
+          }
+
+  p Optionally assigning it to a variable you can programatically show and hide the modal.
+  
+  .code-sample
+    pre.prettyprint.lang-javascript.
+      const modal = SeedCSS.modal(); 
+      modal.get('#modal').show();
+      modal.get('#modal').hide();
