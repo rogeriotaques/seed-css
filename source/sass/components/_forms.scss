@@ -139,13 +139,13 @@
           content: '';
           display: block;
           position: absolute;
-          top: 0;
-          left: 2px;
+          top: $margin / 2;
+          left: $border;
           border: 3px solid $secondary;
           border-top-color: transparent;
           border-right-color: transparent;
-          @include rem(width, 16px);
-          @include rem(height, 8px);
+          @include rem(width, $margin);
+          @include rem(height, $margin / 2);
           @include transform(rotate(-45deg));
         }
       }
@@ -316,7 +316,7 @@
           white-space: nowrap;
           overflow: hidden;
           vertical-align: top;
-          flex: 2;
+          flex: 1 70%;
         } // span.input
 
         & > span.button,
@@ -327,17 +327,8 @@
           overflow: hidden;
           white-space: nowrap;
           text-overflow: ellipsis;
-          flex: 1;
+          flex: 1 30%;
         } // span.button, span.cancel
-
-        & > span.button {
-          & > .icon {
-            position: absolute;
-            font-size: 3rem;
-            margin-left: 20px;
-            left: 0;
-          }
-        } // span.button
 
         & * {
           pointer-events: none;
