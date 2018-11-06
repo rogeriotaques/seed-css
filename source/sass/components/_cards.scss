@@ -1,28 +1,25 @@
-/* -----------------------
+/* 
  * Seed CSS - Cards
  * @version 2.0.0
- * @author Rogerio Taques (hello@abtz.co)
- * @see https://github.com/AbtzLabs/seed-css
- * @license MIT (https://opensource.org/licenses/MIT)
- * ----------------------- */
+ */
 
 .card {
-  border: thin solid #ddd;
-  border-radius: 2px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0 3px 6px;
-  background-color: #fff;
+  border: $border solid $grey-light;
+  border-radius: $radius;
+  box-shadow: $shadow-default;
+  background-color: white;
   padding: 0;
   position: relative;
   display: inline-block;
   width: 100%;
-  max-width: 350px;
-  min-height: 150px;
+  @include rem(max-width, 350px);
+  @include rem(min-height, 150px);
 
   & > &-header,
   & > &-body,
   & > &-footer {
     position: relative;
-    padding: 10px 20px;
+    padding: $padding ($padding * 2);
   } // .card > .card-title
 
   &-title {
@@ -34,13 +31,19 @@
   &-media {
     & > .card-header {
       overflow: hidden;
-      min-height: 100px;
+      @include rem(min-height, 100px);
 
       & > img {
         position: absolute;
+        display: block;
         top: 0;
         left: 0;
-        display: block;
+        border: {
+          top: {
+            left-radius: $radius;
+            right-radius: $radius;
+          }
+        }
       } // img
 
       &::before {
