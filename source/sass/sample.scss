@@ -4,7 +4,7 @@
  */
 
 @import 'includes/variables';
-// @import 'includes/mixins';
+@import 'includes/mixins';
 
 // @keyframes scroll-down {
 //   0%,
@@ -227,24 +227,23 @@ section {
   }
 }
 
-// .grid.sample {
-//   & > .row {
-//     & > .col {
-//       white-space: nowrap;
-//       overflow: hidden;
-//       background-color: #f9f9f9;
+#sample-grid {
+  .row {
+    & > .col {
+      @include rem(line-height, 45px);
 
-//       &:not(:first-child) {
-//         // border-left: 4px solid white;
-//         outline: 4px solid white;
-//       }
+      white-space: nowrap;
+      overflow: hidden;
+      background-color: $secondary;
+      color: white;
+      font-weight: 700;
 
-//       & > span {
-//         @include rem(line-height, 45px);
-//       }
-//     }
-//   }
-// }
+      &:not(:first-child) {
+        outline: 4px solid white;
+      }
+    } // .col
+  } // #flexible-cols.row
+} // #sample-grid
 
 // .relpos {
 //   position: relative;
@@ -388,6 +387,21 @@ div[id^='sample-'] {
   .paddings {
     .col {
       background-color: darkseagreen;
-    }
+    } // .col
   } // .margins
+
+  [class^='place-'] {
+    color: white;
+    background-color: $secondary;
+    padding: 5px 10px;
+    font-weight: 700;
+  }
+
+  [class^='with-shadow'] {
+    border-radius: $margin / 5;
+    background-color: $secondary;
+    color: white;
+    font-weight: 700;
+    padding: 20px;
+  }
 } // #sample-utilities

@@ -172,3 +172,16 @@ img {
 
 // spacing (margin and paddings)
 @include elem-make-spacing();
+
+// shadows
+.with {
+  &-shadow {
+    position: relative;
+    box-shadow: $shadow-default;
+  } // .with-shadow
+
+  &-shadow-inset {
+    position: relative;
+    box-shadow: $shadow-inset;
+  } // .with-shadow-inset
+} // .with...
