@@ -1,40 +1,42 @@
-h6 Spinners
+#sample-spinners
 
-p The spinners are offered in three different sizes: <code >default</code>, <code >medium</code> and <code >big</code>.
+  h4 Spinners
 
-p.
-  If for some reason you want to hide the "loading" message, just include the <code >lean</code> class or simply do not
-  include the <code >data-label</code> property.
+  p The spinner is offered in three different sizes: <code >default</code>, <code >medium</code> and <code >big</code>.
 
-.row
-  .col.md-5
-    h6 Default
-    .spinner(data-label="Loading ...")
+  p.
+    If for some reason you want to hide the "loading" message, just include the <code >lean</code> class or simply do not
+    include the <code >data-label</code> property.
 
-    br 
+  .row
+    .col.md-5
+      h6 Default
+      .spinner(data-label="Loading ...")
 
-    h6 Medium <code >.medium</code>
-    .spinner.medium(data-label="Loading ...")
+      br 
 
-    br 
+      h6 Medium <code >.medium</code>
+      .spinner.medium(data-label="Loading ...")
 
-    h6 Big <code >.big</code>
-    .spinner.big(data-label="Loading ...")
+      br 
 
-  .col.md-6.md-offset-1
-    br 
-    
-    .code-sample
-      pre.prettyprint.lang-html.
-        &lt;!-- Default --&gt;
-        &lt;div class="spinner" data-label="Loading ..." &gt;&lt;/div&gt;
+      h6 Big <code >.big</code>
+      .spinner.big(data-label="Loading ...")
 
-        &lt;!-- Default, no label --&gt;
-        &lt;div class="spinner lean" data-label="Loading ..." &gt;&lt;/div&gt;
-        &lt;div class="spinner" &gt;&lt;/div&gt;
+    .col.md-6.md-offset-1
+      br 
+      
+      .code-sample
+        pre.prettyprint.lang-html.
+          &lt;!-- Default --&gt;
+          &lt;div class="spinner" data-label="Loading ..." &gt;&lt;/div&gt;
 
-        &lt;!-- Medium --&gt;
-        &lt;div class="spinner medium" data-label="Loading ..." &gt;&lt;/div&gt;
+          &lt;!-- Default, no label --&gt;
+          &lt;div class="spinner lean" data-label="Loading ..." &gt;&lt;/div&gt;
+          &lt;div class="spinner" &gt;&lt;/div&gt;
 
-        &lt;!-- Big --&gt;
-        &lt;div class="spinner big" data-label="Loading ..." &gt;&lt;/div&gt;
+          &lt;!-- Medium --&gt;
+          &lt;div class="spinner medium" data-label="Loading ..." &gt;&lt;/div&gt;
+
+          &lt;!-- Big --&gt;
+          &lt;div class="spinner big" data-label="Loading ..." &gt;&lt;/div&gt;

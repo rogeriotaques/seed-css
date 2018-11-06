@@ -20,8 +20,7 @@
 
     @include rem(font-size, 10px);
     @include rem(border-radius, 30px);
-    content: '\f101';
-    font-family: 'Ionicons';
+    content: '';
     color: white;
     display: block;
     position: absolute;
@@ -46,7 +45,7 @@
     background-color: #e8f0ff;
 
     &::before {
-      content: '\f14a';
+      content: '';
       background-color: $primary;
       border-color: $primary;
     }
@@ -57,7 +56,7 @@
     background-color: #d8f5da;
 
     &::before {
-      content: '\f122';
+      content: '';
       background-color: $green;
       border-color: $primary;
     }
@@ -68,7 +67,7 @@
     background-color: #fff0dc;
 
     &::before {
-      content: '\f101';
+      content: '';
       background-color: $orange;
       border-color: $orange;
     }
@@ -79,7 +78,7 @@
     background-color: #ffe0e0;
 
     &::before {
-      content: '\f12a';
+      content: '';
       background-color: $red;
       border-color: $red;
     }
