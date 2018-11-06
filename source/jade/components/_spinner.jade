@@ -1,36 +1,40 @@
-.grid
-  .row
-    .col.md-4
-      h6 Default
+h6 Spinners
 
-      .spinner
-        .circle
-    .col.md-4
-      h6 Medium
+p The spinners are offered in three different sizes: <code >default</code>, <code >medium</code> and <code >big</code>.
 
-      .spinner.medium
-        .circle
-    .col.md-4
-      h6 Big
+p.
+  If for some reason you want to hide the "loading" message, just include the <code >lean</code> class or simply do not
+  include the <code >data-label</code> property.
 
-      .spinner.big
-        .circle
+.row
+  .col.md-5
+    h6 Default
+    .spinner(data-label="Loading ...")
 
-br
+    br 
 
-.code-sample
-  pre.prettyprint.lang-html.
-    &lt;!-- Default --&gt;
-    &lt;div class="spinner" &gt;
-      &lt;div class="circle" &gt;&lt;/div&gt;
-    &lt;/div&gt;
+    h6 Medium <code >.medium</code>
+    .spinner.medium(data-label="Loading ...")
 
-    &lt;!-- Medium --&gt;
-    &lt;div class="spinner medium" &gt;
-      &lt;div class="circle" &gt;&lt;/div&gt;
-    &lt;/div&gt;
+    br 
 
-    &lt;!-- Big --&gt;
-    &lt;div class="spinner big" &gt;
-      &lt;div class="circle" &gt;&lt;/div&gt;
-    &lt;/div&gt;
+    h6 Big <code >.big</code>
+    .spinner.big(data-label="Loading ...")
+
+  .col.md-5.md-offset-1
+    br 
+    
+    .code-sample
+      pre.prettyprint.lang-html.
+        &lt;!-- Default --&gt;
+        &lt;div class="spinner" data-label="Loading ..." &gt;&lt;/div&gt;
+
+        &lt;!-- Default, no label --&gt;
+        &lt;div class="spinner lean" data-label="Loading ..." &gt;&lt;/div&gt;
+        &lt;div class="spinner" &gt;&lt;/div&gt;
+
+        &lt;!-- Medium --&gt;
+        &lt;div class="spinner medium" data-label="Loading ..." &gt;&lt;/div&gt;
+
+        &lt;!-- Big --&gt;
+        &lt;div class="spinner big" data-label="Loading ..." &gt;&lt;/div&gt;

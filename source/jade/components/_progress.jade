@@ -5,35 +5,34 @@
     Progress bar and spinner are important elements for UX. If you use it 
     accordingly, it's gonna pass the imediate response to the user.
 
-  h6 Progress bar
+  h6 Progress bars
 
-  p Fixed progress 
-  .align-center
-    .progress-bar
-      .bar(style="width: 60%")
-      .label 60%
+  .row
+    .col.md-5
+      p Fixed progress 
 
-  p Undefined progress 
-  .align-center
-    .progress-bar.undefined
-      .bar
+      .align-center
+        .progress-bar
+          .bar(style="width: 60%")
+          .label 60%
 
-  br
+      br
 
-  .code-sample
-    pre.prettyprint.lang-html.
-      &lt;!-- Fixed progress --&gt;
-      &lt;div class="progress-bar" &gt;
-        &lt;div class="bar" &gt;&lt;/div&gt;
-        &lt;label &gt;60%&lt;/label&gt;
-      &lt;/div&gt;
+      p Undefined progress 
+      .align-center
+        .progress-bar.undefined
+          .bar
 
-      &lt;!-- Undefined progress --&gt;
-      &lt;div class="progress-bar undefined" &gt;
-        &lt;div class="bar" &gt;&lt;/div&gt;
-      &lt;/div&gt;
+    .col.md-5.md-offset-1
+      .code-sample
+        pre.prettyprint.lang-html.
+          &lt;!-- Fixed progress --&gt;
+          &lt;div class="progress-bar" &gt;
+            &lt;div class="bar" &gt;&lt;/div&gt;
+            &lt;label &gt;60%&lt;/label&gt;
+          &lt;/div&gt;
 
-  h6 Spinner 
-
-  div
-    include _spinner
+          &lt;!-- Undefined progress --&gt;
+          &lt;div class="progress-bar undefined" &gt;
+            &lt;div class="bar" &gt;&lt;/div&gt;
+          &lt;/div&gt;
