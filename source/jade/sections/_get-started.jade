@@ -3,32 +3,31 @@ section#get-started
   .container
     h2 Get started
 
-    p.align-justify.
-      Just before get started, please notice that <code class="primary">seed-css</code> was written with modern browsers in mind.
-      That means it just has support for <b>IE9+</b> (which actually isn't a real modern browser ... but),
-      <b>Chrome</b>, <b>Firefox</b> and <b>Safari</b>, besides mobile browsers. If you need support older browsers, this boilerplate
-      may not help you, but, just in case, you're free to customize it and create your own CSS rules to
-      make it supports those older browser versions.
+    .row 
+      .col.md-5
+        .alert.info
+          h5.m-0 Made for modern browsers
+          span Supports <b>IE10+</b>, <b>Chrome</b>, <b>Firefox</b> and <b>Safari</b>.
 
-    p.align-justify.
-      The most first thing you need to do to start using <code class="primary" >seed-css</code>
-      is import its CSS file into your pages. In order to get the right files, you can either
-      <a href="https://github.com/AbtzLabs/seed-css" >fork</a> this project on Github, or
-      just <a href="https://github.com/AbtzLabs/seed-css/archive/develop.zip" >download</a>
-      the compressed project files to your computer.
+        br
 
-    p.align-justify.
-      After get the latest version of files, import it to your pages as the example below:
+        p.lead.
+           <a href="https://github.com/AbtzLabs/seed-css" >Fork</a> this project, 
+           <a href="https://github.com/AbtzLabs/seed-css/archive/develop.zip" >download</a> the files or 
+           install it via NPM.
 
-    .code-sample
-      pre.prettyprint.lang-html.
-        &lt;head &gt;
-          ...
-          &lt;link href="seed.css" rel="stylesheet" type="text/css" &gt;
-        &lt;/head&gt;
+        p
+          span When using NPM: 
+          code $ npm install --save seed-css
 
 
-    p.
-      Once you have the <code class="primary" >seed-css</code> stylesheet embeded to your
-      site or application, have a look on all code examples below to get inspired about
-      what features it offers you and what you can do with it. :)
+      .col.md-6.md-offset-1
+        p.align-justify.
+          After get the latest version of files, import it to your pages as the example below:
+
+        .code-sample
+            pre.prettyprint.lang-html.
+              &lt;head &gt;
+                ...
+                &lt;link href="seed.css" rel="stylesheet" type="text/css" &gt;
+              &lt;/head&gt;
