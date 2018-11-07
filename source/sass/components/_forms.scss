@@ -295,6 +295,8 @@
         cursor: pointer;
         font-size: 1.5rem;
         border: 1px solid #ccc;
+        border-top-right-radius: $radius;
+        border-bottom-right-radius: $radius;
         background-color: #fff;
         padding: 0;
         box-sizing: content-box;
@@ -324,6 +326,7 @@
           position: relative;
           color: #fff;
           background-color: $secondary;
+          border-radius: $radius;
           overflow: hidden;
           white-space: nowrap;
           text-overflow: ellipsis;
