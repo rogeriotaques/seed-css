@@ -39,11 +39,13 @@
 
     > .dismiss {
       @include rem(font-size, 20px);
-      @include rem(right, 20px);
+      @include rem(right, $margin * 2);
+      @include rem(top, $margin * 2);
       cursor: pointer;
       position: absolute;
       color: $grey-dark !important;
-      top: 0;
+      text-decoration: none;
+      font-weight: bold;
 
       &:hover {
         color: $primary !important;
