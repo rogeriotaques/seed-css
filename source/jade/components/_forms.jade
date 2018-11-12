@@ -79,29 +79,43 @@
 
   h6 File upload
 
+  .alert.info.
+    <b >PRO:</b> Make sure that <code >id</code> attribute is set for the <code >file</code> input field and 
+    that it matches the <code>for</code> attribute from its label. Otherwise, it may not work properly.
+
+  br 
+
   .row 
     .col.md-5
       .field.seed-file
-        input(type="file", id="file")
+        input(type="file", id="file", multiple, data-multiple="{count} files")
         label(for="file") 
-          span.input No file chosen
-          //- span.cancel
-          //-   i.icon.ion-close
+          span.input(data-empty="No file chosen") ...
+          span.cancel 
+            span Remove
           span.button 
             span Attach
 
-      .alert.info.
-        <b >PRO:</b> Make sure that <code >id</code> attribute is set for the <code >file</code> input field and 
-        that it matches the <code>for</code> attribute from its label. Otherwise, it may not work properly.
+      p.
+        Adding the property <code >multiple</code> to the <code >input</code> element 
+        will enable multiple files selection. Also adding <code >data-multiple="{count} ..."</code>
+        will customize the selected message.
 
       .code-sample
         pre.prettyprint.lang-html.
           &lt;!-- Example of file upload field --&gt;
           &lt;div class="field seed-file" &gt;
+            &lt;!-- The actual file input (Required) --&gt;
             &lt;input type="file" name="..." id="..." &gt;
+
+            &lt;!-- Here's the magic (Required) --&gt;
             &lt;label for="..." &gt;
-              &lt;span class="input" &gt; No file chosen &lt;/span&gt;
-              &lt;span class="button" &gt; Attachment &lt;/span&gt;
+              &lt;span class="input" data-empty="No file chosen" &gt; ... &lt;/span&gt;
+
+              &lt;!-- Only visible when file is selected (Optional) --&gt;
+              &lt;span class="cancel" &gt; Remove &lt;/span&gt;
+              &lt;!-- Only visible when there's not file selected (Optional) --&gt;
+              &lt;span class="button" &gt; Attach &lt;/span&gt;
             &lt;/label&gt;
           &lt;/div&gt;
 
@@ -120,14 +134,6 @@
 
       h6 When using Vanilla JS:
 
-      p.
-        First download the javascript library <a href="#library-download" class="spy ignore" >here</a>. 
-        Then, include the following code to your HTML page, right before close the <code >BODY</code> tag.
-
-      .code-sample 
-        pre.prettyprint.lang-html.
-          &lt;script src="/path/to/seed-css.js" &gt;&lt;/script&gt;
-
       .code-sample
         pre.prettyprint.lang-javascript.
           if (typeof SeedCSS !== 'undefined') {
@@ -136,23 +142,51 @@
 
   h6 Textareas
 
+  .alert.info.
+    <b >PRO:</b> Include <code >maxlength</code> attribute if you want to enable the 
+    automatic character typing counter, while using the plug-and-play Javascript library 
+    provided by <code >seed-css</code>.
+
+  br 
+
   .row 
     .col.md-5
       .field
         label(for="") This is a textarea
-        textarea
-        span(role="counter", data-template="Typed %t out of %a. Remaining %r.", maxlength="255").info Typed 0 out of 255. Remaining 255.
+        textarea(maxlength="200")
+        span(role="counter", data-template="Typed %a out of %b. Remaining %c.", maxlength="255").info ...
 
-    .col.md-6.md-offset-1 
+      br 
+
       .code-sample
         pre.prettyprint.lang-html.
           &lt;!-- Example of a textarea --&gt;
           &lt;div class="field" &gt;
             &lt;label for="..." &gt; ... &lt;/label&gt;
             &lt;textarea name="..." &gt; ... &lt;/textarea&gt;
-            &lt;span role="counter" data-template="... %t ... %a ... %r" maxlength="..." &gt; Calculating ... &lt;/span&gt;
+            &lt;span role="counter" data-template="... %a ... %b ... %c" maxlength="..." &gt; Calculating ... &lt;/span&gt;
           &lt;/div&gt;
 
+    .col.md-6.md-offset-1 
+      p.
+        To make it simple and make the user experience better, <code >Seed-css</code> is using 
+        javascript to automaticaly calculates types chars from textareas. If you use the Javascript 
+        given, it's basically plug-an-play.
+    
+      h6 When using Node JS:
+
+      .code-sample
+        pre.prettyprint.lang-javascript.
+          import SeedCSS from 'seed-css'; // Import 
+          SeedCSS.textArea(); // Initialize 
+
+      h6 When using Vanilla JS:
+
+      .code-sample
+        pre.prettyprint.lang-javascript.
+          if (typeof SeedCSS !== 'undefined') {
+            SeedCSS.fileUpload();
+          }
   h6 Dropdowns (Selects)
 
   .row 

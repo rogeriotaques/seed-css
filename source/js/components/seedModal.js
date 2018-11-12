@@ -200,14 +200,6 @@ const seedModal = (options) => {
 
       return false;
     }
-    // show: function(selector) {
-    //   selector = typeof selector !== 'undefined' ? selector : '#modal';
-    //   fnOpen(document.querySelector(selector));
-    // },
-    //     hide: function(selector) {
-    //       selector = typeof selector !== 'undefined' ? selector : '#modal';
-    //       fnClose(document.querySelector(selector));
-    //     }
   };
 }; // seedModal
 

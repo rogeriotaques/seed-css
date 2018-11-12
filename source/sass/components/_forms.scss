@@ -282,7 +282,7 @@
   } // .group
 
   &.seed-file {
-    & > [type='file'] {
+    > [type='file'] {
       width: 0.1px;
       height: 0.1px;
       opacity: 0;
@@ -305,7 +305,7 @@
         display: -webkit-flex;
         display: flex;
 
-        & > span {
+        > span {
           display: inline-block;
           line-height: 4rem;
           height: 100%;
@@ -313,7 +313,7 @@
           text-align: center;
         } // span
 
-        & > span.input {
+        > span.input {
           text-overflow: ellipsis;
           white-space: nowrap;
           overflow: hidden;
@@ -321,30 +321,51 @@
           flex: 1 70%;
         } // span.input
 
-        & > span.button,
-        & > span.cancel {
-          position: relative;
+        > span.button,
+        > span.cancel {
           color: #fff;
-          background-color: $secondary;
-          border-radius: $radius;
+          position: relative;
           overflow: hidden;
           white-space: nowrap;
           text-overflow: ellipsis;
-          flex: 1 30%;
+          border: {
+            top-right-radius: $radius;
+            top-left-radius: 0;
+            bottom-right-radius: $radius;
+            bottom-left-radius: 0;
+          }
         } // span.button, span.cancel
 
-        & * {
-          pointer-events: none;
+        > span.cancel {
+          flex: 1 30%;
+          background-color: $red;
+          display: none;
         }
+
+        > span.button {
+          flex: 1 30%;
+          background-color: $secondary;
+          display: inline-block;
+        } // span.button
+
+        // & * {
+        //   pointer-events: none;
+        // }
       } // input + label
 
       &:focus + label,
       & + label:hover {
-        // background-color: #e2e2e2;
-
-        & > .button {
-          background-color: darken($secondary, 5%);
+        > .cancel,
+        > .button {
           box-shadow: $shadow-default;
+        }
+
+        > .cancel {
+          background-color: darken($red, 5%);
+        }
+
+        > .button {
+          background-color: darken($secondary, 5%);
         }
       } // input:focus + label, input + label
 
@@ -353,5 +374,19 @@
         outline: -webkit-focus-ring-color auto 5px;
       } // input:focus + label
     } // [type="file"]
+
+    &.chosen {
+      > [type='file'] {
+        & + label {
+          > span.cancel {
+            display: inline-block;
+          } // span.cancel
+
+          > span.cancel + span.button {
+            display: none;
+          } // span.button
+        } // + label
+      } // > [type='file']
+    } // .seed-file.chosen
   } // .seed-file
 } // .field

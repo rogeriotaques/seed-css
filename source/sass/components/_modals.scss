@@ -54,6 +54,10 @@
   } // .modal-header
 
   & &-body {
-    padding: 0 ($padding * 2) ($padding * 2);
+    padding: ($padding * 2);
   } // .modal-body
+
+  & &-footer {
+    padding: 0 ($padding * 2) ($padding / 2);
+  } // .modal-footer
 } // .modal

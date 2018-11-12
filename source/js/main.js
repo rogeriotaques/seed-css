@@ -90,8 +90,11 @@
   // Init grid playground
   enableGridPlayground();
 
-  // Init the modal
-  SeedCSS.modal();
+  if (typeof SeedCSS !== 'undefined') {
+    SeedCSS.modal(); // Init the modal helper
+    SeedCSS.fileUpload(); // Init the fileUpload helper
+    SeedCSS.textArea(); // Init the textArea helper
+  }
 })();
 
 // (function($) {
