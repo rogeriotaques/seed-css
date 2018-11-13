@@ -2,3 +2,22 @@
  * Seed CSS - Offset Canvas
  * @version 2.0.0
  */
+
+.offset-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  height: 100vh;
+  background-color: $grey-light;
+  width: $small-container;
+  max-width: $small;
+  box-shadow: $shadow-default;
+  box-sizing: border-box;
+  padding: 0 ($padding * 2);
+  z-index: 500;
+
+  &.inset {
+    box-shadow: $shadow-inset;
+  }
+}
