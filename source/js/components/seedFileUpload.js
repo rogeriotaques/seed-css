@@ -14,7 +14,7 @@ const seedFileUpload = function() {
       evt.preventDefault();
     }
 
-    let event;
+    let customEvent;
     let fileName = false;
 
     const input = this;
@@ -37,9 +37,9 @@ const seedFileUpload = function() {
     }
 
     if (input.value !== '') {
-      event = new CustomEvent('modal.opened');
+      customEvent = new CustomEvent('file.chosen');
       input.parentNode.classList.add('chosen');
-      input.dispatchEvent(event);
+      input.dispatchEvent(customEvent);
     }
   }; // fnChange
 
@@ -84,13 +84,16 @@ const seedFileUpload = function() {
           input.value = '';
           input.parentNode.classList.remove('chosen');
           label.querySelector('.input').innerHTML = emptyText;
+
+          const customEvent = new CustomEvent('file.removed');
+          input.dispatchEvent(customEvent);
         });
       }
 
       label.querySelector('.input').innerHTML = emptyText;
 
       // Start listening the field for changes
-      input.addEventListener('change', fnChange); // input.addEventListener('change')
+      input.addEventListener('change', fnChange);
     }); // inputs.forEach(function(input, i)
   } // if (inputs !== null)
 }; // seedFileUpload

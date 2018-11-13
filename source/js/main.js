@@ -91,9 +91,19 @@
   enableGridPlayground();
 
   if (typeof SeedCSS !== 'undefined') {
-    SeedCSS.modal(); // Init the modal helper
+    const m = SeedCSS.modal(); // Init the modal helper
+    const modal = m.get('#modal');
+
     SeedCSS.fileUpload(); // Init the fileUpload helper
     SeedCSS.textArea(); // Init the textArea helper
+
+    modal.addEventListener('modal.opened', () => {
+      console.log('Modal Opened');
+    });
+
+    modal.addEventListener('modal.closed', () => {
+      console.log('Modal Closed');
+    });
   }
 })();
 

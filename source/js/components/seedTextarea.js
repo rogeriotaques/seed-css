@@ -55,8 +55,6 @@ const seedTextarea = function() {
 
       // Initialize the utility label
       fnCalc();
-
-      console.log('Found ', input);
     }); // inputs.forEach(function(input, i)
   } // if (inputs !== null)
 }; // seedTextarea

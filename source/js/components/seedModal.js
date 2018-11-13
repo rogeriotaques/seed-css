@@ -6,6 +6,12 @@
  * @license MIT
  */
 
+let fnOpen;
+
+let fnClose;
+
+let fnEsc;
+
 const seedModal = (options) => {
   'use strict';
 
@@ -28,18 +34,21 @@ const seedModal = (options) => {
   let modals = document.querySelectorAll('.modal');
   let modalTriggers = document.querySelectorAll(options.trigger);
 
-  const fnClose = (modalObject) => {
+  fnClose = (modalObject) => {
     if (!modalObject) {
       return;
     }
 
-    let event;
+    let customEvent;
     const html = document.querySelector('html');
     const mWin = modalObject.querySelector('.modal-window');
 
     if (!mWin) {
       return;
     }
+
+    // Removes the ESC listener
+    document.removeEventListener('keydown', fnEsc);
 
     // Replace open animation to close the modal window
     mWin.classList.replace(
@@ -55,42 +64,38 @@ const seedModal = (options) => {
     // This is the time to finishing all animate.css animations
     setTimeout(() => {
       // Dispatch the 'modal.closed' event
-      event = new CustomEvent('modal.closed');
-      modalObject.dispatchEvent(event);
+      customEvent = new CustomEvent('modal.closed');
+      modalObject.dispatchEvent(customEvent);
 
       // Completely hide the component
       modalObject.classList.add('hide');
-
       // Reenable scrolling from the HTML
       html.style.overflow = '';
-
       // Remove closing classes from overlay
       modalObject.classList.remove('delay-1s', 'fadeOut');
-
       // Remove closing classes from modal window
       mWin.classList.replace(
         options.classAnimation.close,
         options.classAnimation.open
       );
-    }, 2000);
+    }, 1500);
   }; // fnClose
 
-  const fnOpen = (modalObject) => {
+  fnOpen = (modalObject) => {
     if (!modalObject) {
       return;
     }
 
-    let event;
+    let customEvent;
     const html = document.querySelector('html');
     const mWin = modalObject.querySelector('.modal-window');
 
     // Handle the ESC dismiss
-    const escHandler = function escHandler(e) {
+    fnEsc = function escHandler(e) {
       const key = e.keyCode || e.which;
 
       // When the ESC key is pressed
       if (key === 27) {
-        document.removeEventListener('keydown', escHandler);
         fnClose(modalObject);
       }
     };
@@ -100,20 +105,16 @@ const seedModal = (options) => {
     }
 
     // Add (and remove) an ESC handler for the overlay
-    document.addEventListener('keydown', escHandler);
+    document.addEventListener('keydown', fnEsc);
 
     // Clear inline display style, if any
     modalObject.style.display = '';
-
     // Add animation to the overlay
     modalObject.classList.add('animated', 'fadeIn', 'fast');
-
     // Add animation to the modal window
     mWin.classList.add('animated', options.classAnimation.open);
-
     // Show the component
     modalObject.classList.remove('hide');
-
     // Finally prevent scrolling
     html.style.overflow = 'hidden';
 
@@ -121,9 +122,9 @@ const seedModal = (options) => {
     // Each animate.css animation takes 1s
     setTimeout(() => {
       // Dispatch the 'modal.opened' event
-      event = new CustomEvent('modal.opened');
-      modalObject.dispatchEvent(event);
-    }, 1500);
+      customEvent = new CustomEvent('modal.opened');
+      modalObject.dispatchEvent(customEvent);
+    }, 1000);
   }; // fnOpen
 
   if (modals !== null) {
@@ -151,6 +152,7 @@ const seedModal = (options) => {
           dismiss.addEventListener('click', (evt) => {
             if (evt) {
               evt.preventDefault();
+              evt.stopPropagation();
             }
 
             fnClose(modal);
