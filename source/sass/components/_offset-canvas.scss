@@ -4,6 +4,8 @@
  */
 
 .offset-canvas {
+  @include transform(translateX(-100%));
+  @include transition(transform, 0.3s, ease-in-out);
   position: fixed;
   top: 0;
   left: 0;
@@ -15,9 +17,21 @@
   box-shadow: $shadow-default;
   box-sizing: border-box;
   padding: 0 ($padding * 2);
+  overflow: hidden;
+  overflow-y: auto;
   z-index: 500;
+
+  &.right {
+    @include transform(translateX(100%));
+    left: auto;
+    right: 0;
+  }
 
   &.inset {
     box-shadow: $shadow-inset;
+  }
+
+  &.open {
+    @include transform(translateX(0%));
   }
 }
