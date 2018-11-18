@@ -3,4 +3,10 @@
 
   .sample-container.auto-height 
     .align-center
-      button.btn.btn-primary(type="button", role="offset-canvas", data-modal-id="sidenav") Click Me
+      .container
+        .field.seed-select
+          select#offset-canvas-inset 
+            option(value="overlay") Overlay (default)
+            option(value="inset") Fixed to the page
+
+      button.btn.btn-primary(type="button", role="offset-canvas", data-id="sidenav") Click Me

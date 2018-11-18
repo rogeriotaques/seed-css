@@ -348,3 +348,11 @@ div[id^='sample-'] {
     padding: 20px;
   }
 } // #sample-utilities
+
+[role='offset-canvas'] {
+  &.triggered {
+    background-color: $secondary !important;
+    border-color: $secondary !important;
+    color: white !important;
+  } // [role="offset-canvas"].triggered
+} // [role="offset-canvas"]

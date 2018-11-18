@@ -92,18 +92,44 @@
 
   if (typeof SeedCSS !== 'undefined') {
     const m = SeedCSS.modal(); // Init the modal helper
+    const c = SeedCSS.offsetCanvas(); // Init the offsetCanvas helper
     const modal = m.get('#modal');
+    const canvas = c.get('#sidenav');
 
     SeedCSS.fileUpload(); // Init the fileUpload helper
     SeedCSS.textArea(); // Init the textArea helper
 
-    modal.addEventListener('modal.opened', () => {
-      console.log('Modal Opened');
-    });
+    if (modal) {
+      modal.addEventListener('modal.opened', () => {
+        console.log('Modal Opened');
+      });
 
-    modal.addEventListener('modal.closed', () => {
-      console.log('Modal Closed');
-    });
+      modal.addEventListener('modal.closed', () => {
+        console.log('Modal Closed');
+      });
+    }
+
+    if (canvas) {
+      let canvasStyleSwitcher = document.querySelector('#offset-canvas-inset');
+
+      if (canvasStyleSwitcher) {
+        canvasStyleSwitcher.addEventListener('change', () => {
+          if (canvasStyleSwitcher.value === 'inset') {
+            canvas.classList.add('inset');
+          } else {
+            canvas.classList.remove('inset');
+          }
+        });
+      }
+
+      canvas.addEventListener('canvas.opened', () => {
+        console.log('Modal Opened');
+      });
+
+      canvas.addEventListener('canvas.closed', () => {
+        console.log('Modal Closed');
+      });
+    }
   }
 })();
 
