@@ -92,7 +92,7 @@
 
   if (typeof SeedCSS !== 'undefined') {
     const m = SeedCSS.modal(); // Init the modal helper
-    const c = SeedCSS.offsetCanvas(); // Init the offsetCanvas helper
+    const c = SeedCSS.offCanvas(); // Init the offCanvas helper
     const modal = m.get('#modal');
     const canvas = c.get('#sidenav');
 
@@ -114,20 +114,20 @@
 
       if (canvasStyleSwitcher) {
         canvasStyleSwitcher.addEventListener('change', () => {
-          if (canvasStyleSwitcher.value === 'inset') {
-            canvas.classList.add('inset');
+          if (canvasStyleSwitcher.value === 'overlay') {
+            canvas.classList.add('overlay');
           } else {
-            canvas.classList.remove('inset');
+            canvas.classList.remove('overlay');
           }
         });
       }
 
       canvas.addEventListener('canvas.opened', () => {
-        console.log('Modal Opened');
+        console.log('Side Menu Opened');
       });
 
       canvas.addEventListener('canvas.closed', () => {
-        console.log('Modal Closed');
+        console.log('Side Menu Closed');
       });
     }
   }

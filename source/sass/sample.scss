@@ -349,10 +349,22 @@ div[id^='sample-'] {
   }
 } // #sample-utilities
 
-[role='offset-canvas'] {
+[role='offcanvas'] {
+  > .close {
+    display: none;
+  }
+
   &.triggered {
     background-color: $secondary !important;
     border-color: $secondary !important;
     color: white !important;
+
+    > .close {
+      display: inline-block;
+    }
+
+    > .open {
+      display: none;
+    }
   } // [role="offset-canvas"].triggered
 } // [role="offset-canvas"]

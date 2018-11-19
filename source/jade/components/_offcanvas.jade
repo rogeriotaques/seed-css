@@ -1,0 +1,16 @@
+#sample-offcanvas
+  h4 Off canvas menu
+
+  .sample-container.auto-height 
+    .row 
+      .col.md-6.align-center
+        button.btn.btn-primary(type="button", role="offcanvas", data-id="sidenav") 
+          span Click me to 
+          span.open Open
+          span.close Close
+
+      .col.md-5.px-20
+        .field.seed-select
+          select#offset-canvas-inset 
+            option(value="aside") Aside (default)
+            option(value="overlay") Overlay

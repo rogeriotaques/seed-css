@@ -41,17 +41,19 @@ html(lang="en")
     link(rel="stylesheet", type="text/css", href="assets/css/style.css?v={%version%}")
   body
 
-    //- include sections/_header
-    //- include sections/_main
-    include sections/_get-started
-    include sections/_examples
-    include sections/_javascript
-    //- include sections/_show-case
-    include sections/_license
-    //- include sections/_donate
-    include sections/_footer
+    aside#sidenav.offcanvas
+      include sections/_example-offcanvas
 
-    include sections/_example-offset-canvas
+    main#page-wrapper  
+      //- include sections/_header
+      //- include sections/_main
+      include sections/_get-started
+      include sections/_examples
+      include sections/_javascript
+      //- include sections/_show-case
+      include sections/_license
+      //- include sections/_donate
+      include sections/_footer
 
     script(src="//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js")
     script(src="//code.jquery.com/jquery-2.2.3.min.js", integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=", crossorigin="anonymous")
