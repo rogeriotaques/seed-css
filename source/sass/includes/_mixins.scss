@@ -76,7 +76,11 @@
   @each $case in $cases {
     @for $i from 0 through $max {
       &.#{$case}-#{$i} {
-        margin: #{$i + px} !important;
+        @if $case == 'm' {
+          margin: #{$i + px} !important;
+        } @else {
+          padding: #{$i + px} !important;
+        }
       }
 
       $i: $i + $step;
@@ -84,9 +88,16 @@
 
     @for $i from 0 through $max {
       &.#{$case}x-#{$i} {
-        margin: {
-          left: #{$i + px} !important;
-          right: #{$i + px} !important;
+        @if $case == 'm' {
+          margin: {
+            left: #{$i + px} !important;
+            right: #{$i + px} !important;
+          }
+        } @else {
+          padding: {
+            left: #{$i + px} !important;
+            right: #{$i + px} !important;
+          }
         }
       }
 
@@ -95,9 +106,16 @@
 
     @for $i from 0 through $max {
       &.#{$case}y-#{$i} {
-        margin: {
-          top: #{$i + px} !important;
-          bottom: #{$i + px} !important;
+        @if $case == 'm' {
+          margin: {
+            top: #{$i + px} !important;
+            bottom: #{$i + px} !important;
+          }
+        } @else {
+          padding: {
+            top: #{$i + px} !important;
+            bottom: #{$i + px} !important;
+          }
         }
       }
 
@@ -106,7 +124,11 @@
 
     @for $i from 0 through $max {
       &.#{$case}l-#{$i} {
-        margin-left: #{$i + px} !important;
+        @if $case == 'm' {
+          margin-left: #{$i + px} !important;
+        } @else {
+          padding-left: #{$i + px} !important;
+        }
       }
 
       $i: $i + $step;
@@ -114,7 +136,11 @@
 
     @for $i from 0 through $max {
       &.#{$case}t-#{$i} {
-        margin-top: #{$i + px} !important;
+        @if $case == 'm' {
+          margin-top: #{$i + px} !important;
+        } @else {
+          padding-top: #{$i + px} !important;
+        }
       }
 
       $i: $i + $step;
@@ -122,7 +148,11 @@
 
     @for $i from 0 through $max {
       &.#{$case}r-#{$i} {
-        margin-right: #{$i + px} !important;
+        @if $case == 'm' {
+          margin-right: #{$i + px} !important;
+        } @else {
+          padding-right: #{$i + px} !important;
+        }
       }
 
       $i: $i + $step;
@@ -130,7 +160,11 @@
 
     @for $i from 0 through $max {
       &.#{$case}b-#{$i} {
-        margin-bottom: #{$i + px} !important;
+        @if $case == 'm' {
+          margin-bottom: #{$i + px} !important;
+        } @else {
+          padding-bottom: #{$i + px} !important;
+        }
       }
 
       $i: $i + $step;

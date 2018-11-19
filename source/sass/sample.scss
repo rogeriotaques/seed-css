@@ -160,6 +160,7 @@ footer {
   margin-bottom: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
+  box-sizing: border-box;
 
   &.auto-height {
     height: auto;
@@ -368,3 +369,7 @@ div[id^='sample-'] {
     }
   } // [role="offset-canvas"].triggered
 } // [role="offset-canvas"]
+
+nav {
+  border: thin solid $grey;
+} // nav

@@ -1,0 +1,141 @@
+/* 
+ * Seed CSS - Navs
+ * @version 2.0.0
+ */
+
+nav {
+  background-color: $grey-medium;
+  padding: 0;
+  margin: 0;
+
+  > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-height: $height;
+
+    > li {
+      a {
+        display: block;
+        min-width: $margin * 6;
+        text-decoration: none;
+        text-align: center;
+        color: $black;
+        font-weight: 700;
+        padding: 0 ($padding * 2);
+
+        &:hover {
+          background-color: $grey;
+        } // a:hover
+
+        &:active,
+        &:focus,
+        &.active {
+          background-color: $secondary;
+          color: $white;
+
+          &:hover {
+            background-color: darken($secondary, 10%);
+          }
+        } // :active, :focus, .active
+      } // a
+    } // > li
+  } // > ul
+
+  &.vertical {
+    > ul {
+      max-width: $small;
+
+      > li {
+        float: none;
+        display: block;
+
+        a {
+          text-align: left;
+        } // a
+      } // > li
+    } // > ul
+  } // .vertical
+
+  &.dark {
+    background-color: $grey-dark;
+
+    > ul {
+      a {
+        color: $white;
+
+        &:hover {
+          background-color: darken($grey-dark, 10%);
+        }
+
+        &:active,
+        &:focus,
+        &.active {
+          background-color: $primary;
+          color: $white;
+
+          &:hover {
+            background-color: darken($primary, 10%);
+          }
+        } // :active, :focus, .active
+      } // a
+    } // > ul
+  } // .dark
+
+  &.transparent {
+    background-color: transparent;
+
+    > ul {
+      a {
+        color: $black;
+
+        &:hover {
+          background-color: $white;
+        }
+
+        &:active,
+        &:focus,
+        &.active {
+          color: $primary;
+          background-color: $grey-medium;
+
+          &:hover {
+            background-color: $grey;
+          }
+        } // :active, :focus, .active
+      } // a
+    } // > ul
+  } // .transparent
+
+  &.stiky {
+    // Stiky only works when navigation is in the scrollable element
+    // And it's only supported from Edge 15+. IE does not support.
+    > ul {
+      position: -webkit-sticky; /* Safari */
+      position: sticky;
+      top: 0;
+    }
+  } // .stiky
+} // nav
+
+@media #{$small-and-up} {
+  // TODO ...
+}
+
+@media #{$medium-and-up} {
+  // TODO ...
+}
+
+@media #{$large-and-up} {
+  nav {
+    > ul {
+      > li {
+        float: left;
+      }
+    }
+  }
+}
+
+@media #{$extra-large-only} {
+  // Same as $larg-and-up ...
+}

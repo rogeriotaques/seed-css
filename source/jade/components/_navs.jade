@@ -1,0 +1,51 @@
+#sample-offcanvas
+  h4 Navigation bar
+
+  p.
+    Coming soon ...
+
+  .sample-container.auto-height.px-20 
+    .row 
+      .col
+        h5.mt-0 Horizontal navigation bar
+
+      -styles=['default', 'dark', 'transparent']
+      -for(i in styles)
+        .col.mb-20
+          h6
+            code= '.' + styles[i]
+
+          nav(class=styles[i])  
+            a(href="#") 
+              span.logo Logo
+
+            ul 
+              li 
+                a(href="#") Link 1    
+              li 
+                a(href="#") Link 2    
+              li 
+                a(href="#") Link 3    
+              li 
+                a(href="#").active Link 4 (Active)
+              li.place-right 
+                a(href="#") Link 5 (Placed on right)
+
+    br 
+
+    .row 
+      .col.md-5
+        h5.mt-0 Vertical navigation bar
+
+      .col.md-5.md-offset-1 
+        nav.vertical  
+          ul 
+            li 
+              a(href="#") Link 1    
+            li 
+              a(href="#") Link 2    
+            li 
+              a(href="#") Link 3    
+            li 
+              a(href="#").active Link 4 (Active)
+
