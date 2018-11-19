@@ -30,14 +30,14 @@
   } // .open
 
   &:not(.overlay) {
-    & + main {
+    & + .oncanvas {
       @extend .seed-oc-panel-transition;
-    } // .offcanvas + main
+    } // .offcanvas + .oncanvas
 
     &.open {
-      & + main {
+      & + .oncanvas {
         @include transform(translateX($small));
-      } // .open + main
+      } // .open + .oncanvas
     } // .open
   } // :not(.overlay)
 

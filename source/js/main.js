@@ -110,7 +110,7 @@
     }
 
     if (canvas) {
-      let canvasStyleSwitcher = document.querySelector('#offset-canvas-inset');
+      let canvasStyleSwitcher = document.querySelector('#offcanvas-style');
 
       if (canvasStyleSwitcher) {
         canvasStyleSwitcher.addEventListener('change', () => {

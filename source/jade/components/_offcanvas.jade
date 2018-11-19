@@ -1,10 +1,10 @@
 #sample-offcanvas
   h4 Off canvas menu
 
-  p.align-justify.
+  p.
     An off-canvas is that kind of component very useful to accomodate hidden navigation menus, 
     optionally visible when the page is seeing on desktops, but essential when the 
-    viewport is as small as a mobile device.
+    viewport is as small as a mobile device. 
 
   .sample-container.auto-height 
     .row 
@@ -16,6 +16,65 @@
 
       .col.md-5.px-20
         .field.seed-select
-          select#offset-canvas-inset 
+          label(for="offcanvas-style")
+          select#offcanvas-style 
             option(value="aside") Aside (default)
             option(value="overlay") Overlay
+
+  br
+  
+  p.
+    <code>seed-css</code> brings two different styles of off-canvas: <code>aside</code> (default) and 
+    <code>overlay</code>. In order to make the off-canvas work properly, it uses an arrangement of 
+    special markups and (as another exception to the rule) a JavaScript helper.
+
+  .row 
+    .col.md-6 
+      .code-sample
+        pre.prettyprint.lang-html.
+          &lt;!-- The off-canvas --&gt;
+          &lt;aside class="offcanvas" id="mycanvas"  &gt; 
+            ...
+          &lt;/aside&gt;
+
+          &lt;!-- The 'on-canvas' content wrapper --&gt;
+          &lt;main class="oncanvas"  &gt; 
+            ...
+          &lt;/main&gt;
+
+          &lt;!-- The trigger --&gt;
+          &lt;button role="offcanvas" data-id="mycanvas" &gt; 
+            ...
+          &lt;/button&gt;
+
+    .col.md-5.md-offset-1 
+      h6.mt-0 When using Node JS:
+
+      p Install it using NPM: <code>$ npm install seed-css --save</code> 
+
+      .code-sample
+        pre.prettyprint.lang-javascript.
+          import SeedCSS from 'seed-css'; // Import 
+          SeedCSS.offCanvas(); // Initialize
+
+      h6 When using Vanilla JS:
+
+      p First download the javascript library <a href="#library-download" class="spy ignore" >here</a>. 
+
+      .code-sample 
+        pre.prettyprint.lang-html.
+          &lt;script src="seed-css.js" &gt;&lt;/script&gt;
+
+      .code-sample
+        pre.prettyprint.lang-javascript.
+          if (typeof SeedCSS !== 'undefined') {
+            SeedCSS.offCanvas();
+          }
+
+  p Optionally assigning it to a variable you can programatically show and hide the modal.
+  
+  .code-sample
+    pre.prettyprint.lang-javascript.
+      const canvas = SeedCSS.offCanvas(); 
+      canvas.get('#mycanvas').open();
+      canvas.get('#mycanvas').close();
