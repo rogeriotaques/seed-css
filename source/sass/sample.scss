@@ -293,12 +293,13 @@ div[id^='sample-'] {
   .margins,
   .paddings {
     .col {
-      border: 2px solid $grey-light;
+      border: 2px solid white;
       height: 120px;
       overflow: hidden;
 
-      &:not(:first-child) {
-        border-left: 5px solid $grey-light;
+      &:nth-child(2),
+      &:nth-child(4) {
+        border-left: 5px solid white;
       }
 
       > .block {
@@ -331,6 +332,28 @@ div[id^='sample-'] {
     .col {
       background-color: #b7d4b7;
     } // .col
+
+    .p-10 {
+      padding: 0;
+      margin: $margin;
+      box-sizing: border-box;
+    }
+
+    .pt-0 {
+      margin-top: 0;
+    }
+
+    .pb-0 {
+      margin-bottom: 0;
+    }
+
+    .pl-0 {
+      margin-left: 0;
+    }
+
+    .pr-0 {
+      margin-right: 0;
+    }
   } // .margins
 
   [class^='place-'] {

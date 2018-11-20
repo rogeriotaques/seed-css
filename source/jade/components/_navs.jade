@@ -1,39 +1,48 @@
-#sample-offcanvas
+#sample-navgation-bar
   h4 Navigation bar
 
   p.
-    Coming soon ...
+    Navigation bar is a responsive mobile first component and will fit any screen size. When in small screens 
+    you might want to use it in conjunction to the <code>hide</code> classes from <code>utilities</code> in order to 
+    show and hide the hamburguer menu, when needed.
+
+  h5.mt-0 Horizontal navigation bar
+
+  p.
+    By default, navigation bar is horizontal in <code>seed-css</code>. 
+    Also, there are 3 pre-defined styles that you can use straight away. Just include the following classes:
 
   .sample-container.auto-height.px-20 
-    .row 
-      .col
-        h5.mt-0 Horizontal navigation bar
+    -styles=['default', 'dark', 'transparent']
+    -for(i in styles)
+      .col.mb-20
+        h6
+          code= '.' + styles[i]
 
-      -styles=['default', 'dark', 'transparent']
-      -for(i in styles)
-        .col.mb-20
-          h6
-            code= '.' + styles[i]
+        nav(class=styles[i])  
+          ul 
+            li 
+              a(href="#").logo 
+                span Logo
+            li 
+              a(href="#") Link 1    
+            li 
+              a(href="#").active Link 2 (Active)
+            li.right 
+              a(href="#") Link 3 (Placed on right)
 
-          nav(class=styles[i])  
-            ul 
-              li 
-                a(href="#").logo 
-                  span Logo
-              li 
-                a(href="#") Link 1    
-              li 
-                a(href="#").active Link 2 (Active)
-              li.right 
-                a(href="#") Link 3 (Placed on right)
+  br 
 
-    br 
+  .row 
+    .col.md-5
+      h5.mt-0 Vertical navigation bar
 
-    .row 
-      .col.md-5
-        h5.mt-0 Vertical navigation bar
+      p.
+        However, you can still define vertical navigation bars depending on your needs. For that, 
+        you just need to add the class <code >.vertical</code> to the navigation bar element.
 
-      .col.md-5.md-offset-1 
+    .col.md-5.md-offset-1 
+      .sample-container.auto-height.px-20
         nav.vertical  
           ul               
             li 
@@ -46,3 +55,57 @@
             li 
               a(href="#").active Link 3 (Active)
 
+  br
+
+  .code-sample
+    pre.prettyprint.lang-html.
+      &lt;!-- The Navigation bar --&gt;
+      &lt;nav &gt; 
+        &lt;ul &gt; 
+          &lt;li &gt; 
+            &lt;!-- Use .logo class for a specific styling for logos --&gt;
+            &lt;a href="#" class="logo" &gt; ... &lt;/a&gt;
+          &lt;/li&gt;
+
+          &lt;li &gt; 
+            &lt;!-- Use .active class when the item is active in the navbar --&gt;
+            &lt;a href="#" class="active" &gt; ... &lt;/a&gt;
+          &lt;/li&gt;
+
+          &lt;li &gt; 
+            &lt;a href="#" &gt; ... &lt;/a&gt;
+          &lt;/li&gt;
+
+          &lt;!-- Use .right class always you wanna place it on the right side --&gt;
+          &lt;li class="right" &gt; 
+            &lt;a href="#" &gt; ... &lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/nav&gt;
+
+  br 
+
+  table
+    thead
+      tr
+        th Class
+        th Remarks
+    tbody
+      tr
+        td.nowrap .vertical
+        td Forces the navigation bar to be vertical.
+      tr
+        td.nowrap .default OR NONE
+        td Sets the <code >default</code> light theme.
+      tr
+        td.nowrap .dark
+        td Sets the <code >dark</code> theme.
+      tr
+        td.nowrap .transparent
+        td Sets the <code >transparent</code> theme.
+      tr
+        td.nowrap .logo
+        td Creates a special styling for <code >&lt;a /&gt;</code> tags in the navigation bar.
+      tr
+        td.nowrap .right
+        td Places the <code >&lt;li /&gt;</code> tags to the right in the navigatin bar.
