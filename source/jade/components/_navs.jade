@@ -16,20 +16,16 @@
             code= '.' + styles[i]
 
           nav(class=styles[i])  
-            a(href="#") 
-              span.logo Logo
-
             ul 
+              li 
+                a(href="#").logo 
+                  span Logo
               li 
                 a(href="#") Link 1    
               li 
-                a(href="#") Link 2    
-              li 
-                a(href="#") Link 3    
-              li 
-                a(href="#").active Link 4 (Active)
-              li.place-right 
-                a(href="#") Link 5 (Placed on right)
+                a(href="#").active Link 2 (Active)
+              li.right 
+                a(href="#") Link 3 (Placed on right)
 
     br 
 
@@ -39,13 +35,14 @@
 
       .col.md-5.md-offset-1 
         nav.vertical  
-          ul 
+          ul               
+            li 
+              a(href="#").logo 
+                span Logo
             li 
               a(href="#") Link 1    
             li 
               a(href="#") Link 2    
             li 
-              a(href="#") Link 3    
-            li 
-              a(href="#").active Link 4 (Active)
+              a(href="#").active Link 3 (Active)
 
