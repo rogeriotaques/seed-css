@@ -23,7 +23,7 @@
   overflow: hidden;
   overflow-y: auto;
   z-index: 500;
-  box-shadow: $shadow-inset;
+  box-shadow: rgba(51, 51, 51, 0.35) -3px -1px 6px inset;
 
   &.open {
     @include transform(translateX(0%));
@@ -42,6 +42,10 @@
   } // :not(.overlay)
 
   &.overlay {
-    box-shadow: $shadow-default;
+    box-shadow: none;
+
+    &.open {
+      box-shadow: $shadow-default;
+    }
   } // .offcanvas.overlay
 } // .offcanvas

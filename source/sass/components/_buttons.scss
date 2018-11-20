@@ -8,6 +8,7 @@
   @include rem(min-width, 170px);
 
   cursor: pointer;
+  background-color: $white;
   display: inline-block;
   box-sizing: border-box;
   margin: $margin / 2;

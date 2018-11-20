@@ -35,12 +35,13 @@ $thickness: 3px;
     content: '';
     display: inline-block;
     vertical-align: middle;
-    border: $thickness solid $grey;
-    border-top-color: $primary;
+    border: $thickness solid $grey-light;
+    border-top-color: $secondary;
+    border-bottom-color: $secondary;
     border-radius: 50%;
     width: ($default-dimension - $gutter);
     height: ($default-dimension - $gutter);
-    @include animation(spinner, 1s, linear, infinite);
+    @include animation(spinner, 1.3s, linear, infinite);
   } // .spinner:before
 
   &.medium {
@@ -64,4 +65,16 @@ $thickness: 3px;
       content: none;
     }
   } // .spinner.lean
+
+  &.fast {
+    &:before {
+      @include animation-duration(0.5s);
+    }
+  } // .spinner.fast
+
+  &.medium {
+    &:before {
+      @include animation-duration(0.85s);
+    }
+  } // .spinner.slow
 } // .spinner

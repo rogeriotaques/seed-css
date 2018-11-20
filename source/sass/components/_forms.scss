@@ -54,12 +54,12 @@
   input[type='number'],
   textarea,
   select {
-    width: 100%;
-    box-sizing: border-box;
     @include rem(padding, 0 $padding);
     @include rem(font-size, 16px);
     @include rem(height, 40px);
     @include rem(line-height, 40px);
+    width: 100%;
+    box-sizing: border-box;
     border: $border solid $grey;
     border-radius: 0;
     margin: 5px 0;
@@ -347,10 +347,6 @@
           background-color: $secondary;
           display: inline-block;
         } // span.button
-
-        // & * {
-        //   pointer-events: none;
-        // }
       } // input + label
 
       &:focus + label,
@@ -371,7 +367,7 @@
 
       &:focus + label {
         outline: 1px dotted #000;
-        outline: -webkit-focus-ring-color auto 5px;
+        outline: $primary auto $border * 3;
       } // input:focus + label
     } // [type="file"]
 

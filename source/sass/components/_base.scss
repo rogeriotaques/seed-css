@@ -10,6 +10,10 @@
   font-size: 62.5%;
 }
 
+:focus {
+  outline: $primary auto $border * 3;
+}
+
 hr {
   margin: ($margin * 4) ($margin * 2);
   border: {
