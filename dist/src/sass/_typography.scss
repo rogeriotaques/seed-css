@@ -1,0 +1,83 @@
+/* 
+ * Seed CSS - Typography
+ * @version 2.0.0
+ */
+
+:root {
+  text-rendering: optimizeLegibility;
+  font: {
+    weight: 300; // light
+    family: 'Lato', 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica,
+      Arial, sans-serif;
+    kerning: auto;
+  }
+}
+
+body {
+  @include rem(font-size, 15px);
+  @include rem(line-height, 24px);
+  color: #222;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Open Sans';
+  font-weight: 400;
+
+  margin: {
+    top: ($margin * 2);
+    bottom: ($margin * 2);
+  }
+}
+
+h1 {
+  @include rem(font-size, 50px);
+  @include rem(line-height, 64px);
+}
+
+h2 {
+  @include rem(font-size, 42px);
+  @include rem(line-height, 56px);
+}
+
+h3 {
+  @include rem(font-size, 36px);
+  @include rem(line-height, 50px);
+}
+
+h4 {
+  @include rem(font-size, 30px);
+  @include rem(line-height, 42px);
+}
+
+h5 {
+  @include rem(font-size, 24px);
+  @include rem(line-height, 34px);
+}
+
+h6 {
+  @include rem(font-size, 15px);
+  @include rem(line-height, 23px);
+}
+
+p {
+  line-height: 150%;
+
+  margin: {
+    top: $margin;
+    bottom: $margin * 2;
+  }
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+a {
+  color: $primary;
+}

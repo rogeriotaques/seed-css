@@ -1,0 +1,80 @@
+/* 
+ * Seed CSS - Spinner
+ * @version 2.0.0
+ */
+
+@include keyframes(spinner) {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+$default-dimension: 30px !default;
+$medium-dimension: 60px !default;
+$big-dimension: 90px !default;
+
+$gutter: 5px !default;
+$thickness: 3px;
+
+.spinner {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: $default-dimension;
+  margin: $margin;
+
+  &:after {
+    content: attr(data-label);
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: $margin;
+  } // .spinner:after
+
+  //   &:not(:required) {
+  &:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    border: $thickness solid $grey-light;
+    border-top-color: $secondary;
+    border-bottom-color: $secondary;
+    border-radius: 50%;
+    width: ($default-dimension - $gutter);
+    height: ($default-dimension - $gutter);
+    @include animation(spinner, 1.3s, linear, infinite);
+  } // .spinner:before
+
+  &.medium {
+    &:before {
+      border-width: $thickness * 2;
+      width: ($medium-dimension - $gutter - ($thickness * 2));
+      height: ($medium-dimension - $gutter - ($thickness * 2));
+    } // .medium:before
+  } // .medium
+
+  &.big {
+    &:before {
+      border-width: $thickness * 3;
+      width: ($big-dimension - $gutter - ($thickness * 3));
+      height: ($big-dimension - $gutter - ($thickness * 3));
+    } // .big:before
+  } // .big
+
+  &.lean {
+    &:after {
+      content: none;
+    }
+  } // .spinner.lean
+
+  &.fast {
+    &:before {
+      @include animation-duration(0.5s);
+    }
+  } // .spinner.fast
+
+  &.medium {
+    &:before {
+      @include animation-duration(0.85s);
+    }
+  } // .spinner.slow
+} // .spinner

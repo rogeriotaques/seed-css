@@ -1,0 +1,46 @@
+/* 
+ * Seed CSS - Base
+ * @version 2.0.0
+ */
+
+:root {
+  -webkit-font-smoothing: antialiased; /* webkit text rendering fix */
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-size: 62.5%;
+}
+
+:focus {
+  outline: $primary auto $border * 3;
+}
+
+hr {
+  margin: ($margin * 4) ($margin * 2);
+  border: {
+    width: 0;
+    collapse: collapse;
+    bottom: $border dashed $shadow;
+  }
+
+  &.solid {
+    border-bottom: $border solid $shadow;
+  }
+
+  &.dotted {
+    border-bottom: $border dotted $shadow;
+  }
+}
+
+pre {
+  // Fixes a bug where PRE tags are breaking the page design
+  // when long contents are showed in smartphones.
+  overflow: auto;
+}
+
+code {
+  padding: $padding / 5;
+  border: $border solid $grey;
+  background-color: $grey-light;
+  color: $red;
+  white-space: nowrap;
+}

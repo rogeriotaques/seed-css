@@ -1,0 +1,64 @@
+/* 
+ * Seed CSS - Tables
+ * @version 2.0.0
+ */
+
+table {
+  width: 100%;
+  margin: ($margin * 2) 0;
+  border-collapse: collapse;
+
+  th,
+  td {
+    @include rem(font-size, 14px);
+    @include rem(line-height, 24px);
+    @include rem(padding, $padding);
+    @include rem(min-height, 30px);
+    text-align: left;
+    vertical-align: middle;
+    border-bottom: thin solid $grey;
+  }
+
+  thead {
+    th,
+    td {
+      font-weight: 400;
+      border: {
+        bottom: {
+          width: $border * 2;
+          color: $grey-dark;
+        }
+      }
+    }
+  }
+
+  tfoot {
+    td {
+      border: 0;
+    }
+  }
+
+  &.hovered {
+    tbody {
+      tr:hover {
+        background-color: $grey-light;
+      }
+    }
+  }
+
+  &.stripped {
+    tbody {
+      tr:nth-child(odd) {
+        background-color: $grey-light;
+      }
+    }
+  }
+
+  &.bordered {
+    tbody {
+      td:not(:first-child) {
+        border-left: $border solid $grey;
+      }
+    }
+  }
+}

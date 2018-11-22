@@ -1,0 +1,105 @@
+/* 
+ * Seed CSS - Buttons
+ * @version 2.0.0
+ */
+
+.btn {
+  @include transition(all, 0.25s, ease-in-out);
+  @include rem(min-width, 170px);
+
+  cursor: pointer;
+  background-color: $white;
+  display: inline-block;
+  box-sizing: border-box;
+  margin: $margin / 2;
+  padding: $padding ($padding * 3);
+  line-height: $height / 2;
+  font-weight: 600;
+  color: $grey-dark;
+  border: {
+    radius: $border * 5;
+    width: $border * 2;
+    color: $grey-dark;
+    style: solid;
+  }
+  text: {
+    align: center;
+    decoration: none;
+    rendering: optimizeLegibility;
+  }
+
+  // disabled
+  &[disabled],
+  &.disabled {
+    cursor: not-allowed;
+    color: $grey-dark;
+    border-color: $grey;
+    background-color: $grey;
+    text-shadow: white 1px 1px 1px;
+  } // .disabled, [disabled]
+
+  // enabled
+  &:enabled {
+    &.link {
+      border: 0;
+    }
+
+    &.primary {
+      border-color: $primary;
+      @extend .primary-background;
+    }
+
+    &.secondary {
+      border-color: $secondary;
+      @extend .secondary-background;
+    }
+
+    &.red {
+      border-color: $red;
+      @extend .red-background;
+    }
+
+    &.orange {
+      border-color: $orange;
+      @extend .orange-background;
+    }
+
+    &.green {
+      border-color: $green;
+      @extend .green-background;
+    }
+
+    &.purple {
+      border-color: $purple;
+      @extend .purple-background;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      outline: none;
+
+      &:not(.link) {
+        box-shadow: $shadow-default;
+        background-color: white;
+      }
+
+      &.link {
+        color: $primary;
+      }
+    } // .btn:enabled:hover
+  } // .btn:enabled
+
+  // sizes
+  &.medium {
+    @include rem(min-width, 120px);
+    @include rem(font-size, 14px);
+    padding: ($padding / 2) ($padding * 2);
+  }
+
+  &.small {
+    @include rem(min-width, 80px);
+    @include rem(font-size, 12px);
+    padding: ($padding / 3) ($padding);
+  }
+} // .btn

@@ -1,0 +1,54 @@
+/**
+ * Seed CSS - Global variables
+ * @version 2.0.0
+ */
+
+// container sizes
+$small-container: 90%;
+$medium-container: 85%;
+$large-container: 80%;
+$extra-large-container: 75%;
+
+// screen sizes
+$small: 320px;
+$medium: 600px;
+$large: 990px;
+$extra-large: 1200px;
+$fullhd: 1920px;
+
+// media queries
+$small-only: 'only screen and (max-width: #{$medium - 1})';
+$small-and-up: 'only screen and (min-width: 0)';
+$medium-only: 'only screen and (min-width: #{$medium}) and (max-width: #{$large - 1})';
+$medium-and-up: 'only screen and (min-width: #{$medium})';
+$medium-and-down: 'only screen and (max-width: #{$large - 1})';
+$large-only: 'only screen and (min-width: #{$large}) and (max-width: #{$extra-large - 1})';
+$large-and-up: 'only screen and (min-width: #{$large})';
+$large-and-down: 'only screen and (max-width: #{$extra-large - 1})';
+$extra-large-only: 'only screen and (min-width: #{$extra-large})';
+
+// default dimensions
+$height: 50px;
+$margin: 10px;
+$padding: $margin;
+$radius: $margin / 2;
+$border: 1px;
+
+// colors
+$primary: #1466ff;
+$secondary: #4b70b4;
+$grey: #ccc;
+$grey-light: #f5f5f5;
+$grey-medium: #e2e2e2;
+$grey-dark: #666;
+$red: #d32f2f;
+$orange: #fb8c00;
+$green: #43a047;
+$purple: #8e24aa;
+$black: #333;
+$white: #fdfdfd;
+
+// shadows
+$shadow: rgba(0, 0, 0, 0.35);
+$shadow-default: $shadow 0 3px 12px;
+$shadow-inset: lighten($shadow, 20) 0 3px 6px inset;

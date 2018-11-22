@@ -1,0 +1,86 @@
+/* 
+ * Seed CSS - Alerts
+ * @version 2.0.0
+ */
+
+.alert {
+  $shadow-data: 5px 0 0 inset !default;
+
+  position: relative;
+  background-color: $grey-light;
+  color: $grey-dark;
+  padding: 0;
+  margin: 10px;
+  box-sizing: border-box;
+  box-shadow: $grey $shadow-data;
+  padding: 20px;
+
+  &::before {
+    $dimension: 20px;
+
+    @include rem(font-size, 10px);
+    @include rem(border-radius, 30px);
+    content: '';
+    color: white;
+    display: block;
+    position: absolute;
+    width: $dimension;
+    height: $dimension;
+    margin-top: $dimension;
+    line-height: $dimension;
+    background-color: $grey;
+    border: $border solid $grey;
+    text-align: center;
+    top: 0;
+    left: 0;
+
+    -webkit-transform: translateX(-9px);
+    -moz-transform: translateX(-9px);
+    -ms-transform: translateX(-9px);
+    transform: translateX(-9px);
+  }
+
+  &.info {
+    box-shadow: $primary $shadow-data;
+    background-color: #e8f0ff;
+
+    &::before {
+      content: '';
+      background-color: $primary;
+      border-color: $primary;
+    }
+  } // .info
+
+  &.success {
+    box-shadow: $green $shadow-data;
+    background-color: #d8f5da;
+
+    &::before {
+      content: '';
+      background-color: $green;
+      border-color: $primary;
+    }
+  } // .success
+
+  &.warning {
+    box-shadow: $orange $shadow-data;
+    background-color: #fff0dc;
+
+    &::before {
+      content: '';
+      background-color: $orange;
+      border-color: $orange;
+    }
+  } // .warning
+
+  &.danger {
+    box-shadow: $red $shadow-data;
+    background-color: #ffe0e0;
+
+    &::before {
+      content: '';
+      background-color: $red;
+      border-color: $red;
+    }
+  } // .danger
+} // .alert

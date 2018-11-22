@@ -1,4 +1,4 @@
-/**
+/*
  * Seed CSS -- Sample Page Styling
  * @version 2.0.0
  */
@@ -271,12 +271,26 @@ div[id^='sample-'] {
       &::after {
         top: 150%;
       }
+
+      &:hover {
+        &::before,
+        &::after {
+          margin-top: 0;
+        }
+      }
     } // .with-tooltip.top
 
     &.bottom {
       &::before,
       &::after {
         top: -90%;
+      }
+
+      &:hover {
+        &::before,
+        &::after {
+          margin-top: 8px;
+        }
       }
     } // .with-tooltip.bottom
 

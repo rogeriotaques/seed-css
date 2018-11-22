@@ -1,0 +1,191 @@
+/*
+ * Seed CSS - Utilities
+ * @version 2.0.0
+ */
+
+@import '../includes/mixins';
+
+// alignment
+.align {
+  &-center {
+    text-align: center;
+  }
+  &-left {
+    text-align: left;
+  }
+  &-right {
+    text-align: right;
+  }
+  &-justify {
+    text-align: justify;
+  }
+}
+
+// floating
+.place {
+  &-left {
+    float: left;
+  }
+
+  &-right {
+    float: right;
+  }
+
+  &-center {
+    display: block !important;
+    width: fit-content;
+
+    margin: {
+      left: auto !important;
+      right: auto !important;
+    }
+  }
+}
+
+// media
+img {
+  vertical-align: middle;
+
+  &:not(.no-responsive) {
+    position: relative;
+    max-width: 100%;
+  }
+
+  &.circle {
+    border-radius: 50%;
+  }
+
+  &.thumb {
+    border: {
+      width: 5px;
+      color: white;
+      style: solid;
+      radius: 3px;
+    }
+    max-width: 100px;
+    height: auto;
+  }
+}
+
+// text transform
+.nowrap {
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.upper-case {
+  -webkit-text-transform: uppercase;
+  -moz-text-transform: uppercase;
+  -ms-text-transform: uppercase;
+  -o-text-transform: uppercase;
+  text-transform: uppercase;
+}
+
+.lower-case {
+  -webkit-text-transform: lowercase;
+  -moz-text-transform: lowercase;
+  -ms-text-transform: lowercase;
+  -o-text-transform: lowercase;
+  text-transform: lowercase;
+}
+
+.camel-case {
+  -webkit-text-transform: capitalize;
+  -moz-text-transform: capitalize;
+  -ms-text-transform: capitalize;
+  -o-text-transform: capitalize;
+  text-transform: capitalize;
+}
+
+.uc-first {
+  text-transform: lowercase;
+
+  &::first-letter {
+    -webkit-text-transform: capitalize;
+    -moz-text-transform: capitalize;
+    -ms-text-transform: capitalize;
+    -o-text-transform: capitalize;
+    text-transform: capitalize;
+  }
+}
+
+.lead {
+  font-size: 130%;
+}
+
+// show and hide
+.hide {
+  display: none !important;
+
+  &-only {
+    &-small {
+      @media #{$small-only} {
+        display: none !important;
+      }
+    }
+
+    &-medium {
+      @media #{$medium-only} {
+        display: none !important;
+      }
+    }
+
+    &-large {
+      @media #{$large-only} {
+        display: none !important;
+      }
+    }
+
+    &-extra-large {
+      @media #{$extra-large-only} {
+        display: none !important;
+      }
+    }
+  }
+
+  &-on-medium-and {
+    &-down {
+      @media #{$medium-and-down} {
+        display: none !important;
+      }
+    }
+
+    &-up {
+      @media #{$medium-and-up} {
+        display: none !important;
+      }
+    }
+  }
+
+  &-on-large-and {
+    &-down {
+      @media #{$large-and-down} {
+        display: none !important;
+      }
+    }
+
+    &-up {
+      @media #{$large-and-up} {
+        display: none !important;
+      }
+    }
+  }
+}
+
+// spacing (margin and paddings)
+@include elem-make-spacing();
+
+// shadows
+.with {
+  &-shadow {
+    position: relative;
+    box-shadow: $shadow-default;
+  } // .with-shadow
+
+  &-shadow-inset {
+    position: relative;
+    box-shadow: $shadow-inset;
+  } // .with-shadow-inset
+} // .with...
