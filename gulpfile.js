@@ -152,7 +152,13 @@ gulp.task('build:website', (cb) => {
 /**
  * Makes easier to watch pug files
  */
-gulp.task('build:pug-watch', gulp.series('build:website'), sync.reload);
+gulp.task(
+  'build:pug-watch',
+  gulp.series('build:website', (cb) => {
+    sync.reload();
+    cb();
+  })
+);
 
 /**
  * Transpiles the website javascript.
