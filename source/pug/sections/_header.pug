@@ -1,20 +1,16 @@
 header
-  .container.align-center
-    h1 
-      span Seed CSS
-      span#release {%version%}
-
-    p A light-weight, mobile first and responsive CSS boilerplate.
+  .container
+    .row 
+      .col.md-6.pt-20.align-center
+        h1.mb-0 Seed CSS
+        p.mt-0.lead A light-weight, mobile first and responsive CSS boilerplate.
       
+      .col.md-6.align-center
+        .cta.pt-30
+          p#release {%version%}
 
-    .cta
-      a.btn.btn-primary(href="https://github.com/rogeriotaques/seed-css/archive/develop.zip")
-        span DOWNLOAD
+          a.btn.primary(href="https://github.com/AbtzLabs/seed-css/archive/develop.zip")
+            span DOWNLOAD
 
-      a.btn.btn-purple(href="#donate")
-        span DONATE
-
-    p <span class="highlight">This page design is proudly based on Seed CSS</span><br>Scroll down for more.
-
-    div
-      span(title="Scroll down for more ...").ion-chevron-down.scroll-down-for-more
+          a.btn.purple(href="#donate")
+            span DONATE

@@ -7,6 +7,7 @@ nav {
   background-color: $grey-medium;
   padding: 0;
   margin: 0;
+  min-height: $height;
 
   > ul {
     padding: 0;
@@ -124,15 +125,14 @@ nav {
     }
   } // .transparent
 
-  &.stiky {
+  &.sticky {
     // Stiky only works when navigation is in the scrollable element
     // And it's only supported from Edge 15+. IE does not support.
-    > ul {
-      position: -webkit-sticky; /* Safari */
-      position: sticky;
-      top: 0;
-    }
-  } // .stiky
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  } // .sticky
 } // nav
 
 @media #{$small-and-up} {

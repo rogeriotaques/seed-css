@@ -16,96 +16,12 @@
 //   }
 // }
 
-// header {
-//   background-image: url('../images/css-code.jpeg');
-//   background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)),
-//     url('../images/css-code.jpeg');
-//   background-position: 0 0;
-//   background-size: 100% 100%;
-//   background-repeat: no-repeat;
-//   background-clip: border-box;
-//   background-attachment: fixed;
-//   backface-visibility: visible;
-//   color: white;
-
-//   width: 100%;
-//   width: 100vw;
-//   height: 100%;
-//   height: 100vh;
-
-//   position: relative;
-//   z-index: 0;
-
-//   // parallax effect
-//   transform-style: preserve-3d;
-//   overflow-y: scroll;
-//   overflow-x: hidden;
-
-//   .container {
-//     margin: 0 auto;
-//     position: fixed;
-//     left: 50%;
-//     top: 50%;
-//     transform: translate(-50%, -50%);
-//     z-index: 2;
-//   }
-
-//   h1,
-//   h2,
-//   h3,
-//   h4,
-//   h5,
-//   h6 {
-//     margin: 0;
-//     font-weight: bold;
-//   }
-
-//   p {
-//     color: $grey;
-//   }
-
-//   #release {
-//     margin: 0 0 0 10px;
-//     padding: 5px 10px;
-//     border: thin dotted #fff;
-//     border-radius: 3px;
-//     font-size: 16px;
-//     display: inline-block;
-//     line-height: 20px;
-//     vertical-align: middle;
-//   }
-
-//   .cta {
-//     padding: 50px 0;
-//   }
-
-//   .scroll-down-for-more {
-//     display: block;
-//     font-size: 4rem;
-//     animation: scroll-down 1.5s ease-in-out infinite;
-//   }
-
-//   .highlight {
-//     color: #444;
-//     display: inline-block;
-//     background: #ccc;
-//     padding: 2px 5px;
-//   }
-// }
-
-// main {
-//   position: relative;
-//   background-color: white;
-//   z-index: 3;
-//   margin-bottom: -10px;
-
-//   .highlight {
-//     i {
-//       font-size: 8rem;
-//       color: $grey;
-//     }
-//   }
-// }
+header {
+  #release {
+    font-size: 16px;
+    line-height: 20px;
+  }
+} // header
 
 section {
   position: relative;
@@ -117,17 +33,10 @@ section {
     background-color: #f9f9f9;
   }
 
-  //   &#license {
-  //     font-family: 'Courier New', Courier, monospace;
-  //   }
-
-  //   &#donate {
-  //     p {
-  //       font-size: 18px;
-  //       line-height: 25px;
-  //     }
-  //   }
-}
+  &#license {
+    font-family: 'Courier New', Courier, monospace;
+  }
+} // section
 
 footer {
   position: relative;
