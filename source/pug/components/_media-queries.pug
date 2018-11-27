@@ -6,79 +6,81 @@
     Media queries allows us to make an even more accurated design. In <code >seed-css</code>
     they are made to represent the following screen sizes:
 
-  table
-    thead
-      tr
-        th &nbsp;
-        th Screen width
-        th Prefix
-        th Columns
-        th Container
-    tbody
-      tr
-        td.nowrap Mobiles
-        td.nowrap
-          strong &lt; 600px
-        td.nowrap
-          strong .sm
-        td
-          strong 12
-        td
-          strong 90%
-      tr
-        td.nowrap Tablets
-        td.nowrap
-          strong &lt;= 990px
-        td.nowrap
-          strong .md
-        td
-          strong 12
-        td
-          strong 85%
-      tr
-        td.nowrap Desktops/ laptops
-        td.nowrap
-          strong &lt;= 1200px
-        td.nowrap
-          strong .lg
-        td
-          strong 12
-        td
-          strong 80%
-      tr
-        td.nowrap Extra large desktops/TVs
-        td.nowrap
-          strong &gt; 1200px
-        td.nowrap
-          strong .xl
-        td
-          strong 12
-        td
-          strong 75%
+  .table-responsive 
+    table
+      thead
+        tr
+          th &nbsp;
+          th Screen width
+          th Prefix
+          th Columns
+          th Container
+      tbody
+        tr
+          td.nowrap Mobiles
+          td.nowrap
+            strong &lt; 600px
+          td.nowrap
+            strong .sm
+          td
+            strong 12
+          td
+            strong 90%
+        tr
+          td.nowrap Tablets
+          td.nowrap
+            strong &lt;= 990px
+          td.nowrap
+            strong .md
+          td
+            strong 12
+          td
+            strong 85%
+        tr
+          td.nowrap Desktops/ laptops
+          td.nowrap
+            strong &lt;= 1200px
+          td.nowrap
+            strong .lg
+          td
+            strong 12
+          td
+            strong 80%
+        tr
+          td.nowrap Extra large desktops/TVs
+          td.nowrap
+            strong &gt; 1200px
+          td.nowrap
+            strong .xl
+          td
+            strong 12
+          td
+            strong 75%
 
   p.align-justify.
     You can safely write your own styling rules using the following queries and keep covered by
     <code >seed-css</code> grid system. Using a different set of media queries may
     overwrite this boilerplate grid system.
 
-  table
-    thead
-      tr
-        th Query
-        th Remarks
-    tbody
-      tr
-        td @media only screen and (min-width: 0px)
-        td For mobile devices. (Mobile first)
-      tr
-        td @media only screen and (min-width: 600px)
-        td For tablets devices.
-      tr
-        td @media only screen and (min-width: 990px)
-        td For desktop/ laptop devices.
-      tr
-        td @media only screen and (min-width: 1200px)
-        td For extra large desktop/ TV devices.
+  .table-responsive 
+    table
+      thead
+        tr
+          th Query
+          th Remarks
+      tbody
+        tr
+          td @media only screen and (min-width: 0px)
+          td For mobile devices. (Mobile first)
+        tr
+          td @media only screen and (min-width: 600px)
+          td For tablets devices.
+        tr
+          td @media only screen and (min-width: 990px)
+          td For desktop/ laptop devices.
+        tr
+          td @media only screen and (min-width: 1200px)
+          td For extra large desktop/ TV devices.
 
   .code-sample
     pre.prettyprint.lang-css.

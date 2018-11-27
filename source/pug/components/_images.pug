@@ -2,37 +2,42 @@
 #sample-responsive-images
   h4 Responsive images
 
-  p.align-justify.
-    By default, all images are considered responsive and will adjust
-    accordingly to the window size. In case you, for any sake, need a
-    non responsive image, just add the class <code >.no-responsive</code>
-    on it.
+  .row 
+    .col.md-5
+      br 
+      br 
 
-  .grid
-    .row
-      .col.md-5
-        h5.align-center Responsive
+      p.lead.
+        By default, all images are considered responsive and will adjust
+        accordingly to the window size. In case you, for any sake, need a
+        non responsive image, just add the class <code >.no-responsive</code>
+        on it.
 
-        p.align-center
-          img(src="https://picsum.photos/800/600?random", alt="Sample of a responsive image")
+      br
 
-        .code-sample
-          pre.prettyprint.lang-html.
-            &lt;img src="..." alt="..." &gt;
+      p.align-center
+        img(src="https://picsum.photos/800/600?random", alt="Sample of a responsive image").with-shadow
 
+    .col.md-6.md-offset-1
+      h5 Code example
 
-      .col.md-6.md-offset-1
-        h5.align-center Circle and Thumbnail
+      .code-sample
+        pre.prettyprint.lang-html.
+          &lt;img src="..." alt="..." &gt;
 
-        .grid
-          .row
-            .col.sm-12.md-6
-              p.align-center
-                img.circle(src="https://picsum.photos/100?random", alt="Circle image sample")
+      br 
+      br
 
-            .col.sm-12.md-6
-              p.align-center
-                img.thumb(src="https://picsum.photos/g/100/", alt="Thumbnail image sample")
+      h6 Circle and Thumbnail are also given
+
+      .row
+        .col.sm-12.md-6
+          p.align-center
+            img.circle(src="https://picsum.photos/100?random", alt="Circle image sample").with-shadow
+
+        .col.sm-12.md-6
+          p.align-center
+            img.thumb(src="https://picsum.photos/g/100/", alt="Thumbnail image sample").with-shadow
 
         .row
           .col.sm-12

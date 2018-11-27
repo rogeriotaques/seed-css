@@ -6,23 +6,24 @@
     There are a few basic colors ready for use. The same colors can be applied on foreground (texts)
     or background of your elements. Check it out:
 
-  table.hovered
-    thead
-      tr
-        th Tag
-        th Foreground class
-        th Background class
-        th Color
-    tbody
-      -var colorNameList = ['primary', 'secondary', 'red', 'orange', 'green', 'purple', 'darkgrey', 'grey', 'softgrey'];
-      -var colorList = ['#1466ff', '#4b70b4', '#d32f2f', '#fb8c00', '#43a047', '#8e24aa', '#666', '#ccc', '#f5f5f5'];
-      -for (var colorIndex in colorNameList)
+  .table-responsive 
+    table.hovered
+      thead
         tr
-          td
-            span(class=colorNameList[colorIndex]+'-background').color-tag
-          td
-            code= '.' + colorNameList[colorIndex]
-          td
-            code= '.' + colorNameList[colorIndex] + '-background'
-          td
-            code= colorList[colorIndex]
+          th Tag
+          th Foreground class
+          th Background class
+          th Color
+      tbody
+        -var colorNameList = ['primary', 'secondary', 'red', 'orange', 'green', 'purple', 'darkgrey', 'grey', 'softgrey'];
+        -var colorList = ['#1466ff', '#4b70b4', '#d32f2f', '#fb8c00', '#43a047', '#8e24aa', '#666', '#ccc', '#f5f5f5'];
+        -for (var colorIndex in colorNameList)
+          tr
+            td
+              span(class=colorNameList[colorIndex]+'-background').color-tag
+            td
+              code= '.' + colorNameList[colorIndex]
+            td
+              code= '.' + colorNameList[colorIndex] + '-background'
+            td
+              code= colorList[colorIndex]
