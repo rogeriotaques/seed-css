@@ -78,7 +78,7 @@ const seedModal = (options) => {
         options.classAnimation.close,
         options.classAnimation.open
       );
-    }, 1500);
+    }, 300);
   }; // fnClose
 
   fnOpen = (modalObject) => {
@@ -124,7 +124,7 @@ const seedModal = (options) => {
       // Dispatch the 'modal.opened' event
       customEvent = new CustomEvent('modal.opened');
       modalObject.dispatchEvent(customEvent);
-    }, 1000);
+    }, 100);
   }; // fnOpen
 
   if (modals !== null) {

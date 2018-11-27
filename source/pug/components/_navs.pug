@@ -1,7 +1,7 @@
 #sample-navgation-bar
   h4 Navigation bar
 
-  p.
+  p.lead.
     Navigation bar is a responsive mobile first component and will fit any screen size. When in small screens 
     you might want to use it in conjunction to the <code>hide</code> classes from <code>utilities</code> in order to 
     show and hide the hamburguer menu, when needed.
@@ -13,7 +13,7 @@
     Also, there are 3 pre-defined styles that you can use straight away. Just include the following classes:
 
   .sample-container.auto-height.px-20 
-    -styles=['default', 'dark', 'transparent']
+    -styles=['default', 'primary', 'secondary', 'red', 'orange', 'green', 'purple', 'dark', 'transparent']
     -for(i in styles)
       .col.mb-20
         h6
@@ -37,7 +37,7 @@
     .col.md-5
       h5.mt-0 Vertical navigation bar
 
-      p.
+      p.lead.
         However, you can still define vertical navigation bars depending on your needs. For that, 
         you just need to add the class <code >.vertical</code> to the navigation bar element.
 
@@ -55,7 +55,7 @@
             li 
               a(href="#").active Link 3 (Active)
 
-  br
+  h5 Code example
 
   .code-sample
     pre.prettyprint.lang-html.
@@ -83,7 +83,7 @@
         &lt;/ul&gt;
       &lt;/nav&gt;
 
-  br 
+  h5 Available classes
 
   .table-responsive
     table
@@ -98,6 +98,24 @@
         tr
           td.nowrap .default OR NONE
           td Sets the <code >default</code> light theme.
+        tr
+          td.nowrap .primary
+          td Sets the <code >primary</code> theme.
+        tr
+          td.nowrap .secondary
+          td Sets the <code >secondary</code> theme.
+        tr
+          td.nowrap .red
+          td Sets the <code >red</code> theme.
+        tr
+          td.nowrap .orange
+          td Sets the <code >orange</code> theme.
+        tr
+          td.nowrap .green
+          td Sets the <code >green</code> theme.
+        tr
+          td.nowrap .purple
+          td Sets the <code >purple</code> theme.
         tr
           td.nowrap .dark
           td Sets the <code >dark</code> theme.

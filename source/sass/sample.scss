@@ -75,6 +75,16 @@ footer {
   }
 }
 
+#sample-cards {
+  .card {
+    min-width: 307px;
+  }
+
+  .auto-height {
+    min-height: 310px;
+  }
+}
+
 #sample-grid .sample {
   .row {
     & > .col {

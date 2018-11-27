@@ -1,79 +1,88 @@
-
 #sample-buttons
   h4 Buttons
 
-  p.align-justify.
-    Buttons are essential to any web page or web app, and they come in a couple of different 
-    flavors in <code >seed-css</code>.  By simply adding the class <code >.btn</code> 
-    to any <code >&lt;a/&gt;</code> or  <code >&lt;button/&gt;</code> you will make it looks like 
-    a button. Adding the class <code >.btn-primary</code> it will become a primary button. 
+  br
+
+  .row 
+    .col.md-5
+      p.lead.
+        Buttons can be created with <code>seed-css</code> by simply adding the class <code >.btn</code> 
+        to any <code >&lt;a/&gt;</code> or  <code >&lt;button/&gt;</code> element. Adding the class 
+        <code >.btn-primary</code> it will become a primary button. 
+ 
+    .col.md-5.md-offset-1.align-center
+      a.btn(href="#!") a.btn
+      button.btn(type="button") button.btn
+      input.btn(type="button", value="input.btn")
+
+  h5 Playing with colors
 
   .row  
-    .col.md-6.sm-12 
-      .buttons.align-center
+    .col.md-8 
+      .buttons
 
-        h6.align-center Default (.btn)
-
-        a.btn(href="#!") a.btn
-        button.btn(type="button") button.btn
-        input.btn(type="button", value="input.btn")
-
-        br
-
-        h6.align-center Colored (.btn.*color*)
+        h6 Colored (.btn.*color*)
 
         a.btn.primary(href="#!") .btn.primary
         a.btn.secondary(href="#!") .btn.secondary
-        br 
-        
         a.btn.red(href="#!") .btn.red 
-        a.btn.orange(href="#!") .btn.orange
+        
         br 
 
+        a.btn.orange(href="#!") .btn.orange
         a.btn.green(href="#!") .btn.green
         a.btn.purple(href="#!") .btn.purple
-        br
 
+    .col.md-4 
         h6.align-center Link style (.btn.link)
         
-        a.btn.link(href="#!") .btn.link
+        .align-center
+          a.btn.link(href="#!") .btn.link
 
-        h6.align-center Disabled (.disabled) or <code>disabled</code> property
+  br 
 
-        button.btn(type="button", disabled) .btn.disabled
-        br
+  .row 
+    .col.md-6.align-center 
+      h5 Playing with states
 
-        h6.align-center Sizes
+      h6 Disabled (.disabled) or <code>disabled</code> property
+      button.btn(type="button", disabled) .btn.disabled
 
-        a.btn.small(href="#!") .btn.small
-        a.btn.medium(href="#!") .btn.medium
+    .col.md-6.align-center 
+      h5 Playing with sizes
 
-    .col.md-6.sm-12 
-      br
+      a.btn.small(href="#!") .btn.small
+      a.btn.medium(href="#!") .btn.medium
 
-      .code-sample
-        pre.prettyprint.lang-html.
-          &lt;!-- .btn class makes an anchor looks like a button --&gt;
-          &lt;a class="btn" href="..." &gt; ... &lt;/a&gt;
+  br
 
-          &lt;!-- default buttons and input[type="button"] --&gt;
-          &lt;button type="button" class="btn" &gt; ... &lt;/button&gt;
-          &lt;input type="button" class="btn" value="..." /&gt;
+  h5 Code example
 
-          &lt;!-- .btn-primary makes buttons colored --&gt;
-          &lt;a class="btn btn-primary" href="..." &gt; ... &lt;/a&gt;
-          &lt;a class="btn btn-red" href="..." &gt; ... &lt;/a&gt;
-          &lt;a class="btn btn-green" href="..." &gt; ... &lt;/a&gt;
+  .code-sample
+    pre.prettyprint.lang-html.
+      &lt;!-- .btn class makes an anchor looks like a button --&gt;
+      &lt;a class="btn" href="..." &gt; ... &lt;/a&gt;
 
-          &lt;!-- .btn-primary makes buttons on different sizes --&gt;
-          &lt;a class="btn btn-medium" href="..." &gt; ... &lt;/a&gt;
-          &lt;a class="btn btn-small" href="..." &gt; ... &lt;/a&gt;
+      &lt;!-- default buttons and input[type="button"] --&gt;
+      &lt;button type="button" class="btn" &gt; ... &lt;/button&gt;
+      &lt;input type="button" class="btn" value="..." /&gt;
 
-          &lt;!-- .btn-primary makes disabled buttons --&gt;
-          &lt;a class="btn disabled" href="..." &gt; ... &lt;/a&gt;
-          &lt;button class="btn" disabled &gt; ... &lt;/button&gt;
+      &lt;!-- .btn-primary makes buttons colored --&gt;
+      &lt;a class="btn btn-primary" href="..." &gt; ... &lt;/a&gt;
+      &lt;a class="btn btn-red" href="..." &gt; ... &lt;/a&gt;
+      &lt;a class="btn btn-green" href="..." &gt; ... &lt;/a&gt;
 
-      br
+      &lt;!-- .btn-primary makes buttons on different sizes --&gt;
+      &lt;a class="btn btn-medium" href="..." &gt; ... &lt;/a&gt;
+      &lt;a class="btn btn-small" href="..." &gt; ... &lt;/a&gt;
+
+      &lt;!-- .btn-primary makes disabled buttons --&gt;
+      &lt;a class="btn disabled" href="..." &gt; ... &lt;/a&gt;
+      &lt;button class="btn" disabled &gt; ... &lt;/button&gt;
+
+  br
+
+  h5 Available classes
 
   .table-responsive
     table

@@ -2,11 +2,11 @@
 #sample-typography
   h4 Typography
 
-  p.align-justify.
+  p.lead.
     All default HTML tags are supported, including but not limited
     to the below few examples.
 
-  p.align-justify.
+  p.
     We are using <b>Lato (300)</b> as general font-family and <b>Open Sans (400)</b> as
     title's font-family. The easiest way to make these fonts available to your page is
     loading them from <a href="https://fonts.google.com/" target="_blank" >Google Fonts</a>, such as:
@@ -17,66 +17,67 @@
 
   br
 
-  .grid
-    .row
-      .col.sm-12.md-6
-        each i in [1,2,3,4,5,6]
-          #{'h'+i}= 'Header ' + i
+  .row
+    .col.sm-12.md-6
+      each i in [1,2,3,4,5,6]
+        #{'h'+i}= 'Header ' + i
 
-        p.
-          This is an paragraph. There are <strong >bold</strong>, <i >italic</i>, 
-          and <u >underlined</u> texts, also, <a href="#!">anchors</a>.
+    .col.sm-12.md-6
+      br
+      br
 
-        .row
-          .col.sm-12.md-6
-            p 
-              b Ordered lists:
+      p.
+        This is an paragraph. There are <strong >bold</strong>, <i >italic</i>, 
+        and <u >underlined</u> texts, also, <a href="#!">anchors</a>.
 
-            ol
-              li First item
-              li Second item
-                ol
-                  li Nested first
-                  li Nested second ...
-              li Third item
+      .row
+        .col.sm-12.md-6
+          p 
+            b Ordered lists:
 
-          .col.sm-12.md-6
-            p 
-              b Unordered lists:
+          ol
+            li First item
+            li Second item
+              ol
+                li Nested first
+                li Nested second ...
+            li Third item
 
-            ul
-              li First item
-              li Second item
-                ul
-                  li Nested first
-                  li Nested second ...
-              li Third item
+        .col.sm-12.md-6
+          p 
+            b Unordered lists:
 
-      .col.sm-12.md-6
-        br 
-        br
+          ul
+            li First item
+            li Second item
+              ul
+                li Nested first
+                li Nested second ...
+            li Third item
 
-        .code-sample
-          pre.prettyprint.lang-html.
-            &lt;!-- Head lines --&gt;
-            &lt;h1 &gt; ... &lt;/h1&gt;
-            &lt;h2 &gt; ... &lt;/h2&gt;
-            &lt;h3 &gt; ... &lt;/h3&gt;
-            &lt;h4 &gt; ... &lt;/h4&gt;
-            &lt;h5 &gt; ... &lt;/h5&gt;
-            &lt;h6 &gt; ... &lt;/h6&gt;
+  h5 Code example
 
-            &lt;!-- Other --&gt;
-            &lt;p &gt; ... &lt;/p&gt;
-            &lt;b &gt; ... &lt;/b&gt;
-            &lt;i &gt; ... &lt;/i&gt;
-            &lt;u &gt; ... &lt;/u&gt;
-            &lt;a href="." &gt; ... &lt;/a&gt;
+  .code-sample
+    pre.prettyprint.lang-html.
+      &lt;!-- Head lines --&gt;
+      &lt;h1 &gt; ... &lt;/h1&gt;
+      &lt;h2 &gt; ... &lt;/h2&gt;
+      &lt;h3 &gt; ... &lt;/h3&gt;
+      &lt;h4 &gt; ... &lt;/h4&gt;
+      &lt;h5 &gt; ... &lt;/h5&gt;
+      &lt;h6 &gt; ... &lt;/h6&gt;
 
-            &lt;!-- Lists --&gt;
-            &lt;!-- replace OL by UL or DL for different list types --&gt;
-            &lt;ol &gt;
-              &lt;li &gt; ... &lt;/li&gt;
-              &lt;li &gt; ... &lt;/li&gt;
-              &lt;li &gt; ... &lt;/li&gt;
-            &lt;/ol&gt;
+      &lt;!-- Other --&gt;
+      &lt;p &gt; ... &lt;/p&gt;
+      &lt;b &gt; ... &lt;/b&gt;
+      &lt;i &gt; ... &lt;/i&gt;
+      &lt;u &gt; ... &lt;/u&gt;
+      &lt;a href="." &gt; ... &lt;/a&gt;
+
+      &lt;!-- Lists --&gt;
+      &lt;!-- replace OL by UL or DL for different list types --&gt;
+      &lt;ol &gt;
+        &lt;li &gt; ... &lt;/li&gt;
+        &lt;li &gt; ... &lt;/li&gt;
+        &lt;li &gt; ... &lt;/li&gt;
+      &lt;/ol&gt;

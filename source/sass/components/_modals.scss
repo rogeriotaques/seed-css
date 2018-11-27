@@ -12,9 +12,15 @@
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 1000;
 
+  &.delay-1s {
+    @include animation-delay(400ms);
+  }
+
   & > &-window {
     @include rem(width, 500px);
     @include rem(margin-left, -250px);
+    @include animation-delay(100ms);
+    @include animation-duration(500ms);
     box-shadow: $shadow-default;
     box-sizing: border-box;
     border-radius: $radius;
@@ -24,7 +30,6 @@
     max-height: 90%;
     top: 5%;
     left: 50%;
-    animation-delay: 300ms;
     cursor: default;
   } // > .modal-window
 

@@ -3,7 +3,7 @@
 
   .row  
     .col.md-5
-      p.
+      p.lead.
         A modal window is an essential component for providing the best user experience, it's the easiest
         way for requesting imediate feedback from your visitors.
 
@@ -35,22 +35,6 @@
           &lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
-
-  // Remove .hide to show the modal window
-  #modal.modal.hide
-    // Use .bounceInDown to enter and .bounceOutUp to leave
-    .modal-window
-      .modal-header
-        h3.modal-title Hello world 
-        a(href="#", role="modal-dismiss").dismiss
-          span X
-      .modal-body    
-        p This's the body of the overlay modal window.
-        p You can clique on the "X" at the top-right, anywhere in the dark background, or even press the ESC key to dismiss this window.
-        p Also, always a modal is open or close, <code >modal.opened</code> and <code >modal.closed</code> events are dispatched respectively.
-      .modal-footer
-        .align-right
-          button(type="button").btn.small.secondary OK! Got it.
 
   .row 
     .col.md-5 

@@ -56,6 +56,22 @@ html(lang="en")
       include sections/_donate
       include sections/_footer
 
+    // Remove .hide to show the modal window
+    #modal.modal.hide
+      // Use .bounceInDown to enter and .bounceOutUp to leave
+      .modal-window
+        .modal-header
+          h3.modal-title Hello world 
+          a(href="#", role="modal-dismiss").dismiss
+            span X
+        .modal-body    
+          p This's the body of the overlay modal window.
+          p You can clique on the "X" at the top-right, anywhere in the dark background, or even press the ESC key to dismiss this window.
+          p Also, always a modal is open or close, <code >modal.opened</code> and <code >modal.closed</code> events are dispatched respectively.
+        .modal-footer
+          .align-right
+            button(type="button").btn.small.secondary OK! Got it.
+
     script(src="//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js")
     script(src="//code.jquery.com/jquery-2.2.3.min.js", integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=", crossorigin="anonymous")
     script(src="assets/js/bundle.js?v={%version%}")
