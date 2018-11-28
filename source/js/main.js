@@ -98,6 +98,7 @@
 
     SeedCSS.fileUpload(); // Init the fileUpload helper
     SeedCSS.textArea(); // Init the textArea helper
+    SeedCSS.scroll(); // Init the scroll helper
 
     if (modal) {
       modal.addEventListener('modal.opened', () => {
@@ -128,6 +129,10 @@
 
       canvas.addEventListener('canvas.closed', () => {
         console.log('Side Menu Closed');
+      });
+
+      document.addEventListener('scroll.complete', () => {
+        console.log('Finished smooth scrolling');
       });
     }
   }

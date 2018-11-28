@@ -30,8 +30,8 @@ nav {
           background-color: $grey;
         } // a:hover
 
-        &:active,
-        &:focus,
+        // &:active,
+        // &:focus,
         &.active {
           background-color: $secondary;
           color: $white;
@@ -78,8 +78,8 @@ nav {
           background-color: darken($grey-dark, 10%);
         }
 
-        &:active,
-        &:focus,
+        // &:active,
+        // &:focus,
         &.active {
           background-color: $primary;
           color: $white;
@@ -107,8 +107,8 @@ nav {
           background-color: $white;
         }
 
-        &:active,
-        &:focus,
+        // &:active,
+        // &:focus,
         &.active {
           color: $primary;
           background-color: $grey-medium;
@@ -136,8 +136,8 @@ nav {
           background-color: darken($primary, 10%);
         } // :hover
 
-        &:active,
-        &:focus,
+        // &:active,
+        // &:focus,
         &.active {
           color: $white;
           background-color: darken($primary, 10%);
@@ -161,8 +161,8 @@ nav {
           background-color: darken($secondary, 10%);
         } // :hover
 
-        &:active,
-        &:focus,
+        // &:active,
+        // &:focus,
         &.active {
           color: $white;
           background-color: darken($secondary, 10%);
@@ -186,8 +186,8 @@ nav {
           background-color: darken($red, 10%);
         } // :hover
 
-        &:active,
-        &:focus,
+        // &:active,
+        // &:focus,
         &.active {
           color: $white;
           background-color: darken($red, 10%);
@@ -211,8 +211,8 @@ nav {
           background-color: darken($orange, 10%);
         } // :hover
 
-        &:active,
-        &:focus,
+        // &:active,
+        // &:focus,
         &.active {
           color: $white;
           background-color: darken($orange, 10%);
@@ -236,8 +236,8 @@ nav {
           background-color: darken($green, 10%);
         } // :hover
 
-        &:active,
-        &:focus,
+        // &:active,
+        // &:focus,
         &.active {
           color: $white;
           background-color: darken($green, 10%);
@@ -261,8 +261,8 @@ nav {
           background-color: darken($purple, 10%);
         } // :hover
 
-        &:active,
-        &:focus,
+        // &:active,
+        // &:focus,
         &.active {
           color: $white;
           background-color: darken($purple, 10%);
