@@ -78,7 +78,7 @@ const seedModal = (options) => {
         options.classAnimation.close,
         options.classAnimation.open
       );
-    }, 300);
+    }, 600);
   }; // fnClose
 
   fnOpen = (modalObject) => {

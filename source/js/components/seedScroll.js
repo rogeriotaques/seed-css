@@ -18,11 +18,11 @@ const seedScroll = function(options) {
   const defaultOptions = {
     spyScrollContainer: 'nav',
     spyScroll: 'a.smooth',
-    revealWhenVisible: 'reveal'
+    revealWhenVisible: '.reveal'
   }; // defaultOptions
 
   const fnUpdateActiveTrigger = (elem) => {
-    triggers.forEach((el, i) => {
+    triggers.forEach((el) => {
       el.classList.remove('active');
     });
 
@@ -50,6 +50,10 @@ const seedScroll = function(options) {
     if (triggers) {
       const firstElementOffset = fnGetOffset(triggers[0]);
 
+      if (window.scrollY < firstElementOffset.top) {
+        fnUpdateActiveTrigger();
+      }
+
       triggers.forEach((el, i) => {
         const targetID =
           el.getAttribute('href') || el.getAttribute('data-target');
@@ -62,10 +66,6 @@ const seedScroll = function(options) {
           return;
         }
       });
-
-      if (window.scrollY < firstElementOffset.top) {
-        fnUpdateActiveTrigger();
-      }
     }
 
     if (typeof window.oldOnscroll === 'function') {

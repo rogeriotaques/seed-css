@@ -255,3 +255,13 @@
   -o-animation-iteration-count: $count;
   animation-iteration-count: $count;
 }
+
+@mixin blur($noise: 1px) {
+  /* Prefixed CSS3 blur filters */
+  -webkit-filter: blur($noise);
+  -moz-filter: blur($noise);
+  -o-filter: blur($noise);
+  -ms-filter: blur($noise);
+  filter: url(#blur); /* Firefox needs SVG */
+  filter: blur($noise); /* Someday, sigh ... */
+}
