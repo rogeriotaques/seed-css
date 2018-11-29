@@ -1,0 +1,38 @@
+#component-progress
+  h4 Progress bars
+
+  p.
+    Progress bar is an important elements for UX. If you use it 
+    accordingly, it's gonna pass the imediate response to the user.
+
+  .row
+    .col.md-5
+      p Fixed progress 
+
+      .align-center
+        .progress-bar
+          .bar(style="width: 60%")
+          .label 60%
+
+      br
+
+      p Undefined progress 
+      .align-center
+        .progress-bar.undefined
+          .bar
+
+    .col.md-6.md-offset-1
+      h5 Code example
+      
+      .code-sample
+        pre.prettyprint.lang-html.
+          &lt;!-- Fixed progress --&gt;
+          &lt;div class="progress-bar" &gt;
+            &lt;div class="bar" &gt;&lt;/div&gt;
+            &lt;label &gt;60%&lt;/label&gt;
+          &lt;/div&gt;
+
+          &lt;!-- Undefined progress --&gt;
+          &lt;div class="progress-bar undefined" &gt;
+            &lt;div class="bar" &gt;&lt;/div&gt;
+          &lt;/div&gt;

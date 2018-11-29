@@ -1,0 +1,38 @@
+/* 
+ * Seed CSS - Badges
+ * @version 2.0.0
+ */
+
+.badge {
+  @include rem(font-size, 13px);
+  @include rem(border-radius, $border * 50);
+  position: relative;
+  background-color: $grey-light;
+  color: $grey-dark;
+  padding: ($padding / 2) ($padding);
+  margin: 0 ($margin / 2);
+  box-sizing: border-box;
+  box-shadow: $shadow-default;
+  border: 0;
+  cursor: default;
+
+  &.info {
+    color: $white;
+    background-color: $primary;
+  } // .info
+
+  &.success {
+    color: $white;
+    background-color: $green;
+  } // .success
+
+  &.warning {
+    color: $white;
+    background-color: $orange;
+  } // .warning
+
+  &.danger {
+    color: $white;
+    background-color: $red;
+  } // .danger
+} // .badge

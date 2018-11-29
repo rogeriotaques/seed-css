@@ -1,31 +1,39 @@
-var gulp = require('gulp');
-var runSequence = require('run-sequence');
-var sync = require('browser-sync');
-var sass = require('gulp-sass');
-var jade = require('gulp-jade');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var beautify = require('gulp-cssbeautify');
-var minify = require('gulp-clean-css');
-var gulpif = require('gulp-if');
-var replace = require('gulp-replace');
-var del = require('del');
-var header = require('gulp-header');
-var util = require('minimist')(process.argv);
-var fs = require('fs');
-var config;
-var getBuildVersion;
-var updatePackVersion;
+const gulp = require('gulp');
+const sync = require('browser-sync');
+const sass = require('gulp-sass');
+const concat = require('gulp-concat');
+const beautify = require('gulp-cssbeautify');
+const minify = require('gulp-clean-css');
+const uglify = require('gulp-uglify');
+const gulpif = require('gulp-if');
+const pug = require('gulp-pug');
+const replace = require('gulp-replace');
+const header = require('gulp-header');
+const babel = require('gulp-babel');
+const sourcemaps = require('gulp-sourcemaps');
+const del = require('del');
+const fs = require('fs');
+const util = require('minimist')(process.argv);
 
 // @use npm run dist -- --[major|minor]
-var runFlag =
-  util.major !== undefined
-    ? 'major'
-    : util.minor !== undefined
-      ? 'minor'
-      : 'patch';
+let runFlag = 'patch';
 
-config = {
+// @use npm run dist -- --[development|staging|production]
+let envFlag = 'development';
+
+if (util.major !== undefined) {
+  runFlag = 'major';
+} else if (util.minor !== undefined) {
+  runFlag = 'minor';
+}
+
+if (util.staging !== undefined) {
+  envFlag = 'staging';
+} else if (util.production !== undefined) {
+  envFlag = 'production';
+}
+
+const config = {
   fileName: 'seed',
   path: {
     source: 'source/',
@@ -34,8 +42,8 @@ config = {
   }
 };
 
-updatePackVersion = function(pkg) {
-  var v = pkg.version.split('.');
+const updatePackVersion = (pkg) => {
+  const v = pkg.version.split('.');
 
   switch (runFlag) {
     case 'major':
@@ -68,171 +76,265 @@ updatePackVersion = function(pkg) {
   return pkg;
 };
 
-getBuildVersion = function() {
-  var date = new Date(),
-    day = date.getDate(),
-    month = date.getMonth() + 1,
-    year = date.getFullYear(),
-    hour = date.getHours(),
-    minute = date.getMinutes();
+/**
+ * Reset the build folder for development.
+ */
+gulp.task('clean', () => del([config.path.build]));
 
-  day = ('00' + day).substr(-2);
-  month = ('00' + month).substr(-2);
-  hour = ('00' + hour).substr(-2);
-  minute = ('00' + minute).substr(-2);
+/**
+ * Reset the distribution pack.
+ */
+gulp.task('clean:dist', () => del([config.path.build, config.path.dist]));
 
-  return '' + year + month + day + hour + minute;
-};
-
-gulp.task('clean', function() {
-  return del([config.path.build]);
-});
-
-gulp.task('clean:dist', function() {
-  return del([config.path.build, config.path.dist]);
-});
-
-gulp.task('build:images', function() {
-  return gulp
+/**
+ * Copies the images to the dist folder.
+ */
+gulp.task('build:website-images', () =>
+  gulp
     .src(config.path.source + 'images/**/*')
-    .pipe(gulp.dest(config.path.build + 'assets/images'));
-});
+    .pipe(gulp.dest(config.path.build + 'assets/images'))
+);
 
-gulp.task('build:style', function() {
-  return gulp
+/**
+ * Builds the sample page styling
+ */
+gulp.task('build:website-style', () =>
+  gulp
     .src(config.path.source + 'sass/sample.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(beautify({ indent: '  ', autosemicolon: true }))
     .pipe(concat('style.css'))
+    .pipe(gulpif(envFlag === 'production', minify()))
     .pipe(gulp.dest(config.path.build + 'assets/css'))
-    .pipe(sync.reload({ stream: true }));
-});
+    .pipe(sync.reload({ stream: true }))
+);
 
-gulp.task('build:sass', function() {
-  return gulp
+/**
+ * Builds the product styling
+ */
+gulp.task('build:sass', (cb) => {
+  gulp
     .src([
-      config.path.source + 'sass/normalize.scss',
-      config.path.source + 'sass/main.scss'
+      `${config.path.source}sass/includes/_normalize.scss`,
+      `${config.path.source}sass/main.scss`
     ])
     .pipe(sass().on('error', sass.logError))
     .pipe(beautify({ indent: '  ', autosemicolon: true }))
-    .pipe(concat(config.fileName + '.css'))
-    .pipe(gulp.dest(config.path.build + 'assets/css'))
+    .pipe(gulpif(envFlag === 'production', minify()))
+    .pipe(concat(`${config.fileName}.css`))
+    .pipe(gulp.dest(`${config.path.build}assets/css`))
     .pipe(sync.reload({ stream: true }));
+
+  cb();
 });
 
-gulp.task('build:jade', function() {
-  var pkg = require('./package.json');
+/**
+ * Builds the HTML pages
+ */
+gulp.task('build:website', (cb) => {
+  const pkg = require('./package.json');
 
-  return gulp
-    .src(config.path.source + 'jade/*.jade')
+  gulp
+    .src(config.path.source + 'pug/*.pug')
     .pipe(
-      jade({ pretty: true }).on('error', function(err) {
-        console.log(err);
+      pug({ pretty: true }).on('error', function(err) {
+        console.log('#### PUG ERROR ####', err, '#### #### ####');
         this.emit('end');
       })
     )
     .pipe(replace(/\{\%version\%\}/g, 'v' + pkg.version))
     .pipe(replace(/\{\%year\%\}/g, new Date().getFullYear()))
     .pipe(gulp.dest(config.path.build));
+
+  cb();
 });
 
-gulp.task('build:jade-watch', ['build:jade'], sync.reload);
+/**
+ * Makes easier to watch pug files
+ */
+gulp.task(
+  'build:pug-watch',
+  gulp.series('build:website', (cb) => {
+    sync.reload();
+    cb();
+  })
+);
 
-gulp.task('build:javascript', function() {
-  // website bundle
+/**
+ * Transpiles the website javascript.
+ */
+gulp.task('build:website-js', (cb) => {
+  const babelOptions = { presets: ['@babel/env'] };
+
+  const onUglifyErr = (err) => {
+    console.error('#### ERROR IN build:website-js TASK ####', err.toString());
+  };
+
   gulp
     .src([
       config.path.source + 'js/components/*.js',
       config.path.source + 'js/*.js'
     ])
+    .pipe(gulpif(envFlag === 'production', sourcemaps.init()))
+    .pipe(babel(babelOptions))
+    .pipe(gulpif(envFlag === 'production', uglify().on('error', onUglifyErr)))
     .pipe(concat('bundle.js'))
+    .pipe(gulpif(envFlag === 'production', sourcemaps.write()))
     .pipe(gulp.dest(config.path.build + 'assets/js'))
     .pipe(sync.reload({ stream: true }));
 
-  // dist seed-css.js
+  cb();
+});
+
+/**
+ * Transpiles the javascript source-code.
+ */
+gulp.task('build:javascript', (cb) => {
+  const babelOptions = { presets: ['@babel/env'] };
+
+  const onUglifyErr = (err) => {
+    console.error('#### ERROR IN build:javascript TASK ####', err.toString());
+  };
+
   gulp
     .src([config.path.source + 'js/components/*.js'])
-    .pipe(concat('seed-css.js'))
-    .pipe(gulp.dest(config.path.build + 'assets/js'))
-    .pipe(sync.reload({ stream: true }));
+    .pipe(gulpif(envFlag === 'production', sourcemaps.init()))
+    .pipe(babel(babelOptions))
+    .pipe(gulpif(envFlag === 'production', uglify().on('error', onUglifyErr)))
+    .pipe(concat('seedcss.js'))
+    .pipe(gulpif(envFlag === 'production', sourcemaps.write()))
+    .pipe(gulp.dest(config.path.build + 'assets/js'));
+  // .pipe(sync.reload({ stream: true }))
 
-  return true;
+  cb();
 });
 
-gulp.task('watch', function(cb) {
-  runSequence(
-    'clean',
-    ['build:style', 'build:sass', 'build:jade', 'build:javascript'],
-    'build:images',
-    cb
-  );
-
-  sync.init({
-    open: false,
-    notify: false,
-    port: 9000,
-    server: {
-      baseDir: './build'
-    }
-  });
-
-  gulp.watch(config.path.source + 'sass/sample.scss', ['build:style']);
-  gulp.watch(config.path.source + 'sass/**/*.scss', ['build:sass']);
-  gulp.watch(config.path.source + 'js/**/*.js', ['build:javascript']);
-  gulp.watch(config.path.source + 'jade/**/*.jade', ['build:jade-watch']);
-  gulp.watch(config.path.source + 'images/**/*', ['build:images']);
-
-  gulp
-    .watch(config.path.build + 'assets/images/**/*')
-    .on('change', sync.reload);
-});
-
+/**
+ * Watches source-code file changes.
+ * For development.
+ */
 gulp.task(
-  'dist:run',
-  ['build:sass', 'build:jade', 'build:javascript'],
-  function() {
-    // get package json
-    var pkg = require('./package.json');
+  'watch',
+  gulp.series(
+    gulp.parallel('build:website-style', 'build:website-js', 'build:website'),
+    'build:website-images',
+    gulp.parallel('build:sass', 'build:javascript'),
+    (cb) => {
+      sync.init({
+        open: false,
+        notify: false,
+        port: 9000,
+        server: {
+          baseDir: './build'
+        }
+      });
 
-    // updates the version
-    pkg = updatePackVersion(pkg);
+      // Watch changes on website styling
+      gulp.watch(
+        config.path.source + 'sass/sample.scss',
+        gulp.series('build:website-style')
+      );
 
-    // prepare files header
-    var comment =
-      '/** \n ' +
-      '* <%= pkg.name %> \n ' +
-      '* <%= pkg.description %> \n ' +
-      '* @author <%= pkg.author %> \n ' +
-      '* @copyright 2016-' +
-      new Date().getFullYear() +
-      ', <%= pkg.author %> \n ' +
-      '* @license <%= pkg.license %> \n ' +
-      '* @version <%= pkg.version %> \n ' +
-      '*/ \n\n ';
+      // Watch changes on website JS
+      gulp.watch(
+        config.path.source + 'js/**/*.js',
+        gulp.series('build:javascript', 'build:website-js')
+      );
 
-    return gulp
-      .src([
-        config.path.build + 'assets/css/seed.css',
-        config.path.build + 'assets/js/seed-css.js'
-      ])
-      .pipe(
-        gulpif(
-          /\.js$/,
-          uglify().on('error', function(o) {
-            console.log(o);
-          })
-        )
-      )
-      .pipe(gulpif(/\.css$/, minify()))
-      .pipe(gulpif(/\.(js|css)$/, header(comment, { pkg: pkg })))
-      .pipe(gulp.dest(config.path.dist));
-  }
+      // Watch changes on Seed styling
+      gulp.watch(
+        config.path.source + 'sass/**/*.scss',
+        gulp.series('build:sass')
+      );
+
+      // Watch changes on the website page
+      gulp.watch(
+        config.path.source + 'pug/**/*.pug',
+        gulp.series('build:pug-watch')
+      );
+
+      // Watch changes on any new image (assets)
+      gulp.watch(
+        config.path.source + 'images/**/*',
+        gulp.series('build:website-images')
+      );
+
+      // Reloads the browser is any image is placed on assets
+      gulp
+        .watch(config.path.build + 'assets/images/**/*')
+        .on('change', sync.reload);
+
+      cb();
+    }
+  )
 );
 
-gulp.task('dist', function(cb) {
-  runSequence('clean:dist', 'dist:run', cb);
-  return true;
+gulp.task('dist:run', (cb) => {
+  // updates the version
+  const pkg = updatePackVersion(require('./package.json'));
+
+  // prepare files header
+  const comment =
+    '/** \n ' +
+    '* Seed CSS (<%= pkg.name %>) \n ' +
+    '* <%= pkg.description %> \n ' +
+    '* @author <%= pkg.author %> \n ' +
+    '* @copyright 2016-' +
+    new Date().getFullYear() +
+    ', <%= pkg.author %> \n ' +
+    '* @license <%= pkg.license %> \n ' +
+    '* @version <%= pkg.version %> \n ' +
+    '*/ \n\n ';
+
+  // Copy the SASS source-code to the distribution folder
+  // This will help developers to customize it or only load what they need.
+  gulp
+    .src([
+      `${config.path.source}sass/components/*.scss`,
+      `${config.path.source}sass/includes/*.scss`,
+      `${config.path.source}sass/+(main|essential).scss`
+    ])
+    .pipe(gulp.dest(`${config.path.dist}src/sass`));
+
+  // Copy the Javascript source-code to the distribution folder
+  // This will help developers to customize it or only load what they need.
+  gulp
+    .src(`${config.path.source}js/components/*.js`)
+    .pipe(gulp.dest(`${config.path.dist}src/js`));
+
+  // Buy some time to the script complete writing the files in the disk
+  // before write the distribution header in the files. Think 1.5 seconds to be enough.
+  setTimeout(() => {
+    gulp
+      .src(`${config.path.build}assets/css/seed.css`)
+      .pipe(header(comment, { pkg: pkg }))
+      .pipe(gulp.dest(config.path.dist));
+
+    gulp
+      .src(`${config.path.build}assets/js/seedcss.js`)
+      .pipe(header(comment, { pkg: pkg }))
+      .pipe(gulp.dest(config.path.dist));
+
+    cb();
+  }, 1500);
 });
 
-gulp.task('default', ['watch']);
+/**
+ * Creates the distribution pack.
+ */
+gulp.task(
+  'build',
+  gulp.series(
+    'clean:dist',
+    gulp.parallel(
+      'build:sass',
+      'build:javascript',
+      'build:website',
+      'build:website-style',
+      'build:website-js'
+    ),
+    'dist:run'
+  )
+);
+
+gulp.task('default', gulp.series('clean', 'watch'));
