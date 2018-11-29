@@ -18,18 +18,17 @@
 
   & > &-window {
     @include rem(width, 500px);
-    @include rem(margin-left, -250px);
     @include animation-delay(100ms);
     @include animation-duration(500ms);
+    top: 5%;
+    max-width: 90%;
+    max-height: 90%;
     box-shadow: $shadow-default;
     box-sizing: border-box;
     border-radius: $radius;
     background-color: #fff;
-    position: absolute;
-    max-width: 90%;
-    max-height: 90%;
-    top: 5%;
-    left: 50%;
+    position: relative;
+    margin: 0 auto;
     cursor: default;
   } // > .modal-window
 
