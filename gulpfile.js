@@ -193,7 +193,7 @@ gulp.task('build:javascript', (cb) => {
   const babelOptions = { presets: ['@babel/env'] };
 
   const onUglifyErr = (err) => {
-    console.error('#### ERROR IN build:website-js TASK ####', err.toString());
+    console.error('#### ERROR IN build:javascript TASK ####', err.toString());
   };
 
   gulp
@@ -203,8 +203,8 @@ gulp.task('build:javascript', (cb) => {
     .pipe(gulpif(envFlag === 'production', uglify().on('error', onUglifyErr)))
     .pipe(concat('seedcss.js'))
     .pipe(gulpif(envFlag === 'production', sourcemaps.write()))
-    .pipe(gulp.dest(config.path.build + 'assets/js'))
-    .pipe(sync.reload({ stream: true }));
+    .pipe(gulp.dest(config.path.build + 'assets/js'));
+  // .pipe(sync.reload({ stream: true }))
 
   cb();
 });
@@ -237,20 +237,14 @@ gulp.task(
 
       // Watch changes on website JS
       gulp.watch(
-        config.path.source + 'js/*.js',
-        gulp.series('build:website-js')
+        config.path.source + 'js/**/*.js',
+        gulp.series('build:javascript', 'build:website-js')
       );
 
       // Watch changes on Seed styling
       gulp.watch(
         config.path.source + 'sass/**/*.scss',
         gulp.series('build:sass')
-      );
-
-      // Watch changes on Seed JS helpers
-      gulp.watch(
-        config.path.source + 'js/components/*.js',
-        gulp.series('build:javascript')
       );
 
       // Watch changes on the website page
