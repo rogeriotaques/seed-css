@@ -7,6 +7,7 @@ nav {
   background-color: $grey-medium;
   padding: 0;
   margin: 0;
+  min-height: $height;
 
   > ul {
     padding: 0;
@@ -29,8 +30,8 @@ nav {
           background-color: $grey;
         } // a:hover
 
-        &:active,
-        &:focus,
+        // &:active,
+        // &:focus,
         &.active {
           background-color: $secondary;
           color: $white;
@@ -77,8 +78,8 @@ nav {
           background-color: darken($grey-dark, 10%);
         }
 
-        &:active,
-        &:focus,
+        // &:active,
+        // &:focus,
         &.active {
           background-color: $primary;
           color: $white;
@@ -106,8 +107,8 @@ nav {
           background-color: $white;
         }
 
-        &:active,
-        &:focus,
+        // &:active,
+        // &:focus,
         &.active {
           color: $primary;
           background-color: $grey-medium;
@@ -124,15 +125,164 @@ nav {
     }
   } // .transparent
 
-  &.stiky {
+  &.primary {
+    background-color: $primary;
+
+    > ul {
+      a {
+        color: $white;
+
+        &:hover {
+          background-color: darken($primary, 10%);
+        } // :hover
+
+        // &:active,
+        // &:focus,
+        &.active {
+          color: $white;
+          background-color: darken($primary, 10%);
+
+          &:hover {
+            background-color: darken($primary, 10%);
+          }
+        } // :active, :focus, .active
+      }
+    }
+  } // .primary
+
+  &.secondary {
+    background-color: $secondary;
+
+    > ul {
+      a {
+        color: $white;
+
+        &:hover {
+          background-color: darken($secondary, 10%);
+        } // :hover
+
+        // &:active,
+        // &:focus,
+        &.active {
+          color: $white;
+          background-color: darken($secondary, 10%);
+
+          &:hover {
+            background-color: darken($secondary, 10%);
+          }
+        } // :active, :focus, .active
+      }
+    }
+  } // .secondary
+
+  &.red {
+    background-color: $red;
+
+    > ul {
+      a {
+        color: $white;
+
+        &:hover {
+          background-color: darken($red, 10%);
+        } // :hover
+
+        // &:active,
+        // &:focus,
+        &.active {
+          color: $white;
+          background-color: darken($red, 10%);
+
+          &:hover {
+            background-color: darken($red, 10%);
+          }
+        } // :active, :focus, .active
+      }
+    }
+  } // .red
+
+  &.orange {
+    background-color: $orange;
+
+    > ul {
+      a {
+        color: $white;
+
+        &:hover {
+          background-color: darken($orange, 10%);
+        } // :hover
+
+        // &:active,
+        // &:focus,
+        &.active {
+          color: $white;
+          background-color: darken($orange, 10%);
+
+          &:hover {
+            background-color: darken($orange, 10%);
+          }
+        } // :active, :focus, .active
+      }
+    }
+  } // .orange
+
+  &.green {
+    background-color: $green;
+
+    > ul {
+      a {
+        color: $white;
+
+        &:hover {
+          background-color: darken($green, 10%);
+        } // :hover
+
+        // &:active,
+        // &:focus,
+        &.active {
+          color: $white;
+          background-color: darken($green, 10%);
+
+          &:hover {
+            background-color: darken($green, 10%);
+          }
+        } // :active, :focus, .active
+      }
+    }
+  } // .green
+
+  &.purple {
+    background-color: $purple;
+
+    > ul {
+      a {
+        color: $white;
+
+        &:hover {
+          background-color: darken($purple, 10%);
+        } // :hover
+
+        // &:active,
+        // &:focus,
+        &.active {
+          color: $white;
+          background-color: darken($purple, 10%);
+
+          &:hover {
+            background-color: darken($purple, 10%);
+          }
+        } // :active, :focus, .active
+      }
+    }
+  } // .purple
+
+  &.sticky {
     // Stiky only works when navigation is in the scrollable element
     // And it's only supported from Edge 15+. IE does not support.
-    > ul {
-      position: -webkit-sticky; /* Safari */
-      position: sticky;
-      top: 0;
-    }
-  } // .stiky
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  } // .sticky
 } // nav
 
 @media #{$small-and-up} {

@@ -3,6 +3,8 @@
  * @version 2.0.0
  */
 
+$color-change-rate: 5%;
+
 .btn {
   @include transition(all, 0.25s, ease-in-out);
   @include rem(min-width, 170px);
@@ -18,7 +20,7 @@
   color: $grey-dark;
   border: {
     radius: $border * 5;
-    width: $border * 2;
+    width: $border;
     color: $grey-dark;
     style: solid;
   }
@@ -82,6 +84,36 @@
       &:not(.link) {
         box-shadow: $shadow-default;
         background-color: white;
+
+        &.primary {
+          background-color: darken($primary, $color-change-rate) !important;
+          border-color: darken($primary, $color-change-rate);
+        }
+
+        &.secondary {
+          background-color: darken($secondary, $color-change-rate) !important;
+          border-color: darken($secondary, $color-change-rate);
+        }
+
+        &.red {
+          background-color: darken($red, $color-change-rate) !important;
+          border-color: darken($red, $color-change-rate);
+        }
+
+        &.orange {
+          background-color: darken($orange, $color-change-rate) !important;
+          border-color: darken($orange, $color-change-rate);
+        }
+
+        &.green {
+          background-color: darken($green, $color-change-rate) !important;
+          border-color: darken($green, $color-change-rate);
+        }
+
+        &.purple {
+          background-color: darken($purple, $color-change-rate) !important;
+          border-color: darken($purple, $color-change-rate);
+        }
       }
 
       &.link {

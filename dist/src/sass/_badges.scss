@@ -14,6 +14,7 @@
   box-sizing: border-box;
   box-shadow: $shadow-default;
   border: 0;
+  cursor: default;
 
   &.info {
     color: $white;

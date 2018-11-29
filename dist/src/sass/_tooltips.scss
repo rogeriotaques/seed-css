@@ -13,10 +13,12 @@
 
 .with-tooltip {
   position: relative;
+  cursor: default;
 
   &::before {
     @extend .tooltip-transition;
     content: '';
+    cursor: default;
     position: absolute;
     top: -6px;
     left: 50%;
@@ -34,6 +36,7 @@
     @include rem(font-size, 13px);
     @include rem(line-height, 16px);
     content: attr(tooltip);
+    cursor: default;
     position: absolute;
     left: 50%;
     top: -6px;

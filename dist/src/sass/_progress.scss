@@ -5,13 +5,14 @@
 
 @include keyframes(progressRunning) {
   0% {
-    margin-left: -100%;
+    margin-left: -150%;
   }
+  25%,
   50% {
-    margin-left: 25%;
+    margin-left: 0%;
   }
   100% {
-    margin-left: 100%;
+    margin-left: 150%;
   }
 } // progressRunning
 
@@ -43,8 +44,8 @@
 
   &.undefined {
     & > .bar {
-      width: 50% !important;
-      @include animation(progressRunning, 1.5s);
+      width: 150% !important;
+      @include animation(progressRunning, 1.5s, linear);
       -webkit-animation-iteration-count: infinite;
       -moz-animation-iteration-count: infinite;
       -ms-animation-iteration-count: infinite;
