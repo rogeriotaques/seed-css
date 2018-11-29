@@ -1,0 +1,142 @@
+#component-buttons
+  h4 Buttons
+
+  br
+
+  .row 
+    .col.md-5
+      p.lead.
+        Buttons can be created with <code>seed-css</code> by simply adding the class <code >.btn</code> 
+        to any <code >&lt;a/&gt;</code> or  <code >&lt;button/&gt;</code> element. Adding the class 
+        <code >.btn-primary</code> it will become a primary button. 
+ 
+    .col.md-5.md-offset-1.align-center
+      a.btn(href="#!") a.btn
+      
+      br.hide-on-medium-and-up
+
+      button.btn(type="button") button.btn
+      
+      br.hide-on-medium-and-up
+
+      input.btn(type="button", value="input.btn")
+
+  h5 Playing with colors
+
+  .row  
+    .col.md-8.align-center 
+      .buttons
+
+        h6 Colored (.btn.*color*)
+
+        a.btn.primary(href="#!") .btn.primary
+        
+        br.hide-on-medium-and-up
+
+        a.btn.secondary(href="#!") .btn.secondary
+        
+        br.hide-on-medium-and-up
+
+        a.btn.red(href="#!") .btn.red 
+        
+        br.hide-on-medium-and-up
+        
+        br 
+
+        a.btn.orange(href="#!") .btn.orange
+        
+        br.hide-on-medium-and-up
+
+        a.btn.green(href="#!") .btn.green
+        
+        br.hide-on-medium-and-up
+
+        a.btn.purple(href="#!") .btn.purple
+
+    .col.md-4 
+        h6.align-center Link style (.btn.link)
+        
+        .align-center
+          a.btn.link(href="#!") .btn.link
+
+  br 
+
+  .row 
+    .col.md-6.align-center 
+      h5 Playing with states
+
+      h6 Disabled (.disabled) or <code>disabled</code> property
+      button.btn(type="button", disabled) .btn.disabled
+
+    .col.md-6.align-center 
+      h5 Playing with sizes
+
+      a.btn.small(href="#!") .btn.small
+      a.btn.medium(href="#!") .btn.medium
+
+  br
+
+  h5 Code example
+
+  .code-sample
+    pre.prettyprint.lang-html.
+      &lt;!-- .btn class makes an anchor looks like a button --&gt;
+      &lt;a class="btn" href="..." &gt; ... &lt;/a&gt;
+
+      &lt;!-- default buttons and input[type="button"] --&gt;
+      &lt;button type="button" class="btn" &gt; ... &lt;/button&gt;
+      &lt;input type="button" class="btn" value="..." /&gt;
+
+      &lt;!-- .btn-primary makes buttons colored --&gt;
+      &lt;a class="btn btn-primary" href="..." &gt; ... &lt;/a&gt;
+      &lt;a class="btn btn-red" href="..." &gt; ... &lt;/a&gt;
+      &lt;a class="btn btn-green" href="..." &gt; ... &lt;/a&gt;
+
+      &lt;!-- .btn-primary makes buttons on different sizes --&gt;
+      &lt;a class="btn btn-medium" href="..." &gt; ... &lt;/a&gt;
+      &lt;a class="btn btn-small" href="..." &gt; ... &lt;/a&gt;
+
+      &lt;!-- .btn-primary makes disabled buttons --&gt;
+      &lt;a class="btn disabled" href="..." &gt; ... &lt;/a&gt;
+      &lt;button class="btn" disabled &gt; ... &lt;/button&gt;
+
+  br
+
+  h5 Available classes
+
+  .table-responsive
+    table
+      thead
+        tr
+          th Class
+          th Detail
+          th Remarks
+      tbody
+        tr
+          td.nowrap .btn
+          td.nowrap &nbsp;
+          td Makes anchors looks like buttons
+        tr
+          td.nowrap .primary
+          td.nowrap &nbsp;
+          td Defines a 'primary' (blue) colored button
+        tr
+          td.nowrap .secondary
+          td.nowrap &nbsp;
+          td Defines a 'secondary' (soft blue) colored button
+        tr
+          td.nowrap .(*color*)
+          td.nowrap &nbsp;
+          td Defines a colored button. Colors can be: <code>red</code>, <code>orange</code>, <code>green</code> or <code>purple</code>
+        tr
+          td.nowrap .(*size*)
+          td.nowrap &nbsp;
+          td Defines a sized button. Sizes can be: <code>small</code> or <code>medium</code>. Default is <code>big</code>
+        tr
+          td.nowrap .disabled
+          td.nowrap &nbsp;
+          td Defines disabled buttons. Simply setting the <code>disabled</code> property will also make button looks like disabled
+        tr
+          td.nowrap .link
+          td.nowrap &nbsp;
+          td Defines link styled buttons, which means no borders or background colors.

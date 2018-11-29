@@ -1,0 +1,129 @@
+#component-navgation-bar
+  h4 Navigation bar
+
+  p.lead.
+    Navigation bar is a responsive mobile first component and will fit any screen size. When in small screens 
+    you might want to use it in conjunction to the <code>hide</code> classes from <code>utilities</code> in order to 
+    show and hide the hamburguer menu, when needed.
+
+  h5.mt-0 Horizontal navigation bar
+
+  p.
+    By default, navigation bar is horizontal in <code>seed-css</code>. 
+
+  .sample-container.auto-height.px-20 
+    -styles=['default', 'primary', 'secondary', 'red', 'orange', 'green', 'purple', 'dark', 'transparent']
+    -for(i in styles)
+      .col.mb-20
+        h6
+          code= '.' + styles[i]
+
+        nav(class=styles[i])  
+          ul 
+            li 
+              a(href="#").logo 
+                span Logo
+            li 
+              a(href="#") Link 1    
+            li 
+              a(href="#").active Link 2 (Active)
+            li.right 
+              a(href="#") Link 3 (Placed on right)
+
+  br 
+
+  .row 
+    .col.md-5
+      h5.mt-0 Vertical navigation bar
+
+      p.lead.
+        However, you can still define vertical navigation bars depending on your needs. For that, 
+        you just need to add the class <code >.vertical</code> to the navigation bar element.
+
+    .col.md-5.md-offset-1 
+      .sample-container.auto-height.px-20
+        nav.vertical  
+          ul               
+            li 
+              a(href="#").logo 
+                span Logo
+            li 
+              a(href="#") Link 1    
+            li 
+              a(href="#") Link 2    
+            li 
+              a(href="#").active Link 3 (Active)
+
+  h5 Code example
+
+  .code-sample
+    pre.prettyprint.lang-html.
+      &lt;!-- The Navigation bar --&gt;
+      &lt;nav &gt; 
+        &lt;ul &gt; 
+          &lt;li &gt; 
+            &lt;!-- Use .logo class for a specific styling for logos --&gt;
+            &lt;a href="#" class="logo" &gt; ... &lt;/a&gt;
+          &lt;/li&gt;
+
+          &lt;li &gt; 
+            &lt;!-- Use .active class when the item is active in the navbar --&gt;
+            &lt;a href="#" class="active" &gt; ... &lt;/a&gt;
+          &lt;/li&gt;
+
+          &lt;li &gt; 
+            &lt;a href="#" &gt; ... &lt;/a&gt;
+          &lt;/li&gt;
+
+          &lt;!-- Use .right class always you wanna place it on the right side --&gt;
+          &lt;li class="right" &gt; 
+            &lt;a href="#" &gt; ... &lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/nav&gt;
+
+  h5 Available classes
+
+  .table-responsive
+    table
+      thead
+        tr
+          th Class
+          th Remarks
+      tbody
+        tr
+          td.nowrap .vertical
+          td Forces the navigation bar to be vertical.
+        tr
+          td.nowrap .default OR NONE
+          td Sets the <code >default</code> light theme.
+        tr
+          td.nowrap .primary
+          td Sets the <code >primary</code> theme.
+        tr
+          td.nowrap .secondary
+          td Sets the <code >secondary</code> theme.
+        tr
+          td.nowrap .red
+          td Sets the <code >red</code> theme.
+        tr
+          td.nowrap .orange
+          td Sets the <code >orange</code> theme.
+        tr
+          td.nowrap .green
+          td Sets the <code >green</code> theme.
+        tr
+          td.nowrap .purple
+          td Sets the <code >purple</code> theme.
+        tr
+          td.nowrap .dark
+          td Sets the <code >dark</code> theme.
+        tr
+          td.nowrap .transparent
+          td Sets the <code >transparent</code> theme.
+        tr
+          td.nowrap .logo
+          td Creates a special styling for <code >&lt;a /&gt;</code> tags in the navigation bar.
+        tr
+          td.nowrap .right
+          td Places the <code >&lt;li /&gt;</code> tags to the right in the navigatin bar.
