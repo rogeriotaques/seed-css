@@ -1,0 +1,335 @@
+/**
+ * Seed CSS
+ * @version 1.2.4
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @license MIT (https://opensource.org/licenses/MIT)
+ */
+/**
+ * Seed CSS
+ * @version 1.2.4
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @license MIT (https://opensource.org/licenses/MIT)
+ */
+/**
+ * Seed CSS
+ * @version 1.2.4
+ * @author Rogerio Taques (hello@abtz.co)
+ * @see https://github.com/AbtzLabs/seed-css
+ * @license MIT (https://opensource.org/licenses/MIT)
+ */
+@keyframes scroll-down {
+  0%,
+  100% {
+    transform: translateY(-10px);
+  }
+
+  50% {
+    transform: translateY(15px);
+  }
+}
+
+header {
+  background-image: url("../images/css-code.jpeg");
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)), url("../images/css-code.jpeg");
+  background-position: 0 0;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-attachment: fixed;
+  backface-visibility: visible;
+  color: white;
+  width: 100%;
+  width: 100vw;
+  height: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 0;
+  transform-style: preserve-3d;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+header .container {
+  margin: 0 auto;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+header h1,
+  header h2,
+  header h3,
+  header h4,
+  header h5,
+  header h6 {
+  margin: 0;
+  font-weight: bold;
+}
+
+header p {
+  color: #ccc;
+}
+
+header #release {
+  margin: 0 0 0 10px;
+  padding: 5px 10px;
+  border: thin dotted #fff;
+  border-radius: 3px;
+  font-size: 16px;
+  display: inline-block;
+  line-height: 20px;
+  vertical-align: middle;
+}
+
+header .cta {
+  padding: 50px 0;
+}
+
+header .scroll-down-for-more {
+  display: block;
+  font-size: 4rem;
+  animation: scroll-down 1.5s ease-in-out infinite;
+}
+
+header .highlight {
+  color: #444;
+  display: inline-block;
+  background: #ccc;
+  padding: 2px 5px;
+}
+
+main {
+  position: relative;
+  background-color: white;
+  z-index: 3;
+  margin-bottom: -10px;
+}
+
+main .highlight i {
+  font-size: 8rem;
+  color: #ccc;
+}
+
+section {
+  position: relative;
+  padding: 20px 0;
+  z-index: 3;
+  background-color: white;
+}
+
+section:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+section#license {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+section#donate p {
+  font-size: 18px;
+  line-height: 25px;
+}
+
+footer {
+  position: relative;
+  padding: 20px 0;
+  text-align: center;
+  background-color: #666;
+  color: white;
+  z-index: 3;
+}
+
+@media only screen and (min-width: 600px) {
+  footer {
+    font-size: 0.75em;
+  }
+}
+
+@media only screen and (min-width: 990px) {
+  footer {
+    font-size: 1em;
+  }
+}
+
+footer > p > a,
+  footer > p > a:visited,
+  footer > p > a:active {
+  color: whitesmoke !important;
+}
+
+footer .btn {
+  margin-top: 30px;
+  border-color: white;
+  color: white;
+  width: 85%;
+  max-width: auto;
+}
+
+footer .btn:hover {
+  color: #666;
+  border-color: white;
+  background-color: white;
+}
+
+@media only screen and (min-width: 600px) {
+  footer .btn {
+    font-size: 0.75em;
+  }
+}
+
+@media only screen and (min-width: 990px) {
+  footer .btn {
+    font-size: 1em;
+  }
+}
+
+footer .seed-select {
+  margin: 0;
+  max-width: 60%;
+  display: inline-block;
+}
+
+@media only screen and (min-width: 600px) {
+  footer .seed-select > select {
+    font-size: 0.65em;
+  }
+}
+
+@media only screen and (min-width: 990px) {
+  footer .seed-select > select {
+    font-size: 1em;
+  }
+}
+
+footer form [type='submit'] {
+  margin: 0;
+  margin-top: 5px;
+  width: 100%;
+  max-width: 30%;
+  display: inline-block;
+  min-width: auto;
+}
+
+.code-sample > .prettyprint {
+  margin: 0 0 20px;
+  padding: 20px;
+  overflow: scroll;
+}
+
+.sample-container {
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  background: #f5f5f5;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.sample-container.auto-height {
+  height: auto;
+}
+
+.grid.sample > .row > .col {
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: #f9f9f9;
+}
+
+.grid.sample > .row > .col:not(:first-child) {
+  outline: 4px solid white;
+}
+
+.grid.sample > .row > .col > span {
+  line-height: 45px;
+  line-height: 4.5rem;
+}
+
+.relpos {
+  position: relative;
+}
+
+.samples-nav {
+  margin: 20px 0 20px 20px;
+  background: #fff;
+}
+
+.samples-nav > h5 {
+  text-align: right;
+}
+
+.samples-nav.stacked {
+  position: absolute;
+}
+
+.samples-nav .list,
+  .samples-nav .item {
+  list-style: none;
+  text-align: right;
+}
+
+.samples-nav .list {
+  border: thin solid #ccc;
+  margin: 0;
+  padding: 0;
+}
+
+.samples-nav .item {
+  line-height: 35px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.samples-nav .item:not(:last-child) {
+  border-bottom: thin solid #ccc;
+}
+
+.samples-nav .item a {
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: block;
+  padding: 0 10px;
+}
+
+.samples-nav .item a.active {
+  background-color: #387cfd;
+  color: #fff;
+}
+
+.color-tag {
+  border: thin solid #ccc;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 30px;
+  margin: 0 auto;
+}
+
+div[id^='sample-']:not(:last-child) {
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: thin dashed #666;
+}
+
+.with-tooltip.show .tooltip {
+  opacity: 1;
+  top: -10%;
+}
+
+.with-tooltip.show .tooltip.top {
+  top: 50%;
+}
+
+.with-tooltip.show .tooltip.right {
+  top: 50%;
+  left: 30%;
+}
+
+.with-tooltip.show .tooltip.left {
+  top: 50%;
+  left: 65%;
+}
