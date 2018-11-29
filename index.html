@@ -17,12 +17,11 @@
 <!-- AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,-->
 <!-- WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR-->
 <!-- IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.-->
-
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Seed CSS v1.2.4</title>
+    <title>Seed CSS v2.0.0</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="A light-weight, mobile first and responsive CSS boilerplate.">
     <meta name="keywords" content="css,boilerplate,javascript,html5,website,site,app,webapp,build,development">
@@ -30,304 +29,343 @@
     <meta name="copyright" content="Abtz Labs (https://abtz.co)">
     <meta name="license" content="MIT">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:300,700|Open+Sans:400">
-    <link rel="stylesheet" type="text/css" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/seed.css?v=v1.2.4">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css?v=v1.2.4">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/seed.css?v=v2.0.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css?v=v2.0.0">
   </head>
   <body>
-    <header>
-      <div class="container align-center">
-        <h1> <span>Seed CSS</span><span id="release">v1.2.4</span></h1>
-        <p>A light-weight, mobile first and responsive CSS boilerplate.</p>
-        <div class="cta"><a href="https://github.com/rogeriotaques/seed-css/archive/develop.zip" class="btn btn-primary"><span>DOWNLOAD</span></a><a href="#donate" class="btn btn-purple"><span>DONATE</span></a></div>
-        <p><span class="highlight">This page design is proudly based on Seed CSS</span><br>Scroll down for more.</p>
-        <div><span title="Scroll down for more ..." class="ion-chevron-down scroll-down-for-more"></span></div>
-      </div>
-    </header>
-    <main><br>
-      <div class="container align-center">
-        <h2>Why you're gonna love it?</h2>
-        <p> It's made for modern browsers, not intrusive and lightweight.</p>
-        <div class="grid highlight">
-          <div class="row">
-            <div class="col md-4 align-center">
-              <h3><i class="ion-speedometer"></i><br>Easy to start</h3>
-              <p>
-                Get started to your projects with a very small footprint
-                CSS boilerplate like this.
+    <aside class="offcanvas" id="sidenav">
+      <h3>Voilà!</h3>
+      <p>This is an off-canvas menu! Place here any content you need.</p>
+      <nav class="vertical"> 
+        <ul>
+          <li> <a class="smooth" href="#get-started">Get started</a></li>
+          <li> <a class="smooth" href="#examples-basic">Basic</a></li>
+          <li> <a class="smooth" href="#examples-components">Components</a></li>
+          <li> <a class="smooth" href="#examples-utilities">Utilities</a></li>
+          <li> <a class="smooth" href="#library-download">JS Lib</a></li>
+          <li> <a class="smooth" href="#license">License</a></li>
+          <li> <a class="smooth" href="#donate">Contributing</a></li>
+        </ul>
+      </nav><br>
+      <p class="align-center"><img src="https://picsum.photos/800/600?random" alt="Sample of a responsive image"></p><br>
+      <p class="align-center"> <a class="btn" href="#" role="offcanvas" data-id="sidenav">Click here to close</a></p>
+    </aside>
+    <main class="oncanvas" id="page-wrapper"> 
+      <header class="py-20">
+        <div class="background"></div>
+        <div class="container my-0">
+          <div class="row"> 
+            <div class="col md-6 pt-20 align-center">
+              <h1 class="mb-0">Seed CSS</h1>
+              <p class="mt-0 lead">A light-weight and mobile first CSS boilerplate.</p>
+            </div>
+            <div class="col md-6 align-center">
+              <div class="cta pt-30">
+                <p id="release">v2.0.0</p><a class="btn primary" href="https://github.com/AbtzLabs/seed-css/archive/develop.zip"><span>DOWNLOAD</span></a><a class="btn purple" href="#donate"><span>DONATE</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <nav class="sticky dark">
+        <ul class="container my-0 hide-on-large-and-up">
+          <li> <a class="logo" href="#" role="offcanvas" data-id="sidenav"> <span class="hamburger"></span><span>Seed-CSS</span></a></li>
+        </ul>
+        <ul class="container my-0 hide-on-medium-and-down"> 
+          <li> <a class="smooth" href="#get-started">Get started</a></li>
+          <li> <a class="smooth" href="#examples-basic">Basic</a></li>
+          <li> <a class="smooth" href="#examples-components">Components</a></li>
+          <li> <a class="smooth" href="#examples-utilities">Utilities</a></li>
+          <li> <a class="smooth" href="#library-download">JS Lib</a></li>
+          <li> <a class="smooth" href="#license">License</a></li>
+          <li> <a class="smooth" href="#donate">Contributing</a></li>
+        </ul>
+      </nav>
+      <section id="get-started">
+        <div class="container">
+          <div class="row"> 
+            <div class="col md-5">
+              <h2>Get started</h2>
+              <div class="alert info">
+                <h5 class="m-0">Made for modern browsers</h5><span>Supports <b>IE10+</b>, <b>Chrome</b>, <b>Firefox</b> and <b>Safari</b>.</span>
+              </div><br>
+              <p class="lead">
+                <a href="https://github.com/AbtzLabs/seed-css" >Fork</a> this project, 
+                <a href="https://github.com/AbtzLabs/seed-css/archive/develop.zip" >download</a> the files or 
+                install it via NPM.
                 
               </p>
             </div>
-            <div class="col md-4 align-center">
-              <h3><i class="ion-leaf"></i><br>Light-weight</h3>
-              <p>
-                Just <b>11kb</b> of CSS your app needs to load for a
-                mobile first and responsive design.
+            <div class="col md-6 md-offset-1">
+              <p><span>When using NPM: </span><code>$ npm install --save seed-css</code></p>
+              <p class="align-justify">
+                After get the latest version of files, import it to your pages as the example below:
+                
+              </p>
+              <div class="code-sample">
+                <pre class="prettyprint lang-html">&lt;head &gt;
+  ...
+  &lt;link href="/path/to/seed.css" rel="stylesheet" type="text/css" &gt;
+&lt;/head&gt;</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="examples">
+        <div class="container">
+          <h2 id="examples-basic">The basic</h2>
+          <div class="row"> 
+            <div class="col md-6 px-20">
+              <p class="lead">
+                This is the foundation of <code >seed-css</code>, in other words, the most fundamental features from this boilerplate.
                 
               </p>
             </div>
-            <div class="col md-4 align-center">
-              <h3><i class="ion-settings"></i><br>Based on Sass</h3>
-              <p>
-                All written on Sass, what means you can easily customize it
-                as much as you need.
+            <div class="col md-6 px-20">
+              <p class="lead">
+                By design, <code >seed-css</code> basic comes with a <b >container</b>, <b >grid</b>, <b >responsive images</b>,
+                <b >typography</b>, pre-defined <b >media queries</b> and a <b >color</b> scheme. And even though it looks kinda 
+                few things, it lonely can help you a lot to speed up a website creation.
                 
                 
               </p>
             </div>
           </div>
-        </div>
-      </div>
-    </main>
-    <section id="get-started">
-      <div class="container">
-        <h2>Get started</h2>
-        <p class="align-justify">
-          Just before get started, please notice that <code class="primary">seed-css</code> was written with modern browsers in mind.
-          That means it just has support for <b>IE9+</b> (which actually isn't a real modern browser ... but),
-          <b>Chrome</b>, <b>Firefox</b> and <b>Safari</b>, besides mobile browsers. If you need support older browsers, this boilerplate
-          may not help you, but, just in case, you're free to customize it and create your own CSS rules to
-          make it supports those older browser versions.
-          
-        </p>
-        <p class="align-justify">
-          The most first thing you need to do to start using <code class="primary" >seed-css</code>
-          is import its CSS file into your pages. In order to get the right files, you can either
-          <a href="https://github.com/rogeriotaques/seed-css" >fork</a> this project on Github, or
-          just <a href="https://github.com/rogeriotaques/seed-css/archive/develop.zip" >download</a>
-          the compressed project files to your computer.
-          
-        </p>
-        <p class="align-justify">
-          After get the latest version of files, import it to your pages as the example below:
-          
-        </p>
-        <div class="code-sample">
-          <pre class="prettyprint lang-html">&lt;head &gt;
-  ...
-  &lt;link href="seed.css" rel="stylesheet" type="text/css" &gt;
-&lt;/head&gt;
-
-</pre>
-        </div>
-        <p>
-          Once you have the <code class="primary" >seed-css</code> stylesheet embeded to your
-          site or application, have a look on all code examples below to get inspired about
-          what features it offers you and what you can do with it. :)
-          
-        </p>
-      </div>
-    </section>
-    <section id="examples">
-      <div class="container">
-        <h2 id="examples-basic">Basic</h2>
-        <div class="grid">
-          <div class="row">
-            <div class="col md-8 lg-9">
-              <div id="sample-container">
-                <h4>Container</h4>
-                <p>
-                  Containers are used to define an enclosed area with a
-                  <code >max-width</code> set to <code >960px</code> on wide screens.
+          <div class="align-center my-40"><span>。。。 </span></div>
+          <div id="component-container">
+            <h4>Containers</h4>
+            <div class="row">
+              <div class="col md-4">
+                <p class="lead">
+                  Containers are simple <code >div</code> with pre-defined width depending on the 
+                  screen size, which will help to keep the content enclosed in a specific area.
                   
                 </p>
+                <p>
+                  The <code >max-width</code> is set to <code >1200px</code> on wide screens.
+                  
+                </p>
+              </div>
+              <div class="col md-7 md-offset-1">
                 <div class="sample-container align-center">This's a container.</div>
                 <div class="code-sample">
                   <pre class="prettyprint lang-html">&lt;div class="container" &gt;&lt;/div&gt;</pre>
                 </div>
               </div>
-              <div id="sample-grid">
-                <h4>Grid</h4>
-                <p class="align-justify">
-                  Grids are commonly used to define "grid" based designs. The grid system is responsive,
-                  which means you can define the number of columns according to the screen size and it will
-                  adapts its width to best fit your content.
+            </div>
+          </div>
+          <div id="component-grid">
+            <h4>Grid</h4>
+            <div class="row"> 
+              <div class="col md-4">
+                <p class="align-justify lead">
+                  The grid system helps you to create responsive designs where you can define 
+                  a different number of columns depending on the device width.
                   
                 </p>
-                <div class="grid sample">
-                  <div id="flexible-cols" class="row">
-                    <div class="col sm-1 align-center">1</div>
-                    <div class="col sm-1 align-center">2</div>
-                    <div class="col sm-1 align-center">3</div>
-                    <div class="col sm-1 align-center">4</div>
-                    <div class="col sm-1 align-center">5</div>
-                    <div class="col sm-1 align-center">6</div>
-                    <div class="col sm-1 align-center">7</div>
-                    <div class="col sm-1 align-center">8</div>
-                    <div class="col sm-1 align-center">9</div>
-                    <div class="col sm-1 align-center">10</div>
-                    <div class="col sm-1 align-center">11</div>
-                    <div class="col sm-1 align-center">12</div>
-                  </div>
-                </div>
-                <div class="align-center"><strong>Have fun playing with columns!</strong>
-                  <div>
-                    <button type="button" disabled="true" id="add-col" class="btn btn-small">Add column</button>
-                    <button type="button" id="rem-col" class="btn btn-small">Remove column</button>
-                  </div>
-                </div><br>
                 <p class="align-justify">
                   Offsets are also available. To apply offsets, just use the class
                   <code >*-offset-*</code> to your classname.
                   
-                  
                 </p>
-                <div class="grid sample">
-                  <div class="row">
-                    <div class="col sm-6 sm-offset-6 md-6 md-offset-6 lg-6 lg-offset-6 align-center">1</div>
-                  </div>
-                </div>
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Class</th>
-                      <th>Detail</th>
-                      <th>Remarks</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="nowrap">.grid</td>
-                      <td class="nowrap">&nbsp;</td>
-                      <td>Defines the grid container</td>
-                    </tr>
-                    <tr>
-                      <td class="nowrap">.row</td>
-                      <td class="nowrap">&nbsp;</td>
-                      <td>Defines each row of a grid container</td>
-                    </tr>
-                    <tr>
-                      <td class="nowrap">.col</td>
-                      <td class="nowrap">&nbsp;</td>
-                      <td>Defines each column of a grid container</td>
-                    </tr>
-                    <tr>
-                      <td class="nowrap">.sm-*</td>
-                      <td class="nowrap">(1 ~ 12)</td>
-                      <td>Defines a column size for small screens (<code >max-width: 600px</code>). <br >It's used concatenated to <code >.col</code>.</td>
-                    </tr>
-                    <tr>
-                      <td class="nowrap">.md-*</td>
-                      <td class="nowrap">(1 ~ 12)</td>
-                      <td>Defines a column size for medium screens (<code >max-width: 990px</code>). <br >It's used concatenated to <code >.col</code>.</td>
-                    </tr>
-                    <tr>
-                      <td class="nowrap">.lg-*</td>
-                      <td class="nowrap">(1 ~ 12)</td>
-                      <td>Defines a column size for large screens (<code >max-width: 1200px</code>). <br >It's used concatenated to <code >.col</code>.</td>
-                    </tr>
-                    <tr>
-                      <td class="nowrap">.xl-*</td>
-                      <td class="nowrap">(1 ~ 12)</td>
-                      <td>Defines a column size for extra-large screens (<code >min-width: 1200px</code>). <br >It's used concatenated to <code >.col</code>.</td>
-                    </tr>
-                    <tr>
-                      <td class="nowrap">*-offset-*</td>
-                      <td class="nowrap">(.sm, .md, .lg and .xl) and (1 ~ 12)</td>
-                      <td>Creates an offset of columns. <br >It's used concatenated to <code >.col</code> and its screen size. <br >E.g: <code>.md-offset-2</code>.</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <div class="code-sample">
-                  <pre class="prettyprint lang-html">&lt;!-- This's a grid --&gt;
-&lt;div class="grid" &gt;
-    &lt;!-- This's a row. You can have as many rows as you need. --&gt;
-    &lt;div class="row" &gt;
-    &lt;!-- This's a column. You can have up to 12 columns in a row. --&gt;
-    &lt;div class="col sm-12 md-6 lg-3" &gt; ... &lt;/div&gt;
-    &lt;div class="col sm-12 md-6 lg-9" &gt; ... &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
+              </div>
+              <div class="col md-7 md-offset-1"><br>
+                <div class="align-center"><strong>Have fun playing with columns!</strong></div>
+                <div class="align-center">
+                  <button class="btn btn-small" type="button" disabled="true" id="add-col">Add column</button>
+                  <button class="btn btn-small" type="button" id="rem-col">Remove column</button>
                 </div>
               </div>
-              <div id="sample-responsive-images">
-                <h4>Responsive images</h4>
-                <p class="align-justify">
+            </div><br>
+            <div class="sample">
+              <div class="row" id="flexible-cols">
+                <div class="col sm-1 align-center">1</div>
+                <div class="col sm-1 align-center">2</div>
+                <div class="col sm-1 align-center">3</div>
+                <div class="col sm-1 align-center">4</div>
+                <div class="col sm-1 align-center">5</div>
+                <div class="col sm-1 align-center">6</div>
+                <div class="col sm-1 align-center">7</div>
+                <div class="col sm-1 align-center">8</div>
+                <div class="col sm-1 align-center">9</div>
+                <div class="col sm-1 align-center">10</div>
+                <div class="col sm-1 align-center">11</div>
+                <div class="col sm-1 align-center">12</div>
+              </div>
+            </div><br>
+            <div class="sample">
+              <div class="row">
+                <div class="col sm-11 sm-offset-1 md-11 md-offset-1 lg-11 lg-offset-1 align-center">11 columns with offset of 1</div>
+              </div>
+            </div><br>
+            <h5>Available classes</h5>
+            <div class="table-responsive">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Class</th>
+                    <th>Detail</th>
+                    <th>Remarks</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="nowrap">.row</td>
+                    <td class="nowrap">&nbsp;</td>
+                    <td>Defines each row of a grid container</td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap">.col</td>
+                    <td class="nowrap">&nbsp;</td>
+                    <td>Defines each column of a grid container</td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap">.sm-*</td>
+                    <td class="nowrap">(1 ~ 12)</td>
+                    <td>Defines a column size for small screens (<code >max-width: 600px</code>). <br >It's used concatenated to <code >.col</code>.</td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap">.md-*</td>
+                    <td class="nowrap">(1 ~ 12)</td>
+                    <td>Defines a column size for medium screens (<code >max-width: 990px</code>). <br >It's used concatenated to <code >.col</code>.</td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap">.lg-*</td>
+                    <td class="nowrap">(1 ~ 12)</td>
+                    <td>Defines a column size for large screens (<code >max-width: 1200px</code>). <br >It's used concatenated to <code >.col</code>.</td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap">.xl-*</td>
+                    <td class="nowrap">(1 ~ 12)</td>
+                    <td>Defines a column size for extra-large screens (<code >min-width: 1200px</code>). <br >It's used concatenated to <code >.col</code>.</td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap">*-offset-*</td>
+                    <td class="nowrap">(.sm, .md, .lg and .xl) and (1 ~ 12)</td>
+                    <td>Creates an offset of columns. <br >It's used concatenated to <code >.col</code> and its screen size. <br >E.g: <code>.md-offset-2</code>.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><br>
+            <h5>Code example</h5>
+            <div class="code-sample">
+              <pre class="prettyprint lang-html">&lt;!-- This's a row. You can have as many rows as you need. --&gt;
+&lt;div class="row" &gt;
+  &lt;!-- This's a column. You can have up to 12 columns in a row. --&gt;
+  &lt;div class="col sm-12 md-6 lg-3" &gt; ... &lt;/div&gt;
+  &lt;div class="col sm-12 md-6 lg-9" &gt; ... &lt;/div&gt;
+&lt;/div&gt;</pre>
+            </div>
+          </div>
+          <div id="component-responsive-images">
+            <h4>Responsive images</h4>
+            <div class="row"> 
+              <div class="col md-5"><br><br>
+                <p class="lead">
                   By default, all images are considered responsive and will adjust
                   accordingly to the window size. In case you, for any sake, need a
                   non responsive image, just add the class <code >.no-responsive</code>
                   on it.
                   
-                </p>
-                <div class="grid">
-                  <div class="row">
-                    <div class="col md-6">
-                      <h5 class="align-center">Responsive</h5>
-                      <p class="align-center"><img src="//placehold.it/800x600" alt="Sample of a responsive image"></p>
-                      <div class="code-sample">
-                        <pre class="prettyprint lang-html">&lt;img src="..." alt="..." &gt;
-
+                </p><br>
+                <p class="align-center"><img class="with-shadow" src="https://picsum.photos/800/600?random" alt="Sample of a responsive image"></p>
+              </div>
+              <div class="col md-6 md-offset-1">
+                <h5>Code example</h5>
+                <div class="code-sample">
+                  <pre class="prettyprint lang-html">&lt;img src="..." alt="..." &gt;
 </pre>
-                      </div>
-                    </div>
-                    <div class="col md-6">
-                      <h5 class="align-center">Circle and Thumbnail</h5>
-                      <div class="grid">
-                        <div class="row">
-                          <div class="col sm-12 md-6">
-                            <p class="align-center"><img src="//placehold.it/100x100" alt="Circle image sample" class="circle"></p>
-                          </div>
-                          <div class="col sm-12 md-6">
-                            <p class="align-center"><img src="//placehold.it/100x100" alt="Thumbnail image sample" class="thumb"></p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col sm-12">
-                          <div class="code-sample">
-                            <pre class="prettyprint lang-html">&lt;!-- makes a circle image --&gt;
+                </div><br><br>
+                <h6>Circle and Thumbnail are also given</h6>
+                <div class="row">
+                  <div class="col sm-12 md-6">
+                    <p class="align-center"><img class="circle with-shadow" src="https://picsum.photos/100?random" alt="Circle image sample"></p>
+                  </div>
+                  <div class="col sm-12 md-6">
+                    <p class="align-center"><img class="thumb with-shadow" src="https://picsum.photos/g/100/" alt="Thumbnail image sample"></p>
+                  </div>
+                  <div class="row">
+                    <div class="col sm-12">
+                      <div class="code-sample">
+                        <pre class="prettyprint lang-html">&lt;!-- makes a circle image --&gt;
 &lt;img class="circle" ... &gt;
 
 &lt;!-- makes a square small image --&gt;
 &lt;img class="thumb" ... &gt;</pre>
-                          </div>
-                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div id="sample-typography">
-                <h4>Typography</h4>
-                <p class="align-justify">
-                  All default HTML tags are supported, including but not limited
-                  to the below few examples.
-                  
-                </p>
-                <p class="align-justify">
-                  We are using <b>Lato (300)</b> as general font-family and <b>Open Sans (400)</b> as
-                  title's font-family. The easiest way to make these fonts available to your page is
-                  loading them from Google Fonts, such as:
-                  
-                </p>
-                <div class="code-sample">
-                  <pre class="prettyprint lang-html">&lt; link href="//fonts.googleapis.com/css?family=Lato:300,700|Open+Sans:400" rel="stylesheet" &gt;
+            </div>
+          </div>
+          <div id="component-typography">
+            <h4>Typography</h4>
+            <p class="lead">
+              All default HTML tags are supported, including but not limited
+              to the below few examples.
+              
+            </p>
+            <p>
+              We are using <b>Lato (300)</b> as general font-family and <b>Open Sans (400)</b> as
+              title's font-family. The easiest way to make these fonts available to your page is
+              loading them from <a href="https://fonts.google.com/" target="_blank" >Google Fonts</a>, such as:
+              
+            </p>
+            <div class="code-sample">
+              <pre class="prettyprint lang-html">&lt;link href="//fonts.googleapis.com/css?family=Lato:300,700|Open+Sans:400" rel="stylesheet"&gt;
 </pre>
-                </div>
-                <div class="grid">
-                  <div class="row">
-                    <div class="col sm-12 md-6">
-                      <h1>Header 1</h1>
-                      <h2>Header 2</h2>
-                      <h3>Header 3</h3>
-                      <h4>Header 4</h4>
-                      <h5>Header 5</h5>
-                      <h6>Header 6</h6>
-                    </div>
-                    <div class="col sm-12 md-6">
-                      <p>
-                        This is an paragraph. <br >
-                        This is a <strong >bold</strong> text. <br >
-                        This is an <i >italic</i> text. <br >
-                        This is an <u >underlined</u> text. <br >
-                        This is an <a href="#!">anchor</a> text.
-                        
-                      </p>
-                    </div>
+            </div><br>
+            <div class="row">
+              <div class="col sm-12 md-6">
+                <h1>Header 1</h1>
+                <h2>Header 2</h2>
+                <h3>Header 3</h3>
+                <h4>Header 4</h4>
+                <h5>Header 5</h5>
+                <h6>Header 6</h6>
+              </div>
+              <div class="col sm-12 md-6"><br><br>
+                <p>
+                  This is an paragraph. There are <strong >bold</strong>, <i >italic</i>, 
+                  and <u >underlined</u> texts, also, <a href="#!">anchors</a>.
+                  
+                </p>
+                <div class="row">
+                  <div class="col sm-12 md-6">
+                    <p> <b>Ordered lists:</b></p>
+                    <ol>
+                      <li>First item</li>
+                      <li>Second item
+                        <ol>
+                          <li>Nested first</li>
+                          <li>Nested second ...</li>
+                        </ol>
+                      </li>
+                      <li>Third item</li>
+                    </ol>
+                  </div>
+                  <div class="col sm-12 md-6">
+                    <p> <b>Unordered lists:</b></p>
+                    <ul>
+                      <li>First item</li>
+                      <li>Second item
+                        <ul>
+                          <li>Nested first</li>
+                          <li>Nested second ...</li>
+                        </ul>
+                      </li>
+                      <li>Third item</li>
+                    </ul>
                   </div>
                 </div>
-                <div class="code-sample">
-                  <pre class="prettyprint lang-html">&lt;!-- Head lines --&gt;
+              </div>
+            </div>
+            <h5>Code example</h5>
+            <div class="code-sample">
+              <pre class="prettyprint lang-html">&lt;!-- Head lines --&gt;
 &lt;h1 &gt; ... &lt;/h1&gt;
 &lt;h2 &gt; ... &lt;/h2&gt;
 &lt;h3 &gt; ... &lt;/h3&gt;
@@ -340,89 +378,35 @@
 &lt;b &gt; ... &lt;/b&gt;
 &lt;i &gt; ... &lt;/i&gt;
 &lt;u &gt; ... &lt;/u&gt;
-&lt;a href="." &gt; ... &lt;/a&gt;</pre>
-                </div>
-              </div>
-              <div id="sample-media-queries">
+&lt;a href="." &gt; ... &lt;/a&gt;
+
+&lt;!-- Lists --&gt;
+&lt;!-- replace OL by UL or DL for different list types --&gt;
+&lt;ol &gt;
+  &lt;li &gt; ... &lt;/li&gt;
+  &lt;li &gt; ... &lt;/li&gt;
+  &lt;li &gt; ... &lt;/li&gt;
+&lt;/ol&gt;</pre>
+            </div>
+          </div>
+          <div id="component-media-queries">
+            <div class="row"> 
+              <div class="col md-5">
                 <h4>Media queries</h4>
-                <p class="align-justify">
-                  Media queries allows us to make an even more accurated design. In <code class="primary">seed-css</code>
+                <p class="lead">
+                  Media queries allows us to make an even more accurated design. In <code >seed-css</code>
                   they are made to represent the following screen sizes:
                   
                 </p>
-                <table>
-                  <thead>
-                    <tr>
-                      <th>&nbsp;</th>
-                      <th>Screen width</th>
-                      <th>Prefix</th>
-                      <th>Columns</th>
-                      <th>Container</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="nowrap">Mobiles</td>
-                      <td class="nowrap"><strong>&lt; 600px</strong></td>
-                      <td class="nowrap"><strong>.sm</strong></td>
-                      <td><strong>12</strong></td>
-                      <td><strong>90%</strong></td>
-                    </tr>
-                    <tr>
-                      <td class="nowrap">Tablets</td>
-                      <td class="nowrap"><strong>&lt;= 990px</strong></td>
-                      <td class="nowrap"><strong>.md</strong></td>
-                      <td><strong>12</strong></td>
-                      <td><strong>85%</strong></td>
-                    </tr>
-                    <tr>
-                      <td class="nowrap">Desktops/ laptops</td>
-                      <td class="nowrap"><strong>&lt;= 1200px</strong></td>
-                      <td class="nowrap"><strong>.lg</strong></td>
-                      <td><strong>12</strong></td>
-                      <td><strong>80%</strong></td>
-                    </tr>
-                    <tr>
-                      <td class="nowrap">Extra large desktops/TVs</td>
-                      <td class="nowrap"><strong>&gt; 1200px</strong></td>
-                      <td class="nowrap"><strong>.xl</strong></td>
-                      <td><strong>12</strong></td>
-                      <td><strong>75%</strong></td>
-                    </tr>
-                  </tbody>
-                </table>
-                <p class="align-justify">
+                <p class="lead">
                   You can safely write your own styling rules using the following queries and keep covered by
-                  <code class="primary">seed-css</code> grid system. Using a different set of media queries may
+                  <code >seed-css</code> grid system. Using a different set of media queries may
                   overwrite this boilerplate grid system.
                   
                 </p>
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Query</th>
-                      <th>Remarks</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>@media only screen and (min-width: 0px)</td>
-                      <td>For mobile devices. (Mobile first)</td>
-                    </tr>
-                    <tr>
-                      <td>@media only screen and (min-width: 600px)</td>
-                      <td>For tablets devices.</td>
-                    </tr>
-                    <tr>
-                      <td>@media only screen and (min-width: 990px)</td>
-                      <td>For desktop/ laptop devices.</td>
-                    </tr>
-                    <tr>
-                      <td>@media only screen and (min-width: 1200px)</td>
-                      <td>For extra large desktop/ TV devices.</td>
-                    </tr>
-                  </tbody>
-                </table>
+              </div>
+              <div class="col md-6 md-offset-1">
+                <h5>Code example</h5>
                 <div class="code-sample">
                   <pre class="prettyprint lang-css">// Mobile first
 @media only screen and (min-width: 0px) {
@@ -434,173 +418,237 @@
   ...
 }
 
-// Desktops/ Laptops
-@media only screen and (min-width: 990px) {
-  ...
-}
-
-// Extra large desktops/ TVs
-@media only screen and (min-width: 1200px) {
-  ...
-}</pre>
-                </div>
-              </div>
-              <div id="sample-icons">
-                <h4>Icons</h4>
-                <p class="align-justify">
-                  <code class="primary">Seed-css</code> does not implement its own set of icons, so you are free 
-                  to implement any iconset you rather with this CSS boilerplate. However, we really like and therefore 
-                  recommend you to use the <b><a href="http://ionicons.com/?ref=seed-css" target="_blank" >Ionicons</a></b>.
-                  
-                </p>
-                <p class="align-justify">
-                  It is a <i >beautifully crafted premium open source icons</i> designed to be used in web, iOS, Android, and desktop apps, 
-                  and supports SVG and web font. Completely open source, MIT licensed. 
-                  
-                  
-                </p>
-                <h5>Using it as webfonts</h5>
-                <p class="align-justify">
-                  To embed the Ionicons webfont into your webpage, copy this code into the <head> of the HTML document.
-                  
-                </p>
-                <div class="code-sample">
-                  <pre class="prettyprint lang-html">&lt;link href="https://unpkg.com/ionicons@4.0.0/dist/css/ionicons.min.css"rel="stylesheet"/&gt;
+// ...
 </pre>
                 </div>
-                <p class="align-justify">
-                  Use the <code class="primary" >icon index</code> to look up the name of the icon you want to use. 
-                  The icon's CSS class name will be prefixed with <code class="primary" >ion-</code>, followed by the 
-                  platform attribute <code class="primary" >md-</code>, <code class="primary" >ios-</code> or 
-                  <code class="primary" >logo-</code> and completed wth the icon name.
-                  
-                </p>
-                <div class="code-sample">
-                  <pre class="prettyprint lang-html">&lt;i class="icon ion-md-heart"&gt;&lt;/i&gt;
-</pre>
-                </div>
-                <p class="align-center"><a href="http://ionicons.com/" target="_blank" class="btn btn-primary">Check the entire library here</a></p>
-              </div>
-              <div id="sample-colors">
-                <h4>Colors</h4>
-                <p class="align-justify">
-                  There are a few basic colors ready for use. The same colors can be applied on foreground (texts)
-                  or background of your elements. Check it out:
-                  
-                </p>
-                <table class="hovered">
-                  <thead>
-                    <tr>
-                      <th>Tag</th>
-                      <th>Foreground class</th>
-                      <th>Background class</th>
-                      <th>Color</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><span class="primary-background color-tag"></span></td>
-                      <td><code>.primary</code></td>
-                      <td><code>.primary-background</code></td>
-                      <td><code>#387cfd</code></td>
-                    </tr>
-                    <tr>
-                      <td><span class="red-background color-tag"></span></td>
-                      <td><code>.red</code></td>
-                      <td><code>.red-background</code></td>
-                      <td><code>#d32f2f</code></td>
-                    </tr>
-                    <tr>
-                      <td><span class="orange-background color-tag"></span></td>
-                      <td><code>.orange</code></td>
-                      <td><code>.orange-background</code></td>
-                      <td><code>#fb8c00</code></td>
-                    </tr>
-                    <tr>
-                      <td><span class="green-background color-tag"></span></td>
-                      <td><code>.green</code></td>
-                      <td><code>.green-background</code></td>
-                      <td><code>#43a047</code></td>
-                    </tr>
-                    <tr>
-                      <td><span class="purple-background color-tag"></span></td>
-                      <td><code>.purple</code></td>
-                      <td><code>.purple-background</code></td>
-                      <td><code>#8e24aa</code></td>
-                    </tr>
-                    <tr>
-                      <td><span class="grey-background color-tag"></span></td>
-                      <td><code>.grey</code></td>
-                      <td><code>.grey-background</code></td>
-                      <td><code>#ccc</code></td>
-                    </tr>
-                    <tr>
-                      <td><span class="darkgrey-background color-tag"></span></td>
-                      <td><code>.darkgrey</code></td>
-                      <td><code>.darkgrey-background</code></td>
-                      <td><code>#666</code></td>
-                    </tr>
-                    <tr>
-                      <td><span class="softgrey-background color-tag"></span></td>
-                      <td><code>.softgrey</code></td>
-                      <td><code>.softgrey-background</code></td>
-                      <td><code>#f5f5f5</code></td>
-                    </tr>
-                  </tbody>
-                </table>
               </div>
             </div>
-            <div class="col md-4 lg-3 hide-only-small relpos">
-              <nav data-attach="#sample-container" data-limit="#examples-components" class="samples-nav">
-                <h5>The basic</h5>
-                <ul class="list">
-                  <li class="item"><a href="#sample-container" class="spy">Container</a></li>
-                  <li class="item"><a href="#sample-grid" class="spy">Grid</a></li>
-                  <li class="item"><a href="#sample-responsive-images" class="spy">Responsive images</a></li>
-                  <li class="item"><a href="#sample-typography" class="spy">Typography</a></li>
-                  <li class="item"><a href="#sample-media-queries" class="spy">Media queries</a></li>
-                  <li class="item"><a href="#sample-icons" class="spy">Icons</a></li>
-                  <li class="item"><a href="#sample-colors" class="spy">Colors</a></li>
-                  <li class="item"><a href="#sample-alerts" class="spy ignore"><span>Check the components &nbsp;</span><span class="ion-arrow-down-c"></span></a></li>
-                </ul>
-              </nav>
+            <h5>Pre-defined medias</h5>
+            <div class="table-responsive"> 
+              <table>
+                <thead>
+                  <tr>
+                    <th>&nbsp;</th>
+                    <th>Screen width</th>
+                    <th>Prefix</th>
+                    <th>Columns</th>
+                    <th>Container</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="nowrap">Mobiles</td>
+                    <td class="nowrap"><strong>&lt; 600px</strong></td>
+                    <td class="nowrap"><strong>.sm</strong></td>
+                    <td><strong>12</strong></td>
+                    <td><strong>90%</strong></td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap">Tablets</td>
+                    <td class="nowrap"><strong>&lt;= 990px</strong></td>
+                    <td class="nowrap"><strong>.md</strong></td>
+                    <td><strong>12</strong></td>
+                    <td><strong>85%</strong></td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap">Desktops/ laptops</td>
+                    <td class="nowrap"><strong>&lt;= 1200px</strong></td>
+                    <td class="nowrap"><strong>.lg</strong></td>
+                    <td><strong>12</strong></td>
+                    <td><strong>80%</strong></td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap">Extra large desktops/TVs</td>
+                    <td class="nowrap"><strong>&gt; 1200px</strong></td>
+                    <td class="nowrap"><strong>.xl</strong></td>
+                    <td><strong>12</strong></td>
+                    <td><strong>75%</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <h5>Queries definition</h5>
+            <div class="table-responsive"> 
+              <table>
+                <thead>
+                  <tr>
+                    <th>Query</th>
+                    <th>Remarks</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code >@media only screen and (min-width: 0px) {}</code></td>
+                    <td>For mobile devices. (Mobile first)</td>
+                  </tr>
+                  <tr>
+                    <td><code >@media only screen and (min-width: 600px) {}</code></td>
+                    <td>For tablets devices.</td>
+                  </tr>
+                  <tr>
+                    <td><code >@media only screen and (min-width: 990px) {}</code></td>
+                    <td>For desktop/ laptop devices.</td>
+                  </tr>
+                  <tr>
+                    <td><code >@media only screen and (min-width: 1200px) {}</code></td>
+                    <td>For extra large desktop/ TV devices.</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
-        </div>
-        <h2 id="examples-components">Components</h2>
-        <div class="grid">
-          <div class="row">
-            <div class="col md-8 lg-9">
-              <div id="sample-alerts">
-                <h4>Alerts</h4>
-                <p class="align-justify">
-                  Alerts are used to notify the users in many different situations. In <code class="primary" >seed-css</code>
-                  they come in 5 flavors (default, info, success, warning and danger). We chose to use such a
-                  naming style to make it easier for you pick up the one that most fit your case.
+          <div id="component-icons">
+            <h4>Icons</h4>
+            <div class="row"> 
+              <div class="col md-5">
+                <p class="lead">
+                  For the sake of flexibility, <code >seed-css</code> does not implement its own set of icons.
                   
                 </p>
+                <p class="lead">
+                  However, there are tons of really cool icons out there which you can easily use with this boilerplate. 
+                  Some of them are trully special and free, which we strongly recommend to you.
+                  
+                </p>
+              </div>
+              <div class="col md-6 md-offset-1">
+                <h5>Recommended Icons</h5>
+                <ol> 
+                  <li> <a class="lead" href="https://akveo.github.io/eva-icons/#/" target="_blank">Eva Icons (Free)</a></li>
+                  <li> <a class="lead" href="https://ionicons.com/" target="_blank">Ion Icons (Free)</a></li>
+                  <li> <a class="lead" href="https://fontawesome.com/icons?d=gallery&amp;m=free" target="_blank">Font Awesome (Free)</a></li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <div id="component-colors">
+            <h4>Colors</h4>
+            <div class="row"> 
+              <div class="col md-5">
+                <p class="lead">
+                  Oh, yes! This boilerplate wouldn't worth if there was not a pre-defined color scheme, isn't it?
+                  
+                </p>
+                <p class="lead">
+                  That's why <code> seed-css</code> comes with a pre-defined set of colors exposed in classes, and the same 
+                  colors can be applied both on the foreground (texts) and background from any HTML element.
+                  
+                </p>
+              </div>
+              <div class="col md-6 md-offset-1"><br><br>
+                <div class="colors"> 
+                  <div class="row"> 
+                    <div class="col sm-4 primary-background"></div>
+                    <div class="col sm-4 secondary-background"></div>
+                    <div class="col sm-4 red-background"></div>
+                  </div>
+                  <div class="row"> 
+                    <div class="col sm-4 orange-background"></div>
+                    <div class="col sm-4 green-background"></div>
+                    <div class="col sm-4 purple-background"></div>
+                  </div>
+                  <div class="row"> 
+                    <div class="col sm-4 darkgrey-background"></div>
+                    <div class="col sm-4 grey-background"></div>
+                    <div class="col sm-4 softgrey-background"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h5>Full color list</h5>
+            <div class="table-responsive"> 
+              <table class="hovered">
+                <thead>
+                  <tr>
+                    <th>Tag</th>
+                    <th>Foreground class</th>
+                    <th>Background class</th>
+                    <th>Color</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="primary-background color-tag"></span></td>
+                    <td><code>.primary</code></td>
+                    <td><code>.primary-background</code></td>
+                    <td><code>#1466ff</code></td>
+                  </tr>
+                  <tr>
+                    <td><span class="secondary-background color-tag"></span></td>
+                    <td><code>.secondary</code></td>
+                    <td><code>.secondary-background</code></td>
+                    <td><code>#4b70b4</code></td>
+                  </tr>
+                  <tr>
+                    <td><span class="red-background color-tag"></span></td>
+                    <td><code>.red</code></td>
+                    <td><code>.red-background</code></td>
+                    <td><code>#d32f2f</code></td>
+                  </tr>
+                  <tr>
+                    <td><span class="orange-background color-tag"></span></td>
+                    <td><code>.orange</code></td>
+                    <td><code>.orange-background</code></td>
+                    <td><code>#fb8c00</code></td>
+                  </tr>
+                  <tr>
+                    <td><span class="green-background color-tag"></span></td>
+                    <td><code>.green</code></td>
+                    <td><code>.green-background</code></td>
+                    <td><code>#43a047</code></td>
+                  </tr>
+                  <tr>
+                    <td><span class="purple-background color-tag"></span></td>
+                    <td><code>.purple</code></td>
+                    <td><code>.purple-background</code></td>
+                    <td><code>#8e24aa</code></td>
+                  </tr>
+                  <tr>
+                    <td><span class="darkgrey-background color-tag"></span></td>
+                    <td><code>.darkgrey</code></td>
+                    <td><code>.darkgrey-background</code></td>
+                    <td><code>#666</code></td>
+                  </tr>
+                  <tr>
+                    <td><span class="grey-background color-tag"></span></td>
+                    <td><code>.grey</code></td>
+                    <td><code>.grey-background</code></td>
+                    <td><code>#ccc</code></td>
+                  </tr>
+                  <tr>
+                    <td><span class="softgrey-background color-tag"></span></td>
+                    <td><code>.softgrey</code></td>
+                    <td><code>.softgrey-background</code></td>
+                    <td><code>#f5f5f5</code></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <h2 id="examples-components">Components</h2>
+          <div id="component-alerts">
+            <h4>Alerts</h4>
+            <p class="lead">
+              Alerts are used to notify the users in many different situations. 
+              
+            </p>
+            <div class="row"> 
+              <div class="col sm-12 md-5">
                 <div class="alerts">
                   <p><b>.alert</b></p>
-                  <div class="alert">
-                    <p>This's a default alert</p>
-                  </div>
+                  <div class="alert">This's a default alert</div><br>
                   <p><b>.alert.info</b></p>
-                  <div class="alert info">
-                    <p>This's an info alert</p>
-                  </div>
+                  <div class="alert info">This's an info alert</div><br>
                   <p><b>.alert.success</b></p>
-                  <div class="alert success">
-                    <p>This's a success alert</p>
-                  </div>
+                  <div class="alert success">This's a success alert</div><br>
                   <p><b>.alert.warning</b></p>
-                  <div class="alert warning">
-                    <p>This's a warning alert</p>
-                  </div>
+                  <div class="alert warning">This's a warning alert</div><br>
                   <p><b>.alert.danger</b></p>
-                  <div class="alert danger">
-                    <p>This's a danger alert</p>
-                  </div>
-                </div><br>
+                  <div class="alert danger">This's a danger alert</div>
+                </div>
+              </div>
+              <div class="col sm-12 md-6 md-offset-1">
+                <h5>Code example</h5>
                 <div class="code-sample">
                   <pre class="prettyprint lang-html">&lt;!-- default --&gt;
 &lt;div class="alert" &gt;
@@ -628,55 +676,87 @@
 &lt;/div&gt;</pre>
                 </div>
               </div>
-              <div id="sample-buttons">
-                <h4>Buttons</h4>
-                <p class="align-justify">
-                  Buttons are a really basic elements on any web page or app, and it
-                  comes in a couple of different flavors in <code class="primary">seed-css</code>. 
-                  By simply adding the class <code >.btn</code> to any <code >&lt;a/&gt;</code> or 
-                  <code >&lt;button/&gt;</code> you will make it looks like a button. Adding the 
-                  class <code >.btn-primary</code> it will become a primary button. 
+            </div>
+          </div>
+          <div id="component-badges">
+            <h4>Badges</h4>
+            <p class="lead">
+              Badges are another component commonly used to notifications.
+              
+            </p><br>
+            <div class="row"> 
+              <div class="col md-5">
+                <div class="sample-container auto-height px-20">
+                  <div class="badges align-center">
+                    <p class="mb-40"> <span class="badge">default</span></p>
+                    <p class="mb-40"> <span class="badge info">info</span></p>
+                    <p class="mb-40"> <span class="badge success">success</span></p>
+                    <p class="mb-40"> <span class="badge warning">warning</span></p>
+                    <p class="mb-50"> <span class="badge danger">danger</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col sm-12 md-6 md-offset-1">
+                <div class="code-sample">
+                  <pre class="prettyprint lang-html">&lt;!-- default --&gt;
+&lt;span class="badge" &gt; ... &lt;/span&gt;
+
+&lt;!-- info --&gt;
+&lt;span class="badge info" &gt; ... &lt;/span&gt;
+
+&lt;!-- success --&gt;
+&lt;span class="badge success" &gt; ... &lt;/span&gt;
+
+&lt;!-- warning --&gt;
+&lt;span class="badge warning" &gt; ... &lt;/span&gt;
+
+&lt;!-- danger --&gt;
+&lt;span class="badge danger" &gt; ... &lt;/span&gt;</pre>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="component-buttons">
+            <h4>Buttons</h4><br>
+            <div class="row"> 
+              <div class="col md-5">
+                <p class="lead">
+                  Buttons can be created with <code>seed-css</code> by simply adding the class <code >.btn</code> 
+                  to any <code >&lt;a/&gt;</code> or  <code >&lt;button/&gt;</code> element. Adding the class 
+                  <code >.btn-primary</code> it will become a primary button. 
                   
                 </p>
-                <div class="alert warning">
-                  <p>NOTE: From version <code>1.2.0</code> buttons are required to use the <code >.btn</code> class.</p>
+              </div>
+              <div class="col md-5 md-offset-1 align-center"><a class="btn" href="#!">a.btn</a><br class="hide-on-medium-and-up">
+                <button class="btn" type="button">button.btn</button><br class="hide-on-medium-and-up">
+                <input class="btn" type="button" value="input.btn">
+              </div>
+            </div>
+            <h5>Playing with colors</h5>
+            <div class="row"> 
+              <div class="col md-8 align-center"> 
+                <div class="buttons">
+                  <h6>Colored (.btn.*color*)</h6><a class="btn primary" href="#!">.btn.primary</a><br class="hide-on-medium-and-up"><a class="btn secondary" href="#!">.btn.secondary</a><br class="hide-on-medium-and-up"><a class="btn red" href="#!">.btn.red </a><br class="hide-on-medium-and-up"><br><a class="btn orange" href="#!">.btn.orange</a><br class="hide-on-medium-and-up"><a class="btn green" href="#!">.btn.green</a><br class="hide-on-medium-and-up"><a class="btn purple" href="#!">.btn.purple</a>
                 </div>
-                <div class="buttons align-center">
-                  <h6 class="align-center">Default</h6><a href="#!" class="btn">Anchor</a>
-                  <button type="button" class="btn">Button element</button>
-                  <input type="button" value="Input button" class="btn"><br>
-                  <h6 class="align-center">Primary (.btn-primary)</h6><a href="#!" class="btn btn-primary">Anchor</a>
-                  <button type="button" class="btn btn-primary">Button element</button>
-                  <input type="button" value="Input button" class="btn btn-primary"><br>
-                  <h6 class="align-center">Colored (.btn-*color*)</h6><a href="#!" class="btn btn-red">Anchor</a>
-                  <button type="button" class="btn btn-red">Button element</button>
-                  <input type="button" value="Input button" class="btn btn-red"><br><a href="#!" class="btn btn-orange">Anchor</a>
-                  <button type="button" class="btn btn-orange">Button element</button>
-                  <input type="button" value="Input button" class="btn btn-orange"><br><a href="#!" class="btn btn-green">Anchor</a>
-                  <button type="button" class="btn btn-green">Button element</button>
-                  <input type="button" value="Input button" class="btn btn-green"><br><a href="#!" class="btn btn-purple">Anchor</a>
-                  <button type="button" class="btn btn-purple">Button element</button>
-                  <input type="button" value="Input button" class="btn btn-purple"><br>
-                  <h6 class="align-center">Disabled (.disabled)</h6><a href="#!" disabled class="btn">Anchor</a>
-                  <button type="button" disabled class="btn">Button element</button>
-                  <input type="button" value="Input button" disabled class="btn"><br>
-                  <h6 class="align-center">Flat (.flat-btn)</h6><a href="#!" class="flat-btn">Anchor</a>
-                  <button type="button" class="flat-btn">Button element</button>
-                  <input type="button" value="Input button" class="flat-btn"><br>
-                </div>
-                <h6 class="align-center">Medium (.btn-medium)
-                  <div class="buttons align-center"><a href="#!" class="btn btn-medium">Anchor</a>
-                    <button type="button" class="btn btn-medium">Button element</button>
-                    <input type="button" value="Input button" class="btn btn-medium"><br>
-                  </div>
-                  <h6 class="align-center">Small (.btn-small)</h6>
-                  <div class="buttons align-center"><a href="#!" class="btn btn-small">Anchor</a>
-                    <button type="button" class="btn btn-small">Button element</button>
-                    <input type="button" value="Input button" class="btn btn-small">
-                  </div>
-                </h6><br>
-                <div class="code-sample">
-                  <pre class="prettyprint lang-html">&lt;!-- .btn class makes an anchor looks like a button --&gt;
+              </div>
+              <div class="col md-4"> 
+                <h6 class="align-center">Link style (.btn.link)</h6>
+                <div class="align-center"><a class="btn link" href="#!">.btn.link</a></div>
+              </div>
+            </div><br>
+            <div class="row"> 
+              <div class="col md-6 align-center"> 
+                <h5>Playing with states</h5>
+                <h6>Disabled (.disabled) or <code>disabled</code> property</h6>
+                <button class="btn" type="button" disabled>.btn.disabled</button>
+              </div>
+              <div class="col md-6 align-center"> 
+                <h5>Playing with sizes</h5><a class="btn small" href="#!">.btn.small</a><a class="btn medium" href="#!">.btn.medium</a>
+              </div>
+            </div><br>
+            <h5>Code example</h5>
+            <div class="code-sample">
+              <pre class="prettyprint lang-html">&lt;!-- .btn class makes an anchor looks like a button --&gt;
 &lt;a class="btn" href="..." &gt; ... &lt;/a&gt;
 
 &lt;!-- default buttons and input[type="button"] --&gt;
@@ -696,259 +776,160 @@
 &lt;a class="btn disabled" href="..." &gt; ... &lt;/a&gt;
 &lt;button class="btn" disabled &gt; ... &lt;/button&gt;
 </pre>
-                </div><br>
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Class</th>
-                      <th>Detail</th>
-                      <th>Remarks</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="nowrap">.btn</td>
-                      <td class="nowrap">&nbsp;</td>
-                      <td>Makes anchors looks like buttons</td>
-                    </tr>
-                    <tr>
-                      <td class="nowrap">.btn-primary</td>
-                      <td class="nowrap">&nbsp;</td>
-                      <td>Defines a 'primary' (blue) colored button</td>
-                    </tr>
-                    <tr>
-                      <td class="nowrap">.btn-(*color*)</td>
-                      <td class="nowrap">&nbsp;</td>
-                      <td>Defines a colored button. Colors can be: <code>red</code>, <code>orange</code>, <code>green</code> or <code>purple</code></td>
-                    </tr>
-                    <tr>
-                      <td class="nowrap">.btn-(*size*)</td>
-                      <td class="nowrap">&nbsp;</td>
-                      <td>Defines a sized button. Sizes can be: <code>small</code> or <code>medium</code>. Default is <code>big</code></td>
-                    </tr>
-                    <tr>
-                      <td class="nowrap">.disabled</td>
-                      <td class="nowrap">&nbsp;</td>
-                      <td>Defines disabled buttons. Simply setting the <code>disabled</code> property will also make button looks like disabled</td>
-                    </tr>
-                    <tr>
-                      <td class="nowrap">.flat-btn</td>
-                      <td class="nowrap">&nbsp;</td>
-                      <td>Defines <b>flat</b> buttons, which means no borders or background colors. You are still able to use <code>.btn-(*color*)</code> and or <code>.btn(*size*)</code> on this button type</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div id="sample-cards">
-                <h4>Cards</h4>
-                <p>
-                  Cards are important for applications and websites riches in content.
-                  
-                </p>
+            </div><br>
+            <h5>Available classes</h5>
+            <div class="table-responsive">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Class</th>
+                    <th>Detail</th>
+                    <th>Remarks</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="nowrap">.btn</td>
+                    <td class="nowrap">&nbsp;</td>
+                    <td>Makes anchors looks like buttons</td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap">.primary</td>
+                    <td class="nowrap">&nbsp;</td>
+                    <td>Defines a 'primary' (blue) colored button</td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap">.secondary</td>
+                    <td class="nowrap">&nbsp;</td>
+                    <td>Defines a 'secondary' (soft blue) colored button</td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap">.(*color*)</td>
+                    <td class="nowrap">&nbsp;</td>
+                    <td>Defines a colored button. Colors can be: <code>red</code>, <code>orange</code>, <code>green</code> or <code>purple</code></td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap">.(*size*)</td>
+                    <td class="nowrap">&nbsp;</td>
+                    <td>Defines a sized button. Sizes can be: <code>small</code> or <code>medium</code>. Default is <code>big</code></td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap">.disabled</td>
+                    <td class="nowrap">&nbsp;</td>
+                    <td>Defines disabled buttons. Simply setting the <code>disabled</code> property will also make button looks like disabled</td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap">.link</td>
+                    <td class="nowrap">&nbsp;</td>
+                    <td>Defines link styled buttons, which means no borders or background colors.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div id="component-cards">
+            <h4>Cards</h4>
+            <p>
+              Cards are important for applications and websites riches in content.
+              
+            </p>
+            <div class="row">
+              <div class="col md-6 px-10">
                 <h6>Simple cards</h6>
-                <div class="sample-container auto-height"> 
-                  <div class="grid">
-                    <div class="row">
-                      <div class="col md-3">&nbsp;</div>
-                      <div class="col md-6"> 
-                        <div class="card">
-                          <div class="card-header">
-                            <h5 class="card-title">Card header</h5>
-                          </div>
-                          <div class="card-body">
-                            <p>Card body</p>
-                          </div>
-                          <div class="card-footer">
-                            <p>Card footer</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col md-3">&nbsp;</div>
+                <div class="sample-container auto-height">
+                  <div class="card place-center">
+                    <div class="card-header">
+                      <h5 class="card-title">Card header</h5>
+                    </div>
+                    <div class="card-body">
+                      <p>Card body</p>
+                    </div>
+                    <div class="card-footer">
+                      <p>Card footer</p>
                     </div>
                   </div>
                 </div>
+                <h5>Code example </h5>
                 <div class="code-sample">
                   <pre class="prettyprint lang-html">&lt;div class="card" &gt;
-   &lt;div class="card-header" &gt;
-     &lt;h5 class="card-title" &gt;Card header&lt;/h5&gt;
-   &lt;/div&gt;
-   &lt;div class="card-body" &gt;
-     &lt;p &gt; Card body&lt;/p&gt;
-   &lt;/div&gt;
-   &lt;div class="card-footer" &gt;
-     &lt;p &gt; Card footer&lt;/p&gt;
-   &lt;/div&gt;
- &lt;/div&gt;
-
+    &lt;div class="card-header" &gt;
+      &lt;h5 class="card-title" &gt;Card header&lt;/h5&gt;
+    &lt;/div&gt;
+    &lt;div class="card-body" &gt;
+      &lt;p &gt; Card body&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="card-footer" &gt;
+      &lt;p &gt; Card footer&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 </pre>
                 </div>
+              </div>
+              <div class="col md-6 px-10">
                 <h6>Image cards</h6>
-                <p>* This example counts on random images from <a href="https://picsum.photos" target="_blank" >picsum.photos</a></p>
-                <div class="sample-container auto-height"> 
-                  <div class="grid">
-                    <div class="row">
-                      <div class="col md-3">&nbsp;</div>
-                      <div class="col md-6"> 
-                        <div class="card card-media">
-                          <div class="card-header"> <img src="https://picsum.photos/350/200" alt="Sample image card">
-                            <h5 class="card-title">Card header with image</h5>
-                          </div>
-                          <div class="card-body">
-                            <p>Card body</p>
-                          </div>
-                          <div class="card-footer">
-                            <p>Card footer</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col md-3">&nbsp;</div>
+                <div class="sample-container auto-height">
+                  <div class="card card-media place-center">
+                    <div class="card-header"> <img src="https://picsum.photos/350/200" alt="Sample image card">
+                      <h5 class="card-title">Card header with image</h5>
+                    </div>
+                    <div class="card-body">
+                      <p>Card body</p>
+                    </div>
+                    <div class="card-footer">
+                      <p>Card footer</p>
                     </div>
                   </div>
                 </div>
+                <h5>Code example </h5>
                 <div class="code-sample">
                   <pre class="prettyprint lang-html">&lt;div class="card card-image" &gt;
-   &lt;div class="card-header" &gt;
-     &lt;img src="https://unsplash.it/350/200" alt="Sample image card" /&gt;
-     &lt;h5 class="card-title" &gt;Card header&lt;/h5&gt;
-   &lt;/div&gt;
-   &lt;div class="card-body" &gt;
-     &lt;p &gt; Card body&lt;/p&gt;
-   &lt;/div&gt;
-   &lt;div class="card-footer" &gt;
-     &lt;p &gt; Card footer&lt;/p&gt;
-   &lt;/div&gt;
- &lt;/div&gt;</pre>
+  &lt;div class="card-header" &gt;
+    &lt;img src="https://unsplash.it/350/200" alt="Sample image card" /&gt;
+    &lt;h5 class="card-title" &gt;Card header&lt;/h5&gt;
+  &lt;/div&gt;
+  &lt;div class="card-body" &gt;
+    &lt;p &gt; Card body&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="card-footer" &gt;
+    &lt;p &gt; Card footer&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+                </div>
+                <p>* Images from <a href="https://picsum.photos" target="_blank" >picsum.photos</a></p>
+              </div>
+            </div>
+          </div>
+          <div id="component-form">
+            <h4>Forms</h4>
+            <p class="align-justify">
+              Probably all websites and apps will contain (at least) one form, so,
+              that's why <code >seed-css</code> has a really simple, easy to use and customizable
+              form field stylesheet. Have a look on the examples below:
+              
+            </p>
+            <h6>Simple elements</h6>
+            <div class="row"> 
+              <div class="col md-5">
+                <div class="field">
+                  <label for="">This is an input text</label>
+                  <input type="text">
+                </div>
+                <div class="field">
+                  <label for="">This is an input text with additional info</label>
+                  <input type="text"><span class="info">This is an additional piece of information.</span>
+                </div>
+                <div class="field has-feedback">
+                  <label for="">This is an input text with error message</label>
+                  <input class="error" type="text"><span class="error">This is an error message!</span>
+                </div>
+                <div class="field has-feedback">
+                  <label for="">This is an input text with success message</label>
+                  <input class="success" type="text"><span class="success">This is a success message!</span>
                 </div>
               </div>
-              <div id="sample-form">
-                <h4>Forms</h4>
-                <p class="align-justify">
-                  Probably all websites and apps will contain (at least) one form, so,
-                  that's why <code class="primary">seed-css</code> has a really simple, easy to use and customizable
-                  form field stylesheet. Have a look on the examples below:
-                  
-                </p>
-                <h6>Simple elements</h6>
-                <div class="grid">
-                  <div class="row">
-                    <div class="col md-6">
-                      <div class="field">
-                        <label for="">This is an input text</label>
-                        <input type="text">
-                      </div>
-                    </div>
-                    <div class="col md-6">
-                      <div class="field">
-                        <label for="">This is an input text with additional info</label>
-                        <input type="text"><span class="info">This is an additional piece of information.</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col md-6">
-                      <div class="field has-feedback">
-                        <label for="">This is an input text with error message</label>
-                        <input type="text" class="error"><span class="error">This is an error message!</span>
-                      </div>
-                    </div>
-                    <div class="col md-6">
-                      <div class="field has-feedback">
-                        <label for="">This is an input text with success message</label>
-                        <input type="text" class="success"><span class="success">This is a success message!</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col md-6">
-                      <div class="field">
-                        <label for="">This is a simple input password</label>
-                        <input type="password">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col md-6">
-                      <div class="field">
-                        <label for="">This is a simple input email</label>
-                        <input type="email" placeholder="name@domain.tld">
-                      </div>
-                    </div>
-                    <div class="col md-6">
-                      <div class="field">
-                        <label for="">This is a simple input URL</label>
-                        <input type="url" placeholder="http://domain.tld">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col md-6">
-                      <div class="field seed-select">
-                        <label for="">This is a select/ dropdown</label>
-                        <select>
-                          <option value="A">Option A</option>
-                          <option value="B">Option B</option>
-                          <option value="C">Option C</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="col md-6">
-                      <div class="field seed-select has-feedback">
-                        <label for="">This is a select/ dropdown with error message</label>
-                        <select class="error">
-                          <option value="A">Option A</option>
-                          <option value="B">Option B</option>
-                          <option value="C">Option C</option>
-                        </select><span class="error">This is an error message!</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col md-6">
-                      <div class="field">
-                        <input type="radio" id="radio-sample-1" name="radio-sample[]">
-                        <label for="radio-sample-1">This is a radio button</label>
-                      </div>
-                      <div class="field">
-                        <input type="radio" id="radio-sample-2" name="radio-sample[]">
-                        <label for="radio-sample-2">This is a radio button</label>
-                      </div>
-                      <div class="field">
-                        <input type="radio" id="radio-sample-3" name="radio-sample[]">
-                        <label for="radio-sample-3">This is a radio button</label>
-                      </div>
-                      <div class="field has-feedback">
-                        <input type="radio" id="radio-sample-4" name="radio-sample[]" class="error">
-                        <label for="radio-sample-4">This is a radio button with error</label>
-                      </div>
-                    </div>
-                    <div class="col md-6">
-                      <div class="field">
-                        <input type="checkbox" id="check-sample-1" name="check-sample[]">
-                        <label for="check-sample-1">This is a checkbox</label>
-                      </div>
-                      <div class="field">
-                        <input type="checkbox" id="check-sample-2" name="check-sample[]">
-                        <label for="check-sample-2">This is a checkbox</label>
-                      </div>
-                      <div class="field">
-                        <input type="checkbox" id="check-sample-3" name="check-sample[]">
-                        <label for="check-sample-3">This is a checkbox</label>
-                      </div>
-                      <div class="field has-feedback">
-                        <input type="checkbox" id="check-sample-4" name="check-sample[]" class="error">
-                        <label for="check-sample-4">This is a checkbox with error</label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col sm-12">
-                      <div class="field">
-                        <label for="">This is a simple textarea</label>
-                        <textarea></textarea>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div class="col md-6 md-offset-1">
+                <h5>Code example </h5>
                 <div class="code-sample">
                   <pre class="prettyprint lang-html">&lt;!-- Example of an input text --&gt;
 &lt;div class="field" &gt;
@@ -962,69 +943,26 @@
   &lt;input type="text" name="..." class="error" &gt;
   &lt;span class="error" &gt; ... &lt;/span&gt;
 &lt;/div&gt;
-
-&lt;!-- Example of an input password --&gt;
-&lt;div class="field" &gt;
-  &lt;label for="..." &gt; ... &lt;/label&gt;
-  &lt;input type="password" name="..." &gt;
-&lt;/div&gt;
-
-&lt;!-- Example of an input email --&gt;
-&lt;div class="field" &gt;
-  &lt;label for="..." &gt; ... &lt;/label&gt;
-  &lt;input type="email" name="..." placehoder="..." &gt;
-&lt;/div&gt;
-
-&lt;!-- Example of a dropdown --&gt;
-&lt;div class="field seed-select" &gt;
-  &lt;label for="..." &gt; ... &lt;/label&gt;
-  &lt;select name="..." &gt;
-    &lt;option value="..." &gt; ... &lt;/option&gt;
-    &lt;option value="..." &gt; ... &lt;/option&gt;
-    &lt;option value="..." &gt; ... &lt;/option&gt;
-  &lt;/select&gt;
-&lt;/div&gt;
-
-&lt;!-- Example of an input radio --&gt;
-&lt;div class="field" &gt;
-  &lt;input type="radio" name="..." &gt;
-  &lt;label for="..." &gt;
-    ...
-  &lt;/label&gt;
-&lt;/div&gt;
-
-&lt;!-- Example of a checkbox --&gt;
-&lt;div class="field" &gt;
-  &lt;input type="checkbox" name="..." &gt;
-  &lt;label for="..." &gt;
-    ...
-  &lt;/label&gt;
-&lt;/div&gt;
-
-&lt;!-- Example of a textarea --&gt;
-&lt;div class="field" &gt;
-  &lt;label for="..." &gt; ... &lt;/label&gt;
-  &lt;textarea name="..." &gt; ... &lt;/textarea&gt;
-&lt;/div&gt;
 </pre>
                 </div>
-                <h6>Grouped elements</h6>
-                <div class="grid">
-                  <div class="row"> 
-                    <div class="col sm12">
-                      <div class="field group"> 
-                        <div class="field"> 
-                          <label for="">First name </label>
-                          <input type="text" id="first_name">
-                        </div>
-                        <div class="field"> 
-                          <label for="">Last name </label>
-                          <input type="text" id="last_name">
-                        </div>
-                      </div>
-                    </div>
+              </div>
+            </div>
+            <h6>Grouped elements</h6>
+            <div class="row"> 
+              <div class="col md-5">
+                <div class="field group"> 
+                  <div class="field"> 
+                    <label for="">First name </label>
+                    <input type="text" id="first_name">
+                  </div>
+                  <div class="field"> 
+                    <label for="">Last name </label>
+                    <input type="text" id="last_name">
                   </div>
                 </div>
+              </div>
+              <div class="col md-6 md-offset-1"> 
+                <h5>Code example </h5>
                 <div class="code-sample">
                   <pre class="prettyprint lang-html">&lt;!-- Example of grouped fields --&gt;
 &lt;div class="field group" &gt;
@@ -1040,140 +978,221 @@
 &lt;/div&gt;
 </pre>
                 </div>
-                <h6>File upload</h6>
-                <div class="grid">          
-                  <div class="row"> 
-                    <div class="col sm12">
-                      <div class="field seed-file">
-                        <input type="file" id="file">
-                        <label for="file"> <span class="input">No file chosen</span><span class="button"> <i class="icon ion-paperclip"></i><span>Attachment</span></span>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
+              </div>
+            </div>
+            <h6>File upload</h6>
+            <div class="alert info">
+              <b >PRO:</b> Make sure that <code >id</code> attribute is set for the <code >file</code> input field and 
+              that it matches the <code>for</code> attribute from its label. Otherwise, it may not work properly.
+              
+            </div><br>
+            <div class="row"> 
+              <div class="col md-5">
+                <div class="field seed-file">
+                  <input type="file" id="file" multiple data-multiple="{count} files">
+                  <label for="file"> <span class="input" data-empty="No file chosen">...</span><span class="cancel"> <span>Remove</span></span><span class="button"> <span>Attach</span></span></label>
                 </div>
+                <p>
+                  Adding the property <code >multiple</code> to the <code >input</code> element 
+                  will enable multiple files selection. Also adding <code >data-multiple="{count} ..."</code>
+                  will customize the selected message.
+                  
+                </p>
                 <div class="code-sample">
+                  <h5>Code example </h5>
                   <pre class="prettyprint lang-html">&lt;!-- Example of file upload field --&gt;
 &lt;div class="field seed-file" &gt;
+  &lt;!-- The actual file input (Required) --&gt;
   &lt;input type="file" name="..." id="..." &gt;
+
+  &lt;!-- Here's the magic (Required) --&gt;
   &lt;label for="..." &gt;
-    &lt;span class="input" &gt; No file chosen &lt;/span&gt;
-    &lt;span class="button" &gt; Attachment &lt;/span&gt;
+    &lt;span class="input" data-empty="No file chosen" &gt; ... &lt;/span&gt;
+
+    &lt;!-- Only visible when file is selected (Optional) --&gt;
+    &lt;span class="cancel" &gt; Remove &lt;/span&gt;
+    &lt;!-- Only visible when there's not file selected (Optional) --&gt;
+    &lt;span class="button" &gt; Attach &lt;/span&gt;
   &lt;/label&gt;
 &lt;/div&gt;
 </pre>
                 </div>
-                <div class="alert info"> 
-                  <p>
-                    <b >PRO:</b> Make sure that <code >id</code> attribute is set for the <code >file</code> input field and 
-                    that it matches the <code>for</code> attribute from its label. Otherwise, it may not work properly.
-                    
-                  </p>
-                </div>
+              </div>
+              <div class="col md-6 md-offset-1">
                 <p>
-                  Exceptionally the file upload component works better with a javascript support. Using javascript 
-                  will create a much better user experience. To make it easier <span class="primary">seed-css</span> 
-                  has a plug-and-play javascript library that you can use, as follows:
+                  Exceptionally the <b >file upload</b> component works better with a javascript support. Using javascript 
+                  will create a much better user experience. <code >Seed-css</code> 
+                  has a plug-and-play javascript library written in VanillaJS:
                   
                 </p>
                 <h6>When using Node JS:</h6>
                 <div class="code-sample">
-                  <pre class="prettyprint lang-javascript">// Import 
-var fileUpload = require('seed-css/dist/seed-css.js');
-
-// Initialize 
-fileUpload();
+                  <pre class="prettyprint lang-javascript">import SeedCSS from 'seed-css'; // Import 
+SeedCSS.fileUpload(); // Initialize 
 </pre>
                 </div>
                 <h6>When using Vanilla JS:</h6>
-                <p>First download the javascript library <a href="#library-download" class="spy ignore" >here</a>. </p>
-                <p>Then, include the following code to your HTML page, right before close the <code >BODY</code> tag.</p>
-                <div class="code-sample"> 
-                  <pre class="prettyprint lang-html">&lt;script src="seed-css.js" &gt;&lt;/script&gt;
+                <div class="code-sample">
+                  <pre class="prettyprint lang-javascript">if (typeof SeedCSS !== 'undefined') {
+  SeedCSS.fileUpload();
+}
 </pre>
                 </div>
+              </div>
+            </div>
+            <h6>Textareas</h6>
+            <div class="alert info">
+              <b >PRO:</b> Include the <code >maxlength</code> attribute if you want to enable the 
+              automatic character typing counter provided by <code >seed-css</code>.
+              
+            </div><br>
+            <div class="row"> 
+              <div class="col md-5">
+                <div class="field">
+                  <label for="">This is a textarea</label>
+                  <textarea maxlength="200"></textarea><span class="info" role="counter" data-template="Typed %a out of %b. Remaining %c." maxlength="255">...</span>
+                </div>
+                <h5>Code example </h5>
                 <div class="code-sample">
-                  <pre class="prettyprint lang-javascript">if (typeof fileUpload !== 'undefined') {
-  fileUpload();
-}</pre>
+                  <pre class="prettyprint lang-html">&lt;!-- Example of a textarea --&gt;
+&lt;div class="field" &gt;
+  &lt;label for="..." &gt; ... &lt;/label&gt;
+  &lt;textarea name="..." &gt; ... &lt;/textarea&gt;
+  &lt;span role="counter" data-template="... %a ... %b ... %c" maxlength="..." &gt; Calculating ... &lt;/span&gt;
+&lt;/div&gt;
+</pre>
                 </div>
               </div>
-              <div id="sample-lists">
-                <h4>Lists</h4>
-                <p class="align-justify">
-                  You can make your lists using <code >DL</code>, <code >UL</code> or <code >OL</code>.
-                  No special classes are necessary. The style will be applied to the natural element.
-                  
-                </p>
-                <div class="grid">
-                  <div class="row">
-                    <div class="col sm-12 md-6">
-                      <p>Ordered</p>
-                      <ol>
-                        <li>First item</li>
-                        <li>Second item
-                          <ol>
-                            <li>Nested first</li>
-                            <li>Nested second ...</li>
-                          </ol>
-                        </li>
-                        <li>Third item</li>
-                      </ol>
-                    </div>
-                    <div class="col sm-12 md-6">
-                      <p>Unordered</p>
-                      <ul>
-                        <li>First item</li>
-                        <li>Second item
-                          <ul>
-                            <li>Nested first</li>
-                            <li>Nested second ...</li>
-                          </ul>
-                        </li>
-                        <li>Third item</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="code-sample">
-                  <pre class="prettyprint lang-html">&lt;!-- replace OL by UL or DL for different list types --&gt;
-&lt;ol &gt;
-  &lt;li &gt; ... &lt;/li&gt;
-  &lt;li &gt; ... &lt;/li&gt;
-  &lt;li &gt; ... &lt;/li&gt;
-&lt;/ol&gt;</pre>
-                </div>
-              </div>
-              <div id="sample-modals">
-                <h4>Modals</h4>
+              <div class="col md-6 md-offset-1"> 
                 <p>
-                  Modals are an essential visual component for a best user experience, allowing the website either to 
-                  make interactions to its visitor or request imediate feedback.
+                  To make it simple and make the user experience better, <code >Seed-css</code> is using 
+                  javascript to automaticaly calculates types chars from textareas. If you use the Javascript 
+                  given, it's basically plug-an-play.
                   
                 </p>
+                <h6>When using Node JS:</h6>
+                <div class="code-sample">
+                  <pre class="prettyprint lang-javascript">import SeedCSS from 'seed-css'; // Import 
+SeedCSS.textArea(); // Initialize 
+</pre>
+                </div>
+                <h6>When using Vanilla JS:</h6>
+                <div class="code-sample">
+                  <pre class="prettyprint lang-javascript">if (typeof SeedCSS !== 'undefined') {
+  SeedCSS.textArea();
+}
+</pre>
+                </div>
+              </div>
+            </div>
+            <div class="row"> 
+              <div class="col md-5">
+                <h6>Dropdowns (Selects)</h6>
+                <div class="field seed-select">
+                  <label for="">This is a select/ dropdown</label>
+                  <select>
+                    <option value="A">Option A</option>
+                    <option value="B">Option B</option>
+                    <option value="C">Option C</option>
+                  </select>
+                </div>
+                <div class="field seed-select has-feedback">
+                  <label for="">This is a select/ dropdown with error message</label>
+                  <select class="error">
+                    <option value="A">Option A</option>
+                    <option value="B">Option B</option>
+                    <option value="C">Option C</option>
+                  </select><span class="error">This is an error message!</span>
+                </div>
+              </div>
+              <div class="col md-6 md-offset-1"> 
+                <h5>Code example </h5>
+                <div class="code-sample">
+                  <pre class="prettyprint lang-html">&lt;!-- Example of a dropdown --&gt;
+&lt;div class="field seed-select" &gt;
+  &lt;label for="..." &gt; ... &lt;/label&gt;
+  &lt;select name="..." &gt;
+    &lt;option value="..." &gt; ... &lt;/option&gt;
+    &lt;option value="..." &gt; ... &lt;/option&gt;
+    &lt;option value="..." &gt; ... &lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;
+
+</pre>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col md-5">
+                <h6>Radio buttons & Checkboxes</h6>
+                <div class="field">
+                  <input type="radio" id="radio-sample-1" name="radio-sample[]">
+                  <label for="radio-sample-1">This is a radio button</label>
+                </div>
+                <div class="field has-feedback">
+                  <input class="error" type="radio" id="radio-sample-2" name="radio-sample[]">
+                  <label for="radio-sample-2">This is a radio button with error</label>
+                </div>
+                <hr>
+                <div class="field">
+                  <input type="checkbox" id="check-sample-1" name="check-sample[]">
+                  <label for="check-sample-1">This is a checkbox</label>
+                </div>
+                <div class="field has-feedback">
+                  <input class="error" type="checkbox" id="check-sample-2" name="check-sample[]">
+                  <label for="check-sample-2">This is a checkbox with error</label>
+                </div>
+              </div>
+              <div class="col md-6 md-offset-1">
+                <h5>Code example </h5>
+                <div class="code-sample">
+                  <pre class="prettyprint lang-html">&lt;!-- Example of an input radio --&gt;
+&lt;div class="field" &gt;
+  &lt;input type="radio" name="..." &gt;
+  &lt;label for="..." &gt;
+    ...
+  &lt;/label&gt;
+&lt;/div&gt;
+
+&lt;!-- Example of a checkbox --&gt;
+&lt;div class="field" &gt;
+  &lt;input type="checkbox" name="..." &gt;
+  &lt;label for="..." &gt;
+    ...
+  &lt;/label&gt;
+&lt;/div&gt;</pre>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="component-modals">
+            <h4>Modals</h4>
+            <div class="row"> 
+              <div class="col md-5">
+                <p class="lead">
+                  A modal window is an essential component for providing the best user experience, it's the easiest
+                  way for requesting imediate feedback from your visitors.
+                  
+                </p>
+              </div>
+              <div class="col md-6 md-offset-1">
                 <div class="sample-container auto-height"> 
                   <div class="align-center">
-                    <button type="button" role="modal" data-modal-id="modal" class="btn btn-primary">Modal Me</button>
-                  </div>
-                  <div id="modal" style="display: none;" class="modal hidden">
-                    <div class="modal-window"> 
-                      <div class="modal-header">
-                        <h3 class="modal-title">Hello world </h3><a href="#" role="modal-dismiss" class="dismiss"><i class="ion-close"></i></a>
-                      </div>
-                      <div class="modal-body">   
-                        <p>This' the body of my overlay modal window.</p>
-                      </div>
-                    </div>
+                    <button class="btn btn-primary" type="button" role="modal" data-modal-id="modal">Click Me</button>
                   </div>
                 </div>
-                <div class="code-sample">
-                  <pre class="prettyprint lang-html">&lt;!-- The trigger --&gt;
+              </div>
+            </div>
+            <div class="code-sample">
+              <pre class="prettyprint lang-html">&lt;!-- The trigger --&gt;
 &lt;button type="button" role="modal" data-modal-id="modal" class="btn-primary" &gt; 
   Open modal
 &lt;/button&gt;
-
-&lt;!-- The modal --&gt;
-&lt;div style="display: none;" class="modal hidden" &gt;
+</pre>
+            </div>
+            <div class="code-sample">
+              <pre class="prettyprint lang-html">&lt;!-- The modal --&gt;
+&lt;div class="modal hide" &gt;
   &lt;div class="modal-window" &gt;
     &lt;div class="modal-header" &gt;
       &lt;h3 class="modal-title" &gt;Hello world&lt;/h3&gt;
@@ -1187,70 +1206,387 @@ fileUpload();
   &lt;/div&gt;
 &lt;/div&gt;
 </pre>
-                </div>
+            </div>
+            <div class="row"> 
+              <div class="col md-5"> 
                 <p>
-                  Exceptionally the overlay modal component works better with javascript support, which will create a much 
-                  better user experience. To make it easier <span class="primary">seed-css</span> 
-                  has a plug-and-play javascript library that you can use, as follows:
+                  Using animation when showing/ hiddng the modal creates an even better experience to 
+                  your users/ visitors. 
                   
                 </p>
+              </div>
+              <div class="col md-6 md-offset-1"> 
+                <p>
+                  To make it simple, <code > seed-css</code> is using 
+                  <a href="https://github.com/daneden/animate.css" target="_blank" >Animate.CSS</a> to apply animation 
+                  to the modal window and, if you use the Javascript given, it's basically plug-an-play.
+                  
+                </p>
+              </div>
+            </div>
+            <div class="row"> 
+              <div class="col md-5"> 
                 <h6>When using Node JS:</h6>
+                <p>Install it using NPM: <code>$ npm install seed-css --save</code> </p>
                 <div class="code-sample">
-                  <pre class="prettyprint lang-javascript">// Import 
-var modal = require('seed-css/dist/seed-css.js');
+                  <pre class="prettyprint lang-javascript">import SeedCSS from 'seed-css'; // Import 
+SeedCSS.modal(); // Initialize
 
-// Initialize 
-modal();
-
-// Optionally assigning it to a variable
-// you can programatically show and hide the modal
-var myModal = modal(); 
-
-myModal.show('#modal');
-myModal.hide('#modal');
 </pre>
                 </div>
+              </div>
+              <div class="col md-6 md-offset-1">
                 <h6>When using Vanilla JS:</h6>
                 <p>First download the javascript library <a href="#library-download" class="spy ignore" >here</a>. </p>
-                <p>Then, include the following code to your HTML page, right before close the <code >BODY</code> tag.</p>
                 <div class="code-sample"> 
                   <pre class="prettyprint lang-html">&lt;script src="seed-css.js" &gt;&lt;/script&gt;
 </pre>
                 </div>
                 <div class="code-sample">
-                  <pre class="prettyprint lang-javascript">if (typeof modal !== 'undefined') {
-  modal();
-  
-  // Optionally assigning it to a variable
-  // you can programatically show and hide the modal
-  var myModal = modal(); 
-
-  myModal.show('#modal');
-  myModal.hide('#modal');
-}</pre>
+                  <pre class="prettyprint lang-javascript">if (typeof SeedCSS !== 'undefined') {
+  SeedCSS.modal();
+}
+</pre>
                 </div>
               </div>
-              <div id="sample-progress">
-                <h4>Progress bar and spinner</h4>
-                <p>
-                  Progress bar and spinner are important elements for UX. If you use it 
-                  accordingly, it's gonna pass the imediate response to the user.
+            </div>
+            <p>Optionally assigning it to a variable you can programatically show and hide the modal.</p>
+            <div class="code-sample">
+              <pre class="prettyprint lang-javascript">const modal = SeedCSS.modal(); 
+modal.get('#modal').show();
+modal.get('#modal').hide();</pre>
+            </div>
+          </div>
+          <div id="component-navgation-bar">
+            <h4>Navigation bar</h4>
+            <p class="lead">
+              Navigation bar is a responsive mobile first component and will fit any screen size. When in small screens 
+              you might want to use it in conjunction to the <code>hide</code> classes from <code>utilities</code> in order to 
+              show and hide the hamburguer menu, when needed.
+              
+            </p>
+            <h5 class="mt-0">Horizontal navigation bar</h5>
+            <p>
+              By default, navigation bar is horizontal in <code>seed-css</code>. 
+              
+            </p>
+            <div class="sample-container auto-height px-20"> 
+              <div class="col mb-20">
+                <h6><code>.default</code></h6>
+                <nav class="default"> 
+                  <ul> 
+                    <li> <a class="logo" href="#"> <span>Logo</span></a></li>
+                    <li> <a href="#">Link 1    </a></li>
+                    <li> <a class="active" href="#">Link 2 (Active)</a></li>
+                    <li class="right"> <a href="#">Link 3 (Placed on right)</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="col mb-20">
+                <h6><code>.primary</code></h6>
+                <nav class="primary"> 
+                  <ul> 
+                    <li> <a class="logo" href="#"> <span>Logo</span></a></li>
+                    <li> <a href="#">Link 1    </a></li>
+                    <li> <a class="active" href="#">Link 2 (Active)</a></li>
+                    <li class="right"> <a href="#">Link 3 (Placed on right)</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="col mb-20">
+                <h6><code>.secondary</code></h6>
+                <nav class="secondary"> 
+                  <ul> 
+                    <li> <a class="logo" href="#"> <span>Logo</span></a></li>
+                    <li> <a href="#">Link 1    </a></li>
+                    <li> <a class="active" href="#">Link 2 (Active)</a></li>
+                    <li class="right"> <a href="#">Link 3 (Placed on right)</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="col mb-20">
+                <h6><code>.red</code></h6>
+                <nav class="red"> 
+                  <ul> 
+                    <li> <a class="logo" href="#"> <span>Logo</span></a></li>
+                    <li> <a href="#">Link 1    </a></li>
+                    <li> <a class="active" href="#">Link 2 (Active)</a></li>
+                    <li class="right"> <a href="#">Link 3 (Placed on right)</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="col mb-20">
+                <h6><code>.orange</code></h6>
+                <nav class="orange"> 
+                  <ul> 
+                    <li> <a class="logo" href="#"> <span>Logo</span></a></li>
+                    <li> <a href="#">Link 1    </a></li>
+                    <li> <a class="active" href="#">Link 2 (Active)</a></li>
+                    <li class="right"> <a href="#">Link 3 (Placed on right)</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="col mb-20">
+                <h6><code>.green</code></h6>
+                <nav class="green"> 
+                  <ul> 
+                    <li> <a class="logo" href="#"> <span>Logo</span></a></li>
+                    <li> <a href="#">Link 1    </a></li>
+                    <li> <a class="active" href="#">Link 2 (Active)</a></li>
+                    <li class="right"> <a href="#">Link 3 (Placed on right)</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="col mb-20">
+                <h6><code>.purple</code></h6>
+                <nav class="purple"> 
+                  <ul> 
+                    <li> <a class="logo" href="#"> <span>Logo</span></a></li>
+                    <li> <a href="#">Link 1    </a></li>
+                    <li> <a class="active" href="#">Link 2 (Active)</a></li>
+                    <li class="right"> <a href="#">Link 3 (Placed on right)</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="col mb-20">
+                <h6><code>.dark</code></h6>
+                <nav class="dark"> 
+                  <ul> 
+                    <li> <a class="logo" href="#"> <span>Logo</span></a></li>
+                    <li> <a href="#">Link 1    </a></li>
+                    <li> <a class="active" href="#">Link 2 (Active)</a></li>
+                    <li class="right"> <a href="#">Link 3 (Placed on right)</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="col mb-20">
+                <h6><code>.transparent</code></h6>
+                <nav class="transparent"> 
+                  <ul> 
+                    <li> <a class="logo" href="#"> <span>Logo</span></a></li>
+                    <li> <a href="#">Link 1    </a></li>
+                    <li> <a class="active" href="#">Link 2 (Active)</a></li>
+                    <li class="right"> <a href="#">Link 3 (Placed on right)</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div><br>
+            <div class="row"> 
+              <div class="col md-5">
+                <h5 class="mt-0">Vertical navigation bar</h5>
+                <p class="lead">
+                  However, you can still define vertical navigation bars depending on your needs. For that, 
+                  you just need to add the class <code >.vertical</code> to the navigation bar element.
                   
                 </p>
-                <h6>Progress bar</h6>
+              </div>
+              <div class="col md-5 md-offset-1"> 
+                <div class="sample-container auto-height px-20">
+                  <nav class="vertical"> 
+                    <ul>              
+                      <li> <a class="logo" href="#"> <span>Logo</span></a></li>
+                      <li> <a href="#">Link 1    </a></li>
+                      <li> <a href="#">Link 2    </a></li>
+                      <li> <a class="active" href="#">Link 3 (Active)</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <h5>Code example</h5>
+            <div class="code-sample">
+              <pre class="prettyprint lang-html">&lt;!-- The Navigation bar --&gt;
+&lt;nav &gt; 
+  &lt;ul &gt; 
+    &lt;li &gt; 
+      &lt;!-- Use .logo class for a specific styling for logos --&gt;
+      &lt;a href="#" class="logo" &gt; ... &lt;/a&gt;
+    &lt;/li&gt;
+
+    &lt;li &gt; 
+      &lt;!-- Use .active class when the item is active in the navbar --&gt;
+      &lt;a href="#" class="active" &gt; ... &lt;/a&gt;
+    &lt;/li&gt;
+
+    &lt;li &gt; 
+      &lt;a href="#" &gt; ... &lt;/a&gt;
+    &lt;/li&gt;
+
+    &lt;!-- Use .right class always you wanna place it on the right side --&gt;
+    &lt;li class="right" &gt; 
+      &lt;a href="#" &gt; ... &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+</pre>
+            </div>
+            <h5>Available classes</h5>
+            <div class="table-responsive">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Class</th>
+                    <th>Remarks</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="nowrap">.vertical</td>
+                    <td>Forces the navigation bar to be vertical.</td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap">.default OR NONE</td>
+                    <td>Sets the <code >default</code> light theme.</td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap">.primary</td>
+                    <td>Sets the <code >primary</code> theme.</td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap">.secondary</td>
+                    <td>Sets the <code >secondary</code> theme.</td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap">.red</td>
+                    <td>Sets the <code >red</code> theme.</td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap">.orange</td>
+                    <td>Sets the <code >orange</code> theme.</td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap">.green</td>
+                    <td>Sets the <code >green</code> theme.</td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap">.purple</td>
+                    <td>Sets the <code >purple</code> theme.</td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap">.dark</td>
+                    <td>Sets the <code >dark</code> theme.</td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap">.transparent</td>
+                    <td>Sets the <code >transparent</code> theme.</td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap">.logo</td>
+                    <td>Creates a special styling for <code >&lt;a /&gt;</code> tags in the navigation bar.</td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap">.right</td>
+                    <td>Places the <code >&lt;li /&gt;</code> tags to the right in the navigatin bar.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div id="component-offcanvas">
+            <h4>Off canvas menu</h4>
+            <p class="lead">
+              An off-canvas is that kind of component very useful to accomodate hidden navigation menus, 
+              optionally visible when the page is seeing on desktops, but essential when the 
+              viewport is as small as a mobile device. 
+              
+            </p>
+            <div class="sample-container auto-height"> 
+              <div class="row"> 
+                <div class="col md-6 align-center">
+                  <button class="btn btn-primary" type="button" role="offcanvas" data-id="sidenav"> <span>Click me to </span><span class="open">Open</span><span class="close">Close</span></button>
+                </div>
+                <div class="col md-5 px-20">
+                  <div class="field seed-select">
+                    <label for="offcanvas-style"></label>
+                    <select id="offcanvas-style"> 
+                      <option value="aside">Aside (default)</option>
+                      <option value="overlay">Overlay</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div><br>
+            <p>
+              <code>seed-css</code> brings two different styles of off-canvas: <code>aside</code> (default) and 
+              <code>overlay</code>. In order to make the off-canvas work properly, it uses an arrangement of 
+              special markups and (as another exception to the rule) a JavaScript helper.
+              
+            </p>
+            <div class="row"> 
+              <div class="col md-6"> 
+                <h5>Code example</h5>
+                <div class="code-sample">
+                  <pre class="prettyprint lang-html">&lt;!-- The off-canvas --&gt;
+&lt;aside class="offcanvas" id="mycanvas"  &gt; 
+  ...
+&lt;/aside&gt;
+
+&lt;!-- The 'on-canvas' content wrapper --&gt;
+&lt;main class="oncanvas"  &gt; 
+  ...
+&lt;/main&gt;
+
+&lt;!-- The trigger --&gt;
+&lt;button role="offcanvas" data-id="mycanvas" &gt; 
+  ...
+&lt;/button&gt;
+</pre>
+                </div>
+              </div>
+              <div class="col md-5 md-offset-1"> 
+                <h6 class="mt-0">When using Node JS:</h6>
+                <p>Install it using NPM: <code>$ npm install seed-css --save</code> </p>
+                <div class="code-sample">
+                  <pre class="prettyprint lang-javascript">import SeedCSS from 'seed-css'; // Import 
+SeedCSS.offCanvas(); // Initialize
+</pre>
+                </div>
+                <h6>When using Vanilla JS:</h6>
+                <p>First download the javascript library <a href="#library-download" class="spy ignore" >here</a>. </p>
+                <div class="code-sample"> 
+                  <pre class="prettyprint lang-html">&lt;script src="seed-css.js" &gt;&lt;/script&gt;
+</pre>
+                </div>
+                <div class="code-sample">
+                  <pre class="prettyprint lang-javascript">if (typeof SeedCSS !== 'undefined') {
+  SeedCSS.offCanvas();
+}
+</pre>
+                </div>
+              </div>
+            </div>
+            <p>Optionally assigning it to a variable you can programatically show and hide the modal.</p>
+            <div class="code-sample">
+              <pre class="prettyprint lang-javascript">const canvas = SeedCSS.offCanvas(); 
+canvas.get('#mycanvas').open();
+canvas.get('#mycanvas').close();</pre>
+            </div>
+          </div>
+          <div id="component-progress">
+            <h4>Progress bars</h4>
+            <p>
+              Progress bar is an important elements for UX. If you use it 
+              accordingly, it's gonna pass the imediate response to the user.
+              
+            </p>
+            <div class="row">
+              <div class="col md-5">
                 <p>Fixed progress </p>
                 <div class="align-center">
                   <div class="progress-bar">
-                    <div style="width: 60%" class="bar"></div>
+                    <div class="bar" style="width: 60%"></div>
                     <div class="label">60%</div>
                   </div>
-                </div>
+                </div><br>
                 <p>Undefined progress </p>
                 <div class="align-center">
                   <div class="progress-bar undefined">
                     <div class="bar"></div>
                   </div>
-                </div><br>
+                </div>
+              </div>
+              <div class="col md-6 md-offset-1">
+                <h5>Code example</h5>
                 <div class="code-sample">
                   <pre class="prettyprint lang-html">&lt;!-- Fixed progress --&gt;
 &lt;div class="progress-bar" &gt;
@@ -1261,277 +1597,271 @@ myModal.hide('#modal');
 &lt;!-- Undefined progress --&gt;
 &lt;div class="progress-bar undefined" &gt;
   &lt;div class="bar" &gt;&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+&lt;/div&gt;</pre>
                 </div>
-                <h6>Spinner </h6>
-                <div>
-                  <div class="grid">
-                    <div class="row">
-                      <div class="col md-4">
-                        <h6>Default</h6>
-                        <div class="spinner">
-                          <div class="circle"></div>
-                        </div>
-                      </div>
-                      <div class="col md-4">
-                        <h6>Medium</h6>
-                        <div class="spinner medium">
-                          <div class="circle"></div>
-                        </div>
-                      </div>
-                      <div class="col md-4">
-                        <h6>Big</h6>
-                        <div class="spinner big">
-                          <div class="circle"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div><br>
-                  <div class="code-sample">
-                    <pre class="prettyprint lang-html">&lt;!-- Default --&gt;
-&lt;div class="spinner" &gt;
-  &lt;div class="circle" &gt;&lt;/div&gt;
-&lt;/div&gt;
+              </div>
+            </div>
+          </div>
+          <div id="component-spinners">
+            <h4>Spinners</h4>
+            <p class="lead">The spinner is offered in three different sizes: <code >default</code>, <code >medium</code> and <code >big</code>.</p>
+            <p>
+              Also, the spinner animation speed can be controled with the classes: <code >medium</code> (0.85s) and <code >fast</code> (0.5s),
+              while the normal speed animation will take 1.3s to complete the course.
+              
+            </p>
+            <p>
+              If for some reason you want to hide the "loading" message, just include the <code >lean</code> class or simply do not
+              include the <code >data-label</code> property.
+              
+            </p>
+            <div class="row">
+              <div class="col md-5">
+                <h6>Default</h6>
+                <div class="spinner" data-label="Loading ..."></div><br>
+                <h6>Medium <code >.medium</code></h6>
+                <div class="spinner medium medium" data-label="Loading ..."></div><br>
+                <h6>Big <code >.big</code></h6>
+                <div class="spinner big fast" data-label="Loading ..."></div>
+              </div>
+              <div class="col md-6 md-offset-1">
+                <h5>Code example</h5>
+                <div class="code-sample">
+                  <pre class="prettyprint lang-html">&lt;!-- Default --&gt;
+&lt;div class="spinner" data-label="Loading ..." &gt;&lt;/div&gt;
+
+&lt;!-- Default, no label --&gt;
+&lt;div class="spinner lean" data-label="Loading ..." &gt;&lt;/div&gt;
+&lt;div class="spinner" &gt;&lt;/div&gt;
 
 &lt;!-- Medium --&gt;
-&lt;div class="spinner medium" &gt;
-  &lt;div class="circle" &gt;&lt;/div&gt;
-&lt;/div&gt;
+&lt;div class="spinner medium" data-label="Loading ..." &gt;&lt;/div&gt;
 
 &lt;!-- Big --&gt;
-&lt;div class="spinner big" &gt;
-  &lt;div class="circle" &gt;&lt;/div&gt;
-&lt;/div&gt;</pre>
-                  </div>
+&lt;div class="spinner big" data-label="Loading ..." &gt;&lt;/div&gt;</pre>
                 </div>
               </div>
-              <div id="sample-side-panel">
-                <h4>Side panel</h4>
-                <p>Coming soon ...</p>
+            </div>
+          </div>
+          <div id="component-tables">
+            <h4>Tables</h4>
+            <p class="lead">
+              Tables are intended to be used for display data.
+              
+            </p>
+            <p class="align-justify">
+              In that matter, <code >seed-css</code> has very special classes to allow you show
+              your data in a very clean and readable way. Basically, just using a
+              default markup for data you'll get a styled table, but, you also can
+              make use of special classes to make your tables even more readable.
+              
+            </p>
+            <p class="camel-case"><b>default</b></p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>John Wayne</td>
+                  <td>john@wayne.com</td>
+                  <td>123-4567-8900</td>
+                </tr>
+                <tr>
+                  <td>John Wayne</td>
+                  <td>john@wayne.com</td>
+                  <td>123-4567-8900</td>
+                </tr>
+                <tr>
+                  <td>John Wayne</td>
+                  <td>john@wayne.com</td>
+                  <td>123-4567-8900</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tfoot>
+            </table>
+            <h5>Code example</h5>
+            <div class="code-sample">
+              <pre class="prettyprint lang-html">&lt;table class="" &gt;
+  &lt;tbody &gt;
+    &lt;tr &gt;
+      &lt;td &gt; ... &lt;/td&gt;
+      &lt;td &gt; ... &lt;/td&gt;
+      &lt;td &gt; ... &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+            </div>
+            <p class="camel-case"><b>stripped</b></p>
+            <table class="stripped">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>John Wayne</td>
+                  <td>john@wayne.com</td>
+                  <td>123-4567-8900</td>
+                </tr>
+                <tr>
+                  <td>John Wayne</td>
+                  <td>john@wayne.com</td>
+                  <td>123-4567-8900</td>
+                </tr>
+                <tr>
+                  <td>John Wayne</td>
+                  <td>john@wayne.com</td>
+                  <td>123-4567-8900</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tfoot>
+            </table>
+            <h5>Code example</h5>
+            <div class="code-sample">
+              <pre class="prettyprint lang-html">&lt;table class="stripped" &gt;
+  &lt;tbody &gt;
+    &lt;tr &gt;
+      &lt;td &gt; ... &lt;/td&gt;
+      &lt;td &gt; ... &lt;/td&gt;
+      &lt;td &gt; ... &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+            </div>
+            <p class="camel-case"><b>hovered</b></p>
+            <table class="hovered">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>John Wayne</td>
+                  <td>john@wayne.com</td>
+                  <td>123-4567-8900</td>
+                </tr>
+                <tr>
+                  <td>John Wayne</td>
+                  <td>john@wayne.com</td>
+                  <td>123-4567-8900</td>
+                </tr>
+                <tr>
+                  <td>John Wayne</td>
+                  <td>john@wayne.com</td>
+                  <td>123-4567-8900</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tfoot>
+            </table>
+            <h5>Code example</h5>
+            <div class="code-sample">
+              <pre class="prettyprint lang-html">&lt;table class="hovered" &gt;
+  &lt;tbody &gt;
+    &lt;tr &gt;
+      &lt;td &gt; ... &lt;/td&gt;
+      &lt;td &gt; ... &lt;/td&gt;
+      &lt;td &gt; ... &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+            </div>
+            <p class="camel-case"><b>bordered</b></p>
+            <table class="bordered">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>John Wayne</td>
+                  <td>john@wayne.com</td>
+                  <td>123-4567-8900</td>
+                </tr>
+                <tr>
+                  <td>John Wayne</td>
+                  <td>john@wayne.com</td>
+                  <td>123-4567-8900</td>
+                </tr>
+                <tr>
+                  <td>John Wayne</td>
+                  <td>john@wayne.com</td>
+                  <td>123-4567-8900</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tfoot>
+            </table>
+            <h5>Code example</h5>
+            <div class="code-sample">
+              <pre class="prettyprint lang-html">&lt;table class="bordered" &gt;
+  &lt;tbody &gt;
+    &lt;tr &gt;
+      &lt;td &gt; ... &lt;/td&gt;
+      &lt;td &gt; ... &lt;/td&gt;
+      &lt;td &gt; ... &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+            </div>
+          </div>
+          <div id="component-tooltips">
+            <h4>Tooltips</h4>
+            <p class="lead">
+              Tooltips are an important part of UX, where you can give user additional information about
+              a component  placed on his/her screen. <code >Seed-css</code> gives you a
+              simple but very efficient tooltip, which doesn't even need javascript.
+              
+            </p><br><br>
+            <div class="tooltips">
+              <div class="grid"> 
+                <div class="row"> 
+                  <div class="col md-3 sm-6 align-center"><span class="with-tooltip right" tooltip="Right tooltip">Hover here!</span></div>
+                  <div class="col md-3 sm-6 align-center"><span class="with-tooltip top" tooltip="Top tooltip">Hover here!</span></div>
+                  <div class="col md-3 sm-6 align-center"><span class="with-tooltip bottom" tooltip="Bottom tooltip">Hover here!</span></div>
+                  <div class="col md-3 sm-6 align-center"><span class="with-tooltip left" tooltip="Left tooltip.">Hover here!</span></div>
+                </div>
               </div>
-              <div id="sample-tables">
-                <h4>Tables</h4>
-                <p class="align-justify">
-                  Tables are supposed to be used for display data.
-                  
-                </p>
-                <p class="align-justify">
-                  In that matter, <code class="primary">seed-css</code> has very special classes to allow you show
-                  your data in a very clean and readable way. Basically, just using a
-                  default markup for data you'll get a styled table, but, you also can
-                  make use of special classes to make your tables even more readable.
-                  
-                </p>
-                <p class="camel-case"><b>default</b></p>
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Name</th>
-                      <th>Email</th>
-                      <th>Phone</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>John Wayne</td>
-                      <td>john@wayne.com</td>
-                      <td>123-4567-8900</td>
-                    </tr>
-                    <tr>
-                      <td>John Wayne</td>
-                      <td>john@wayne.com</td>
-                      <td>123-4567-8900</td>
-                    </tr>
-                    <tr>
-                      <td>John Wayne</td>
-                      <td>john@wayne.com</td>
-                      <td>123-4567-8900</td>
-                    </tr>
-                  </tbody>
-                  <tfoot>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                  </tfoot>
-                </table>
-                <div class="code-sample">
-                  <pre class="prettyprint lang-html">&lt;table class="" &gt;
-  &lt;tbody &gt;
-    &lt;tr &gt;
-      &lt;td &gt; ... &lt;/td&gt;
-      &lt;td &gt; ... &lt;/td&gt;
-      &lt;td &gt; ... &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</pre>
-                </div>
-                <p class="camel-case"><b>stripped</b></p>
-                <table class="stripped">
-                  <thead>
-                    <tr>
-                      <th>Name</th>
-                      <th>Email</th>
-                      <th>Phone</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>John Wayne</td>
-                      <td>john@wayne.com</td>
-                      <td>123-4567-8900</td>
-                    </tr>
-                    <tr>
-                      <td>John Wayne</td>
-                      <td>john@wayne.com</td>
-                      <td>123-4567-8900</td>
-                    </tr>
-                    <tr>
-                      <td>John Wayne</td>
-                      <td>john@wayne.com</td>
-                      <td>123-4567-8900</td>
-                    </tr>
-                  </tbody>
-                  <tfoot>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                  </tfoot>
-                </table>
-                <div class="code-sample">
-                  <pre class="prettyprint lang-html">&lt;table class="stripped" &gt;
-  &lt;tbody &gt;
-    &lt;tr &gt;
-      &lt;td &gt; ... &lt;/td&gt;
-      &lt;td &gt; ... &lt;/td&gt;
-      &lt;td &gt; ... &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</pre>
-                </div>
-                <p class="camel-case"><b>hovered</b></p>
-                <table class="hovered">
-                  <thead>
-                    <tr>
-                      <th>Name</th>
-                      <th>Email</th>
-                      <th>Phone</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>John Wayne</td>
-                      <td>john@wayne.com</td>
-                      <td>123-4567-8900</td>
-                    </tr>
-                    <tr>
-                      <td>John Wayne</td>
-                      <td>john@wayne.com</td>
-                      <td>123-4567-8900</td>
-                    </tr>
-                    <tr>
-                      <td>John Wayne</td>
-                      <td>john@wayne.com</td>
-                      <td>123-4567-8900</td>
-                    </tr>
-                  </tbody>
-                  <tfoot>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                  </tfoot>
-                </table>
-                <div class="code-sample">
-                  <pre class="prettyprint lang-html">&lt;table class="hovered" &gt;
-  &lt;tbody &gt;
-    &lt;tr &gt;
-      &lt;td &gt; ... &lt;/td&gt;
-      &lt;td &gt; ... &lt;/td&gt;
-      &lt;td &gt; ... &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</pre>
-                </div>
-                <p class="camel-case"><b>bordered</b></p>
-                <table class="bordered">
-                  <thead>
-                    <tr>
-                      <th>Name</th>
-                      <th>Email</th>
-                      <th>Phone</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>John Wayne</td>
-                      <td>john@wayne.com</td>
-                      <td>123-4567-8900</td>
-                    </tr>
-                    <tr>
-                      <td>John Wayne</td>
-                      <td>john@wayne.com</td>
-                      <td>123-4567-8900</td>
-                    </tr>
-                    <tr>
-                      <td>John Wayne</td>
-                      <td>john@wayne.com</td>
-                      <td>123-4567-8900</td>
-                    </tr>
-                  </tbody>
-                  <tfoot>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                  </tfoot>
-                </table>
-                <div class="code-sample">
-                  <pre class="prettyprint lang-html">&lt;table class="bordered" &gt;
-  &lt;tbody &gt;
-    &lt;tr &gt;
-      &lt;td &gt; ... &lt;/td&gt;
-      &lt;td &gt; ... &lt;/td&gt;
-      &lt;td &gt; ... &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</pre>
-                </div>
-              </div>
-              <div id="sample-tooltips">
-                <h4>Tooltips</h4>
-                <p class="align-justify">
-                  Tooltips are an important part of UX, where you can give user additional information about
-                  a component  placed on his/her screen. <code class="primary">Seed-css</code> gives you a
-                  simple but very efficient tooltip, which doesn't even need javascript.
-                  
-                </p>
-                <div class="tooltips">
-                  <div class="grid">
-                    <div class="row">
-                      <div class="col md-3">
-                        <p class="with-tooltip show align-center"><span>A</span><span class="tooltip top">Top tooltip</span></p>
-                      </div>
-                      <div class="col md-3">
-                        <p class="with-tooltip show align-center"><span>A</span><span class="tooltip right">Right tooltip</span></p>
-                      </div>
-                      <div class="col md-3">
-                        <p class="with-tooltip show align-center"><span>A</span><span class="tooltip">Bottom tooltip</span></p>
-                      </div>
-                      <div class="col md-3">
-                        <p class="with-tooltip show align-center"><span>A</span><span class="tooltip left">Left tooltip</span></p>
-                      </div>
-                    </div>
-                  </div>
-                </div><br>
-                <div class="code-sample">
-                  <pre class="prettyprint lang-html">&lt;!-- top --&gt;
+            </div>
+            <h5>Code example</h5>
+            <div class="code-sample">
+              <pre class="prettyprint lang-html">&lt;!-- top --&gt;
 &lt;div class="with-tooltip" &gt;
   ...
   &lt;span class="tooltip top" &gt; ...  &lt;/span&gt;
@@ -1554,239 +1884,460 @@ myModal.hide('#modal');
   ...
   &lt;span class="tooltip left" &gt; ...  &lt;/span&gt;
 &lt;/div&gt;</pre>
-                </div>
+            </div>
+          </div>
+          <h2 id="examples-utilities">Utilities</h2>
+          <div id="component-utilities">
+            <p class="lead">
+              Utilities are classes that can help you to easily show up your data
+              or content in a beatiful way. It can be used combined with other
+              available classes.
+              
+            </p>
+            <h5>Text alignment</h5>
+            <div class="row">
+              <div class="col md-5 sm-12">
+                <p class="align-left">This is left aligned</p>
+                <div class="code-sample">
+                  <pre class="prettyprint lang-html">&lt;p class="align-left" &gt; ... &lt;/p&gt;
+</pre>
+                </div><br>
+                <p class="align-center">This is center aligned</p>
+                <div class="code-sample">
+                  <pre class="prettyprint lang-html">&lt;p class="align-center" &gt; ... &lt;/p&gt;
+</pre>
+                </div><br>
               </div>
-              <div id="sample-utilities">
-                <h4>Utilities</h4>
-                <p>
-                  Utilities are classes that can help you to easily show up your data
-                  or content in a beatiful way.<br >It can be used combined with other
-                  available classes.
+              <div class="col sm-12 md-6 md-offset-1">
+                <p class="align-right">This is right aligned</p>
+                <div class="code-sample">
+                  <pre class="prettyprint lang-html">&lt;p class="align-right" &gt; ... &lt;/p&gt;
+</pre>
+                </div><br>
+                <p class="align-justify">
+                  This is justified. This is justified. This is justified. This is justified.
+                  This is justified. This is justified. This is justified. This is justified.
                   
                 </p>
-                <div class="grid">
+                <div class="code-sample">
+                  <pre class="prettyprint lang-html">&lt;p class="align-justify" &gt; ... &lt;/p&gt;
+</pre>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Class</th>
+                      <th>Remarks</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="nowrap">.align-left</td>
+                      <td>Aligns on left</td>
+                    </tr>
+                    <tr>
+                      <td class="nowrap">.align-right</td>
+                      <td>Aligns on right</td>
+                    </tr>
+                    <tr>
+                      <td class="nowrap">.align-center</td>
+                      <td>Aligns on center</td>
+                    </tr>
+                    <tr>
+                      <td class="nowrap">.align-justify</td>
+                      <td>Aligns justified</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div><br>
+            <h5>Text transform</h5>
+            <div class="row">
+              <div class="col">
+                <div class="code-sample bg-white">
+                  <p class="nowrap">
+                    This text should not break when the screen width is smaller then
+                    the text length.
+                    
+                  </p>
+                </div>
+                <div class="code-sample">
+                  <pre class="prettyprint lang-html">&lt;p class="nowrap" &gt; ... &lt;/p&gt;
+</pre>
+                </div>
+              </div>
+            </div><br>
+            <div class="row">
+              <div class="col md-5">
+                <p class="camel-case">
+                  this text should be camel case.
+                  
+                </p>
+                <div class="code-sample">
+                  <pre class="prettyprint lang-html">&lt;p class="camel-case" &gt; ... &lt;/p&gt;
+</pre>
+                </div>
+              </div>
+              <div class="col md-6 md-offset-1">
+                <p class="uc-first">
+                  only the first character of this text should be capitalized.
+                  
+                </p>
+                <div class="code-sample">
+                  <pre class="prettyprint lang-html">&lt;p class="uc-first" &gt; ... &lt;/p&gt;
+</pre>
+                </div>
+              </div>
+            </div><br>
+            <div class="row">
+              <div class="col md-5">
+                <p class="upper-case">
+                  All letters of this text should be capitalized.
+                  
+                </p>
+                <div class="code-sample">
+                  <pre class="prettyprint lang-html">&lt;p class="upper-case" &gt; ... &lt;/p&gt;
+</pre>
+                </div>
+              </div>
+              <div class="col md-6 md-offset-1">
+                <p class="lower-case">
+                  All letters of this text should be lower case.
+                  
+                </p>
+                <div class="code-sample">
+                  <pre class="prettyprint lang-html">&lt;p class="lower-case" &gt; ... &lt;/p&gt;
+</pre>
+                </div>
+              </div>
+            </div><br>
+            <div class="row">
+              <div class="col">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Class</th>
+                      <th>Remarks</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="nowrap">.nowrap</td>
+                      <td>Forces the HTML to ignore white spaces when wrapping lines.</td>
+                    </tr>
+                    <tr>
+                      <td class="nowrap">.camel-case</td>
+                      <td>Capitalize the first character of any word</td>
+                    </tr>
+                    <tr>
+                      <td class="nowrap">.uc-first</td>
+                      <td>Capitalize the first character only from the first word</td>
+                    </tr>
+                    <tr>
+                      <td class="nowrap">.upper-case</td>
+                      <td>Capitalize all character</td>
+                    </tr>
+                    <tr>
+                      <td class="nowrap">.lower-case</td>
+                      <td>Make all letters in lower case</td>
+                    </tr>
+                    <tr>
+                      <td class="nowrap">.lead</td>
+                      <td>Make the text 30% bigger</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div><br>
+            <h5>Element Floating</h5>
+            <p>Floating elements are very hepful for quick element alignments.</p><br>
+            <div class="row">
+              <div class="col md-5"><span class="place-center">This is floating center</span><br><br>
+                <p><span class="place-left">This is floating left </span><span class="place-right">This is floating right </span><span style="clear: both;"></span></p>
+              </div>
+              <div class="col md-6 md-offset-1">
+                <div class="code-sample">
+                  <pre class="prettyprint lang-html">&lt;span class="place-left" &gt; ... &lt;/span&gt;
+&lt;span class="place-right" &gt; ... &lt;/span&gt;
+&lt;span class="place-center" &gt; ... &lt;/span&gt;
+</pre>
+                </div>
+              </div>
+            </div><br>
+            <div class="row">
+              <div class="col">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Class</th>
+                      <th>Remarks</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="nowrap">.place-left</td>
+                      <td>Places an element on left</td>
+                    </tr>
+                    <tr>
+                      <td class="nowrap">.place-right</td>
+                      <td>Places an element on right</td>
+                    </tr>
+                    <tr>
+                      <td class="nowrap">.place-center</td>
+                      <td>Places an element on center</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div><br>
+            <h5>Margins & Paddings</h5>
+            <p>
+              Every CSS boilerplate has its own set of standard styling defined, and on that matter, <code >seed-css</code> 
+              is not too different! It comes with pre-defined element styles that helps speed-up the development process. 
+              However, it also brings you a simple way for quickly customize any <code >margin</code> and/or <code >padding</code> 
+              definition for any element.
+              
+            </p>
+            <h6>Margins</h6>
+            <div class="row"> 
+              <div class="col md-5">
+                <div class="margins">
                   <div class="row">
-                    <div class="col sm-12">
-                      <h5>Text alignment</h5>
+                    <div class="col sm-6 align-center">
+                      <div class="block m-10 ml-0">.ml-0</div>
+                    </div>
+                    <div class="col sm-6 align-center">
+                      <div class="block m-10 mt-0">.mt-0</div>
+                    </div>
+                    <div class="col sm-6 align-center">
+                      <div class="block m-10 mr-0">.mr-0</div>
+                    </div>
+                    <div class="col sm-6 align-center">
+                      <div class="block m-10 mb-0">.mb-0</div>
                     </div>
                   </div>
+                </div>
+              </div>
+              <div class="col md-6 md-offset-1">
+                <div class="code-sample">
+                  <pre class="prettyprint lang-html">&lt;!-- Removes margin left --&gt;
+&lt;div class="ml-0" &gt; ... &lt;/div&gt;
+&lt;!-- Removes margin top --&gt;
+&lt;div class="mt-0" &gt; ... &lt;/div&gt;
+&lt;!-- Removes margin right --&gt;
+&lt;div class="mr-0" &gt; ... &lt;/div&gt;
+&lt;!-- Removes margin bottom --&gt;
+&lt;div class="mb-0" &gt; ... &lt;/div&gt;
+</pre>
+                </div>
+              </div>
+            </div><br>
+            <p>Possible value range goes from <code >0</code> to <code >50</code>, in steps of <code >5</code>.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Class</th>
+                  <th>Remarks</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="nowrap">.m-(*number*)</td>
+                  <td>Defines what margin size should be applied to an element, all sides at same time. </td>
+                </tr>
+                <tr>
+                  <td class="nowrap">.mx-(*number*)</td>
+                  <td>
+                    Defines what margin size should be applied to both the <code >left</code> and <code >right</code> 
+                    side from the element at same time. 
+                  </td>
+                </tr>
+                <tr>
+                  <td class="nowrap">.my-(*number*)</td>
+                  <td>
+                    Defines what margin size should be applied to both the <code >top</code> and <code >bottom</code> 
+                    side from the element at same time.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="nowrap">.ml-(*number*)</td>
+                  <td>Defines what margin size should be applied to the <code >left</code> side of an element.</td>
+                </tr>
+                <tr>
+                  <td class="nowrap">.mt-(*number*)</td>
+                  <td>Defines what margin size should be applied to the <code >top</code> side of an element.</td>
+                </tr>
+                <tr>
+                  <td class="nowrap">.mr-(*number*)</td>
+                  <td>Defines what margin size should be applied to the <code >right</code> side of an element.</td>
+                </tr>
+                <tr>
+                  <td class="nowrap">.mb-(*number*)</td>
+                  <td>Defines what margin size should be applied to the <code >bottom</code> side of an element.</td>
+                </tr>
+              </tbody>
+            </table><br>
+            <h6>Paddings</h6>
+            <div class="row"> 
+              <div class="col md-5">
+                <div class="paddings">
                   <div class="row">
-                    <div class="col md-6">
-                      <p class="align-left">This is left aligned</p>
-                      <div class="code-sample">
-                        <pre class="prettyprint lang-html">&lt;p class="align-left" &gt; ... &lt;/p&gt;
-</pre>
-                      </div><br>
-                      <p class="align-center">This is center aligned</p>
-                      <div class="code-sample">
-                        <pre class="prettyprint lang-html">&lt;p class="align-center" &gt; ... &lt;/p&gt;
-</pre>
-                      </div><br>
+                    <div class="col sm-6 align-center">
+                      <div class="block p-10 pl-0">.pl-0</div>
                     </div>
-                    <div class="col md-6">
-                      <p class="align-right">This is right aligned</p>
-                      <div class="code-sample">
-                        <pre class="prettyprint lang-html">&lt;p class="align-right" &gt; ... &lt;/p&gt;
-</pre>
-                      </div><br>
-                      <p class="align-justify">
-                        This is justified. This is justified. This is justified. This is justified.
-                        This is justified. This is justified. This is justified. This is justified.
-                        
-                      </p>
-                      <div class="code-sample">
-                        <pre class="prettyprint lang-html">&lt;p class="align-justify" &gt; ... &lt;/p&gt;
-</pre>
-                      </div>
+                    <div class="col sm-6 align-center">
+                      <div class="block p-10 pt-0">.pt-0</div>
+                    </div>
+                    <div class="col sm-6 align-center">
+                      <div class="block p-10 pr-0">.pr-0</div>
+                    </div>
+                    <div class="col sm-6 align-center">
+                      <div class="block p-10 pb-0">.pb-0</div>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col">
-                      <table>
-                        <thead>
-                          <tr>
-                            <th>Class</th>
-                            <th>Remarks</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td class="nowrap">.align-left</td>
-                            <td>Aligns on left</td>
-                          </tr>
-                          <tr>
-                            <td class="nowrap">.align-right</td>
-                            <td>Aligns on right</td>
-                          </tr>
-                          <tr>
-                            <td class="nowrap">.align-center</td>
-                            <td>Aligns on center</td>
-                          </tr>
-                          <tr>
-                            <td class="nowrap">.align-justify</td>
-                            <td>Aligns justified</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col sm-12">
-                      <h5>Text transform</h5>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col sm-12">
-                      <div class="code-sample bg-white">
-                        <p class="nowrap">
-                          This text should not break when the screen width is smaller then
-                          the text length.
-                          
-                        </p>
-                      </div>
-                      <div class="code-sample">
-                        <pre class="prettyprint lang-html">&lt;p class="nowrap" &gt; ... &lt;/p&gt;
+                </div>
+              </div>
+              <div class="col md-6 md-offset-1">
+                <div class="code-sample">
+                  <pre class="prettyprint lang-html">&lt;!-- Removes padding left --&gt;
+&lt;div class="pl-0" &gt; ... &lt;/div&gt;
+&lt;!-- Removes padding top --&gt;
+&lt;div class="pt-0" &gt; ... &lt;/div&gt;
+&lt;!-- Removes padding right --&gt;
+&lt;div class="pr-0" &gt; ... &lt;/div&gt;
+&lt;!-- Removes padding bottom --&gt;
+&lt;div class="pb-0" &gt; ... &lt;/div&gt;
 </pre>
-                      </div><br>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col md-6">
-                      <p class="camel-case">
-                        this text should be camel case.
-                        
-                      </p>
-                      <div class="code-sample">
-                        <pre class="prettyprint lang-html">&lt;p class="camel-case" &gt; ... &lt;/p&gt;
+                </div>
+              </div>
+            </div><br>
+            <p>Possible value range goes from <code >0</code> to <code >50</code>, in steps of <code >5</code>.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Class</th>
+                  <th>Remarks</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="nowrap">.p-(*number*)</td>
+                  <td>Defines what padding size should be applied to an element, all sides at same time. </td>
+                </tr>
+                <tr>
+                  <td class="nowrap">.px-(*number*)</td>
+                  <td>
+                    Defines what padding size should be applied to both the <code >left</code> and <code >right</code> 
+                    side from the element at same time. 
+                  </td>
+                </tr>
+                <tr>
+                  <td class="nowrap">.py-(*number*)</td>
+                  <td>
+                    Defines what padding size should be applied to both the <code >top</code> and <code >bottom</code> 
+                    side from the element at same time.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="nowrap">.pl-(*number*)</td>
+                  <td>Defines what padding size should be applied to the <code >left</code> side of an element.</td>
+                </tr>
+                <tr>
+                  <td class="nowrap">.pt-(*number*)</td>
+                  <td>Defines what padding size should be applied to the <code >top</code> side of an element.</td>
+                </tr>
+                <tr>
+                  <td class="nowrap">.pr-(*number*)</td>
+                  <td>Defines what padding size should be applied to the <code >right</code> side of an element.</td>
+                </tr>
+                <tr>
+                  <td class="nowrap">.pb-(*number*)</td>
+                  <td>Defines what padding size should be applied to the <code >bottom</code> side of an element.</td>
+                </tr>
+              </tbody>
+            </table><br>
+            <h5>Shadows</h5>
+            <p>
+              Shadows are very useful for highligth a particular object or even given a motion sense, and <code>seed-css</code> 
+              comes already with two pre-defined shadows style (<code >.with-shadow</code> and <code >.with-shadow-inset</code>).
+              
+            </p><br>
+            <div class="row shadows"> 
+              <div class="col md-5 align-center">
+                <div class="with-shadow">A drop shadowed element</div><br>
+                <div class="with-shadow-inset">An inset shadowed element</div>
+              </div>
+              <div class="col md-6 md-offset-1">
+                <div class="code-sample">
+                  <pre class="prettyprint lang-html">&lt;!-- Drop shadow --&gt;
+&lt;div class="with-shadow" &gt; ... &lt;/div&gt;
+
+&lt;!-- Inset shadow --&gt;
+&lt;div class="with-shadow-inset" &gt; ... &lt;/div&gt;
 </pre>
-                      </div>
-                    </div>
-                    <div class="col md-6">
-                      <p class="uc-first">
-                        only the first character of this text should be capitalized.
-                        
-                      </p>
-                      <div class="code-sample">
-                        <pre class="prettyprint lang-html">&lt;p class="uc-first" &gt; ... &lt;/p&gt;
-</pre>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col md-6">
-                      <p class="upper-case">
-                        All letters of this text should be capitalized.
-                        
-                      </p>
-                      <div class="code-sample">
-                        <pre class="prettyprint lang-html">&lt;p class="upper-case" &gt; ... &lt;/p&gt;
-</pre>
-                      </div>
-                    </div>
-                    <div class="col md-6">
-                      <p class="lower-case">
-                        All letters of this text should be lower case.
-                        
-                      </p>
-                      <div class="code-sample">
-                        <pre class="prettyprint lang-html">&lt;p class="lower-case" &gt; ... &lt;/p&gt;
-</pre>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col">
-                        <table>
-                          <thead>
-                            <tr>
-                              <th>Class</th>
-                              <th>Remarks</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td class="nowrap">.nowrap</td>
-                              <td>Forces the HTML to ignore white spaces when wrapping lines.</td>
-                            </tr>
-                            <tr>
-                              <td class="nowrap">.camel-case</td>
-                              <td>Capitalize the first character of any word</td>
-                            </tr>
-                            <tr>
-                              <td class="nowrap">.uc-first</td>
-                              <td>Capitalize the first character only from the first word</td>
-                            </tr>
-                            <tr>
-                              <td class="nowrap">.upper-case</td>
-                              <td>Capitalize all character</td>
-                            </tr>
-                            <tr>
-                              <td class="nowrap">.lower-case</td>
-                              <td>Make all letters in lower case</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div><br>
-                    <div class="row">
-                      <div class="col sm-12">
-                        <h5>Hiding</h5>
-                        <p class="align-justify">
-                          Show and hide elements from your pages can be an usefull ability
-                          to improve the user experience of your apps or websites.
-                          
-                        </p>
-                      </div>
-                      <div class="row">
-                        <div class="col">
-                          <table>
-                            <thead>
-                              <tr>
-                                <th>Class</th>
-                                <th>Remarks</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td class="nowrap">.hide</td>
-                                <td>Hide an element in any device.</td>
-                              </tr>
-                              <tr>
-                                <td class="nowrap">.hide-only-small</td>
-                                <td>Hide an element on small devices only.</td>
-                              </tr>
-                              <tr>
-                                <td class="nowrap">.hide-only-medium</td>
-                                <td>Hide an element on medium devices only.</td>
-                              </tr>
-                              <tr>
-                                <td class="nowrap">.hide-only-large</td>
-                                <td>Hide an element on large devices only.</td>
-                              </tr>
-                              <tr>
-                                <td class="nowrap">.hide-only-extra-large</td>
-                                <td>Hide an element on extra-large devices only.</td>
-                              </tr>
-                              <tr>
-                                <td class="nowrap">.hide-on-medium-and-down</td>
-                                <td>Hide an element on all small and medium devices</td>
-                              </tr>
-                              <tr>
-                                <td class="nowrap">.hide-on-medium-and-up</td>
-                                <td>Hide an element on all devices, except for small ones</td>
-                              </tr>
-                              <tr>
-                                <td class="nowrap">.hide-on-large-and-down</td>
-                                <td>Hide an element on all devices, except for extra-large ones</td>
-                              </tr>
-                              <tr>
-                                <td class="nowrap">.hide-on-large-and-up</td>
-                                <td>Hide an element on all large and extra-large devices</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                        <div class="code-sample">
-                          <pre class="prettyprint lang-html">&lt;!-- Hide on all devices --&gt;
+                </div>
+              </div>
+            </div><br>
+            <h5>Hiding</h5>
+            <p class="align-justify">
+              Show and hide elements from your pages can be an usefull ability
+              to improve the user experience of your apps or websites.
+              
+            </p>
+            <div class="row">
+              <div class="col">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Class</th>
+                      <th>Remarks</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="nowrap">.hide</td>
+                      <td>Hide an element in any device.</td>
+                    </tr>
+                    <tr>
+                      <td class="nowrap">.hide-only-small</td>
+                      <td>Hide an element on small devices only.</td>
+                    </tr>
+                    <tr>
+                      <td class="nowrap">.hide-only-medium</td>
+                      <td>Hide an element on medium devices only.</td>
+                    </tr>
+                    <tr>
+                      <td class="nowrap">.hide-only-large</td>
+                      <td>Hide an element on large devices only.</td>
+                    </tr>
+                    <tr>
+                      <td class="nowrap">.hide-only-extra-large</td>
+                      <td>Hide an element on extra-large devices only.</td>
+                    </tr>
+                    <tr>
+                      <td class="nowrap">.hide-on-medium-and-down</td>
+                      <td>Hide an element on all small and medium devices</td>
+                    </tr>
+                    <tr>
+                      <td class="nowrap">.hide-on-medium-and-up</td>
+                      <td>Hide an element on all devices, except for small ones</td>
+                    </tr>
+                    <tr>
+                      <td class="nowrap">.hide-on-large-and-down</td>
+                      <td>Hide an element on all devices, except for extra-large ones</td>
+                    </tr>
+                    <tr>
+                      <td class="nowrap">.hide-on-large-and-up</td>
+                      <td>Hide an element on all large and extra-large devices</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="code-sample">
+                  <pre class="prettyprint lang-html">&lt;!-- Hide on all devices --&gt;
 &lt;div class="hide" &gt; ... &lt;/div&gt;
 
 &lt;!-- Hide on small devices --&gt;
@@ -1812,124 +2363,169 @@ myModal.hide('#modal');
 
 &lt;!-- Hide on extra-large devices --&gt;
 &lt;div class="hide-only-extra-large" &gt; ... &lt;/div&gt;</pre>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
-            <div class="col md-4 lg-3 hide-only-small relpos">
-              <nav data-attach="#sample-alerts" data-limit="#library-download" class="samples-nav">
-                <h5>Components</h5>
-                <ul class="list">
-                  <li class="item"><a href="#sample-colors" class="spy ignore"><span>Check the basic &nbsp;</span><span class="ion-arrow-up-c"></span></a></li>
-                  <li class="item"><a href="#sample-alerts" class="spy">Alerts</a></li>
-                  <li class="item"><a href="#sample-buttons" class="spy">Buttons</a></li>
-                  <li class="item"><a href="#sample-cards" class="spy">Cards</a></li>
-                  <li class="item"><a href="#sample-form" class="spy">Form</a></li>
-                  <li class="item"><a href="#sample-lists" class="spy">Lists</a></li>
-                  <li class="item"><a href="#sample-modals" class="spy">Modals</a></li>
-                  <li class="item"><a href="#sample-progress" class="spy">Progress bar</a></li>
-                  <li class="item"><a href="#sample-side-panel" class="spy">Side panel</a></li>
-                  <li class="item"><a href="#sample-tables" class="spy">Tables</a></li>
-                  <li class="item"><a href="#sample-tooltips" class="spy">Tooltip</a></li>
-                  <li class="item"><a href="#sample-utilities" class="spy">Utilities</a></li>
-                </ul>
-              </nav>
-            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section id="library-download">
-      <div class="container">
-        <h2>JavaScript Library Download</h2>
-        <p class="align-justify">
-          Basically, <code class="primary">seed-css</code> doesn't have any javascript dependency 
-          to be applied to your website or application, since all its features are implemented using 
-          pure CSS. But, there're two exceptions that I've decided to create in order to create a 
-          better user experience.
-          
-        </p>
-        <p class="align-justify">
-          Anyway, even though for these two special cases, the <code class="primary">seed-css</code> 
-          javascript library doesn't have any special dependency (e.g: jQuery or similar). It's written 
-          in <i>Vanilla JS</i> and is also exported to NodeJS.
-          
-        </p>
-        <div class="align-center"><a href="https://github.com/rogeriotaques/seed-css/releases/latest" class="btn btn-primary">DOWNLOAD</a></div>
-      </div>
-    </section>
-    <section id="license">
-      <div class="container">
-        <h2>License</h2>
-        <p>The MIT license.</p>
-        <p>Copyright &copy; 2016-2018, Rogerio Taques.</p>
-        <p class="align-justify">
-          Permission is hereby granted, free of charge, to any person obtaining
-          a copy of this software and associated documentation files
-          (the "Software"), to deal in the Software without restriction,
-          including without limitation the rights to use, copy, modify, merge,
-          publish, distribute, sublicense, and/or sell copies of the Software,
-          and to permit persons to whom the Software is furnished to do so,
-          subject to the following conditions:
-          
-        </p>
-        <p class="align-justify">
-          The above copyright notice and this permission notice shall be included
-          in all copies or substantial portions of the Software.
-          
-        </p>
-        <p class="align-justify">
-          THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-          EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-          MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-          IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-          CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-          TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-          SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-          
-        </p>
-      </div>
-    </section>
-    <section id="donate"> 
-      <div class="container"> 
-        <h2>Donate</h2>
-        <p>Make a donation and help this project growth.</p>
-        <div class="grid"> 
+      </section>
+      <section id="library-download">
+        <div class="container">
+          <h2>JavaScript Library Download</h2>
+          <p class="align-justify">
+            As a general rule, <code>seed-css</code> is not JavaScript dependent because it is implemented 
+            purely in CSS (using Sass), however, there are a few exceptions created in order to deliver a 
+            high level experience to your visitors/ users. Any component which has the (optional) JavaScript 
+            dependence has it written on its own section.
+            
+          </p>
+          <h6>The following helpers are given:</h6>
+          <div class="table-responsive">
+            <table class="hovered">
+              <thead>
+                <tr>
+                  <th>Helper</th>
+                  <th>Detail</th>
+                  <th>Remarks</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="nowrap">fileUpload</td>
+                  <td class="nowrap"><code >SeedCSS.fileUpload()</code></td>
+                  <td>Enables a high level UX input file upload HTML Element.</td>
+                </tr>
+                <tr>
+                  <td class="nowrap">modal</td>
+                  <td class="nowrap"><code >SeedCSS.modal([options])</code></td>
+                  <td> <span>Enables a high level UX modal overlay window with handlers for ESC key, clicking outside the modal and many animations powered by </span><a href="https://daneden.github.io/animate.css/" target="_blank">Animate.CSS</a><span>. Please check the available options </span><a href="https://github.com/AbtzLabs/seed-css/blob/master/docs/modal.md" target="_blank">here</a></td>
+                </tr>
+                <tr>
+                  <td class="nowrap">offCanvas</td>
+                  <td class="nowrap"><code >SeedCSS.offCanvas()</code></td>
+                  <td>A very easy and simple way to enable the off-canvas panel.</td>
+                </tr>
+                <tr>
+                  <td class="nowrap">textArea</td>
+                  <td class="nowrap"><code >SeedCSS.textArea()</code></td>
+                  <td>Enables a high level UX textarea HTML Element with characters counter.</td>
+                </tr>
+                <tr>
+                  <td class="nowrap">scroll</td>
+                  <td class="nowrap"><code >SeedCSS.scroll([options])</code></td>
+                  <td> <span>Enables a simple yet handy scroll smoother which makes scrolling navigation soft and more enjoyable.</span><span>Please check the available options </span><a href="https://github.com/AbtzLabs/seed-css/blob/master/docs/scroll.md" target="_blank">here</a></td>
+                </tr>
+                <tr>
+                  <td class="nowrap">window.CustomEvent</td>
+                  <td class="nowrap"><code >new CustomEvent(name[, option])</code></td>
+                  <td>A simple yet cross-browser polyfill for CustomEvents calls. Used internally by all helpers.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div><br>
+          <div class="align-center"><a class="btn secondary" href="https://github.com/AbtzLabs/seed-css/releases/latest">GET THE JAVASCRIPT HERE</a>
+            <p> <span>It is plug-and-play and dependecy free.</span><br><span>or check the code on </span><a target="_blank" href="https://github.com/AbtzLabs/seed-css/tree/master/source/js/components">Github</a></p>
+          </div>
+        </div>
+      </section>
+      <section id="license">
+        <div class="container">
+          <h2>License</h2>
+          <p>The MIT license.</p>
+          <p>Copyright &copy; 2016-2018, Rogerio Taques.</p>
+          <p class="align-justify">
+            Permission is hereby granted, free of charge, to any person obtaining
+            a copy of this software and associated documentation files
+            (the "Software"), to deal in the Software without restriction,
+            including without limitation the rights to use, copy, modify, merge,
+            publish, distribute, sublicense, and/or sell copies of the Software,
+            and to permit persons to whom the Software is furnished to do so,
+            subject to the following conditions:
+            
+          </p>
+          <p class="align-justify">
+            The above copyright notice and this permission notice shall be included
+            in all copies or substantial portions of the Software.
+            
+          </p>
+          <p class="align-justify">
+            THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+            EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+            MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+            IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+            CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+            TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+            SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+          </p>
+        </div>
+      </section>
+      <section id="donate"> 
+        <div class="container"> 
+          <h2>Contributing</h2>
+          <p>This is an open-source project and you can freely contribute. </p>
+          <p>By contributing you will help us to improve the code-base and make <code >seed-css</code> even better to other developers like us.</p>
           <div class="row"> 
-            <div class="col md-6"> 
-              <h5>Donating money</h5>
-              <ul>
-                <li><a href="https://www.paypal.me/abtzlabs" target="_blank">Donate whatever you want via <b >Paypal</b></a></li>
-                <li> <a href="https://www.patreon.com/bePatron?u=8642275" target="_blank">Become a <b>Patron</b>!</a></li>
-              </ul>
-            </div>
-            <div class="col md-6"> 
-              <h5>Donating time</h5>
+            <div class="col md-5">
+              <h5>What to contribute?</h5>
               <ul> 
-                <li>Help improving this page </li>
-                <li>Help testing and reporting bugs </li>
-                <li>Help fixing bugs or implementing missing features </li>
-              </ul><br>
-              <p>
+                <li>Help improving this page; </li>
+                <li>Help testing and reporting bugs; </li>
+                <li>Help fixing bugs or implementing missing features; </li>
+              </ul>
+              <p class="align-justify">
                 Check the source-code on <a href="https://github.com/abtzlabs/seed-css" target="_blank">Github</a>, 
-                fork or clone the project and submit your <i>pull-requests</i>. I'll review, discuss it as needed with you 
+                fork the project and submit your <code>pull-requests</code>. I'll review, discuss it as needed with you 
                 and approve and merge as soon as possible.
                 
               </p>
             </div>
+            <div class="col md-6 md-offset-1">
+              <h5>Don't know coding?</h5>
+              <p>
+                No worries! If you're not confident coding and think you cannot help much on that way, 
+                yet still wanna contribute in some way, you can help us donating any amout of money!
+                
+              </p>
+              <p class="align-center"> <a class="btn secondary" href="https://www.paypal.me/abtzlabs" target="_blank">Donate via <b >Paypal</b></a><a class="btn red" href="https://www.patreon.com/bePatron?u=8642275" target="_blank">Be a <b>Patron</b>!</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="align-center">
+        <p class="copyright">&copy; 2018, Rogerio Taques.</p>
+        <div class="container">
+          <p class="px-50">
+            <code >Seed-CSS</code> has started as a side-project and a personal boilerplate for my own projects, however, 
+            I decided to make it an open-source after some of my friends start requesting me to use it. Now, it's available 
+            under the MIT license.
+            
+          </p>
+        </div>
+        <p><span>Found a bug, would like to help or give a suggestion? </span><br class="hide-on-medium-and-up"><a href="https://github.com/abtzlabs/seed-css/issues">Open an issue</a></p>
+        <p><span>Are you looking for </span><span> <a href="http://abtzlabs.github.io/seed-css/v1">v1.2.4</a></span><span>?</span></p>
+      </footer>
+    </main>
+    <!-- Remove .hide to show the modal window-->
+    <div class="modal hide" id="modal">
+      <!-- Use .bounceInDown to enter and .bounceOutUp to leave-->
+      <div class="modal-window">
+        <div class="modal-header">
+          <h3 class="modal-title">Hello world </h3><a class="dismiss" href="#" role="modal-dismiss"><span>X</span></a>
+        </div>
+        <div class="modal-body">   
+          <p>This's the body of the overlay modal window.</p>
+          <p>You can clique on the "X" at the top-right, anywhere in the dark background, or even press the ESC key to dismiss this window.</p>
+          <p>Also, always a modal is open or close, <code >modal.opened</code> and <code >modal.closed</code> events are dispatched respectively.</p>
+        </div>
+        <div class="modal-footer">
+          <div class="align-right">
+            <button class="btn small secondary" type="button">OK! Got it.</button>
           </div>
         </div>
       </div>
-    </section>
-    <footer>
-      <p class="copyright align-center">&copy; 2016-2018, Rogerio Taques.</p>
-      <p class="align-center"><span>Found a bug or would like to help or give suggestions? </span><a href="https://github.com/abtzlabs/seed-css/issues" style="color: white;">Open an issue</a></p>
-    </footer>
+    </div>
     <script src="//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
     <script src="//code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
-    <script src="assets/js/bundle.js?v=v1.2.4"></script>
+    <script src="assets/js/bundle.js?v=v2.0.0"></script>
   </body>
 </html>
