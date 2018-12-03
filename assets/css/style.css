@@ -1,1 +1,296 @@
-@charset "UTF-8";header{position:relative;color:#fff}header>.background{-webkit-filter:blur(2px);-moz-filter:blur(2px);-o-filter:blur(2px);-ms-filter:blur(2px);filter:url(#blur);filter:blur(2px);position:absolute;top:0;left:0;width:100%;height:100%;background-image:url(/assets/images/css-code.jpeg);background-clip:content-box;background-attachment:fixed;background-color:#fdfdfd;background-position:center;background-size:cover}header>.background::after{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.8)}header #release{font-weight:700;font-size:16px;line-height:20px}section{position:relative;padding:20px 0;z-index:3;background-color:#fff}section:nth-child(odd){background-color:#f9f9f9}section#license{font-family:'Courier New',Courier,monospace}footer{position:relative;padding:20px 0;box-shadow:rgba(51,51,51,.35) 0 3px 6px inset;background-color:#4b70b4;color:#fff}footer a,footer a:active,footer a:visited{color:#f5f5f5!important;font-weight:700}.code-sample>.prettyprint{margin:0 0 20px;padding:20px;overflow:scroll}.sample-container{width:100%;line-height:50px;background:#f5f5f5;margin-bottom:20px;padding-top:20px;padding-bottom:20px;box-sizing:border-box}.sample-container.auto-height{height:auto}#component-cards .card{min-width:307px}#component-cards .auto-height{min-height:310px}#component-grid .sample .row>.col{line-height:45px;line-height:4.5rem;white-space:nowrap;overflow:hidden;background-color:#4b70b4;color:#fff;font-weight:700}#component-grid .sample .row>.col:not(:first-child){outline:4px solid #fff}.color-tag{border:thin solid #ccc;display:block;width:24px;height:24px;border-radius:30px;margin:0 auto}div[id^=sample-]:not(:last-child):after{padding:20px 0;margin:20px 0;display:block;text-align:center;content:'。。。'}.tooltips .with-tooltip::after,.tooltips .with-tooltip::before{opacity:1}.tooltips .with-tooltip.right::after,.tooltips .with-tooltip.right::before{left:-10%}.tooltips .with-tooltip.top::after,.tooltips .with-tooltip.top::before{top:150%}.tooltips .with-tooltip.top:hover::after,.tooltips .with-tooltip.top:hover::before{margin-top:0}.tooltips .with-tooltip.bottom::after,.tooltips .with-tooltip.bottom::before{top:-90%}.tooltips .with-tooltip.bottom:hover::after,.tooltips .with-tooltip.bottom:hover::before{margin-top:8px}.tooltips .with-tooltip.left::after,.tooltips .with-tooltip.left::before{left:150%}#component-utilities .margins .col,#component-utilities .paddings .col{border:2px solid #fff;height:120px;overflow:hidden}#component-utilities .margins .col:nth-child(2),#component-utilities .margins .col:nth-child(4),#component-utilities .paddings .col:nth-child(2),#component-utilities .paddings .col:nth-child(4){border-left:5px solid #fff}#component-utilities .margins .col>.block,#component-utilities .paddings .col>.block{background-color:#4b70b4;color:#fff;font-weight:700;height:100px;line-height:100px}#component-utilities .margins .col>.block.mt-0,#component-utilities .margins .col>.block.pt-0,#component-utilities .paddings .col>.block.mt-0,#component-utilities .paddings .col>.block.pt-0{height:110px}#component-utilities .margins .col>.block.mb-0,#component-utilities .margins .col>.block.pb-0,#component-utilities .paddings .col>.block.mb-0,#component-utilities .paddings .col>.block.pb-0{height:110px}#component-utilities .margins .col{background-color:#f9d9b7}#component-utilities .paddings .col{background-color:#b7d4b7}#component-utilities .paddings .p-10{padding:0;margin:10px;box-sizing:border-box}#component-utilities .paddings .pt-0{margin-top:0}#component-utilities .paddings .pb-0{margin-bottom:0}#component-utilities .paddings .pl-0{margin-left:0}#component-utilities .paddings .pr-0{margin-right:0}#component-utilities [class^=place-]{color:#fff;background-color:#4b70b4;padding:5px 10px;font-weight:700}#component-utilities [class^=with-shadow]{border-radius:2px;background-color:#4b70b4;color:#fff;font-weight:700;padding:20px}[role=offcanvas]>.close{display:none}[role=offcanvas].triggered{background-color:#4b70b4!important;border-color:#4b70b4!important;color:#fff!important}[role=offcanvas].triggered>.close{display:inline-block}[role=offcanvas].triggered>.open{display:none}nav{border:thin solid #ccc}nav .hamburger{position:relative;display:inline-block;width:1.25em;height:.8em;margin-right:.3em;border-top:.2em solid #fdfdfd;border-bottom:.2em solid #fdfdfd;vertical-align:middle;margin-top:-5px;margin-right:10px}nav .hamburger::before{content:'';position:absolute;top:.3em;left:0;width:100%;border-top:.2em solid #fdfdfd}
+@charset "UTF-8";
+/*
+ * Seed CSS -- Sample Page Styling
+ * @version 2.0.1
+ */
+/**
+ * Seed CSS - Global variables
+ * @version 2.0.1
+ */
+/**
+ * Seed CSS - Mixins
+ * @version 2.0.1
+ */
+header {
+  position: relative;
+  color: white;
+}
+
+header > .background {
+    /* Prefixed CSS3 blur filters */
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: url(#blur);
+    /* Firefox needs SVG */
+  filter: blur(2px);
+    /* Someday, sigh ... */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/images/css-code.jpeg");
+  background-clip: content-box;
+  background-attachment: fixed;
+  background-color: #fdfdfd;
+  background-position: center;
+  background-size: cover;
+}
+
+header > .background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+header #release {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+section {
+  position: relative;
+  padding: 20px 0;
+  z-index: 3;
+  background-color: white;
+}
+
+section:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+section#license {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+footer {
+  position: relative;
+  padding: 20px 0;
+  box-shadow: rgba(51, 51, 51, 0.35) 0 3px 6px inset;
+  background-color: #4b70b4;
+  color: white;
+}
+
+footer a,
+  footer a:visited,
+  footer a:active {
+  color: whitesmoke !important;
+  font-weight: 700;
+}
+
+.code-sample > .prettyprint {
+  margin: 0 0 20px;
+  padding: 20px;
+  overflow: scroll;
+}
+
+.sample-container {
+  width: 100%;
+  line-height: 50px;
+  background: #f5f5f5;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.sample-container.auto-height {
+  height: auto;
+}
+
+#component-cards .card {
+  min-width: 307px;
+}
+
+#component-cards .auto-height {
+  min-height: 310px;
+}
+
+#component-grid .sample .row > .col {
+  line-height: 45px;
+  line-height: 4.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: #4b70b4;
+  color: white;
+  font-weight: 700;
+}
+
+#component-grid .sample .row > .col:not(:first-child) {
+  outline: 4px solid white;
+}
+
+.color-tag {
+  border: thin solid #ccc;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 30px;
+  margin: 0 auto;
+}
+
+div[id^='sample-']:not(:last-child):after {
+  padding: 20px 0;
+  margin: 20px 0;
+  display: block;
+  text-align: center;
+  content: '。。。';
+}
+
+.tooltips .with-tooltip::before, .tooltips .with-tooltip::after {
+  opacity: 1;
+}
+
+.tooltips .with-tooltip.right::before, .tooltips .with-tooltip.right::after {
+  left: -10%;
+}
+
+.tooltips .with-tooltip.top::before, .tooltips .with-tooltip.top::after {
+  top: 150%;
+}
+
+.tooltips .with-tooltip.top:hover::before, .tooltips .with-tooltip.top:hover::after {
+  margin-top: 0;
+}
+
+.tooltips .with-tooltip.bottom::before, .tooltips .with-tooltip.bottom::after {
+  top: -90%;
+}
+
+.tooltips .with-tooltip.bottom:hover::before, .tooltips .with-tooltip.bottom:hover::after {
+  margin-top: 8px;
+}
+
+.tooltips .with-tooltip.left::before, .tooltips .with-tooltip.left::after {
+  left: 150%;
+}
+
+#component-utilities .margins .col,
+#component-utilities .paddings .col {
+  border: 2px solid white;
+  height: 120px;
+  overflow: hidden;
+}
+
+#component-utilities .margins .col:nth-child(2), #component-utilities .margins .col:nth-child(4),
+  #component-utilities .paddings .col:nth-child(2),
+  #component-utilities .paddings .col:nth-child(4) {
+  border-left: 5px solid white;
+}
+
+#component-utilities .margins .col > .block,
+  #component-utilities .paddings .col > .block {
+  background-color: #4b70b4;
+  color: white;
+  font-weight: bold;
+  height: 100px;
+  line-height: 100px;
+}
+
+#component-utilities .margins .col > .block.mt-0, #component-utilities .margins .col > .block.pt-0,
+    #component-utilities .paddings .col > .block.mt-0,
+    #component-utilities .paddings .col > .block.pt-0 {
+  height: 110px;
+}
+
+#component-utilities .margins .col > .block.mb-0, #component-utilities .margins .col > .block.pb-0,
+    #component-utilities .paddings .col > .block.mb-0,
+    #component-utilities .paddings .col > .block.pb-0 {
+  height: 110px;
+}
+
+#component-utilities .margins .col {
+  background-color: #f9d9b7;
+}
+
+#component-utilities .paddings .col {
+  background-color: #b7d4b7;
+}
+
+#component-utilities .paddings .p-10 {
+  padding: 0;
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+#component-utilities .paddings .pt-0 {
+  margin-top: 0;
+}
+
+#component-utilities .paddings .pb-0 {
+  margin-bottom: 0;
+}
+
+#component-utilities .paddings .pl-0 {
+  margin-left: 0;
+}
+
+#component-utilities .paddings .pr-0 {
+  margin-right: 0;
+}
+
+#component-utilities [class^='place-'] {
+  color: white;
+  background-color: #4b70b4;
+  padding: 5px 10px;
+  font-weight: 700;
+}
+
+#component-utilities [class^='with-shadow'] {
+  border-radius: 2px;
+  background-color: #4b70b4;
+  color: white;
+  font-weight: 700;
+  padding: 20px;
+}
+
+[role='offcanvas'] > .close {
+  display: none;
+}
+
+[role='offcanvas'].triggered {
+  background-color: #4b70b4 !important;
+  border-color: #4b70b4 !important;
+  color: white !important;
+}
+
+[role='offcanvas'].triggered > .close {
+  display: inline-block;
+}
+
+[role='offcanvas'].triggered > .open {
+  display: none;
+}
+
+nav {
+  border: thin solid #ccc;
+}
+
+nav .hamburger {
+  position: relative;
+  display: inline-block;
+  width: 1.25em;
+  height: 0.8em;
+  margin-right: 0.3em;
+  border-top: 0.2em solid #fdfdfd;
+  border-bottom: 0.2em solid #fdfdfd;
+  vertical-align: middle;
+  margin-top: -5px;
+  margin-right: 10px;
+}
+
+nav .hamburger::before {
+  content: '';
+  position: absolute;
+  top: 0.3em;
+  left: 0px;
+  width: 100%;
+  border-top: 0.2em solid #fdfdfd;
+}
