@@ -5,7 +5,8 @@
 
 $color-change-rate: 5%;
 
-.btn {
+.btn,
+a.btn {
   @include transition(all, 0.25s, ease-in-out);
   @include rem(min-width, 170px);
 
@@ -30,6 +31,89 @@ $color-change-rate: 5%;
     rendering: optimizeLegibility;
   }
 
+  // enabled
+  &.link {
+    background: transparent;
+    border: 0;
+  }
+
+  &.primary {
+    border-color: $primary;
+    @extend .primary-background;
+  }
+
+  &.secondary {
+    border-color: $secondary;
+    @extend .secondary-background;
+  }
+
+  &.red {
+    border-color: $red;
+    @extend .red-background;
+  }
+
+  &.orange {
+    border-color: $orange;
+    @extend .orange-background;
+  }
+
+  &.green {
+    border-color: $green;
+    @extend .green-background;
+  }
+
+  &.purple {
+    border-color: $purple;
+    @extend .purple-background;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+
+    &:not(.link) {
+      box-shadow: $shadow-default;
+      background-color: white;
+
+      &.primary {
+        background-color: darken($primary, $color-change-rate) !important;
+        border-color: darken($primary, $color-change-rate);
+      }
+
+      &.secondary {
+        background-color: darken($secondary, $color-change-rate) !important;
+        border-color: darken($secondary, $color-change-rate);
+      }
+
+      &.red {
+        background-color: darken($red, $color-change-rate) !important;
+        border-color: darken($red, $color-change-rate);
+      }
+
+      &.orange {
+        background-color: darken($orange, $color-change-rate) !important;
+        border-color: darken($orange, $color-change-rate);
+      }
+
+      &.green {
+        background-color: darken($green, $color-change-rate) !important;
+        border-color: darken($green, $color-change-rate);
+      }
+
+      &.purple {
+        background-color: darken($purple, $color-change-rate) !important;
+        border-color: darken($purple, $color-change-rate);
+      }
+    }
+
+    &.link {
+      color: $primary;
+      background: transparent;
+      border: none;
+    }
+  } // .btn:hover
+
   // disabled
   &[disabled],
   &.disabled {
@@ -38,89 +122,19 @@ $color-change-rate: 5%;
     border-color: $grey;
     background-color: $grey;
     text-shadow: white 1px 1px 1px;
-  } // .disabled, [disabled]
-
-  // enabled
-  &:enabled {
-    &.link {
-      border: 0;
-    }
-
-    &.primary {
-      border-color: $primary;
-      @extend .primary-background;
-    }
-
-    &.secondary {
-      border-color: $secondary;
-      @extend .secondary-background;
-    }
-
-    &.red {
-      border-color: $red;
-      @extend .red-background;
-    }
-
-    &.orange {
-      border-color: $orange;
-      @extend .orange-background;
-    }
-
-    &.green {
-      border-color: $green;
-      @extend .green-background;
-    }
-
-    &.purple {
-      border-color: $purple;
-      @extend .purple-background;
-    }
 
     &:hover,
     &:focus,
     &:active {
+      cursor: not-allowed;
       outline: none;
-
-      &:not(.link) {
-        box-shadow: $shadow-default;
-        background-color: white;
-
-        &.primary {
-          background-color: darken($primary, $color-change-rate) !important;
-          border-color: darken($primary, $color-change-rate);
-        }
-
-        &.secondary {
-          background-color: darken($secondary, $color-change-rate) !important;
-          border-color: darken($secondary, $color-change-rate);
-        }
-
-        &.red {
-          background-color: darken($red, $color-change-rate) !important;
-          border-color: darken($red, $color-change-rate);
-        }
-
-        &.orange {
-          background-color: darken($orange, $color-change-rate) !important;
-          border-color: darken($orange, $color-change-rate);
-        }
-
-        &.green {
-          background-color: darken($green, $color-change-rate) !important;
-          border-color: darken($green, $color-change-rate);
-        }
-
-        &.purple {
-          background-color: darken($purple, $color-change-rate) !important;
-          border-color: darken($purple, $color-change-rate);
-        }
-      }
-
-      &.link {
-        color: $primary;
-      }
-    } // .btn:enabled:hover
-  } // .btn:enabled
+      color: $grey-dark;
+      border-color: $grey;
+      background-color: $grey;
+      text-shadow: white 1px 1px 1px;
+      box-shadow: none;
+    }
+  } // .disabled, [disabled]
 
   // sizes
   &.medium {
