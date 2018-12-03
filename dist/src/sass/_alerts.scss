@@ -1,6 +1,6 @@
 /* 
  * Seed CSS - Alerts
- * @version 2.0.0
+ * @version 2.0.1
  */
 
 .alert {
@@ -58,7 +58,7 @@
     &::before {
       content: '';
       background-color: $green;
-      border-color: $primary;
+      border-color: $green;
     }
   } // .success
 
