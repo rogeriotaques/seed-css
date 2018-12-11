@@ -40,31 +40,72 @@ a.btn {
   &.primary {
     border-color: $primary;
     @extend .primary-background;
+
+    &.outline {
+      background-color: transparent !important;
+      color: $primary !important;
+    }
   }
 
   &.secondary {
     border-color: $secondary;
     @extend .secondary-background;
+
+    &.outline {
+      background-color: transparent !important;
+      color: $secondary !important;
+    }
   }
 
   &.red {
     border-color: $red;
     @extend .red-background;
+
+    &.outline {
+      background-color: transparent !important;
+      color: $red !important;
+    }
   }
 
   &.orange {
     border-color: $orange;
     @extend .orange-background;
+
+    &.outline {
+      background-color: transparent !important;
+      color: $orange !important;
+    }
   }
 
   &.green {
     border-color: $green;
     @extend .green-background;
+
+    &.outline {
+      background-color: transparent !important;
+      color: $green !important;
+    }
   }
 
   &.purple {
     border-color: $purple;
     @extend .purple-background;
+
+    &.outline {
+      background-color: transparent !important;
+      color: $purple !important;
+    }
+  }
+
+  &.white {
+    border-color: $white;
+    background-color: $white !important;
+    color: $black !important;
+
+    &.outline {
+      background-color: transparent !important;
+      color: $white !important;
+    }
   }
 
   &:hover,
@@ -79,31 +120,61 @@ a.btn {
       &.primary {
         background-color: darken($primary, $color-change-rate) !important;
         border-color: darken($primary, $color-change-rate);
+
+        &.outline {
+          background-color: transparent !important;
+          color: darken($primary, $color-change-rate) !important;
+        }
       }
 
       &.secondary {
         background-color: darken($secondary, $color-change-rate) !important;
         border-color: darken($secondary, $color-change-rate);
+
+        &.outline {
+          background-color: transparent !important;
+          color: darken($secondary, $color-change-rate) !important;
+        }
       }
 
       &.red {
         background-color: darken($red, $color-change-rate) !important;
         border-color: darken($red, $color-change-rate);
+
+        &.outline {
+          background-color: transparent !important;
+          color: darken($red, $color-change-rate) !important;
+        }
       }
 
       &.orange {
         background-color: darken($orange, $color-change-rate) !important;
         border-color: darken($orange, $color-change-rate);
+
+        &.outline {
+          background-color: transparent !important;
+          color: darken($orange, $color-change-rate) !important;
+        }
       }
 
       &.green {
         background-color: darken($green, $color-change-rate) !important;
         border-color: darken($green, $color-change-rate);
+
+        &.outline {
+          background-color: transparent !important;
+          color: darken($green, $color-change-rate) !important;
+        }
       }
 
       &.purple {
         background-color: darken($purple, $color-change-rate) !important;
         border-color: darken($purple, $color-change-rate);
+
+        &.outline {
+          background-color: transparent !important;
+          color: darken($purple, $color-change-rate) !important;
+        }
       }
     }
 
