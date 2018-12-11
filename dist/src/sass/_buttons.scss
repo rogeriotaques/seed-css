@@ -40,31 +40,55 @@ a.btn {
   &.primary {
     border-color: $primary;
     @extend .primary-background;
+
+    &.outline {
+      @extend .primary;
+    }
   }
 
   &.secondary {
     border-color: $secondary;
     @extend .secondary-background;
+
+    &.outline {
+      color: $secondary !important;
+    }
   }
 
   &.red {
     border-color: $red;
     @extend .red-background;
+
+    &.outline {
+      color: $red !important;
+    }
   }
 
   &.orange {
     border-color: $orange;
     @extend .orange-background;
+
+    &.outline {
+      color: $orange !important;
+    }
   }
 
   &.green {
     border-color: $green;
     @extend .green-background;
+
+    &.outline {
+      color: $green !important;
+    }
   }
 
   &.purple {
     border-color: $purple;
     @extend .purple-background;
+
+    &.outline {
+      color: $purple !important;
+    }
   }
 
   &:hover,
