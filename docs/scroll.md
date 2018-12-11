@@ -14,11 +14,25 @@ SeedCSS.scroll();
 
 // Or initialize with custom options
 SeedCSS.scroll({
-  spyScrollContainer: 'nav',
-  spyScroll: 'a.smooth',
-  revealWhenVisible: '.reveal' // coming soon
+  spyScrollSelector: 'nav a.smooth',
+  revealElementSelector: '.reveal',
+  revealSpaceOffset: 0.2,
+  revealWhenVisible: 'visible',
+  revealSingleAnimation: 'visible-once',
+  revealWhenHidden: 'hidden'
 });
 ```
+
+### Options
+
+| Property              | Default Value  | Description                                                                 |
+| --------------------- | -------------- | --------------------------------------------------------------------------- |
+| spyScrollSelector     | `nav a.smooth` | Class to be watched for smooth scrolling and spy updated                    |
+| revealElementSelector | `.reveal`      | Class to be watched for elements getting inside the viewport                |
+| revealSpaceOffset     | `0.2`          | Defines the gutter used when checking if an element got inside the viewport |
+| revealSingleAnimation | `visible-once` | When present, the element is not hidden when gets outside the viewport      |
+| revealWhenVisible     | `visible`      | Class used then the element gets inside the view port                       |
+| revealWhenHidden      | `hidden`       | Class used when the element gets outside the viewport                       |
 
 ## Events
 
