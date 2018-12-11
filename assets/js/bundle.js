@@ -27,7 +27,7 @@
  * Seed-CSS - Custom HTML Input File.
  * @author Rogerio Taques (hello@abtz.co)
  * @see https://github.com/AbtzLabs/seed-css
- * @version 2.0.1
+ * @version 2.1.0
  * @license MIT
  */
 var seedFileUpload = function seedFileUpload() {
@@ -130,7 +130,7 @@ if (typeof module !== 'undefined') {
  * Seed-CSS - Modal
  * @author Rogerio Taques (hello@abtz.co)
  * @see https://github.com/AbtzLabs/seed-css
- * @version 2.0.1
+ * @version 2.1.0
  * @license MIT
  */
 var fnOpen;
@@ -332,7 +332,7 @@ if (typeof module !== 'undefined') {
  * Seed-CSS - Off-Canvas.
  * @author Rogerio Taques (hello@abtz.co)
  * @see https://github.com/AbtzLabs/seed-css
- * @version 2.0.1
+ * @version 2.1.0
  * @license MIT
  */
 var seedOffCanvas = function seedOffCanvas() {
@@ -458,19 +458,23 @@ if (typeof module !== 'undefined') {
  * Seed-CSS - Scroll.
  * @author Rogerio Taques (hello@abtz.co)
  * @see https://github.com/AbtzLabs/seed-css
- * @version 2.0.1
+ * @version 2.1.0
  * @license MIT
  */
 var seedScroll = function seedScroll(options) {
   'use strict';
 
   var triggers = null;
+  var revealers = null;
   var scrollTarget = 0;
   var gutter = 50;
   var defaultOptions = {
-    spyScrollContainer: 'nav',
-    spyScroll: 'a.smooth',
-    revealWhenVisible: '.reveal'
+    spyScrollSelector: 'nav a.smooth',
+    revealElementSelector: '.reveal',
+    revealSpaceOffset: 0.2,
+    revealWhenVisible: 'visible',
+    revealSingleAnimation: 'visible-once',
+    revealWhenHidden: 'hidden'
   }; // defaultOptions
 
   var fnUpdateActiveTrigger = function fnUpdateActiveTrigger(elem) {
@@ -508,14 +512,16 @@ var seedScroll = function seedScroll(options) {
       }
 
       triggers.forEach(function (el, i) {
-        var targetID = el.getAttribute('href') || el.getAttribute('data-target');
-        var target = document.querySelector(targetID);
-        var offset = fnGetOffset(target);
+        try {
+          var targetID = el.getAttribute('href') || el.getAttribute('data-target');
+          var target = document.querySelector(targetID);
+          var offset = fnGetOffset(target);
 
-        if (offset.top - gutter <= window.scrollY) {
-          fnUpdateActiveTrigger(el);
-          return;
-        }
+          if (offset.top - gutter <= window.scrollY) {
+            fnUpdateActiveTrigger(el);
+            return;
+          }
+        } catch (e) {}
       });
     }
 
@@ -545,19 +551,165 @@ var seedScroll = function seedScroll(options) {
   }; // fnTriggerClick
 
 
+  var fnWatchElements = function fnWatchElements() {
+    /**
+     * Get the viewport (window) dimensions.
+     * @return object
+     */
+    var getViewportSize = function getViewportSize() {
+      return {
+        width: window.document.documentElement.clientWidth,
+        height: window.document.documentElement.clientHeight
+      };
+    }; // getViewportSize
+
+    /**
+     * Get the current scoll position.
+     * @return object
+     */
+
+
+    var getCurrentScroll = function getCurrentScroll() {
+      return {
+        x: window.pageXOffset,
+        y: window.pageYOffset
+      };
+    }; // getCurrentScroll
+
+    /**
+     * Gets the element dimension and position.
+     * @param HTMLElement el
+     * @return object
+     */
+
+
+    var getElemInfo = function getElemInfo(el) {
+      var elem = el;
+      var offsetTop = 0;
+      var offsetLeft = 0;
+      var offsetWidth = elem.offsetWidth;
+      var offsetHeight = elem.offsetHeight;
+
+      do {
+        if (!isNaN(elem.offsetTop)) {
+          offsetTop += elem.offsetTop;
+        }
+
+        if (!isNaN(elem.offsetLeft)) {
+          offsetLeft += elem.offsetLeft;
+        }
+      } while ((elem = elem.offsetParent) !== null);
+
+      return {
+        top: offsetTop,
+        left: offsetLeft,
+        height: offsetHeight,
+        width: offsetWidth
+      };
+    }; // getElemInfo
+
+    /**
+     * Identifies whether the element is visible in the viewport.
+     * @param HTMLElement elem
+     * @return boolean
+     */
+
+
+    var isElementVisible = function isElementVisible(elem) {
+      var viewportSize = getViewportSize();
+      var currentScroll = getCurrentScroll();
+      var eInf = getElemInfo(elem);
+      var spaceOffset = options.revealSpaceOffset;
+
+      var checkBoundaries = function checkBoundaries() {
+        // The element boundaries
+        var eTop = eInf.top + eInf.height * spaceOffset;
+        var eLeft = eInf.left + eInf.width * spaceOffset;
+        var eRight = eInf.left + eInf.width - eInf.width * spaceOffset;
+        var eBottom = eInf.top + eInf.height - eInf.height * spaceOffset; // The window boundaries
+
+        var wTop = currentScroll.y + 0;
+        var wLeft = currentScroll.x + 0;
+        var wBottom = currentScroll.y - 0 + viewportSize.height;
+        var wRight = currentScroll.x - 0 + viewportSize.width; // Check if the element is within boundary
+
+        return eTop < wBottom && eBottom > wTop && eLeft > wLeft && eRight < wRight;
+      };
+
+      return checkBoundaries();
+    }; // isElementVisible
+
+    /**
+     * Watch the target elements with a loop to identify which one is inside the viewport.
+     * If found, the element gets a class defined in the options.
+     * @return void
+     */
+
+
+    var toggleElement = function toggleElement() {
+      if (!revealers) {
+        return;
+      }
+
+      for (var i = 0; i < revealers.length; i += 1) {
+        if (isElementVisible(revealers[i])) {
+          if (options.revealWhenVisible) {
+            revealers[i].classList.add(options.revealWhenVisible);
+          }
+
+          if (options.revealWhenHidden) {
+            revealers[i].classList.remove(options.revealWhenHidden);
+          }
+        } else {
+          if (revealers[i].classList.contains(options.revealSingleAnimation) === false) {
+            if (options.revealWhenHidden) {
+              revealers[i].classList.add(options.revealWhenHidden);
+            }
+
+            if (options.revealWhenVisible) {
+              revealers[i].classList.remove(options.revealWhenVisible);
+            }
+          }
+        }
+      }
+    }; // toggleElement
+
+    /**
+     * A handler for scrolling and resizing
+     * @param window.Event evt
+     * @return void
+     */
+
+
+    var scrollResizeHandler = function scrollResizeHandler(evt) {
+      toggleElement();
+    };
+
+    window.addEventListener('scroll', scrollResizeHandler, false);
+    window.addEventListener('resize', scrollResizeHandler, false);
+  }; // fnWatchElements
+
+
   window.oldOnscroll = window.onscroll;
   window.onscroll = fnScrollComplete;
   options = Object.assign({}, defaultOptions, options); // Find all existing triggers for smooth scrolling
 
-  triggers = document.querySelectorAll(options.spyScroll);
+  triggers = document.querySelectorAll(options.spyScrollSelector); // Find all existing targets for watching the viewport
+
+  revealers = document.querySelectorAll(options.revealElementSelector);
 
   if (triggers !== null) {
     triggers.forEach(function (trigger, i) {
       trigger.addEventListener('click', fnTriggerClick);
     }); // triggers.forEach(function(trigger, i)
   } // if (triggers !== null)
-  //
 
+
+  if (revealers) {
+    fnWatchElements();
+  }
+
+  return {};
 }; // seedScroll
 
 
@@ -580,7 +732,7 @@ if (typeof module !== 'undefined') {
  * Seed-CSS - Additional features for HTML Textareas.
  * @author Rogerio Taques (hello@abtz.co)
  * @see https://github.com/AbtzLabs/seed-css
- * @version 2.0.1
+ * @version 2.1.0
  * @license MIT
  */
 var seedTextarea = function seedTextarea() {
@@ -641,7 +793,7 @@ if (typeof module !== 'undefined') {
  * Seed-CSS - Landing Page.
  * @author Rogerio Taques (hello@abtz.co)
  * @see https://github.com/AbtzLabs/seed-css
- * @version 2.0.1
+ * @version 2.1.0
  * @license private
  */
 (function () {
@@ -712,12 +864,21 @@ if (typeof module !== 'undefined') {
     var c = SeedCSS.offCanvas(); // Init the offCanvas helper
 
     var modal = m.get('#modal');
-    var canvas = c.get('#sidenav');
+    var canvas = c.get('#sidenav'); // Defines a special initialization options for the scroll
+
+    var scrollOptions = {
+      spyScrollSelector: 'a.smooth',
+      revealElementSelector: '.reveal.animated',
+      revealSingleAnimation: 'animated-once',
+      revealWhenVisible: 'bounceIn',
+      revealWhenHidden: 'bounceOut',
+      revealSpaceOffset: 2.5
+    };
     SeedCSS.fileUpload(); // Init the fileUpload helper
 
     SeedCSS.textArea(); // Init the textArea helper
 
-    SeedCSS.scroll(); // Init the scroll helper
+    SeedCSS.scroll(scrollOptions); // Init the scroll helper
 
     if (modal) {
       modal.addEventListener('modal.opened', function () {

@@ -21,7 +21,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Seed CSS v2.0.2</title>
+    <title>Seed CSS v2.1.0</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="A light-weight, mobile first and responsive CSS boilerplate.">
     <meta name="keywords" content="css,boilerplate,javascript,html5,website,site,app,webapp,build,development">
@@ -30,8 +30,8 @@
     <meta name="license" content="MIT">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:300,700|Open+Sans:400">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/seed.css?v=v2.0.2">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css?v=v2.0.2">
+    <link rel="stylesheet" type="text/css" href="assets/css/seed.css?v=v2.1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css?v=v2.1.0">
   </head>
   <body>
     <aside class="offcanvas" id="sidenav">
@@ -57,12 +57,12 @@
         <div class="container my-0">
           <div class="row"> 
             <div class="col md-6 pt-20 align-center">
-              <h1 class="mb-0">Seed CSS</h1>
-              <p class="mt-0 lead">A light-weight and mobile first CSS boilerplate.</p>
+              <h1 class="mb-0 animated bounce">Seed CSS</h1>
+              <p class="mt-0 lead animated fadeIn delay-1s">A light-weight and mobile first CSS boilerplate.</p>
             </div>
             <div class="col md-6 align-center">
               <div class="cta pt-30">
-                <p id="release">v2.0.2</p><a class="btn primary" href="https://github.com/AbtzLabs/seed-css/archive/develop.zip"><span>DOWNLOAD</span></a><a class="btn purple" href="#donate"><span>DONATE</span></a>
+                <p class="animated fadeIn delay-2s" id="release">v2.1.0</p><a class="btn primary animated fadeInLeft delay-2s" href="https://github.com/AbtzLabs/seed-css/archive/develop.zip"><span>DOWNLOAD</span></a><a class="btn secondary smooth animated fadeInRight delay-2s" href="#contribute"><span>CONTRIBUTE</span></a>
               </div>
             </div>
           </div>
@@ -79,7 +79,7 @@
           <li> <a class="smooth" href="#examples-utilities">Utilities</a></li>
           <li> <a class="smooth" href="#library-download">JS Lib</a></li>
           <li> <a class="smooth" href="#license">License</a></li>
-          <li> <a class="smooth" href="#donate">Contributing</a></li>
+          <li> <a class="smooth" href="#contribute">Contributing</a></li>
         </ul>
       </nav>
       <section id="get-started">
@@ -115,7 +115,9 @@
       </section>
       <section id="examples">
         <div class="container">
-          <h2 id="examples-basic">The basic</h2>
+          <div class="reveal animated animated-once">
+            <h2 id="examples-basic">The basic</h2>
+          </div>
           <div class="row"> 
             <div class="col md-6 px-20">
               <p class="lead">
@@ -632,7 +634,9 @@
             </div>
           </div>
           <div class="align-center my-40"><span>。。。 </span></div>
-          <h2 id="examples-components">Components</h2>
+          <div class="reveal animated animated-once">
+            <h2 id="examples-components">Components</h2>
+          </div>
           <div id="component-alerts">
             <h4>Alerts</h4>
             <p class="lead">
@@ -815,7 +819,12 @@
                   <tr>
                     <td class="nowrap">.(*color*)</td>
                     <td class="nowrap">&nbsp;</td>
-                    <td>Defines a colored button. Colors can be: <code>red</code>, <code>orange</code>, <code>green</code> or <code>purple</code></td>
+                    <td>Defines a colored button. Colors can be: <code>red</code>, <code>orange</code>, <code>green</code>, <code>purple</code> or <code>white</code></td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap">.outline</td>
+                    <td class="nowrap">&nbsp;</td>
+                    <td>Defines an outlined button, very similar to the default, however, used in combination with any color will produce an colored outlined button.</td>
                   </tr>
                   <tr>
                     <td class="nowrap">.(*size*)</td>
@@ -1901,7 +1910,9 @@ canvas.get('#mycanvas').close();</pre>
             </div>
           </div>
           <div class="align-center my-40"><span>。。。</span></div>
-          <h2 id="examples-utilities">Utilities</h2>
+          <div class="reveal animated animated-once fast">
+            <h2 id="examples-utilities">Utilities</h2>
+          </div>
           <div id="component-utilities">
             <p class="lead">
               Utilities are classes that can help you to easily show up your data
@@ -2391,7 +2402,9 @@ canvas.get('#mycanvas').close();</pre>
       </section>
       <section id="library-download">
         <div class="container">
-          <h2>JavaScript Library Download</h2>
+          <div class="reveal animated animated-once">
+            <h2>JavaScript Library Download</h2>
+          </div>
           <p class="align-justify">
             As a general rule, <code>seed-css</code> is not JavaScript dependent because it is implemented 
             purely in CSS (using Sass), however, there are a few exceptions created in order to deliver a 
@@ -2450,7 +2463,9 @@ canvas.get('#mycanvas').close();</pre>
       </section>
       <section id="license">
         <div class="container">
-          <h2>License</h2>
+          <div class="reveal animated animated-once">
+            <h2>License</h2>
+          </div>
           <p>The MIT license.</p>
           <p>Copyright &copy; 2016-2018, Rogerio Taques.</p>
           <p class="align-justify">
@@ -2479,9 +2494,11 @@ canvas.get('#mycanvas').close();</pre>
           </p>
         </div>
       </section>
-      <section id="donate"> 
+      <section id="contribute"> 
         <div class="container"> 
-          <h2>Contributing</h2>
+          <div class="reveal animated animated-once">
+            <h2>Contributing</h2>
+          </div>
           <p>This is an open-source project and you can freely contribute. </p>
           <p>By contributing you will help us to improve the code-base and make <code >seed-css</code> even better to other developers like us.</p>
           <div class="row"> 
@@ -2546,6 +2563,6 @@ canvas.get('#mycanvas').close();</pre>
     </div>
     <script src="//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
     <script src="//code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
-    <script src="assets/js/bundle.js?v=v2.0.2"></script>
+    <script src="assets/js/bundle.js?v=v2.1.0"></script>
   </body>
 </html>
