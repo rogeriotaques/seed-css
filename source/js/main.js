@@ -2,7 +2,7 @@
  * Seed-CSS - Landing Page.
  * @author Rogerio Taques (hello@abtz.co)
  * @see https://github.com/AbtzLabs/seed-css
- * @version 2.0.1
+ * @version 2.0.3
  * @license private
  */
 
