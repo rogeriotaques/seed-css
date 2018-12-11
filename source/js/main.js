@@ -96,9 +96,19 @@
     const modal = m.get('#modal');
     const canvas = c.get('#sidenav');
 
+    // Defines a special initialization options for the scroll
+    const scrollOptions = {
+      spyScrollSelector: 'a.smooth',
+      revealElementSelector: '.reveal.animated',
+      revealSingleAnimation: 'animated-once',
+      revealWhenVisible: 'bounceIn',
+      revealWhenHidden: 'bounceOut',
+      revealSpaceOffset: 2.5
+    };
+
     SeedCSS.fileUpload(); // Init the fileUpload helper
     SeedCSS.textArea(); // Init the textArea helper
-    SeedCSS.scroll(); // Init the scroll helper
+    SeedCSS.scroll(scrollOptions); // Init the scroll helper
 
     if (modal) {
       modal.addEventListener('modal.opened', () => {
