@@ -1,6 +1,6 @@
 /* 
  * Seed CSS - Buttons
- * @version 2.0.1
+ * @version 2.1.0
  */
 
 $color-change-rate: 5%;
@@ -42,7 +42,8 @@ a.btn {
     @extend .primary-background;
 
     &.outline {
-      @extend .primary;
+      background-color: transparent !important;
+      color: $primary !important;
     }
   }
 
@@ -51,6 +52,7 @@ a.btn {
     @extend .secondary-background;
 
     &.outline {
+      background-color: transparent !important;
       color: $secondary !important;
     }
   }
@@ -60,6 +62,7 @@ a.btn {
     @extend .red-background;
 
     &.outline {
+      background-color: transparent !important;
       color: $red !important;
     }
   }
@@ -69,6 +72,7 @@ a.btn {
     @extend .orange-background;
 
     &.outline {
+      background-color: transparent !important;
       color: $orange !important;
     }
   }
@@ -78,6 +82,7 @@ a.btn {
     @extend .green-background;
 
     &.outline {
+      background-color: transparent !important;
       color: $green !important;
     }
   }
@@ -87,7 +92,19 @@ a.btn {
     @extend .purple-background;
 
     &.outline {
+      background-color: transparent !important;
       color: $purple !important;
+    }
+  }
+
+  &.white {
+    border-color: $white;
+    background-color: $white !important;
+    color: $black !important;
+
+    &.outline {
+      background-color: transparent !important;
+      color: $white !important;
     }
   }
 
@@ -103,31 +120,61 @@ a.btn {
       &.primary {
         background-color: darken($primary, $color-change-rate) !important;
         border-color: darken($primary, $color-change-rate);
+
+        &.outline {
+          background-color: transparent !important;
+          color: darken($primary, $color-change-rate) !important;
+        }
       }
 
       &.secondary {
         background-color: darken($secondary, $color-change-rate) !important;
         border-color: darken($secondary, $color-change-rate);
+
+        &.outline {
+          background-color: transparent !important;
+          color: darken($secondary, $color-change-rate) !important;
+        }
       }
 
       &.red {
         background-color: darken($red, $color-change-rate) !important;
         border-color: darken($red, $color-change-rate);
+
+        &.outline {
+          background-color: transparent !important;
+          color: darken($red, $color-change-rate) !important;
+        }
       }
 
       &.orange {
         background-color: darken($orange, $color-change-rate) !important;
         border-color: darken($orange, $color-change-rate);
+
+        &.outline {
+          background-color: transparent !important;
+          color: darken($orange, $color-change-rate) !important;
+        }
       }
 
       &.green {
         background-color: darken($green, $color-change-rate) !important;
         border-color: darken($green, $color-change-rate);
+
+        &.outline {
+          background-color: transparent !important;
+          color: darken($green, $color-change-rate) !important;
+        }
       }
 
       &.purple {
         background-color: darken($purple, $color-change-rate) !important;
         border-color: darken($purple, $color-change-rate);
+
+        &.outline {
+          background-color: transparent !important;
+          color: darken($purple, $color-change-rate) !important;
+        }
       }
     }
 
