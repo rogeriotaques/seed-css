@@ -21,8 +21,8 @@ SeedCSS.modal({
   // @see: https://daneden.github.io/animate.css/
   // animate.css classes to be used
   classAnimation: {
-    open: 'flipInX',
-    close: 'flipOutX'
+    open: 'bounceInDown',
+    close: 'bounceOutUp'
   }
 });
 ```
