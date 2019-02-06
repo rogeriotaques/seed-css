@@ -5,10 +5,9 @@
   p.lead The spinner is offered in three different sizes: <code >default</code>, <code >medium</code> and <code >big</code>.
 
   p.
-    Also, the spinner animation speed can be controled with the classes: <code >medium</code> (0.85s) and <code >fast</code> (0.5s),
+    Also, the spinner animation speed can be controled with the classes: <code >fast</code> (0.85s) and <code >furious</code> (0.5s),
     while the normal speed animation will take 1.3s to complete the course.
 
-  p.
     If for some reason you want to hide the "loading" message, just include the <code >lean</code> class or simply do not
     include the <code >data-label</code> property.
 
@@ -19,13 +18,13 @@
 
       br 
 
-      h6 Medium <code >.medium</code> (with medium speed)
-      .spinner.medium(data-label="Loading ...").medium
+      h6 Medium <code >.medium.fast</code> (with fast speed)
+      .spinner.medium.fast(data-label="Loading ...")
 
       br 
 
-      h6 Big <code >.big</code> (with fast speed)
-      .spinner.big(data-label="Loading ...").fast
+      h6 Big <code >.big.furious</code> (with faster speed)
+      .spinner.big.furious(data-label="Loading ...")
 
     .col.md-6.md-offset-1
       h5 Code example
