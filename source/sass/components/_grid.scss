@@ -17,6 +17,7 @@
   text-align: initial;
 
   > .col {
+    @include flex(1 100%);
     @include justify-content(space-between);
     position: relative;
     box-sizing: border-box;
