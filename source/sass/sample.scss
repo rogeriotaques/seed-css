@@ -99,7 +99,7 @@ footer {
 
 #component-cards {
   .card {
-    min-width: 307px;
+    min-width: 250px;
   }
 
   .auto-height {
@@ -117,9 +117,10 @@ footer {
       background-color: $secondary;
       color: white;
       font-weight: 700;
+      padding: 0;
 
       &:not(:first-child) {
-        outline: 4px solid white;
+        outline: 1px solid white;
       }
     } // .col
   } // #flexible-cols.row
