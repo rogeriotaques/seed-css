@@ -1,0 +1,55 @@
+
+#component-colors
+  h4 Colors
+
+  .row 
+    .col.md-5
+      p.lead.
+        Oh, yes! This boilerplate wouldn't worth if there was not a pre-defined color scheme, isn't it?
+
+      p.lead.
+        That's why <code> seed-css</code> comes with a pre-defined set of colors exposed in classes, and the same 
+        colors can be applied both on the foreground (texts) and background from any HTML element.
+
+    .col.md-6.md-offset-1
+      br
+
+      br
+
+      .colors 
+        .row  
+          .col.sm-4.primary-background
+          .col.sm-4.secondary-background
+          .col.sm-4.red-background
+        .row  
+          .col.sm-4.orange-background
+          .col.sm-4.green-background
+          .col.sm-4.purple-background
+        .row  
+          .col.sm-4.darkgrey-background
+          .col.sm-4.grey-background
+          .col.sm-4.softgrey-background
+
+  h5 Full color list
+
+  .table-responsive 
+    table.hovered
+      thead
+        tr
+          th Tag
+          th Foreground class
+          th Background class
+          th Color
+      tbody
+        -var colorNameList = ['primary', 'secondary', 'red', 'orange', 'green', 'purple', 'darkgrey', 'grey', 'softgrey'];
+        -var colorList = ['#1466ff', '#4b70b4', '#d32f2f', '#fb8c00', '#43a047', '#8e24aa', '#666', '#ccc', '#f5f5f5'];
+        -for (var colorIndex in colorNameList)
+          tr
+            td
+              span(class=colorNameList[colorIndex]+'-background').color-tag
+            td
+              code= '.' + colorNameList[colorIndex]
+            td
+              code= '.' + colorNameList[colorIndex] + '-background'
+            td
+              code= colorList[colorIndex]

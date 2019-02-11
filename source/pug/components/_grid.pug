@@ -1,0 +1,90 @@
+
+#component-grid
+  h4 Grid
+
+  .row 
+    .col.md-4
+      p.align-justify.lead.
+        The grid system helps you to create responsive designs where you can define 
+        a different number of columns depending on the device width.
+
+      p.align-justify.
+        Offsets are also available. To apply offsets, just use the class
+        <code >*-offset-*</code> to your classname.
+
+    .col.md-7.md-offset-1
+      br 
+
+      .align-center
+        strong Have fun playing with columns!
+
+      div.align-center
+        button(type="button", disabled="true")#add-col.btn.btn-small Add column
+        button(type="button")#rem-col.btn.btn-small Remove column
+
+  br
+
+  .sample
+    #flexible-cols.row
+      each i in [1,2,3,4,5,6,7,8,9,10,11,12]
+        .col.sm-1.align-center= i
+
+  br
+
+  .sample
+    .row
+      .col.sm-11.sm-offset-1.md-11.md-offset-1.lg-11.lg-offset-1.align-center 11 columns with offset of 1
+
+  br
+
+  h5 Available classes
+
+  .table-responsive
+    table
+      thead
+        tr
+          th Class
+          th Detail
+          th Remarks
+      tbody
+        tr
+          td.nowrap .row
+          td.nowrap &nbsp;
+          td Defines each row of a grid container
+        tr
+          td.nowrap .col
+          td.nowrap &nbsp;
+          td Defines each column of a grid container
+        tr
+          td.nowrap .sm-*
+          td.nowrap (1 ~ 12)
+          td Defines a column size for small screens (<code >max-width: 600px</code>). <br >It's used concatenated to <code >.col</code>.
+        tr
+          td.nowrap .md-*
+          td.nowrap (1 ~ 12)
+          td Defines a column size for medium screens (<code >max-width: 990px</code>). <br >It's used concatenated to <code >.col</code>.
+        tr
+          td.nowrap .lg-*
+          td.nowrap (1 ~ 12)
+          td Defines a column size for large screens (<code >max-width: 1200px</code>). <br >It's used concatenated to <code >.col</code>.
+        tr
+          td.nowrap .xl-*
+          td.nowrap (1 ~ 12)
+          td Defines a column size for extra-large screens (<code >min-width: 1200px</code>). <br >It's used concatenated to <code >.col</code>.
+        tr
+          td.nowrap *-offset-*
+          td.nowrap (.sm, .md, .lg and .xl) and (1 ~ 12)
+          td Creates an offset of columns. <br >It's used concatenated to <code >.col</code> and its screen size. <br >E.g: <code>.md-offset-2</code>.
+
+  br
+
+  h5 Code example
+
+  .code-sample
+    pre.prettyprint.lang-html.
+      &lt;!-- This's a row. You can have as many rows as you need. --&gt;
+      &lt;div class="row" &gt;
+        &lt;!-- This's a column. You can have up to 12 columns in a row. --&gt;
+        &lt;div class="col sm-12 md-6 lg-3" &gt; ... &lt;/div&gt;
+        &lt;div class="col sm-12 md-6 lg-9" &gt; ... &lt;/div&gt;
+      &lt;/div&gt;

@@ -1,0 +1,57 @@
+#component-tables
+  h4 Tables
+
+  p.lead.
+    Tables are intended to be used for display data.
+
+  p.align-justify.
+    In that matter, <code >seed-css</code> has very special classes to allow you show
+    your data in a very clean and readable way. Basically, just using a
+    default markup for data you'll get a styled table, but, you also can
+    make use of special classes to make your tables even more readable.
+
+  p.camel-case
+    b default
+
+  each className in ['', 'stripped', 'hovered', 'bordered']
+    if className !== ''
+      p.camel-case
+        b= className
+
+    table(class=className)
+      thead
+        tr
+          th Name
+          th Email
+          th Phone
+      tbody
+        tr
+          td John Wayne
+          td john@wayne.com
+          td 123-4567-8900
+        tr
+          td John Wayne
+          td john@wayne.com
+          td 123-4567-8900
+        tr
+          td John Wayne
+          td john@wayne.com
+          td 123-4567-8900
+      tfoot
+        tr
+          td
+          td
+          td
+
+    h5 Code example
+    .code-sample
+      pre.prettyprint.lang-html.
+        &lt;table class="#{className}" &gt;
+          &lt;tbody &gt;
+            &lt;tr &gt;
+              &lt;td &gt; ... &lt;/td&gt;
+              &lt;td &gt; ... &lt;/td&gt;
+              &lt;td &gt; ... &lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;

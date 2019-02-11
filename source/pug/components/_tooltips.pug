@@ -1,0 +1,46 @@
+#component-tooltips
+  h4 Tooltips
+
+  p.lead.
+    Tooltips are an important part of UX, where you can give user additional information about
+    a component  placed on his/her screen. <code >Seed-css</code> gives you a
+    simple but very efficient tooltip, which doesn't even need javascript.
+
+  br 
+  br 
+
+  .tooltips
+    .grid 
+      .row 
+        .col.md-3.sm-6.align-center
+          span(tooltip="Right tooltip").with-tooltip.right Hover here!
+        .col.md-3.sm-6.align-center
+          span(tooltip="Top tooltip").with-tooltip.top Hover here!
+        .col.md-3.sm-6.align-center
+          span(tooltip="Bottom tooltip").with-tooltip.bottom Hover here!
+        .col.md-3.sm-6.align-center
+          span(tooltip="Left tooltip.").with-tooltip.left Hover here!
+
+  h5 Code example
+
+  .code-sample
+    pre.prettyprint.lang-html.
+      &lt;!-- top --&gt;
+      &lt;span class="with-tooltip top" tooltip="Hover here!" &gt;
+        ...
+      &lt;/span&gt;
+
+      &lt;!-- right --&gt;
+      &lt;span class="with-tooltip right" tooltip="Hover here!" &gt;
+        ...
+      &lt;/span&gt;
+
+      &lt;!-- bottom (default) --&gt;
+      &lt;span class="with-tooltip bottom" tooltip="Hover here!" &gt;
+        ...
+      &lt;/span&gt;
+
+      &lt;!-- left --&gt;
+      &lt;span class="with-tooltip left" tooltip="Hover here!" &gt;
+        ...
+      &lt;/span&gt;

@@ -1,0 +1,25 @@
+/* 
+ * Seed CSS - Container
+ * @version 2.1.0
+ */
+
+.container {
+  width: $small-container;
+  max-width: $medium;
+  margin: $margin auto;
+
+  @media #{$medium-and-up} {
+    width: $medium-container;
+    max-width: $large;
+  }
+
+  @media #{$large-and-up} {
+    width: $large-container;
+    max-width: $extra-large;
+  }
+
+  @media #{$extra-large-only} {
+    width: $extra-large-container;
+    max-width: $fullhd;
+  }
+}

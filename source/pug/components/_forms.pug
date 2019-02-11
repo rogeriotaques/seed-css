@@ -1,0 +1,268 @@
+
+#component-form
+  h4 Forms
+
+  p.align-justify.
+    Probably all websites and apps will contain (at least) one form, so,
+    that's why <code >seed-css</code> has a really simple, easy to use and customizable
+    form field stylesheet. Have a look on the examples below:
+
+  h6 Simple elements
+
+  .row 
+    .col.md-5
+      .field
+        label(for="") This is an input text
+        input(type="text")
+
+      .field
+        label(for="") This is an input text with additional info
+        input(type="text")
+        span.info This is an additional piece of information.
+
+      .field.has-feedback
+        label(for="") This is an input text with error message
+        input(type="text").error
+        span.error This is an error message!
+
+      .field.has-feedback
+        label(for="") This is an input text with success message
+        input(type="text").success
+        span.success This is a success message!
+
+    .col.md-6.md-offset-1
+      h5 Code example 
+
+      .code-sample
+        pre.prettyprint.lang-html.
+          &lt;!-- Example of an input text --&gt;
+          &lt;div class="field" &gt;
+            &lt;label for="..." &gt; ... &lt;/label&gt;
+            &lt;input type="text" name="..." &gt;
+          &lt;/div&gt;
+
+          &lt;!-- Example of an input text with feedback (success or error) --&gt;
+          &lt;div class="field has-feedback" &gt;
+            &lt;label for="..." &gt; ... &lt;/label&gt;
+            &lt;input type="text" name="..." class="error" &gt;
+            &lt;span class="error" &gt; ... &lt;/span&gt;
+          &lt;/div&gt;
+
+  h6 Grouped elements
+
+  .row 
+    .col.md-5
+      .field.group 
+        .field 
+          label(for="") First name 
+          input(type="text", id="first_name")
+
+        .field 
+          label(for="") Last name 
+          input(type="text", id="last_name")
+
+    .col.md-6.md-offset-1 
+      h5 Code example 
+
+      .code-sample
+        pre.prettyprint.lang-html.
+          &lt;!-- Example of grouped fields --&gt;
+          &lt;div class="field group" &gt;
+            &lt;div class="field" &gt;
+              &lt;label for="..." &gt; ... &lt;/label&gt;
+              &lt;input type="text" name="..." &gt;
+            &lt;/div&gt;
+
+            &lt;div class="field" &gt;
+              &lt;label for="..." &gt; ... &lt;/label&gt;
+              &lt;input type="text" name="..." &gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+  h6 File upload
+
+  .alert.info.
+    <b >PRO:</b> Make sure that <code >id</code> attribute is set for the <code >file</code> input field and 
+    that it matches the <code>for</code> attribute from its label. Otherwise, it may not work properly.
+
+  br 
+
+  .row 
+    .col.md-5
+      .field.seed-file
+        input(type="file", id="file", multiple, data-multiple="{count} files")
+        label(for="file") 
+          span.input(data-empty="No file chosen") ...
+          span.cancel 
+            span Remove
+          span.button 
+            span Attach
+
+      p.
+        Adding the property <code >multiple</code> to the <code >input</code> element 
+        will enable multiple files selection. Also adding <code >data-multiple="{count} ..."</code>
+        will customize the selected message.
+
+      .code-sample
+        h5 Code example 
+
+        pre.prettyprint.lang-html.
+          &lt;!-- Example of file upload field --&gt;
+          &lt;div class="field seed-file" &gt;
+            &lt;!-- The actual file input (Required) --&gt;
+            &lt;input type="file" name="..." id="..." &gt;
+
+            &lt;!-- Here's the magic (Required) --&gt;
+            &lt;label for="..." &gt;
+              &lt;span class="input" data-empty="No file chosen" &gt; ... &lt;/span&gt;
+
+              &lt;!-- Only visible when file is selected (Optional) --&gt;
+              &lt;span class="cancel" &gt; Remove &lt;/span&gt;
+              &lt;!-- Only visible when there's not file selected (Optional) --&gt;
+              &lt;span class="button" &gt; Attach &lt;/span&gt;
+            &lt;/label&gt;
+          &lt;/div&gt;
+
+    .col.md-6.md-offset-1
+      p.
+        Exceptionally the <b >file upload</b> component works better with a javascript support. Using javascript 
+        will create a much better user experience. <code >Seed-css</code> 
+        has a plug-and-play javascript library written in VanillaJS:
+    
+      h6 When using Node JS:
+
+      .code-sample
+        pre.prettyprint.lang-javascript.
+          import SeedCSS from 'seed-css'; // Import 
+          SeedCSS.fileUpload(); // Initialize 
+
+      h6 When using Vanilla JS:
+
+      .code-sample
+        pre.prettyprint.lang-javascript.
+          if (typeof SeedCSS !== 'undefined') {
+            SeedCSS.fileUpload();
+          }
+
+  h6 Textareas
+
+  .alert.info.
+    <b >PRO:</b> Include the <code >maxlength</code> attribute if you want to enable the 
+    automatic character typing counter provided by <code >seed-css</code>.
+
+  br 
+
+  .row 
+    .col.md-5
+      .field
+        label(for="") This is a textarea
+        textarea(maxlength="200")
+        span(role="counter", data-template="Typed %a out of %b. Remaining %c.", maxlength="255").info ...
+
+      h5 Code example 
+
+      .code-sample
+        pre.prettyprint.lang-html.
+          &lt;!-- Example of a textarea --&gt;
+          &lt;div class="field" &gt;
+            &lt;label for="..." &gt; ... &lt;/label&gt;
+            &lt;textarea name="..." &gt; ... &lt;/textarea&gt;
+            &lt;span role="counter" data-template="... %a ... %b ... %c" maxlength="..." &gt; Calculating ... &lt;/span&gt;
+          &lt;/div&gt;
+
+    .col.md-6.md-offset-1 
+      p.
+        To make it simple and make the user experience better, <code >Seed-css</code> is using 
+        javascript to automaticaly calculates types chars from textareas. If you use the Javascript 
+        given, it's basically plug-an-play.
+    
+      h6 When using Node JS:
+
+      .code-sample
+        pre.prettyprint.lang-javascript.
+          import SeedCSS from 'seed-css'; // Import 
+          SeedCSS.textArea(); // Initialize 
+
+      h6 When using Vanilla JS:
+
+      .code-sample
+        pre.prettyprint.lang-javascript.
+          if (typeof SeedCSS !== 'undefined') {
+            SeedCSS.textArea();
+          }
+
+  .row 
+    .col.md-5
+      h6 Dropdowns (Selects)
+      
+      .field.seed-select
+        label(for="") This is a select/ dropdown
+        select
+          option(value="A") Option A
+          option(value="B") Option B
+          option(value="C") Option C
+
+      .field.seed-select.has-feedback
+        label(for="") This is a select/ dropdown with error message
+        select.error
+          option(value="A") Option A
+          option(value="B") Option B
+          option(value="C") Option C
+        span.error This is an error message!
+
+    .col.md-6.md-offset-1 
+      h5 Code example 
+
+      .code-sample
+        pre.prettyprint.lang-html.
+          &lt;!-- Example of a dropdown --&gt;
+          &lt;div class="field seed-select" &gt;
+            &lt;label for="..." &gt; ... &lt;/label&gt;
+            &lt;select name="..." &gt;
+              &lt;option value="..." &gt; ... &lt;/option&gt;
+              &lt;option value="..." &gt; ... &lt;/option&gt;
+              &lt;option value="..." &gt; ... &lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/div&gt;
+
+
+  .row
+    .col.md-5
+      h6 Radio buttons & Checkboxes
+      
+      .field
+        input(type="radio", id="radio-sample-1", name="radio-sample[]")
+        label(for="radio-sample-1") This is a radio button
+      .field.has-feedback
+        input(type="radio", id="radio-sample-2", name="radio-sample[]").error
+        label(for="radio-sample-2") This is a radio button with error
+
+      hr
+
+      .field
+        input(type="checkbox", id="check-sample-1", name="check-sample[]")
+        label(for="check-sample-1") This is a checkbox
+      .field.has-feedback
+        input(type="checkbox", id="check-sample-2", name="check-sample[]").error
+        label(for="check-sample-2") This is a checkbox with error
+
+    .col.md-6.md-offset-1
+      h5 Code example 
+
+      .code-sample
+        pre.prettyprint.lang-html.
+          &lt;!-- Example of an input radio --&gt;
+          &lt;div class="field" &gt;
+            &lt;input type="radio" name="..." &gt;
+            &lt;label for="..." &gt;
+              ...
+            &lt;/label&gt;
+          &lt;/div&gt;
+
+          &lt;!-- Example of a checkbox --&gt;
+          &lt;div class="field" &gt;
+            &lt;input type="checkbox" name="..." &gt;
+            &lt;label for="..." &gt;
+              ...
+            &lt;/label&gt;
+          &lt;/div&gt;

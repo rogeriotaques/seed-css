@@ -1,0 +1,51 @@
+/* 
+ * Seed CSS - Off-Canvas
+ * @version 2.1.0
+ */
+
+.seed-oc-panel-transition {
+  @include transition(transform, 0.3s, ease-in-out);
+}
+
+.offcanvas {
+  @include transform(translateX(-100%));
+  @extend .seed-oc-panel-transition;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  height: 100vh;
+  background-color: $grey-light;
+  width: $small-container;
+  max-width: $small;
+  box-sizing: border-box;
+  padding: 0 ($padding * 2);
+  overflow: hidden;
+  overflow-y: auto;
+  z-index: 500;
+  box-shadow: rgba(51, 51, 51, 0.35) -3px -1px 6px inset;
+
+  &.open {
+    @include transform(translateX(0%));
+  } // .open
+
+  &:not(.overlay) {
+    & + .oncanvas {
+      @extend .seed-oc-panel-transition;
+    } // .offcanvas + .oncanvas
+
+    &.open {
+      & + .oncanvas {
+        @include transform(translateX($small));
+      } // .open + .oncanvas
+    } // .open
+  } // :not(.overlay)
+
+  &.overlay {
+    box-shadow: none;
+
+    &.open {
+      box-shadow: $shadow-default;
+    }
+  } // .offcanvas.overlay
+} // .offcanvas
