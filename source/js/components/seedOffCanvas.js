@@ -2,7 +2,7 @@
  * Seed-CSS - Off-Canvas.
  * @author Rogerio Taques (hello@abtz.co)
  * @see https://github.com/AbtzLabs/seed-css
- * @version 2.1.0
+ * @version 2.2.0
  * @license MIT
  */
 
