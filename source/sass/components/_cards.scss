@@ -12,7 +12,6 @@
   position: relative;
   display: inline-block;
   width: 100%;
-  @include rem(min-width, 350px);
   @include rem(min-height, 200px);
 
   & > &-header,
