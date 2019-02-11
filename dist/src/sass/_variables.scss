@@ -17,8 +17,9 @@ $extra-large: 1200px;
 $fullhd: 1920px;
 
 // media queries
+$extra-small: 'only screen and (min-width: 0)';
 $small-only: 'only screen and (max-width: #{$medium - 1})';
-$small-and-up: 'only screen and (min-width: 0)';
+$small-and-up: 'only screen and (min-width: #{$small + 1})';
 $medium-only: 'only screen and (min-width: #{$medium}) and (max-width: #{$large - 1})';
 $medium-and-up: 'only screen and (min-width: #{$medium})';
 $medium-and-down: 'only screen and (max-width: #{$large - 1})';
