@@ -43,6 +43,16 @@
           th Container
       tbody
         tr
+          td.nowrap Extra Small Mobiles
+          td.nowrap
+            strong &lt; 320px
+          td.nowrap
+            strong .xs
+          td
+            strong 12
+          td
+            strong 90%
+        tr
           td.nowrap Mobiles
           td.nowrap
             strong &lt; 600px
@@ -89,9 +99,12 @@
     table
       thead
         tr
-          th Query
+          th Breakpoint
           th Remarks
       tbody
+        tr
+          td <code >@media only screen and (max-width: 320px) {}</code>
+          td For extra small mobile devices. (Mobile first, first iPhones)
         tr
           td <code >@media only screen and (min-width: 0px) {}</code>
           td For mobile devices. (Mobile first)
