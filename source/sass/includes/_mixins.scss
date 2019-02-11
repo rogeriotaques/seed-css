@@ -3,6 +3,8 @@
  * @version 2.2.0
  */
 
+@import './mixins-flex';
+
 @function parseInt($n) {
   @return $n / ($n * 0 + 1);
 }
@@ -42,25 +44,13 @@
 @mixin grid-make-cols($size) {
   @for $i from 1 through 12 {
     &.#{$size}-#{$i} {
-      @if $i == 12 {
-        width: 100%;
-      } @else if $i == 1 {
-        width: calc(100% / 12);
-      } @else {
-        width: calc(100% / 12 * #{$i});
-      }
+      @include flex(1 (100% / 12 * $i));
     }
   }
 
   @for $i from 1 through 12 {
     &.#{$size}-offset-#{$i} {
-      @if $i == 12 {
-        margin-left: 100%;
-      } @else if $i == 1 {
-        margin-left: calc(100% / 12);
-      } @else {
-        margin-left: calc(100% / 12 * #{$i});
-      }
+      margin-left: (100% / 12 * $i);
     }
   }
 }
