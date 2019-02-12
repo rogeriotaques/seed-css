@@ -16,6 +16,10 @@
   text-align: inherit; // Fallback for IE-Edge
   text-align: initial;
 
+  &.stretch {
+    @include align-items(stretch);
+  } // .row.stretch
+
   > .col {
     @include flex(1 100%);
     @include justify-content(space-between);

@@ -1,33 +1,49 @@
 section#get-started
 
   .container
-    .row 
-      .col.md-5
-        h2 Get started
+    h2 Get started
+
+    br
+
+    .row.stretch.highlight
+      .col.md-4.align-center 
+        div 
+          span(data-eva="cloud-download-outline", data-eva-height="64", data-eva-width="64", data-eva-fill="#1466ff").eva
+        h5.mb-0 Install
+        p.mt-0 Fork, download or install via NPM.
+
+      .col.md-4.align-center 
+        div 
+          span(data-eva="code-outline", data-eva-height="64", data-eva-width="64", data-eva-fill="#1466ff").eva
+        h5.mb-0 Prepare 
+        p.mt-0 Create the minimum markup
+
+      .col.md-4.align-center 
+        div 
+          span(data-eva="checkmark-outline", data-eva-height="64", data-eva-width="64", data-eva-fill="#1466ff").eva
+        h5.mb-0 Done
+        p.mt-0 You are good to go!
+
+    br
+
+    .code-sample
+      pre.prettyprint.lang-html.
+        &lt;head &gt;
+          ...
+          &lt;!-- Add something like this to the HEAD of your page --&gt;
+          &lt;link href="/path/to/seed.css" rel="stylesheet" type="text/css" &gt;
+        &lt;/head&gt;
+
+    br
+
+    .alert.info
+      h6.m-0.mb-5 Supported browsers:
+      p.m-0 Desktop: <b>IE 10+</b>, <b>Edge 12+</b>, <b>Chrome 21+</b>, <b>Firefox 22+</b>, <b>Opera 12.1+</b>, and <b>Safari 6.1+</b>.
+      p.m-0 Mobile: <b>Safari 7+</b>, <b>Android 4.4+</b>, <b>Blackberry 10+</b>, <b>Opera 12.1+</b>, <b>Android Chrome 71+</b>, <b>Android Firefox 64+</b> and <b>IE 11</b>.
     
-        .alert.info
-          h5.m-0.mb-20 Made for modern browsers
-          p.mb-0 Desktop: <b>IE 10+</b>, <b>Edge 12+</b>, <b>Chrome 21+</b>, <b>Firefox 22+</b>, <b>Opera 12.1+</b>, and <b>Safari 6.1+</b>.
-          p.mb-0 Mobile: <b>Safari 7+</b>, <b>Android 4.4+</b>, <b>Blackberry 10+</b>, <b>Opera 12.1+</b>, <b>Android Chrome 71+</b>, <b>Android Firefox 64+</b> and <b>IE 11</b>.
+    br
 
-        br
-
-        p.lead.
-           <a href="https://github.com/AbtzLabs/seed-css" ><b>Fork</b></a>, 
-           <a href="https://github.com/AbtzLabs/seed-css/archive/develop.zip" ><b>download</b></a> or 
-           install via <b >NPM</b>.
-
-      .col.md-6
-        p
-          span When using NPM: 
-          code $ npm install --save seed-css
-
-        p.align-justify.
-          After get the latest version of files, import it to your pages as the example below:
-
-        .code-sample
-            pre.prettyprint.lang-html.
-              &lt;head &gt;
-                ...
-                &lt;link href="/path/to/seed.css" rel="stylesheet" type="text/css" &gt;
-              &lt;/head&gt;
+    .code-sample
+      pre.prettyprint.lang-bash.
+        # When using NPM, run this in a terminal window
+        $ npm install --save seed-css

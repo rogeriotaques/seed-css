@@ -22,4 +22,10 @@
     width: $extra-large-container;
     max-width: $fullhd;
   }
-}
+
+  &-fluid {
+    width: 100%;
+    max-width: none;
+    margin: $margin auto;
+  } // .container-fluid
+} // .container

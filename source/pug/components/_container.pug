@@ -3,16 +3,20 @@
 
   .row
     .col.md-4
-      p.lead.
-        Containers are simple <code >div</code> with pre-defined width depending on the 
-        screen size, which will help to keep the content enclosed in a specific area.
+      p.lead.align-justify.
+        Containers are simple <b >DIV</b> elements with pre-defined width (depending on the 
+        screen size) which will help to keep the content enclosed in a specific area.
       
-      p.
-        The <code >max-width</code> is set to <code >1200px</code> on wide screens.
-
-    .col.md-7.md-offset-1
+    .col.md-7
       .sample-container.align-center This's a container.
 
       .code-sample
           pre.prettyprint.lang-html.
               &lt;div class="container" &gt;&lt;/div&gt;
+              &lt;div class="container-fluid" &gt;&lt;/div&gt;
+
+  - showPrefix = false;
+  - showColumCount = false;
+  include _container-table
+
+  h6 Fluid containers are all 100% with no max-width.

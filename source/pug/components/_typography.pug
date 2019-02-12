@@ -5,16 +5,13 @@
     All default HTML tags are supported, including but not limited
     to the below few examples.
 
-  p.
-    We are using <b>Lato (300)</b> as general font-family and <b>Open Sans (400)</b> as
-    title's font-family. The easiest way to make these fonts available to your page is
-    loading them from <a href="https://fonts.google.com/" target="_blank" >Google Fonts</a>, such as:
-
   .code-sample
     pre.prettyprint.lang-html.
+      &lt;!-- Add something like this to the HEAD of your page --&gt;
+      &lt;!-- Will add Open-Sans(400) and Lato (300,700) as title and general font-families --&gt;
       &lt;link href="//fonts.googleapis.com/css?family=Lato:300,700|Open+Sans:400" rel="stylesheet"&gt;
 
-  br
+  p For other options, check <a href="https://fonts.google.com/" target="_blank" >Google Fonts</a> out.
 
   .row
     .col.sm-12.md-6
@@ -22,7 +19,6 @@
         #{'h'+i}= 'Header ' + i
 
     .col.sm-12.md-6
-      br
       br
 
       p.

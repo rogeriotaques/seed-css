@@ -1,0 +1,72 @@
+.table-responsive 
+  table
+    thead
+      tr
+        th &nbsp;
+        th Screen width
+        if showPrefix 
+          th Prefix
+        if showColumCount 
+          th Columns
+        th Container
+    tbody
+      tr
+        td.nowrap Extra Small Mobiles
+        td.nowrap
+          strong &lt; 320px
+        if showPrefix 
+          td.nowrap
+            strong .xs
+        if showColumCount 
+          td
+            strong 12
+        td
+          strong 90%
+      tr
+        td.nowrap Mobiles
+        td.nowrap
+          strong &lt; 600px
+        if showPrefix 
+          td.nowrap
+            strong .sm
+        if showColumCount 
+          td
+            strong 12
+        td
+          strong 90%
+      tr
+        td.nowrap Tablets
+        td.nowrap
+          strong &lt;= 990px
+        if showPrefix 
+          td.nowrap
+            strong .md
+        if showColumCount 
+          td
+            strong 12
+        td
+          strong 85%
+      tr
+        td.nowrap Desktops/ laptops
+        td.nowrap
+          strong &lt;= 1200px
+        if showPrefix 
+          td.nowrap
+            strong .lg
+        if showColumCount 
+          td
+            strong 12
+        td
+          strong 80%
+      tr
+        td.nowrap Extra large desktops/ TVs
+        td.nowrap
+          strong &gt; 1200px
+        if showPrefix 
+          td.nowrap
+            strong .xl
+        if showColumCount 
+          td
+            strong 12
+        td
+          strong 75%
