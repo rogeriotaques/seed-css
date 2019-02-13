@@ -61,8 +61,8 @@
     width: 100%;
     box-sizing: border-box;
     border: $border solid $grey;
-    border-radius: 0;
-    margin: 5px 0;
+    border-radius: $radius;
+    margin: ($margin / 2) 0;
 
     @include box-shadow(0 0 0 1000px white inset);
     @include appearance(none);
@@ -275,8 +275,66 @@
         line-height: 3rem;
       } // button
 
+      &:first-child {
+        margin-left: -1px;
+
+        & > input[type='text'],
+        & > input[type='password'],
+        & > input[type='search'],
+        & > input[type='tel'],
+        & > input[type='email'],
+        & > input[type='url'],
+        & > input[type='date'],
+        & > input[type='time'],
+        & > input[type='datetime-local'],
+        & > input[type='color'],
+        & > input[type='month'],
+        & > input[type='week'],
+        & > input[type='number'] {
+          border-top-right-radius: 0 !important;
+          border-bottom-right-radius: 0 !important;
+        }
+      } // :first-child
+
+      &:not(:first-child):not(:last-child) {
+        margin-left: -1px;
+
+        & > input[type='text'],
+        & > input[type='password'],
+        & > input[type='search'],
+        & > input[type='tel'],
+        & > input[type='email'],
+        & > input[type='url'],
+        & > input[type='date'],
+        & > input[type='time'],
+        & > input[type='datetime-local'],
+        & > input[type='color'],
+        & > input[type='month'],
+        & > input[type='week'],
+        & > input[type='number'] {
+          border-radius: 0 !important;
+        }
+      } // :not(:first-child):not(:last-child)
+
       &:last-child {
         margin-left: -1px;
+
+        & > input[type='text'],
+        & > input[type='password'],
+        & > input[type='search'],
+        & > input[type='tel'],
+        & > input[type='email'],
+        & > input[type='url'],
+        & > input[type='date'],
+        & > input[type='time'],
+        & > input[type='datetime-local'],
+        & > input[type='color'],
+        & > input[type='month'],
+        & > input[type='week'],
+        & > input[type='number'] {
+          border-top-left-radius: 0 !important;
+          border-bottom-left-radius: 0 !important;
+        }
       } // :last-child
     } // > .field
   } // .group
@@ -295,8 +353,7 @@
         cursor: pointer;
         font-size: 1.5rem;
         border: 1px solid #ccc;
-        border-top-right-radius: $radius;
-        border-bottom-right-radius: $radius;
+        border-radius: $radius;
         background-color: #fff;
         padding: 0;
         box-sizing: content-box;
