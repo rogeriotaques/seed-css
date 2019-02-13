@@ -73,7 +73,37 @@ footer {
     color: whitesmoke !important;
     font-weight: 700;
   }
-} // .footer
+} // footer
+
+a.badge {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.search {
+  &bar.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 50px;
+    height: 50px;
+    z-index: 50;
+    padding: 5px 0;
+
+    .field {
+      margin: 0;
+
+      .algolia-autocomplete {
+        width: 100%;
+      }
+    }
+  } // .searchbar
+
+  &-icon {
+    position: absolute;
+    right: 10px;
+    top: 13px;
+  } // .search-icon
+} // .search
 
 .code-sample {
   > .prettyprint {
@@ -306,8 +336,6 @@ div[id^='sample-'] {
 } // [role="offset-canvas"]
 
 nav {
-  border: thin solid $grey;
-
   .hamburger {
     position: relative;
     display: inline-block;
