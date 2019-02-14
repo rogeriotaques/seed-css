@@ -15,15 +15,14 @@ const seedScroll = function(options) {
 
   let scrollTarget = 0;
 
-  const gutter = 50;
-
   const defaultOptions = {
     spyScrollSelector: 'nav a.smooth',
     revealElementSelector: '.reveal',
     revealSpaceOffset: 0.2,
     revealWhenVisible: 'visible',
     revealSingleAnimation: 'visible-once',
-    revealWhenHidden: 'hidden'
+    revealWhenHidden: 'hidden',
+    gutter: 50
   }; // defaultOptions
 
   const fnUpdateActiveTrigger = (elem) => {
@@ -67,7 +66,7 @@ const seedScroll = function(options) {
           const target = document.querySelector(targetID);
           const offset = fnGetOffset(target);
 
-          if (offset.top - gutter <= window.scrollY) {
+          if (offset.top - options.gutter <= window.scrollY) {
             fnUpdateActiveTrigger(el);
             return;
           }
@@ -92,7 +91,7 @@ const seedScroll = function(options) {
     if (target) {
       const elem = document.querySelector(target);
 
-      scrollTarget = fnGetOffset(elem).top - gutter; // add some gutter
+      scrollTarget = fnGetOffset(elem).top - options.gutter; // add some gutter
 
       window.scrollTo({
         behavior: 'smooth',
