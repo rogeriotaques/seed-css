@@ -103,7 +103,8 @@
       revealSingleAnimation: 'animated-once',
       revealWhenVisible: 'bounceIn',
       revealWhenHidden: 'bounceOut',
-      revealSpaceOffset: 2.5
+      revealSpaceOffset: 2.5,
+      gutter: 150
     };
 
     SeedCSS.fileUpload(); // Init the fileUpload helper
