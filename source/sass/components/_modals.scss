@@ -63,6 +63,6 @@
   } // .modal-body
 
   & &-footer {
-    padding: 0 ($padding * 2) ($padding / 2);
+    padding: 0 ($padding * 2) ($padding * 2);
   } // .modal-footer
 } // .modal

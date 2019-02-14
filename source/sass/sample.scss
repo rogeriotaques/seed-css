@@ -109,7 +109,9 @@ a.badge {
   > .prettyprint {
     margin: 0 0 20px;
     padding: 20px;
-    overflow: scroll;
+    overflow: hidden;
+    overflow-x: scroll;
+    white-space: pre-wrap;
   }
 }
 

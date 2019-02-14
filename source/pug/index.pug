@@ -72,13 +72,13 @@ html(lang="en")
           h3.modal-title Hello world 
           a(href="#", role="modal-dismiss").dismiss
             span X
-        .modal-body    
+        .modal-body.align-justify    
           p This's the body of the overlay modal window.
-          p You can clique on the "X" at the top-right, anywhere in the dark background, or even press the ESC key to dismiss this window.
+          p You can clique on the "<b>X</b>" at the top-right, anywhere in the dark background, or even press the <b>ESC</b> key to dismiss this window.
           p Also, always a modal is open or close, <code >modal.opened</code> and <code >modal.closed</code> events are dispatched respectively.
         .modal-footer
           .align-right
-            button(type="button").btn.small.secondary OK! Got it.
+            button(type="button").btn.medium.secondary Got it.
 
     script(src="//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js")
     script(src="//code.jquery.com/jquery-2.2.3.min.js", integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=", crossorigin="anonymous")
