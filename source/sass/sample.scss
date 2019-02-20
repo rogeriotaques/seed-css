@@ -238,8 +238,8 @@ div[id^='sample-'] {
   .margins,
   .paddings {
     .col {
+      padding: 0;
       border: 2px solid white;
-      height: 120px;
       overflow: hidden;
 
       &:nth-child(2),
