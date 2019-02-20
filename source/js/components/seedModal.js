@@ -2,7 +2,7 @@
  * Seed-CSS - Modal
  * @author Rogerio Taques (hello@abtz.co)
  * @see https://github.com/AbtzLabs/seed-css
- * @version 2.1.0
+ * @version 2.2.0
  * @license MIT
  */
 
@@ -206,11 +206,7 @@ const seedModal = (options) => {
 }; // seedModal
 
 if (typeof module !== 'undefined') {
-  if (typeof module.exports.SeedCSS === 'undefined') {
-    module.exports.SeedCSS = {};
-  }
-
-  module.exports.SeedCSS.modal = seedModal;
+  module.exports.seedModal = seedModal;
 } else {
   if (typeof window.SeedCSS === 'undefined') {
     window.SeedCSS = {};

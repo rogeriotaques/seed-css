@@ -2,15 +2,13 @@
 #component-responsive-images
   h4 Responsive images
 
-  .row 
-    .col.md-5
-      br 
-      br 
+  .row.stretch 
+    .col.md-6.align-center
 
-      p.lead.
+      p.lead.align-justify.
         By default, all images are considered responsive and will adjust
         accordingly to the window size. In case you, for any sake, need a
-        non responsive image, just add the class <code >.no-responsive</code>
+        non responsive image, just add the class <b >.no-responsive</b>
         on it.
 
       br
@@ -18,17 +16,14 @@
       p.align-center
         img(src="https://picsum.photos/800/600?random", alt="Sample of a responsive image").with-shadow
 
-    .col.md-6.md-offset-1
-      h5 Code example
-
+    .col.md-6.align-center
       .code-sample
         pre.prettyprint.lang-html.
           &lt;img src="..." alt="..." &gt;
 
-      br 
       br
 
-      h6 Circle and Thumbnail are also given
+      h6 Circle and Thumbnail 
 
       .row
         .col.sm-12.md-6

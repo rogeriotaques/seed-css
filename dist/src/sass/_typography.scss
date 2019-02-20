@@ -1,6 +1,6 @@
 /* 
  * Seed CSS - Typography
- * @version 2.1.0
+ * @version 2.2.0
  */
 
 :root {
@@ -25,7 +25,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial,
+    sans-serif;
   font-weight: 400;
 
   margin: {

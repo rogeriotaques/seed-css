@@ -1,0 +1,41 @@
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+
+    title Seed CSS - Grid test
+
+    link(rel="stylesheet", type="text/css", href="assets/css/seed.css?v={%version%}")
+
+    style. 
+      .row {
+        background-color: red;
+      }
+
+      .row > .col {
+        background-color: blue;
+        border: thin solid green;
+      }
+
+      .row > .col > div {
+        color: blue;
+        background-color: yellow;
+      }
+
+  body 
+
+    .container
+      h5 .xs-12.sm-6.md-4.lg-3.xl-2
+      .row
+        each i in [1,2,3,4,5,6,7,8,9,10,11,12]
+          .col.xs-12.sm-6.md-4.lg-3.xl-2.align-center
+            div= i
+      
+      h5 .sm-6.md-3.md-offset-3
+      .row
+        each i in [2,5,8,11]
+          .col.sm-6.md-4.md-offset-4.align-center
+            div= i
+          .col.sm-6.md-4.align-center
+            div= i+1

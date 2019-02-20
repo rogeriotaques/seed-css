@@ -33,12 +33,28 @@ html(lang="en")
     meta(name="copyright", content="Abtz Labs (https://abtz.co)")
     meta(name="license", content="MIT")
 
-    link(rel="stylesheet", type="text/css", href="//fonts.googleapis.com/css?family=Lato:300,700|Open+Sans:400")
-    //- link(rel="stylesheet", type="text/css", href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css")
-    //- link(rel="stylesheet", type="text/css", href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css")
+    link(rel="stylesheet", type="text/css", href="https://fonts.googleapis.com/css?family=Lato:300,700|Open+Sans:400|Cookie")
+    link(rel="stylesheet", type="text/css", href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css")
     link(rel="stylesheet", type="text/css", href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css")
     link(rel="stylesheet", type="text/css", href="assets/css/seed.css?v={%version%}")
     link(rel="stylesheet", type="text/css", href="assets/css/style.css?v={%version%}")
+
+    script(src="https://unpkg.com/eva-icons")
+    
+    // Global site tag (gtag.js) - Google Analytics
+    script(async, src="https://www.googletagmanager.com/gtag/js?id=UA-734057-10")
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-734057-10');
+
+    style.
+      .bmc-button img{width: 27px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}
+      .bmc-button{line-height: 36px !important;height:37px !important;text-decoration: none !important;display:inline-flex !important;color:#ffffff !important;background-color:#FF813F !important;border-radius: 3px !important;border: 1px solid transparent !important;padding: 1px 9px !important;font-size: 22px !important;letter-spacing: 0.6px !important;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Cookie', cursive !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;-o-transition: 0.3s all linear !important;-webkit-transition: 0.3s all linear !important;-moz-transition: 0.3s all linear !important;-ms-transition: 0.3s all linear !important;transition: 0.3s all linear !important;}
+      .bmc-button:hover, 
+      .bmc-button:active, 
+      .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#ffffff !important;}
   body
 
     aside#sidenav.offcanvas
@@ -64,14 +80,51 @@ html(lang="en")
           h3.modal-title Hello world 
           a(href="#", role="modal-dismiss").dismiss
             span X
-        .modal-body    
+        .modal-body.align-justify    
           p This's the body of the overlay modal window.
-          p You can clique on the "X" at the top-right, anywhere in the dark background, or even press the ESC key to dismiss this window.
+          p You can clique on the "<b>X</b>" at the top-right, anywhere in the dark background, or even press the <b>ESC</b> key to dismiss this window.
           p Also, always a modal is open or close, <code >modal.opened</code> and <code >modal.closed</code> events are dispatched respectively.
         .modal-footer
           .align-right
-            button(type="button").btn.small.secondary OK! Got it.
+            button(type="button").btn.medium.secondary Got it.
 
     script(src="//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js")
     script(src="//code.jquery.com/jquery-2.2.3.min.js", integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=", crossorigin="anonymous")
     script(src="assets/js/bundle.js?v={%version%}")
+    script(type="text/javascript", src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js")
+    script(type="text/javascript"). 
+      docsearch({ 
+        apiKey: 'c664adc98c6f295b647556382cd0c5cf', 
+        indexName: 'abtzlabs_seed-css', 
+        inputSelector: '#page-search', 
+        algoliaOptions: { 'facetFilters': ["tags:master"] }, 
+        debug: true, // Set debug to true if you want to inspect the dropdown
+        handleSelected: function (input, event, suggestion, datasetNumber, context) {
+          var fnGetOffset = function (elem) {
+            var bodyOffset = document.body.getBoundingClientRect();
+            var offset = elem.getBoundingClientRect();
+
+            return {
+              top: Math.ceil(offset.top - bodyOffset.top),
+              left: Math.ceil(offset.left - bodyOffset.left)
+            };
+          }; // fnGetOffset
+
+          var target = suggestion.url.substr(
+            suggestion.url.indexOf('#')
+          );
+
+          input.setVal('');
+
+          if (target) {
+            var elem = document.querySelector(target);
+            var scrollTarget = fnGetOffset(elem).top - 150;
+
+            window.scrollTo({
+              behavior: 'smooth',
+              left: 0,
+              top: scrollTarget
+            });
+          }
+        } 
+      }); 

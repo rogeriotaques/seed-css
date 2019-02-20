@@ -1,6 +1,6 @@
 /*
  * Seed CSS -- Sample Page Styling
- * @version 2.1.0
+ * @version 2.2.0
  */
 
 @import 'includes/variables';
@@ -73,13 +73,45 @@ footer {
     color: whitesmoke !important;
     font-weight: 700;
   }
-} // .footer
+} // footer
+
+a.badge {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.search {
+  &bar.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 50px;
+    height: 50px;
+    z-index: 50;
+    padding: 5px 0;
+
+    .field {
+      margin: 0;
+
+      .algolia-autocomplete {
+        width: 100%;
+      }
+    }
+  } // .searchbar
+
+  &-icon {
+    position: absolute;
+    right: 10px;
+    top: 13px;
+  } // .search-icon
+} // .search
 
 .code-sample {
   > .prettyprint {
     margin: 0 0 20px;
     padding: 20px;
-    overflow: scroll;
+    overflow: hidden;
+    overflow-x: scroll;
+    white-space: pre-wrap;
   }
 }
 
@@ -99,7 +131,7 @@ footer {
 
 #component-cards {
   .card {
-    min-width: 307px;
+    min-width: 250px;
   }
 
   .auto-height {
@@ -117,9 +149,10 @@ footer {
       background-color: $secondary;
       color: white;
       font-weight: 700;
+      padding: 0;
 
       &:not(:first-child) {
-        outline: 4px solid white;
+        outline: 1px solid white;
       }
     } // .col
   } // #flexible-cols.row
@@ -205,8 +238,8 @@ div[id^='sample-'] {
   .margins,
   .paddings {
     .col {
+      padding: 0;
       border: 2px solid white;
-      height: 120px;
       overflow: hidden;
 
       &:nth-child(2),
@@ -305,8 +338,6 @@ div[id^='sample-'] {
 } // [role="offset-canvas"]
 
 nav {
-  border: thin solid $grey;
-
   .hamburger {
     position: relative;
     display: inline-block;

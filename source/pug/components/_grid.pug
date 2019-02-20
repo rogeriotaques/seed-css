@@ -8,9 +8,9 @@
         The grid system helps you to create responsive designs where you can define 
         a different number of columns depending on the device width.
 
-      p.align-justify.
+      p.align-justify.lead.
         Offsets are also available. To apply offsets, just use the class
-        <code >*-offset-*</code> to your classname.
+        <b >*-offset-*</b> to your classname.
 
     .col.md-7.md-offset-1
       br 
@@ -37,47 +37,6 @@
 
   br
 
-  h5 Available classes
-
-  .table-responsive
-    table
-      thead
-        tr
-          th Class
-          th Detail
-          th Remarks
-      tbody
-        tr
-          td.nowrap .row
-          td.nowrap &nbsp;
-          td Defines each row of a grid container
-        tr
-          td.nowrap .col
-          td.nowrap &nbsp;
-          td Defines each column of a grid container
-        tr
-          td.nowrap .sm-*
-          td.nowrap (1 ~ 12)
-          td Defines a column size for small screens (<code >max-width: 600px</code>). <br >It's used concatenated to <code >.col</code>.
-        tr
-          td.nowrap .md-*
-          td.nowrap (1 ~ 12)
-          td Defines a column size for medium screens (<code >max-width: 990px</code>). <br >It's used concatenated to <code >.col</code>.
-        tr
-          td.nowrap .lg-*
-          td.nowrap (1 ~ 12)
-          td Defines a column size for large screens (<code >max-width: 1200px</code>). <br >It's used concatenated to <code >.col</code>.
-        tr
-          td.nowrap .xl-*
-          td.nowrap (1 ~ 12)
-          td Defines a column size for extra-large screens (<code >min-width: 1200px</code>). <br >It's used concatenated to <code >.col</code>.
-        tr
-          td.nowrap *-offset-*
-          td.nowrap (.sm, .md, .lg and .xl) and (1 ~ 12)
-          td Creates an offset of columns. <br >It's used concatenated to <code >.col</code> and its screen size. <br >E.g: <code>.md-offset-2</code>.
-
-  br
-
   h5 Code example
 
   .code-sample
@@ -88,3 +47,63 @@
         &lt;div class="col sm-12 md-6 lg-3" &gt; ... &lt;/div&gt;
         &lt;div class="col sm-12 md-6 lg-9" &gt; ... &lt;/div&gt;
       &lt;/div&gt;
+
+  br
+
+  h5 Available classes for rows
+
+  .table-responsive
+    table
+      thead
+        tr
+          th Class
+          th Remarks
+      tbody
+        tr
+          td.nowrap .row
+          td Defines each row of a grid
+        tr
+          td.nowrap .stretch
+          td Forces all columns from given row to have the same height.
+
+  br
+
+  h5 Available classes for columns
+
+
+  .table-responsive
+    table
+      thead
+        tr
+          th Class
+          th Detail
+          th Remarks
+      tbody
+        tr
+          td.nowrap .col
+          td.nowrap &nbsp;
+          td Defines each column of a grid container
+        tr
+          td.nowrap .xs-*
+          td.nowrap (1 ~ 12)
+          td Defines a column size for extra small screens (<b >max-width: 320px</b>). <br >It's used concatenated to <b >.col</b>.
+        tr
+          td.nowrap .sm-*
+          td.nowrap (1 ~ 12)
+          td Defines a column size for small screens (<b >max-width: 600px</b>). <br >It's used concatenated to <b >.col</b>.
+        tr
+          td.nowrap .md-*
+          td.nowrap (1 ~ 12)
+          td Defines a column size for medium screens (<b >max-width: 990px</b>). <br >It's used concatenated to <b >.col</b>.
+        tr
+          td.nowrap .lg-*
+          td.nowrap (1 ~ 12)
+          td Defines a column size for large screens (<b >max-width: 1200px</b>). <br >It's used concatenated to <b >.col</b>.
+        tr
+          td.nowrap .xl-*
+          td.nowrap (1 ~ 12)
+          td Defines a column size for extra-large screens (<b >min-width: 1200px</b>). <br >It's used concatenated to <b >.col</b>.
+        tr
+          td.nowrap *-offset-*
+          td.nowrap (.sm, .md, .lg and .xl) and (1 ~ 12)
+          td Creates an offset of columns. <br >It's used concatenated to <b >.col</b> and its screen size. <br >E.g: <b>.md-offset-2</b>.

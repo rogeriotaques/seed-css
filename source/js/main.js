@@ -2,7 +2,7 @@
  * Seed-CSS - Landing Page.
  * @author Rogerio Taques (hello@abtz.co)
  * @see https://github.com/AbtzLabs/seed-css
- * @version 2.1.0
+ * @version 2.2.0
  * @license private
  */
 
@@ -103,7 +103,8 @@
       revealSingleAnimation: 'animated-once',
       revealWhenVisible: 'bounceIn',
       revealWhenHidden: 'bounceOut',
-      revealSpaceOffset: 2.5
+      revealSpaceOffset: 2.5,
+      gutter: 150
     };
 
     SeedCSS.fileUpload(); // Init the fileUpload helper

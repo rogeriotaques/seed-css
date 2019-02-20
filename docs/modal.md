@@ -8,13 +8,13 @@ window on a click outside the boudaries or just pressing the ESC key.
 
 ```js
 // Import library
-import SeedCSS from 'seed-css';
+import { seedModal } from 'seed-css';
 
 // Initialize
-SeedCSS.modal();
+seedModal();
 
 // Or initialize with custom options
-SeedCSS.modal({
+seedModal({
   // the element that triggers the modal
   trigger: '[role="modal"]',
 
@@ -40,7 +40,7 @@ transitions. Please check the options at:
 This helper will also dispatch events when it is opened (`modal.opened`) or closed (`modal.closed`). Here is an exemplo on how to implement it:
 
 ```js
-const m = SeedCSS.modal(); // Init the modal helper
+const m = seedModal(); // Init the modal helper
 const modal = m.get('#modal'); // Gets the right modal
 
 if (modal) {

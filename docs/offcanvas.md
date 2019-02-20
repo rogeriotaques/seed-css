@@ -6,10 +6,10 @@ This helper is a simple vanilla JS implementation, which helps you to make a off
 
 ```js
 // Import library
-import SeedCSS from 'seed-css';
+import { seedOffCanvas } from 'seed-css';
 
 // Initialize
-SeedCSS.offCanvas();
+seedOffCanvas();
 ```
 
 ## Events
@@ -17,7 +17,7 @@ SeedCSS.offCanvas();
 This helper will also dispatch events when it is opened (`canvas.opened`) or closed (`canvas.closed`). Here is an exemple on how to implement it:
 
 ```js
-const m = SeedCSS.offCanvas(); // Init the modal helper
+const m = seedOffCanvas(); // Init the modal helper
 const canvas = c.get('#sidenav'); // Gets the right canvas
 
 if (canvas) {

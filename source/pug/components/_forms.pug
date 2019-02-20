@@ -2,15 +2,16 @@
 #component-form
   h4 Forms
 
-  p.align-justify.
+  p.align-justify.lead.
     Probably all websites and apps will contain (at least) one form, so,
-    that's why <code >seed-css</code> has a really simple, easy to use and customizable
+    that's why <b >seed-css</b> has a really simple, easy to use and customizable
     form field stylesheet. Have a look on the examples below:
 
-  h6 Simple elements
 
   .row 
-    .col.md-5
+    .col.md-6
+      h6 Simple elements
+      
       .field
         label(for="") This is an input text
         input(type="text")
@@ -30,8 +31,19 @@
         input(type="text").success
         span.success This is a success message!
 
-    .col.md-6.md-offset-1
-      h5 Code example 
+      h6 Grouped elements
+      
+      .field.group 
+        .field 
+          label(for="") First name 
+          input(type="text", id="first_name")
+
+        .field 
+          label(for="") Last name 
+          input(type="text", id="last_name")
+
+    .col.md-6
+      h5.mt-0 Code example 
 
       .code-sample
         pre.prettyprint.lang-html.
@@ -48,24 +60,6 @@
             &lt;span class="error" &gt; ... &lt;/span&gt;
           &lt;/div&gt;
 
-  h6 Grouped elements
-
-  .row 
-    .col.md-5
-      .field.group 
-        .field 
-          label(for="") First name 
-          input(type="text", id="first_name")
-
-        .field 
-          label(for="") Last name 
-          input(type="text", id="last_name")
-
-    .col.md-6.md-offset-1 
-      h5 Code example 
-
-      .code-sample
-        pre.prettyprint.lang-html.
           &lt;!-- Example of grouped fields --&gt;
           &lt;div class="field group" &gt;
             &lt;div class="field" &gt;
@@ -81,14 +75,16 @@
 
   h6 File upload
 
-  .alert.info.
-    <b >PRO:</b> Make sure that <code >id</code> attribute is set for the <code >file</code> input field and 
-    that it matches the <code>for</code> attribute from its label. Otherwise, it may not work properly.
+  .alert.info
+    p.m-0.
+      <b >PRO:</b>
+      <code >id</code> attribute is mandatory for <code >file</code> input fields
+      and needs to match the <code>for</code> attribute from its label.
 
   br 
 
   .row 
-    .col.md-5
+    .col.md-6
       .field.seed-file
         input(type="file", id="file", multiple, data-multiple="{count} files")
         label(for="file") 
@@ -97,11 +93,6 @@
             span Remove
           span.button 
             span Attach
-
-      p.
-        Adding the property <code >multiple</code> to the <code >input</code> element 
-        will enable multiple files selection. Also adding <code >data-multiple="{count} ..."</code>
-        will customize the selected message.
 
       .code-sample
         h5 Code example 
@@ -123,11 +114,18 @@
             &lt;/label&gt;
           &lt;/div&gt;
 
-    .col.md-6.md-offset-1
-      p.
+    .col.md-6
+      p.align-justofy.lead.
+        Adding the property <b >multiple</b> to the <b >input</b> element 
+        will enable multiple files selection. Also adding <b >data-multiple="{count} ..."</b>
+        will customize the selected message.
+
+      p.align-justify.lead.
         Exceptionally the <b >file upload</b> component works better with a javascript support. Using javascript 
-        will create a much better user experience. <code >Seed-css</code> 
+        will create a much better user experience. <b >seed-css</b> 
         has a plug-and-play javascript library written in VanillaJS:
+
+      br 
     
       h6 When using Node JS:
 
@@ -171,10 +169,12 @@
           &lt;/div&gt;
 
     .col.md-6.md-offset-1 
-      p.
-        To make it simple and make the user experience better, <code >Seed-css</code> is using 
+      p.align-justify.lead.
+        To make it simple and make the user experience better, <b >seed-css</b> is using 
         javascript to automaticaly calculates types chars from textareas. If you use the Javascript 
         given, it's basically plug-an-play.
+
+      br
     
       h6 When using Node JS:
 

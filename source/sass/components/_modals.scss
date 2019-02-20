@@ -1,6 +1,6 @@
 /* 
  * Seed CSS - Modals
- * @version 2.1.0
+ * @version 2.2.0
  */
 
 .modal {
@@ -63,6 +63,6 @@
   } // .modal-body
 
   & &-footer {
-    padding: 0 ($padding * 2) ($padding / 2);
+    padding: 0 ($padding * 2) ($padding * 2);
   } // .modal-footer
 } // .modal

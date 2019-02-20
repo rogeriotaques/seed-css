@@ -1,6 +1,6 @@
 /* 
  * Seed CSS - Cards
- * @version 2.1.0
+ * @version 2.2.0
  */
 
 .card {
@@ -12,8 +12,7 @@
   position: relative;
   display: inline-block;
   width: 100%;
-  @include rem(max-width, 350px);
-  @include rem(min-height, 150px);
+  @include rem(min-height, 200px);
 
   & > &-header,
   & > &-body,

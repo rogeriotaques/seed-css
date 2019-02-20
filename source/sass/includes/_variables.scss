@@ -1,6 +1,6 @@
 /**
  * Seed CSS - Global variables
- * @version 2.1.0
+ * @version 2.2.0
  */
 
 // container sizes
@@ -17,6 +17,7 @@ $extra-large: 1200px;
 $fullhd: 1920px;
 
 // media queries
+$extra-small: 'only screen and (min-width: 0) and (max-width: #{$small})';
 $small-only: 'only screen and (max-width: #{$medium - 1})';
 $small-and-up: 'only screen and (min-width: 0)';
 $medium-only: 'only screen and (min-width: #{$medium}) and (max-width: #{$large - 1})';

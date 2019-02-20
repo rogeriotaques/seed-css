@@ -1,37 +1,49 @@
 /* 
- * Seed CSS - Grid
- * @version 2.1.0
- */
+* Seed CSS - Grid
+* @version 2.2.0
+*/
+
+@import '../includes/mixins-flex';
 
 .row {
+  //   display: block;
+  @include flexbox();
+  @include flex-flow(row wrap);
+  @include align-items(flex-start);
   width: 100%;
-  display: block;
   box-sizing: border-box;
   position: relative;
   text-align: inherit; // Fallback for IE-Edge
   text-align: initial;
 
-  &:after {
-    content: '';
-    display: block;
-    clear: both;
-  }
+  &.stretch {
+    @include align-items(stretch);
+  } // .row.stretch
 
   > .col {
-    width: 100%;
-    float: left;
+    @include flex(1 100%);
+    @include justify-content(space-between);
     position: relative;
     box-sizing: border-box;
     min-height: $height;
-    vertical-align: top;
     margin-bottom: $margin / 2;
-  }
-}
+    padding: $margin;
+    width: 100%;
+  } // .row > .col
+} // .row
 
 @media #{$small-and-up} {
   .row {
     > .col {
       @include grid-make-cols('sm');
+    }
+  }
+}
+
+@media #{$extra-small} {
+  .row {
+    > .col {
+      @include grid-make-cols('xs');
     }
   }
 }

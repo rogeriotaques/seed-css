@@ -1,6 +1,6 @@
 /* 
  * Seed CSS - Container
- * @version 2.1.0
+ * @version 2.2.0
  */
 
 .container {
@@ -22,4 +22,10 @@
     width: $extra-large-container;
     max-width: $fullhd;
   }
-}
+
+  &-fluid {
+    width: 100%;
+    max-width: none;
+    margin: $margin auto;
+  } // .container-fluid
+} // .container

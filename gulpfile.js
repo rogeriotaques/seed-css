@@ -16,16 +16,16 @@ const fs = require('fs');
 const util = require('minimist')(process.argv);
 
 // @use npm run dist -- --[major|minor]
-let runFlag = 'patch';
+// let runFlag = 'patch';
 
 // @use npm run dist -- --[development|staging|production]
 let envFlag = 'development';
 
-if (util.major !== undefined) {
-  runFlag = 'major';
-} else if (util.minor !== undefined) {
-  runFlag = 'minor';
-}
+// if (util.major !== undefined) {
+//   runFlag = 'major';
+// } else if (util.minor !== undefined) {
+//   runFlag = 'minor';
+// }
 
 if (util.staging !== undefined) {
   envFlag = 'staging';
@@ -42,39 +42,39 @@ const config = {
   }
 };
 
-const updatePackVersion = (pkg) => {
-  const v = pkg.version.split('.');
+// const updatePackVersion = (pkg) => {
+//   const v = pkg.version.split('.');
 
-  switch (runFlag) {
-    case 'major':
-      // increase major version
-      v[0] = parseInt(v[0]) + 1;
-      v[1] = 0;
-      v[2] = 0;
-      pkg.version = v.join('.');
-      break;
+//   switch (runFlag) {
+//     case 'major':
+//       // increase major version
+//       v[0] = parseInt(v[0]) + 1;
+//       v[1] = 0;
+//       v[2] = 0;
+//       pkg.version = v.join('.');
+//       break;
 
-    case 'minor':
-      // increase minor version
-      v[1] = parseInt(v[1]) + 1;
-      v[2] = 0;
-      pkg.version = v.join('.');
-      break;
+//     case 'minor':
+//       // increase minor version
+//       v[1] = parseInt(v[1]) + 1;
+//       v[2] = 0;
+//       pkg.version = v.join('.');
+//       break;
 
-    default:
-      // patch
-      // increase patch version
-      v[2] = parseInt(v[2]) + 1;
-      pkg.version = v.join('.');
-      break;
-  }
+//     default:
+//       // patch
+//       // increase patch version
+//       v[2] = parseInt(v[2]) + 1;
+//       pkg.version = v.join('.');
+//       break;
+//   }
 
-  // write down the new version into package.json file.
-  fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2));
+//   // write down the new version into package.json file.
+//   fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2));
 
-  // return new package
-  return pkg;
-};
+//   // return new package
+//   return pkg;
+// };
 
 /**
  * Reset the build folder for development.
@@ -221,7 +221,7 @@ gulp.task(
     gulp.parallel('build:sass', 'build:javascript'),
     (cb) => {
       sync.init({
-        open: false,
+        open: true,
         notify: false,
         port: 9000,
         server: {
@@ -271,11 +271,12 @@ gulp.task(
 
 gulp.task('dist:run', (cb) => {
   // updates the version
-  const pkg = updatePackVersion(require('./package.json'));
+  // const pkg = updatePackVersion(require('./package.json'));
+  const pkg = require('./package.json');
 
   // prepare files header
   const comment =
-    '/** \n ' +
+    '/*! \n ' +
     '* Seed CSS (<%= pkg.name %>) \n ' +
     '* <%= pkg.description %> \n ' +
     '* @author <%= pkg.author %> \n ' +
