@@ -6,7 +6,7 @@
  * @license MIT
  */
 
-export const seedScroll = function (options) {
+const seedScroll = function (options) {
   'use strict';
 
   let triggers = null;
@@ -260,8 +260,12 @@ export const seedScroll = function (options) {
   return {};
 }; // seedScroll
 
-if (typeof window.SeedCSS === 'undefined') {
-  window.SeedCSS = {};
-}
+if (typeof module !== 'undefined') {
+  module.exports.seedScroll = seedScroll;
+} else {
+  if (typeof window.SeedCSS === 'undefined') {
+    window.SeedCSS = {};
+  }
 
-window.SeedCSS.scroll = seedScroll;
+  window.SeedCSS.scroll = seedScroll;
+}

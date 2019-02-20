@@ -12,7 +12,7 @@ let fnClose;
 
 let fnEsc;
 
-export const seedModal = (options) => {
+const seedModal = (options) => {
   'use strict';
 
   // Default settings
@@ -205,8 +205,12 @@ export const seedModal = (options) => {
   };
 }; // seedModal
 
-if (typeof window.SeedCSS === 'undefined') {
-  window.SeedCSS = {};
-}
+if (typeof module !== 'undefined') {
+  module.exports.seedModal = seedModal;
+} else {
+  if (typeof window.SeedCSS === 'undefined') {
+    window.SeedCSS = {};
+  }
 
-window.SeedCSS.modal = seedModal;
+  window.SeedCSS.modal = seedModal;
+}

@@ -6,7 +6,7 @@
  * @license MIT
  */
 
-export const seedTextarea = function () {
+const seedTextarea = function () {
   'use strict';
 
   // Find all seed-file inputs.
@@ -59,8 +59,13 @@ export const seedTextarea = function () {
   } // if (inputs !== null)
 }; // seedTextarea
 
-if (typeof window.SeedCSS === 'undefined') {
-  window.SeedCSS = {};
+if (typeof module !== 'undefined') {
+  module.exports.seedTextarea = seedTextarea;
+} else {
+  if (typeof window.SeedCSS === 'undefined') {
+    window.SeedCSS = {};
+  }
+
+  window.SeedCSS.textArea = seedTextarea;
 }
 
-window.SeedCSS.textArea = seedTextarea;

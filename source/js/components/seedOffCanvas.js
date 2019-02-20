@@ -6,7 +6,7 @@
  * @license MIT
  */
 
-export const seedOffCanvas = function () {
+const seedOffCanvas = function () {
   'use strict';
 
   const fnToggle = (canvasID, triggerElement) => {
@@ -119,8 +119,12 @@ export const seedOffCanvas = function () {
   };
 }; // seedOffCanvas
 
-if (typeof window.SeedCSS === 'undefined') {
-  window.SeedCSS = {};
-}
+if (typeof module !== 'undefined') {
+  module.exports.seedOffCanvas = seedOffCanvas;
+} else {
+  if (typeof window.SeedCSS === 'undefined') {
+    window.SeedCSS = {};
+  }
 
-window.SeedCSS.offCanvas = seedOffCanvas;
+  window.SeedCSS.offCanvas = seedOffCanvas;
+}

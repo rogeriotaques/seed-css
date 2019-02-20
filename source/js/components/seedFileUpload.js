@@ -6,7 +6,7 @@
  * @license MIT
  */
 
-export const seedFileUpload = function () {
+const seedFileUpload = function () {
   'use strict';
 
   const fnChange = function fnChange(evt) {
@@ -98,8 +98,13 @@ export const seedFileUpload = function () {
   } // if (inputs !== null)
 }; // seedFileUpload
 
-if (typeof window.SeedCSS === 'undefined') {
-  window.SeedCSS = {};
-}
 
-window.SeedCSS.fileUpload = seedFileUpload;
+if (typeof module !== 'undefined') {
+  module.exports.fileUpload = fileUpload;
+} else {
+  if (typeof window.SeedCSS === 'undefined') {
+    window.SeedCSS = {};
+  }
+
+  window.SeedCSS.fileUpload = seedFileUpload;
+}
