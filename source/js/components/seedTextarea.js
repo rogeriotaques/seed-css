@@ -6,14 +6,14 @@
  * @license MIT
  */
 
-const seedTextarea = function() {
+export const seedTextarea = function () {
   'use strict';
 
   // Find all seed-file inputs.
   const inputs = document.querySelectorAll('.field > textarea');
 
   if (inputs !== null) {
-    inputs.forEach(function(input, i) {
+    inputs.forEach(function (input, i) {
       let maxLength = 0;
 
       const parent = input.parentNode;
@@ -59,16 +59,8 @@ const seedTextarea = function() {
   } // if (inputs !== null)
 }; // seedTextarea
 
-if (typeof module !== 'undefined') {
-  if (typeof module.exports.SeedCSS === 'undefined') {
-    module.exports.SeedCSS = {};
-  }
-
-  module.exports.SeedCSS.textArea = seedTextarea;
-} else {
-  if (typeof window.SeedCSS === 'undefined') {
-    window.SeedCSS = {};
-  }
-
-  window.SeedCSS.textArea = seedTextarea;
+if (typeof window.SeedCSS === 'undefined') {
+  window.SeedCSS = {};
 }
+
+window.SeedCSS.textArea = seedTextarea;

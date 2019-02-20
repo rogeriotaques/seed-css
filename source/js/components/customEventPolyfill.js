@@ -2,7 +2,8 @@
  * A simple polyfill for CustomEvent
  * @see https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent#Polyfill
  */
-(function() {
+
+(function () {
   if (typeof window.CustomEvent === 'function') return false;
 
   function CustomEvent(event, params) {

@@ -6,7 +6,7 @@
  * @license MIT
  */
 
-const seedFileUpload = function() {
+export const seedFileUpload = function () {
   'use strict';
 
   const fnChange = function fnChange(evt) {
@@ -47,7 +47,7 @@ const seedFileUpload = function() {
   const inputs = document.querySelectorAll('.seed-file > [type="file"]');
 
   if (inputs !== null) {
-    inputs.forEach(function(input, i) {
+    inputs.forEach(function (input, i) {
       // Find the field label
       const label = input.nextElementSibling;
       const cancel = label.querySelector('.cancel');
@@ -98,16 +98,8 @@ const seedFileUpload = function() {
   } // if (inputs !== null)
 }; // seedFileUpload
 
-if (typeof module !== 'undefined') {
-  if (typeof module.exports.SeedCSS === 'undefined') {
-    module.exports.SeedCSS = {};
-  }
-
-  module.exports.SeedCSS.fileUpload = seedFileUpload;
-} else {
-  if (typeof window.SeedCSS === 'undefined') {
-    window.SeedCSS = {};
-  }
-
-  window.SeedCSS.fileUpload = seedFileUpload;
+if (typeof window.SeedCSS === 'undefined') {
+  window.SeedCSS = {};
 }
+
+window.SeedCSS.fileUpload = seedFileUpload;

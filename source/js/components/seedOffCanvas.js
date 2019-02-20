@@ -6,7 +6,7 @@
  * @license MIT
  */
 
-const seedOffCanvas = function() {
+export const seedOffCanvas = function () {
   'use strict';
 
   const fnToggle = (canvasID, triggerElement) => {
@@ -78,7 +78,7 @@ const seedOffCanvas = function() {
   const canvases = document.querySelectorAll('.offcanvas');
 
   if (triggers !== null) {
-    triggers.forEach(function(trigger, i) {
+    triggers.forEach(function (trigger, i) {
       trigger.addEventListener('click', fnTriggerClick);
     }); // triggers.forEach(function(trigger, i)
   } // if (triggers !== null)
@@ -91,7 +91,7 @@ const seedOffCanvas = function() {
       }; // open
 
       // Attach method for closing
-      canvas.close = () => {}; // close
+      canvas.close = () => { }; // close
     }); // canvases.forEach((canvas, i)
   } // if (canvases !== null)
 
@@ -119,16 +119,8 @@ const seedOffCanvas = function() {
   };
 }; // seedOffCanvas
 
-if (typeof module !== 'undefined') {
-  if (typeof module.exports.SeedCSS === 'undefined') {
-    module.exports.SeedCSS = {};
-  }
-
-  module.exports.SeedCSS.offCanvas = seedOffCanvas;
-} else {
-  if (typeof window.SeedCSS === 'undefined') {
-    window.SeedCSS = {};
-  }
-
-  window.SeedCSS.offCanvas = seedOffCanvas;
+if (typeof window.SeedCSS === 'undefined') {
+  window.SeedCSS = {};
 }
+
+window.SeedCSS.offCanvas = seedOffCanvas;
