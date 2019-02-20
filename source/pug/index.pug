@@ -98,5 +98,33 @@ html(lang="en")
         indexName: 'abtzlabs_seed-css', 
         inputSelector: '#page-search', 
         algoliaOptions: { 'facetFilters': ["tags:master"] }, 
-        debug: false // Set debug to true if you want to inspect the dropdown 
+        debug: true, // Set debug to true if you want to inspect the dropdown
+        handleSelected: function (input, event, suggestion, datasetNumber, context) {
+          var fnGetOffset = function (elem) {
+            var bodyOffset = document.body.getBoundingClientRect();
+            var offset = elem.getBoundingClientRect();
+
+            return {
+              top: Math.ceil(offset.top - bodyOffset.top),
+              left: Math.ceil(offset.left - bodyOffset.left)
+            };
+          }; // fnGetOffset
+
+          var target = suggestion.url.substr(
+            suggestion.url.indexOf('#')
+          );
+
+          input.setVal('');
+
+          if (target) {
+            var elem = document.querySelector(target);
+            var scrollTarget = fnGetOffset(elem).top - 150;
+
+            window.scrollTo({
+              behavior: 'smooth',
+              left: 0,
+              top: scrollTarget
+            });
+          }
+        } 
       }); 
