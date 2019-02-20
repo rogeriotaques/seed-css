@@ -21,17 +21,35 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Seed CSS v2.1.1</title>
+    <title>Seed CSS v2.2.0</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="A light-weight, mobile first and responsive CSS boilerplate.">
     <meta name="keywords" content="css,boilerplate,javascript,html5,website,site,app,webapp,build,development">
     <meta name="author" content="Rogerio Taques (http://github.com/rogeriotaques)">
     <meta name="copyright" content="Abtz Labs (https://abtz.co)">
     <meta name="license" content="MIT">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:300,700|Open+Sans:400">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:300,700|Open+Sans:400|Cookie">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/seed.css?v=v2.1.1">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css?v=v2.1.1">
+    <link rel="stylesheet" type="text/css" href="assets/css/seed.css?v=v2.2.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css?v=v2.2.0">
+    <script src="https://unpkg.com/eva-icons"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-734057-10"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-734057-10');
+      
+    </script>
+    <style>
+      .bmc-button img{width: 27px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}
+      .bmc-button{line-height: 36px !important;height:37px !important;text-decoration: none !important;display:inline-flex !important;color:#ffffff !important;background-color:#FF813F !important;border-radius: 3px !important;border: 1px solid transparent !important;padding: 1px 9px !important;font-size: 22px !important;letter-spacing: 0.6px !important;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Cookie', cursive !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;-o-transition: 0.3s all linear !important;-webkit-transition: 0.3s all linear !important;-moz-transition: 0.3s all linear !important;-ms-transition: 0.3s all linear !important;transition: 0.3s all linear !important;}
+      .bmc-button:hover, 
+      .bmc-button:active, 
+      .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#ffffff !important;}
+    </style>
   </head>
   <body>
     <aside class="offcanvas" id="sidenav">
@@ -62,13 +80,13 @@
             </div>
             <div class="col md-6 align-center">
               <div class="cta pt-30">
-                <p class="animated fadeIn delay-2s" id="release">v2.1.1</p><a class="btn primary animated fadeInLeft delay-2s" href="https://github.com/AbtzLabs/seed-css/archive/develop.zip"><span>DOWNLOAD</span></a><a class="btn secondary smooth animated fadeInRight delay-2s" href="#contribute"><span>CONTRIBUTE</span></a>
+                <p class="animated fadeIn delay-2s" id="release">v2.2.0</p><a class="btn primary animated fadeInLeft delay-2s" href="https://github.com/AbtzLabs/seed-css/archive/develop.zip"><span>DOWNLOAD</span></a><a class="btn secondary smooth animated fadeInRight delay-2s" href="#contribute"><span>CONTRIBUTE</span></a>
               </div>
             </div>
           </div>
         </div>
       </header>
-      <nav class="sticky dark">
+      <nav class="sticky dark with-shadow">
         <ul class="container my-0 hide-on-large-and-up">
           <li> <a class="logo" href="#" role="offcanvas" data-id="sidenav"> <span class="hamburger"></span><span>Seed-CSS</span></a></li>
         </ul>
@@ -84,51 +102,66 @@
       </nav>
       <section id="get-started">
         <div class="container">
-          <div class="row"> 
-            <div class="col md-5">
-              <h2>Get started</h2>
-              <div class="alert info">
-                <h5 class="m-0">Made for modern browsers</h5><span>Supports <b>IE10+</b>, <b>Chrome</b>, <b>Firefox</b> and <b>Safari</b>.</span>
-              </div><br>
-              <p class="lead">
-                <a href="https://github.com/AbtzLabs/seed-css" >Fork</a> this project, 
-                <a href="https://github.com/AbtzLabs/seed-css/archive/develop.zip" >download</a> the files or 
-                install it via NPM.
-                
-              </p>
+          <h2 class="align-center">Get started</h2><br>
+          <div class="row stretch highlight">
+            <div class="col md-4 align-center"> 
+              <div> <span class="eva" data-eva="cloud-download-outline" data-eva-height="64" data-eva-width="64" data-eva-fill="#1466ff"></span></div>
+              <h5 class="mb-0">Install</h5>
+              <p class="mt-0">Fork, download or install via NPM.</p>
             </div>
-            <div class="col md-6 md-offset-1">
-              <p><span>When using NPM: </span><code>$ npm install --save seed-css</code></p>
-              <p class="align-justify">
-                After get the latest version of files, import it to your pages as the example below:
-                
-              </p>
-              <div class="code-sample">
-                <pre class="prettyprint lang-html">&lt;head &gt;
+            <div class="col md-4 align-center"> 
+              <div> <span class="eva" data-eva="code-outline" data-eva-height="64" data-eva-width="64" data-eva-fill="#1466ff"></span></div>
+              <h5 class="mb-0">Prepare </h5>
+              <p class="mt-0">Create the minimum markup</p>
+            </div>
+            <div class="col md-4 align-center"> 
+              <div> <span class="eva" data-eva="checkmark-outline" data-eva-height="64" data-eva-width="64" data-eva-fill="#1466ff"></span></div>
+              <h5 class="mb-0">Done</h5>
+              <p class="mt-0">You are good to go!</p>
+            </div>
+          </div><br>
+          <div class="code-sample">
+            <pre class="prettyprint lang-html">&lt;head &gt;
   ...
+  &lt;!-- Add something like this to the HEAD of your page --&gt;
   &lt;link href="/path/to/seed.css" rel="stylesheet" type="text/css" &gt;
-&lt;/head&gt;</pre>
-              </div>
-            </div>
+&lt;/head&gt;
+</pre>
+          </div><br>
+          <div class="alert info">
+            <h6 class="m-0 mb-5">Supported browsers:</h6>
+            <p class="m-0">Desktop: <b>IE 10+</b>, <b>Edge 12+</b>, <b>Chrome 21+</b>, <b>Firefox 22+</b>, <b>Opera 12.1+</b>, and <b>Safari 6.1+</b>.</p>
+            <p class="m-0">Mobile: <b>Safari 7+</b>, <b>Android 4.4+</b>, <b>Blackberry 10+</b>, <b>Opera 12.1+</b>, <b>Android Chrome 71+</b>, <b>Android Firefox 64+</b> and <b>IE 11</b>.</p>
+          </div><br>
+          <div class="code-sample">
+            <pre class="prettyprint lang-bash"># When using NPM, run this in a terminal window
+$ npm install --save seed-css</pre>
           </div>
         </div>
       </section>
+      <div class="searchbar sticky grey-background with-shadow">
+        <div class="container my-0"> 
+          <div class="field"> 
+            <input class="with-shadow" type="search" placeholder="Search the documentation in this page ..." id="page-search"><span class="search-icon" data-eva="search-outline" data-eva-fill="#cccccc"></span>
+          </div>
+        </div>
+      </div>
       <section id="examples">
         <div class="container">
           <div class="reveal animated animated-once">
-            <h2 id="examples-basic">The basic</h2>
+            <h2 class="align-center" id="examples-basic">The basic</h2>
           </div>
-          <div class="row"> 
-            <div class="col md-6 px-20">
-              <p class="lead">
-                This is the foundation of <code >seed-css</code>, in other words, the most fundamental features from this boilerplate.
+          <div class="row stretch"> 
+            <div class="col md-6">
+              <p class="lead align-justify">
+                This is the foundation of <b >seed-css</b>, in other words, the most fundamental features from this boilerplate.
                 
               </p>
             </div>
-            <div class="col md-6 px-20">
-              <p class="lead">
-                By design, <code >seed-css</code> basic comes with a <b >container</b>, <b >grid</b>, <b >responsive images</b>,
-                <b >typography</b>, pre-defined <b >media queries</b> and a <b >color</b> scheme. And even though it looks kinda 
+            <div class="col md-6">
+              <p class="lead align-justify">
+                By design, <b >seed-css</b> basic comes with a <b >container</b>, <b >grid</b>, <b >responsive images</b>, <b >
+                typography</b>, pre-defined <b >media queries</b> and a <b >color</b> scheme. And even though it looks kinda 
                 few things, it lonely can help you a lot to speed up a website creation.
                 
                 
@@ -140,23 +173,60 @@
             <h4>Containers</h4>
             <div class="row">
               <div class="col md-4">
-                <p class="lead">
-                  Containers are simple <code >div</code> with pre-defined width depending on the 
-                  screen size, which will help to keep the content enclosed in a specific area.
-                  
-                </p>
-                <p>
-                  The <code >max-width</code> is set to <code >1200px</code> on wide screens.
+                <p class="lead align-justify">
+                  Containers are simple <b >DIV</b> elements with pre-defined width (depending on the 
+                  screen size) which will help to keep the content enclosed in a specific area.
                   
                 </p>
               </div>
-              <div class="col md-7 md-offset-1">
+              <div class="col md-7">
                 <div class="sample-container align-center">This's a container.</div>
                 <div class="code-sample">
-                  <pre class="prettyprint lang-html">&lt;div class="container" &gt;&lt;/div&gt;</pre>
+                  <pre class="prettyprint lang-html">&lt;div class="container" &gt;&lt;/div&gt;
+&lt;div class="container-fluid" &gt;&lt;/div&gt;
+</pre>
                 </div>
               </div>
             </div>
+            <div class="table-responsive"> 
+              <table>
+                <thead>
+                  <tr>
+                    <th>&nbsp;</th>
+                    <th>Screen width</th>
+                    <th>Container</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="nowrap">Extra Small Mobiles</td>
+                    <td class="nowrap"><strong>&lt; 320px</strong></td>
+                    <td><strong>90%</strong></td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap">Mobiles</td>
+                    <td class="nowrap"><strong>&lt; 600px</strong></td>
+                    <td><strong>90%</strong></td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap">Tablets</td>
+                    <td class="nowrap"><strong>&lt;= 990px</strong></td>
+                    <td><strong>85%</strong></td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap">Desktops/ laptops</td>
+                    <td class="nowrap"><strong>&lt;= 1200px</strong></td>
+                    <td><strong>80%</strong></td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap">Extra large desktops/ TVs</td>
+                    <td class="nowrap"><strong>&gt; 1200px</strong></td>
+                    <td><strong>75%</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <h6>Fluid containers are all 100% with no max-width.</h6>
           </div>
           <div class="align-center my-40"><span>。。。 </span></div>
           <div id="component-grid">
@@ -168,9 +238,9 @@
                   a different number of columns depending on the device width.
                   
                 </p>
-                <p class="align-justify">
+                <p class="align-justify lead">
                   Offsets are also available. To apply offsets, just use the class
-                  <code >*-offset-*</code> to your classname.
+                  <b >*-offset-*</b> to your classname.
                   
                 </p>
               </div>
@@ -203,7 +273,38 @@
                 <div class="col sm-11 sm-offset-1 md-11 md-offset-1 lg-11 lg-offset-1 align-center">11 columns with offset of 1</div>
               </div>
             </div><br>
-            <h5>Available classes</h5>
+            <h5>Code example</h5>
+            <div class="code-sample">
+              <pre class="prettyprint lang-html">&lt;!-- This's a row. You can have as many rows as you need. --&gt;
+&lt;div class="row" &gt;
+  &lt;!-- This's a column. You can have up to 12 columns in a row. --&gt;
+  &lt;div class="col sm-12 md-6 lg-3" &gt; ... &lt;/div&gt;
+  &lt;div class="col sm-12 md-6 lg-9" &gt; ... &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+            </div><br>
+            <h5>Available classes for rows</h5>
+            <div class="table-responsive">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Class</th>
+                    <th>Remarks</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="nowrap">.row</td>
+                    <td>Defines each row of a grid</td>
+                  </tr>
+                  <tr>
+                    <td class="nowrap">.stretch</td>
+                    <td>Forces all columns from given row to have the same height.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><br>
+            <h5>Available classes for columns</h5>
             <div class="table-responsive">
               <table>
                 <thead>
@@ -215,74 +316,64 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="nowrap">.row</td>
-                    <td class="nowrap">&nbsp;</td>
-                    <td>Defines each row of a grid container</td>
-                  </tr>
-                  <tr>
                     <td class="nowrap">.col</td>
                     <td class="nowrap">&nbsp;</td>
                     <td>Defines each column of a grid container</td>
                   </tr>
                   <tr>
+                    <td class="nowrap">.xs-*</td>
+                    <td class="nowrap">(1 ~ 12)</td>
+                    <td>Defines a column size for extra small screens (<b >max-width: 320px</b>). <br >It's used concatenated to <b >.col</b>.</td>
+                  </tr>
+                  <tr>
                     <td class="nowrap">.sm-*</td>
                     <td class="nowrap">(1 ~ 12)</td>
-                    <td>Defines a column size for small screens (<code >max-width: 600px</code>). <br >It's used concatenated to <code >.col</code>.</td>
+                    <td>Defines a column size for small screens (<b >max-width: 600px</b>). <br >It's used concatenated to <b >.col</b>.</td>
                   </tr>
                   <tr>
                     <td class="nowrap">.md-*</td>
                     <td class="nowrap">(1 ~ 12)</td>
-                    <td>Defines a column size for medium screens (<code >max-width: 990px</code>). <br >It's used concatenated to <code >.col</code>.</td>
+                    <td>Defines a column size for medium screens (<b >max-width: 990px</b>). <br >It's used concatenated to <b >.col</b>.</td>
                   </tr>
                   <tr>
                     <td class="nowrap">.lg-*</td>
                     <td class="nowrap">(1 ~ 12)</td>
-                    <td>Defines a column size for large screens (<code >max-width: 1200px</code>). <br >It's used concatenated to <code >.col</code>.</td>
+                    <td>Defines a column size for large screens (<b >max-width: 1200px</b>). <br >It's used concatenated to <b >.col</b>.</td>
                   </tr>
                   <tr>
                     <td class="nowrap">.xl-*</td>
                     <td class="nowrap">(1 ~ 12)</td>
-                    <td>Defines a column size for extra-large screens (<code >min-width: 1200px</code>). <br >It's used concatenated to <code >.col</code>.</td>
+                    <td>Defines a column size for extra-large screens (<b >min-width: 1200px</b>). <br >It's used concatenated to <b >.col</b>.</td>
                   </tr>
                   <tr>
                     <td class="nowrap">*-offset-*</td>
                     <td class="nowrap">(.sm, .md, .lg and .xl) and (1 ~ 12)</td>
-                    <td>Creates an offset of columns. <br >It's used concatenated to <code >.col</code> and its screen size. <br >E.g: <code>.md-offset-2</code>.</td>
+                    <td>Creates an offset of columns. <br >It's used concatenated to <b >.col</b> and its screen size. <br >E.g: <b>.md-offset-2</b>.</td>
                   </tr>
                 </tbody>
               </table>
-            </div><br>
-            <h5>Code example</h5>
-            <div class="code-sample">
-              <pre class="prettyprint lang-html">&lt;!-- This's a row. You can have as many rows as you need. --&gt;
-&lt;div class="row" &gt;
-  &lt;!-- This's a column. You can have up to 12 columns in a row. --&gt;
-  &lt;div class="col sm-12 md-6 lg-3" &gt; ... &lt;/div&gt;
-  &lt;div class="col sm-12 md-6 lg-9" &gt; ... &lt;/div&gt;
-&lt;/div&gt;</pre>
             </div>
           </div>
           <div class="align-center my-40"><span>。。。 </span></div>
           <div id="component-responsive-images">
             <h4>Responsive images</h4>
-            <div class="row"> 
-              <div class="col md-5"><br><br>
-                <p class="lead">
+            <div class="row stretch"> 
+              <div class="col md-6 align-center">
+                <p class="lead align-justify">
                   By default, all images are considered responsive and will adjust
                   accordingly to the window size. In case you, for any sake, need a
-                  non responsive image, just add the class <code >.no-responsive</code>
+                  non responsive image, just add the class <b >.no-responsive</b>
                   on it.
                   
                 </p><br>
                 <p class="align-center"><img class="with-shadow" src="https://picsum.photos/800/600?random" alt="Sample of a responsive image"></p>
               </div>
-              <div class="col md-6 md-offset-1">
-                <h5>Code example</h5>
+              <div class="col md-6 align-center">
                 <div class="code-sample">
                   <pre class="prettyprint lang-html">&lt;img src="..." alt="..." &gt;
 </pre>
-                </div><br><br>
-                <h6>Circle and Thumbnail are also given</h6>
+                </div><br>
+                <h6>Circle and Thumbnail </h6>
                 <div class="row">
                   <div class="col sm-12 md-6">
                     <p class="align-center"><img class="circle with-shadow" src="https://picsum.photos/100?random" alt="Circle image sample"></p>
@@ -313,16 +404,13 @@
               to the below few examples.
               
             </p>
-            <p>
-              We are using <b>Lato (300)</b> as general font-family and <b>Open Sans (400)</b> as
-              title's font-family. The easiest way to make these fonts available to your page is
-              loading them from <a href="https://fonts.google.com/" target="_blank" >Google Fonts</a>, such as:
-              
-            </p>
             <div class="code-sample">
-              <pre class="prettyprint lang-html">&lt;link href="//fonts.googleapis.com/css?family=Lato:300,700|Open+Sans:400" rel="stylesheet"&gt;
+              <pre class="prettyprint lang-html">&lt;!-- Add something like this to the HEAD of your page --&gt;
+&lt;!-- Will add Open-Sans(400) and Lato (300,700) as title and general font-families --&gt;
+&lt;link href="//fonts.googleapis.com/css?family=Lato:300,700|Open+Sans:400" rel="stylesheet"&gt;
 </pre>
-            </div><br>
+            </div>
+            <p>For other options, check <a href="https://fonts.google.com/" target="_blank" >Google Fonts</a> out.</p>
             <div class="row">
               <div class="col sm-12 md-6">
                 <h1>Header 1</h1>
@@ -332,7 +420,7 @@
                 <h5>Header 5</h5>
                 <h6>Header 6</h6>
               </div>
-              <div class="col sm-12 md-6"><br><br>
+              <div class="col sm-12 md-6"><br>
                 <p>
                   This is an paragraph. There are <strong >bold</strong>, <i >italic</i>, 
                   and <u >underlined</u> texts, also, <a href="#!">anchors</a>.
@@ -396,25 +484,18 @@
           </div>
           <div class="align-center my-40"><span>。。。 </span></div>
           <div id="component-media-queries">
-            <div class="row"> 
-              <div class="col md-5">
-                <h4>Media queries</h4>
-                <p class="lead">
-                  Media queries allows us to make an even more accurated design. In <code >seed-css</code>
-                  they are made to represent the following screen sizes:
-                  
-                </p>
-                <p class="lead">
-                  You can safely write your own styling rules using the following queries and keep covered by
-                  <code >seed-css</code> grid system. Using a different set of media queries may
-                  overwrite this boilerplate grid system.
-                  
-                </p>
-              </div>
-              <div class="col md-6 md-offset-1">
-                <h5>Code example</h5>
-                <div class="code-sample">
-                  <pre class="prettyprint lang-css">// Mobile first
+            <h4>Media queries</h4>
+            <p class="lead align-justify">
+              Media queries allows us to make an even more accurated design. In <b >seed-css</b>
+              they are build to represent the screen sizes below. Also, you can safely write your 
+              own styling rules using the following queries and keep covered by <b >seed-css</b> 
+              grid system. Using a different set of media queries may overwrite this boilerplate 
+              grid system.
+              
+            </p>
+            <h5>Code example</h5>
+            <div class="code-sample">
+              <pre class="prettyprint lang-css">// Mobile first
 @media only screen and (min-width: 0px) {
   ...
 }
@@ -426,9 +507,7 @@
 
 // ...
 </pre>
-                </div>
-              </div>
-            </div>
+            </div><br>
             <h5>Pre-defined medias</h5>
             <div class="table-responsive"> 
               <table>
@@ -442,6 +521,13 @@
                   </tr>
                 </thead>
                 <tbody>
+                  <tr>
+                    <td class="nowrap">Extra Small Mobiles</td>
+                    <td class="nowrap"><strong>&lt; 320px</strong></td>
+                    <td class="nowrap"><strong>.xs</strong></td>
+                    <td><strong>12</strong></td>
+                    <td><strong>90%</strong></td>
+                  </tr>
                   <tr>
                     <td class="nowrap">Mobiles</td>
                     <td class="nowrap"><strong>&lt; 600px</strong></td>
@@ -464,7 +550,7 @@
                     <td><strong>80%</strong></td>
                   </tr>
                   <tr>
-                    <td class="nowrap">Extra large desktops/TVs</td>
+                    <td class="nowrap">Extra large desktops/ TVs</td>
                     <td class="nowrap"><strong>&gt; 1200px</strong></td>
                     <td class="nowrap"><strong>.xl</strong></td>
                     <td><strong>12</strong></td>
@@ -472,17 +558,21 @@
                   </tr>
                 </tbody>
               </table>
-            </div>
+            </div><br>
             <h5>Queries definition</h5>
             <div class="table-responsive"> 
               <table>
                 <thead>
                   <tr>
-                    <th>Query</th>
+                    <th>Breakpoint</th>
                     <th>Remarks</th>
                   </tr>
                 </thead>
                 <tbody>
+                  <tr>
+                    <td><code >@media only screen and (max-width: 320px) {}</code></td>
+                    <td>For extra small mobile devices. (Mobile first, first iPhones)</td>
+                  </tr>
                   <tr>
                     <td><code >@media only screen and (min-width: 0px) {}</code></td>
                     <td>For mobile devices. (Mobile first)</td>
@@ -508,23 +598,21 @@
             <h4>Icons</h4>
             <div class="row"> 
               <div class="col md-5">
-                <p class="lead">
-                  For the sake of flexibility, <code >seed-css</code> does not implement its own set of icons.
+                <p class="lead align-justify">
+                  For the sake of flexibility, <b >seed-css</b> does not implement its own set of icons.
                   
-                </p>
-                <p class="lead">
                   However, there are tons of really cool icons out there which you can easily use with this boilerplate. 
                   Some of them are trully special and free, which we strongly recommend to you.
                   
                 </p>
               </div>
               <div class="col md-6 md-offset-1">
-                <h5>Recommended Icons</h5>
-                <ol> 
-                  <li> <a class="lead" href="https://akveo.github.io/eva-icons/#/" target="_blank">Eva Icons (Free)</a></li>
-                  <li> <a class="lead" href="https://ionicons.com/" target="_blank">Ion Icons (Free)</a></li>
-                  <li> <a class="lead" href="https://fontawesome.com/icons?d=gallery&amp;m=free" target="_blank">Font Awesome (Free)</a></li>
-                </ol>
+                <h5 class="m-0">Recommended Icons</h5>
+                <dl> 
+                  <dd class="mb-20"> <a class="badge info lead" href="https://akveo.github.io/eva-icons/#/" target="_blank">Eva Icons - Free (used in this page) </a></dd>
+                  <dd class="mb-20"> <a class="badge lead" href="https://ionicons.com/" target="_blank">Ion Icons - Free</a></dd>
+                  <dd class="mb-20"> <a class="badge lead" href="https://fontawesome.com/icons?d=gallery&amp;m=free" target="_blank">Font Awesome - FREE</a></dd>
+                </dl>
               </div>
             </div>
           </div>
@@ -533,17 +621,15 @@
             <h4>Colors</h4>
             <div class="row"> 
               <div class="col md-5">
-                <p class="lead">
-                  Oh, yes! This boilerplate wouldn't worth if there was not a pre-defined color scheme, isn't it?
+                <p class="lead align-justify">
+                  Oh, yes! This boilerplate wouldn't worth without colors, isn't it?
                   
-                </p>
-                <p class="lead">
-                  That's why <code> seed-css</code> comes with a pre-defined set of colors exposed in classes, and the same 
-                  colors can be applied both on the foreground (texts) and background from any HTML element.
+                  That's why <b> seed-css</b> comes with a pre-defined set of colors exposed in classes, and the same 
+                  colors can be applied both to the foreground (texts) and the background from any HTML element.
                   
                 </p>
               </div>
-              <div class="col md-6 md-offset-1"><br><br>
+              <div class="col md-6 md-offset-1"><br>
                 <div class="colors"> 
                   <div class="row"> 
                     <div class="col sm-4 primary-background"></div>
@@ -563,7 +649,7 @@
                 </div>
               </div>
             </div>
-            <h5>Full color list</h5>
+            <h5>The full color list</h5>
             <div class="table-responsive"> 
               <table class="hovered">
                 <thead>
@@ -635,7 +721,7 @@
           </div>
           <div class="align-center my-40"><span>。。。 </span></div>
           <div class="reveal animated animated-once">
-            <h2 id="examples-components">Components</h2>
+            <h2 class="align-center" id="examples-components">Components</h2>
           </div>
           <div id="component-alerts">
             <h4>Alerts</h4>
@@ -644,7 +730,7 @@
               
             </p>
             <div class="row"> 
-              <div class="col sm-12 md-5">
+              <div class="col sm-12 md-6">
                 <div class="alerts">
                   <p><b>.alert</b></p>
                   <div class="alert">This's a default alert</div><br>
@@ -658,7 +744,7 @@
                   <div class="alert danger">This's a danger alert</div>
                 </div>
               </div>
-              <div class="col sm-12 md-6 md-offset-1">
+              <div class="col sm-12 md-6">
                 <h5>Code example</h5>
                 <div class="code-sample">
                   <pre class="prettyprint lang-html">&lt;!-- default --&gt;
@@ -734,9 +820,9 @@
             <div class="row"> 
               <div class="col md-5">
                 <p class="lead">
-                  Buttons can be created with <code>seed-css</code> by simply adding the class <code >.btn</code> 
-                  to any <code >&lt;a/&gt;</code> or  <code >&lt;button/&gt;</code> element. Adding the class 
-                  <code >.btn-primary</code> it will become a primary button. 
+                  Buttons can be created with <b>seed-css</b> by simply adding the class <b >.btn</b> 
+                  to any <b >&lt;a/&gt;</b> or  <b >&lt;button/&gt;</b> element. Adding the class 
+                  <b >.btn-primary</b> it will become a primary button. 
                   
                 </p>
               </div>
@@ -848,12 +934,9 @@
           <div class="align-center my-40"><span>。。。 </span></div>
           <div id="component-cards">
             <h4>Cards</h4>
-            <p>
-              Cards are important for applications and websites riches in content.
-              
-            </p>
+            <p class="lead">Cards are important for applications and websites riches in content.</p>
             <div class="row">
-              <div class="col md-6 px-10">
+              <div class="col md-6">
                 <h6>Simple cards</h6>
                 <div class="sample-container auto-height">
                   <div class="card place-center">
@@ -871,20 +954,22 @@
                 <h5>Code example </h5>
                 <div class="code-sample">
                   <pre class="prettyprint lang-html">&lt;div class="card" &gt;
-    &lt;div class="card-header" &gt;
-      &lt;h5 class="card-title" &gt;Card header&lt;/h5&gt;
-    &lt;/div&gt;
-    &lt;div class="card-body" &gt;
-      &lt;p &gt; Card body&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class="card-footer" &gt;
-      &lt;p &gt; Card footer&lt;/p&gt;
-    &lt;/div&gt;
+  &lt;div class="card-header" &gt;
+    &lt;h5 class="card-title" &gt;
+      Card header
+    &lt;/h5&gt;
   &lt;/div&gt;
+  &lt;div class="card-body" &gt;
+    &lt;p &gt; Card body&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="card-footer" &gt;
+    &lt;p &gt; Card footer&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </pre>
                 </div>
               </div>
-              <div class="col md-6 px-10">
+              <div class="col md-6">
                 <h6>Image cards</h6>
                 <div class="sample-container auto-height">
                   <div class="card card-media place-center">
@@ -903,8 +988,13 @@
                 <div class="code-sample">
                   <pre class="prettyprint lang-html">&lt;div class="card card-image" &gt;
   &lt;div class="card-header" &gt;
-    &lt;img src="https://unsplash.it/350/200" alt="Sample image card" /&gt;
-    &lt;h5 class="card-title" &gt;Card header&lt;/h5&gt;
+    &lt;img 
+      src="https://unsplash.it/350/200" 
+      alt="Sample image card" 
+    /&gt;
+    &lt;h5 class="card-title" &gt;
+      Card header
+    &lt;/h5&gt;
   &lt;/div&gt;
   &lt;div class="card-body" &gt;
     &lt;p &gt; Card body&lt;/p&gt;
@@ -915,22 +1005,22 @@
 &lt;/div&gt;
 </pre>
                 </div>
-                <p>* Images from <a href="https://picsum.photos" target="_blank" >picsum.photos</a></p>
               </div>
             </div>
           </div>
           <div class="align-center my-40"><span>。。。 </span></div>
           <div id="component-form">
             <h4>Forms</h4>
-            <p class="align-justify">
+            <p class="align-justify lead">
               Probably all websites and apps will contain (at least) one form, so,
-              that's why <code >seed-css</code> has a really simple, easy to use and customizable
+              that's why <b >seed-css</b> has a really simple, easy to use and customizable
               form field stylesheet. Have a look on the examples below:
               
+              
             </p>
-            <h6>Simple elements</h6>
             <div class="row"> 
-              <div class="col md-5">
+              <div class="col md-6">
+                <h6>Simple elements</h6>
                 <div class="field">
                   <label for="">This is an input text</label>
                   <input type="text">
@@ -947,9 +1037,20 @@
                   <label for="">This is an input text with success message</label>
                   <input class="success" type="text"><span class="success">This is a success message!</span>
                 </div>
+                <h6>Grouped elements</h6>
+                <div class="field group"> 
+                  <div class="field"> 
+                    <label for="">First name </label>
+                    <input type="text" id="first_name">
+                  </div>
+                  <div class="field"> 
+                    <label for="">Last name </label>
+                    <input type="text" id="last_name">
+                  </div>
+                </div>
               </div>
-              <div class="col md-6 md-offset-1">
-                <h5>Code example </h5>
+              <div class="col md-6">
+                <h5 class="mt-0">Code example </h5>
                 <div class="code-sample">
                   <pre class="prettyprint lang-html">&lt;!-- Example of an input text --&gt;
 &lt;div class="field" &gt;
@@ -963,28 +1064,8 @@
   &lt;input type="text" name="..." class="error" &gt;
   &lt;span class="error" &gt; ... &lt;/span&gt;
 &lt;/div&gt;
-</pre>
-                </div>
-              </div>
-            </div>
-            <h6>Grouped elements</h6>
-            <div class="row"> 
-              <div class="col md-5">
-                <div class="field group"> 
-                  <div class="field"> 
-                    <label for="">First name </label>
-                    <input type="text" id="first_name">
-                  </div>
-                  <div class="field"> 
-                    <label for="">Last name </label>
-                    <input type="text" id="last_name">
-                  </div>
-                </div>
-              </div>
-              <div class="col md-6 md-offset-1"> 
-                <h5>Code example </h5>
-                <div class="code-sample">
-                  <pre class="prettyprint lang-html">&lt;!-- Example of grouped fields --&gt;
+
+&lt;!-- Example of grouped fields --&gt;
 &lt;div class="field group" &gt;
   &lt;div class="field" &gt;
     &lt;label for="..." &gt; ... &lt;/label&gt;
@@ -1002,22 +1083,19 @@
             </div>
             <h6>File upload</h6>
             <div class="alert info">
-              <b >PRO:</b> Make sure that <code >id</code> attribute is set for the <code >file</code> input field and 
-              that it matches the <code>for</code> attribute from its label. Otherwise, it may not work properly.
-              
+              <p class="m-0">
+                <b >PRO:</b>
+                <code >id</code> attribute is mandatory for <code >file</code> input fields
+                and needs to match the <code>for</code> attribute from its label.
+                
+              </p>
             </div><br>
             <div class="row"> 
-              <div class="col md-5">
+              <div class="col md-6">
                 <div class="field seed-file">
                   <input type="file" id="file" multiple data-multiple="{count} files">
                   <label for="file"> <span class="input" data-empty="No file chosen">...</span><span class="cancel"> <span>Remove</span></span><span class="button"> <span>Attach</span></span></label>
                 </div>
-                <p>
-                  Adding the property <code >multiple</code> to the <code >input</code> element 
-                  will enable multiple files selection. Also adding <code >data-multiple="{count} ..."</code>
-                  will customize the selected message.
-                  
-                </p>
                 <div class="code-sample">
                   <h5>Code example </h5>
                   <pre class="prettyprint lang-html">&lt;!-- Example of file upload field --&gt;
@@ -1038,13 +1116,19 @@
 </pre>
                 </div>
               </div>
-              <div class="col md-6 md-offset-1">
-                <p>
-                  Exceptionally the <b >file upload</b> component works better with a javascript support. Using javascript 
-                  will create a much better user experience. <code >Seed-css</code> 
-                  has a plug-and-play javascript library written in VanillaJS:
+              <div class="col md-6">
+                <p class="align-justofy lead">
+                  Adding the property <b >multiple</b> to the <b >input</b> element 
+                  will enable multiple files selection. Also adding <b >data-multiple="{count} ..."</b>
+                  will customize the selected message.
                   
                 </p>
+                <p class="align-justify lead">
+                  Exceptionally the <b >file upload</b> component works better with a javascript support. Using javascript 
+                  will create a much better user experience. <b >seed-css</b> 
+                  has a plug-and-play javascript library written in VanillaJS:
+                  
+                </p><br>
                 <h6>When using Node JS:</h6>
                 <div class="code-sample">
                   <pre class="prettyprint lang-javascript">import SeedCSS from 'seed-css'; // Import 
@@ -1084,12 +1168,12 @@ SeedCSS.fileUpload(); // Initialize
                 </div>
               </div>
               <div class="col md-6 md-offset-1"> 
-                <p>
-                  To make it simple and make the user experience better, <code >Seed-css</code> is using 
+                <p class="align-justify lead">
+                  To make it simple and make the user experience better, <b >seed-css</b> is using 
                   javascript to automaticaly calculates types chars from textareas. If you use the Javascript 
                   given, it's basically plug-an-play.
                   
-                </p>
+                </p><br>
                 <h6>When using Node JS:</h6>
                 <div class="code-sample">
                   <pre class="prettyprint lang-javascript">import SeedCSS from 'seed-css'; // Import 
@@ -1189,17 +1273,17 @@ SeedCSS.textArea(); // Initialize
           <div id="component-modals">
             <h4>Modals</h4>
             <div class="row"> 
-              <div class="col md-5">
-                <p class="lead">
+              <div class="col md-6">
+                <p class="lead align-justify">
                   A modal window is an essential component for providing the best user experience, it's the easiest
                   way for requesting imediate feedback from your visitors.
                   
                 </p>
               </div>
-              <div class="col md-6 md-offset-1">
+              <div class="col md-6">
                 <div class="sample-container auto-height"> 
                   <div class="align-center">
-                    <button class="btn btn-primary" type="button" role="modal" data-modal-id="modal">Click Me</button>
+                    <button class="btn secondary" type="button" role="modal" data-modal-id="modal">Click Me</button>
                   </div>
                 </div>
               </div>
@@ -1229,16 +1313,16 @@ SeedCSS.textArea(); // Initialize
 </pre>
             </div>
             <div class="row"> 
-              <div class="col md-5"> 
-                <p>
+              <div class="col md-6">
+                <p class="align-justify lead">
                   Using animation when showing/ hiddng the modal creates an even better experience to 
                   your users/ visitors. 
                   
                 </p>
               </div>
-              <div class="col md-6 md-offset-1"> 
-                <p>
-                  To make it simple, <code > seed-css</code> is using 
+              <div class="col md-6">
+                <p class="align-justify lead">
+                  To make it simple, <b >seed-css</b> is using 
                   <a href="https://github.com/daneden/animate.css" target="_blank" >Animate.CSS</a> to apply animation 
                   to the modal window and, if you use the Javascript given, it's basically plug-an-play.
                   
@@ -1283,13 +1367,13 @@ modal.get('#modal').hide();</pre>
             <h4>Navigation bar</h4>
             <p class="lead">
               Navigation bar is a responsive mobile first component and will fit any screen size. When in small screens 
-              you might want to use it in conjunction to the <code>hide</code> classes from <code>utilities</code> in order to 
+              you might want to use it in conjunction to the <b>hide</b> classes from <b>utilities</b> in order to 
               show and hide the hamburguer menu, when needed.
               
             </p>
             <h5 class="mt-0">Horizontal navigation bar</h5>
-            <p>
-              By default, navigation bar is horizontal in <code>seed-css</code>. 
+            <p class="lead">
+              By default, navigation bar is horizontal in <b>seed-css</b>. 
               
             </p>
             <div class="sample-container auto-height px-20"> 
@@ -1398,7 +1482,7 @@ modal.get('#modal').hide();</pre>
                 <h5 class="mt-0">Vertical navigation bar</h5>
                 <p class="lead">
                   However, you can still define vertical navigation bars depending on your needs. For that, 
-                  you just need to add the class <code >.vertical</code> to the navigation bar element.
+                  you just need to add the class <b >.vertical</b> to the navigation bar element.
                   
                 </p>
               </div>
@@ -1452,6 +1536,10 @@ modal.get('#modal').hide();</pre>
                   </tr>
                 </thead>
                 <tbody>
+                  <tr>
+                    <td class="nowrap">.sticky</td>
+                    <td>Forces the navigation bar to be fixed on the top.</td>
+                  </tr>
                   <tr>
                     <td class="nowrap">.vertical</td>
                     <td>Forces the navigation bar to be vertical.</td>
@@ -1529,9 +1617,9 @@ modal.get('#modal').hide();</pre>
                 </div>
               </div>
             </div><br>
-            <p>
-              <code>seed-css</code> brings two different styles of off-canvas: <code>aside</code> (default) and 
-              <code>overlay</code>. In order to make the off-canvas work properly, it uses an arrangement of 
+            <p class="lead">
+              <b>Seed-css</b> brings two different styles of off-canvas: <b>aside</b> (default) and 
+              <b>overlay</b>. In order to make the off-canvas work properly, it uses an arrangement of 
               special markups and (as another exception to the rule) a JavaScript helper.
               
             </p>
@@ -1578,7 +1666,7 @@ SeedCSS.offCanvas(); // Initialize
                 </div>
               </div>
             </div>
-            <p>Optionally assigning it to a variable you can programatically show and hide the modal.</p>
+            <p class="lead">Optionally assigning it to a variable you can programatically show and hide the modal.</p>
             <div class="code-sample">
               <pre class="prettyprint lang-javascript">const canvas = SeedCSS.offCanvas(); 
 canvas.get('#mycanvas').open();
@@ -1588,7 +1676,7 @@ canvas.get('#mycanvas').close();</pre>
           <div class="align-center my-40"><span>。。。 </span></div>
           <div id="component-progress">
             <h4>Progress bars</h4>
-            <p>
+            <p class="lead">
               Progress bar is an important elements for UX. If you use it 
               accordingly, it's gonna pass the imediate response to the user.
               
@@ -1629,25 +1717,25 @@ canvas.get('#mycanvas').close();</pre>
           <div class="align-center my-40"><span>。。。 </span></div>
           <div id="component-spinners">
             <h4>Spinners</h4>
-            <p class="lead">The spinner is offered in three different sizes: <code >default</code>, <code >medium</code> and <code >big</code>.</p>
-            <p>
-              Also, the spinner animation speed can be controled with the classes: <code >medium</code> (0.85s) and <code >fast</code> (0.5s),
+            <p class="lead">The spinner has three different sizes: <b >default</b>, <b >medium</b> and <b >big</b>.</p>
+            <p class="lead">
+              Also, the spinner animation speed can be controled with the classes: <b >.fast</b> (0.85s) and <b >.furious</b> (0.5s),
               while the normal speed animation will take 1.3s to complete the course.
               
             </p>
-            <p>
-              If for some reason you want to hide the "loading" message, just include the <code >lean</code> class or simply do not
-              include the <code >data-label</code> property.
+            <p class="lead">
+              If for some reason you want to hide the "loading" message, just include the class <b >.lean</b> or simply do not
+              include the property <b >data-label</b> as seen in the examples.
               
             </p>
             <div class="row">
               <div class="col md-5">
                 <h6>Default (with normal speed)</h6>
                 <div class="spinner" data-label="Loading ..."></div><br>
-                <h6>Medium <code >.medium</code> (with medium speed)</h6>
-                <div class="spinner medium medium" data-label="Loading ..."></div><br>
-                <h6>Big <code >.big</code> (with fast speed)</h6>
-                <div class="spinner big fast" data-label="Loading ..."></div>
+                <h6>Medium <code >.medium.fast</code> (with fast speed)</h6>
+                <div class="spinner medium fast" data-label="Loading ..."></div><br>
+                <h6>Big <code >.big.furious</code> (with faster speed)</h6>
+                <div class="spinner big furious" data-label="Loading ..."></div>
               </div>
               <div class="col md-6 md-offset-1">
                 <h5>Code example</h5>
@@ -1675,8 +1763,8 @@ canvas.get('#mycanvas').close();</pre>
               Tables are intended to be used for display data.
               
             </p>
-            <p class="align-justify">
-              In that matter, <code >seed-css</code> has very special classes to allow you show
+            <p class="align-justify lead">
+              In that matter, <b >seed-css</b> has very special classes to allow you show
               your data in a very clean and readable way. Basically, just using a
               default markup for data you'll get a styled table, but, you also can
               make use of special classes to make your tables even more readable.
@@ -1872,7 +1960,7 @@ canvas.get('#mycanvas').close();</pre>
             <h4>Tooltips</h4>
             <p class="lead">
               Tooltips are an important part of UX, where you can give user additional information about
-              a component  placed on his/her screen. <code >Seed-css</code> gives you a
+              a component  placed on his/her screen. <b >Seed-css</b> gives you a
               simple but very efficient tooltip, which doesn't even need javascript.
               
             </p><br><br>
@@ -1911,7 +1999,7 @@ canvas.get('#mycanvas').close();</pre>
           </div>
           <div class="align-center my-40"><span>。。。</span></div>
           <div class="reveal animated animated-once fast">
-            <h2 id="examples-utilities">Utilities</h2>
+            <h2 class="align-center" id="examples-utilities">Utilities</h2>
           </div>
           <div id="component-utilities">
             <p class="lead">
@@ -2082,7 +2170,7 @@ canvas.get('#mycanvas').close();</pre>
             </div>
             <div class="align-center my-40"><span>。。。 </span></div>
             <h5>Element Floating</h5>
-            <p>Floating elements are very hepful for quick element alignments.</p><br>
+            <p class="lead">Floating elements are very hepful for quick element alignments.</p><br>
             <div class="row">
               <div class="col md-5"><span class="place-center">This is floating center</span><br><br>
                 <p><span class="place-left">This is floating left </span><span class="place-right">This is floating right </span><span style="clear: both;"></span></p>
@@ -2124,10 +2212,10 @@ canvas.get('#mycanvas').close();</pre>
             </div>
             <div class="align-center my-40"><span>。。。 </span></div>
             <h5>Margins & Paddings</h5>
-            <p>
-              Every CSS boilerplate has its own set of standard styling defined, and on that matter, <code >seed-css</code> 
+            <p class="lead">
+              Every CSS boilerplate has its own set of standard styling defined, and on that matter, <b >seed-css</b> 
               is not too different! It comes with pre-defined element styles that helps speed-up the development process. 
-              However, it also brings you a simple way for quickly customize any <code >margin</code> and/or <code >padding</code> 
+              However, it also brings you a simple way for quickly customize any <b >margin</b> and/or <b >padding</b> 
               definition for any element.
               
             </p>
@@ -2291,9 +2379,9 @@ canvas.get('#mycanvas').close();</pre>
             </table>
             <div class="align-center my-40"><span>。。。 </span></div>
             <h5>Shadows</h5>
-            <p>
-              Shadows are very useful for highligth a particular object or even given a motion sense, and <code>seed-css</code> 
-              comes already with two pre-defined shadows style (<code >.with-shadow</code> and <code >.with-shadow-inset</code>).
+            <p class="lead">
+              Shadows are very useful for highligth a particular object or even given a motion sense, and <b>seed-css</b> 
+              comes already with two pre-defined shadows style (<b >.with-shadow</b> and <b >.with-shadow-inset</b>).
               
             </p><br>
             <div class="row shadows"> 
@@ -2314,7 +2402,7 @@ canvas.get('#mycanvas').close();</pre>
             </div>
             <div class="align-center my-40"><span>。。。 </span></div>
             <h5>Hiding</h5>
-            <p class="align-justify">
+            <p class="align-justify lead">
               Show and hide elements from your pages can be an usefull ability
               to improve the user experience of your apps or websites.
               
@@ -2403,16 +2491,16 @@ canvas.get('#mycanvas').close();</pre>
       <section id="library-download">
         <div class="container">
           <div class="reveal animated animated-once">
-            <h2>JavaScript Library Download</h2>
+            <h2 class="align-center">JavaScript Library Download</h2>
           </div>
-          <p class="align-justify">
-            As a general rule, <code>seed-css</code> is not JavaScript dependent because it is implemented 
+          <p class="align-justify lead">
+            As a general rule, <b>seed-css</b> is not JavaScript dependent because it is implemented 
             purely in CSS (using Sass), however, there are a few exceptions created in order to deliver a 
             high level experience to your visitors/ users. Any component which has the (optional) JavaScript 
             dependence has it written on its own section.
             
           </p>
-          <h6>The following helpers are given:</h6>
+          <h5>Existing helpers:</h5>
           <div class="table-responsive">
             <table class="hovered">
               <thead>
@@ -2426,27 +2514,27 @@ canvas.get('#mycanvas').close();</pre>
                 <tr>
                   <td class="nowrap">fileUpload</td>
                   <td class="nowrap"><code >SeedCSS.fileUpload()</code></td>
-                  <td>Enables a high level UX input file upload HTML Element.</td>
+                  <td>Custom HTML InputFileUploadElement.</td>
                 </tr>
                 <tr>
                   <td class="nowrap">modal</td>
                   <td class="nowrap"><code >SeedCSS.modal([options])</code></td>
-                  <td> <span>Enables a high level UX modal overlay window with handlers for ESC key, clicking outside the modal and many animations powered by </span><a href="https://daneden.github.io/animate.css/" target="_blank">Animate.CSS</a><span>. Please check the available options </span><a href="https://github.com/AbtzLabs/seed-css/blob/master/docs/modal.md" target="_blank">here</a></td>
+                  <td> <span>Modal overlay window with handlers for ESC key, outside click and animations powered by </span><a href="https://daneden.github.io/animate.css/" target="_blank">Animate.CSS</a><span>. Check the documentation  </span><a href="https://github.com/AbtzLabs/seed-css/blob/master/docs/modal.md" target="_blank">here</a></td>
                 </tr>
                 <tr>
                   <td class="nowrap">offCanvas</td>
                   <td class="nowrap"><code >SeedCSS.offCanvas()</code></td>
-                  <td>A very easy and simple way to enable the off-canvas panel.</td>
+                  <td>Off-canvas panel.</td>
                 </tr>
                 <tr>
                   <td class="nowrap">textArea</td>
                   <td class="nowrap"><code >SeedCSS.textArea()</code></td>
-                  <td>Enables a high level UX textarea HTML Element with characters counter.</td>
+                  <td>Custom HTML TextareaElement with characters counter.</td>
                 </tr>
                 <tr>
                   <td class="nowrap">scroll</td>
                   <td class="nowrap"><code >SeedCSS.scroll([options])</code></td>
-                  <td> <span>Enables a simple yet handy scroll smoother which makes scrolling navigation soft and more enjoyable.</span><span>Please check the available options </span><a href="https://github.com/AbtzLabs/seed-css/blob/master/docs/scroll.md" target="_blank">here</a></td>
+                  <td> <span>A simple yet handy scroll smoother which makes scrolling navigation soft and more enjoyable.</span><span>Check the documentation </span><a href="https://github.com/AbtzLabs/seed-css/blob/master/docs/scroll.md" target="_blank">here</a></td>
                 </tr>
                 <tr>
                   <td class="nowrap">window.CustomEvent</td>
@@ -2464,7 +2552,7 @@ canvas.get('#mycanvas').close();</pre>
       <section id="license">
         <div class="container">
           <div class="reveal animated animated-once">
-            <h2>License</h2>
+            <h2 class="align-center">License</h2>
           </div>
           <p>The MIT license.</p>
           <p>Copyright &copy; 2016-2019, Rogerio Taques.</p>
@@ -2497,10 +2585,10 @@ canvas.get('#mycanvas').close();</pre>
       <section id="contribute"> 
         <div class="container"> 
           <div class="reveal animated animated-once">
-            <h2>Contributing</h2>
+            <h2 class="align-center">Contributing</h2>
           </div>
-          <p>This is an open-source project and you can freely contribute. </p>
-          <p>By contributing you will help us to improve the code-base and make <code >seed-css</code> even better to other developers like us.</p>
+          <p class="lead">This is an open-source project and you can freely contribute. </p>
+          <p class="lead">By contributing you will help us to improve the code-base and make <b >seed-css</b> even better to other developers like us.</p>
           <div class="row"> 
             <div class="col md-5">
               <h5>How to contribute?</h5>
@@ -2511,7 +2599,7 @@ canvas.get('#mycanvas').close();</pre>
               </ul>
               <p class="align-justify">
                 Check the source-code on <a href="https://github.com/abtzlabs/seed-css" target="_blank">Github</a>, 
-                fork the project and submit your <code>pull-requests</code>. I'll review, discuss it as needed with you 
+                fork the project and submit your <b>pull-requests</b>. I'll review, discuss it as needed with you 
                 and approve and merge as soon as possible.
                 
               </p>
@@ -2523,7 +2611,12 @@ canvas.get('#mycanvas').close();</pre>
                 yet still wanna contribute in some way, you can help us donating any amout of money!
                 
               </p>
-              <p class="align-center"> <a class="btn secondary" href="https://www.paypal.me/abtzlabs" target="_blank">Donate via <b >Paypal</b></a><a class="btn red" href="https://www.patreon.com/bePatron?u=8642275" target="_blank">Be a <b>Patron</b>!</a></p>
+              <p class="align-center">
+                 <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/rogeriotaques">
+<img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee.">
+<span style="margin-left:5px">Buy me a coffee.</span>
+</a>
+              </p>
             </div>
           </div>
         </div>
@@ -2532,15 +2625,16 @@ canvas.get('#mycanvas').close();</pre>
         <p class="copyright">&copy; 2019, Rogerio Taques.</p>
         <div class="container">
           <p class="px-50">
-            <code >Seed-CSS</code> has started as a side-project and a personal boilerplate for my own projects, however, 
+            <b >Seed-CSS</b> has started as a side-project and a personal boilerplate for my own projects, however, 
             I decided to make it an open-source after some of my friends start requesting me to use it. Now, it's available 
             under the MIT license.
             
           </p>
         </div>
         <p><span>Found a bug, would like to help or give a suggestion? </span><br class="hide-on-medium-and-up"><a href="https://github.com/abtzlabs/seed-css/issues">Open an issue</a></p>
-        <p><span>Are you looking for </span><span> <a href="http://abtzlabs.github.io/seed-css/v1">v1.2.4</a></span><span>?</span></p>
+        <p><span>Are you looking for </span><span> <a href="http://abtzlabs.github.io/seed-css/v1">Seed-CSS v1.2.4</a></span><span>?</span></p>
       </footer>
+      <script>eva.replace();</script>
     </main>
     <!-- Remove .hide to show the modal window-->
     <div class="modal hide" id="modal">
@@ -2549,20 +2643,58 @@ canvas.get('#mycanvas').close();</pre>
         <div class="modal-header">
           <h3 class="modal-title">Hello world </h3><a class="dismiss" href="#" role="modal-dismiss"><span>X</span></a>
         </div>
-        <div class="modal-body">   
+        <div class="modal-body align-justify">   
           <p>This's the body of the overlay modal window.</p>
-          <p>You can clique on the "X" at the top-right, anywhere in the dark background, or even press the ESC key to dismiss this window.</p>
+          <p>You can clique on the "<b>X</b>" at the top-right, anywhere in the dark background, or even press the <b>ESC</b> key to dismiss this window.</p>
           <p>Also, always a modal is open or close, <code >modal.opened</code> and <code >modal.closed</code> events are dispatched respectively.</p>
         </div>
         <div class="modal-footer">
           <div class="align-right">
-            <button class="btn small secondary" type="button">OK! Got it.</button>
+            <button class="btn medium secondary" type="button">Got it.</button>
           </div>
         </div>
       </div>
     </div>
     <script src="//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
     <script src="//code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
-    <script src="assets/js/bundle.js?v=v2.1.1"></script>
+    <script src="assets/js/bundle.js?v=v2.2.0"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script type="text/javascript">
+      docsearch({ 
+        apiKey: 'c664adc98c6f295b647556382cd0c5cf', 
+        indexName: 'abtzlabs_seed-css', 
+        inputSelector: '#page-search', 
+        algoliaOptions: { 'facetFilters': ["tags:master"] }, 
+        debug: true, // Set debug to true if you want to inspect the dropdown
+        handleSelected: function (input, event, suggestion, datasetNumber, context) {
+          var fnGetOffset = function (elem) {
+            var bodyOffset = document.body.getBoundingClientRect();
+            var offset = elem.getBoundingClientRect();
+      
+            return {
+              top: Math.ceil(offset.top - bodyOffset.top),
+              left: Math.ceil(offset.left - bodyOffset.left)
+            };
+          }; // fnGetOffset
+      
+          var target = suggestion.url.substr(
+            suggestion.url.indexOf('#')
+          );
+      
+          input.setVal('');
+      
+          if (target) {
+            var elem = document.querySelector(target);
+            var scrollTarget = fnGetOffset(elem).top - 150;
+      
+            window.scrollTo({
+              behavior: 'smooth',
+              left: 0,
+              top: scrollTarget
+            });
+          }
+        } 
+      }); 
+    </script>
   </body>
 </html>

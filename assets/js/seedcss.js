@@ -27,7 +27,7 @@
  * Seed-CSS - Custom HTML Input File.
  * @author Rogerio Taques (hello@abtz.co)
  * @see https://github.com/AbtzLabs/seed-css
- * @version 2.1.0
+ * @version 2.2.0
  * @license MIT
  */
 var seedFileUpload = function seedFileUpload() {
@@ -112,11 +112,7 @@ var seedFileUpload = function seedFileUpload() {
 
 
 if (typeof module !== 'undefined') {
-  if (typeof module.exports.SeedCSS === 'undefined') {
-    module.exports.SeedCSS = {};
-  }
-
-  module.exports.SeedCSS.fileUpload = seedFileUpload;
+  module.exports.fileUpload = fileUpload;
 } else {
   if (typeof window.SeedCSS === 'undefined') {
     window.SeedCSS = {};
@@ -130,7 +126,7 @@ if (typeof module !== 'undefined') {
  * Seed-CSS - Modal
  * @author Rogerio Taques (hello@abtz.co)
  * @see https://github.com/AbtzLabs/seed-css
- * @version 2.1.0
+ * @version 2.2.0
  * @license MIT
  */
 var fnOpen;
@@ -314,11 +310,7 @@ var seedModal = function seedModal(options) {
 
 
 if (typeof module !== 'undefined') {
-  if (typeof module.exports.SeedCSS === 'undefined') {
-    module.exports.SeedCSS = {};
-  }
-
-  module.exports.SeedCSS.modal = seedModal;
+  module.exports.seedModal = seedModal;
 } else {
   if (typeof window.SeedCSS === 'undefined') {
     window.SeedCSS = {};
@@ -332,7 +324,7 @@ if (typeof module !== 'undefined') {
  * Seed-CSS - Off-Canvas.
  * @author Rogerio Taques (hello@abtz.co)
  * @see https://github.com/AbtzLabs/seed-css
- * @version 2.1.0
+ * @version 2.2.0
  * @license MIT
  */
 var seedOffCanvas = function seedOffCanvas() {
@@ -440,11 +432,7 @@ var seedOffCanvas = function seedOffCanvas() {
 
 
 if (typeof module !== 'undefined') {
-  if (typeof module.exports.SeedCSS === 'undefined') {
-    module.exports.SeedCSS = {};
-  }
-
-  module.exports.SeedCSS.offCanvas = seedOffCanvas;
+  module.exports.seedOffCanvas = seedOffCanvas;
 } else {
   if (typeof window.SeedCSS === 'undefined') {
     window.SeedCSS = {};
@@ -458,7 +446,7 @@ if (typeof module !== 'undefined') {
  * Seed-CSS - Scroll.
  * @author Rogerio Taques (hello@abtz.co)
  * @see https://github.com/AbtzLabs/seed-css
- * @version 2.1.0
+ * @version 2.2.0
  * @license MIT
  */
 var seedScroll = function seedScroll(options) {
@@ -467,14 +455,14 @@ var seedScroll = function seedScroll(options) {
   var triggers = null;
   var revealers = null;
   var scrollTarget = 0;
-  var gutter = 50;
   var defaultOptions = {
     spyScrollSelector: 'nav a.smooth',
     revealElementSelector: '.reveal',
     revealSpaceOffset: 0.2,
     revealWhenVisible: 'visible',
     revealSingleAnimation: 'visible-once',
-    revealWhenHidden: 'hidden'
+    revealWhenHidden: 'hidden',
+    gutter: 50
   }; // defaultOptions
 
   var fnUpdateActiveTrigger = function fnUpdateActiveTrigger(elem) {
@@ -517,7 +505,7 @@ var seedScroll = function seedScroll(options) {
           var target = document.querySelector(targetID);
           var offset = fnGetOffset(target);
 
-          if (offset.top - gutter <= window.scrollY) {
+          if (offset.top - options.gutter <= window.scrollY) {
             fnUpdateActiveTrigger(el);
             return;
           }
@@ -540,7 +528,7 @@ var seedScroll = function seedScroll(options) {
 
     if (target) {
       var elem = document.querySelector(target);
-      scrollTarget = fnGetOffset(elem).top - gutter; // add some gutter
+      scrollTarget = fnGetOffset(elem).top - options.gutter; // add some gutter
 
       window.scrollTo({
         behavior: 'smooth',
@@ -714,11 +702,7 @@ var seedScroll = function seedScroll(options) {
 
 
 if (typeof module !== 'undefined') {
-  if (typeof module.exports.SeedCSS === 'undefined') {
-    module.exports.SeedCSS = {};
-  }
-
-  module.exports.SeedCSS.scroll = seedScroll;
+  module.exports.seedScroll = seedScroll;
 } else {
   if (typeof window.SeedCSS === 'undefined') {
     window.SeedCSS = {};
@@ -732,7 +716,7 @@ if (typeof module !== 'undefined') {
  * Seed-CSS - Additional features for HTML Textareas.
  * @author Rogerio Taques (hello@abtz.co)
  * @see https://github.com/AbtzLabs/seed-css
- * @version 2.1.0
+ * @version 2.2.0
  * @license MIT
  */
 var seedTextarea = function seedTextarea() {
@@ -775,11 +759,7 @@ var seedTextarea = function seedTextarea() {
 
 
 if (typeof module !== 'undefined') {
-  if (typeof module.exports.SeedCSS === 'undefined') {
-    module.exports.SeedCSS = {};
-  }
-
-  module.exports.SeedCSS.textArea = seedTextarea;
+  module.exports.seedTextarea = seedTextarea;
 } else {
   if (typeof window.SeedCSS === 'undefined') {
     window.SeedCSS = {};

@@ -1,15 +1,15 @@
 @charset "UTF-8";
 /*
  * Seed CSS -- Sample Page Styling
- * @version 2.1.0
+ * @version 2.2.0
  */
 /**
  * Seed CSS - Global variables
- * @version 2.1.0
+ * @version 2.2.0
  */
 /**
  * Seed CSS - Mixins
- * @version 2.1.0
+ * @version 2.2.0
  */
 header {
   position: relative;
@@ -85,10 +85,40 @@ footer a,
   font-weight: 700;
 }
 
+a.badge {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.searchbar.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 50px;
+  height: 50px;
+  z-index: 50;
+  padding: 5px 0;
+}
+
+.searchbar.sticky .field {
+  margin: 0;
+}
+
+.searchbar.sticky .field .algolia-autocomplete {
+  width: 100%;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 13px;
+}
+
 .code-sample > .prettyprint {
   margin: 0 0 20px;
   padding: 20px;
-  overflow: scroll;
+  overflow: hidden;
+  overflow-x: scroll;
+  white-space: pre-wrap;
 }
 
 .sample-container {
@@ -106,7 +136,7 @@ footer a,
 }
 
 #component-cards .card {
-  min-width: 307px;
+  min-width: 250px;
 }
 
 #component-cards .auto-height {
@@ -121,10 +151,11 @@ footer a,
   background-color: #4b70b4;
   color: white;
   font-weight: 700;
+  padding: 0;
 }
 
 #component-grid .sample .row > .col:not(:first-child) {
-  outline: 4px solid white;
+  outline: 1px solid white;
 }
 
 .color-tag {
@@ -174,8 +205,8 @@ div[id^='sample-']:not(:last-child):after {
 
 #component-utilities .margins .col,
 #component-utilities .paddings .col {
+  padding: 0;
   border: 2px solid white;
-  height: 120px;
   overflow: hidden;
 }
 
@@ -267,10 +298,6 @@ div[id^='sample-']:not(:last-child):after {
 
 [role='offcanvas'].triggered > .open {
   display: none;
-}
-
-nav {
-  border: thin solid #ccc;
 }
 
 nav .hamburger {
