@@ -40,6 +40,14 @@ html(lang="en")
     link(rel="stylesheet", type="text/css", href="assets/css/style.css?v={%version%}")
 
     script(src="https://unpkg.com/eva-icons")
+    
+    // Global site tag (gtag.js) - Google Analytics
+    script(async, src="https://www.googletagmanager.com/gtag/js?id=UA-734057-10")
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-734057-10');
 
     style.
       .bmc-button img{width: 27px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}
