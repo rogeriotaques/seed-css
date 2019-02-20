@@ -7,19 +7,20 @@ some boring features such as `scroll spy` and `smooth scrolling`.
 
 ```js
 // Import library
-import SeedCSS from 'seed-css';
+import { seedScroll } from 'seed-css';
 
 // Initialize
-SeedCSS.scroll();
+seedScroll();
 
 // Or initialize with custom options
-SeedCSS.scroll({
+seedScroll({
   spyScrollSelector: 'nav a.smooth',
   revealElementSelector: '.reveal',
   revealSpaceOffset: 0.2,
   revealWhenVisible: 'visible',
   revealSingleAnimation: 'visible-once',
-  revealWhenHidden: 'hidden'
+  revealWhenHidden: 'hidden',
+  gutter: 50 
 });
 ```
 
@@ -32,7 +33,8 @@ SeedCSS.scroll({
 | revealSpaceOffset     | `0.2`          | Defines the gutter used when checking if an element got inside the viewport |
 | revealSingleAnimation | `visible-once` | When present, the element is not hidden when gets outside the viewport      |
 | revealWhenVisible     | `visible`      | Class used then the element gets inside the view port                       |
-| revealWhenHidden      | `hidden`       | Class used when the element gets outside the viewport                       |
+| revealWhenHidden      | `hidden`       | Class used when the element gets outside the viewport                        |
+| gutter                | `50`           | How many pixels will be added to the elem offset top                     |
 
 ## Events
 
