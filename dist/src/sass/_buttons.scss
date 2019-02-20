@@ -1,6 +1,6 @@
 /* 
  * Seed CSS - Buttons
- * @version 2.1.0
+ * @version 2.2.0
  */
 
 $color-change-rate: 5%;
@@ -11,7 +11,7 @@ a.btn {
   @include rem(min-width, 170px);
 
   cursor: pointer;
-  background-color: $white;
+  background-color: transparent;
   display: inline-block;
   box-sizing: border-box;
   margin: $margin / 2;
@@ -21,6 +21,7 @@ a.btn {
   color: $grey-dark;
   border: {
     radius: $border * 5;
+    // width: $border;
     width: $border;
     color: $grey-dark;
     style: solid;

@@ -1,10 +1,10 @@
 /* 
  * Seed CSS - Alerts
- * @version 2.1.0
+ * @version 2.2.0
  */
 
 .alert {
-  $shadow-data: 5px 0 0 inset !default;
+  $shadow-data: 3px 0 0 inset !default;
 
   position: relative;
   background-color: $grey-light;
@@ -24,9 +24,9 @@
     color: white;
     display: block;
     position: absolute;
-    width: $dimension;
-    height: $dimension;
-    margin-top: $dimension;
+    width: $dimension / 3 * 2;
+    height: $dimension / 3 * 2;
+    // margin-top: $dimension;
     line-height: $dimension;
     background-color: $grey;
     border: $border solid $grey;
@@ -34,10 +34,10 @@
     top: 0;
     left: 0;
 
-    -webkit-transform: translateX(-9px);
-    -moz-transform: translateX(-9px);
-    -ms-transform: translateX(-9px);
-    transform: translateX(-9px);
+    -webkit-transform: translate(-40%, 150%);
+    -moz-transform: translate(-40%, 150%);
+    -ms-transform: translate(-40%, 150%);
+    transform: translate(-40%, 150%);
   }
 
   &.info {
