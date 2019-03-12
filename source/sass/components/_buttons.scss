@@ -1,6 +1,7 @@
 /* 
  * Seed CSS - Buttons
- * @version 2.2.0
+ * @copyright 2019, Abtz Labs
+ * @license MIT
  */
 
 $color-change-rate: 5%;
@@ -21,7 +22,6 @@ a.btn {
   color: $grey-dark;
   border: {
     radius: $border * 5;
-    // width: $border;
     width: $border;
     color: $grey-dark;
     style: solid;
@@ -32,180 +32,202 @@ a.btn {
     rendering: optimizeLegibility;
   }
 
-  // enabled
-  &.link {
-    background: transparent;
-    border: 0;
-  }
-
-  &.primary {
-    border-color: $primary;
-    @extend .primary-background;
-
-    &.outline {
-      background-color: transparent !important;
-      color: $primary !important;
-    }
-  }
-
-  &.secondary {
-    border-color: $secondary;
-    @extend .secondary-background;
-
-    &.outline {
-      background-color: transparent !important;
-      color: $secondary !important;
-    }
-  }
-
-  &.red {
-    border-color: $red;
-    @extend .red-background;
-
-    &.outline {
-      background-color: transparent !important;
-      color: $red !important;
-    }
-  }
-
-  &.orange {
-    border-color: $orange;
-    @extend .orange-background;
-
-    &.outline {
-      background-color: transparent !important;
-      color: $orange !important;
-    }
-  }
-
-  &.green {
-    border-color: $green;
-    @extend .green-background;
-
-    &.outline {
-      background-color: transparent !important;
-      color: $green !important;
-    }
-  }
-
-  &.purple {
-    border-color: $purple;
-    @extend .purple-background;
-
-    &.outline {
-      background-color: transparent !important;
-      color: $purple !important;
-    }
-  }
-
-  &.white {
-    border-color: $white;
-    background-color: $white !important;
-    color: $black !important;
-
-    &.outline {
-      background-color: transparent !important;
-      color: $white !important;
-    }
-  }
-
-  &:hover,
-  &:focus,
-  &:active {
-    outline: none;
-
-    &:not(.link) {
-      box-shadow: $shadow-default;
-      background-color: white;
-
-      &.primary {
-        background-color: darken($primary, $color-change-rate) !important;
-        border-color: darken($primary, $color-change-rate);
-
-        &.outline {
-          background-color: transparent !important;
-          color: darken($primary, $color-change-rate) !important;
-        }
-      }
-
-      &.secondary {
-        background-color: darken($secondary, $color-change-rate) !important;
-        border-color: darken($secondary, $color-change-rate);
-
-        &.outline {
-          background-color: transparent !important;
-          color: darken($secondary, $color-change-rate) !important;
-        }
-      }
-
-      &.red {
-        background-color: darken($red, $color-change-rate) !important;
-        border-color: darken($red, $color-change-rate);
-
-        &.outline {
-          background-color: transparent !important;
-          color: darken($red, $color-change-rate) !important;
-        }
-      }
-
-      &.orange {
-        background-color: darken($orange, $color-change-rate) !important;
-        border-color: darken($orange, $color-change-rate);
-
-        &.outline {
-          background-color: transparent !important;
-          color: darken($orange, $color-change-rate) !important;
-        }
-      }
-
-      &.green {
-        background-color: darken($green, $color-change-rate) !important;
-        border-color: darken($green, $color-change-rate);
-
-        &.outline {
-          background-color: transparent !important;
-          color: darken($green, $color-change-rate) !important;
-        }
-      }
-
-      &.purple {
-        background-color: darken($purple, $color-change-rate) !important;
-        border-color: darken($purple, $color-change-rate);
-
-        &.outline {
-          background-color: transparent !important;
-          color: darken($purple, $color-change-rate) !important;
-        }
-      }
-    }
-
+  // Only when enabled
+  &:not([disabled]):not(.disabled) {
     &.link {
-      color: $primary;
       background: transparent;
-      border: none;
-    }
-  } // .btn:hover
+      border: 0;
+    } // .link
 
-  // disabled
+    &.primary {
+      border-color: $primary;
+      @extend .primary-background;
+
+      &.outline {
+        background-color: transparent !important;
+        color: $primary !important;
+      }
+    } // .primary
+
+    &.secondary {
+      border-color: $secondary;
+      @extend .secondary-background;
+
+      &.outline {
+        background-color: transparent !important;
+        color: $secondary !important;
+      }
+    } // .secondary
+
+    &.red {
+      border-color: $red;
+      @extend .red-background;
+
+      &.outline {
+        background-color: transparent !important;
+        color: $red !important;
+      }
+    } // .red
+
+    &.orange {
+      border-color: $orange;
+      @extend .orange-background;
+
+      &.outline {
+        background-color: transparent !important;
+        color: $orange !important;
+      }
+    } // .orange
+
+    &.green {
+      border-color: $green;
+      @extend .green-background;
+
+      &.outline {
+        background-color: transparent !important;
+        color: $green !important;
+      }
+    } // .green
+
+    &.purple {
+      border-color: $purple;
+      @extend .purple-background;
+
+      &.outline {
+        background-color: transparent !important;
+        color: $purple !important;
+      }
+    } // .purple
+
+    &.white {
+      border-color: $white;
+      background-color: $white !important;
+      color: $black !important;
+
+      &.outline {
+        background-color: transparent !important;
+        color: $white !important;
+      }
+    } // .white
+
+    &:hover,
+    &:focus,
+    &:active {
+      outline: none;
+
+      &:not(.link) {
+        box-shadow: $shadow-default;
+        background-color: white;
+
+        &.primary {
+          background-color: darken($primary, $color-change-rate) !important;
+          border-color: darken($primary, $color-change-rate);
+
+          &.outline {
+            background-color: transparent !important;
+            color: darken($primary, $color-change-rate) !important;
+          }
+        }
+
+        &.secondary {
+          background-color: darken($secondary, $color-change-rate) !important;
+          border-color: darken($secondary, $color-change-rate);
+
+          &.outline {
+            background-color: transparent !important;
+            color: darken($secondary, $color-change-rate) !important;
+          }
+        }
+
+        &.red {
+          background-color: darken($red, $color-change-rate) !important;
+          border-color: darken($red, $color-change-rate);
+
+          &.outline {
+            background-color: transparent !important;
+            color: darken($red, $color-change-rate) !important;
+          }
+        }
+
+        &.orange {
+          background-color: darken($orange, $color-change-rate) !important;
+          border-color: darken($orange, $color-change-rate);
+
+          &.outline {
+            background-color: transparent !important;
+            color: darken($orange, $color-change-rate) !important;
+          }
+        }
+
+        &.green {
+          background-color: darken($green, $color-change-rate) !important;
+          border-color: darken($green, $color-change-rate);
+
+          &.outline {
+            background-color: transparent !important;
+            color: darken($green, $color-change-rate) !important;
+          }
+        }
+
+        &.purple {
+          background-color: darken($purple, $color-change-rate) !important;
+          border-color: darken($purple, $color-change-rate);
+
+          &.outline {
+            background-color: transparent !important;
+            color: darken($purple, $color-change-rate) !important;
+          }
+        }
+      }
+
+      &.link {
+        color: $primary;
+        background: transparent;
+        border: none;
+      }
+    } // .btn:hover
+  } // :not([disabled])&:not(.disabled)
+
+  // When disabled
   &[disabled],
   &.disabled {
     cursor: not-allowed;
-    color: $grey-dark;
-    border-color: $grey;
-    background-color: $grey;
     text-shadow: white 1px 1px 1px;
+
+    &:not(.link) {
+      color: $grey-dark;
+      border-color: $grey;
+      background-color: $grey;
+    } // &:not(.link)
+
+    &.link {
+      color: $grey;
+      border: initial;
+    } // .link
+
+    &.outline {
+      background-color: transparent;
+    } // .outline
 
     &:hover,
     &:focus,
     &:active {
       cursor: not-allowed;
       outline: none;
-      color: $grey-dark;
-      border-color: $grey;
-      background-color: $grey;
-      text-shadow: white 1px 1px 1px;
       box-shadow: none;
-    }
+      text-shadow: white 1px 1px 1px;
+
+      &:not(.link):not(.outline) {
+        color: $grey-dark;
+        border-color: $grey;
+        background-color: $grey;
+      } // &:not(.link):not(.outline)
+
+      &.link {
+        color: $grey;
+        border: initial;
+      } // &.link
+    } // :hover, :focus, :active
   } // .disabled, [disabled]
 
   // sizes
