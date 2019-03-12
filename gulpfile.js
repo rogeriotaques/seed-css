@@ -15,17 +15,8 @@ const del = require('del');
 const fs = require('fs');
 const util = require('minimist')(process.argv);
 
-// @use npm run dist -- --[major|minor]
-// let runFlag = 'patch';
-
 // @use npm run dist -- --[development|staging|production]
 let envFlag = 'development';
-
-// if (util.major !== undefined) {
-//   runFlag = 'major';
-// } else if (util.minor !== undefined) {
-//   runFlag = 'minor';
-// }
 
 if (util.staging !== undefined) {
   envFlag = 'staging';
@@ -41,40 +32,6 @@ const config = {
     dist: 'dist/'
   }
 };
-
-// const updatePackVersion = (pkg) => {
-//   const v = pkg.version.split('.');
-
-//   switch (runFlag) {
-//     case 'major':
-//       // increase major version
-//       v[0] = parseInt(v[0]) + 1;
-//       v[1] = 0;
-//       v[2] = 0;
-//       pkg.version = v.join('.');
-//       break;
-
-//     case 'minor':
-//       // increase minor version
-//       v[1] = parseInt(v[1]) + 1;
-//       v[2] = 0;
-//       pkg.version = v.join('.');
-//       break;
-
-//     default:
-//       // patch
-//       // increase patch version
-//       v[2] = parseInt(v[2]) + 1;
-//       pkg.version = v.join('.');
-//       break;
-//   }
-
-//   // write down the new version into package.json file.
-//   fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2));
-
-//   // return new package
-//   return pkg;
-// };
 
 /**
  * Reset the build folder for development.
@@ -135,7 +92,13 @@ gulp.task('build:website', (cb) => {
   const pkg = require('./package.json');
 
   gulp
-    .src(config.path.source + 'pug/*.pug')
+    .src(
+      [
+        config.path.source + 'pug/*.pug',
+        config.path.source + 'pug/tests/*.pug'
+      ],
+      { base: config.path.source + 'pug/' }
+    )
     .pipe(
       pug({ pretty: true }).on('error', function(err) {
         console.log('#### PUG ERROR ####', err, '#### #### ####');
@@ -144,7 +107,7 @@ gulp.task('build:website', (cb) => {
     )
     .pipe(replace(/\{\%version\%\}/g, 'v' + pkg.version))
     .pipe(replace(/\{\%year\%\}/g, new Date().getFullYear()))
-    .pipe(gulp.dest(config.path.build));
+    .pipe(gulp.dest(config.path.build + '/'));
 
   cb();
 });
@@ -204,7 +167,6 @@ gulp.task('build:javascript', (cb) => {
     .pipe(concat('seedcss.js'))
     .pipe(gulpif(envFlag === 'production', sourcemaps.write()))
     .pipe(gulp.dest(config.path.build + 'assets/js'));
-  // .pipe(sync.reload({ stream: true }))
 
   cb();
 });
@@ -270,8 +232,7 @@ gulp.task(
 );
 
 gulp.task('dist:run', (cb) => {
-  // updates the version
-  // const pkg = updatePackVersion(require('./package.json'));
+  // Get updated package.json
   const pkg = require('./package.json');
 
   // prepare files header
