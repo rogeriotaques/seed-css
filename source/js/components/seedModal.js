@@ -1,8 +1,6 @@
 /**!
  * Seed-CSS - Modal
- * @author Rogerio Taques (hello@abtz.co)
- * @see https://github.com/AbtzLabs/seed-css
- * @version 2.2.0
+ * @copyright 2019, Abtz Labs
  * @license MIT
  */
 

@@ -1,6 +1,7 @@
 /* 
  * Seed CSS - Colors
- * @version 2.2.0
+ * @copyright 2019, Abtz Labs
+ * @license MIT
  */
 
 .primary {
@@ -83,3 +84,18 @@
     color: $grey-dark !important;
   } // .softgrey-background
 } // .softgrey
+
+.disabled,
+[disabled] {
+  &.primary,
+  &.secondary,
+  &.red,
+  &.orange,
+  &.green,
+  &.purple,
+  &.grey,
+  &.darkgrey,
+  &.softgrey {
+    color: $grey-dark !important;
+  }
+} // .disabled, [disabled]

@@ -1,19 +1,17 @@
 /**!
  * Seed-CSS - Additional features for HTML Textareas.
- * @author Rogerio Taques (hello@abtz.co)
- * @see https://github.com/AbtzLabs/seed-css
- * @version 2.2.0
+ * @copyright 2019, Abtz Labs
  * @license MIT
  */
 
-const seedTextarea = function () {
+const seedTextarea = function() {
   'use strict';
 
   // Find all seed-file inputs.
   const inputs = document.querySelectorAll('.field > textarea');
 
   if (inputs !== null) {
-    inputs.forEach(function (input, i) {
+    inputs.forEach(function(input, i) {
       let maxLength = 0;
 
       const parent = input.parentNode;
@@ -68,4 +66,3 @@ if (typeof module !== 'undefined') {
 
   window.SeedCSS.textArea = seedTextarea;
 }
-
