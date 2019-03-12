@@ -1,0 +1,42 @@
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+
+    title Seed CSS - Buttons test
+
+    link(rel="stylesheet", type="text/css", href="../assets/css/seed.css?v={%version%}")
+
+    style. 
+      .row {
+        background-color: red;
+      }
+
+      .row > .col {
+        background-color: blue;
+        border: thin solid green;
+      }
+
+      .row > .col > div {
+        color: blue;
+        background-color: yellow;
+      }
+
+  body 
+
+    .container
+      div 
+        button.btn default
+        button(disabled="disabled").btn default
+
+      each color in ['primary', 'secondary', 'red', 'orange', 'green', 'purple', 'white']
+        div 
+          button(class='btn ' + color)= color
+          button(disabled="disabled", class='btn ' + color)= color
+          button(class='btn outline ' + color)= color
+          button(disabled="disabled", class='btn outline ' + color)= color
+      
+      div 
+        button.btn.link link
+        button(disabled="disabled").btn.link link
