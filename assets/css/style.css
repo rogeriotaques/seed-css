@@ -1,15 +1,20 @@
 @charset "UTF-8";
 /*
- * Seed CSS -- Sample Page Styling
- * @version 2.2.0
+ * Seed CSS -- Sample Page Styling 
+ * @author Rogerio Taques
+ * @copyright 2019, Abtz Labs
+ * @see https://github.com/AbtzLabs/seed-css
+ * @license private
  */
 /**
  * Seed CSS - Global variables
- * @version 2.2.0
+ * @copyright 2019, Abtz Labs
+ * @license MIT
  */
 /**
  * Seed CSS - Mixins
- * @version 2.2.0
+ * @copyright 2019, Abtz Labs
+ * @license MIT
  */
 header {
   position: relative;

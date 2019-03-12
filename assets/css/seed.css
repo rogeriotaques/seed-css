@@ -1,22 +1,28 @@
 /*
  * Seed CSS
- * @version 2.2.0
- * @author Rogerio Taques (hello@abtz.co)
+ * @description The stylesheet boilerplate compilation file.
+ * @author Rogerio Taques
+ * @copyright 2019, Abtz Labs
  * @see https://github.com/AbtzLabs/seed-css
  * @license MIT (https://opensource.org/licenses/MIT)
  */
 /**
  * Seed CSS - Essential
- * @version 2.2.0
  * @description All the dependencies for Seed CSS.
+ * @author Rogerio Taques
+ * @copyright 2019, Abtz Labs
+ * @see https://github.com/AbtzLabs/seed-css
+ * @license MIT (https://opensource.org/licenses/MIT)
  */
 /**
  * Seed CSS - Mixins
- * @version 2.2.0
+ * @copyright 2019, Abtz Labs
+ * @license MIT
  */
 /**
  * Seed CSS - Global variables
- * @version 2.2.0
+ * @copyright 2019, Abtz Labs
+ * @license MIT
  */
 /* normalize.css v4.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -398,7 +404,8 @@ textarea {
 
 /* 
  * Seed CSS - Alerts
- * @version 2.2.0
+ * @copyright 2019, Abtz Labs
+ * @license MIT
  */
 .alert {
   position: relative;
@@ -480,7 +487,8 @@ textarea {
 
 /* 
  * Seed CSS - Base
- * @version 2.2.0
+ * @copyright 2019, Abtz Labs
+ * @license MIT
  */
 :root {
   -webkit-font-smoothing: antialiased;
@@ -523,7 +531,8 @@ code {
 
 /* 
  * Seed CSS - Badges
- * @version 2.2.0
+ * @copyright 2019, Abtz Labs
+ * @license MIT
  */
 .badge {
   font-size: 13px;
@@ -563,7 +572,8 @@ code {
 
 /* 
  * Seed CSS - Buttons
- * @version 2.2.0
+ * @copyright 2019, Abtz Labs
+ * @license MIT
  */
 .btn,
 a.btn {
@@ -592,206 +602,206 @@ a.btn {
   text-rendering: optimizeLegibility;
 }
 
-.btn.link,
-  a.btn.link {
+.btn:not([disabled]):not(.disabled).link,
+  a.btn:not([disabled]):not(.disabled).link {
   background: transparent;
   border: 0;
 }
 
-.btn.primary,
-  a.btn.primary {
+.btn:not([disabled]):not(.disabled).primary,
+  a.btn:not([disabled]):not(.disabled).primary {
   border-color: #1466ff;
 }
 
-.btn.primary.outline,
-    a.btn.primary.outline {
+.btn:not([disabled]):not(.disabled).primary.outline,
+    a.btn:not([disabled]):not(.disabled).primary.outline {
   background-color: transparent !important;
   color: #1466ff !important;
 }
 
-.btn.secondary,
-  a.btn.secondary {
+.btn:not([disabled]):not(.disabled).secondary,
+  a.btn:not([disabled]):not(.disabled).secondary {
   border-color: #4b70b4;
 }
 
-.btn.secondary.outline,
-    a.btn.secondary.outline {
+.btn:not([disabled]):not(.disabled).secondary.outline,
+    a.btn:not([disabled]):not(.disabled).secondary.outline {
   background-color: transparent !important;
   color: #4b70b4 !important;
 }
 
-.btn.red,
-  a.btn.red {
+.btn:not([disabled]):not(.disabled).red,
+  a.btn:not([disabled]):not(.disabled).red {
   border-color: #d32f2f;
 }
 
-.btn.red.outline,
-    a.btn.red.outline {
+.btn:not([disabled]):not(.disabled).red.outline,
+    a.btn:not([disabled]):not(.disabled).red.outline {
   background-color: transparent !important;
   color: #d32f2f !important;
 }
 
-.btn.orange,
-  a.btn.orange {
+.btn:not([disabled]):not(.disabled).orange,
+  a.btn:not([disabled]):not(.disabled).orange {
   border-color: #fb8c00;
 }
 
-.btn.orange.outline,
-    a.btn.orange.outline {
+.btn:not([disabled]):not(.disabled).orange.outline,
+    a.btn:not([disabled]):not(.disabled).orange.outline {
   background-color: transparent !important;
   color: #fb8c00 !important;
 }
 
-.btn.green,
-  a.btn.green {
+.btn:not([disabled]):not(.disabled).green,
+  a.btn:not([disabled]):not(.disabled).green {
   border-color: #43a047;
 }
 
-.btn.green.outline,
-    a.btn.green.outline {
+.btn:not([disabled]):not(.disabled).green.outline,
+    a.btn:not([disabled]):not(.disabled).green.outline {
   background-color: transparent !important;
   color: #43a047 !important;
 }
 
-.btn.purple,
-  a.btn.purple {
+.btn:not([disabled]):not(.disabled).purple,
+  a.btn:not([disabled]):not(.disabled).purple {
   border-color: #8e24aa;
 }
 
-.btn.purple.outline,
-    a.btn.purple.outline {
+.btn:not([disabled]):not(.disabled).purple.outline,
+    a.btn:not([disabled]):not(.disabled).purple.outline {
   background-color: transparent !important;
   color: #8e24aa !important;
 }
 
-.btn.white,
-  a.btn.white {
+.btn:not([disabled]):not(.disabled).white,
+  a.btn:not([disabled]):not(.disabled).white {
   border-color: #fdfdfd;
   background-color: #fdfdfd !important;
   color: #333 !important;
 }
 
-.btn.white.outline,
-    a.btn.white.outline {
+.btn:not([disabled]):not(.disabled).white.outline,
+    a.btn:not([disabled]):not(.disabled).white.outline {
   background-color: transparent !important;
   color: #fdfdfd !important;
 }
 
-.btn:hover, .btn:focus, .btn:active,
-  a.btn:hover,
-  a.btn:focus,
-  a.btn:active {
+.btn:not([disabled]):not(.disabled):hover, .btn:not([disabled]):not(.disabled):focus, .btn:not([disabled]):not(.disabled):active,
+  a.btn:not([disabled]):not(.disabled):hover,
+  a.btn:not([disabled]):not(.disabled):focus,
+  a.btn:not([disabled]):not(.disabled):active {
   outline: none;
 }
 
-.btn:hover:not(.link), .btn:focus:not(.link), .btn:active:not(.link),
-    a.btn:hover:not(.link),
-    a.btn:focus:not(.link),
-    a.btn:active:not(.link) {
+.btn:not([disabled]):not(.disabled):hover:not(.link), .btn:not([disabled]):not(.disabled):focus:not(.link), .btn:not([disabled]):not(.disabled):active:not(.link),
+    a.btn:not([disabled]):not(.disabled):hover:not(.link),
+    a.btn:not([disabled]):not(.disabled):focus:not(.link),
+    a.btn:not([disabled]):not(.disabled):active:not(.link) {
   box-shadow: rgba(0, 0, 0, 0.35) 0 3px 12px;
   background-color: white;
 }
 
-.btn:hover:not(.link).primary, .btn:focus:not(.link).primary, .btn:active:not(.link).primary,
-      a.btn:hover:not(.link).primary,
-      a.btn:focus:not(.link).primary,
-      a.btn:active:not(.link).primary {
+.btn:not([disabled]):not(.disabled):hover:not(.link).primary, .btn:not([disabled]):not(.disabled):focus:not(.link).primary, .btn:not([disabled]):not(.disabled):active:not(.link).primary,
+      a.btn:not([disabled]):not(.disabled):hover:not(.link).primary,
+      a.btn:not([disabled]):not(.disabled):focus:not(.link).primary,
+      a.btn:not([disabled]):not(.disabled):active:not(.link).primary {
   background-color: #0057fa !important;
   border-color: #0057fa;
 }
 
-.btn:hover:not(.link).primary.outline, .btn:focus:not(.link).primary.outline, .btn:active:not(.link).primary.outline,
-        a.btn:hover:not(.link).primary.outline,
-        a.btn:focus:not(.link).primary.outline,
-        a.btn:active:not(.link).primary.outline {
+.btn:not([disabled]):not(.disabled):hover:not(.link).primary.outline, .btn:not([disabled]):not(.disabled):focus:not(.link).primary.outline, .btn:not([disabled]):not(.disabled):active:not(.link).primary.outline,
+        a.btn:not([disabled]):not(.disabled):hover:not(.link).primary.outline,
+        a.btn:not([disabled]):not(.disabled):focus:not(.link).primary.outline,
+        a.btn:not([disabled]):not(.disabled):active:not(.link).primary.outline {
   background-color: transparent !important;
   color: #0057fa !important;
 }
 
-.btn:hover:not(.link).secondary, .btn:focus:not(.link).secondary, .btn:active:not(.link).secondary,
-      a.btn:hover:not(.link).secondary,
-      a.btn:focus:not(.link).secondary,
-      a.btn:active:not(.link).secondary {
+.btn:not([disabled]):not(.disabled):hover:not(.link).secondary, .btn:not([disabled]):not(.disabled):focus:not(.link).secondary, .btn:not([disabled]):not(.disabled):active:not(.link).secondary,
+      a.btn:not([disabled]):not(.disabled):hover:not(.link).secondary,
+      a.btn:not([disabled]):not(.disabled):focus:not(.link).secondary,
+      a.btn:not([disabled]):not(.disabled):active:not(.link).secondary {
   background-color: #4465a2 !important;
   border-color: #4465a2;
 }
 
-.btn:hover:not(.link).secondary.outline, .btn:focus:not(.link).secondary.outline, .btn:active:not(.link).secondary.outline,
-        a.btn:hover:not(.link).secondary.outline,
-        a.btn:focus:not(.link).secondary.outline,
-        a.btn:active:not(.link).secondary.outline {
+.btn:not([disabled]):not(.disabled):hover:not(.link).secondary.outline, .btn:not([disabled]):not(.disabled):focus:not(.link).secondary.outline, .btn:not([disabled]):not(.disabled):active:not(.link).secondary.outline,
+        a.btn:not([disabled]):not(.disabled):hover:not(.link).secondary.outline,
+        a.btn:not([disabled]):not(.disabled):focus:not(.link).secondary.outline,
+        a.btn:not([disabled]):not(.disabled):active:not(.link).secondary.outline {
   background-color: transparent !important;
   color: #4465a2 !important;
 }
 
-.btn:hover:not(.link).red, .btn:focus:not(.link).red, .btn:active:not(.link).red,
-      a.btn:hover:not(.link).red,
-      a.btn:focus:not(.link).red,
-      a.btn:active:not(.link).red {
+.btn:not([disabled]):not(.disabled):hover:not(.link).red, .btn:not([disabled]):not(.disabled):focus:not(.link).red, .btn:not([disabled]):not(.disabled):active:not(.link).red,
+      a.btn:not([disabled]):not(.disabled):hover:not(.link).red,
+      a.btn:not([disabled]):not(.disabled):focus:not(.link).red,
+      a.btn:not([disabled]):not(.disabled):active:not(.link).red {
   background-color: #c02929 !important;
   border-color: #c02929;
 }
 
-.btn:hover:not(.link).red.outline, .btn:focus:not(.link).red.outline, .btn:active:not(.link).red.outline,
-        a.btn:hover:not(.link).red.outline,
-        a.btn:focus:not(.link).red.outline,
-        a.btn:active:not(.link).red.outline {
+.btn:not([disabled]):not(.disabled):hover:not(.link).red.outline, .btn:not([disabled]):not(.disabled):focus:not(.link).red.outline, .btn:not([disabled]):not(.disabled):active:not(.link).red.outline,
+        a.btn:not([disabled]):not(.disabled):hover:not(.link).red.outline,
+        a.btn:not([disabled]):not(.disabled):focus:not(.link).red.outline,
+        a.btn:not([disabled]):not(.disabled):active:not(.link).red.outline {
   background-color: transparent !important;
   color: #c02929 !important;
 }
 
-.btn:hover:not(.link).orange, .btn:focus:not(.link).orange, .btn:active:not(.link).orange,
-      a.btn:hover:not(.link).orange,
-      a.btn:focus:not(.link).orange,
-      a.btn:active:not(.link).orange {
+.btn:not([disabled]):not(.disabled):hover:not(.link).orange, .btn:not([disabled]):not(.disabled):focus:not(.link).orange, .btn:not([disabled]):not(.disabled):active:not(.link).orange,
+      a.btn:not([disabled]):not(.disabled):hover:not(.link).orange,
+      a.btn:not([disabled]):not(.disabled):focus:not(.link).orange,
+      a.btn:not([disabled]):not(.disabled):active:not(.link).orange {
   background-color: #e27e00 !important;
   border-color: #e27e00;
 }
 
-.btn:hover:not(.link).orange.outline, .btn:focus:not(.link).orange.outline, .btn:active:not(.link).orange.outline,
-        a.btn:hover:not(.link).orange.outline,
-        a.btn:focus:not(.link).orange.outline,
-        a.btn:active:not(.link).orange.outline {
+.btn:not([disabled]):not(.disabled):hover:not(.link).orange.outline, .btn:not([disabled]):not(.disabled):focus:not(.link).orange.outline, .btn:not([disabled]):not(.disabled):active:not(.link).orange.outline,
+        a.btn:not([disabled]):not(.disabled):hover:not(.link).orange.outline,
+        a.btn:not([disabled]):not(.disabled):focus:not(.link).orange.outline,
+        a.btn:not([disabled]):not(.disabled):active:not(.link).orange.outline {
   background-color: transparent !important;
   color: #e27e00 !important;
 }
 
-.btn:hover:not(.link).green, .btn:focus:not(.link).green, .btn:active:not(.link).green,
-      a.btn:hover:not(.link).green,
-      a.btn:focus:not(.link).green,
-      a.btn:active:not(.link).green {
+.btn:not([disabled]):not(.disabled):hover:not(.link).green, .btn:not([disabled]):not(.disabled):focus:not(.link).green, .btn:not([disabled]):not(.disabled):active:not(.link).green,
+      a.btn:not([disabled]):not(.disabled):hover:not(.link).green,
+      a.btn:not([disabled]):not(.disabled):focus:not(.link).green,
+      a.btn:not([disabled]):not(.disabled):active:not(.link).green {
   background-color: #3b8e3f !important;
   border-color: #3b8e3f;
 }
 
-.btn:hover:not(.link).green.outline, .btn:focus:not(.link).green.outline, .btn:active:not(.link).green.outline,
-        a.btn:hover:not(.link).green.outline,
-        a.btn:focus:not(.link).green.outline,
-        a.btn:active:not(.link).green.outline {
+.btn:not([disabled]):not(.disabled):hover:not(.link).green.outline, .btn:not([disabled]):not(.disabled):focus:not(.link).green.outline, .btn:not([disabled]):not(.disabled):active:not(.link).green.outline,
+        a.btn:not([disabled]):not(.disabled):hover:not(.link).green.outline,
+        a.btn:not([disabled]):not(.disabled):focus:not(.link).green.outline,
+        a.btn:not([disabled]):not(.disabled):active:not(.link).green.outline {
   background-color: transparent !important;
   color: #3b8e3f !important;
 }
 
-.btn:hover:not(.link).purple, .btn:focus:not(.link).purple, .btn:active:not(.link).purple,
-      a.btn:hover:not(.link).purple,
-      a.btn:focus:not(.link).purple,
-      a.btn:active:not(.link).purple {
+.btn:not([disabled]):not(.disabled):hover:not(.link).purple, .btn:not([disabled]):not(.disabled):focus:not(.link).purple, .btn:not([disabled]):not(.disabled):active:not(.link).purple,
+      a.btn:not([disabled]):not(.disabled):hover:not(.link).purple,
+      a.btn:not([disabled]):not(.disabled):focus:not(.link).purple,
+      a.btn:not([disabled]):not(.disabled):active:not(.link).purple {
   background-color: #7c2095 !important;
   border-color: #7c2095;
 }
 
-.btn:hover:not(.link).purple.outline, .btn:focus:not(.link).purple.outline, .btn:active:not(.link).purple.outline,
-        a.btn:hover:not(.link).purple.outline,
-        a.btn:focus:not(.link).purple.outline,
-        a.btn:active:not(.link).purple.outline {
+.btn:not([disabled]):not(.disabled):hover:not(.link).purple.outline, .btn:not([disabled]):not(.disabled):focus:not(.link).purple.outline, .btn:not([disabled]):not(.disabled):active:not(.link).purple.outline,
+        a.btn:not([disabled]):not(.disabled):hover:not(.link).purple.outline,
+        a.btn:not([disabled]):not(.disabled):focus:not(.link).purple.outline,
+        a.btn:not([disabled]):not(.disabled):active:not(.link).purple.outline {
   background-color: transparent !important;
   color: #7c2095 !important;
 }
 
-.btn:hover.link, .btn:focus.link, .btn:active.link,
-    a.btn:hover.link,
-    a.btn:focus.link,
-    a.btn:active.link {
+.btn:not([disabled]):not(.disabled):hover.link, .btn:not([disabled]):not(.disabled):focus.link, .btn:not([disabled]):not(.disabled):active.link,
+    a.btn:not([disabled]):not(.disabled):hover.link,
+    a.btn:not([disabled]):not(.disabled):focus.link,
+    a.btn:not([disabled]):not(.disabled):active.link {
   color: #1466ff;
   background: transparent;
   border: none;
@@ -801,10 +811,28 @@ a.btn {
   a.btn[disabled],
   a.btn.disabled {
   cursor: not-allowed;
+  text-shadow: white 1px 1px 1px;
+}
+
+.btn[disabled]:not(.link), .btn.disabled:not(.link),
+    a.btn[disabled]:not(.link),
+    a.btn.disabled:not(.link) {
   color: #666;
   border-color: #ccc;
   background-color: #ccc;
-  text-shadow: white 1px 1px 1px;
+}
+
+.btn[disabled].link, .btn.disabled.link,
+    a.btn[disabled].link,
+    a.btn.disabled.link {
+  color: #ccc;
+  border: initial;
+}
+
+.btn[disabled].outline, .btn.disabled.outline,
+    a.btn[disabled].outline,
+    a.btn.disabled.outline {
+  background-color: transparent;
 }
 
 .btn[disabled]:hover, .btn[disabled]:focus, .btn[disabled]:active, .btn.disabled:hover, .btn.disabled:focus, .btn.disabled:active,
@@ -816,11 +844,31 @@ a.btn {
     a.btn.disabled:active {
   cursor: not-allowed;
   outline: none;
+  box-shadow: none;
+  text-shadow: white 1px 1px 1px;
+}
+
+.btn[disabled]:hover:not(.link):not(.outline), .btn[disabled]:focus:not(.link):not(.outline), .btn[disabled]:active:not(.link):not(.outline), .btn.disabled:hover:not(.link):not(.outline), .btn.disabled:focus:not(.link):not(.outline), .btn.disabled:active:not(.link):not(.outline),
+      a.btn[disabled]:hover:not(.link):not(.outline),
+      a.btn[disabled]:focus:not(.link):not(.outline),
+      a.btn[disabled]:active:not(.link):not(.outline),
+      a.btn.disabled:hover:not(.link):not(.outline),
+      a.btn.disabled:focus:not(.link):not(.outline),
+      a.btn.disabled:active:not(.link):not(.outline) {
   color: #666;
   border-color: #ccc;
   background-color: #ccc;
-  text-shadow: white 1px 1px 1px;
-  box-shadow: none;
+}
+
+.btn[disabled]:hover.link, .btn[disabled]:focus.link, .btn[disabled]:active.link, .btn.disabled:hover.link, .btn.disabled:focus.link, .btn.disabled:active.link,
+      a.btn[disabled]:hover.link,
+      a.btn[disabled]:focus.link,
+      a.btn[disabled]:active.link,
+      a.btn.disabled:hover.link,
+      a.btn.disabled:focus.link,
+      a.btn.disabled:active.link {
+  color: #ccc;
+  border: initial;
 }
 
 .btn.medium,
@@ -843,7 +891,8 @@ a.btn {
 
 /* 
  * Seed CSS - Cards
- * @version 2.2.0
+ * @copyright 2019, Abtz Labs
+ * @license MIT
  */
 .card {
   border: 1px solid #f5f5f5;
@@ -905,14 +954,15 @@ a.btn {
 
 /* 
  * Seed CSS - Colors
- * @version 2.2.0
+ * @copyright 2019, Abtz Labs
+ * @license MIT
  */
 .primary {
   color: #1466ff !important;
 }
 
-.primary-background, .btn.primary,
-  a.btn.primary {
+.primary-background, .btn.primary:not([disabled]):not(.disabled),
+  a.btn.primary:not([disabled]):not(.disabled) {
   background-color: #1466ff !important;
   color: white !important;
 }
@@ -921,8 +971,8 @@ a.btn {
   color: #4b70b4 !important;
 }
 
-.secondary-background, .btn.secondary,
-  a.btn.secondary {
+.secondary-background, .btn.secondary:not([disabled]):not(.disabled),
+  a.btn.secondary:not([disabled]):not(.disabled) {
   background-color: #4b70b4 !important;
   color: white !important;
 }
@@ -931,8 +981,8 @@ a.btn {
   color: #d32f2f !important;
 }
 
-.red-background, .btn.red,
-  a.btn.red {
+.red-background, .btn.red:not([disabled]):not(.disabled),
+  a.btn.red:not([disabled]):not(.disabled) {
   background-color: #d32f2f !important;
   color: white !important;
 }
@@ -941,8 +991,8 @@ a.btn {
   color: #fb8c00 !important;
 }
 
-.orange-background, .btn.orange,
-  a.btn.orange {
+.orange-background, .btn.orange:not([disabled]):not(.disabled),
+  a.btn.orange:not([disabled]):not(.disabled) {
   background-color: #fb8c00 !important;
   color: white !important;
 }
@@ -951,8 +1001,8 @@ a.btn {
   color: #43a047 !important;
 }
 
-.green-background, .btn.green,
-  a.btn.green {
+.green-background, .btn.green:not([disabled]):not(.disabled),
+  a.btn.green:not([disabled]):not(.disabled) {
   background-color: #43a047 !important;
   color: white !important;
 }
@@ -961,8 +1011,8 @@ a.btn {
   color: #8e24aa !important;
 }
 
-.purple-background, .btn.purple,
-  a.btn.purple {
+.purple-background, .btn.purple:not([disabled]):not(.disabled),
+  a.btn.purple:not([disabled]):not(.disabled) {
   background-color: #8e24aa !important;
   color: white !important;
 }
@@ -994,9 +1044,23 @@ a.btn {
   color: #666 !important;
 }
 
+.disabled.primary, .disabled.secondary, .disabled.red, .disabled.orange, .disabled.green, .disabled.purple, .disabled.grey, .disabled.darkgrey, .disabled.softgrey,
+[disabled].primary,
+[disabled].secondary,
+[disabled].red,
+[disabled].orange,
+[disabled].green,
+[disabled].purple,
+[disabled].grey,
+[disabled].darkgrey,
+[disabled].softgrey {
+  color: #666 !important;
+}
+
 /* 
  * Seed CSS - Container
- * @version 2.2.0
+ * @copyright 2019, Abtz Labs
+ * @license MIT
  */
 .container {
   width: 90%;
@@ -1033,7 +1097,8 @@ a.btn {
 
 /* 
  * Seed CSS - Forms
- * @version 2.2.0
+ * @copyright 2019, Abtz Labs
+ * @license MIT
  */
 .field {
   margin-bottom: 20px;
@@ -1563,9 +1628,10 @@ a.btn {
 }
 
 /* 
-* Seed CSS - Grid
-* @version 2.2.0
-*/
+ * Seed CSS - Grid
+ * @copyright 2019, Abtz Labs
+ * @license MIT
+ */
 .row {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2408,7 +2474,8 @@ a.btn {
 
 /* 
  * Seed CSS - Modals
- * @version 2.2.0
+ * @copyright 2019, Abtz Labs
+ * @license MIT
  */
 .modal {
   position: fixed;
@@ -2493,7 +2560,8 @@ a.btn {
 
 /* 
  * Seed CSS - Navs
- * @version 2.2.0
+ * @copyright 2019, Abtz Labs
+ * @license MIT
  */
 nav {
   background-color: #e2e2e2;
@@ -2754,7 +2822,8 @@ nav.sticky {
 
 /* 
  * Seed CSS - Off-Canvas
- * @version 2.2.0
+ * @copyright 2019, Abtz Labs
+ * @license MIT
  */
 .seed-oc-panel-transition, .offcanvas, .offcanvas:not(.overlay) + .oncanvas {
   -webkit-transition: transform 0.3s ease-in-out;
@@ -2812,7 +2881,8 @@ nav.sticky {
 
 /* 
  * Seed CSS - Progress Bar
- * @version 2.2.0
+ * @copyright 2019, Abtz Labs
+ * @license MIT
  */
 @-webkit-keyframes progressRunning {
   0% {
@@ -2917,7 +2987,8 @@ nav.sticky {
 
 /* 
  * Seed CSS - Tables
- * @version 2.2.0
+ * @copyright 2019, Abtz Labs
+ * @license MIT
  */
 table {
   width: 100%;
@@ -2969,7 +3040,8 @@ table.bordered tbody td:not(:first-child) {
 
 /* 
  * Seed CSS - Spinner
- * @version 2.2.0
+ * @copyright 2019, Abtz Labs
+ * @license MIT
  */
 @-webkit-keyframes spinner {
   to {
@@ -3061,7 +3133,8 @@ table.bordered tbody td:not(:first-child) {
 
 /* 
  * Seed CSS - Tooltips
- * @version 2.2.0
+ * @copyright 2019, Abtz Labs
+ * @license MIT
  * @see https://medium.freecodecamp.org/a-step-by-step-guide-to-making-pure-css-tooltips-3d5a3e237346
  */
 .tooltip-transition, .with-tooltip::before, .with-tooltip::after {
@@ -3180,7 +3253,8 @@ table.bordered tbody td:not(:first-child) {
 
 /* 
  * Seed CSS - Typography
- * @version 2.2.0
+ * @copyright 2019, Abtz Labs
+ * @license MIT
  */
 :root {
   text-rendering: optimizeLegibility;
@@ -3268,11 +3342,13 @@ a {
 
 /*
  * Seed CSS - Utilities
- * @version 2.2.0
+ * @copyright 2019, Abtz Labs
+ * @license MIT
  */
 /**
  * Seed CSS - Mixins
- * @version 2.2.0
+ * @copyright 2019, Abtz Labs
+ * @license MIT
  */
 .align-center {
   text-align: center;

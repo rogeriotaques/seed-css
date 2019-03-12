@@ -25,9 +25,7 @@
 
 /**!
  * Seed-CSS - Custom HTML Input File.
- * @author Rogerio Taques (hello@abtz.co)
- * @see https://github.com/AbtzLabs/seed-css
- * @version 2.2.0
+ * @copyright 2019, Abtz Labs
  * @license MIT
  */
 var seedFileUpload = function seedFileUpload() {
@@ -124,9 +122,7 @@ if (typeof module !== 'undefined') {
 
 /**!
  * Seed-CSS - Modal
- * @author Rogerio Taques (hello@abtz.co)
- * @see https://github.com/AbtzLabs/seed-css
- * @version 2.2.0
+ * @copyright 2019, Abtz Labs
  * @license MIT
  */
 var fnOpen;
@@ -322,9 +318,7 @@ if (typeof module !== 'undefined') {
 
 /**!
  * Seed-CSS - Off-Canvas.
- * @author Rogerio Taques (hello@abtz.co)
- * @see https://github.com/AbtzLabs/seed-css
- * @version 2.2.0
+ * @copyright 2019, Abtz Labs
  * @license MIT
  */
 var seedOffCanvas = function seedOffCanvas() {
@@ -444,9 +438,7 @@ if (typeof module !== 'undefined') {
 
 /**!
  * Seed-CSS - Scroll.
- * @author Rogerio Taques (hello@abtz.co)
- * @see https://github.com/AbtzLabs/seed-css
- * @version 2.2.0
+ * @copyright 2019, Abtz Labs
  * @license MIT
  */
 var seedScroll = function seedScroll(options) {
@@ -714,9 +706,7 @@ if (typeof module !== 'undefined') {
 
 /**!
  * Seed-CSS - Additional features for HTML Textareas.
- * @author Rogerio Taques (hello@abtz.co)
- * @see https://github.com/AbtzLabs/seed-css
- * @version 2.2.0
+ * @copyright 2019, Abtz Labs
  * @license MIT
  */
 var seedTextarea = function seedTextarea() {
