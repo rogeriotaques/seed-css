@@ -1,12 +1,10 @@
 /**!
  * Seed-CSS - Scroll.
- * @author Rogerio Taques (hello@abtz.co)
- * @see https://github.com/AbtzLabs/seed-css
- * @version 2.2.0
+ * @copyright 2019, Abtz Labs
  * @license MIT
  */
 
-const seedScroll = function (options) {
+const seedScroll = function(options) {
   'use strict';
 
   let triggers = null;
@@ -70,7 +68,7 @@ const seedScroll = function (options) {
             fnUpdateActiveTrigger(el);
             return;
           }
-        } catch (e) { }
+        } catch (e) {}
       });
     }
 
@@ -117,7 +115,7 @@ const seedScroll = function (options) {
      * Get the current scoll position.
      * @return object
      */
-    const getCurrentScroll = function () {
+    const getCurrentScroll = function() {
       return {
         x: window.pageXOffset,
         y: window.pageYOffset
@@ -165,7 +163,7 @@ const seedScroll = function (options) {
       const eInf = getElemInfo(elem);
       const spaceOffset = options.revealSpaceOffset;
 
-      const checkBoundaries = function () {
+      const checkBoundaries = function() {
         // The element boundaries
         const eTop = eInf.top + eInf.height * spaceOffset;
         const eLeft = eInf.left + eInf.width * spaceOffset;
@@ -248,7 +246,7 @@ const seedScroll = function (options) {
   revealers = document.querySelectorAll(options.revealElementSelector);
 
   if (triggers !== null) {
-    triggers.forEach(function (trigger, i) {
+    triggers.forEach(function(trigger, i) {
       trigger.addEventListener('click', fnTriggerClick);
     }); // triggers.forEach(function(trigger, i)
   } // if (triggers !== null)

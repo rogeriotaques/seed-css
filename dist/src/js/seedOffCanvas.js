@@ -1,12 +1,10 @@
 /**!
  * Seed-CSS - Off-Canvas.
- * @author Rogerio Taques (hello@abtz.co)
- * @see https://github.com/AbtzLabs/seed-css
- * @version 2.2.0
+ * @copyright 2019, Abtz Labs
  * @license MIT
  */
 
-const seedOffCanvas = function () {
+const seedOffCanvas = function() {
   'use strict';
 
   const fnToggle = (canvasID, triggerElement) => {
@@ -78,7 +76,7 @@ const seedOffCanvas = function () {
   const canvases = document.querySelectorAll('.offcanvas');
 
   if (triggers !== null) {
-    triggers.forEach(function (trigger, i) {
+    triggers.forEach(function(trigger, i) {
       trigger.addEventListener('click', fnTriggerClick);
     }); // triggers.forEach(function(trigger, i)
   } // if (triggers !== null)
@@ -91,7 +89,7 @@ const seedOffCanvas = function () {
       }; // open
 
       // Attach method for closing
-      canvas.close = () => { }; // close
+      canvas.close = () => {}; // close
     }); // canvases.forEach((canvas, i)
   } // if (canvases !== null)
 
