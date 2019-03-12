@@ -1,7 +1,7 @@
 {
   "name": "seed-css",
-  "version": "2.2.0",
-  "description": "A light-weight, mobile first and responsive CSS boilerplate.",
+  "version": "2.2.1",
+  "description": "A light-weight and mobile first CSS boilerplate.",
   "main": "dist/seedcss.js",
   "author": "Rogerio Taques (hello@abtz.co)",
   "license": "MIT",
