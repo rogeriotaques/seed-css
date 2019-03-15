@@ -10,7 +10,7 @@ nav {
   margin: 0;
   min-height: $height;
 
-  > ul {
+  ul {
     padding: 0;
     margin: 0 auto;
     min-height: $height;
@@ -43,7 +43,7 @@ nav {
         } // :active, :focus, .active
       } // a
     } // > li
-  } // > ul
+  } // ul
 
   .logo {
     color: $secondary;
@@ -56,7 +56,7 @@ nav {
   &.vertical {
     max-width: $medium;
 
-    > ul {
+    ul {
       > li {
         float: none;
         display: block;
@@ -65,13 +65,13 @@ nav {
           text-align: left;
         } // a
       } // > li
-    } // > ul
+    } // ul
   } // .vertical
 
   &.dark {
     background-color: $grey-dark;
 
-    > ul {
+    ul {
       a {
         color: $white;
 
@@ -90,7 +90,7 @@ nav {
           }
         } // :active, :focus, .active
       } // a
-    } // > ul
+    } // ul
 
     .logo {
       color: $grey-light;
@@ -100,7 +100,7 @@ nav {
   &.transparent {
     background-color: transparent;
 
-    > ul {
+    ul {
       a {
         color: $black;
 
@@ -119,7 +119,7 @@ nav {
           }
         } // :active, :focus, .active
       } // a
-    } // > ul
+    } // ul
 
     .logo {
       color: $primary;
@@ -129,7 +129,7 @@ nav {
   &.primary {
     background-color: $primary;
 
-    > ul {
+    ul {
       a {
         color: $white;
 
@@ -154,7 +154,7 @@ nav {
   &.secondary {
     background-color: $secondary;
 
-    > ul {
+    ul {
       a {
         color: $white;
 
@@ -179,7 +179,7 @@ nav {
   &.red {
     background-color: $red;
 
-    > ul {
+    ul {
       a {
         color: $white;
 
@@ -204,7 +204,7 @@ nav {
   &.orange {
     background-color: $orange;
 
-    > ul {
+    ul {
       a {
         color: $white;
 
@@ -229,7 +229,7 @@ nav {
   &.green {
     background-color: $green;
 
-    > ul {
+    ul {
       a {
         color: $white;
 
@@ -254,7 +254,7 @@ nav {
   &.purple {
     background-color: $purple;
 
-    > ul {
+    ul {
       a {
         color: $white;
 
@@ -293,7 +293,7 @@ nav {
 @media #{$medium-and-up} {
   nav {
     &:not(.vertical) {
-      > ul {
+      ul {
         > li {
           float: left;
 
