@@ -10,14 +10,20 @@ nav {
   margin: 0;
   min-height: $height;
 
+  > .container {
+    margin: 0 auto;
+  } // > .container
+
   ul {
     padding: 0;
     margin: 0 auto;
     min-height: $height;
-    line-height: $height;
     list-style: none;
 
     > li {
+      min-height: $height;
+      line-height: $height;
+
       a {
         display: block;
         min-width: $margin * 6;
@@ -26,6 +32,7 @@ nav {
         color: $black;
         font-weight: 700;
         padding: 0 ($padding * 2);
+        line-height: $height;
 
         &:hover {
           background-color: $grey;
