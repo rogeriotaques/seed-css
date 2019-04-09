@@ -6,6 +6,34 @@
 
 const seedOffCanvas = function() {
   'use strict';
+  const openedOffcanvasClass = 'canvas-opened';
+
+  const fnOutsideClickHandler = function(ev) {
+    let a = ev.target;
+    let found = false;
+    const html = document.querySelector('html');
+
+    while (!found) {
+      if (!a || !a.parentNode) {
+        // It seems we've reached the root (html)
+        break;
+      }
+
+      if (a.classList && !a.classList.contains('offcanvas')) {
+        // Neither found .canvas nor the root level
+        a = a.parentNode;
+      } else if (a.classList) {
+        found = true;
+      }
+    }
+
+    if (found) {
+      console.log('Clicked INSIDE offcanvas menu');
+    } else if (html.classList.contains(openedOffcanvasClass)) {
+      console.log('Clicked OUTSIDE offcanvas menu');
+      fnToggle(html.getAttribute('data-canvas-id'));
+    }
+  };
 
   const fnToggle = (canvasID, triggerElement) => {
     let customEvent;
@@ -19,18 +47,22 @@ const seedOffCanvas = function() {
       );
 
     if (canvas !== null) {
-      canvas.classList.toggle('open');
+      const html = document.querySelector('html');
 
-      // Prevents scrolling the HTML
-      if (canvas.classList.contains('open')) {
+      if (!html.classList.contains(openedOffcanvasClass)) {
+        canvas.classList.add('open');
+
         if (trigger !== null) {
           // Add the 'triggered' class to the element which has triggered the offcanvas.
           trigger.classList.add('triggered');
         } // if (trigger !== null)
 
         // Prevents main to scroll
-        document.querySelector('html').style.overflow = 'hidden';
+        html.addEventListener('click', fnOutsideClickHandler);
+        html.style.overflow = 'hidden';
       } else {
+        canvas.classList.remove('open');
+
         // Remove the 'triggered' class for any existing trigger which refers given offcanvas.
         document
           .querySelectorAll(
@@ -41,14 +73,18 @@ const seedOffCanvas = function() {
           });
 
         // Re-enables main scrolling
-        document.querySelector('html').style.overflow = '';
+        html.removeEventListener('click', fnOutsideClickHandler);
+        html.style.overflow = '';
       }
 
       // Wait until animation is complete to dispatch the event
       setTimeout(() => {
         if (canvas.classList.contains('open')) {
+          html.classList.add(openedOffcanvasClass);
+          html.setAttribute('data-canvas-id', canvasID.replace(/^#/, ''));
           customEvent = new CustomEvent('canvas.opened');
         } else {
+          html.classList.remove(openedOffcanvasClass);
           customEvent = new CustomEvent('canvas.closed');
         }
 
@@ -119,10 +155,12 @@ const seedOffCanvas = function() {
 
 if (typeof module !== 'undefined') {
   module.exports.seedOffCanvas = seedOffCanvas;
-} else {
-  if (typeof window.SeedCSS === 'undefined') {
-    window.SeedCSS = {};
-  }
-
-  window.SeedCSS.offCanvas = seedOffCanvas;
 }
+
+// Expose SeedCSS in the global scope
+if (typeof window.SeedCSS === 'undefined') {
+  window.SeedCSS = {};
+}
+
+// Expose offcanvas menu in the global scope
+window.SeedCSS.offCanvas = seedOffCanvas;
