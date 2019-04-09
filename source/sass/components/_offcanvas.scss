@@ -4,6 +4,8 @@
  * @license MIT
  */
 
+$oc-max-width: $small - ($small * 0.2);
+
 .seed-oc-panel-transition {
   @include transition(transform, 0.3s, ease-in-out);
 }
@@ -18,7 +20,7 @@
   height: 100vh;
   background-color: $grey-light;
   width: $small-container;
-  max-width: $small;
+  max-width: $oc-max-width;
   box-sizing: border-box;
   padding: 0 ($padding * 2);
   overflow: hidden;
@@ -37,7 +39,7 @@
 
     &.open {
       & + .oncanvas {
-        @include transform(translateX($small));
+        @include transform(translateX($oc-max-width));
       } // .open + .oncanvas
     } // .open
   } // :not(.overlay)

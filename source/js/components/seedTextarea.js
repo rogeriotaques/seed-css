@@ -59,10 +59,12 @@ const seedTextarea = function() {
 
 if (typeof module !== 'undefined') {
   module.exports.seedTextarea = seedTextarea;
-} else {
-  if (typeof window.SeedCSS === 'undefined') {
-    window.SeedCSS = {};
-  }
-
-  window.SeedCSS.textArea = seedTextarea;
 }
+
+// Expose SeedCSS in the global scope
+if (typeof window.SeedCSS === 'undefined') {
+  window.SeedCSS = {};
+}
+
+// Expose textArea in the global scope
+window.SeedCSS.textArea = seedTextarea;
