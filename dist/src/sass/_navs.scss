@@ -4,28 +4,72 @@
  * @license MIT
  */
 
+$dim: 32px !default;
+
 nav {
   background-color: $grey-medium;
   padding: 0;
   margin: 0;
   min-height: $height;
 
-  > ul {
+  > .container {
+    margin: 0 auto;
+  } // > .container
+
+  .logo,
+  ul {
+    position: relative;
+    line-height: $height;
+    vertical-align: middle;
+  }
+
+  .hamburguer {
+    cursor: pointer;
+    padding: 2px;
+    width: $dim;
+    height: $dim;
+    border: thin solid $grey-light;
+    background: transparent;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+
+    > span {
+      display: block;
+      border: 2px solid $grey-light;
+      border-radius: 10px;
+      margin: 2px;
+      width: calc(100% - 8px);
+    }
+  }
+
+  .logo {
+    padding: 0 $padding;
+
+    &:hover {
+      background-color: $grey;
+    } // a:hover
+  }
+
+  ul {
     padding: 0;
     margin: 0 auto;
     min-height: $height;
-    line-height: $height;
     list-style: none;
 
     > li {
+      min-height: $height;
+      line-height: $height;
+
       a {
         display: block;
-        min-width: $margin * 6;
+        min-width: $margin * 4;
         text-decoration: none;
         text-align: center;
         color: $black;
         font-weight: 700;
-        padding: 0 ($padding * 2);
+        padding: 0 $padding;
+        line-height: $height;
 
         &:hover {
           background-color: $grey;
@@ -43,7 +87,7 @@ nav {
         } // :active, :focus, .active
       } // a
     } // > li
-  } // > ul
+  } // ul
 
   .logo {
     color: $secondary;
@@ -56,7 +100,7 @@ nav {
   &.vertical {
     max-width: $medium;
 
-    > ul {
+    ul {
       > li {
         float: none;
         display: block;
@@ -65,13 +109,19 @@ nav {
           text-align: left;
         } // a
       } // > li
-    } // > ul
+    } // ul
   } // .vertical
 
   &.dark {
     background-color: $grey-dark;
 
-    > ul {
+    .logo {
+      &:hover {
+        background-color: darken($grey-dark, 10%);
+      } // a:hover
+    }
+
+    ul {
       a {
         color: $white;
 
@@ -90,7 +140,7 @@ nav {
           }
         } // :active, :focus, .active
       } // a
-    } // > ul
+    } // ul
 
     .logo {
       color: $grey-light;
@@ -100,7 +150,13 @@ nav {
   &.transparent {
     background-color: transparent;
 
-    > ul {
+    .logo {
+      &:hover {
+        background-color: $white;
+      } // a:hover
+    }
+
+    ul {
       a {
         color: $black;
 
@@ -119,7 +175,7 @@ nav {
           }
         } // :active, :focus, .active
       } // a
-    } // > ul
+    } // ul
 
     .logo {
       color: $primary;
@@ -129,7 +185,15 @@ nav {
   &.primary {
     background-color: $primary;
 
-    > ul {
+    .logo {
+      color: white;
+
+      &:hover {
+        background-color: darken($primary, 10%);
+      } // a:hover
+    }
+
+    ul {
       a {
         color: $white;
 
@@ -154,7 +218,15 @@ nav {
   &.secondary {
     background-color: $secondary;
 
-    > ul {
+    .logo {
+      color: white;
+
+      &:hover {
+        background-color: darken($secondary, 10%);
+      } // a:hover
+    }
+
+    ul {
       a {
         color: $white;
 
@@ -179,7 +251,15 @@ nav {
   &.red {
     background-color: $red;
 
-    > ul {
+    .logo {
+      color: white;
+
+      &:hover {
+        background-color: darken($red, 10%);
+      } // a:hover
+    }
+
+    ul {
       a {
         color: $white;
 
@@ -204,7 +284,15 @@ nav {
   &.orange {
     background-color: $orange;
 
-    > ul {
+    .logo {
+      color: white;
+
+      &:hover {
+        background-color: darken($orange, 10%);
+      } // a:hover
+    }
+
+    ul {
       a {
         color: $white;
 
@@ -229,7 +317,15 @@ nav {
   &.green {
     background-color: $green;
 
-    > ul {
+    .logo {
+      color: white;
+
+      &:hover {
+        background-color: darken($green, 10%);
+      } // a:hover
+    }
+
+    ul {
       a {
         color: $white;
 
@@ -254,7 +350,15 @@ nav {
   &.purple {
     background-color: $purple;
 
-    > ul {
+    .logo {
+      color: white;
+
+      &:hover {
+        background-color: darken($purple, 10%);
+      } // a:hover
+    }
+
+    ul {
       a {
         color: $white;
 
@@ -287,13 +391,42 @@ nav {
 } // nav
 
 @media #{$small-and-up} {
-  // TODO ...
+  nav {
+    .logo {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+    } // .logo
+
+    ul.collapsible {
+      display: none;
+    } // ul.collapsible
+
+    .hamburguer {
+      + .logo {
+        width: calc(100% - 80px);
+      } // + .logo
+    } // .hamburguer
+  } // .nav
 }
 
 @media #{$medium-and-up} {
   nav {
+    .hamburguer {
+      display: none;
+    }
+
+    .logo {
+      font-weight: 300;
+      width: auto !important;
+      text-align: initial;
+    }
+
     &:not(.vertical) {
-      > ul {
+      ul,
+      ul.collapsible {
+        display: inline-block;
+
         > li {
           float: left;
 
@@ -302,10 +435,6 @@ nav {
           }
         }
       }
-    }
-
-    .logo {
-      font-weight: 300;
     }
   }
 }
