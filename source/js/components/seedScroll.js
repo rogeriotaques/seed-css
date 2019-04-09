@@ -35,7 +35,7 @@ const seedScroll = function(options) {
 
   const fnGetOffset = (elem) => {
     const bodyOffset = document.body.getBoundingClientRect();
-    const offset = elem.getBoundingClientRect();
+    const offset = elem ? elem.getBoundingClientRect() : 0;
 
     return {
       top: Math.ceil(offset.top - bodyOffset.top),
@@ -247,7 +247,7 @@ const seedScroll = function(options) {
 
   if (triggers !== null) {
     triggers.forEach(function(trigger, i) {
-      trigger.addEventListener('click', fnTriggerClick);
+      trigger.addEventListener('click', fnTriggerClick, false);
     }); // triggers.forEach(function(trigger, i)
   } // if (triggers !== null)
 

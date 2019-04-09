@@ -11,6 +11,7 @@ const seedOffCanvas = function() {
   const fnOutsideClickHandler = function(ev) {
     let a = ev.target;
     let found = false;
+
     const html = document.querySelector('html');
 
     while (!found) {
@@ -111,7 +112,7 @@ const seedOffCanvas = function() {
 
   if (triggers !== null) {
     triggers.forEach(function(trigger, i) {
-      trigger.addEventListener('click', fnTriggerClick);
+      trigger.addEventListener('click', fnTriggerClick, false);
     }); // triggers.forEach(function(trigger, i)
   } // if (triggers !== null)
 
