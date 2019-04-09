@@ -435,10 +435,10 @@ textarea {
   text-align: center;
   top: 0;
   left: 0;
-  -webkit-transform: translate(-40%, 150%);
-  -moz-transform: translate(-40%, 150%);
-  -ms-transform: translate(-40%, 150%);
-  transform: translate(-40%, 150%);
+  -webkit-transform: translate(-40%, 170%);
+  -moz-transform: translate(-40%, 170%);
+  -ms-transform: translate(-40%, 170%);
+  transform: translate(-40%, 170%);
 }
 
 .alert.info {
@@ -2570,34 +2570,78 @@ nav {
   min-height: 50px;
 }
 
-nav > ul {
+nav > .container {
+  margin: 0 auto;
+}
+
+nav .logo,
+  nav ul {
+  position: relative;
+  line-height: 50px;
+  vertical-align: middle;
+}
+
+nav .hamburguer {
+  cursor: pointer;
+  padding: 2px;
+  width: 32px;
+  height: 32px;
+  border: thin solid #f5f5f5;
+  background: transparent;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+nav .hamburguer > span {
+  display: block;
+  border: 2px solid #f5f5f5;
+  border-radius: 10px;
+  margin: 2px;
+  width: calc(100% - 8px);
+}
+
+nav .logo {
+  padding: 0 10px;
+}
+
+nav .logo:hover {
+  background-color: #ccc;
+}
+
+nav ul {
   padding: 0;
   margin: 0 auto;
   min-height: 50px;
-  line-height: 50px;
   list-style: none;
 }
 
-nav > ul > li a {
+nav ul > li {
+  min-height: 50px;
+  line-height: 50px;
+}
+
+nav ul > li a {
   display: block;
-  min-width: 60px;
+  min-width: 40px;
   text-decoration: none;
   text-align: center;
   color: #333;
   font-weight: 700;
-  padding: 0 20px;
+  padding: 0 10px;
+  line-height: 50px;
 }
 
-nav > ul > li a:hover {
+nav ul > li a:hover {
   background-color: #ccc;
 }
 
-nav > ul > li a.active {
+nav ul > li a.active {
   background-color: #4b70b4;
   color: #fdfdfd;
 }
 
-nav > ul > li a.active:hover {
+nav ul > li a.active:hover {
   background-color: #3c5a90;
 }
 
@@ -2613,12 +2657,12 @@ nav.vertical {
   max-width: 600px;
 }
 
-nav.vertical > ul > li {
+nav.vertical ul > li {
   float: none;
   display: block;
 }
 
-nav.vertical > ul > li a {
+nav.vertical ul > li a {
   text-align: left;
 }
 
@@ -2626,20 +2670,24 @@ nav.dark {
   background-color: #666;
 }
 
-nav.dark > ul a {
-  color: #fdfdfd;
-}
-
-nav.dark > ul a:hover {
+nav.dark .logo:hover {
   background-color: #4d4d4d;
 }
 
-nav.dark > ul a.active {
+nav.dark ul a {
+  color: #fdfdfd;
+}
+
+nav.dark ul a:hover {
+  background-color: #4d4d4d;
+}
+
+nav.dark ul a.active {
   background-color: #1466ff;
   color: #fdfdfd;
 }
 
-nav.dark > ul a.active:hover {
+nav.dark ul a.active:hover {
   background-color: #004ee0;
 }
 
@@ -2651,20 +2699,24 @@ nav.transparent {
   background-color: transparent;
 }
 
-nav.transparent > ul a {
-  color: #333;
-}
-
-nav.transparent > ul a:hover {
+nav.transparent .logo:hover {
   background-color: #fdfdfd;
 }
 
-nav.transparent > ul a.active {
+nav.transparent ul a {
+  color: #333;
+}
+
+nav.transparent ul a:hover {
+  background-color: #fdfdfd;
+}
+
+nav.transparent ul a.active {
   color: #1466ff;
   background-color: #e2e2e2;
 }
 
-nav.transparent > ul a.active:hover {
+nav.transparent ul a.active:hover {
   background-color: #ccc;
 }
 
@@ -2676,20 +2728,28 @@ nav.primary {
   background-color: #1466ff;
 }
 
-nav.primary > ul a {
-  color: #fdfdfd;
+nav.primary .logo {
+  color: white;
 }
 
-nav.primary > ul a:hover {
+nav.primary .logo:hover {
   background-color: #004ee0;
 }
 
-nav.primary > ul a.active {
+nav.primary ul a {
+  color: #fdfdfd;
+}
+
+nav.primary ul a:hover {
+  background-color: #004ee0;
+}
+
+nav.primary ul a.active {
   color: #fdfdfd;
   background-color: #004ee0;
 }
 
-nav.primary > ul a.active:hover {
+nav.primary ul a.active:hover {
   background-color: #004ee0;
 }
 
@@ -2697,20 +2757,28 @@ nav.secondary {
   background-color: #4b70b4;
 }
 
-nav.secondary > ul a {
-  color: #fdfdfd;
+nav.secondary .logo {
+  color: white;
 }
 
-nav.secondary > ul a:hover {
+nav.secondary .logo:hover {
   background-color: #3c5a90;
 }
 
-nav.secondary > ul a.active {
+nav.secondary ul a {
+  color: #fdfdfd;
+}
+
+nav.secondary ul a:hover {
+  background-color: #3c5a90;
+}
+
+nav.secondary ul a.active {
   color: #fdfdfd;
   background-color: #3c5a90;
 }
 
-nav.secondary > ul a.active:hover {
+nav.secondary ul a.active:hover {
   background-color: #3c5a90;
 }
 
@@ -2718,20 +2786,28 @@ nav.red {
   background-color: #d32f2f;
 }
 
-nav.red > ul a {
-  color: #fdfdfd;
+nav.red .logo {
+  color: white;
 }
 
-nav.red > ul a:hover {
+nav.red .logo:hover {
   background-color: #ab2424;
 }
 
-nav.red > ul a.active {
+nav.red ul a {
+  color: #fdfdfd;
+}
+
+nav.red ul a:hover {
+  background-color: #ab2424;
+}
+
+nav.red ul a.active {
   color: #fdfdfd;
   background-color: #ab2424;
 }
 
-nav.red > ul a.active:hover {
+nav.red ul a.active:hover {
   background-color: #ab2424;
 }
 
@@ -2739,20 +2815,28 @@ nav.orange {
   background-color: #fb8c00;
 }
 
-nav.orange > ul a {
-  color: #fdfdfd;
+nav.orange .logo {
+  color: white;
 }
 
-nav.orange > ul a:hover {
+nav.orange .logo:hover {
   background-color: #c87000;
 }
 
-nav.orange > ul a.active {
+nav.orange ul a {
+  color: #fdfdfd;
+}
+
+nav.orange ul a:hover {
+  background-color: #c87000;
+}
+
+nav.orange ul a.active {
   color: #fdfdfd;
   background-color: #c87000;
 }
 
-nav.orange > ul a.active:hover {
+nav.orange ul a.active:hover {
   background-color: #c87000;
 }
 
@@ -2760,20 +2844,28 @@ nav.green {
   background-color: #43a047;
 }
 
-nav.green > ul a {
-  color: #fdfdfd;
+nav.green .logo {
+  color: white;
 }
 
-nav.green > ul a:hover {
+nav.green .logo:hover {
   background-color: #347c37;
 }
 
-nav.green > ul a.active {
+nav.green ul a {
+  color: #fdfdfd;
+}
+
+nav.green ul a:hover {
+  background-color: #347c37;
+}
+
+nav.green ul a.active {
   color: #fdfdfd;
   background-color: #347c37;
 }
 
-nav.green > ul a.active:hover {
+nav.green ul a.active:hover {
   background-color: #347c37;
 }
 
@@ -2781,20 +2873,28 @@ nav.purple {
   background-color: #8e24aa;
 }
 
-nav.purple > ul a {
-  color: #fdfdfd;
+nav.purple .logo {
+  color: white;
 }
 
-nav.purple > ul a:hover {
+nav.purple .logo:hover {
   background-color: #6b1b80;
 }
 
-nav.purple > ul a.active {
+nav.purple ul a {
+  color: #fdfdfd;
+}
+
+nav.purple ul a:hover {
+  background-color: #6b1b80;
+}
+
+nav.purple ul a.active {
   color: #fdfdfd;
   background-color: #6b1b80;
 }
 
-nav.purple > ul a.active:hover {
+nav.purple ul a.active:hover {
   background-color: #6b1b80;
 }
 
@@ -2806,17 +2906,46 @@ nav.sticky {
   z-index: 50;
 }
 
-@media only screen and (min-width: 600px) {
-  nav:not(.vertical) > ul > li {
-    float: left;
+@media only screen and (min-width: 0) {
+  nav .logo {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
   }
 
-  nav:not(.vertical) > ul > li.right {
-    float: right;
+  nav ul.collapsible {
+    display: none;
+  }
+
+  nav .hamburguer + .logo {
+    width: calc(100% - 80px);
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  nav .hamburguer {
+    display: none;
   }
 
   nav .logo {
     font-weight: 300;
+    width: auto !important;
+    text-align: initial;
+  }
+
+  nav:not(.vertical) ul,
+  nav:not(.vertical) ul.collapsible {
+    display: inline-block;
+  }
+
+  nav:not(.vertical) ul > li,
+    nav:not(.vertical) ul.collapsible > li {
+    float: left;
+  }
+
+  nav:not(.vertical) ul > li.right,
+      nav:not(.vertical) ul.collapsible > li.right {
+    float: right;
   }
 }
 
@@ -2846,7 +2975,7 @@ nav.sticky {
   height: 100vh;
   background-color: #f5f5f5;
   width: 90%;
-  max-width: 320px;
+  max-width: 256px;
   box-sizing: border-box;
   padding: 0 20px;
   overflow: hidden;
@@ -2864,11 +2993,11 @@ nav.sticky {
 }
 
 .offcanvas:not(.overlay).open + .oncanvas {
-  -webkit-transform: translateX(320px);
-  -moz-transform: translateX(320px);
-  -ms-transformn: translateX(320px);
-  -o-transform: translateX(320px);
-  transform: translateX(320px);
+  -webkit-transform: translateX(256px);
+  -moz-transform: translateX(256px);
+  -ms-transformn: translateX(256px);
+  -o-transform: translateX(256px);
+  transform: translateX(256px);
 }
 
 .offcanvas.overlay {
@@ -3161,7 +3290,7 @@ table.bordered tbody td:not(:first-child) {
   border-color: #666 transparent transparent transparent;
   pointer-events: none;
   opacity: 0;
-  z-index: 100;
+  z-index: 102;
 }
 
 .with-tooltip::after {
@@ -6570,4 +6699,16 @@ img.thumb {
 .with-shadow-inset {
   position: relative;
   box-shadow: rgba(51, 51, 51, 0.35) 0 3px 6px inset;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-inline {
+  display: inline-block !important;
+}
+
+.d-initial {
+  display: initial !important;
 }

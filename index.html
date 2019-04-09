@@ -21,7 +21,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Seed CSS v2.2.1</title>
+    <title>Seed CSS v2.2.6</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="A light-weight, mobile first and responsive CSS boilerplate.">
     <meta name="keywords" content="css,boilerplate,javascript,html5,website,site,app,webapp,build,development">
@@ -31,8 +31,8 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:300,700|Open+Sans:400|Cookie">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/seed.css?v=v2.2.1">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css?v=v2.2.1">
+    <link rel="stylesheet" type="text/css" href="assets/css/seed.css?v=v2.2.6">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css?v=v2.2.6">
     <script src="https://unpkg.com/eva-icons"></script>
     <!-- Global site tag (gtag.js) - Google Analytics-->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-734057-10"></script>
@@ -67,13 +67,13 @@
       <p>This is an off-canvas menu! Place here any content you need.</p>
       <nav class="vertical"> 
         <ul>
-          <li> <a class="smooth" href="#get-started">Get started</a></li>
-          <li> <a class="smooth" href="#examples-basic">Basic</a></li>
-          <li> <a class="smooth" href="#examples-components">Components</a></li>
-          <li> <a class="smooth" href="#examples-utilities">Utilities</a></li>
-          <li> <a class="smooth" href="#library-download">JS Lib</a></li>
-          <li> <a class="smooth" href="#license">License</a></li>
-          <li> <a class="smooth" href="#donate">Contributing</a></li>
+          <li> <a class="smooth" href="#get-started" role="offcanvas" data-id="sidenav">Get started</a></li>
+          <li> <a class="smooth" href="#examples-basic" role="offcanvas" data-id="sidenav">Basic</a></li>
+          <li> <a class="smooth" href="#examples-components" role="offcanvas" data-id="sidenav">Components</a></li>
+          <li> <a class="smooth" href="#examples-utilities" role="offcanvas" data-id="sidenav">Utilities</a></li>
+          <li> <a class="smooth" href="#library-download" role="offcanvas" data-id="sidenav">JS Lib</a></li>
+          <li> <a class="smooth" href="#license" role="offcanvas" data-id="sidenav">License</a></li>
+          <li> <a class="smooth" href="#contribute" role="offcanvas" data-id="sidenav">Contributing</a></li>
         </ul>
       </nav><br>
       <p class="align-center"><img src="https://picsum.photos/800/600?random" alt="Sample of a responsive image"></p><br>
@@ -90,25 +90,25 @@
             </div>
             <div class="col md-6 align-center">
               <div class="cta pt-30">
-                <p class="animated fadeIn delay-2s" id="release">v2.2.1</p><a class="btn primary animated fadeInLeft delay-2s" href="https://github.com/AbtzLabs/seed-css/archive/develop.zip"><span>DOWNLOAD</span></a><a class="btn secondary smooth animated fadeInRight delay-2s" href="#contribute"><span>CONTRIBUTE</span></a>
+                <p class="animated fadeIn delay-2s" id="release">v2.2.6</p><a class="btn primary animated fadeInLeft delay-2s" href="https://github.com/AbtzLabs/seed-css/archive/develop.zip"><span>DOWNLOAD</span></a><a class="btn secondary smooth animated fadeInRight delay-2s" href="#contribute"><span>CONTRIBUTE</span></a>
               </div>
             </div>
           </div>
         </div>
       </header>
       <nav class="sticky dark with-shadow">
-        <ul class="container my-0 hide-on-large-and-up">
-          <li> <a class="logo" href="#" role="offcanvas" data-id="sidenav"> <span class="hamburger"></span><span>Seed-CSS</span></a></li>
-        </ul>
-        <ul class="container my-0 hide-on-medium-and-down"> 
-          <li> <a class="smooth" href="#get-started">Get started</a></li>
-          <li> <a class="smooth" href="#examples-basic">Basic</a></li>
-          <li> <a class="smooth" href="#examples-components">Components</a></li>
-          <li> <a class="smooth" href="#examples-utilities">Utilities</a></li>
-          <li> <a class="smooth" href="#library-download">JS Lib</a></li>
-          <li> <a class="smooth" href="#license">License</a></li>
-          <li> <a class="smooth" href="#contribute">Contributing</a></li>
-        </ul>
+        <div class="container">
+          <button class="hamburguer" role="offcanvas" data-id="sidenav"> <span></span><span></span><span></span></button><a class="logo hide-on-medium-and-up" href="#"><span>Seed-CSS</span></a>
+          <ul class="my-0 collapsible">
+            <li> <a class="smooth" href="#get-started">Get started</a></li>
+            <li> <a class="smooth" href="#examples-basic">Basic</a></li>
+            <li> <a class="smooth" href="#examples-components">Components</a></li>
+            <li> <a class="smooth" href="#examples-utilities">Utilities</a></li>
+            <li> <a class="smooth" href="#library-download">JS Lib</a></li>
+            <li> <a class="smooth" href="#license">License</a></li>
+            <li><a class="smooth" href="#contribute">Contributing</a></li>
+          </ul>
+        </div>
       </nav>
       <section id="get-started">
         <div class="container">
@@ -2662,7 +2662,7 @@ canvas.get('#mycanvas').close();</pre>
     </div>
     <script src="//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
     <script src="//code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
-    <script src="assets/js/bundle.js?v=v2.2.1"></script>
+    <script src="assets/js/bundle.js?v=v2.2.6"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script type="text/javascript">
       docsearch({ 

@@ -111,13 +111,15 @@ var seedFileUpload = function seedFileUpload() {
 
 if (typeof module !== 'undefined') {
   module.exports.fileUpload = fileUpload;
-} else {
-  if (typeof window.SeedCSS === 'undefined') {
-    window.SeedCSS = {};
-  }
+} // Expose SeedCSS in the global scope
 
-  window.SeedCSS.fileUpload = seedFileUpload;
-}
+
+if (typeof window.SeedCSS === 'undefined') {
+  window.SeedCSS = {};
+} // Expose fileUpload menu in the global scope
+
+
+window.SeedCSS.fileUpload = seedFileUpload;
 "use strict";
 
 /**!
@@ -307,13 +309,15 @@ var seedModal = function seedModal(options) {
 
 if (typeof module !== 'undefined') {
   module.exports.seedModal = seedModal;
-} else {
-  if (typeof window.SeedCSS === 'undefined') {
-    window.SeedCSS = {};
-  }
+} // Expose SeedCSS in the global scope
 
-  window.SeedCSS.modal = seedModal;
-}
+
+if (typeof window.SeedCSS === 'undefined') {
+  window.SeedCSS = {};
+} // Expose modal menu in the global scope
+
+
+window.SeedCSS.modal = seedModal;
 "use strict";
 
 /**!
@@ -324,15 +328,44 @@ if (typeof module !== 'undefined') {
 var seedOffCanvas = function seedOffCanvas() {
   'use strict';
 
+  var openedOffcanvasClass = 'canvas-opened';
+
+  var fnOutsideClickHandler = function fnOutsideClickHandler(ev) {
+    var a = ev.target;
+    var found = false;
+    var html = document.querySelector('html');
+
+    while (!found) {
+      if (!a || !a.parentNode) {
+        // It seems we've reached the root (html)
+        break;
+      }
+
+      if (a.classList && !a.classList.contains('offcanvas')) {
+        // Neither found .canvas nor the root level
+        a = a.parentNode;
+      } else if (a.classList) {
+        found = true;
+      }
+    }
+
+    if (!found && html.classList.contains(openedOffcanvasClass)) {
+      // It seems has happened an outsider click
+      fnToggle(html.getAttribute('data-canvas-id'));
+    }
+  };
+
   var fnToggle = function fnToggle(canvasID, triggerElement) {
     var customEvent;
     var canvas = document.querySelector("#".concat(canvasID.replace(/^#/, '')));
     var trigger = triggerElement || document.querySelector("[role=\"offcanvas\"][data-id=\"".concat(canvasID.replace(/^#/, ''), "\"]"));
 
     if (canvas !== null) {
-      canvas.classList.toggle('open'); // Prevents scrolling the HTML
+      var html = document.querySelector('html');
 
-      if (canvas.classList.contains('open')) {
+      if (!html.classList.contains(openedOffcanvasClass)) {
+        canvas.classList.add('open');
+
         if (trigger !== null) {
           // Add the 'triggered' class to the element which has triggered the offcanvas.
           trigger.classList.add('triggered');
@@ -340,21 +373,27 @@ var seedOffCanvas = function seedOffCanvas() {
         // Prevents main to scroll
 
 
-        document.querySelector('html').style.overflow = 'hidden';
+        html.addEventListener('click', fnOutsideClickHandler);
+        html.style.overflow = 'hidden';
       } else {
-        // Remove the 'triggered' class for any existing trigger which refers given offcanvas.
+        canvas.classList.remove('open'); // Remove the 'triggered' class for any existing trigger which refers given offcanvas.
+
         document.querySelectorAll("[role=\"offcanvas\"][data-id=\"".concat(canvasID.replace(/^#/, ''), "\"]")).forEach(function (tgr) {
           tgr.classList.remove('triggered');
         }); // Re-enables main scrolling
 
-        document.querySelector('html').style.overflow = '';
+        html.removeEventListener('click', fnOutsideClickHandler);
+        html.style.overflow = '';
       } // Wait until animation is complete to dispatch the event
 
 
       setTimeout(function () {
         if (canvas.classList.contains('open')) {
+          html.classList.add(openedOffcanvasClass);
+          html.setAttribute('data-canvas-id', canvasID.replace(/^#/, ''));
           customEvent = new CustomEvent('canvas.opened');
         } else {
+          html.classList.remove(openedOffcanvasClass);
           customEvent = new CustomEvent('canvas.closed');
         } // Dispatch the 'canvas.opened'/ 'canvas.closed' events
 
@@ -382,7 +421,7 @@ var seedOffCanvas = function seedOffCanvas() {
 
   if (triggers !== null) {
     triggers.forEach(function (trigger, i) {
-      trigger.addEventListener('click', fnTriggerClick);
+      trigger.addEventListener('click', fnTriggerClick, false);
     }); // triggers.forEach(function(trigger, i)
   } // if (triggers !== null)
 
@@ -427,13 +466,15 @@ var seedOffCanvas = function seedOffCanvas() {
 
 if (typeof module !== 'undefined') {
   module.exports.seedOffCanvas = seedOffCanvas;
-} else {
-  if (typeof window.SeedCSS === 'undefined') {
-    window.SeedCSS = {};
-  }
+} // Expose SeedCSS in the global scope
 
-  window.SeedCSS.offCanvas = seedOffCanvas;
-}
+
+if (typeof window.SeedCSS === 'undefined') {
+  window.SeedCSS = {};
+} // Expose offcanvas menu in the global scope
+
+
+window.SeedCSS.offCanvas = seedOffCanvas;
 "use strict";
 
 /**!
@@ -470,7 +511,7 @@ var seedScroll = function seedScroll(options) {
 
   var fnGetOffset = function fnGetOffset(elem) {
     var bodyOffset = document.body.getBoundingClientRect();
-    var offset = elem.getBoundingClientRect();
+    var offset = elem ? elem.getBoundingClientRect() : 0;
     return {
       top: Math.ceil(offset.top - bodyOffset.top),
       left: Math.ceil(offset.left - bodyOffset.left)
@@ -680,7 +721,7 @@ var seedScroll = function seedScroll(options) {
 
   if (triggers !== null) {
     triggers.forEach(function (trigger, i) {
-      trigger.addEventListener('click', fnTriggerClick);
+      trigger.addEventListener('click', fnTriggerClick, false);
     }); // triggers.forEach(function(trigger, i)
   } // if (triggers !== null)
 
@@ -695,13 +736,15 @@ var seedScroll = function seedScroll(options) {
 
 if (typeof module !== 'undefined') {
   module.exports.seedScroll = seedScroll;
-} else {
-  if (typeof window.SeedCSS === 'undefined') {
-    window.SeedCSS = {};
-  }
+} // Expose SeedCSS in the global scope
 
-  window.SeedCSS.scroll = seedScroll;
-}
+
+if (typeof window.SeedCSS === 'undefined') {
+  window.SeedCSS = {};
+} // Expose scroll in the global scope
+
+
+window.SeedCSS.scroll = seedScroll;
 "use strict";
 
 /**!
@@ -750,13 +793,15 @@ var seedTextarea = function seedTextarea() {
 
 if (typeof module !== 'undefined') {
   module.exports.seedTextarea = seedTextarea;
-} else {
-  if (typeof window.SeedCSS === 'undefined') {
-    window.SeedCSS = {};
-  }
+} // Expose SeedCSS in the global scope
 
-  window.SeedCSS.textArea = seedTextarea;
-}
+
+if (typeof window.SeedCSS === 'undefined') {
+  window.SeedCSS = {};
+} // Expose textArea in the global scope
+
+
+window.SeedCSS.textArea = seedTextarea;
 "use strict";
 
 /**
@@ -831,9 +876,9 @@ if (typeof module !== 'undefined') {
   if (typeof SeedCSS !== 'undefined') {
     var m = SeedCSS.modal(); // Init the modal helper
 
+    var modal = m.get('#modal');
     var c = SeedCSS.offCanvas(); // Init the offCanvas helper
 
-    var modal = m.get('#modal');
     var canvas = c.get('#sidenav'); // Defines a special initialization options for the scroll
 
     var scrollOptions = {
@@ -884,112 +929,4 @@ if (typeof module !== 'undefined') {
       });
     }
   }
-})(); // (function($) {
-//   'use strict';
-//   var gutter = 50;
-//   /**
-//    * Enables the hero effect.
-//    */
-//   var enableHero = function() {
-//     $(window).on('scroll', function() {
-//       var scroll = $(window).scrollTop();
-//       $('header').css({
-//         'background-size': 100 + scroll / 20 + '% ' + (100 + scroll / 20) + '%'
-//       });
-//     });
-//   };
-//   /**
-//    * Enables the scroll spy which highlights the menu item
-//    * as soon as the user scrolls on its content position.
-//    */
-//   var enableScrollSpy = function() {
-//     // Define the initial position for all navs.
-//     $('.samples-nav').each(function(i, el) {
-//       var _this = $(el);
-//       var ref = $(_this.data('attach'));
-//       _this.data({
-//         width: _this.width(),
-//         start: ref.offset().top - (gutter + i * 10)
-//       });
-//     });
-//     $(window)
-//       // Makes side nav scrolling together to the screen.
-//       .on('scroll', function() {
-//         $('.samples-nav').each(function(i, el) {
-//           var _this = $(el);
-//           var start = _this.data('start');
-//           var limit = $(_this.data('limit')).offset().top - gutter;
-//           var scroll = $(window).scrollTop();
-//           if (scroll + gutter >= _this.data('start')) {
-//             if (!_this.hasClass('stacked')) {
-//               _this.addClass('stacked');
-//             }
-//             if (scroll + _this.height() < limit) {
-//               _this.css({
-//                 width: _this.data('width'),
-//                 top: Math.fround(scroll - _this.data('start') + gutter)
-//               });
-//             } else if (
-//               scroll < _this.data('start') &&
-//               _this.hasClass('stacked')
-//             ) {
-//               _this.removeClass('stacked');
-//               _this.css({
-//                 top: '',
-//                 width: ''
-//               });
-//             }
-//           }
-//         });
-//       })
-//       // Makes the side nav items highlithed when scroll into its content
-//       .on('scroll resize', function() {
-//         var scroll = $(window).scrollTop();
-//         $('.spy')
-//           .not('.ignore')
-//           .each(function(i, el) {
-//             var _el = $(el);
-//             var ref = $(_el.attr('href'));
-//             if (
-//               ref.offset() !== undefined &&
-//               scroll >= ref.offset().top - gutter &&
-//               scroll < ref.offset().top + ref.height() - gutter
-//             ) {
-//               $('.spy.active').removeClass('active');
-//               _el.addClass('active');
-//               return false;
-//             }
-//           });
-//       });
-//     // Smooth the scrolling when user clicks on any item from side nav.
-//     $('.spy').each(function(i, el) {
-//       var _el = $(el);
-//       _el.on('click', function(evt) {
-//         var ref = $(_el.attr('href'));
-//         $('html, body').animate(
-//           {
-//             scrollTop: ref.offset().top - gutter + 20
-//           },
-//           400
-//         );
-//       });
-//     });
-//   };
-//   enableHero();
-//   enableScrollSpy();
-//   enableGridPlayground();
-//   // Setup fileUpload
-//   if (typeof fileUpload !== 'undefined') {
-//     fileUpload();
-//   }
-//   // Setup modal
-//   if (typeof modal !== 'undefined') {
-//     modal();
-//   }
-//   // get version shield from github/shilds.io
-//   // @deprecated
-//   // $.get('https://img.shields.io/github/release/rogeriotaques/seed-css.json', function (data) {
-//   //   $('#release').html( data.value );
-//   // });
-//   // });
-// })(jQuery);
+})();
