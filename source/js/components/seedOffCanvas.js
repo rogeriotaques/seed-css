@@ -27,10 +27,8 @@ const seedOffCanvas = function() {
       }
     }
 
-    if (found) {
-      console.log('Clicked INSIDE offcanvas menu');
-    } else if (html.classList.contains(openedOffcanvasClass)) {
-      console.log('Clicked OUTSIDE offcanvas menu');
+    if (!found && html.classList.contains(openedOffcanvasClass)) {
+      // It seems has happened an outsider click
       fnToggle(html.getAttribute('data-canvas-id'));
     }
   };

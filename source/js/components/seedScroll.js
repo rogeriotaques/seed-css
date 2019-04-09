@@ -260,10 +260,12 @@ const seedScroll = function(options) {
 
 if (typeof module !== 'undefined') {
   module.exports.seedScroll = seedScroll;
-} else {
-  if (typeof window.SeedCSS === 'undefined') {
-    window.SeedCSS = {};
-  }
-
-  window.SeedCSS.scroll = seedScroll;
 }
+
+// Expose SeedCSS in the global scope
+if (typeof window.SeedCSS === 'undefined') {
+  window.SeedCSS = {};
+}
+
+// Expose scroll in the global scope
+window.SeedCSS.scroll = seedScroll;
