@@ -35,7 +35,7 @@ const seedScroll = function(options) {
 
   const fnGetOffset = (elem) => {
     const bodyOffset = document.body.getBoundingClientRect();
-    const offset = elem.getBoundingClientRect();
+    const offset = elem ? elem.getBoundingClientRect() : 0;
 
     return {
       top: Math.ceil(offset.top - bodyOffset.top),
@@ -247,7 +247,7 @@ const seedScroll = function(options) {
 
   if (triggers !== null) {
     triggers.forEach(function(trigger, i) {
-      trigger.addEventListener('click', fnTriggerClick);
+      trigger.addEventListener('click', fnTriggerClick, false);
     }); // triggers.forEach(function(trigger, i)
   } // if (triggers !== null)
 
@@ -260,10 +260,12 @@ const seedScroll = function(options) {
 
 if (typeof module !== 'undefined') {
   module.exports.seedScroll = seedScroll;
-} else {
-  if (typeof window.SeedCSS === 'undefined') {
-    window.SeedCSS = {};
-  }
-
-  window.SeedCSS.scroll = seedScroll;
 }
+
+// Expose SeedCSS in the global scope
+if (typeof window.SeedCSS === 'undefined') {
+  window.SeedCSS = {};
+}
+
+// Expose scroll in the global scope
+window.SeedCSS.scroll = seedScroll;

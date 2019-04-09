@@ -190,3 +190,18 @@ img {
     box-shadow: $shadow-inset;
   } // .with-shadow-inset
 } // .with...
+
+// display
+.d {
+  &-block {
+    display: block !important;
+  } // .d-block;
+
+  &-inline {
+    display: inline-block !important;
+  } // .d-inline
+
+  &-initial {
+    display: initial !important;
+  } // .d-initial
+} // .d
