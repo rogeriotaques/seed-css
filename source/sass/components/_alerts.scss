@@ -27,7 +27,6 @@
     position: absolute;
     width: $dimension / 3 * 2;
     height: $dimension / 3 * 2;
-    // margin-top: $dimension;
     line-height: $dimension;
     background-color: $grey;
     border: $border solid $grey;
@@ -35,10 +34,10 @@
     top: 0;
     left: 0;
 
-    -webkit-transform: translate(-40%, 150%);
-    -moz-transform: translate(-40%, 150%);
-    -ms-transform: translate(-40%, 150%);
-    transform: translate(-40%, 150%);
+    -webkit-transform: translate(-40%, 170%);
+    -moz-transform: translate(-40%, 170%);
+    -ms-transform: translate(-40%, 170%);
+    transform: translate(-40%, 170%);
   }
 
   &.info {

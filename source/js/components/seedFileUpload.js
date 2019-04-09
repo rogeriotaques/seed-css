@@ -98,10 +98,12 @@ const seedFileUpload = function() {
 
 if (typeof module !== 'undefined') {
   module.exports.fileUpload = fileUpload;
-} else {
-  if (typeof window.SeedCSS === 'undefined') {
-    window.SeedCSS = {};
-  }
-
-  window.SeedCSS.fileUpload = seedFileUpload;
 }
+
+// Expose SeedCSS in the global scope
+if (typeof window.SeedCSS === 'undefined') {
+  window.SeedCSS = {};
+}
+
+// Expose fileUpload menu in the global scope
+window.SeedCSS.fileUpload = seedFileUpload;

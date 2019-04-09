@@ -205,10 +205,12 @@ const seedModal = (options) => {
 
 if (typeof module !== 'undefined') {
   module.exports.seedModal = seedModal;
-} else {
-  if (typeof window.SeedCSS === 'undefined') {
-    window.SeedCSS = {};
-  }
-
-  window.SeedCSS.modal = seedModal;
 }
+
+// Expose SeedCSS in the global scope
+if (typeof window.SeedCSS === 'undefined') {
+  window.SeedCSS = {};
+}
+
+// Expose modal menu in the global scope
+window.SeedCSS.modal = seedModal;
