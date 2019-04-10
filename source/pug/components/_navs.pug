@@ -60,12 +60,17 @@
     pre.prettyprint.lang-html.
       &lt;!-- The Navigation bar --&gt;
       &lt;nav &gt; 
-        &lt;ul &gt; 
-          &lt;li &gt; 
-            &lt;!-- Use .logo class for a specific styling for logos --&gt;
-            &lt;a href="#" class="logo" &gt; ... &lt;/a&gt;
-          &lt;/li&gt;
+        &lt;button class="hamburguer" &gt;
+          &lt;span&gt;&lt;/span&gt;
+          &lt;span&gt;&lt;/span&gt;
+          &lt;span&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        
+        &lt;!-- Use .logo class for a specific styling for logos --&gt;
+        &lt;a href="#" class="logo" &gt; ... &lt;/a&gt;
 
+        &lt;!-- Use .collapsible class for automatically collapse the navbar options when in small screens --&gt;
+        &lt;ul.collapsible &gt; 
           &lt;li &gt; 
             &lt;!-- Use .active class when the item is active in the navbar --&gt;
             &lt;a href="#" class="active" &gt; ... &lt;/a&gt;
@@ -86,9 +91,9 @@
 
   .table-responsive
     table
-      thead
+      thead.grey-background
         tr
-          th Class
+          th To be used with NAV tag
           th Remarks
       tbody
         tr
@@ -124,9 +129,21 @@
         tr
           td.nowrap .transparent
           td Sets the <code >transparent</code> theme.
+
+      thead.grey-background
+        tr
+          th To be used with A tag
+          th Remarks
+      tbody
         tr
           td.nowrap .logo
           td Creates a special styling for <code >&lt;a /&gt;</code> tags in the navigation bar.
+
+      thead.grey-background
+        tr
+          th To be used with LI tag
+          th Remarks
+      tbody
         tr
           td.nowrap .right
           td Places the <code >&lt;li /&gt;</code> tags to the right in the navigatin bar.
