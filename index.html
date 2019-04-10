@@ -1513,12 +1513,17 @@ modal.get('#modal').hide();</pre>
             <div class="code-sample">
               <pre class="prettyprint lang-html">&lt;!-- The Navigation bar --&gt;
 &lt;nav &gt; 
-  &lt;ul &gt; 
-    &lt;li &gt; 
-      &lt;!-- Use .logo class for a specific styling for logos --&gt;
-      &lt;a href="#" class="logo" &gt; ... &lt;/a&gt;
-    &lt;/li&gt;
+  &lt;button class="hamburguer" &gt;
+    &lt;span&gt;&lt;/span&gt;
+    &lt;span&gt;&lt;/span&gt;
+    &lt;span&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  
+  &lt;!-- Use .logo class for a specific styling for logos --&gt;
+  &lt;a href="#" class="logo" &gt; ... &lt;/a&gt;
 
+  &lt;!-- Use .collapsible class for automatically collapse the navbar options when in small screens --&gt;
+  &lt;ul.collapsible &gt; 
     &lt;li &gt; 
       &lt;!-- Use .active class when the item is active in the navbar --&gt;
       &lt;a href="#" class="active" &gt; ... &lt;/a&gt;
@@ -1539,9 +1544,9 @@ modal.get('#modal').hide();</pre>
             <h5>Available classes</h5>
             <div class="table-responsive">
               <table>
-                <thead>
+                <thead class="grey-background">
                   <tr>
-                    <th>Class</th>
+                    <th>To be used with NAV tag</th>
                     <th>Remarks</th>
                   </tr>
                 </thead>
@@ -1590,10 +1595,26 @@ modal.get('#modal').hide();</pre>
                     <td class="nowrap">.transparent</td>
                     <td>Sets the <code >transparent</code> theme.</td>
                   </tr>
+                </tbody>
+                <thead class="grey-background">
+                  <tr>
+                    <th>To be used with A tag</th>
+                    <th>Remarks</th>
+                  </tr>
+                </thead>
+                <tbody>
                   <tr>
                     <td class="nowrap">.logo</td>
                     <td>Creates a special styling for <code >&lt;a /&gt;</code> tags in the navigation bar.</td>
                   </tr>
+                </tbody>
+                <thead class="grey-background">
+                  <tr>
+                    <th>To be used with LI tag</th>
+                    <th>Remarks</th>
+                  </tr>
+                </thead>
+                <tbody>
                   <tr>
                     <td class="nowrap">.right</td>
                     <td>Places the <code >&lt;li /&gt;</code> tags to the right in the navigatin bar.</td>
