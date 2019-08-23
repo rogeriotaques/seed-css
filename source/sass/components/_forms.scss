@@ -442,5 +442,17 @@
         } // + label
       } // > [type='file']
     } // .seed-file.chosen
+
+    &.has-feedback {
+      > [type='file'].error + label,
+      > label.error {
+        border-color: $red;
+      } // .error
+
+      > [type='file'].success + label,
+      > label.success {
+        border-color: $green;
+      } // .success
+    } // .has-feedback
   } // .seed-file
 } // .field

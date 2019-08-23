@@ -30,15 +30,9 @@
           const remain = 12 - count;
           const lastClass = 'sm-' + remain;
 
-          row
-            .find('.col')
-            .removeClass(
-              'sm-1 sm-2 sm-3 sm-4 sm-5 sm-6 sm-7 sm-8 sm-9 sm-10 sm-11 sm-12'
-            );
+          row.find('.col').removeClass('sm-1 sm-2 sm-3 sm-4 sm-5 sm-6 sm-7 sm-8 sm-9 sm-10 sm-11 sm-12');
 
-          row
-            .find('.col:last')
-            .after($('<div />', { class: 'col align-center' }).html(count + 1));
+          row.find('.col:last').after($('<div />', { class: 'col align-center' }).html(count + 1));
 
           row.find('.col').each(function() {
             $(this).addClass('sm-1');
@@ -73,9 +67,7 @@
 
           row
             .find('.col:last')
-            .removeClass(
-              'sm-1 sm-2 sm-3 sm-4 sm-5 sm-6 sm-7 sm-8 sm-9 sm-10 sm-11 sm-12'
-            )
+            .removeClass('sm-1 sm-2 sm-3 sm-4 sm-5 sm-6 sm-7 sm-8 sm-9 sm-10 sm-11 sm-12')
             .addClass(lastClass);
 
           $('#add-col').attr('disabled', false);
@@ -95,6 +87,8 @@
     const modal = m.get('#modal');
     const c = SeedCSS.offCanvas(); // Init the offCanvas helper
     const canvas = c.get('#sidenav');
+    const fu = SeedCSS.fileUpload(); // Init the fileUpload helper
+    const upload = fu.get('#file');
 
     // Defines a special initialization options for the scroll
     const scrollOptions = {
@@ -107,7 +101,6 @@
       gutter: 150
     };
 
-    SeedCSS.fileUpload(); // Init the fileUpload helper
     SeedCSS.textArea(); // Init the textArea helper
     SeedCSS.scroll(scrollOptions); // Init the scroll helper
 
@@ -144,6 +137,46 @@
 
       document.addEventListener('scroll.complete', () => {
         console.log('Finished smooth scrolling');
+      });
+    }
+
+    if (upload) {
+      upload.addEventListener('file.chosen', (evt) => {
+        console.log('File(s) added to FileUpload.');
+
+        const error = evt.currentTarget.parentNode.querySelector('span.error');
+
+        // Add the success feedback classes
+        evt.currentTarget.parentNode.classList.add('has-feedback');
+        evt.currentTarget.classList.add('success');
+
+        // Make sure no errors are displayed
+        evt.currentTarget.classList.remove('error');
+
+        if (error) {
+          error.remove();
+        }
+      });
+
+      upload.addEventListener('file.removed', (evt) => {
+        console.log('File(s) removed from FileUpload.');
+
+        const lbl = document.createElement('span');
+        const error = evt.currentTarget.parentNode.querySelector('span.error');
+
+        lbl.classList.add('error');
+        lbl.innerHTML = 'Select at least one file.';
+
+        // Add the error feedback classes
+        evt.currentTarget.parentNode.classList.add('has-feedback');
+        evt.currentTarget.classList.add('error');
+
+        // Make sure it displayes the error label
+        evt.currentTarget.classList.remove('success');
+
+        if (!error) {
+          evt.currentTarget.parentNode.appendChild(lbl);
+        }
       });
     }
   }
