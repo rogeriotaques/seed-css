@@ -7,12 +7,13 @@
 const seedFileUpload = function() {
   'use strict';
 
+  let seedCustomEvent;
+
   const fnChange = function fnChange(evt) {
     if (evt) {
       evt.preventDefault();
     }
 
-    let seedCustomEvent;
     let fileName = false;
 
     const input = this;
@@ -20,9 +21,7 @@ const seedFileUpload = function() {
 
     // When multiple files are selected
     if (input.files && input.files.length > 1) {
-      fileName = (
-        input.getAttribute('data-multiple') || '{count} files'
-      ).replace('{count}', input.files.length);
+      fileName = (input.getAttribute('data-multiple') || '{count} files').replace('{count}', input.files.length);
     }
 
     // When only one file is selected
@@ -57,14 +56,11 @@ const seedFileUpload = function() {
       }
 
       // Make sure input and label matches and works.
-      if (
-        input.getAttribute('id') &&
-        input.getAttribute('id') !== label.getAttribute('for')
-      ) {
+      if (input.getAttribute('id') && input.getAttribute('id') !== label.getAttribute('for')) {
         label.setAttribute('for', input.getAttribute('id'));
       } else if (label.getAttribute('for') && !input.getAttribute('id')) {
         input.setAttribute('id', label.getAttribute('for'));
-      } else {
+      } else if (!label.getAttribute('for') && !input.getAttribute('id')) {
         input.setAttribute('id', 'file-input-' + i);
         label.setAttribute('for', 'file-input-' + i);
       }
@@ -76,8 +72,7 @@ const seedFileUpload = function() {
             evt.preventDefault();
           }
 
-          const emptyText =
-            input.getAttribute('data-empty') || 'No file chosen';
+          const emptyText = input.getAttribute('data-empty') || 'No file chosen';
 
           input.value = '';
           input.parentNode.classList.remove('chosen');
@@ -94,6 +89,29 @@ const seedFileUpload = function() {
       input.addEventListener('change', fnChange);
     }); // inputs.forEach(function(input, i)
   } // if (inputs !== null)
+
+  return {
+    get: (idx) => {
+      if (typeof idx === 'string') {
+        let fileUpload = false;
+
+        inputs.forEach((node) => {
+          if (node.id === idx.replace(/^#/, '')) {
+            fileUpload = node;
+            return;
+          }
+        });
+
+        return fileUpload;
+      }
+
+      if (typeof inputs[idx] !== 'undefined') {
+        return inputs[idx];
+      }
+
+      return false;
+    }
+  };
 }; // seedFileUpload
 
 if (typeof module !== 'undefined') {
