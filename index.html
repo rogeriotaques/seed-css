@@ -21,7 +21,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Seed CSS v2.2.6</title>
+    <title>Seed CSS v2.3.0</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="A light-weight, mobile first and responsive CSS boilerplate.">
     <meta name="keywords" content="css,boilerplate,javascript,html5,website,site,app,webapp,build,development">
@@ -31,8 +31,8 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:300,700|Open+Sans:400|Cookie">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/seed.css?v=v2.2.6">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css?v=v2.2.6">
+    <link rel="stylesheet" type="text/css" href="assets/css/seed.css?v=v2.3.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css?v=v2.3.0">
     <script src="https://unpkg.com/eva-icons"></script>
     <!-- Global site tag (gtag.js) - Google Analytics-->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-734057-10"></script>
@@ -90,7 +90,7 @@
             </div>
             <div class="col md-6 align-center">
               <div class="cta pt-30">
-                <p class="animated fadeIn delay-2s" id="release">v2.2.6</p><a class="btn primary animated fadeInLeft delay-2s" href="https://github.com/AbtzLabs/seed-css/archive/develop.zip"><span>DOWNLOAD</span></a><a class="btn secondary smooth animated fadeInRight delay-2s" href="#contribute"><span>CONTRIBUTE</span></a>
+                <p class="animated fadeIn delay-2s" id="release">v2.3.0</p><a class="btn primary animated fadeInLeft delay-2s" href="https://github.com/AbtzLabs/seed-css/archive/develop.zip"><span>DOWNLOAD</span></a><a class="btn secondary smooth animated fadeInRight delay-2s" href="#contribute"><span>CONTRIBUTE</span></a>
               </div>
             </div>
           </div>
@@ -133,8 +133,11 @@
           <div class="code-sample">
             <pre class="prettyprint lang-html">&lt;head &gt;
   ...
-  &lt;!-- Add something like this to the HEAD of your page --&gt;
+  &lt;!-- Add something like this to the HEAD of your page for the Style --&gt;
   &lt;link href="/path/to/seed.css" rel="stylesheet" type="text/css" &gt;
+
+  &lt;!-- Add something like this to the HEAD of your page when using the JS Helpers --&gt;
+  &lt;script defer src="/path/to/seedcss.js" rel="stylesheet" type="text/css" &gt;&lt;/script&gt;
 &lt;/head&gt;
 </pre>
           </div><br>
@@ -162,17 +165,12 @@ $ npm install --save seed-css</pre>
             <h2 class="align-center" id="examples-basic">The basic</h2>
           </div>
           <div class="row stretch"> 
-            <div class="col md-6">
+            <div class="col sm-12">
               <p class="lead align-justify">
-                This is the foundation of <b >seed-css</b>, in other words, the most fundamental features from this boilerplate.
-                
-              </p>
-            </div>
-            <div class="col md-6">
-              <p class="lead align-justify">
-                By design, <b >seed-css</b> basic comes with a <b >container</b>, <b >grid</b>, <b >responsive images</b>, <b >
-                typography</b>, pre-defined <b >media queries</b> and a <b >color</b> scheme. And even though it looks kinda 
-                few things, it lonely can help you a lot to speed up a website creation.
+                This is the foundation of <b >seed-css</b>.  In other words, it is the most fundamental features from this boilerplate.
+                By design, the basic comes with a <span class="primary" >container</span>, <span class="primary" >grid</span>, <span class="primary" >responsive images</span>, <span class="primary" >
+                typography</span>, pre-defined <span class="primary" >media queries</span> and a <span class="primary" >color</span> scheme. Even though it looks kinda 
+                few things, it lonely can help you a lot to speed up the development of a website or app.
                 
                 
               </p>
@@ -185,7 +183,7 @@ $ npm install --save seed-css</pre>
               <div class="col md-4">
                 <p class="lead align-justify">
                   Containers are simple <b >DIV</b> elements with pre-defined width (depending on the 
-                  screen size) which will help to keep the content enclosed in a specific area.
+                  screen size) which will help you to keep the content enclosed in a specific area.
                   
                 </p>
               </div>
@@ -244,8 +242,8 @@ $ npm install --save seed-css</pre>
             <div class="row"> 
               <div class="col md-4">
                 <p class="align-justify lead">
-                  The grid system helps you to create responsive designs where you can define 
-                  a different number of columns depending on the device width.
+                  The grid (system) helps you to create responsive designs by defining  
+                  a different number of columns (there's a maximum of 12) depending on the device width. 
                   
                 </p>
                 <p class="align-justify lead">
@@ -415,30 +413,140 @@ $ npm install --save seed-css</pre>
               
             </p>
             <div class="code-sample">
-              <pre class="prettyprint lang-html">&lt;!-- Add something like this to the HEAD of your page --&gt;
-&lt;!-- Will add Open-Sans(400) and Lato (300,700) as title and general font-families --&gt;
-&lt;link href="//fonts.googleapis.com/css?family=Lato:300,700|Open+Sans:400" rel="stylesheet"&gt;
+              <pre class="prettyprint lang-html">&lt;head &gt;
+  ... 
+  &lt;!-- Add something like this to the HEAD of your page --&gt;
+  &lt;!-- Will add Open-Sans(400) and Lato (300,700) as title and general font-families --&gt;
+  &lt;link href="//fonts.googleapis.com/css?family=Lato:300,700|Open+Sans:400" rel="stylesheet"&gt;
+  ...
+&lt;/head&gt;
 </pre>
             </div>
             <p>For other options, check <a href="https://fonts.google.com/" target="_blank" >Google Fonts</a> out.</p>
-            <div class="row">
-              <div class="col sm-12 md-6">
-                <h1>Header 1</h1>
-                <h2>Header 2</h2>
-                <h3>Header 3</h3>
-                <h4>Header 4</h4>
-                <h5>Header 5</h5>
-                <h6>Header 6</h6>
-              </div>
-              <div class="col sm-12 md-6"><br>
-                <p>
-                  This is an paragraph. There are <strong >bold</strong>, <i >italic</i>, 
-                  and <u >underlined</u> texts, also, <a href="#!">anchors</a>.
-                  
-                </p>
-                <div class="row">
-                  <div class="col sm-12 md-6">
-                    <p> <b>Ordered lists:</b></p>
+            <table> 
+              <tbody> 
+                <tr> 
+                  <td> 
+                    <h1>Header 1</h1>
+                  </td>
+                  <td><span>Font-size: &nbsp;</span><code>5rem</code></td>
+                  <td> 
+                    <div class="code-sample">
+                      <pre class="prettyprint lang-html">&lt;h1&gt; ... &lt;/h1&gt;
+</pre>
+                    </div>
+                  </td>
+                </tr>
+                <tr> 
+                  <td> 
+                    <h2>Header 2</h2>
+                  </td>
+                  <td><span>Font-size: &nbsp;</span><code>4.2rem</code></td>
+                  <td> 
+                    <div class="code-sample">
+                      <pre class="prettyprint lang-html">&lt;h2&gt; ... &lt;/h2&gt;
+</pre>
+                    </div>
+                  </td>
+                </tr>
+                <tr> 
+                  <td> 
+                    <h3>Header 3</h3>
+                  </td>
+                  <td><span>Font-size: &nbsp;</span><code>3.6rem</code></td>
+                  <td> 
+                    <div class="code-sample">
+                      <pre class="prettyprint lang-html">&lt;h3&gt; ... &lt;/h3&gt;
+</pre>
+                    </div>
+                  </td>
+                </tr>
+                <tr> 
+                  <td> 
+                    <h4>Header 4</h4>
+                  </td>
+                  <td><span>Font-size: &nbsp;</span><code>3rem</code></td>
+                  <td> 
+                    <div class="code-sample">
+                      <pre class="prettyprint lang-html">&lt;h4&gt; ... &lt;/h4&gt;
+</pre>
+                    </div>
+                  </td>
+                </tr>
+                <tr> 
+                  <td> 
+                    <h5>Header 5</h5>
+                  </td>
+                  <td><span>Font-size: &nbsp;</span><code>2.4rem</code></td>
+                  <td> 
+                    <div class="code-sample">
+                      <pre class="prettyprint lang-html">&lt;h5&gt; ... &lt;/h5&gt;
+</pre>
+                    </div>
+                  </td>
+                </tr>
+                <tr> 
+                  <td> 
+                    <h6>Header 6</h6>
+                  </td>
+                  <td><span>Font-size: &nbsp;</span><code>1.5rem</code></td>
+                  <td> 
+                    <div class="code-sample">
+                      <pre class="prettyprint lang-html">&lt;h6&gt; ... &lt;/h6&gt;
+</pre>
+                    </div>
+                  </td>
+                </tr>
+                <tr> 
+                  <td>Paragraph</td>
+                  <td><span>Font-size: &nbsp;</span><code>1.5rem</code></td>
+                  <td> 
+                    <div class="code-sample">
+                      <pre class="prettyprint lang-html">&lt;p&gt; ... &lt;/p&gt;</pre>
+                    </div>
+                  </td>
+                </tr>
+                <tr> 
+                  <td> <strong>Bold</strong></td>
+                  <td><span>Font-size: &nbsp;</span><code>1.5rem</code></td>
+                  <td> 
+                    <div class="code-sample">
+                      <pre class="prettyprint lang-html">&lt;strong&gt; ... &lt;/strong&gt;</pre>
+                    </div>
+                  </td>
+                </tr>
+                <tr> 
+                  <td> <i>Italic</i></td>
+                  <td><span>Font-size: &nbsp;</span><code>1.5rem</code></td>
+                  <td> 
+                    <div class="code-sample">
+                      <pre class="prettyprint lang-html">&lt;i&gt; ... &lt;/i&gt;</pre>
+                    </div>
+                  </td>
+                </tr>
+                <tr> 
+                  <td> 
+                    <u>Underlined</u>
+                  </td>
+                  <td><span>Font-size: &nbsp;</span><code>1.5rem</code></td>
+                  <td> 
+                    <div class="code-sample">
+                      <pre class="prettyprint lang-html">&lt;u&gt; ... &lt;/u&gt;</pre>
+                    </div>
+                  </td>
+                </tr>
+                <tr> 
+                  <td> <a href="javascript;">Anchors</a></td>
+                  <td><span>Font-size: &nbsp;</span><code>1.5rem</code></td>
+                  <td> 
+                    <div class="code-sample">
+                      <pre class="prettyprint lang-html">&lt;a href="" target="" &gt; ... &lt;/a&gt;</pre>
+                    </div>
+                  </td>
+                </tr>
+                <tr> 
+                  <td> 
+                    <div> <b>Ordered lists:</b></div>
                     <ol>
                       <li>First item</li>
                       <li>Second item
@@ -449,9 +557,7 @@ $ npm install --save seed-css</pre>
                       </li>
                       <li>Third item</li>
                     </ol>
-                  </div>
-                  <div class="col sm-12 md-6">
-                    <p> <b>Unordered lists:</b></p>
+                    <div> <b>Unordered lists:</b></div>
                     <ul>
                       <li>First item</li>
                       <li>Second item
@@ -462,35 +568,21 @@ $ npm install --save seed-css</pre>
                       </li>
                       <li>Third item</li>
                     </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <h5>Code example</h5>
-            <div class="code-sample">
-              <pre class="prettyprint lang-html">&lt;!-- Head lines --&gt;
-&lt;h1 &gt; ... &lt;/h1&gt;
-&lt;h2 &gt; ... &lt;/h2&gt;
-&lt;h3 &gt; ... &lt;/h3&gt;
-&lt;h4 &gt; ... &lt;/h4&gt;
-&lt;h5 &gt; ... &lt;/h5&gt;
-&lt;h6 &gt; ... &lt;/h6&gt;
-
-&lt;!-- Other --&gt;
-&lt;p &gt; ... &lt;/p&gt;
-&lt;b &gt; ... &lt;/b&gt;
-&lt;i &gt; ... &lt;/i&gt;
-&lt;u &gt; ... &lt;/u&gt;
-&lt;a href="." &gt; ... &lt;/a&gt;
-
-&lt;!-- Lists --&gt;
-&lt;!-- replace OL by UL or DL for different list types --&gt;
+                  </td>
+                  <td><span>Font-size: &nbsp;</span><code>1.5rem</code></td>
+                  <td> 
+                    <div class="code-sample">
+                      <pre class="prettyprint lang-html">&lt;!-- replace OL by UL or DL for different list types --&gt;
 &lt;ol &gt;
   &lt;li &gt; ... &lt;/li&gt;
   &lt;li &gt; ... &lt;/li&gt;
   &lt;li &gt; ... &lt;/li&gt;
 &lt;/ol&gt;</pre>
-            </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
           <div class="align-center my-40"><span>。。。 </span></div>
           <div id="component-media-queries">
@@ -612,16 +704,16 @@ $ npm install --save seed-css</pre>
                   For the sake of flexibility, <b >seed-css</b> does not implement its own set of icons.
                   
                   However, there are tons of really cool icons out there which you can easily use with this boilerplate. 
-                  Some of them are trully special and free, which we strongly recommend to you.
+                  Some of them are trully special and free, which I strongly recommend to you to use. 
                   
                 </p>
               </div>
               <div class="col md-6 md-offset-1">
                 <h5 class="m-0">Recommended Icons</h5>
                 <dl> 
-                  <dd class="mb-20"> <a class="badge info lead" href="https://akveo.github.io/eva-icons/#/" target="_blank">Eva Icons - Free (used in this page) </a></dd>
-                  <dd class="mb-20"> <a class="badge lead" href="https://ionicons.com/" target="_blank">Ion Icons - Free</a></dd>
-                  <dd class="mb-20"> <a class="badge lead" href="https://fontawesome.com/icons?d=gallery&amp;m=free" target="_blank">Font Awesome - FREE</a></dd>
+                  <dd class="mb-20"> <a class="lead" href="https://akveo.github.io/eva-icons/#/" target="_blank">Eva Icons - Free</a><span> &nbsp;&nbsp;</span><span class="badge info">(used in this page) </span></dd>
+                  <dd class="mb-20"> <a class="lead" href="https://ionicons.com/" target="_blank">Ion Icons - Free</a></dd>
+                  <dd class="mb-20"> <a class="lead" href="https://fontawesome.com/icons?d=gallery&amp;m=free" target="_blank">Font Awesome - FREE</a></dd>
                 </dl>
               </div>
             </div>
@@ -831,8 +923,8 @@ $ npm install --save seed-css</pre>
               <div class="col md-5">
                 <p class="lead">
                   Buttons can be created with <b>seed-css</b> by simply adding the class <b >.btn</b> 
-                  to any <b >&lt;a/&gt;</b> or  <b >&lt;button/&gt;</b> element. Adding the class 
-                  <b >.btn-primary</b> it will become a primary button. 
+                  to any &lt;a /&gt; or  &lt;button/&gt; element. Adding the class 
+                  <b >.primary</b> it will become a primary button. 
                   
                 </p>
               </div>
@@ -984,7 +1076,7 @@ $ npm install --save seed-css</pre>
                 <div class="sample-container auto-height">
                   <div class="card card-media place-center">
                     <div class="card-header"> <img src="https://picsum.photos/350/200" alt="Sample image card">
-                      <h5 class="card-title">Card header with image</h5>
+                      <h5 class="card-title">Card header<br >with image</h5>
                     </div>
                     <div class="card-body">
                       <p>Card body</p>
@@ -1104,7 +1196,7 @@ $ npm install --save seed-css</pre>
               <div class="col md-6">
                 <div class="field seed-file">
                   <input type="file" id="file" multiple data-multiple="{count} files">
-                  <label for="file"> <span class="input" data-empty="No file chosen">...</span><span class="cancel"> <span>Remove</span></span><span class="button"> <span>Attach</span></span></label>
+                  <label for="file"><span class="input" data-empty="No file chosen">...</span><span class="cancel"> <span>Remove</span></span><span class="button"> <span>Attach</span></span></label>
                 </div>
                 <div class="code-sample">
                   <h5>Code example </h5>
@@ -1300,23 +1392,27 @@ SeedCSS.textArea(); // Initialize
             </div>
             <div class="code-sample">
               <pre class="prettyprint lang-html">&lt;!-- The trigger --&gt;
-&lt;button type="button" role="modal" data-modal-id="modal" class="btn-primary" &gt; 
+&lt;button type="button" role="modal" data-modal-id="my-modal" class="btn-primary" &gt; 
   Open modal
 &lt;/button&gt;
 </pre>
             </div>
             <div class="code-sample">
               <pre class="prettyprint lang-html">&lt;!-- The modal --&gt;
-&lt;div class="modal hide" &gt;
+&lt;div class="modal hide" id="my-modal" &gt;
   &lt;div class="modal-window" &gt;
     &lt;div class="modal-header" &gt;
       &lt;h3 class="modal-title" &gt;Hello world&lt;/h3&gt;
+      &lt;!-- To close the modal, the simplest way is add role="modal-dismiss" to a clickable element --&gt;
       &lt;a href="#" role="modal-dismiss" class="dismiss" &gt;
         &lt;i class="ion-close" &gt;&lt;/i&gt;
       &lt;/a&gt;
     &lt;/div&gt;
     &lt;div class="modal-body" &gt;
       &lt;p &gt;This' the body of my overlay modal window.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-footer" &gt;
+      &lt;p &gt;And the footer.&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -1513,31 +1609,38 @@ modal.get('#modal').hide();</pre>
             <div class="code-sample">
               <pre class="prettyprint lang-html">&lt;!-- The Navigation bar --&gt;
 &lt;nav &gt; 
-  &lt;button class="hamburguer" &gt;
-    &lt;span&gt;&lt;/span&gt;
-    &lt;span&gt;&lt;/span&gt;
-    &lt;span&gt;&lt;/span&gt;
-  &lt;/button&gt;
-  
-  &lt;!-- Use .logo class for a specific styling for logos --&gt;
-  &lt;a href="#" class="logo" &gt; ... &lt;/a&gt;
+  &lt;div class="container" &gt; 
+    &lt;button class="hamburguer" &gt;
+      &lt;span&gt;&lt;/span&gt;
+      &lt;span&gt;&lt;/span&gt;
+      &lt;span&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    
+    &lt;!-- Use .logo class for a specific styling for logos --&gt;
+    &lt;a href="#" class="logo hide-on-medium-and-up" &gt; ... &lt;/a&gt;
 
-  &lt;!-- Use .collapsible class for automatically collapse the navbar options when in small screens --&gt;
-  &lt;ul.collapsible &gt; 
-    &lt;li &gt; 
-      &lt;!-- Use .active class when the item is active in the navbar --&gt;
-      &lt;a href="#" class="active" &gt; ... &lt;/a&gt;
-    &lt;/li&gt;
+    &lt;!-- Use .collapsible class for automatically collapse the navbar options when in small screens --&gt;
+    &lt;ul.collapsible &gt; 
+      &lt;li &gt; 
+        &lt;!-- Use .logo class to show your logo when not collapsed --&gt;
+        &lt;a href="#" class="logo" &gt; LOGO &lt;/a&gt;
+      &lt;/li&gt;
 
-    &lt;li &gt; 
-      &lt;a href="#" &gt; ... &lt;/a&gt;
-    &lt;/li&gt;
+      &lt;li &gt; 
+        &lt;!-- Use .active class when the item is active in the navbar --&gt;
+        &lt;a href="#" class="active" &gt; ... &lt;/a&gt;
+      &lt;/li&gt;
 
-    &lt;!-- Use .right class always you wanna place it on the right side --&gt;
-    &lt;li class="right" &gt; 
-      &lt;a href="#" &gt; ... &lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
+      &lt;li &gt; 
+        &lt;a href="#" &gt; ... &lt;/a&gt;
+      &lt;/li&gt;
+
+      &lt;!-- Use .right class always you wanna place it on the right side --&gt;
+      &lt;li class="right" &gt; 
+        &lt;a href="#" &gt; ... &lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
 &lt;/nav&gt;
 </pre>
             </div>
@@ -1709,7 +1812,10 @@ canvas.get('#mycanvas').close();</pre>
             <h4>Progress bars</h4>
             <p class="lead">
               Progress bar is an important elements for UX. If you use it 
-              accordingly, it's gonna pass the imediate response to the user.
+              accordingly, it's gonna pass the imediate response to the user. By default, 
+              the progress bar uses the <b >.secondary</b> color, but you can 
+              define all the existing colors from <b>seed-css</b> just by adding 
+              the color classes alongside <b>.progress-bar</b>.
               
             </p>
             <div class="row">
@@ -1719,11 +1825,43 @@ canvas.get('#mycanvas').close();</pre>
                   <div class="progress-bar">
                     <div class="bar" style="width: 60%"></div>
                     <div class="label">60%</div>
+                  </div><br>
+                  <div class="progress-bar primary">
+                    <div class="bar" style="width: 60%"></div>
+                    <div class="label">60%</div>
+                  </div><br>
+                  <div class="progress-bar red">
+                    <div class="bar" style="width: 60%"></div>
+                    <div class="label">60%</div>
+                  </div><br>
+                  <div class="progress-bar orange">
+                    <div class="bar" style="width: 60%"></div>
+                    <div class="label">60%</div>
+                  </div><br>
+                  <div class="progress-bar green">
+                    <div class="bar" style="width: 60%"></div>
+                    <div class="label">60%</div>
+                  </div><br>
+                  <div class="progress-bar purple">
+                    <div class="bar" style="width: 60%"></div>
+                    <div class="label">60%</div>
+                  </div><br>
+                  <div class="progress-bar darkgrey">
+                    <div class="bar" style="width: 60%"></div>
+                    <div class="label">60%</div>
+                  </div><br>
+                  <div class="progress-bar grey">
+                    <div class="bar" style="width: 60%"></div>
+                    <div class="label">60%</div>
+                  </div><br>
+                  <div class="progress-bar softgrey">
+                    <div class="bar" style="width: 60%"></div>
+                    <div class="label">60%</div>
                   </div>
                 </div><br>
                 <p>Undefined progress </p>
                 <div class="align-center">
-                  <div class="progress-bar undefined">
+                  <div class="progress-bar undefined primary">
                     <div class="bar"></div>
                   </div>
                 </div>
@@ -1732,13 +1870,13 @@ canvas.get('#mycanvas').close();</pre>
                 <h5>Code example</h5>
                 <div class="code-sample">
                   <pre class="prettyprint lang-html">&lt;!-- Fixed progress --&gt;
-&lt;div class="progress-bar" &gt;
+&lt;div class="progress-bar secondary" &gt;
   &lt;div class="bar" &gt;&lt;/div&gt;
   &lt;label &gt;60%&lt;/label&gt;
 &lt;/div&gt;
 
 &lt;!-- Undefined progress --&gt;
-&lt;div class="progress-bar undefined" &gt;
+&lt;div class="progress-bar primary undefined" &gt;
   &lt;div class="bar" &gt;&lt;/div&gt;
 &lt;/div&gt;</pre>
                 </div>
@@ -1748,25 +1886,60 @@ canvas.get('#mycanvas').close();</pre>
           <div class="align-center my-40"><span>。。。 </span></div>
           <div id="component-spinners">
             <h4>Spinners</h4>
-            <p class="lead">The spinner has three different sizes: <b >default</b>, <b >medium</b> and <b >big</b>.</p>
+            <p class="lead">The spinner has three different sizes: <b >starndard</b>, <b >medium</b> and <b >big</b>.</p>
+            <div class="row stretch"> 
+              <div class="col md-4"> 
+                <h6>Standard </h6>
+                <div class="spinner" data-label="Loading ..."></div>
+              </div>
+              <div class="col md-4"> 
+                <h6>Medium ( <code >.medium</code> )</h6>
+                <div class="spinner medium" data-label="Loading ..."></div>
+              </div>
+              <div class="col md-4"> 
+                <h6>Big ( <code >.big</code> )</h6>
+                <div class="spinner big" data-label="Loading ..."></div>
+              </div>
+            </div>
             <p class="lead">
               Also, the spinner animation speed can be controled with the classes: <b >.fast</b> (0.85s) and <b >.furious</b> (0.5s),
               while the normal speed animation will take 1.3s to complete the course.
               
             </p>
-            <p class="lead">
-              If for some reason you want to hide the "loading" message, just include the class <b >.lean</b> or simply do not
-              include the property <b >data-label</b> as seen in the examples.
-              
-            </p>
+            <div class="row stretch"> 
+              <div class="col md-4"> 
+                <h6>Standard</h6>
+                <div class="spinner" data-label="Loading ..."></div>
+              </div>
+              <div class="col md-4"> 
+                <h6>Fast ( <code >.fast</code> )</h6>
+                <div class="spinner fast" data-label="Loading ..."></div>
+              </div>
+              <div class="col md-4"> 
+                <h6>Furious ( <code >.furious</code> )</h6>
+                <div class="spinner furious" data-label="Loading ..."></div>
+              </div>
+            </div>
             <div class="row">
-              <div class="col md-5">
-                <h6>Default (with normal speed)</h6>
-                <div class="spinner" data-label="Loading ..."></div><br>
-                <h6>Medium <code >.medium.fast</code> (with fast speed)</h6>
-                <div class="spinner medium fast" data-label="Loading ..."></div><br>
-                <h6>Big <code >.big.furious</code> (with faster speed)</h6>
-                <div class="spinner big furious" data-label="Loading ..."></div>
+              <div class="col md-5 pt-40">
+                <p class="lead">
+                  If for some reason you want to hide the "loading" message, just include the class <b >.lean</b> or simply do not
+                  include the property <b >data-label</b> as seen in the examples.
+                  
+                </p>
+                <h5>Do you wanna colors?</h5>
+                <p class="lead">
+                  Spinners also support all the pre-defined colors from <b>seed-css</b>. 
+                  
+                </p>
+                <div class="spinner primary" data-label="Primary">     </div>
+                <div class="spinner red" data-label="Red">     </div>
+                <div class="spinner orange" data-label="Orange">     </div>
+                <div class="spinner green" data-label="Green">     </div>
+                <div class="spinner purple" data-label="Purple">     </div>
+                <div class="spinner darkgrey" data-label="Darkgrey">     </div>
+                <div class="spinner grey" data-label="Grey">     </div>
+                <div class="spinner softgrey" data-label="Softgrey">     </div>
               </div>
               <div class="col md-6 md-offset-1">
                 <h5>Code example</h5>
@@ -2619,14 +2792,14 @@ canvas.get('#mycanvas').close();</pre>
             <h2 class="align-center">Contributing</h2>
           </div>
           <p class="lead">This is an open-source project and you can freely contribute. </p>
-          <p class="lead">By contributing you will help us to improve the code-base and make <b >seed-css</b> even better to other developers like us.</p>
+          <p class="lead">By contributing you will help me to improve the code-base and make <b >seed-css</b> even better to other developers like us.</p>
           <div class="row"> 
             <div class="col md-5">
               <h5>How to contribute?</h5>
               <ul> 
-                <li>Help improving this page; </li>
-                <li>Help testing and reporting bugs; </li>
-                <li>Help fixing bugs or implementing missing features; </li>
+                <li>Improving this page; </li>
+                <li>Testing and reporting bugs; </li>
+                <li>Fixing bugs or implementing missing features; </li>
               </ul>
               <p class="align-justify">
                 Check the source-code on <a href="https://github.com/abtzlabs/seed-css" target="_blank">Github</a>, 
@@ -2642,7 +2815,7 @@ canvas.get('#mycanvas').close();</pre>
                 yet still wanna contribute in some way, you can help us donating any amout of money!
                 
               </p>
-              <p class="align-center"> <a class="btn bmc" target="_blank" href="https://paypal.me/abtzlabs"><img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee."><span style="margin-left:5px">Buy me a coffee.</span></a></p>
+              <p class="align-center"> <a class="btn bmc" target="_blank" href="https://paypal.me/abtzlabs/5USD"><img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee."><span style="margin-left:5px">Buy me a coffee.</span></a></p>
             </div>
           </div>
         </div>
@@ -2676,14 +2849,14 @@ canvas.get('#mycanvas').close();</pre>
         </div>
         <div class="modal-footer">
           <div class="align-right">
-            <button class="btn medium secondary" type="button">Got it.</button>
+            <button class="btn medium secondary" type="button" role="modal-dismiss">Got it.</button>
           </div>
         </div>
       </div>
     </div>
     <script src="//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
     <script src="//code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
-    <script src="assets/js/bundle.js?v=v2.2.6"></script>
+    <script src="assets/js/bundle.js?v=v2.3.0"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script type="text/javascript">
       docsearch({ 
