@@ -7,27 +7,84 @@
 
   .code-sample
     pre.prettyprint.lang-html.
-      &lt;!-- Add something like this to the HEAD of your page --&gt;
-      &lt;!-- Will add Open-Sans(400) and Lato (300,700) as title and general font-families --&gt;
-      &lt;link href="//fonts.googleapis.com/css?family=Lato:300,700|Open+Sans:400" rel="stylesheet"&gt;
+      &lt;head &gt;
+        ... 
+        &lt;!-- Add something like this to the HEAD of your page --&gt;
+        &lt;!-- Will add Open-Sans(400) and Lato (300,700) as title and general font-families --&gt;
+        &lt;link href="//fonts.googleapis.com/css?family=Lato:300,700|Open+Sans:400" rel="stylesheet"&gt;
+        ...
+      &lt;/head&gt;
 
   p For other options, check <a href="https://fonts.google.com/" target="_blank" >Google Fonts</a> out.
 
-  .row
-    .col.sm-12.md-6
-      each i in [1,2,3,4,5,6]
-        #{'h'+i}= 'Header ' + i
+  -var headers=[{size: 5, tag: 1}, {size: 4.2, tag: 2}, {size: 3.6, tag: 3}, {size: 3, tag: 4}, {size: 2.4, tag: 5}, {size: 1.5, tag: 6}]
 
-    .col.sm-12.md-6
-      br
+  table 
+    tbody 
+      each h in headers
+        tr 
+          td 
+            #{'h'+h.tag}= 'Header ' + h.tag
+          td
+            span Font-size: &nbsp;
+            code= h.size + 'rem'
+          td 
+            .code-sample
+              pre.prettyprint.lang-html.
+                #{'<h'+h.tag+'> ... </h'+h.tag+'>'}
 
-      p.
-        This is an paragraph. There are <strong >bold</strong>, <i >italic</i>, 
-        and <u >underlined</u> texts, also, <a href="#!">anchors</a>.
-
-      .row
-        .col.sm-12.md-6
-          p 
+      tr 
+        td Paragraph
+        td
+          span Font-size: &nbsp;
+          code 1.5rem
+        td 
+          .code-sample
+            pre.prettyprint.lang-html.
+              &lt;p&gt; ... &lt;/p&gt;
+      tr 
+        td 
+          strong Bold
+        td
+          span Font-size: &nbsp;
+          code 1.5rem
+        td 
+          .code-sample
+            pre.prettyprint.lang-html.
+              &lt;strong&gt; ... &lt;/strong&gt;
+      tr 
+        td 
+          i Italic
+        td
+          span Font-size: &nbsp;
+          code 1.5rem
+        td 
+          .code-sample
+            pre.prettyprint.lang-html.
+              &lt;i&gt; ... &lt;/i&gt;
+      tr 
+        td 
+          u Underlined
+        td
+          span Font-size: &nbsp;
+          code 1.5rem
+        td 
+          .code-sample
+            pre.prettyprint.lang-html.
+              &lt;u&gt; ... &lt;/u&gt;
+      tr 
+        td 
+          a(href="javascript;") Anchors
+        td
+          span Font-size: &nbsp;
+          code 1.5rem
+        td 
+          .code-sample
+            pre.prettyprint.lang-html.
+              &lt;a href="" target="" &gt; ... &lt;/a&gt;
+      tr 
+        td 
+          div 
             b Ordered lists:
 
           ol
@@ -38,8 +95,7 @@
                 li Nested second ...
             li Third item
 
-        .col.sm-12.md-6
-          p 
+          div 
             b Unordered lists:
 
           ul
@@ -50,29 +106,16 @@
                 li Nested second ...
             li Third item
 
-  h5 Code example
 
-  .code-sample
-    pre.prettyprint.lang-html.
-      &lt;!-- Head lines --&gt;
-      &lt;h1 &gt; ... &lt;/h1&gt;
-      &lt;h2 &gt; ... &lt;/h2&gt;
-      &lt;h3 &gt; ... &lt;/h3&gt;
-      &lt;h4 &gt; ... &lt;/h4&gt;
-      &lt;h5 &gt; ... &lt;/h5&gt;
-      &lt;h6 &gt; ... &lt;/h6&gt;
-
-      &lt;!-- Other --&gt;
-      &lt;p &gt; ... &lt;/p&gt;
-      &lt;b &gt; ... &lt;/b&gt;
-      &lt;i &gt; ... &lt;/i&gt;
-      &lt;u &gt; ... &lt;/u&gt;
-      &lt;a href="." &gt; ... &lt;/a&gt;
-
-      &lt;!-- Lists --&gt;
-      &lt;!-- replace OL by UL or DL for different list types --&gt;
-      &lt;ol &gt;
-        &lt;li &gt; ... &lt;/li&gt;
-        &lt;li &gt; ... &lt;/li&gt;
-        &lt;li &gt; ... &lt;/li&gt;
-      &lt;/ol&gt;
+        td
+          span Font-size: &nbsp;
+          code 1.5rem
+        td 
+          .code-sample
+            pre.prettyprint.lang-html.
+              &lt;!-- replace OL by UL or DL for different list types --&gt;
+              &lt;ol &gt;
+                &lt;li &gt; ... &lt;/li&gt;
+                &lt;li &gt; ... &lt;/li&gt;
+                &lt;li &gt; ... &lt;/li&gt;
+              &lt;/ol&gt;

@@ -49,10 +49,7 @@ const seedModal = (options) => {
     document.removeEventListener('keydown', fnEsc);
 
     // Replace open animation to close the modal window
-    mWin.classList.replace(
-      options.classAnimation.open,
-      options.classAnimation.close
-    );
+    mWin.classList.replace(options.classAnimation.open, options.classAnimation.close);
 
     // Add animation to the overlay
     modalObject.classList.add('delay-1s');
@@ -72,10 +69,7 @@ const seedModal = (options) => {
       // Remove closing classes from overlay
       modalObject.classList.remove('delay-1s', 'fadeOut');
       // Remove closing classes from modal window
-      mWin.classList.replace(
-        options.classAnimation.close,
-        options.classAnimation.open
-      );
+      mWin.classList.replace(options.classAnimation.close, options.classAnimation.open);
     }, 600);
   }; // fnClose
 
@@ -131,8 +125,23 @@ const seedModal = (options) => {
       const dismissals = modal.querySelectorAll('[role="modal-dismiss"]');
 
       // Add (and remove) a click handler on the overlay
-      modal.addEventListener('click', () => {
-        fnClose(modal);
+      modal.addEventListener('click', (evt) => {
+        let { target } = evt;
+        let abort = false;
+
+        // Do not close the modal when the click is inside modal-window
+        while (target.nodeName.toLowerCase() !== 'html') {
+          if (target.classList.contains('modal-window')) {
+            abort = true;
+            break;
+          }
+
+          target = target.parentNode;
+        }
+
+        if (!abort) {
+          fnClose(modal);
+        }
       });
 
       // Add prototype for show (open)

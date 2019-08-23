@@ -3,7 +3,10 @@
 
   p.lead.
     Progress bar is an important elements for UX. If you use it 
-    accordingly, it's gonna pass the imediate response to the user.
+    accordingly, it's gonna pass the imediate response to the user. By default, 
+    the progress bar uses the <b >.secondary</b> color, but you can 
+    define all the existing colors from <b>seed-css</b> just by adding 
+    the color classes alongside <b>.progress-bar</b>.
 
   .row
     .col.md-5
@@ -14,11 +17,59 @@
           .bar(style="width: 60%")
           .label 60%
 
+        br 
+
+        .progress-bar.primary
+          .bar(style="width: 60%")
+          .label 60%
+
+        br 
+
+        .progress-bar.red
+          .bar(style="width: 60%")
+          .label 60%
+
+        br 
+
+        .progress-bar.orange
+          .bar(style="width: 60%")
+          .label 60%
+
+        br 
+
+        .progress-bar.green
+          .bar(style="width: 60%")
+          .label 60%
+
+        br 
+
+        .progress-bar.purple
+          .bar(style="width: 60%")
+          .label 60%
+
+        br 
+
+        .progress-bar.darkgrey
+          .bar(style="width: 60%")
+          .label 60%
+
+        br 
+
+        .progress-bar.grey
+          .bar(style="width: 60%")
+          .label 60%
+
+        br 
+
+        .progress-bar.softgrey
+          .bar(style="width: 60%")
+          .label 60%
+
       br
 
       p Undefined progress 
       .align-center
-        .progress-bar.undefined
+        .progress-bar.undefined.primary
           .bar
 
     .col.md-6.md-offset-1
@@ -27,12 +78,12 @@
       .code-sample
         pre.prettyprint.lang-html.
           &lt;!-- Fixed progress --&gt;
-          &lt;div class="progress-bar" &gt;
+          &lt;div class="progress-bar secondary" &gt;
             &lt;div class="bar" &gt;&lt;/div&gt;
             &lt;label &gt;60%&lt;/label&gt;
           &lt;/div&gt;
 
           &lt;!-- Undefined progress --&gt;
-          &lt;div class="progress-bar undefined" &gt;
+          &lt;div class="progress-bar primary undefined" &gt;
             &lt;div class="bar" &gt;&lt;/div&gt;
           &lt;/div&gt;

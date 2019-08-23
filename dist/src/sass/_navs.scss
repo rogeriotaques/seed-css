@@ -65,7 +65,6 @@ nav {
         display: block;
         min-width: $margin * 4;
         text-decoration: none;
-        text-align: center;
         color: $black;
         font-weight: 700;
         padding: 0 $padding;
@@ -99,6 +98,10 @@ nav {
 
   &.vertical {
     max-width: $medium;
+
+    .logo {
+      text-align: center;
+    }
 
     ul {
       > li {
@@ -394,8 +397,9 @@ nav {
   nav {
     .logo {
       display: inline-block;
-      width: 100%;
       text-align: center;
+      padding: 0;
+      width: 100%;
     } // .logo
 
     ul.collapsible {
@@ -417,15 +421,21 @@ nav {
     }
 
     .logo {
+      display: block;
       font-weight: 300;
-      width: auto !important;
       text-align: initial;
+      width: auto !important;
+      padding: 0 30px;
     }
+
+    ul.collapsible {
+      display: initial;
+    } // ul.collapsible
 
     &:not(.vertical) {
       ul,
       ul.collapsible {
-        display: inline-block;
+        // display: inline-block;
 
         > li {
           float: left;

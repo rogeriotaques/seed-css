@@ -60,35 +60,47 @@
     pre.prettyprint.lang-html.
       &lt;!-- The Navigation bar --&gt;
       &lt;nav &gt; 
-        &lt;ul &gt; 
-          &lt;li &gt; 
-            &lt;!-- Use .logo class for a specific styling for logos --&gt;
-            &lt;a href="#" class="logo" &gt; ... &lt;/a&gt;
-          &lt;/li&gt;
+        &lt;div class="container" &gt; 
+          &lt;button class="hamburguer" &gt;
+            &lt;span&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;/span&gt;
+          &lt;/button&gt;
+          
+          &lt;!-- Use .logo class for a specific styling for logos --&gt;
+          &lt;a href="#" class="logo hide-on-medium-and-up" &gt; ... &lt;/a&gt;
 
-          &lt;li &gt; 
-            &lt;!-- Use .active class when the item is active in the navbar --&gt;
-            &lt;a href="#" class="active" &gt; ... &lt;/a&gt;
-          &lt;/li&gt;
+          &lt;!-- Use .collapsible class for automatically collapse the navbar options when in small screens --&gt;
+          &lt;ul.collapsible &gt; 
+            &lt;li &gt; 
+              &lt;!-- Use .logo class to show your logo when not collapsed --&gt;
+              &lt;a href="#" class="logo" &gt; LOGO &lt;/a&gt;
+            &lt;/li&gt;
 
-          &lt;li &gt; 
-            &lt;a href="#" &gt; ... &lt;/a&gt;
-          &lt;/li&gt;
+            &lt;li &gt; 
+              &lt;!-- Use .active class when the item is active in the navbar --&gt;
+              &lt;a href="#" class="active" &gt; ... &lt;/a&gt;
+            &lt;/li&gt;
 
-          &lt;!-- Use .right class always you wanna place it on the right side --&gt;
-          &lt;li class="right" &gt; 
-            &lt;a href="#" &gt; ... &lt;/a&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
+            &lt;li &gt; 
+              &lt;a href="#" &gt; ... &lt;/a&gt;
+            &lt;/li&gt;
+
+            &lt;!-- Use .right class always you wanna place it on the right side --&gt;
+            &lt;li class="right" &gt; 
+              &lt;a href="#" &gt; ... &lt;/a&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
       &lt;/nav&gt;
 
   h5 Available classes
 
   .table-responsive
     table
-      thead
+      thead.grey-background
         tr
-          th Class
+          th To be used with NAV tag
           th Remarks
       tbody
         tr
@@ -124,9 +136,21 @@
         tr
           td.nowrap .transparent
           td Sets the <code >transparent</code> theme.
+
+      thead.grey-background
+        tr
+          th To be used with A tag
+          th Remarks
+      tbody
         tr
           td.nowrap .logo
           td Creates a special styling for <code >&lt;a /&gt;</code> tags in the navigation bar.
+
+      thead.grey-background
+        tr
+          th To be used with LI tag
+          th Remarks
+      tbody
         tr
           td.nowrap .right
           td Places the <code >&lt;li /&gt;</code> tags to the right in the navigatin bar.
