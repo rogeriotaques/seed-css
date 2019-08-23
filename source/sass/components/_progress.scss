@@ -59,37 +59,37 @@
     > .bar {
       background-color: $primary;
     }
-  }
+  } // .primary
 
   &.red {
     > .bar {
       background-color: $red;
     }
-  }
+  } // .red
 
   &.orange {
     > .bar {
       background-color: $orange;
     }
-  }
+  } // .orange
 
   &.green {
     > .bar {
       background-color: $green;
     }
-  }
+  } // .green
 
   &.purple {
     > .bar {
       background-color: $purple;
     }
-  }
+  } // .purple
 
   &.darkgrey {
     > .bar {
       background-color: $grey-dark;
     }
-  }
+  } // .darkgrey
 
   &.grey {
     > .bar {
@@ -99,7 +99,7 @@
     > .label {
       color: $black;
     }
-  }
+  } // .grey
 
   &.softgrey {
     > .bar {
@@ -109,5 +109,5 @@
     > .label {
       color: $black;
     }
-  }
+  } // softgrey
 } // .progress-bar

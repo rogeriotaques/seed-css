@@ -31,7 +31,6 @@ $thickness: 3px;
     margin-left: $margin;
   } // .spinner:after
 
-  //   &:not(:required) {
   &:before {
     content: '';
     display: inline-block;
@@ -78,4 +77,92 @@ $thickness: 3px;
       @include animation-duration(0.85s);
     }
   } // .spinner.fast
+
+  &.primary {
+    &:before {
+      border-top-color: $primary;
+      border-bottom-color: $primary;
+    } // .spinner:before
+
+    &:after {
+      color: $black;
+    }
+  } // .primary
+
+  &.red {
+    &:before {
+      border-top-color: $red;
+      border-bottom-color: $red;
+    } // .spinner:before
+
+    &:after {
+      color: $black;
+    }
+  } // .red
+
+  &.orange {
+    &:before {
+      border-top-color: $orange;
+      border-bottom-color: $orange;
+    } // .spinner:before
+
+    &:after {
+      color: $black;
+    }
+  } // .orange
+
+  &.green {
+    &:before {
+      border-top-color: $green;
+      border-bottom-color: $green;
+    } // .spinner:before
+
+    &:after {
+      color: $black;
+    }
+  } // .green
+
+  &.purple {
+    &:before {
+      border-top-color: $purple;
+      border-bottom-color: $purple;
+    } // .spinner:before
+
+    &:after {
+      color: $black;
+    }
+  } // .purple
+
+  &.darkgrey {
+    &:before {
+      border-top-color: $grey-dark;
+      border-bottom-color: $grey-dark;
+    } // .spinner:before
+
+    &:after {
+      color: $black;
+    }
+  } // .darkgrey
+
+  &.grey {
+    &:before {
+      border-top-color: $grey;
+      border-bottom-color: $grey;
+    } // .spinner:before
+
+    &:after {
+      color: $black;
+    }
+  } // .grey
+
+  &.softgrey {
+    &:before {
+      border-top-color: $grey-medium;
+      border-bottom-color: $grey-medium;
+    } // .spinner:before
+
+    &:after {
+      color: $black;
+    }
+  } // softgrey
 } // .spinner

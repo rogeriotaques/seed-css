@@ -2,30 +2,53 @@
 
   h4 Spinners
 
-  p.lead The spinner has three different sizes: <b >default</b>, <b >medium</b> and <b >big</b>.
+  p.lead The spinner has three different sizes: <b >starndard</b>, <b >medium</b> and <b >big</b>.
+
+  .row.stretch 
+    .col.md-4 
+      h6 Standard 
+      .spinner(data-label="Loading ...")
+    .col.md-4 
+      h6 Medium ( <code >.medium</code> )
+      .spinner.medium(data-label="Loading ...")
+    .col.md-4 
+      h6 Big ( <code >.big</code> )
+      .spinner.big(data-label="Loading ...")
 
   p.lead.
     Also, the spinner animation speed can be controled with the classes: <b >.fast</b> (0.85s) and <b >.furious</b> (0.5s),
     while the normal speed animation will take 1.3s to complete the course.
 
-  p.lead.
-    If for some reason you want to hide the "loading" message, just include the class <b >.lean</b> or simply do not
-    include the property <b >data-label</b> as seen in the examples.
+  .row.stretch 
+    .col.md-4 
+      h6 Standard
+      .spinner(data-label="Loading ...")
+    .col.md-4 
+      h6 Fast ( <code >.fast</code> )
+      .spinner.fast(data-label="Loading ...")
+    .col.md-4 
+      h6 Furious ( <code >.furious</code> )
+      .spinner.furious(data-label="Loading ...")
 
   .row
-    .col.md-5
-      h6 Default (with normal speed)
-      .spinner(data-label="Loading ...")
+    .col.md-5.pt-40
+      p.lead.
+        If for some reason you want to hide the "loading" message, just include the class <b >.lean</b> or simply do not
+        include the property <b >data-label</b> as seen in the examples.
 
-      br 
+      h5 Do you wanna colors?
 
-      h6 Medium <code >.medium.fast</code> (with fast speed)
-      .spinner.medium.fast(data-label="Loading ...")
+      p.lead.
+        Spinners also support all the pre-defined colors from <b>seed-css</b>. 
 
-      br 
-
-      h6 Big <code >.big.furious</code> (with faster speed)
-      .spinner.big.furious(data-label="Loading ...")
+      .spinner.primary(data-label="Primary")      
+      .spinner.red(data-label="Red")      
+      .spinner.orange(data-label="Orange")      
+      .spinner.green(data-label="Green")      
+      .spinner.purple(data-label="Purple")      
+      .spinner.darkgrey(data-label="Darkgrey")      
+      .spinner.grey(data-label="Grey")      
+      .spinner.softgrey(data-label="Softgrey")      
 
     .col.md-6.md-offset-1
       h5 Code example
