@@ -183,6 +183,10 @@
 
   &.has-feedback {
     & > span {
+      &.warning {
+        color: darken($orange, 10);
+      }
+
       &.error {
         color: $red;
       }
@@ -211,17 +215,32 @@
     input[type='number'],
     textarea,
     select {
+      &.warning {
+        border-color: $orange;
+        z-index: 2;
+      }
+
       &.error {
         border-color: $red;
+        z-index: 2;
       }
 
       &.success {
         border-color: $green;
+        z-index: 2;
       }
     } // input[type="*"], textarea, select
 
     input[type='radio'],
     input[type='checkbox'] {
+      &.warning:not(:checked) + label {
+        color: $orange;
+
+        &::before {
+          border-color: $orange;
+        }
+      }
+
       &.error:not(:checked) + label {
         color: $red;
 
@@ -229,7 +248,32 @@
           border-color: $red;
         }
       }
+
+      &.success:checked + label {
+        color: $green;
+
+        &::before {
+          border-color: $green;
+        }
+      }
     } // input[type="radio"], input[type="checkbox"]
+
+    input[type='checkbox'] {
+      &.success:checked + label {
+        &::after {
+          border-bottom-color: $green;
+          border-left-color: $green;
+        }
+      }
+    } // input[type="checkbox"]
+
+    input[type='radio'] {
+      &.success:checked + label {
+        &::before {
+          background-color: $green;
+        }
+      }
+    } // input[type="radio"]
 
     &.seed-select {
       &::after {
@@ -444,6 +488,11 @@
     } // .seed-file.chosen
 
     &.has-feedback {
+      > [type='file'].warning + label,
+      > label.warning {
+        border-color: $orange;
+      } // .warning
+
       > [type='file'].error + label,
       > label.error {
         border-color: $red;

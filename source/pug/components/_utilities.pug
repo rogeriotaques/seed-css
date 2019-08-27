@@ -2,8 +2,39 @@
 
   p.lead.
     Utilities are classes that can help you to easily show up your data
-    or content in a beatiful way. It can be used combined with other
+    or content in a beatiful way.<br >It can be used combined with other
     available classes.
+
+  br
+
+  h5 Text size
+
+  .row
+    .col.md-5.sm-12
+      p.lead This text is 30% bigger
+
+    .col.md-5.sm-12
+      .code-sample
+        pre.prettyprint.lang-html.
+          &lt;p class="lead" &gt; ... &lt;/p&gt;
+
+  .row
+    .col
+
+      table
+          thead
+            tr
+              th Class
+              th Remarks
+          tbody
+            tr
+              td.nowrap .lead
+              td Increase font-size in 30%
+
+    
+  .align-center.my-40
+    span 。。。 
+
 
   h5 Text alignment
 
@@ -439,3 +470,37 @@
 
           &lt;!-- Hide on extra-large devices --&gt;
           &lt;div class="hide-only-extra-large" &gt; ... &lt;/div&gt;
+
+  .align-center.my-40
+    span 。。。 
+     
+  h5 Display
+
+  p.lead.
+    The display classes make it very simple to control the object. 
+
+  br 
+
+  .row.shadows 
+    .col.md-5.mt-50
+      .d-block.primary-background.with-shadow.p-10.align-center This is a block element
+
+      br
+
+      .d-inline.red-background.with-shadow.p-10 This is a inline-block element
+      .d-initial.purple-background.with-shadow.p-10 This is a element with display initial
+
+    .col.md-6.md-offset-1
+      .code-sample
+        pre.prettyprint.lang-html.
+          &lt;!-- Block --&gt;
+          &lt;div class="d-block" &gt; ... &lt;/div&gt;
+
+          &lt;!-- Inline Block --&gt;
+          &lt;div class="d-inline" &gt; ... &lt;/div&gt;
+
+          &lt;!-- Initial --&gt;
+          &lt;div class="d-initial" &gt; ... &lt;/div&gt;
+
+  .align-center.my-40
+    span 。。。 
