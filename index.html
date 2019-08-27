@@ -21,7 +21,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Seed CSS v2.3.0</title>
+    <title>Seed CSS v2.4.0</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="A light-weight, mobile first and responsive CSS boilerplate.">
     <meta name="keywords" content="css,boilerplate,javascript,html5,website,site,app,webapp,build,development">
@@ -31,8 +31,8 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:300,700|Open+Sans:400|Cookie">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/seed.css?v=v2.3.0">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css?v=v2.3.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/seed.css?v=v2.4.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css?v=v2.4.0">
     <script src="https://unpkg.com/eva-icons"></script>
     <!-- Global site tag (gtag.js) - Google Analytics-->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-734057-10"></script>
@@ -90,7 +90,7 @@
             </div>
             <div class="col md-6 align-center">
               <div class="cta pt-30">
-                <p class="animated fadeIn delay-2s" id="release">v2.3.0</p><a class="btn primary animated fadeInLeft delay-2s" href="https://github.com/AbtzLabs/seed-css/archive/develop.zip"><span>DOWNLOAD</span></a><a class="btn secondary smooth animated fadeInRight delay-2s" href="#contribute"><span>CONTRIBUTE</span></a>
+                <p class="animated fadeIn delay-2s" id="release">v2.4.0</p><a class="btn primary animated fadeInLeft delay-2s" href="https://github.com/AbtzLabs/seed-css/archive/develop.zip"><span>DOWNLOAD</span></a><a class="btn secondary smooth animated fadeInRight delay-2s" href="#contribute"><span>CONTRIBUTE</span></a>
               </div>
             </div>
           </div>
@@ -161,7 +161,7 @@ $ npm install --save seed-css</pre>
       </div>
       <section id="examples">
         <div class="container">
-          <div class="reveal animated animated-once">
+          <div class="fadeInUp animated animated-once">
             <h2 class="align-center" id="examples-basic">The basic</h2>
           </div>
           <div class="row stretch"> 
@@ -822,7 +822,7 @@ $ npm install --save seed-css</pre>
             </div>
           </div>
           <div class="align-center my-40"><span>。。。 </span></div>
-          <div class="reveal animated animated-once">
+          <div class="fadeInUp animated animated-once">
             <h2 class="align-center" id="examples-components">Components</h2>
           </div>
           <div id="component-alerts">
@@ -1132,11 +1132,15 @@ $ npm install --save seed-css</pre>
                   <input type="text"><span class="info">This is an additional piece of information.</span>
                 </div>
                 <div class="field has-feedback">
-                  <label for="">This is an input text with error message</label>
+                  <label for="">This is an input text with <code >.error</code> message</label>
                   <input class="error" type="text"><span class="error">This is an error message!</span>
                 </div>
                 <div class="field has-feedback">
-                  <label for="">This is an input text with success message</label>
+                  <label for="">This is an input text with <code >.warning</code> message</label>
+                  <input class="warning" type="text"><span class="warning">This is a warning message!</span>
+                </div>
+                <div class="field has-feedback">
+                  <label for="">This is an input text with <code >.success</code> message</label>
                   <input class="success" type="text"><span class="success">This is a success message!</span>
                 </div>
                 <h6>Grouped elements</h6>
@@ -1164,7 +1168,9 @@ $ npm install --save seed-css</pre>
 &lt;div class="field has-feedback" &gt;
   &lt;label for="..." &gt; ... &lt;/label&gt;
   &lt;input type="text" name="..." class="error" &gt;
+  &lt;span class="warning" &gt; ... &lt;/span&gt;
   &lt;span class="error" &gt; ... &lt;/span&gt;
+  &lt;span class="success" &gt; ... &lt;/span&gt;
 &lt;/div&gt;
 
 &lt;!-- Example of grouped fields --&gt;
@@ -1336,8 +1342,16 @@ SeedCSS.textArea(); // Initialize
                   <label for="radio-sample-1">This is a radio button</label>
                 </div>
                 <div class="field has-feedback">
-                  <input class="error" type="radio" id="radio-sample-2" name="radio-sample[]">
-                  <label for="radio-sample-2">This is a radio button with error</label>
+                  <input class="warning" type="radio" id="radio-sample-2" name="radio-sample[]">
+                  <label for="radio-sample-2">This is a radio button with a warning</label>
+                </div>
+                <div class="field has-feedback">
+                  <input class="error" type="radio" id="radio-sample-3" name="radio-sample[]">
+                  <label for="radio-sample-3">This is a radio button with error</label>
+                </div>
+                <div class="field has-feedback">
+                  <input class="success" type="radio" id="radio-sample-4" name="radio-sample[]" checked>
+                  <label for="radio-sample-4">This is a radio button with a success (needs to be checked)</label>
                 </div>
                 <hr>
                 <div class="field">
@@ -1345,8 +1359,16 @@ SeedCSS.textArea(); // Initialize
                   <label for="check-sample-1">This is a checkbox</label>
                 </div>
                 <div class="field has-feedback">
-                  <input class="error" type="checkbox" id="check-sample-2" name="check-sample[]">
-                  <label for="check-sample-2">This is a checkbox with error</label>
+                  <input class="warning" type="checkbox" id="check-sample-2" name="check-sample[]">
+                  <label for="check-sample-2">This is a checkbox with warning</label>
+                </div>
+                <div class="field has-feedback">
+                  <input class="error" type="checkbox" id="check-sample-3" name="check-sample[]">
+                  <label for="check-sample-3">This is a checkbox with error</label>
+                </div>
+                <div class="field has-feedback">
+                  <input class="success" type="checkbox" id="check-sample-4" name="check-sample[]" checked>
+                  <label for="check-sample-4">This is a checkbox with success (needs to be checked)</label>
                 </div>
               </div>
               <div class="col md-6 md-offset-1">
@@ -1823,45 +1845,45 @@ canvas.get('#mycanvas').close();</pre>
                 <p>Fixed progress </p>
                 <div class="align-center">
                   <div class="progress-bar">
-                    <div class="bar" style="width: 60%"></div>
-                    <div class="label">60%</div>
+                    <div class="bar" style="width: 55%"></div>
+                    <div class="label">55%</div>
                   </div><br>
                   <div class="progress-bar primary">
                     <div class="bar" style="width: 60%"></div>
                     <div class="label">60%</div>
                   </div><br>
                   <div class="progress-bar red">
-                    <div class="bar" style="width: 60%"></div>
-                    <div class="label">60%</div>
+                    <div class="bar" style="width: 65%"></div>
+                    <div class="label">65%</div>
                   </div><br>
                   <div class="progress-bar orange">
-                    <div class="bar" style="width: 60%"></div>
-                    <div class="label">60%</div>
+                    <div class="bar" style="width: 70%"></div>
+                    <div class="label">70%</div>
                   </div><br>
                   <div class="progress-bar green">
-                    <div class="bar" style="width: 60%"></div>
-                    <div class="label">60%</div>
+                    <div class="bar" style="width: 75%"></div>
+                    <div class="label">75%</div>
                   </div><br>
                   <div class="progress-bar purple">
-                    <div class="bar" style="width: 60%"></div>
-                    <div class="label">60%</div>
+                    <div class="bar" style="width: 80%"></div>
+                    <div class="label">80%</div>
                   </div><br>
                   <div class="progress-bar darkgrey">
-                    <div class="bar" style="width: 60%"></div>
-                    <div class="label">60%</div>
+                    <div class="bar" style="width: 85%"></div>
+                    <div class="label">85%</div>
                   </div><br>
                   <div class="progress-bar grey">
-                    <div class="bar" style="width: 60%"></div>
-                    <div class="label">60%</div>
+                    <div class="bar" style="width: 90%"></div>
+                    <div class="label">90%</div>
                   </div><br>
                   <div class="progress-bar softgrey">
-                    <div class="bar" style="width: 60%"></div>
-                    <div class="label">60%</div>
+                    <div class="bar" style="width: 95%"></div>
+                    <div class="label">95%</div>
                   </div>
                 </div><br>
                 <p>Undefined progress </p>
                 <div class="align-center">
-                  <div class="progress-bar undefined primary">
+                  <div class="progress-bar undefined rainbow">
                     <div class="bar"></div>
                   </div>
                 </div>
@@ -1878,8 +1900,13 @@ canvas.get('#mycanvas').close();</pre>
 &lt;!-- Undefined progress --&gt;
 &lt;div class="progress-bar primary undefined" &gt;
   &lt;div class="bar" &gt;&lt;/div&gt;
-&lt;/div&gt;</pre>
+&lt;/div&gt;
+</pre>
                 </div>
+                <p class="lead">
+                  The undefined progress bar also supports a raibow animation.  
+                  To achieve that simply use <code >.rainbow</code> alongside the <i>.undefined</i> class.
+                </p>
               </div>
             </div>
           </div>
@@ -2202,16 +2229,47 @@ canvas.get('#mycanvas').close();</pre>
             </div>
           </div>
           <div class="align-center my-40"><span>。。。</span></div>
-          <div class="reveal animated animated-once fast">
+          <div class="fadeInUp animated animated-once fast">
             <h2 class="align-center" id="examples-utilities">Utilities</h2>
           </div>
           <div id="component-utilities">
             <p class="lead">
               Utilities are classes that can help you to easily show up your data
-              or content in a beatiful way. It can be used combined with other
+              or content in a beatiful way.<br >It can be used combined with other
               available classes.
               
-            </p>
+            </p><br>
+            <h5>Text size</h5>
+            <div class="row">
+              <div class="col md-5 sm-12">
+                <p class="lead">This text is 30% bigger</p>
+              </div>
+              <div class="col md-5 sm-12">
+                <div class="code-sample">
+                  <pre class="prettyprint lang-html">&lt;p class="lead" &gt; ... &lt;/p&gt;
+</pre>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Class</th>
+                      <th>Remarks</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="nowrap">.lead</td>
+                      <td>Increase font-size in 30%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="align-center my-40"><span>。。。 </span></div>
             <h5>Text alignment</h5>
             <div class="row">
               <div class="col md-5 sm-12">
@@ -2685,16 +2743,44 @@ canvas.get('#mycanvas').close();</pre>
 &lt;div class="hide-on-large-and-down" &gt; ... &lt;/div&gt;
 
 &lt;!-- Hide on extra-large devices --&gt;
-&lt;div class="hide-only-extra-large" &gt; ... &lt;/div&gt;</pre>
+&lt;div class="hide-only-extra-large" &gt; ... &lt;/div&gt;
+</pre>
                 </div>
               </div>
             </div>
+            <div class="align-center my-40"><span>。。。 </span></div>
+            <h5>Display</h5>
+            <p class="lead">
+              The display classes make it very simple to control the object. 
+              
+            </p><br>
+            <div class="row shadows"> 
+              <div class="col md-5 mt-50">
+                <div class="d-block primary-background with-shadow p-10 align-center">This is a block element</div><br>
+                <div class="d-inline red-background with-shadow p-10">This is a inline-block element</div>
+                <div class="d-initial purple-background with-shadow p-10">This is a element with display initial</div>
+              </div>
+              <div class="col md-6 md-offset-1">
+                <div class="code-sample">
+                  <pre class="prettyprint lang-html">&lt;!-- Block --&gt;
+&lt;div class="d-block" &gt; ... &lt;/div&gt;
+
+&lt;!-- Inline Block --&gt;
+&lt;div class="d-inline" &gt; ... &lt;/div&gt;
+
+&lt;!-- Initial --&gt;
+&lt;div class="d-initial" &gt; ... &lt;/div&gt;
+</pre>
+                </div>
+              </div>
+            </div>
+            <div class="align-center my-40"><span>。。。 </span></div>
           </div>
         </div>
       </section>
       <section id="library-download">
         <div class="container">
-          <div class="reveal animated animated-once">
+          <div class="fadeInUp animated animated-once">
             <h2 class="align-center">JavaScript Library Download</h2>
           </div>
           <p class="align-justify lead">
@@ -2755,7 +2841,7 @@ canvas.get('#mycanvas').close();</pre>
       </section>
       <section id="license">
         <div class="container">
-          <div class="reveal animated animated-once">
+          <div class="fadeInUp animated animated-once">
             <h2 class="align-center">License</h2>
           </div>
           <p>The MIT license.</p>
@@ -2788,7 +2874,7 @@ canvas.get('#mycanvas').close();</pre>
       </section>
       <section id="contribute"> 
         <div class="container"> 
-          <div class="reveal animated animated-once">
+          <div class="fadeInUp animated animated-once">
             <h2 class="align-center">Contributing</h2>
           </div>
           <p class="lead">This is an open-source project and you can freely contribute. </p>
@@ -2856,7 +2942,7 @@ canvas.get('#mycanvas').close();</pre>
     </div>
     <script src="//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
     <script src="//code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
-    <script src="assets/js/bundle.js?v=v2.3.0"></script>
+    <script src="assets/js/bundle.js?v=v2.4.0"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script type="text/javascript">
       docsearch({ 
