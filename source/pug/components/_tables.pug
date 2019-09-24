@@ -55,3 +55,54 @@
             &lt;/tr&gt;
           &lt;/tbody&gt;
         &lt;/table&gt;
+
+  br
+
+  p.camel-case 
+    b Table Responsive
+
+  p.
+    Wrapping tables in a DIV with <b>.table-responsive</b> class helps  
+    very long tables looking good even in small devices. Wrapped tables 
+    become scrollable horizontally.
+
+  .table-responsive
+    table(class=className)
+      thead
+        tr
+          th Name
+          th Email
+          th Phone
+      tbody
+        tr
+          td John Wayne
+          td john@wayne.com
+          td 123-4567-8900
+        tr
+          td John Wayne
+          td john@wayne.com
+          td 123-4567-8900
+        tr
+          td John Wayne
+          td john@wayne.com
+          td 123-4567-8900
+      tfoot
+        tr
+          td
+          td
+          td
+
+    h5 Code example
+    .code-sample
+      pre.prettyprint.lang-html.
+        &lt;div class="table-responsive" &gt;
+          &lt;table  &gt;
+            &lt;tbody &gt;
+              &lt;tr &gt;
+                &lt;td &gt; ... &lt;/td&gt;
+                &lt;td &gt; ... &lt;/td&gt;
+                &lt;td &gt; ... &lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/tbody&gt;
+          &lt;/table&gt;
+        &lt;/div&gt;
