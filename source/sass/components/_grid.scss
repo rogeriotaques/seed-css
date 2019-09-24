@@ -7,7 +7,6 @@
 @import '../includes/mixins-flex';
 
 .row {
-  //   display: block;
   @include flexbox();
   @include flex-flow(row wrap);
   @include align-items(flex-start);
@@ -22,7 +21,7 @@
   } // .row.stretch
 
   > .col {
-    @include flex(1 100%);
+    @include flex(0 0 100%);
     @include justify-content(space-between);
     position: relative;
     box-sizing: border-box;
@@ -30,6 +29,11 @@
     margin-bottom: $margin / 2;
     padding: $margin;
     width: 100%;
+
+    &.stretch {
+      @include flex-grow(1);
+      @include flex-shrink(1);
+    } // .col.stretch
   } // .row > .col
 } // .row
 
