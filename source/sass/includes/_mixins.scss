@@ -45,7 +45,7 @@
 @mixin grid-make-cols($size) {
   @for $i from 1 through 12 {
     &.#{$size}-#{$i} {
-      @include flex(1 (100% / 12 * $i));
+      @include flex(0 0 (100% / 12 * $i));
     }
   }
 
