@@ -4,11 +4,18 @@
  * @license MIT
  */
 
+let fnOutsideClickHandler;
+
+let fnToggle;
+
+let fnTriggerClick;
+
 const seedOffCanvas = function() {
   'use strict';
+
   const openedOffcanvasClass = 'canvas-opened';
 
-  const fnOutsideClickHandler = function(ev) {
+  fnOutsideClickHandler = function(ev) {
     let a = ev.target;
     let found = false;
 
@@ -34,16 +41,13 @@ const seedOffCanvas = function() {
     }
   };
 
-  const fnToggle = (canvasID, triggerElement) => {
+  fnToggle = (canvasID, triggerElement) => {
     let customEvent;
 
     const canvas = document.querySelector(`#${canvasID.replace(/^#/, '')}`);
 
     const trigger =
-      triggerElement ||
-      document.querySelector(
-        `[role="offcanvas"][data-id="${canvasID.replace(/^#/, '')}"]`
-      );
+      triggerElement || document.querySelector(`[role="offcanvas"][data-id="${canvasID.replace(/^#/, '')}"]`);
 
     if (canvas !== null) {
       const html = document.querySelector('html');
@@ -63,13 +67,9 @@ const seedOffCanvas = function() {
         canvas.classList.remove('open');
 
         // Remove the 'triggered' class for any existing trigger which refers given offcanvas.
-        document
-          .querySelectorAll(
-            `[role="offcanvas"][data-id="${canvasID.replace(/^#/, '')}"]`
-          )
-          .forEach((tgr) => {
-            tgr.classList.remove('triggered');
-          });
+        document.querySelectorAll(`[role="offcanvas"][data-id="${canvasID.replace(/^#/, '')}"]`).forEach((tgr) => {
+          tgr.classList.remove('triggered');
+        });
 
         // Re-enables main scrolling
         html.removeEventListener('click', fnOutsideClickHandler);
@@ -93,15 +93,12 @@ const seedOffCanvas = function() {
     } // if (canvas !== null)
   }; // fnToggle
 
-  const fnTriggerClick = (evt) => {
+  fnTriggerClick = (evt) => {
     if (evt) {
       evt.preventDefault();
     }
 
-    fnToggle(
-      evt.currentTarget.getAttribute('data-id') || 'offcanvas',
-      evt.currentTarget
-    );
+    fnToggle(evt.currentTarget.getAttribute('data-id') || 'offcanvas', evt.currentTarget);
   }; // fnTriggerClick
 
   // Find all existing triggers
@@ -120,11 +117,26 @@ const seedOffCanvas = function() {
     canvases.forEach((canvas, i) => {
       // Attach method for opening
       canvas.open = () => {
-        fnToggle(canvas.getAttribute('id') || 'offcanvas');
+        const html = document.querySelector('html');
+
+        if (!html.classList.contains(openedOffcanvasClass)) {
+          fnToggle(canvas.getAttribute('id') || 'offcanvas');
+        }
       }; // open
 
       // Attach method for closing
-      canvas.close = () => {}; // close
+      canvas.close = () => {
+        const html = document.querySelector('html');
+
+        if (html.classList.contains(openedOffcanvasClass)) {
+          fnToggle(canvas.getAttribute('id') || 'offcanvas');
+        }
+      }; // close
+
+      // Attach method for closing
+      canvas.toggle = () => {
+        fnToggle(canvas.getAttribute('id') || 'offcanvas');
+      }; // toggle
     }); // canvases.forEach((canvas, i)
   } // if (canvases !== null)
 
