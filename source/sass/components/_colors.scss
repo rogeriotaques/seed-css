@@ -85,6 +85,15 @@
   } // .softgrey-background
 } // .softgrey
 
+.white {
+  color: $white !important;
+
+  &-background {
+    background-color: $white !important;
+    color: $grey-dark !important;
+  } // .white-background
+} // .white
+
 .disabled,
 [disabled] {
   &.primary,
