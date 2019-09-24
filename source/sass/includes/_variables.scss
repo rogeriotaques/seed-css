@@ -51,6 +51,6 @@ $black: #333;
 $white: #fdfdfd;
 
 // shadows
-$shadow: rgba(0, 0, 0, 0.35);
-$shadow-default: $shadow 0 3px 12px;
-$shadow-inset: lighten($shadow, 20) 0 3px 6px inset;
+$shadow: rgba(0, 0, 0, 0.4);
+$shadow-default: $shadow 0 3px 6px;
+$shadow-inset: lighten($shadow, 10) 0 3px 6px inset;
