@@ -11,10 +11,8 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: Using node ${{ node_version }}
+    - name: Setup node
       uses: actions/setup-node@v1
-      with:
-        version: ${{ node_version }}
     - name: npm install and build
       run: |
         npm install
