@@ -1,6 +1,8 @@
-name: CI
+name: Build Docs
 
-on: [push]
+on: 
+  push:
+    branches: master
 
 jobs:
   build:
@@ -9,9 +11,24 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: echo Hello, world!
-    - name: Run a multi-line script
+    - name: Using node ${{ node_version }}
+      uses: actions/setup-node@v1
+      with:
+        version: ${{ node_version }}
+    - name: npm install and build
       run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+        npm install
+        npm start
+    - name: checkout gh-pages
+      run: | 
+        git checkout gh-pages
+        git pull origin gh-pages
+    - name: update files 
+      run: |
+        cp -R build/assets .
+        cp build/index.html .
+    - name: push pages to Github
+      run: |
+        git add .
+        git commit -m Updating docs
+        git push origin
