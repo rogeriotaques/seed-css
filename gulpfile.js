@@ -47,9 +47,7 @@ gulp.task('clean:dist', () => del([config.path.build, config.path.dist]));
  * Copies the images to the dist folder.
  */
 gulp.task('build:website-images', () =>
-  gulp
-    .src(config.path.source + 'images/**/*')
-    .pipe(gulp.dest(config.path.build + 'assets/images'))
+  gulp.src(config.path.source + 'images/**/*').pipe(gulp.dest(config.path.build + 'assets/images'))
 );
 
 /**
@@ -61,7 +59,7 @@ gulp.task('build:website-style', () =>
     .pipe(sass().on('error', sass.logError))
     .pipe(beautify({ indent: '  ', autosemicolon: true }))
     .pipe(concat('style.css'))
-    .pipe(gulpif(envFlag === 'production', minify()))
+    .pipe(gulpif(envFlag !== 'development', minify()))
     .pipe(gulp.dest(config.path.build + 'assets/css'))
     .pipe(sync.reload({ stream: true }))
 );
@@ -71,13 +69,10 @@ gulp.task('build:website-style', () =>
  */
 gulp.task('build:sass', (cb) => {
   gulp
-    .src([
-      `${config.path.source}sass/includes/_normalize.scss`,
-      `${config.path.source}sass/main.scss`
-    ])
+    .src([`${config.path.source}sass/includes/_normalize.scss`, `${config.path.source}sass/main.scss`])
     .pipe(sass().on('error', sass.logError))
     .pipe(beautify({ indent: '  ', autosemicolon: true }))
-    .pipe(gulpif(envFlag === 'production', minify()))
+    .pipe(gulpif(envFlag !== 'development', minify()))
     .pipe(concat(`${config.fileName}.css`))
     .pipe(gulp.dest(`${config.path.build}assets/css`))
     .pipe(sync.reload({ stream: true }));
@@ -92,13 +87,9 @@ gulp.task('build:website', (cb) => {
   const pkg = require('./package.json');
 
   gulp
-    .src(
-      [
-        config.path.source + 'pug/*.pug',
-        config.path.source + 'pug/tests/*.pug'
-      ],
-      { base: config.path.source + 'pug/' }
-    )
+    .src([config.path.source + 'pug/*.pug', config.path.source + 'pug/tests/*.pug'], {
+      base: config.path.source + 'pug/'
+    })
     .pipe(
       pug({ pretty: true }).on('error', function(err) {
         console.log('#### PUG ERROR ####', err, '#### #### ####');
@@ -134,15 +125,12 @@ gulp.task('build:website-js', (cb) => {
   };
 
   gulp
-    .src([
-      config.path.source + 'js/components/*.js',
-      config.path.source + 'js/*.js'
-    ])
-    .pipe(gulpif(envFlag === 'production', sourcemaps.init()))
+    .src([config.path.source + 'js/components/*.js', config.path.source + 'js/*.js'])
+    .pipe(gulpif(envFlag !== 'development', sourcemaps.init()))
     .pipe(babel(babelOptions))
-    .pipe(gulpif(envFlag === 'production', uglify().on('error', onUglifyErr)))
+    .pipe(gulpif(envFlag !== 'development', uglify().on('error', onUglifyErr)))
     .pipe(concat('bundle.js'))
-    .pipe(gulpif(envFlag === 'production', sourcemaps.write()))
+    .pipe(gulpif(envFlag !== 'development', sourcemaps.write()))
     .pipe(gulp.dest(config.path.build + 'assets/js'))
     .pipe(sync.reload({ stream: true }));
 
@@ -161,11 +149,11 @@ gulp.task('build:javascript', (cb) => {
 
   gulp
     .src([config.path.source + 'js/components/*.js'])
-    .pipe(gulpif(envFlag === 'production', sourcemaps.init()))
+    .pipe(gulpif(envFlag !== 'development', sourcemaps.init()))
     .pipe(babel(babelOptions))
-    .pipe(gulpif(envFlag === 'production', uglify().on('error', onUglifyErr)))
+    .pipe(gulpif(envFlag !== 'development', uglify().on('error', onUglifyErr)))
     .pipe(concat('seedcss.js'))
-    .pipe(gulpif(envFlag === 'production', sourcemaps.write()))
+    .pipe(gulpif(envFlag !== 'development', sourcemaps.write()))
     .pipe(gulp.dest(config.path.build + 'assets/js'));
 
   cb();
@@ -192,39 +180,22 @@ gulp.task(
       });
 
       // Watch changes on website styling
-      gulp.watch(
-        config.path.source + 'sass/sample.scss',
-        gulp.series('build:website-style')
-      );
+      gulp.watch(config.path.source + 'sass/sample.scss', gulp.series('build:website-style'));
 
       // Watch changes on website JS
-      gulp.watch(
-        config.path.source + 'js/**/*.js',
-        gulp.series('build:javascript', 'build:website-js')
-      );
+      gulp.watch(config.path.source + 'js/**/*.js', gulp.series('build:javascript', 'build:website-js'));
 
       // Watch changes on Seed styling
-      gulp.watch(
-        config.path.source + 'sass/**/*.scss',
-        gulp.series('build:sass')
-      );
+      gulp.watch(config.path.source + 'sass/**/*.scss', gulp.series('build:sass'));
 
       // Watch changes on the website page
-      gulp.watch(
-        config.path.source + 'pug/**/*.pug',
-        gulp.series('build:pug-watch')
-      );
+      gulp.watch(config.path.source + 'pug/**/*.pug', gulp.series('build:pug-watch'));
 
       // Watch changes on any new image (assets)
-      gulp.watch(
-        config.path.source + 'images/**/*',
-        gulp.series('build:website-images')
-      );
+      gulp.watch(config.path.source + 'images/**/*', gulp.series('build:website-images'));
 
       // Reloads the browser is any image is placed on assets
-      gulp
-        .watch(config.path.build + 'assets/images/**/*')
-        .on('change', sync.reload);
+      gulp.watch(config.path.build + 'assets/images/**/*').on('change', sync.reload);
 
       cb();
     }
@@ -260,9 +231,7 @@ gulp.task('dist:run', (cb) => {
 
   // Copy the Javascript source-code to the distribution folder
   // This will help developers to customize it or only load what they need.
-  gulp
-    .src(`${config.path.source}js/components/*.js`)
-    .pipe(gulp.dest(`${config.path.dist}src/js`));
+  gulp.src(`${config.path.source}js/components/*.js`).pipe(gulp.dest(`${config.path.dist}src/js`));
 
   // Buy some time to the script complete writing the files in the disk
   // before write the distribution header in the files. Think 1.5 seconds to be enough.
@@ -282,19 +251,24 @@ gulp.task('dist:run', (cb) => {
 });
 
 /**
+ * Builds the docs page.
+ */
+gulp.task(
+  'pages',
+  gulp.series(
+    'clean:dist',
+    gulp.parallel('build:sass', 'build:javascript', 'build:website', 'build:website-style', 'build:website-js')
+  )
+);
+
+/**
  * Creates the distribution pack.
  */
 gulp.task(
   'build',
   gulp.series(
     'clean:dist',
-    gulp.parallel(
-      'build:sass',
-      'build:javascript',
-      'build:website',
-      'build:website-style',
-      'build:website-js'
-    ),
+    gulp.parallel('build:sass', 'build:javascript', 'build:website', 'build:website-style', 'build:website-js'),
     'dist:run'
   )
 );
