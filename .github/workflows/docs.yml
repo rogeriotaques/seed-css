@@ -31,6 +31,8 @@ jobs:
           cp build/index.html .
       - name: Push pages to Github
         run: |
+          git config user.email ${{ secrets.GITHUB_EMAIL }}
+          git config user.name ${{ secrets.GITHUB_NAME }}
           git add .
           git commit -m "Updating docs"
           git push origin
