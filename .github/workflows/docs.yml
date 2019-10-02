@@ -1,5 +1,5 @@
-
 # Github CI/ CD setup
+# This will build the sample page (aka docs).
 
 name: Build Docs
 
@@ -17,7 +17,7 @@ jobs:
         uses: actions/setup-node@v1
       - name: Install and build
         run: |
-          npm install
+          npm ci
           npm run pages
       - name: Checkout gh-pages
         run: |
