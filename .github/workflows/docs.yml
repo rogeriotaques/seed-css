@@ -29,10 +29,13 @@ jobs:
         run: |
           cp -R build/assets .
           cp build/index.html .
-      - name: Push pages to Github
+      - name: Configure git for push
         run: |
           git config user.email ${{ secrets.GITHUB_EMAIL }}
           git config user.name ${{ secrets.GITHUB_NAME }}
+          git remote set-url origin https://${{ secrets.GITHUB_USERNAME }}:${{ secrets.GITHUB_PRIVATE_KEY }}@github.com/AbtzLabs/seed-css.git
+      - name: Push pages to Github
+        run: |
           git add .
           git commit -m "Updating docs"
           git push origin
