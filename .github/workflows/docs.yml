@@ -1,0 +1,33 @@
+# Github CI/ CD setup
+
+name: Build Docs
+
+on:
+  push:
+    branches: master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Setup node
+        uses: actions/setup-node@v1
+      - name: Install and build
+        run: |
+          npm install
+          npm run pages
+      - name: Checkout gh-pages
+        run: |
+          git checkout gh-pages
+          git pull origin gh-pages
+      - name: Update files
+        run: |
+          cp -R build/assets .
+          cp build/index.html .
+      - name: Push pages to Github
+        run: |
+          git add .
+          git commit -m Updating docs
+          git push origin
