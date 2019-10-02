@@ -21,8 +21,10 @@ jobs:
           npm run pages
       - name: Checkout gh-pages
         run: |
+          git fetch
           git checkout gh-pages
           git pull origin gh-pages
+          ls -la
       - name: Update files
         run: |
           cp -R build/assets .
@@ -30,5 +32,5 @@ jobs:
       - name: Push pages to Github
         run: |
           git add .
-          git commit -m Updating docs
+          git commit -m "Updating docs"
           git push origin
