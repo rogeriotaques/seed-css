@@ -4,7 +4,7 @@
  * @author Rogerio Taques (hello@abtz.co) 
  * @copyright 2016-2019, Rogerio Taques (hello@abtz.co) 
  * @license MIT 
- * @version 2.5.0 
+ * @version 2.5.1 
  */ 
 
  "use strict";!function(){function t(t,e){e=e||{bubbles:!1,cancelable:!1,detail:void 0};var n=document.createEvent("CustomEvent");return n.initCustomEvent(t,e.bubbles,e.cancelable,e.detail),n}return"function"!=typeof window.CustomEvent&&(t.prototype=window.Event.prototype,void(window.CustomEvent=t))}();
