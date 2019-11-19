@@ -46,7 +46,9 @@
     text-align: center;
     color: #fff;
     padding: $padding ($padding / 2);
+    width: max-content;
     min-width: 100px;
+    max-width: 250px;
     border-radius: 5px;
     pointer-events: none;
     box-shadow: $shadow-default;
