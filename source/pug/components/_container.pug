@@ -4,19 +4,21 @@
   .row
     .col.md-4
       p.lead.align-justify.
-        Containers are simple <b >DIV</b> elements with pre-defined width (depending on the 
-        screen size) which will help you to keep the content enclosed in a specific area.
+        A containers is a simple <b >DIV</b> element with a pre-defined <code >width</code> 
+        which will help you to keep the content enclosed in a specific area.
       
     .col.md-7
       .sample-container.align-center This's a container.
 
-      .code-sample
-          pre.prettyprint.lang-html.
-              &lt;div class="container" &gt;&lt;/div&gt;
-              &lt;div class="container-fluid" &gt;&lt;/div&gt;
+  h5 Code example
+
+  .code-sample
+      pre.prettyprint.lang-html.
+          &lt;div class="container" &gt;&lt;/div&gt;
+          &lt;div class="container-fluid" &gt;&lt;/div&gt;
 
   - showPrefix = false;
   - showColumCount = false;
   include _container-table
 
-  h6 Fluid containers are all 100% with no max-width.
+  h6 Fluid containers are all <code >100% width</code> without <code >max-width</code> set.
